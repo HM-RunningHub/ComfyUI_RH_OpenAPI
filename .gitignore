@@ -1,0 +1,36 @@
+# ComfyUI_RH_OpenAPI - Git Ignore
+
+# ==================== RH 测试/部署 ====================
+rh_config.json
+
+# ==================== 敏感信息 ====================
+.env
+.env.local
+.env.*.local
+config/.env
+
+# ==================== Python ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+venv/
+.venv/
+
+# ==================== IDE ====================
+.vscode/
+.idea/
+*.code-workspace
+
+# ==================== OS ====================
+.DS_Store
+Thumbs.db
+
+# ==================== 日志和临时 ====================
+*.log
+*.tmp
+*.bak

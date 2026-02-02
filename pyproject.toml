@@ -1,0 +1,13 @@
+[project]
+name = "comfyui_rh_openapi"
+description = "ComfyUI plugin for RunningHub OpenAPI standard models"
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/HM-RunningHub/ComfyUI_RH_OpenAPI"
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI_RH_OpenAPI"
+Icon = ""
