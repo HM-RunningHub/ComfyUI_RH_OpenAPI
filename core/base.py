@@ -13,6 +13,7 @@ from .upload import upload_file
 from .task import submit, poll
 from .image import tensor_to_bytes, download_images_to_tensor
 from .video import download_video
+from .audio import download_audio
 
 # ComfyUI dependency
 try:
@@ -163,17 +164,101 @@ class TextToImageNodeBase(BaseNode):
 
 
 class ImageToVideoNodeBase(BaseNode):
-    """Base for image-to-video nodes."""
+    """Base for image-to-video nodes: upload image, return video."""
 
     OUTPUT_TYPE = "video"
-    RETURN_TYPES = ("VIDEO", "VIDEO", "VIDEO", "VIDEO", "VIDEO")
-    RETURN_NAMES = ("video1", "video2", "video3", "video4", "video5")
+    RETURN_TYPES = ("VIDEO",)
+    RETURN_NAMES = ("video",)
+
+    def prepare_inputs(self, **kwargs) -> Dict:
+        """Upload the required image and return its URL."""
+        image = kwargs.get("image")
+        if image is None:
+            raise ValueError("image is required")
+        config = get_config(kwargs.get("api_config"))
+        img_bytes = tensor_to_bytes(image)
+        filename = f"upload_{hash(img_bytes) % 10**10}.png"
+        url = upload_file(
+            img_bytes,
+            filename,
+            "image/png",
+            config["api_key"],
+            config["base_url"],
+            timeout=config.get("upload_timeout", 60),
+            logger_prefix=self._log_prefix,
+        )
+        return {"imageUrl": url}
 
     def process_result(self, result_urls: List[str]) -> tuple:
-        videos = []
-        for i, url in enumerate(result_urls[:5]):
-            v = download_video(url, logger_prefix=self._log_prefix)
-            videos.append(v)
-        while len(videos) < 5:
-            videos.append(None)
-        return tuple(videos[:5])
+        if not result_urls:
+            raise RuntimeError("No video URL in results")
+        video = download_video(result_urls[0], logger_prefix=self._log_prefix)
+        return (video,)
+
+
+class TextToVideoNodeBase(BaseNode):
+    """Base for text-to-video nodes: no upload, return video."""
+
+    OUTPUT_TYPE = "video"
+    RETURN_TYPES = ("VIDEO",)
+    RETURN_NAMES = ("video",)
+
+    def prepare_inputs(self, **kwargs) -> Dict:
+        return {}
+
+    def process_result(self, result_urls: List[str]) -> tuple:
+        if not result_urls:
+            raise RuntimeError("No video URL in results")
+        video = download_video(result_urls[0], logger_prefix=self._log_prefix)
+        return (video,)
+
+
+class ReferenceToVideoNodeBase(BaseNode):
+    """Base for reference-to-video nodes: upload reference image(s), return video."""
+
+    OUTPUT_TYPE = "video"
+    RETURN_TYPES = ("VIDEO",)
+    RETURN_NAMES = ("video",)
+
+    def prepare_inputs(self, **kwargs) -> Dict:
+        return {}
+
+    def process_result(self, result_urls: List[str]) -> tuple:
+        if not result_urls:
+            raise RuntimeError("No video URL in results")
+        video = download_video(result_urls[0], logger_prefix=self._log_prefix)
+        return (video,)
+
+
+class AudioNodeBase(BaseNode):
+    """Base for audio generation nodes: text-to-audio, music, voice clone."""
+
+    OUTPUT_TYPE = "audio"
+    RETURN_TYPES = ("AUDIO",)
+    RETURN_NAMES = ("audio",)
+
+    def prepare_inputs(self, **kwargs) -> Dict:
+        return {}
+
+    def process_result(self, result_urls: List[str]) -> tuple:
+        if not result_urls:
+            raise RuntimeError("No audio URL in results")
+        audio = download_audio(result_urls[0], logger_prefix=self._log_prefix)
+        return (audio,)
+
+
+class ThreeDNodeBase(BaseNode):
+    """Base for 3D model generation nodes."""
+
+    OUTPUT_TYPE = "3d"
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("model_url",)
+
+    def prepare_inputs(self, **kwargs) -> Dict:
+        return {}
+
+    def process_result(self, result_urls: List[str]) -> tuple:
+        if not result_urls:
+            raise RuntimeError("No 3D model URL in results")
+        # Return the URL directly for 3D models (user downloads externally)
+        return (result_urls[0],)

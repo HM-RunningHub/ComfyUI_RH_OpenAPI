@@ -1,0 +1,310 @@
+[
+  {
+    "name": "全能视频S-图生视频",
+    "endpoint": "/rhart-video-s/image-to-video",
+    "url": "https://www.runninghub.cn/call-api/api-detail/2004494607725150210",
+    "params": [
+      {
+        "name": "imageUrl",
+        "type": "List(String)",
+        "required": true,
+        "description": "最多支持 1 张图片，每张 50 MB",
+        "enumValues": null
+      },
+      {
+        "name": "duration",
+        "type": "String",
+        "required": true,
+        "description": "视频时长",
+        "enumValues": ["10", "15"]
+      },
+      {
+        "name": "aspectRatio",
+        "type": "String",
+        "required": true,
+        "description": "画面比例",
+        "enumValues": ["9:16", "16:9"]
+      },
+      {
+        "name": "prompt",
+        "type": "String",
+        "required": true,
+        "description": "文本长度限制: 5-4000",
+        "enumValues": null
+      },
+      {
+        "name": "storyboard",
+        "type": "Boolean",
+        "required": false,
+        "description": "是否生成分镜",
+        "enumValues": null
+      },
+      {
+        "name": "webhookUrl",
+        "type": "String",
+        "required": false,
+        "description": "Webhook 回调地址",
+        "enumValues": null
+      }
+    ]
+  },
+  {
+    "name": "全能视频S-文生视频",
+    "endpoint": "/rhart-video-s/text-to-video",
+    "url": "https://www.runninghub.cn/call-api/api-detail/2004499823346368514",
+    "params": [
+      {
+        "name": "duration",
+        "type": "String",
+        "required": true,
+        "description": "视频时长",
+        "enumValues": ["10", "15"]
+      },
+      {
+        "name": "prompt",
+        "type": "String",
+        "required": true,
+        "description": "文本长度限制: 5-4000",
+        "enumValues": null
+      },
+      {
+        "name": "aspectRatio",
+        "type": "String",
+        "required": true,
+        "description": "画面比例",
+        "enumValues": ["9:16", "16:9"]
+      },
+      {
+        "name": "storyboard",
+        "type": "Boolean",
+        "required": false,
+        "description": "是否生成分镜",
+        "enumValues": null
+      },
+      {
+        "name": "webhookUrl",
+        "type": "String",
+        "required": false,
+        "description": "Webhook 回调地址",
+        "enumValues": null
+      }
+    ]
+  },
+  {
+    "name": "全能图片V1-图生图",
+    "endpoint": "/rhart-image-v1/edit",
+    "url": "https://www.runninghub.cn/call-api/api-detail/2004542825494265857",
+    "params": [
+      {
+        "name": "imageUrls",
+        "type": "List(String)",
+        "required": true,
+        "description": "图片列表，最多5项",
+        "enumValues": null
+      },
+      {
+        "name": "prompt",
+        "type": "String",
+        "required": true,
+        "description": "提示词",
+        "enumValues": null
+      },
+      {
+        "name": "aspectRatio",
+        "type": "String",
+        "required": true,
+        "description": "画面比例",
+        "enumValues": ["auto"]
+      },
+      {
+        "name": "webhookUrl",
+        "type": "String",
+        "required": false,
+        "description": "Webhook 回调地址",
+        "enumValues": null
+      }
+    ]
+  },
+  {
+    "name": "全能图片PRO-图生图",
+    "endpoint": "/rhart-image-n-pro/edit",
+    "url": "https://www.runninghub.cn/call-api/api-detail/2004543527918551041",
+    "params": [
+      {
+        "name": "imageUrls",
+        "type": "List(String)",
+        "required": true,
+        "description": "图片列表，最多10项",
+        "enumValues": null
+      },
+      {
+        "name": "prompt",
+        "type": "String",
+        "required": true,
+        "description": "提示词",
+        "enumValues": null
+      },
+      {
+        "name": "resolution",
+        "type": "String",
+        "required": true,
+        "description": "分辨率",
+        "enumValues": ["1k", "4k"]
+      },
+      {
+        "name": "aspectRatio",
+        "type": "String",
+        "required": false,
+        "description": "画面比例",
+        "enumValues": null
+      },
+      {
+        "name": "webhookUrl",
+        "type": "String",
+        "required": false,
+        "description": "Webhook 回调地址",
+        "enumValues": null
+      }
+    ]
+  },
+  {
+    "name": "全能图片PRO-文生图",
+    "endpoint": "/rhart-image-n-pro/text-to-image",
+    "url": "https://www.runninghub.cn/call-api/api-detail/2004543847939751938",
+    "params": [
+      {
+        "name": "prompt",
+        "type": "String",
+        "required": true,
+        "description": "提示词",
+        "enumValues": null
+      },
+      {
+        "name": "resolution",
+        "type": "String",
+        "required": true,
+        "description": "分辨率",
+        "enumValues": ["1k", "4k"]
+      },
+      {
+        "name": "aspectRatio",
+        "type": "String",
+        "required": false,
+        "description": "画面比例",
+        "enumValues": null
+      },
+      {
+        "name": "webhookUrl",
+        "type": "String",
+        "required": false,
+        "description": "Webhook 回调地址",
+        "enumValues": null
+      }
+    ]
+  },
+  {
+    "name": "全能图片PRO-官方-图生图",
+    "endpoint": "/rhart-image-n-pro-official/edit",
+    "url": "https://www.runninghub.cn/call-api/api-detail/2004544343584849921",
+    "params": [
+      {
+        "name": "imageUrls",
+        "type": "List(String)",
+        "required": true,
+        "description": "图片列表，最多10项",
+        "enumValues": null
+      },
+      {
+        "name": "prompt",
+        "type": "String",
+        "required": true,
+        "description": "提示词",
+        "enumValues": null
+      },
+      {
+        "name": "resolution",
+        "type": "String",
+        "required": true,
+        "description": "分辨率",
+        "enumValues": ["1k"]
+      },
+      {
+        "name": "aspectRatio",
+        "type": "String",
+        "required": false,
+        "description": "画面比例",
+        "enumValues": null
+      },
+      {
+        "name": "webhookUrl",
+        "type": "String",
+        "required": false,
+        "description": "Webhook 回调地址",
+        "enumValues": null
+      }
+    ]
+  },
+  {
+    "name": "全能图片PRO-官方-文生图",
+    "endpoint": "/rhart-image-n-pro-official/text-to-image",
+    "url": "https://www.runninghub.cn/call-api/api-detail/2004544597055029250",
+    "params": [
+      {
+        "name": "prompt",
+        "type": "String",
+        "required": true,
+        "description": "提示词",
+        "enumValues": null
+      },
+      {
+        "name": "resolution",
+        "type": "String",
+        "required": true,
+        "description": "分辨率",
+        "enumValues": ["1k"]
+      },
+      {
+        "name": "aspectRatio",
+        "type": "String",
+        "required": true,
+        "description": "画面比例",
+        "enumValues": ["1:1", "3:4", "4:3", "16:9", "9:16"]
+      },
+      {
+        "name": "webhookUrl",
+        "type": "String",
+        "required": false,
+        "description": "Webhook 回调地址",
+        "enumValues": null
+      }
+    ]
+  },
+  {
+    "name": "全能图片G-1.5-文生图",
+    "endpoint": "/rhart-image-g-1.5/text-to-image",
+    "url": "https://www.runninghub.cn/call-api/api-detail/2005642306994356226",
+    "params": [
+      {
+        "name": "prompt",
+        "type": "String",
+        "required": true,
+        "description": "提示词",
+        "enumValues": null
+      },
+      {
+        "name": "aspectRatio",
+        "type": "String",
+        "required": true,
+        "description": "画面比例",
+        "enumValues": ["1:1", "2:3", "3:2", "3:4", "4:3", "16:9", "9:16"]
+      },
+      {
+        "name": "webhookUrl",
+        "type": "String",
+        "required": false,
+        "description": "Webhook 回调地址",
+        "enumValues": null
+      }
+    ]
+  }
+]
