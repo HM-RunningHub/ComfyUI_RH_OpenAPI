@@ -18,7 +18,7 @@ class RHSettingsNode:
             },
         }
 
-    RETURN_TYPES = ("STRUCT",)
+    RETURN_TYPES = ("RH_OPENAPI_CONFIG",)
     RETURN_NAMES = ("api_config",)
     CATEGORY = "RunningHub"
     FUNCTION = "process"

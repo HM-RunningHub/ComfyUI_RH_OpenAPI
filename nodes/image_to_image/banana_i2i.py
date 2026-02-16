@@ -31,7 +31,7 @@ class BananaI2I(ImageToImageNodeBase):
                 "image3": ("IMAGE",),
                 "image4": ("IMAGE",),
                 "image5": ("IMAGE",),
-                "api_config": ("STRUCT",),
+                "api_config": ("RH_OPENAPI_CONFIG",),
                 "aspect_ratio": (ASPECT_RATIOS, {"default": "auto"}),
             }
         }

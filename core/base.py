@@ -1,10 +1,16 @@
 """
 Base classes for API nodes.
 
-Unified flow: prepare_inputs → build_payload → submit → poll → process_result
+Unified flow: prepare_inputs -> build_payload -> submit -> poll -> process_result
+
+All nodes output 3 groups:
+  1. Primary result (IMAGE/VIDEO/AUDIO/STRING based on output_type)
+  2. url: raw result URL(s) from RH API
+  3. response: full JSON response from RH API
 """
 
 import time
+import json
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional
 
@@ -31,9 +37,10 @@ class BaseNode(ABC):
     """Base node for RH OpenAPI."""
 
     ENDPOINT: str = ""
-    OUTPUT_TYPE: str = "image"  # "image" | "video"
+    OUTPUT_TYPE: str = "image"  # "image" | "video" | "audio" | "3d" | "string"
     CATEGORY: str = "RunningHub"
     FUNCTION: str = "execute"
+    OUTPUT_NODE = True
 
     # Progress segments
     PROGRESS_PREPARE = 20
@@ -64,11 +71,17 @@ class BaseNode(ABC):
         """Override in subclass: upload resources, etc."""
         return {}
 
-    def process_result(self, result_urls: List[str]) -> Any:
+    def process_result(self, result_urls: List[str]) -> tuple:
         """Override in subclass: download and convert to ComfyUI format."""
         raise NotImplementedError
 
     def execute(self, **kwargs):
+        """
+        Unified execution flow.
+
+        Returns:
+            Primary result tuple + (url_string, response_json_string)
+        """
         api_config = kwargs.get("api_config")
         config = get_config(api_config)
         base_url = config["base_url"]
@@ -98,7 +111,7 @@ class BaseNode(ABC):
         def on_progress(v):
             self._update_progress(pbar, v)
 
-        result_urls = poll(
+        result_urls, full_response = poll(
             task_id,
             api_key,
             base_url,
@@ -109,17 +122,25 @@ class BaseNode(ABC):
         )
         self._update_progress(pbar, self.PROGRESS_POLL_END)
 
-        result = self.process_result(result_urls)
+        # Primary result from subclass
+        primary_result = self.process_result(result_urls)
         self._update_progress(pbar, 100)
-        return result
+
+        # Build extra outputs: url and response
+        url_str = "\n".join(result_urls)
+        response_str = json.dumps(full_response, ensure_ascii=False, indent=2)
+
+        # Return with ui dict for OUTPUT_NODE history recording
+        result_tuple = primary_result + (url_str, response_str)
+        return {"ui": {"text": [url_str, response_str]}, "result": result_tuple}
 
 
 class ImageToImageNodeBase(BaseNode):
     """Base for image-to-image: requires image upload."""
 
     OUTPUT_TYPE = "image"
-    RETURN_TYPES = ("IMAGE",)
-    RETURN_NAMES = ("image",)
+    RETURN_TYPES = ("IMAGE", "STRING", "STRING")
+    RETURN_NAMES = ("image", "url", "response")
 
     def prepare_inputs(self, **kwargs) -> Dict:
         image1 = kwargs.get("image1")
@@ -152,8 +173,8 @@ class TextToImageNodeBase(BaseNode):
     """Base for text-to-image: no upload required."""
 
     OUTPUT_TYPE = "image"
-    RETURN_TYPES = ("IMAGE",)
-    RETURN_NAMES = ("image",)
+    RETURN_TYPES = ("IMAGE", "STRING", "STRING")
+    RETURN_NAMES = ("image", "url", "response")
 
     def prepare_inputs(self, **kwargs) -> Dict:
         return {}
@@ -167,11 +188,10 @@ class ImageToVideoNodeBase(BaseNode):
     """Base for image-to-video nodes: upload image, return video."""
 
     OUTPUT_TYPE = "video"
-    RETURN_TYPES = ("VIDEO",)
-    RETURN_NAMES = ("video",)
+    RETURN_TYPES = ("VIDEO", "STRING", "STRING")
+    RETURN_NAMES = ("video", "url", "response")
 
     def prepare_inputs(self, **kwargs) -> Dict:
-        """Upload the required image and return its URL."""
         image = kwargs.get("image")
         if image is None:
             raise ValueError("image is required")
@@ -200,8 +220,8 @@ class TextToVideoNodeBase(BaseNode):
     """Base for text-to-video nodes: no upload, return video."""
 
     OUTPUT_TYPE = "video"
-    RETURN_TYPES = ("VIDEO",)
-    RETURN_NAMES = ("video",)
+    RETURN_TYPES = ("VIDEO", "STRING", "STRING")
+    RETURN_NAMES = ("video", "url", "response")
 
     def prepare_inputs(self, **kwargs) -> Dict:
         return {}
@@ -217,8 +237,8 @@ class ReferenceToVideoNodeBase(BaseNode):
     """Base for reference-to-video nodes: upload reference image(s), return video."""
 
     OUTPUT_TYPE = "video"
-    RETURN_TYPES = ("VIDEO",)
-    RETURN_NAMES = ("video",)
+    RETURN_TYPES = ("VIDEO", "STRING", "STRING")
+    RETURN_NAMES = ("video", "url", "response")
 
     def prepare_inputs(self, **kwargs) -> Dict:
         return {}
@@ -234,8 +254,8 @@ class AudioNodeBase(BaseNode):
     """Base for audio generation nodes: text-to-audio, music, voice clone."""
 
     OUTPUT_TYPE = "audio"
-    RETURN_TYPES = ("AUDIO",)
-    RETURN_NAMES = ("audio",)
+    RETURN_TYPES = ("AUDIO", "STRING", "STRING")
+    RETURN_NAMES = ("audio", "url", "response")
 
     def prepare_inputs(self, **kwargs) -> Dict:
         return {}
@@ -251,8 +271,8 @@ class ThreeDNodeBase(BaseNode):
     """Base for 3D model generation nodes."""
 
     OUTPUT_TYPE = "3d"
-    RETURN_TYPES = ("STRING",)
-    RETURN_NAMES = ("model_url",)
+    RETURN_TYPES = ("STRING", "STRING", "STRING")
+    RETURN_NAMES = ("model_url", "url", "response")
 
     def prepare_inputs(self, **kwargs) -> Dict:
         return {}
@@ -260,5 +280,4 @@ class ThreeDNodeBase(BaseNode):
     def process_result(self, result_urls: List[str]) -> tuple:
         if not result_urls:
             raise RuntimeError("No 3D model URL in results")
-        # Return the URL directly for 3D models (user downloads externally)
         return (result_urls[0],)

@@ -8,7 +8,7 @@ poll:   POST {base_url}/query
 import time
 import json
 import requests
-from typing import Optional, List, Callable, Any
+from typing import Optional, List, Callable, Any, Dict, Tuple
 
 # Status values (case-insensitive)
 STATUS_SUCCESS = "SUCCESS"
@@ -84,12 +84,12 @@ def poll(
     max_polling_time: int = 600,
     on_progress: Optional[Callable[[int], None]] = None,
     logger_prefix: str = "RH_OpenAPI_Task",
-) -> List[str]:
+) -> Tuple[List[str], Dict]:
     """
     Poll task result.
 
     Returns:
-        List of result URLs
+        (result_urls, full_response) - URLs and the complete final API response dict
     """
     url = f"{base_url.rstrip('/')}/query"
     headers = {
@@ -170,7 +170,7 @@ def poll(
                     on_progress(100)
                 except Exception:
                     pass
-            return urls
+            return urls, data
 
         if status == STATUS_FAILED:
             raise RuntimeError(

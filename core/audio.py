@@ -97,3 +97,55 @@ def download_audio(
             continue
 
     raise RuntimeError(f"Failed to download audio after {max_retries} attempts: {last_error}")
+
+
+def audio_to_bytes(audio_dict: Dict, format: str = "wav") -> bytes:
+    """
+    Convert ComfyUI AUDIO dict to bytes for upload.
+
+    Args:
+        audio_dict: {"waveform": tensor [1, channels, samples], "sample_rate": int}
+        format: output format ("wav" or "mp3")
+
+    Returns:
+        Audio file bytes
+    """
+    from io import BytesIO
+
+    waveform = audio_dict["waveform"]
+    sample_rate = audio_dict["sample_rate"]
+
+    # Ensure 2D: [channels, samples]
+    if waveform.dim() == 3:
+        waveform = waveform.squeeze(0)
+    if waveform.dim() == 1:
+        waveform = waveform.unsqueeze(0)
+
+    buffer = BytesIO()
+
+    # Try torchaudio first
+    try:
+        import torchaudio
+        torchaudio.save(buffer, waveform, sample_rate, format=format)
+        return buffer.getvalue()
+    except (ImportError, Exception):
+        pass
+
+    # Fallback: scipy for wav
+    try:
+        import scipy.io.wavfile as wavfile
+        import numpy as np
+
+        data = waveform.cpu().numpy()
+        # [channels, samples] → [samples, channels]
+        if data.shape[0] <= 2:
+            data = data.T
+        # Convert float32 to int16
+        data = (data * 32767).clip(-32768, 32767).astype(np.int16)
+
+        wavfile.write(buffer, sample_rate, data)
+        return buffer.getvalue()
+    except (ImportError, Exception):
+        pass
+
+    raise RuntimeError("Cannot convert audio: neither torchaudio nor scipy available")
