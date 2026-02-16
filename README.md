@@ -79,7 +79,7 @@ pip install -r requirements.txt
 
 ## ⚙️ 配置
 
-使用本插件前，你需要一个 RunningHub API Key。前往 [RunningHub 控制台](https://www.runninghub.cn) 注册账号并获取 API Key。
+使用本插件前，你需要一个 RunningHub API Key。前往 [RunningHub API 控制台](https://www.runninghub.cn/enterprise-api/sharedApi) 注册账号并获取 API Key。
 
 ### 配置方式一：节点配置（推荐）
 
@@ -158,5 +158,5 @@ ComfyUI_RH_OpenAPI/
 
 - [RunningHub 官网](https://www.runninghub.cn)
 - [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api)
-- [RunningHub API 文档](https://www.runninghub.cn/call-api/standard-api)
+- [RunningHub API 控制台（获取 API Key）](https://www.runninghub.cn/enterprise-api/sharedApi)
 - [ComfyUI](https://github.com/comfyanonymous/ComfyUI)

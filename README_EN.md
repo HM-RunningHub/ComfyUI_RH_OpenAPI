@@ -79,7 +79,7 @@ Restart ComfyUI after installation.
 
 ## ⚙️ Configuration
 
-You need a RunningHub API Key. Register at [RunningHub](https://www.runninghub.cn) to get one.
+You need a RunningHub API Key. Register and get one at the [RunningHub API Console](https://www.runninghub.cn/enterprise-api/sharedApi).
 
 ### Option 1: Node Settings (Recommended)
 
@@ -158,5 +158,5 @@ This project is licensed under the [Apache License 2.0](LICENSE).
 
 - [RunningHub Website](https://www.runninghub.cn)
 - [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api)
-- [RunningHub API Documentation](https://www.runninghub.cn/call-api/standard-api)
+- [RunningHub API Console (Get API Key)](https://www.runninghub.cn/enterprise-api/sharedApi)
 - [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
