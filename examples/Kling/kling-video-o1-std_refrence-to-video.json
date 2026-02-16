@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "type": "VHS_LoadVideo",
+      "type": "LoadVideo",
       "pos": [
         50,
         300
@@ -61,7 +61,7 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "VHS_LoadVideo"
+        "Node name for S&R": "LoadVideo"
       },
       "widgets_values": [
         "example.mp4"
