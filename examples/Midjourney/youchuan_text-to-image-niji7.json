@@ -106,14 +106,14 @@
     },
     {
       "id": 3,
-      "type": "PreviewImage",
+      "type": "SaveImage",
       "pos": [
         950,
         100
       ],
       "size": [
-        210,
-        246
+        300,
+        270
       ],
       "flags": {},
       "order": 2,
@@ -127,9 +127,11 @@
       ],
       "outputs": [],
       "properties": {
-        "Node name for S&R": "PreviewImage"
+        "Node name for S&R": "SaveImage"
       },
-      "widgets_values": []
+      "widgets_values": [
+        "RH_"
+      ]
     },
     {
       "id": 4,

@@ -1,6 +1,6 @@
 {
-  "last_node_id": 3,
-  "last_link_id": 1,
+  "last_node_id": 4,
+  "last_link_id": 2,
   "nodes": [
     {
       "id": 1,
@@ -70,7 +70,9 @@
         {
           "name": "video",
           "type": "VIDEO",
-          "links": [],
+          "links": [
+            2
+          ],
           "slot_index": 0
         },
         {
@@ -108,7 +110,7 @@
         256
       ],
       "flags": {},
-      "order": 2,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -120,6 +122,35 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 4,
+      "type": "SaveVideo",
+      "pos": [
+        900,
+        100
+      ],
+      "size": [
+        300,
+        200
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 2
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "RH_"
+      ]
     }
   ],
   "links": [
@@ -130,6 +161,14 @@
       2,
       0,
       "RH_OPENAPI_CONFIG"
+    ],
+    [
+      2,
+      2,
+      0,
+      4,
+      0,
+      "VIDEO"
     ]
   ],
   "groups": [],

@@ -1,6 +1,6 @@
 {
-  "last_node_id": 4,
-  "last_link_id": 2,
+  "last_node_id": 5,
+  "last_link_id": 3,
   "nodes": [
     {
       "id": 1,
@@ -97,7 +97,9 @@
         {
           "name": "audio",
           "type": "AUDIO",
-          "links": [],
+          "links": [
+            3
+          ],
           "slot_index": 0
         },
         {
@@ -139,7 +141,7 @@
         208
       ],
       "flags": {},
-      "order": 3,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -151,6 +153,35 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 5,
+      "type": "SaveAudio",
+      "pos": [
+        900,
+        100
+      ],
+      "size": [
+        300,
+        140
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudio"
+      },
+      "widgets_values": [
+        "audio/RH_"
+      ]
     }
   ],
   "links": [
@@ -168,6 +199,14 @@
       0,
       3,
       1,
+      "AUDIO"
+    ],
+    [
+      3,
+      3,
+      0,
+      5,
+      0,
       "AUDIO"
     ]
   ],

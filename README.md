@@ -159,4 +159,6 @@ ComfyUI_RH_OpenAPI/
 - [RunningHub 官网](https://www.runninghub.cn)
 - [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api)
 - [RunningHub API 控制台（获取 API Key）](https://www.runninghub.cn/enterprise-api/sharedApi)
+- [API 调用记录查询](https://www.runninghub.cn/call-api/call-record) — 查看历史调用状态与详情
+- [所有模型价格汇总表](https://www.runninghub.cn/third-party-fees) — 各模型计费标准一览
 - [ComfyUI](https://github.com/comfyanonymous/ComfyUI)

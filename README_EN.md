@@ -159,4 +159,6 @@ This project is licensed under the [Apache License 2.0](LICENSE).
 - [RunningHub Website](https://www.runninghub.cn)
 - [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api)
 - [RunningHub API Console (Get API Key)](https://www.runninghub.cn/enterprise-api/sharedApi)
+- [API Call Records](https://www.runninghub.cn/call-api/call-record) — View your API call history, status, and details
+- [Model Pricing Overview](https://www.runninghub.cn/third-party-fees) — Pricing for all available models
 - [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
