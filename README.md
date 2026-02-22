@@ -8,7 +8,7 @@
 
 **ComfyUI_RH_OpenAPI** 是 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 的 **1:1 ComfyUI 实现**。
 
-RunningHub 平台提供了 110+ 个标准模型 API（涵盖图像生成、视频生成、音频合成、3D 建模），本项目将每一个 API 端点都转化为对应的 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的全部标准模型能力，无需本地 GPU，无冷启动延迟。
+RunningHub 平台提供了 110+ 个标准模型 API（涵盖主流最新所有的图像生成、视频生成、音频合成、3D 建模），本项目将每一个 API 端点都转化为对应的 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的全部标准模型能力，无需本地 GPU，无冷启动延迟。
 
 ## 📌 项目特点
 
