@@ -45,7 +45,7 @@ def upload_file(
         try:
             if attempt > 0:
                 wait = min(2 ** attempt, 30)
-                _log(logger_prefix, f"Retry {attempt + 1}/{max_retries} in {wait}s...")
+                _log(logger_prefix, f"Upload retry {attempt + 1}/{max_retries} in {wait}s...")
                 time.sleep(wait)
 
             response = requests.post(url, headers=headers, files=files, timeout=timeout)
@@ -53,10 +53,21 @@ def upload_file(
 
             if response.status_code != 200:
                 err_msg = data.get("message", response.text[:200])
-                raise RuntimeError(f"HTTP {response.status_code}: {err_msg}")
+                last_error = RuntimeError(f"HTTP {response.status_code}: {err_msg}")
+                # Retry on 5xx server errors and 429 rate limit
+                if response.status_code >= 500 or response.status_code == 429:
+                    _log(logger_prefix, f"Attempt {attempt + 1} HTTP {response.status_code}, retrying...")
+                    continue
+                raise last_error
 
             if data.get("code") != 0:
-                raise RuntimeError(data.get("message", "Upload failed"))
+                err_msg = data.get("message", "Upload failed")
+                last_error = RuntimeError(err_msg)
+                # Retry on server-side errors
+                if "server" in err_msg.lower() or "internal" in err_msg.lower():
+                    _log(logger_prefix, f"Attempt {attempt + 1} server error, retrying...")
+                    continue
+                raise last_error
 
             download_url = (data.get("data") or {}).get("download_url")
             if not download_url:
@@ -65,8 +76,14 @@ def upload_file(
             return download_url
 
         except requests.exceptions.RequestException as e:
-            last_error = e
-            _log(logger_prefix, f"Attempt {attempt + 1} failed: {e}")
+            last_error = RuntimeError(f"Network error: {type(e).__name__}: {e}")
+            _log(logger_prefix, f"Attempt {attempt + 1} network error: {type(e).__name__}")
+            continue
+        except RuntimeError:
+            raise
+        except Exception as e:
+            last_error = RuntimeError(f"Unexpected error: {e}")
+            _log(logger_prefix, f"Attempt {attempt + 1} unexpected: {e}")
             continue
 
     raise RuntimeError(f"Upload failed after {max_retries} attempts: {last_error}")

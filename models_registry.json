@@ -11175,5 +11175,174 @@
         "step": 1
       }
     ]
+  },
+  {
+    "class_name": "SeedreamV5LiteTextToImage",
+    "internal_name": "RH_SeedreamV5LiteTextToImage",
+    "display_name": "RH seedream-v5-lite-文生图",
+    "name_cn": "seedream-v5-lite-文生图",
+    "name_en": "seedream-v5-lite/text-to-image",
+    "endpoint": "seedream-v5-lite/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/Seedream",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "width",
+        "type": "INT",
+        "required": true,
+        "label": "width",
+        "description": "width",
+        "defaultValue": 2048,
+        "min": 1600,
+        "max": 4704,
+        "step": 8
+      },
+      {
+        "fieldKey": "height",
+        "type": "INT",
+        "required": true,
+        "label": "height",
+        "description": "height",
+        "defaultValue": 2048,
+        "min": 1344,
+        "max": 4096,
+        "step": 1
+      },
+      {
+        "fieldKey": "sequentialImageGeneration",
+        "type": "LIST",
+        "required": false,
+        "label": "sequentialImageGeneration",
+        "description": "sequentialImageGeneration",
+        "defaultValue": "disabled",
+        "options": [
+          {
+            "value": "disabled",
+            "description": "disabled"
+          },
+          {
+            "value": "auto",
+            "description": "auto"
+          }
+        ]
+      },
+      {
+        "fieldKey": "maxImages",
+        "type": "INT",
+        "required": false,
+        "label": "maxImages",
+        "description": "maxImages",
+        "defaultValue": 1,
+        "min": 1,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "toolsType",
+        "type": "LIST",
+        "required": false,
+        "label": "toolsType",
+        "description": "toolsType",
+        "defaultValue": "web_search",
+        "options": [
+          {
+            "value": "web_search",
+            "description": "web_search"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "SeedreamV5LiteImageToImage",
+    "internal_name": "RH_SeedreamV5LiteImageToImage",
+    "display_name": "RH seedream-v5-lite-图生图",
+    "name_cn": "seedream-v5-lite-图生图",
+    "name_en": "seedream-v5-lite/image-to-image",
+    "endpoint": "seedream-v5-lite/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/Seedream",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "width",
+        "type": "INT",
+        "required": true,
+        "label": "width",
+        "description": "width",
+        "defaultValue": 2048,
+        "min": 1600,
+        "max": 4704,
+        "step": 8
+      },
+      {
+        "fieldKey": "height",
+        "type": "INT",
+        "required": true,
+        "label": "height",
+        "description": "height",
+        "defaultValue": 2048,
+        "min": 1344,
+        "max": 4096,
+        "step": 1
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "multipleInputs": true,
+        "maxInputNum": 10,
+        "accept": "[\"PNG\",\"JPEG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "sequentialImageGeneration",
+        "type": "LIST",
+        "required": false,
+        "label": "sequentialImageGeneration",
+        "description": "sequentialImageGeneration",
+        "defaultValue": "disabled",
+        "options": [
+          {
+            "value": "disabled",
+            "description": "disabled"
+          },
+          {
+            "value": "auto",
+            "description": "auto"
+          }
+        ]
+      },
+      {
+        "fieldKey": "maxImages",
+        "type": "INT",
+        "required": false,
+        "label": "maxImages",
+        "description": "maxImages",
+        "defaultValue": 1,
+        "min": 1,
+        "max": 15,
+        "step": 1
+      }
+    ]
   }
 ]

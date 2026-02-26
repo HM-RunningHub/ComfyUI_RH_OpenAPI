@@ -25,16 +25,45 @@ def _log(prefix: str, msg: str):
     print(f"[{prefix}] {msg}")
 
 
+MAX_SUBMIT_RETRIES = 3
+
+
+def _is_retryable_error(error_msg: str, status_code: int = 0) -> bool:
+    """Check if an error is transient and worth retrying."""
+    err_lower = str(error_msg).lower()
+
+    # Business errors: never retry
+    non_retryable = [
+        "violation", "illegal", "forbidden", "nsfw",
+        "content policy", "unauthorized", "bad request",
+        "content verification failed", "moderation",
+        "invalid parameter", "parameter error",
+        "balance", "insufficient", "quota",
+    ]
+    if any(kw in err_lower for kw in non_retryable):
+        return False
+
+    # 4xx client errors: don't retry (except 429 rate limit)
+    if status_code and 400 <= status_code < 500 and status_code != 429:
+        return False
+
+    return True
+
+
 def submit(
     endpoint: str,
     payload: dict,
     api_key: str,
     base_url: str,
     timeout: int = 60,
+    max_retries: int = MAX_SUBMIT_RETRIES,
     logger_prefix: str = "RH_OpenAPI_Task",
 ) -> str:
     """
-    Submit task.
+    Submit task with retry on transient errors.
+
+    Retries on: network errors, HTTP 5xx, 429 rate limit.
+    Does NOT retry on: 4xx client errors, business errors (content moderation, etc.)
 
     Returns:
         task_id
@@ -45,35 +74,59 @@ def submit(
         "Authorization": f"Bearer {api_key}",
     }
 
-    try:
-        response = requests.post(url, headers=headers, json=payload, timeout=timeout)
-    except requests.exceptions.RequestException as e:
-        raise RuntimeError(f"Submit failed: Network error [errorCode: , errorMessage: {e}]")
+    last_error = None
+    for attempt in range(max_retries):
+        if attempt > 0:
+            wait = min(2 ** attempt + 1, 15)
+            _log(logger_prefix, f"Submit retry {attempt + 1}/{max_retries} in {wait}s...")
+            time.sleep(wait)
 
-    try:
-        data = response.json() if response.text else {}
-    except json.JSONDecodeError:
+        try:
+            response = requests.post(url, headers=headers, json=payload, timeout=timeout)
+        except requests.exceptions.RequestException as e:
+            last_error = RuntimeError(f"Submit failed: Network error ({type(e).__name__}: {e})")
+            _log(logger_prefix, f"Submit network error (attempt {attempt + 1}): {type(e).__name__}")
+            continue
+
+        try:
+            data = response.json() if response.text else {}
+        except json.JSONDecodeError:
+            if response.status_code != 200:
+                last_error = RuntimeError(
+                    f"Submit failed: HTTP {response.status_code} [errorCode: , errorMessage: {response.text[:200]}]"
+                )
+                if _is_retryable_error("", response.status_code):
+                    _log(logger_prefix, f"Submit HTTP {response.status_code} (attempt {attempt + 1}), retrying...")
+                    continue
+                raise last_error
+            last_error = RuntimeError("Submit failed: Invalid JSON response")
+            continue
+
         if response.status_code != 200:
-            raise RuntimeError(
-                f"Submit failed: HTTP {response.status_code} [errorCode: , errorMessage: {response.text[:200]}]"
-            )
-        raise RuntimeError("Submit failed: Invalid JSON response [errorCode: , errorMessage: ]")
+            err_code = str(data.get("errorCode", ""))
+            err_msg = data.get("errorMessage", response.text[:200]) or f"HTTP {response.status_code}"
+            last_error = RuntimeError(f"Submit failed: {err_msg} [errorCode: {err_code}]")
+            if _is_retryable_error(err_msg, response.status_code):
+                _log(logger_prefix, f"Submit error (attempt {attempt + 1}): {err_msg[:100]}")
+                continue
+            raise last_error
 
-    if response.status_code != 200:
-        err_code = str(data.get("errorCode", ""))
-        err_msg = data.get("errorMessage", response.text[:200]) or f"HTTP {response.status_code}"
-        raise RuntimeError(f"Submit failed: {err_msg} [errorCode: {err_code}]")
+        err_code = data.get("errorCode") or data.get("error_code") or ""
+        err_msg = data.get("errorMessage") or data.get("error_message") or ""
+        if err_code or err_msg:
+            last_error = RuntimeError(f"Submit failed: {err_msg or f'Error code {err_code}'} [errorCode: {err_code}]")
+            if _is_retryable_error(err_msg):
+                _log(logger_prefix, f"Submit API error (attempt {attempt + 1}): {err_msg[:100]}")
+                continue
+            raise last_error
 
-    err_code = data.get("errorCode") or data.get("error_code") or ""
-    err_msg = data.get("errorMessage") or data.get("error_message") or ""
-    if err_code or err_msg:
-        raise RuntimeError(f"Submit failed: {err_msg or f'Error code {err_code}'} [errorCode: {err_code}]")
+        task_id = data.get("taskId") or data.get("task_id")
+        if not task_id:
+            raise RuntimeError("Submit failed: No task ID in response")
 
-    task_id = data.get("taskId") or data.get("task_id")
-    if not task_id:
-        raise RuntimeError("Submit failed: No task ID in response [errorCode: , errorMessage: ]")
+        return str(task_id)
 
-    return str(task_id)
+    raise last_error or RuntimeError(f"Submit failed after {max_retries} attempts")
 
 
 def poll(
@@ -131,17 +184,30 @@ def poll(
             time.sleep(min(consecutive_failures * 2, 10))
             continue
 
-        consecutive_failures = 0
-
         if response.status_code != 200:
-            _log(logger_prefix, f"Poll HTTP {response.status_code}")
+            consecutive_failures += 1
+            _log(logger_prefix, f"Poll HTTP {response.status_code} ({consecutive_failures}/{MAX_CONSECUTIVE_POLL_FAILURES})")
+            if consecutive_failures >= MAX_CONSECUTIVE_POLL_FAILURES:
+                raise RuntimeError(
+                    f"Polling failed: server returned HTTP {response.status_code} "
+                    f"{consecutive_failures} times consecutively [taskId: {task_id}]"
+                )
+            time.sleep(min(consecutive_failures * 2, 10))
             continue
 
         try:
             data = response.json()
         except json.JSONDecodeError:
-            _log(logger_prefix, "Failed to parse JSON response")
+            consecutive_failures += 1
+            _log(logger_prefix, f"Poll JSON parse error ({consecutive_failures}/{MAX_CONSECUTIVE_POLL_FAILURES})")
+            if consecutive_failures >= MAX_CONSECUTIVE_POLL_FAILURES:
+                raise RuntimeError(
+                    f"Polling failed: invalid JSON response "
+                    f"{consecutive_failures} times consecutively [taskId: {task_id}]"
+                )
             continue
+
+        consecutive_failures = 0
 
         err_code = data.get("errorCode") or data.get("error_code") or ""
         err_msg = data.get("errorMessage") or data.get("error_message") or ""

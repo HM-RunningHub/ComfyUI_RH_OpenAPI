@@ -77,10 +77,13 @@ class BaseNode(ABC):
 
     def execute(self, **kwargs):
         """
-        Unified execution flow.
+        Unified execution flow with contextual error reporting.
+
+        Each stage wraps errors with the node name and stage info so users
+        can identify exactly what went wrong and where.
 
         Returns:
-            Primary result tuple + (url_string, response_json_string)
+            {"ui": {"text": [url, response]}, "result": (primary, url, response)}
         """
         api_config = kwargs.get("api_config")
         config = get_config(api_config)
@@ -93,37 +96,52 @@ class BaseNode(ABC):
         pbar = comfy.utils.ProgressBar(100) if COMFYUI_AVAILABLE else None
         self._update_progress(pbar, 0)
 
-        prepared = self.prepare_inputs(**kwargs)
-        kwargs.update(prepared)
+        # Stage 1: Prepare inputs (upload media)
+        try:
+            prepared = self.prepare_inputs(**kwargs)
+            kwargs.update(prepared)
+        except Exception as e:
+            raise RuntimeError(f"[{self._log_prefix}] Upload failed: {e}") from e
         self._update_progress(pbar, self.PROGRESS_PREPARE)
 
-        payload = self.build_payload(**kwargs)
-        task_id = submit(
-            self.ENDPOINT,
-            payload,
-            api_key,
-            base_url,
-            timeout=timeout,
-            logger_prefix=self._log_prefix,
-        )
+        # Stage 2: Build payload and submit task
+        try:
+            payload = self.build_payload(**kwargs)
+            task_id = submit(
+                self.ENDPOINT,
+                payload,
+                api_key,
+                base_url,
+                timeout=timeout,
+                logger_prefix=self._log_prefix,
+            )
+        except Exception as e:
+            raise RuntimeError(f"[{self._log_prefix}] Submit failed: {e}") from e
         self._update_progress(pbar, self.PROGRESS_SUBMIT)
 
+        # Stage 3: Poll for results
         def on_progress(v):
             self._update_progress(pbar, v)
 
-        result_urls, full_response = poll(
-            task_id,
-            api_key,
-            base_url,
-            polling_interval=polling_interval,
-            max_polling_time=max_polling_time,
-            on_progress=on_progress,
-            logger_prefix=self._log_prefix,
-        )
+        try:
+            result_urls, full_response = poll(
+                task_id,
+                api_key,
+                base_url,
+                polling_interval=polling_interval,
+                max_polling_time=max_polling_time,
+                on_progress=on_progress,
+                logger_prefix=self._log_prefix,
+            )
+        except Exception as e:
+            raise RuntimeError(f"[{self._log_prefix}] Task execution failed: {e}") from e
         self._update_progress(pbar, self.PROGRESS_POLL_END)
 
-        # Primary result from subclass
-        primary_result = self.process_result(result_urls)
+        # Stage 4: Download and process results
+        try:
+            primary_result = self.process_result(result_urls)
+        except Exception as e:
+            raise RuntimeError(f"[{self._log_prefix}] Result download failed: {e}") from e
         self._update_progress(pbar, 100)
 
         # Build extra outputs: url and response
