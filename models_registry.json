@@ -1209,17 +1209,19 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": "15",
         "options": [
           {
             "value": "15",
-            "description": "15"
+            "description": "15",
+            "descriptionEn": "15"
           },
           {
             "value": "25",
-            "description": "25"
+            "description": "25",
+            "descriptionEn": "25"
           }
-        ],
-        "defaultValue": "15"
+        ]
       },
       {
         "fieldKey": "aspectRatio",
@@ -1227,25 +1229,19 @@
         "required": true,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "9:16",
         "options": [
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           },
           {
             "value": "16:9",
-            "description": "16:9"
-          },
-          {
-            "value": "1024x1792",
-            "description": "1024x1792"
-          },
-          {
-            "value": "1792x1024",
-            "description": "1792x1024"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           }
-        ],
-        "defaultValue": "9:16"
+        ]
       },
       {
         "fieldKey": "storyboard",
@@ -8813,21 +8809,24 @@
         "required": true,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "2:3",
         "options": [
           {
             "value": "2:3",
-            "description": "2:3"
+            "description": "2:3",
+            "descriptionEn": "2:3"
           },
           {
             "value": "3:2",
-            "description": "3:2"
+            "description": "3:2",
+            "descriptionEn": "3:2"
           },
           {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           }
-        ],
-        "defaultValue": "2:3"
+        ]
       },
       {
         "fieldKey": "imageUrls",
@@ -8835,7 +8834,8 @@
         "required": false,
         "label": "imageUrls",
         "description": "imageUrls",
-        "multipleInputs": false,
+        "defaultValue": "https://www.runninghub.cn/view?filename=1c35849fb2547490f25c08dfecb2dbc587e720a4698eca9a4643c2a654d5c59d.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzA5OTk0NDgwNTYsInRzIjoxNzcwMzk0NjQ4MDU2LCJzaWduIjoiNTNlY2U4YTY5OWRmMjA0OTE4YjE4NDVkMDFlNTU5OWEifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.79992383645995",
+        "multipleInputs": true,
         "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
@@ -8845,14 +8845,20 @@
         "type": "LIST",
         "required": true,
         "label": "resolution",
-        "description": "resolution",
+        "description": "resolution（仅15s支持1080p）",
+        "defaultValue": "720P",
         "options": [
           {
             "value": "720P",
-            "description": "720P"
+            "description": "720P",
+            "descriptionEn": "720P"
+          },
+          {
+            "value": "1080P",
+            "description": "1080P",
+            "descriptionEn": "1080P"
           }
-        ],
-        "defaultValue": "720P"
+        ]
       },
       {
         "fieldKey": "duration",
@@ -8860,17 +8866,24 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": "6s",
         "options": [
           {
             "value": "6s",
-            "description": "6s"
+            "description": "6s",
+            "descriptionEn": "6s"
           },
           {
             "value": "10s",
-            "description": "10s"
+            "description": "10s",
+            "descriptionEn": "10s"
+          },
+          {
+            "value": "15s",
+            "description": "15s",
+            "descriptionEn": "15s"
           }
-        ],
-        "defaultValue": "6s"
+        ]
       }
     ]
   },
@@ -8899,35 +8912,44 @@
         "required": true,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "2:3",
         "options": [
           {
             "value": "2:3",
-            "description": "2:3"
+            "description": "2:3",
+            "descriptionEn": "2:3"
           },
           {
             "value": "3:2",
-            "description": "3:2"
+            "description": "3:2",
+            "descriptionEn": "3:2"
           },
           {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           }
-        ],
-        "defaultValue": "2:3"
+        ]
       },
       {
         "fieldKey": "resolution",
         "type": "LIST",
         "required": true,
         "label": "resolution",
-        "description": "resolution",
+        "description": "resolution（仅15s支持1080p）",
+        "defaultValue": "720P",
         "options": [
           {
             "value": "720P",
-            "description": "720P"
+            "description": "720P",
+            "descriptionEn": "720P"
+          },
+          {
+            "value": "1080P",
+            "description": "1080P",
+            "descriptionEn": "1080P"
           }
-        ],
-        "defaultValue": "720P"
+        ]
       },
       {
         "fieldKey": "duration",
@@ -8935,17 +8957,24 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": "6s",
         "options": [
           {
             "value": "6s",
-            "description": "6s"
+            "description": "6s",
+            "descriptionEn": "6s"
           },
           {
             "value": "10s",
-            "description": "10s"
+            "description": "10s",
+            "descriptionEn": "10s"
+          },
+          {
+            "value": "15s",
+            "description": "15s",
+            "descriptionEn": "15s"
           }
-        ],
-        "defaultValue": "6s"
+        ]
       }
     ]
   },
@@ -11342,6 +11371,228 @@
         "min": 1,
         "max": 15,
         "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageNG31FlashTextToImage",
+    "internal_name": "RH_RhartImageNG31FlashTextToImage",
+    "display_name": "RH 全能图片V2-文生图",
+    "name_cn": "全能图片V2-文生图",
+    "name_en": "nano-banana2-gemini31flash/text-to-image",
+    "endpoint": "rhart-image-n-g31-flash/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "一幅精美的明代国漫风格插画。一位穿着飞鱼服的锦衣卫站在古老的城墙上，俯瞰着繁华的京城夜景。画面采用平涂风格，线条硬朗，色彩对比强烈，背景有灯笼的光晕和几缕薄雾。"
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "9:16",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageNG31FlashImageToImage",
+    "internal_name": "RH_RhartImageNG31FlashImageToImage",
+    "display_name": "RH 全能图片V2-图生图",
+    "name_cn": "全能图片V2-图生图",
+    "name_en": "nano-banana2-gemini31flash/image-to-image",
+    "endpoint": "rhart-image-n-g31-flash/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "defaultValue": "https://www.runninghub.cn/view?filename=174ba2c54b8af1fdd5a01370049dd6407a693d8b05b4717079698e87680e038e.png&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzI3NjM5NDg5OTQsInRzIjoxNzcyMTU5MTQ4OTk0LCJzaWduIjoiNjAxNWY0MjI2NzI2Yzk0YTFkOTExNjg2NGRkZmU2ZTAifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.8958046627705756",
+        "multipleInputs": true,
+        "maxInputNum": 10,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "将这张线稿转换为明代水墨武侠风格的精细彩图。严格保留人物的动作轮廓与黑鸦的形态，将背景替换为风雪交加的竹林。增强水墨晕染的纹理感，整体色调偏冷，烘托出肃杀的氛围。"
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "9:16",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
       }
     ]
   }
