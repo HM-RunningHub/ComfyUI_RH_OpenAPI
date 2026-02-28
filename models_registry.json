@@ -11595,5 +11595,227 @@
         ]
       }
     ]
+  },
+  {
+    "class_name": "RhartImageNG31FlashOfficialTextToImage",
+    "internal_name": "RH_RhartImageNG31FlashOfficialTextToImage",
+    "display_name": "RH 全能图片V2-官方-文生图",
+    "name_cn": "全能图片V2-官方-文生图",
+    "name_en": "nano-banana2-gemini31flash-official/text-to-image",
+    "endpoint": "rhart-image-n-g31-flash-official/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "一张 21:9 的电影级特写镜头。画面中心是一个复古的霓虹灯牌，上面用清晰的英文字体写着 \"全能图片 V2\"。灯牌背景是雨后的赛博朋克街道，地面有极度真实的积水倒影。五个不同风格的角色（如：戴墨镜的侦探、机械少女等）正围在灯牌旁讨论，光影呈现出细腻的变形镜头（Anamorphic）晕光效果，画质要求 4K 极精细。"
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "21:9",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageNG31FlashOfficialImageToImage",
+    "internal_name": "RH_RhartImageNG31FlashOfficialImageToImage",
+    "display_name": "RH 全能图片V2-官方-图生图",
+    "name_cn": "全能图片V2-官方-图生图",
+    "name_en": "nano-banana2-gemini31flash-official/image-to-image",
+    "endpoint": "rhart-image-n-g31-flash-official/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "defaultValue": "https://www.runninghub.cn/view?filename=035b95c2ce2cf2cf02ba1f26b9eca593096c23d8bf49003fd0584fe87d404d2f.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzI4NzQyNTUzMTAsInRzIjoxNzcyMjY5NDU1MzEwLCJzaWduIjoiZWJkODVlYmY2ZTRlMjRiNzJlNGQ4MzA5YjgxMTA3OGEifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.946825154000992",
+        "multipleInputs": true,
+        "maxInputNum": 14,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "操作指令： 参考我上传的这张人物线稿图。必须百分之百忠实于原线稿的线条结构，不得有任何线条的增加或减少。 上色要求： 将其处理成一种复古的日式赛博朋克漫画风格。给头发上色为淡紫色，皮肤为自然的暖色调，衣服赋予银色金属涂层质感。 背景与光影： 背景是一个霓虹闪烁的雨后街道。让蓝绿色的霓虹灯光作为主光源，映射在人物身体的左侧，形成细腻的拉丝晕光。"
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "9:16",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      }
+    ]
   }
 ]
