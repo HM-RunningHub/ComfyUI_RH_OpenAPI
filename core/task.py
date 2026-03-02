@@ -224,19 +224,26 @@ def poll(
                 raise RuntimeError(f"No results in response [taskId: {task_id}]")
 
             urls = []
+            texts = []
             for r in results:
                 u = r.get("url") or r.get("outputUrl")
                 if u:
                     urls.append(u)
-            if not urls:
-                raise RuntimeError(f"No URL in results [taskId: {task_id}]")
+                t = r.get("text") or r.get("content") or r.get("output")
+                if t:
+                    texts.append(t)
+
+            if not urls and not texts:
+                raise RuntimeError(f"No URL or text in results [taskId: {task_id}]")
+
+            result_items = urls if urls else texts
 
             if on_progress:
                 try:
                     on_progress(100)
                 except Exception:
                     pass
-            return urls, data
+            return result_items, data
 
         if status == STATUS_FAILED:
             raise RuntimeError(

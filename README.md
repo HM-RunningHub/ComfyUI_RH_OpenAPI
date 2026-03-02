@@ -1,18 +1,18 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-121-blue)
+![Nodes](https://img.shields.io/badge/Nodes-149-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 [English](README_EN.md) | **中文**
 
 **ComfyUI_RH_OpenAPI** 是 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 的 **1:1 ComfyUI 实现**。
 
-RunningHub 平台提供了 121 个标准模型 API（涵盖主流最新所有的图像生成、视频生成、音频合成、3D 建模），本项目将每一个 API 端点都转化为对应的 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的全部标准模型能力，无需本地 GPU，无冷启动延迟。
+RunningHub 平台提供了 149 个标准模型 API（涵盖主流最新所有的图像生成、视频生成、音频合成、3D 建模、文本理解、图像放大），本项目将每一个 API 端点都转化为对应的 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的全部标准模型能力，无需本地 GPU，无冷启动延迟。
 
 ## 📌 项目特点
 
-- **完整覆盖** — 121 个 ComfyUI 节点，与 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 一一对应
+- **完整覆盖** — 149 个 ComfyUI 节点，与 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 一一对应
 - **即插即用** — 无需下载模型、无需 GPU，只需 API Key 即可调用全部能力
 - **动态注册** — 基于 JSON 注册表自动生成节点，新模型上线后仅需更新注册表
 - **多媒体支持** — 图片、视频、音频自动上传 / 下载 / 格式转换，与 ComfyUI 原生类型无缝衔接
@@ -23,7 +23,7 @@ RunningHub 平台提供了 121 个标准模型 API（涵盖主流最新所有的
 
 ## 🎨 支持的模型
 
-### 图像生成（28 个节点）
+### 图像生成（36 个节点）
 
 | 模型系列 | 能力 | 节点数 |
 |---------|------|--------|
@@ -34,22 +34,34 @@ RunningHub 平台提供了 121 个标准模型 API（涵盖主流最新所有的
 | 全能图片 PRO 官方 | 文生图、图生图、Ultra | 4 |
 | 全能图片 G-1.5 | 文生图、图生图 | 2 |
 | 全能图片 G-1.5 官方 | 文生图、图生图 | 2 |
+| 全能图片 X-3 / X-4 | 文生图、图生图 | 4 |
+| TopazLabs 图像放大 | Standard V2、Low Resolution V2、CGI、High Fidelity V2、Text Refine | 5 |
 | Seedream v4 / v4.5 / v5 Lite | 文生图、图生图 | 6 |
-| 悠船 | 文生图（v6/v61/niji6/niji7/v7）、图生视频 | 6 |
+| 悠船 | 文生图（v6/v61/niji6/niji7/v7）、图生视频 | 5 |
 
-### 视频生成（83 个节点）
+### 视频生成（90 个节点）
 
 | 模型系列 | 能力 | 节点数 |
 |---------|------|--------|
-| 全能视频 S | 图生视频、文生视频、Pro、官方、角色上传 | 11 |
-| 全能视频 V3.1 | Fast/Pro 文生视频、图生视频、首尾帧、参考生视频、视频扩展 | 12 |
+| 全能视频 S | 图生视频、文生视频、Pro、官方、角色上传、异步 | 12 |
+| 全能视频 V3.1 | Fast/Pro 文生视频、图生视频、首尾帧、参考生视频、视频扩展 | 13 |
 | 全能视频 G | 文生视频、图生视频 | 2 |
 | 全能视频 G 官方 | 文生视频、图生视频、编辑视频 | 3 |
-| 可灵 Kling | v2.5/v2.6/v3.0/o1/o3，文/图/首尾帧/参考/动作控制/编辑 | 20 |
+| 可灵 Kling | v2.5/v2.6/v3.0/o1/o3，文/图/首尾帧/参考/动作控制/编辑 | 24 |
 | Vidu | q2/q3，文/图/首尾帧/参考生视频 | 15 |
 | 万相 2.6 | 文生视频、图生视频、Flash | 3 |
 | 海螺 Hailuo | 02/2.3/2.3-fast，文/图生视频 | 13 |
 | Seedance v1.5 | 文/图生视频、Fast、参考生视频 | 5 |
+| TopazLabs 视频放大 | 视频增强放大 | 1 |
+
+### 文本理解（12 个节点）
+
+| 模型系列 | 能力 | 节点数 |
+|---------|------|--------|
+| RHArt Text G-3 Flash Preview | 图生文、文生文、视频理解 | 3 |
+| RHArt Text G-3 Pro Preview | 图生文、文生文、视频理解 | 3 |
+| RHArt Text G-2.5 Flash | 图生文、文生文、视频理解 | 3 |
+| RHArt Text G-2.5 Pro | 图生文、文生文、视频理解 | 3 |
 
 ### 音频合成（8 个节点）
 
@@ -114,14 +126,14 @@ cp config/.env.example config/.env
 
 ### 示例工作流
 
-项目在 `examples/` 目录下提供了 121 个示例工作流 JSON 文件，覆盖每一个模型节点。下载后直接导入 ComfyUI 即可使用。
+项目在 `examples/` 目录下提供了 149 个示例工作流 JSON 文件，覆盖每一个模型节点。下载后直接导入 ComfyUI 即可使用。
 
 ## 📁 项目结构
 
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # 入口文件，注册所有节点
-├── models_registry.json     # 模型注册表（121 个模型定义）
+├── models_registry.json     # 模型注册表（149 个模型定义）
 ├── config/
 │   └── .env.example         # 配置文件示例
 ├── core/                    # 核心基础设施
@@ -135,7 +147,7 @@ ComfyUI_RH_OpenAPI/
 ├── nodes/                   # 节点实现
 │   ├── settings_node.py     # RH OpenAPI Settings 配置节点
 │   └── node_factory.py      # 动态节点工厂
-└── examples/                # 121 个示例工作流
+└── examples/                # 149 个示例工作流
 ```
 
 ## 🔧 架构说明

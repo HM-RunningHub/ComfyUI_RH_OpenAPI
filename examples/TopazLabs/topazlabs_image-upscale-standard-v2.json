@@ -1,0 +1,229 @@
+{
+  "last_node_id": 99,
+  "last_link_id": 4,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "RHSettingsNode",
+      "pos": [
+        50,
+        100
+      ],
+      "size": [
+        330,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "api_config",
+          "type": "RH_OPENAPI_CONFIG",
+          "links": [
+            1
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RHSettingsNode"
+      },
+      "widgets_values": [
+        "https://www.runninghub.cn/openapi/v2",
+        "YOUR_API_KEY"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "LoadImage",
+      "pos": [
+        50,
+        300
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            2
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "SaveImage",
+      "pos": [
+        950,
+        100
+      ],
+      "size": [
+        300,
+        270
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "RH_"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "RH_TopazlabsImageUpscaleStandardV2",
+      "pos": [
+        500,
+        100
+      ],
+      "size": [
+        350,
+        280
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "api_config",
+          "type": "RH_OPENAPI_CONFIG",
+          "link": 1
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            3
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "url",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1
+        },
+        {
+          "name": "response",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RH_TopazlabsImageUpscaleStandardV2"
+      },
+      "widgets_values": [
+        "2x",
+        "All",
+        true,
+        0,
+        0.8
+      ],
+      "title": "RH topazlabs图像放大StandardV2"
+    },
+    {
+      "id": 99,
+      "type": "Note",
+      "pos": [
+        50,
+        -100
+      ],
+      "size": [
+        420,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": "Example: RH topazlabs图像放大StandardV2\nEndpoint: /topazlabs/image-upscale-standard-v2\nOutput: image\n\nSteps:\n1. Set API Key in Settings node\n2. Connect input image (Load Image)\n3. Queue Prompt"
+      },
+      "widgets_values": [
+        "Example: RH topazlabs图像放大StandardV2\nEndpoint: /topazlabs/image-upscale-standard-v2\nOutput: image\n\nSteps:\n1. Set API Key in Settings node\n2. Connect input image (Load Image)\n3. Queue Prompt"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "RH_OPENAPI_CONFIG"
+    ],
+    [
+      2,
+      10,
+      0,
+      2,
+      1,
+      "IMAGE"
+    ],
+    [
+      3,
+      2,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        0,
+        0
+      ]
+    }
+  },
+  "version": 0.4
+}

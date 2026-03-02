@@ -1,0 +1,140 @@
+{
+  "last_node_id": 99,
+  "last_link_id": 2,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "RHSettingsNode",
+      "pos": [
+        50,
+        100
+      ],
+      "size": [
+        330,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "api_config",
+          "type": "RH_OPENAPI_CONFIG",
+          "links": [
+            1
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RHSettingsNode"
+      },
+      "widgets_values": [
+        "https://www.runninghub.cn/openapi/v2",
+        "YOUR_API_KEY"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "RH_RhartTextG3FlashPreviewVideoToText",
+      "pos": [
+        500,
+        100
+      ],
+      "size": [
+        350,
+        280
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "api_config",
+          "type": "RH_OPENAPI_CONFIG",
+          "link": 1
+        },
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "url",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1
+        },
+        {
+          "name": "response",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RH_RhartTextG3FlashPreviewVideoToText"
+      },
+      "widgets_values": [
+        "sample prompt"
+      ],
+      "title": "RH rhart-text-g-3-flash-preview/video-to-text"
+    },
+    {
+      "id": 99,
+      "type": "Note",
+      "pos": [
+        50,
+        -100
+      ],
+      "size": [
+        420,
+        200
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": "Example: RH rhart-text-g-3-flash-preview/video-to-text\nEndpoint: /rhart-text-g-3-flash-preview/video-to-text\nOutput: string\n\nSteps:\n1. Set API Key in Settings node\n2. Connect input video\n3. Queue Prompt"
+      },
+      "widgets_values": [
+        "Example: RH rhart-text-g-3-flash-preview/video-to-text\nEndpoint: /rhart-text-g-3-flash-preview/video-to-text\nOutput: string\n\nSteps:\n1. Set API Key in Settings node\n2. Connect input video\n3. Queue Prompt"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "RH_OPENAPI_CONFIG"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        0,
+        0
+      ]
+    }
+  },
+  "version": 0.4
+}

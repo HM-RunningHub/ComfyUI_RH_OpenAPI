@@ -5902,7 +5902,7 @@
         "type": "STRING",
         "required": true,
         "label": "prompt",
-        "description": "Prompt, describing the video content to generate",
+        "description": "提示词，描述要生成的视频内容",
         "defaultValue": "平滑的魔法过渡：法术书封面自然抬起，书页翻转并向上飘浮，金色光粒子动态旋转增强，符文亮度逐渐增强，从闭合到展开的无缝形态变化，电影级动态效果，流畅的延时动画",
         "maxLength": 8192
       },
@@ -5911,7 +5911,8 @@
         "type": "IMAGE",
         "required": true,
         "label": "firstImageUrl",
-        "description": "First frame image URL",
+        "description": "首帧图片URL",
+        "defaultValue": "https://www.runninghub.cn/view?filename=861f7549d2e27505de527e491371bf87475d5a76177ad9c8aae2d1ddf9aa4842.png&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzAzNTUwMjQwMTMsInRzIjoxNzY5NzUwMjI0MDEzLCJzaWduIjoiMWZlY2Q0NWVmZmFjYWFjY2I0MTcyYmIzM2Q1MjdmNjEifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.1336447606892428",
         "multipleInputs": false,
         "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\",\"WEBP\"]",
@@ -5922,7 +5923,7 @@
         "type": "IMAGE",
         "required": false,
         "label": "lastImageUrl",
-        "description": "Last frame image URL (will be used as --end parameter)",
+        "description": "尾帧图片URL（将作为--end参数）",
         "multipleInputs": false,
         "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\",\"WEBP\"]",
@@ -5934,17 +5935,19 @@
         "required": true,
         "label": "resolution",
         "description": "resolution",
+        "defaultValue": "720p",
         "options": [
           {
             "value": "480p",
-            "description": "480p"
+            "description": "480p",
+            "descriptionEn": "480p"
           },
           {
             "value": "720p",
-            "description": "720p"
+            "description": "720p",
+            "descriptionEn": "720p"
           }
-        ],
-        "defaultValue": "720p"
+        ]
       },
       {
         "fieldKey": "motion",
@@ -5952,17 +5955,19 @@
         "required": false,
         "label": "motion",
         "description": "motion",
+        "defaultValue": "low",
         "options": [
           {
             "value": "low",
-            "description": "low"
+            "description": "low",
+            "descriptionEn": "low"
           },
           {
             "value": "high",
-            "description": "high"
+            "description": "high",
+            "descriptionEn": "high"
           }
-        ],
-        "defaultValue": "low"
+        ]
       },
       {
         "fieldKey": "raw",
@@ -5971,6 +5976,14 @@
         "label": "raw",
         "description": "raw",
         "defaultValue": true
+      },
+      {
+        "fieldKey": "loop",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "loop",
+        "description": "生成首尾帧一样的视频",
+        "defaultValue": false
       }
     ]
   },
@@ -8464,17 +8477,74 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": "5",
         "options": [
           {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
             "value": "5",
-            "description": "5"
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
           },
           {
             "value": "10",
-            "description": "10"
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
           }
-        ],
-        "defaultValue": "5"
+        ]
       },
       {
         "fieldKey": "aspectRatio",
@@ -8482,21 +8552,24 @@
         "required": false,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "16:9",
         "options": [
           {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           },
           {
             "value": "16:9",
-            "description": "16:9"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           },
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           }
-        ],
-        "defaultValue": "16:9"
+        ]
       },
       {
         "fieldKey": "cfgScale",
@@ -8504,10 +8577,10 @@
         "required": false,
         "label": "cfgScale",
         "description": "cfgScale",
+        "defaultValue": 0.5,
         "min": 0,
         "max": 1,
-        "step": 0.1,
-        "defaultValue": 0.5
+        "step": 0.1
       },
       {
         "fieldKey": "sound",
@@ -8552,6 +8625,7 @@
         "required": true,
         "label": "firstImageUrl",
         "description": "firstImageUrl",
+        "defaultValue": "https://www.runninghub.cn/view?filename=92cb39af79424185dce6016ea654eee1f0e22091a0990afd6b293707719bff86.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzA4OTA0Mzk0NDYsInRzIjoxNzcwMjg1NjM5NDQ2LCJzaWduIjoiNzM4MjQ5NjYxY2YwMGZjMzhhOThjNzRkMzU0ZmExZTEifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.9580433249908384",
         "multipleInputs": false,
         "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
@@ -8563,6 +8637,7 @@
         "required": false,
         "label": "lastImageUrl",
         "description": "lastImageUrl",
+        "defaultValue": "https://www.runninghub.cn/view?filename=5ba17f8245b07b3ebc4a3d69d77dd953077e04dad1c01f94150886778a250c12.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzA4OTA0Mzk0NDYsInRzIjoxNzcwMjg1NjM5NDQ2LCJzaWduIjoiNzM4MjQ5NjYxY2YwMGZjMzhhOThjNzRkMzU0ZmExZTEifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.4748683756172115",
         "multipleInputs": false,
         "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
@@ -8574,17 +8649,74 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": "5",
         "options": [
           {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
             "value": "5",
-            "description": "5"
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
           },
           {
             "value": "10",
-            "description": "10"
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
           }
-        ],
-        "defaultValue": "5"
+        ]
       },
       {
         "fieldKey": "cfgScale",
@@ -8592,10 +8724,10 @@
         "required": false,
         "label": "cfgScale",
         "description": "cfgScale",
+        "defaultValue": 0.8,
         "min": 0,
         "max": 1,
-        "step": 0.1,
-        "defaultValue": 0.8
+        "step": 0.1
       },
       {
         "fieldKey": "sound",
@@ -8641,17 +8773,74 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": "5",
         "options": [
           {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
             "value": "5",
-            "description": "5"
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
           },
           {
             "value": "10",
-            "description": "10"
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
           }
-        ],
-        "defaultValue": "5"
+        ]
       },
       {
         "fieldKey": "aspectRatio",
@@ -8659,21 +8848,24 @@
         "required": false,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "16:9",
         "options": [
           {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           },
           {
             "value": "16:9",
-            "description": "16:9"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           },
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           }
-        ],
-        "defaultValue": "16:9"
+        ]
       },
       {
         "fieldKey": "cfgScale",
@@ -8681,10 +8873,10 @@
         "required": false,
         "label": "cfgScale",
         "description": "cfgScale",
+        "defaultValue": 0.5,
         "min": 0,
         "max": 1,
-        "step": 0.1,
-        "defaultValue": 0.5
+        "step": 0.1
       },
       {
         "fieldKey": "sound",
@@ -8729,6 +8921,7 @@
         "required": true,
         "label": "firstImageUrl",
         "description": "firstImageUrl",
+        "defaultValue": "https://www.runninghub.cn/view?filename=6ea666eb43d1e867e9d31b26aa16fed41e77a2387fea0d0c330c250df47344ee.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzA4Nzk1NjgzNDUsInRzIjoxNzcwMjc0NzY4MzQ1LCJzaWduIjoiNWY0OWUyMzBmNjM0NTViOGZhZWM5NzQzMDYzMjIzOWYifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.7161105046578343",
         "multipleInputs": false,
         "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
@@ -8751,17 +8944,74 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": "5",
         "options": [
           {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
             "value": "5",
-            "description": "5"
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
           },
           {
             "value": "10",
-            "description": "10"
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
           }
-        ],
-        "defaultValue": "5"
+        ]
       },
       {
         "fieldKey": "cfgScale",
@@ -8769,10 +9019,10 @@
         "required": false,
         "label": "cfgScale",
         "description": "cfgScale",
+        "defaultValue": 0.5,
         "min": 0,
         "max": 1,
-        "step": 0.1,
-        "defaultValue": 0.5
+        "step": 0.1
       },
       {
         "fieldKey": "sound",
@@ -11449,6 +11699,26 @@
             "value": "21:9",
             "description": "21:9",
             "descriptionEn": "21:9"
+          },
+          {
+            "value": "1:4",
+            "description": "1:4",
+            "descriptionEn": "1:4"
+          },
+          {
+            "value": "4:1",
+            "description": "4:1",
+            "descriptionEn": "4:1"
+          },
+          {
+            "value": "1:8",
+            "description": "1:8",
+            "descriptionEn": "1:8"
+          },
+          {
+            "value": "8:1",
+            "description": "8:1",
+            "descriptionEn": "8:1"
           }
         ]
       },
@@ -11566,6 +11836,26 @@
             "value": "21:9",
             "description": "21:9",
             "descriptionEn": "21:9"
+          },
+          {
+            "value": "1:4",
+            "description": "1:4",
+            "descriptionEn": "1:4"
+          },
+          {
+            "value": "4:1",
+            "description": "4:1",
+            "descriptionEn": "4:1"
+          },
+          {
+            "value": "1:8",
+            "description": "1:8",
+            "descriptionEn": "1:8"
+          },
+          {
+            "value": "8:1",
+            "description": "8:1",
+            "descriptionEn": "8:1"
           }
         ]
       },
@@ -11671,6 +11961,26 @@
             "value": "21:9",
             "description": "21:9",
             "descriptionEn": "21:9"
+          },
+          {
+            "value": "1:4",
+            "description": "1:4",
+            "descriptionEn": "1:4"
+          },
+          {
+            "value": "4:1",
+            "description": "4:1",
+            "descriptionEn": "4:1"
+          },
+          {
+            "value": "1:8",
+            "description": "1:8",
+            "descriptionEn": "1:8"
+          },
+          {
+            "value": "8:1",
+            "description": "8:1",
+            "descriptionEn": "8:1"
           }
         ]
       },
@@ -11788,6 +12098,26 @@
             "value": "21:9",
             "description": "21:9",
             "descriptionEn": "21:9"
+          },
+          {
+            "value": "1:4",
+            "description": "1:4",
+            "descriptionEn": "1:4"
+          },
+          {
+            "value": "4:1",
+            "description": "4:1",
+            "descriptionEn": "4:1"
+          },
+          {
+            "value": "1:8",
+            "description": "1:8",
+            "descriptionEn": "1:8"
+          },
+          {
+            "value": "8:1",
+            "description": "8:1",
+            "descriptionEn": "8:1"
           }
         ]
       },
@@ -12207,6 +12537,1448 @@
             "descriptionEn": "high"
           }
         ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartVideoSImageToVideoAsyn",
+    "internal_name": "RH_RhartVideoSImageToVideoAsyn",
+    "display_name": "RH 全能视频S-图生视频（异步）",
+    "name_cn": "全能视频S-图生视频（异步）",
+    "name_en": "sora-2/image-to-video-asyn",
+    "endpoint": "rhart-video-s/image-to-video-asyn",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "defaultValue": "https://www.runninghub.cn/view?filename=7226c36bd0532c86b6f22780a6bc8e603b81b56e8ba83dd6411fcaced2228b84.png&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3Njg5MTAyODM5MTksInRzIjoxNzY4MzA1NDgzOTE5LCJzaWduIjoiZTdhYThjMWU5ZjcxMWM5ZjIyMjA2NWYxNjQ1MTM2NmIifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.23897629876295323",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "10",
+        "options": [
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "9:16",
+        "options": [
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "基于原图生成10秒动态视频，角色使用地道男声京腔配音，语气带点胡同大爷的调侃劲儿。 0–2秒：狸花猫翘着二郎腿，爪尖轻敲桌面，斜眼笑：“咱这节目今天炸了啊！” 2–5秒：哈士奇一愣，领结歪了也不管，急问：“真的啊？咱上热搜了？” 5–10秒：哈士奇瞬间石化，瞳孔地震；狸花猫憋不住，“噗”地笑出声，拍桌打滚，耳机滑到耳朵尖，背景霓虹灯“Whisker & Howl”同步闪红——全场爆笑收尾！",
+        "maxLength": 4000
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG3FlashPreviewImageToText",
+    "internal_name": "RH_RhartTextG3FlashPreviewImageToText",
+    "display_name": "RH rhart-text-g-3-flash-preview/image-to-text",
+    "name_cn": "rhart-text-g-3-flash-preview/image-to-text",
+    "name_en": "rhart-text-g-3-flash-preview/image-to-text",
+    "endpoint": "rhart-text-g-3-flash-preview/image-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 30
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG3FlashPreviewTextToText",
+    "internal_name": "RH_RhartTextG3FlashPreviewTextToText",
+    "display_name": "RH rhart-text-g-3-flash-preview/text-to-text",
+    "name_cn": "rhart-text-g-3-flash-preview/text-to-text",
+    "name_en": "rhart-text-g-3-flash-preview/text-to-text",
+    "endpoint": "rhart-text-g-3-flash-preview/text-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG3FlashPreviewVideoToText",
+    "internal_name": "RH_RhartTextG3FlashPreviewVideoToText",
+    "display_name": "RH rhart-text-g-3-flash-preview/video-to-text",
+    "name_cn": "rhart-text-g-3-flash-preview/video-to-text",
+    "name_en": "rhart-text-g-3-flash-preview/video-to-text",
+    "endpoint": "rhart-text-g-3-flash-preview/video-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "videoUrl",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"MP4\"]",
+        "maxSize": 20
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG3ProPreviewImageToText",
+    "internal_name": "RH_RhartTextG3ProPreviewImageToText",
+    "display_name": "RH rhart-text-g-3-pro-preview/image-to-text",
+    "name_cn": "rhart-text-g-3-pro-preview/image-to-text",
+    "name_en": "rhart-text-g-3-pro-preview/image-to-text",
+    "endpoint": "rhart-text-g-3-pro-preview/image-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "请详细描述这些图像的内容。如果图像中有任何你熟悉的人物，如名人、电影角色或动画人物，请直接使用他们的名字。描述应该尽可能详细。"
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "defaultValue": "https://www.runninghub.cn/view?filename=2c7aacf2370c7d86c72623d76a370c9bf22f6511b37cf6d743451d7648696041.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzEyMTA2OTY5MzYsInRzIjoxNzcwNjA1ODk2OTM2LCJzaWduIjoiMWE0ZGM0OGVhYmU5YTM5N2NiZTBmMTI2NzZkNWM0NmUifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.7666587484437078",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 30
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG3ProPreviewTextToText",
+    "internal_name": "RH_RhartTextG3ProPreviewTextToText",
+    "display_name": "RH rhart-text-g-3-pro-preview/text-to-text",
+    "name_cn": "rhart-text-g-3-pro-preview/text-to-text",
+    "name_en": "rhart-text-g-3-pro-preview/text-to-text",
+    "endpoint": "rhart-text-g-3-pro-preview/text-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG3ProPreviewVideoToText",
+    "internal_name": "RH_RhartTextG3ProPreviewVideoToText",
+    "display_name": "RH rhart-text-g-3-pro-preview/video-to-text",
+    "name_cn": "rhart-text-g-3-pro-preview/video-to-text",
+    "name_en": "rhart-text-g-3-pro-preview/video-to-text",
+    "endpoint": "rhart-text-g-3-pro-preview/video-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "videoUrl",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"MP4\"]",
+        "maxSize": 20
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG25FlashImageToText",
+    "internal_name": "RH_RhartTextG25FlashImageToText",
+    "display_name": "RH rhart-text-g-25-flash/image-to-text",
+    "name_cn": "rhart-text-g-25-flash/image-to-text",
+    "name_en": "rhart-text-g-25-flash/image-to-text",
+    "endpoint": "rhart-text-g-25-flash/image-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 30
+      }
+    ]
+  },
+  {
+    "class_name": "RhartVideoV31ProImageToVideo",
+    "internal_name": "RH_RhartVideoV31ProImageToVideo",
+    "display_name": "RH 全能视频V3.1-pro-图生视频",
+    "name_cn": "全能视频V3.1-pro-图生视频",
+    "name_en": "google/veo3.1-pro/image-to-video",
+    "endpoint": "rhart-video-v3.1-pro/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "左右扭扭，蹦蹦跳跳真可爱，双手上下摇晃",
+        "maxLength": 800
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "defaultValue": "https://www.runninghub.cn/view?filename=c4a64598a584b1e5d1a26168332bd70646b9c5eaacfee55eecaf5164b7e96974.png&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3Njg5MTc5OTAwODksInRzIjoxNzY4MzEzMTkwMDg5LCJzaWduIjoiYTdkMTk1NDM4MThiMTUzOTQwNWYzZDNiZTA1OGE0YzAifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.14389186423037004",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": false,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "8",
+        "options": [
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG25FlashTextToText",
+    "internal_name": "RH_RhartTextG25FlashTextToText",
+    "display_name": "RH rhart-text-g-25-flash/text-to-text",
+    "name_cn": "rhart-text-g-25-flash/text-to-text",
+    "name_en": "rhart-text-g-25-flash/text-to-text",
+    "endpoint": "rhart-text-g-25-flash/text-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG25FlashVideoToText",
+    "internal_name": "RH_RhartTextG25FlashVideoToText",
+    "display_name": "RH rhart-text-g-25-flash/video-to-text",
+    "name_cn": "rhart-text-g-25-flash/video-to-text",
+    "name_en": "rhart-text-g-25-flash/video-to-text",
+    "endpoint": "rhart-text-g-25-flash/video-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "videoUrl",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"MP4\"]",
+        "maxSize": 20
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG25ProImageToText",
+    "internal_name": "RH_RhartTextG25ProImageToText",
+    "display_name": "RH rhart-text-g-25-pro/image-to-text",
+    "name_cn": "rhart-text-g-25-pro/image-to-text",
+    "name_en": "rhart-text-g-25-pro/image-to-text",
+    "endpoint": "rhart-text-g-25-pro/image-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 30
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG25ProTextToText",
+    "internal_name": "RH_RhartTextG25ProTextToText",
+    "display_name": "RH rhart-text-g-25-pro/text-to-text",
+    "name_cn": "rhart-text-g-25-pro/text-to-text",
+    "name_en": "rhart-text-g-25-pro/text-to-text",
+    "endpoint": "rhart-text-g-25-pro/text-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG25ProVideoToText",
+    "internal_name": "RH_RhartTextG25ProVideoToText",
+    "display_name": "RH rhart-text-g-25-pro/video-to-text",
+    "name_cn": "rhart-text-g-25-pro/video-to-text",
+    "name_en": "rhart-text-g-25-pro/video-to-text",
+    "endpoint": "rhart-text-g-25-pro/video-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "videoUrl",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"MP4\"]",
+        "maxSize": 20
+      }
+    ]
+  },
+  {
+    "class_name": "TopazlabsImageUpscaleStandardV2",
+    "internal_name": "RH_TopazlabsImageUpscaleStandardV2",
+    "display_name": "RH topazlabs图像放大StandardV2",
+    "name_cn": "topazlabs图像放大StandardV2",
+    "name_en": "topazlabs-image-upscale-standard-v2",
+    "endpoint": "topazlabs/image-upscale-standard-v2",
+    "output_type": "image",
+    "category": "RunningHub/TopazLabs",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "scale",
+        "type": "LIST",
+        "required": true,
+        "label": "scale",
+        "description": "scale",
+        "defaultValue": "2x",
+        "options": [
+          {
+            "value": "2x",
+            "description": "2x",
+            "descriptionEn": "2x"
+          },
+          {
+            "value": "4x",
+            "description": "4x",
+            "descriptionEn": "4x"
+          },
+          {
+            "value": "6x",
+            "description": "6x",
+            "descriptionEn": "6x"
+          }
+        ]
+      },
+      {
+        "fieldKey": "subjectDetection",
+        "type": "LIST",
+        "required": false,
+        "label": "subjectDetection",
+        "description": "subjectDetection",
+        "defaultValue": "All",
+        "options": [
+          {
+            "value": "All",
+            "description": "All",
+            "descriptionEn": "All"
+          },
+          {
+            "value": "Foreground",
+            "description": "Foreground",
+            "descriptionEn": "Foreground"
+          },
+          {
+            "value": "Background",
+            "description": "Background",
+            "descriptionEn": "Background"
+          }
+        ]
+      },
+      {
+        "fieldKey": "faceEnhancement",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "faceEnhancement",
+        "description": "faceEnhancement",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "faceEnhancementCreativity",
+        "type": "FLOAT",
+        "required": false,
+        "label": "faceEnhancementCreativity",
+        "description": "faceEnhancementCreativity",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 1,
+        "step": 0.1
+      },
+      {
+        "fieldKey": "faceEnhancementStrength",
+        "type": "FLOAT",
+        "required": false,
+        "label": "faceEnhancementStrength",
+        "description": "faceEnhancementStrength",
+        "defaultValue": 0.8,
+        "min": 0,
+        "max": 1,
+        "step": 0.1
+      }
+    ]
+  },
+  {
+    "class_name": "TopazlabsImageUpscaleLowResolutionV2",
+    "internal_name": "RH_TopazlabsImageUpscaleLowResolutionV2",
+    "display_name": "RH topazlabs图像放大Low Resolution V2",
+    "name_cn": "topazlabs图像放大Low Resolution V2",
+    "name_en": "topazlabs-image-upscale low resolution v2",
+    "endpoint": "topazlabs/image-upscale/low-resolution-v2",
+    "output_type": "image",
+    "category": "RunningHub/TopazLabs",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "scale",
+        "type": "LIST",
+        "required": true,
+        "label": "scale",
+        "description": "scale",
+        "defaultValue": "2x",
+        "options": [
+          {
+            "value": "2x",
+            "description": "2x",
+            "descriptionEn": "2x"
+          },
+          {
+            "value": "4x",
+            "description": "4x",
+            "descriptionEn": "4x"
+          },
+          {
+            "value": "6x",
+            "description": "6x",
+            "descriptionEn": "6x"
+          }
+        ]
+      },
+      {
+        "fieldKey": "subjectDetection",
+        "type": "LIST",
+        "required": false,
+        "label": "subjectDetection",
+        "description": "subjectDetection",
+        "defaultValue": "All",
+        "options": [
+          {
+            "value": "All",
+            "description": "All",
+            "descriptionEn": "All"
+          },
+          {
+            "value": "Foreground",
+            "description": "Foreground",
+            "descriptionEn": "Foreground"
+          },
+          {
+            "value": "Background",
+            "description": "Background",
+            "descriptionEn": "Background"
+          }
+        ]
+      },
+      {
+        "fieldKey": "faceEnhancement",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "faceEnhancement",
+        "description": "faceEnhancement",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "faceEnhancementCreativity",
+        "type": "FLOAT",
+        "required": false,
+        "label": "faceEnhancementCreativity",
+        "description": "faceEnhancementCreativity",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 1,
+        "step": 0.1
+      },
+      {
+        "fieldKey": "faceEnhancementStrength",
+        "type": "FLOAT",
+        "required": false,
+        "label": "faceEnhancementStrength",
+        "description": "faceEnhancementStrength",
+        "defaultValue": 0.8,
+        "min": 0,
+        "max": 1,
+        "step": 0.1
+      }
+    ]
+  },
+  {
+    "class_name": "TopazlabsImageUpscaleCgi",
+    "internal_name": "RH_TopazlabsImageUpscaleCgi",
+    "display_name": "RH topazlabs图像放大CGI",
+    "name_cn": "topazlabs图像放大CGI",
+    "name_en": "topazlabs-image-upscale-cgi",
+    "endpoint": "topazlabs/image-upscale-cgi",
+    "output_type": "image",
+    "category": "RunningHub/TopazLabs",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "scale",
+        "type": "LIST",
+        "required": true,
+        "label": "scale",
+        "description": "scale",
+        "defaultValue": "2x",
+        "options": [
+          {
+            "value": "2x",
+            "description": "2x",
+            "descriptionEn": "2x"
+          },
+          {
+            "value": "4x",
+            "description": "4x",
+            "descriptionEn": "4x"
+          },
+          {
+            "value": "6x",
+            "description": "6x",
+            "descriptionEn": "6x"
+          }
+        ]
+      },
+      {
+        "fieldKey": "subjectDetection",
+        "type": "LIST",
+        "required": false,
+        "label": "subjectDetection",
+        "description": "subjectDetection",
+        "defaultValue": "All",
+        "options": [
+          {
+            "value": "All",
+            "description": "All",
+            "descriptionEn": "All"
+          },
+          {
+            "value": "Foreground",
+            "description": "Foreground",
+            "descriptionEn": "Foreground"
+          },
+          {
+            "value": "Background",
+            "description": "Background",
+            "descriptionEn": "Background"
+          }
+        ]
+      },
+      {
+        "fieldKey": "faceEnhancement",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "faceEnhancement",
+        "description": "faceEnhancement",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "faceEnhancementCreativity",
+        "type": "FLOAT",
+        "required": false,
+        "label": "faceEnhancementCreativity",
+        "description": "faceEnhancementCreativity",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 1,
+        "step": 0.1
+      },
+      {
+        "fieldKey": "faceEnhancementStrength",
+        "type": "FLOAT",
+        "required": false,
+        "label": "faceEnhancementStrength",
+        "description": "faceEnhancementStrength",
+        "defaultValue": 0.8,
+        "min": 0,
+        "max": 1,
+        "step": 0.1
+      }
+    ]
+  },
+  {
+    "class_name": "TopazlabsImageUpscaleHighFidelityV2",
+    "internal_name": "RH_TopazlabsImageUpscaleHighFidelityV2",
+    "display_name": "RH topazlabs图像放大High Fidelity V2",
+    "name_cn": "topazlabs图像放大High Fidelity V2",
+    "name_en": "topazlabs-image-upscale-high fidelity v2",
+    "endpoint": "topazlabs/image-upscale-high-fidelity-v2",
+    "output_type": "image",
+    "category": "RunningHub/TopazLabs",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "scale",
+        "type": "LIST",
+        "required": true,
+        "label": "scale",
+        "description": "scale",
+        "defaultValue": "2x",
+        "options": [
+          {
+            "value": "2x",
+            "description": "2x",
+            "descriptionEn": "2x"
+          },
+          {
+            "value": "4x",
+            "description": "4x",
+            "descriptionEn": "4x"
+          },
+          {
+            "value": "6x",
+            "description": "6x",
+            "descriptionEn": "6x"
+          }
+        ]
+      },
+      {
+        "fieldKey": "subjectDetection",
+        "type": "LIST",
+        "required": false,
+        "label": "subjectDetection",
+        "description": "subjectDetection",
+        "defaultValue": "All",
+        "options": [
+          {
+            "value": "All",
+            "description": "All",
+            "descriptionEn": "All"
+          },
+          {
+            "value": "Foreground",
+            "description": "Foreground",
+            "descriptionEn": "Foreground"
+          },
+          {
+            "value": "Background",
+            "description": "Background",
+            "descriptionEn": "Background"
+          }
+        ]
+      },
+      {
+        "fieldKey": "faceEnhancement",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "faceEnhancement",
+        "description": "faceEnhancement",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "faceEnhancementCreativity",
+        "type": "FLOAT",
+        "required": false,
+        "label": "faceEnhancementCreativity",
+        "description": "faceEnhancementCreativity",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 1,
+        "step": 0.1
+      },
+      {
+        "fieldKey": "faceEnhancementStrength",
+        "type": "FLOAT",
+        "required": false,
+        "label": "faceEnhancementStrength",
+        "description": "faceEnhancementStrength",
+        "defaultValue": 0.8,
+        "min": 0,
+        "max": 1,
+        "step": 0.1
+      }
+    ]
+  },
+  {
+    "class_name": "TopazlabsImageUpscaleTextRefine",
+    "internal_name": "RH_TopazlabsImageUpscaleTextRefine",
+    "display_name": "RH topazlabs图像放大Text Refine",
+    "name_cn": "topazlabs图像放大Text Refine",
+    "name_en": "topazlabs-image-upscale-text refine",
+    "endpoint": "topazlabs/image-upscale-text-refine",
+    "output_type": "image",
+    "category": "RunningHub/TopazLabs",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "scale",
+        "type": "LIST",
+        "required": true,
+        "label": "scale",
+        "description": "scale",
+        "defaultValue": "2x",
+        "options": [
+          {
+            "value": "2x",
+            "description": "2x",
+            "descriptionEn": "2x"
+          },
+          {
+            "value": "4x",
+            "description": "4x",
+            "descriptionEn": "4x"
+          },
+          {
+            "value": "6x",
+            "description": "6x",
+            "descriptionEn": "6x"
+          }
+        ]
+      },
+      {
+        "fieldKey": "subjectDetection",
+        "type": "LIST",
+        "required": false,
+        "label": "subjectDetection",
+        "description": "subjectDetection",
+        "defaultValue": "All",
+        "options": [
+          {
+            "value": "All",
+            "description": "All",
+            "descriptionEn": "All"
+          },
+          {
+            "value": "Foreground",
+            "description": "Foreground",
+            "descriptionEn": "Foreground"
+          },
+          {
+            "value": "Background",
+            "description": "Background",
+            "descriptionEn": "Background"
+          }
+        ]
+      },
+      {
+        "fieldKey": "faceEnhancement",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "faceEnhancement",
+        "description": "faceEnhancement",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "faceEnhancementCreativity",
+        "type": "FLOAT",
+        "required": false,
+        "label": "faceEnhancementCreativity",
+        "description": "faceEnhancementCreativity",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 1,
+        "step": 0.1
+      },
+      {
+        "fieldKey": "faceEnhancementStrength",
+        "type": "FLOAT",
+        "required": false,
+        "label": "faceEnhancementStrength",
+        "description": "faceEnhancementStrength",
+        "defaultValue": 0.8,
+        "min": 0,
+        "max": 1,
+        "step": 0.1
+      }
+    ]
+  },
+  {
+    "class_name": "TopazlabsVideoUpscale",
+    "internal_name": "RH_TopazlabsVideoUpscale",
+    "display_name": "RH topazlabs视频放大",
+    "name_cn": "topazlabs视频放大",
+    "name_en": "topazlabs-video-upscale",
+    "endpoint": "topazlabs/video-upscale",
+    "output_type": "video",
+    "category": "RunningHub/TopazLabs",
+    "params": [
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "videoUrl",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"MP4\"]",
+        "maxSize": 100
+      },
+      {
+        "fieldKey": "targetResolution",
+        "type": "LIST",
+        "required": true,
+        "label": "targetResolution",
+        "description": "targetResolution",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "targetFps",
+        "type": "LIST",
+        "required": true,
+        "label": "targetFps",
+        "description": "targetFps",
+        "defaultValue": "30",
+        "options": [
+          {
+            "value": "30",
+            "description": "30",
+            "descriptionEn": "30"
+          },
+          {
+            "value": "60",
+            "description": "60",
+            "descriptionEn": "60"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "KlingVideoO3StdVideoEdit",
+    "internal_name": "RH_KlingVideoO3StdVideoEdit",
+    "display_name": "RH kling-video-o3-std-video-edit",
+    "name_cn": "kling-video-o3-std-video-edit",
+    "name_en": "kling-video-o3-std-video-edit",
+    "endpoint": "kling-video-o3-std/video-edit",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "Change the time to the night.",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "The video URL. Video duration can not be longer than 10s.",
+        "defaultValue": "https://www.runninghub.cn/view?filename=b7e0383a81823b42527dd226d3969676a21173c76257a3e7745e68c95aaf79c4.mp4&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzE1ODU3ODkwODAsInRzIjoxNzcwOTgwOTg5MDgwLCJzaWduIjoiNTkzYzQwYWE0ODE1NGVmYTViZWExNTQ1ODM0ZThiMjgifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.9906318620735289",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"MP4\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "multipleInputs": true,
+        "maxInputNum": 4,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "keepOriginalSound",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "keepOriginalSound",
+        "description": "keepOriginalSound",
+        "defaultValue": true
+      }
+    ]
+  },
+  {
+    "class_name": "KlingVideoO3ProVideoEdit",
+    "internal_name": "RH_KlingVideoO3ProVideoEdit",
+    "display_name": "RH kling-video-o3-pro-video-edit",
+    "name_cn": "kling-video-o3-pro-video-edit",
+    "name_en": "kling-video-o3-pro-video-edit",
+    "endpoint": "kling-video-o3-pro/video-edit",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "将视频中男子的衣服替换为图 1 的衣服",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "The video URL. Video duration can not be longer than 10s.",
+        "defaultValue": "https://www.runninghub.cn/view?filename=7fae6a6a5dfe4b7e3ddcb71a507d6ea51e9ef73edd38fc37e723c76407e1e460.mp4&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzE1ODQxNjE4MjUsInRzIjoxNzcwOTc5MzYxODI1LCJzaWduIjoiMzkxYmRiYjA3YmUzYTBiZGM5NjZkMzEwYjBkYTNhZjYifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.5620407332010252",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"MP4\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "defaultValue": "https://www.runninghub.cn/view?filename=9439fda69964e106c40c3b5977acf88570ac36214f2a4033d01fe5f5c4d7f235.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzE1ODQxNjE4MjUsInRzIjoxNzcwOTc5MzYxODI1LCJzaWduIjoiMzkxYmRiYjA3YmUzYTBiZGM5NjZkMzEwYjBkYTNhZjYifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.23302545629278448",
+        "multipleInputs": true,
+        "maxInputNum": 4,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "keepOriginalSound",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "keepOriginalSound",
+        "description": "keepOriginalSound",
+        "defaultValue": true
+      }
+    ]
+  },
+  {
+    "class_name": "KlingVideoO3StdReferenceToVideo",
+    "internal_name": "RH_KlingVideoO3StdReferenceToVideo",
+    "display_name": "RH kling-video-o3-std-reference-to-video",
+    "name_cn": "kling-video-o3-std-reference-to-video",
+    "name_en": "kling-video-o3-std-reference-to-video",
+    "endpoint": "kling-video-o3-std/reference-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "把图中的人物融入到视频里",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "The video URL. Video duration can not be longer than 10s.",
+        "defaultValue": "https://www.runninghub.cn/view?filename=27441819c3a0aac4150ade4eb4d2e1aa1ce34fda0580839fc6bee4240954aa5d.mp4&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzEwNTE3NDYyMDcsInRzIjoxNzcwNDQ2OTQ2MjA3LCJzaWduIjoiM2Q0NTczNTUzMmUyNGJmNjczMzk5NjBmNDliNGJkYTMifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.8032385821652667",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"MP4\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "defaultValue": "https://www.runninghub.cn/view?filename=2ddabe87fbbc255fbfd176c49c7660eb45adf61b38f6e554cfe5944192bd2f86.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzEwNTE3NDYyMDcsInRzIjoxNzcwNDQ2OTQ2MjA3LCJzaWduIjoiM2Q0NTczNTUzMmUyNGJmNjczMzk5NjBmNDliNGJkYTMifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.4817534481980411",
+        "multipleInputs": true,
+        "maxInputNum": 7,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "keepOriginalSound",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "keepOriginalSound",
+        "description": "keepOriginalSound",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "sound",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "sound",
+        "description": "sound",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": 5,
+        "min": 3,
+        "max": 15,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "KlingVideoO3ProReferenceToVideo",
+    "internal_name": "RH_KlingVideoO3ProReferenceToVideo",
+    "display_name": "RH kling-video-o3-pro-reference-to-video",
+    "name_cn": "kling-video-o3-pro-reference-to-video",
+    "name_en": "kling-video-o3-pro-reference-to-video",
+    "endpoint": "kling-video-o3-pro/reference-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "在暴雨中的赛博朋克小巷，[参考图] 中的流浪武士根据 [参考视频] 的动作轨迹，迅速拔出背后的长刀并完成一个华丽的转身。雨水击打在他那带有独特刻痕的机械左臂上，产生细腻的溅射效果。光影随着他的旋转在机械表面产生真实的反射偏移。全程保持武士的面部特征与机械臂的复杂结构高度一致。",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "The video URL. Video duration can not be longer than 10s.",
+        "defaultValue": "https://www.runninghub.cn/view?filename=e0d96e940fe24a2381b2e5f5eb2fe45dcb90bd40ea253f47b2902b1f0d929486.mp4&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzEwNjg4Njg2NTksInRzIjoxNzcwNDY0MDY4NjU5LCJzaWduIjoiMDM3YThhMjU0MWJhN2M5Y2IwYmU3MGJjOWRhOTUwM2QifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.3217910824967488",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"MP4\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "defaultValue": "https://www.runninghub.cn/view?filename=c07e37eb45b827c8b0b6b2c7428ef202b9ab70613845ddf66b4a9921b40ba250.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzEwNjgxNzU3NTcsInRzIjoxNzcwNDYzMzc1NzU3LCJzaWduIjoiYmU0OTljOGVkZDA3YmFkODc1ZGY4Nzc3NDIwMzhlNTUifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.9645205288406946",
+        "multipleInputs": true,
+        "maxInputNum": 7,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "keepOriginalSound",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "keepOriginalSound",
+        "description": "keepOriginalSound",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "sound",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "sound",
+        "description": "sound",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": 5,
+        "min": 3,
+        "max": 15,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageG3ImageToImage",
+    "internal_name": "RH_RhartImageG3ImageToImage",
+    "display_name": "RH 全能图片X-3-图生图",
+    "name_cn": "全能图片X-3-图生图",
+    "name_en": "grok-3-image-to-image",
+    "endpoint": "rhart-image-g-3/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "给小狗带上红色墨镜和红色披风"
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "defaultValue": "https://www.runninghub.cn/view?filename=89c3280d693057d6a2e9876e0b1f862c99786d9111f636a7b91b1ed39acc6fc1.png&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiJhMGUxNDUwNjNkYTE3NzVkMzBiNzM2NzE0NTMyZWI3YSIsInNpZ25FeHBpcmUiOjE3NzEzMjkzNDI4ODUsInRzIjoxNzcwNzI0NTQyODg1LCJzaWduIjoiNTM5YjhkMjEzOWQ1ZTA1MmY2OTcxNjk2YmFkY2JjMDYifQ==&Rh-Identify=a0e145063da1775d30b736714532eb7a&rand=0.8496984178773729",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageG4ImageToImage",
+    "internal_name": "RH_RhartImageG4ImageToImage",
+    "display_name": "RH 全能图片X-4-图生图",
+    "name_cn": "全能图片X-4-图生图",
+    "name_en": "grok-4-image-image-to-image",
+    "endpoint": "rhart-image-g-4/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageG3TextToImage",
+    "internal_name": "RH_RhartImageG3TextToImage",
+    "display_name": "RH 全能图片X-3-文生图",
+    "name_cn": "全能图片X-3-文生图",
+    "name_en": "grok-3-image-text-to-image",
+    "endpoint": "rhart-image-g-3/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "给小狗带上红色墨镜和红色披风"
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageG4TextToImage",
+    "internal_name": "RH_RhartImageG4TextToImage",
+    "display_name": "RH 全能图片X-4-文生图",
+    "name_cn": "全能图片X-4-文生图",
+    "name_en": "grok-4-image-text-to-image",
+    "endpoint": "rhart-image-g-4/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
       }
     ]
   }
