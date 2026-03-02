@@ -1,18 +1,18 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-116-blue)
+![Nodes](https://img.shields.io/badge/Nodes-121-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 **English** | [中文](README.md)
 
 **ComfyUI_RH_OpenAPI** is a **1:1 ComfyUI implementation** of the [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api).
 
-RunningHub provides 116 standard model APIs covering image generation, video generation, audio synthesis, and 3D modeling. This project converts every API endpoint into a corresponding ComfyUI node, enabling you to access all RunningHub model capabilities directly within ComfyUI workflows — no local GPU required, zero cold-start latency.
+RunningHub provides 121 standard model APIs covering image generation, video generation, audio synthesis, and 3D modeling. This project converts every API endpoint into a corresponding ComfyUI node, enabling you to access all RunningHub model capabilities directly within ComfyUI workflows — no local GPU required, zero cold-start latency.
 
 ## 📌 Features
 
-- **Full Coverage** — 116 ComfyUI nodes, mapping 1:1 to [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api)
+- **Full Coverage** — 121 ComfyUI nodes, mapping 1:1 to [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api)
 - **Plug & Play** — No model downloads, no GPU needed — just an API Key
 - **Dynamic Registration** — Nodes are auto-generated from a JSON registry; adding new models requires only a registry update
 - **Media Support** — Automatic upload/download/conversion for images, videos, and audio, seamlessly integrated with ComfyUI native types
@@ -23,7 +23,7 @@ RunningHub provides 116 standard model APIs covering image generation, video gen
 
 ## 🎨 Supported Models
 
-### Image Generation (26 Nodes)
+### Image Generation (28 Nodes)
 
 | Model Series | Capabilities | Nodes |
 |-------------|-------------|-------|
@@ -33,16 +33,18 @@ RunningHub provides 116 standard model APIs covering image generation, video gen
 | RHArt Image PRO | Text-to-Image, Image-to-Image | 2 |
 | RHArt Image PRO Official | Text-to-Image, Image-to-Image, Ultra | 4 |
 | RHArt Image G-1.5 | Text-to-Image, Image-to-Image | 2 |
+| RHArt Image G-1.5 Official | Text-to-Image, Image-to-Image | 2 |
 | Seedream v4 / v4.5 / v5 Lite | Text-to-Image, Image-to-Image | 6 |
 | Youchuan | Text-to-Image (v6/v61/niji6/niji7/v7), Image-to-Video | 6 |
 
-### Video Generation (80 Nodes)
+### Video Generation (83 Nodes)
 
 | Model Series | Capabilities | Nodes |
 |-------------|-------------|-------|
 | RHArt Video S | Image/Text-to-Video, Pro, Official, Character Upload | 11 |
 | RHArt Video V3.1 | Fast/Pro Text/Image-to-Video, Start-End Frame, Reference, Video Extend | 12 |
 | RHArt Video G | Text/Image-to-Video | 2 |
+| RHArt Video G Official | Text/Image-to-Video, Edit Video | 3 |
 | Kling | v2.5/v2.6/v3.0/o1/o3, Text/Image/Start-End/Reference/Motion Control/Edit | 20 |
 | Vidu | q2/q3, Text/Image/Start-End/Reference-to-Video | 15 |
 | Wan 2.6 | Text/Image-to-Video, Flash | 3 |
@@ -112,14 +114,14 @@ cp config/.env.example config/.env
 
 ### Example Workflows
 
-The project includes 116 example workflow JSON files in the `examples/` directory, covering every model node. Download and import directly into ComfyUI.
+The project includes 121 example workflow JSON files in the `examples/` directory, covering every model node. Download and import directly into ComfyUI.
 
 ## 📁 Project Structure
 
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # Entry point, registers all nodes
-├── models_registry.json     # Model registry (116 model definitions)
+├── models_registry.json     # Model registry (121 model definitions)
 ├── config/
 │   └── .env.example         # Configuration template
 ├── core/                    # Core infrastructure
@@ -133,7 +135,7 @@ ComfyUI_RH_OpenAPI/
 ├── nodes/                   # Node implementations
 │   ├── settings_node.py     # RH OpenAPI Settings node
 │   └── node_factory.py      # Dynamic node factory
-└── examples/                # 116 example workflows
+└── examples/                # 121 example workflows
 ```
 
 ## 🔧 Architecture
