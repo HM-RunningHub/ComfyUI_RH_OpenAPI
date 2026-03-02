@@ -11817,5 +11817,397 @@
         ]
       }
     ]
+  },
+  {
+    "class_name": "RhartVideoGOfficialImageToVideo",
+    "internal_name": "RH_RhartVideoGOfficialImageToVideo",
+    "display_name": "RH 全能视频G--官方-图生视频",
+    "name_cn": "全能视频G--官方-图生视频",
+    "name_en": "xai/grok-imagine-official/image-to-video",
+    "endpoint": "rhart-video-g-official/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video G",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "电影级环绕运镜。镜头缓慢而平滑地绕着这辆红色复古跑车移动。下方的海浪动态地拍打着礁石，激起自然真实的水花。随着太阳逐渐沉入地平线，天空光影自然过渡，跑车的车头灯平滑地自动亮起。画面需配有海浪猛烈拍打岸边以及微凉海风呼啸的同步音效。",
+        "maxLength": 800
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "defaultValue": "https://www.runninghub.cn/view?filename=6b05df1302072b51fabe7aee9ab3fe39508a7ca51629768ab521a05eaf93bbf9.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzMwMjg5MTYzNzEsInRzIjoxNzcyNDI0MTE2MzcxLCJzaWduIjoiZGZkZDhjMTdhNDA4ZmYzYTI5NWNjYzA1YjhlNDhhZTYifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.9413883407292518",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution（仅15s支持1080p）",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "6",
+        "options": [
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartVideoGOfficialTextToVideo",
+    "internal_name": "RH_RhartVideoGOfficialTextToVideo",
+    "display_name": "RH 全能视频G-官方-文生视频",
+    "name_cn": "全能视频G-官方-文生视频",
+    "name_en": "xai/grok-imagine-official/text-to-video",
+    "endpoint": "rhart-video-g-official/text-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video G",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "电影级广角跟拍镜头。在下着连绵细雨的赛博朋克城市街道上，镜头缓慢向前推进。地面上的水洼真实地倒映着上空闪烁的粉色和蓝色全息广告牌。两台流线型的飞行汽车在半空中快速交错穿梭，留下一道道光轨。一个穿着发光风衣的人影撑着透明雨伞走入画面，步伐自然平稳。整体氛围充满强烈的未来感与神秘的潮湿感。",
+        "maxLength": 800
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution（仅15s支持1080p）",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "6",
+        "options": [
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartVideoGOfficialEditVideo",
+    "internal_name": "RH_RhartVideoGOfficialEditVideo",
+    "display_name": "RH 全能视频G--官方-编辑视频",
+    "name_cn": "全能视频G--官方-编辑视频",
+    "name_en": "xai/grok-imagine-official/edit-video",
+    "endpoint": "rhart-video-g-official/edit-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video G",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "将整个视频转换为经典的吉卜力2D动漫风格。画面色彩需要变得明亮温暖，阳光呈现出柔和的丁达尔效应。人物的衣着和狗的毛发需转化为细腻的手绘水彩质感。在人物奔跑和镜头移动的过程中，必须保持极高的时空一致性，确保背景中的树叶、草地以及人物边缘的线条平滑过渡，不出现任何画面闪烁、形变或闪动噪点。",
+        "maxLength": 800
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "videoUrl",
+        "defaultValue": "https://www.runninghub.cn/view?filename=ae4f3202c15cee0fc7a560dae143206ea561c7feb423759dbdbbfe291922ec6c.mp4&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzMwMzM3MTcyODQsInRzIjoxNzcyNDI4OTE3Mjg0LCJzaWduIjoiNjc4MDM1MTdiMjFjZThmMmI4MmZkNjJjY2I5MGE3ODgifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.3961472487197105",
+        "multipleInputs": false,
+        "maxInputNum": 1,
+        "accept": "[\"MP4\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution（仅15s支持1080p）",
+        "defaultValue": "480p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageG15OfficialTextToImage",
+    "internal_name": "RH_RhartImageG15OfficialTextToImage",
+    "display_name": "RH 全能图片G-1.5-官方-文生图",
+    "name_cn": "全能图片G-1.5-官方-文生图",
+    "name_en": "gpt-image-1.5-official/text-to-image",
+    "endpoint": "rhart-image-g-1.5-official/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "夏夜街头大排档，灯火通明，食客围坐吃烧烤、喝啤酒。厨师在炭火烤架前翻动羊肉串和鸡翅，火星四溅，烟雾缭绕。桌上摆满烤串、毛豆、小龙虾和玻璃瓶啤酒，背景是霓虹灯与穿梭的电动车。氛围热闹喧哗，烟火气十足，真实摄影风格，暖色调。"
+      },
+      {
+        "fieldKey": "size",
+        "type": "LIST",
+        "required": true,
+        "label": "size",
+        "description": "size",
+        "defaultValue": "1024*1024",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "1024*1024",
+            "description": "1024*1024",
+            "descriptionEn": "1024*1024"
+          },
+          {
+            "value": "1024*1536",
+            "description": "1024*1536",
+            "descriptionEn": "1024*1536"
+          },
+          {
+            "value": "1536*1024",
+            "description": "1536*1024",
+            "descriptionEn": "1536*1024"
+          }
+        ]
+      },
+      {
+        "fieldKey": "quality",
+        "type": "LIST",
+        "required": true,
+        "label": "quality",
+        "description": "quality",
+        "defaultValue": "medium",
+        "options": [
+          {
+            "value": "low",
+            "description": "low",
+            "descriptionEn": "low"
+          },
+          {
+            "value": "medium",
+            "description": "medium",
+            "descriptionEn": "medium"
+          },
+          {
+            "value": "high",
+            "description": "high",
+            "descriptionEn": "high"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageG15OfficialImageToImage",
+    "internal_name": "RH_RhartImageG15OfficialImageToImage",
+    "display_name": "RH 全能图片G-1.5-官方-图生图",
+    "name_cn": "全能图片G-1.5-官方-图生图",
+    "name_en": "gpt-image-1.5-official/image-to-image",
+    "endpoint": "rhart-image-g-1.5-official/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "夏夜街头大排档，灯火通明，食客围坐吃烧烤、喝啤酒。厨师在炭火烤架前翻动羊肉串和鸡翅，火星四溅，烟雾缭绕。桌上摆满烤串、毛豆、小龙虾和玻璃瓶啤酒，背景是霓虹灯与穿梭的电动车。氛围热闹喧哗，烟火气十足，真实摄影风格，暖色调。"
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "multipleInputs": true,
+        "maxInputNum": 1,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "size",
+        "type": "LIST",
+        "required": true,
+        "label": "size",
+        "description": "size",
+        "defaultValue": "1024*1024",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "1024*1024",
+            "description": "1024*1024",
+            "descriptionEn": "1024*1024"
+          },
+          {
+            "value": "1024*1536",
+            "description": "1024*1536",
+            "descriptionEn": "1024*1536"
+          },
+          {
+            "value": "1536*1024",
+            "description": "1536*1024",
+            "descriptionEn": "1536*1024"
+          }
+        ]
+      },
+      {
+        "fieldKey": "quality",
+        "type": "LIST",
+        "required": true,
+        "label": "quality",
+        "description": "quality",
+        "defaultValue": "medium",
+        "options": [
+          {
+            "value": "low",
+            "description": "low",
+            "descriptionEn": "low"
+          },
+          {
+            "value": "medium",
+            "description": "medium",
+            "descriptionEn": "medium"
+          },
+          {
+            "value": "high",
+            "description": "high",
+            "descriptionEn": "high"
+          }
+        ]
+      },
+      {
+        "fieldKey": "inputFidelity",
+        "type": "LIST",
+        "required": false,
+        "label": "inputFidelity",
+        "description": "input fidelity, which allows you to better preserve details from the input images in the output",
+        "options": [
+          {
+            "value": "low",
+            "description": "low",
+            "descriptionEn": "low"
+          },
+          {
+            "value": "high",
+            "description": "high",
+            "descriptionEn": "high"
+          }
+        ]
+      }
+    ]
   }
 ]
