@@ -121,6 +121,8 @@ cp config/.env.example config/.env
 
 **Priority**: Node Settings > Environment Variables > `.env` File
 
+> **Tip**: If `RH_API_BASE_URL` and `RH_API_KEY` are already configured via environment variables or `config/.env`, the `api_config` input on every node becomes optional — you can run nodes directly without connecting the **RH OpenAPI Settings** node.
+
 ## 🚀 Usage
 
 1. Configure your API Key (see Configuration above)
