@@ -1,9 +1,7 @@
 # ComfyUI_RH_OpenAPI - Git Ignore
 
 # ==================== RH 测试/部署 ====================
-rh_config.json
 cptorh01.sh
-sync.sh
 
 # ==================== 敏感信息 ====================
 .env
