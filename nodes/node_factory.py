@@ -231,7 +231,7 @@ def create_node_class(model_def: Dict) -> type:
 
     # ---- Build INPUT_TYPES with controlled ordering ----
     required_inputs = {}
-    optional_inputs = {"api_config": ("RH_OPENAPI_CONFIG",)}
+    optional_inputs = {}
 
     # Collect non-media params into required/optional buckets
     req_non_media = {}
@@ -296,10 +296,12 @@ def create_node_class(model_def: Dict) -> type:
     required_inputs.update(req_media)
     required_inputs.update(req_non_media)
 
-    # Optional order: media connectors -> widget params -> skip_error (always last)
+    # Optional order: media connectors -> widget params -> api_config -> skip_error
     optional_inputs.update(opt_media)
     optional_inputs.update(opt_non_media)
+    optional_inputs["api_config"] = ("RH_OPENAPI_CONFIG",)
     optional_inputs["skip_error"] = ("BOOLEAN", {"default": False})
+    optional_inputs["seed"] = ("INT", {"default": 0, "min": 0, "max": 0xFFFFFFFFFFFFFFFF})
 
     ret_types, ret_names = _get_return_types(output_type)
 
