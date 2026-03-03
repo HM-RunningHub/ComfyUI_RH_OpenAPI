@@ -1,24 +1,25 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-149-blue)
+![Nodes](https://img.shields.io/badge/Nodes-161-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 [English](README_EN.md) | **中文**
 
 **ComfyUI_RH_OpenAPI** 是 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 的 **1:1 ComfyUI 实现**。
 
-RunningHub 平台提供了 149 个标准模型 API（涵盖主流最新所有的图像生成、视频生成、音频合成、3D 建模、文本理解、图像放大），本项目将每一个 API 端点都转化为对应的 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的全部标准模型能力，无需本地 GPU，无冷启动延迟。
+RunningHub 平台提供了 161 个标准模型 API（涵盖主流最新所有的图像生成、视频生成、音频合成、3D 建模、文本理解、图像放大），本项目将每一个 API 端点都转化为对应的 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的全部标准模型能力，无需本地 GPU，无冷启动延迟。
 
 ## 📌 项目特点
 
-- **完整覆盖** — 149 个 ComfyUI 节点，与 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 一一对应
+- **完整覆盖** — 161 个 ComfyUI 节点，与 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 一一对应
 - **即插即用** — 无需下载模型、无需 GPU，只需 API Key 即可调用全部能力
 - **动态注册** — 基于 JSON 注册表自动生成节点，新模型上线后仅需更新注册表
 - **多媒体支持** — 图片、视频、音频自动上传 / 下载 / 格式转换，与 ComfyUI 原生类型无缝衔接
 - **灵活配置** — 支持节点配置、环境变量、`.env` 文件三种配置方式
 - **进度显示** — 任务提交后实时显示轮询进度
 - **容错机制** — 提交/上传/轮询均有重试与指数退避，自动区分可重试与不可重试错误
+- **跳过错误** — 每个节点支持 `skip_error` 开关，开启后遇到错误不中断工作流，输出对应类型的错误占位符
 - **示例工作流** — 每个节点都附带可直接导入的示例工作流
 
 ## 🎨 支持的模型
@@ -39,7 +40,7 @@ RunningHub 平台提供了 149 个标准模型 API（涵盖主流最新所有的
 | Seedream v4 / v4.5 / v5 Lite | 文生图、图生图 | 6 |
 | 悠船 | 文生图（v6/v61/niji6/niji7/v7）、图生视频 | 5 |
 
-### 视频生成（90 个节点）
+### 视频生成（92 个节点）
 
 | 模型系列 | 能力 | 节点数 |
 |---------|------|--------|
@@ -49,7 +50,7 @@ RunningHub 平台提供了 149 个标准模型 API（涵盖主流最新所有的
 | 全能视频 G 官方 | 文生视频、图生视频、编辑视频 | 3 |
 | 可灵 Kling | v2.5/v2.6/v3.0/o1/o3，文/图/首尾帧/参考/动作控制/编辑 | 24 |
 | Vidu | q2/q3，文/图/首尾帧/参考生视频 | 15 |
-| 万相 2.6 | 文生视频、图生视频、Flash | 3 |
+| 万相 2.6 | 文生视频、图生视频、参考生视频、Flash | 5 |
 | 海螺 Hailuo | 02/2.3/2.3-fast，文/图生视频 | 13 |
 | Seedance v1.5 | 文/图生视频、Fast、参考生视频 | 5 |
 | TopazLabs 视频放大 | 视频增强放大 | 1 |
@@ -71,11 +72,13 @@ RunningHub 平台提供了 149 个标准模型 API（涵盖主流最新所有的
 | Minimax Music 2.5 | 文生音乐 | 1 |
 | Minimax Voice Clone | 声音克隆 | 1 |
 
-### 3D 建模（2 个节点）
+### 3D 建模（12 个节点）
 
 | 模型系列 | 能力 | 节点数 |
 |---------|------|--------|
 | 混元 3D v3.1 | 文生 3D、图生 3D | 2 |
+| HiTem3D V1.5 / V2 | 图生 3D、多图生 3D | 4 |
+| HiTem3D Portrait V1.5 / V2.0 / V2.1 | 人像图生 3D、多图生 3D | 6 |
 
 ## 🛠️ 安装
 
@@ -126,14 +129,14 @@ cp config/.env.example config/.env
 
 ### 示例工作流
 
-项目在 `examples/` 目录下提供了 149 个示例工作流 JSON 文件，覆盖每一个模型节点。下载后直接导入 ComfyUI 即可使用。
+项目在 `examples/` 目录下提供了 161 个示例工作流 JSON 文件，覆盖每一个模型节点。下载后直接导入 ComfyUI 即可使用。
 
 ## 📁 项目结构
 
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # 入口文件，注册所有节点
-├── models_registry.json     # 模型注册表（149 个模型定义）
+├── models_registry.json     # 模型注册表（161 个模型定义）
 ├── config/
 │   └── .env.example         # 配置文件示例
 ├── core/                    # 核心基础设施
@@ -147,7 +150,7 @@ ComfyUI_RH_OpenAPI/
 ├── nodes/                   # 节点实现
 │   ├── settings_node.py     # RH OpenAPI Settings 配置节点
 │   └── node_factory.py      # 动态节点工厂
-└── examples/                # 149 个示例工作流
+└── examples/                # 161 个示例工作流
 ```
 
 ## 🔧 架构说明

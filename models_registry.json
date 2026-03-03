@@ -6726,7 +6726,7 @@
         "label": "iw",
         "description": "Image weight, controls image prompt influence",
         "min": 0,
-        "max": 3,
+        "max": 2,
         "step": 1,
         "defaultValue": 1
       },
@@ -13979,6 +13979,985 @@
         "required": true,
         "label": "prompt",
         "description": "prompt"
+      }
+    ]
+  },
+  {
+    "class_name": "Hitem3dV15ImageTo3d",
+    "internal_name": "RH_Hitem3dV15ImageTo3d",
+    "display_name": "RH HiTem3D V1.5 Image to 3D",
+    "endpoint": "hitem3d-v15/image-to-3d",
+    "output_type": "3d",
+    "category": "RunningHub/HiTem3D",
+    "params": [
+      {
+        "fieldKey": "requestType",
+        "type": "LIST",
+        "required": true,
+        "label": "Request Type",
+        "description": "Output type: mesh or both",
+        "defaultValue": "mesh",
+        "options": [
+          {
+            "value": "mesh"
+          },
+          {
+            "value": "both"
+          }
+        ]
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "Image",
+        "description": "Input image for 3D generation"
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "Resolution",
+        "description": "Output resolution",
+        "defaultValue": "1024",
+        "options": [
+          {
+            "value": "512"
+          },
+          {
+            "value": "1024"
+          },
+          {
+            "value": "1536"
+          },
+          {
+            "value": "1536pro"
+          }
+        ]
+      },
+      {
+        "fieldKey": "face",
+        "type": "INT",
+        "required": false,
+        "label": "Face Count",
+        "description": "Target face count",
+        "defaultValue": 1000000,
+        "min": 100000,
+        "max": 2000000,
+        "step": 10000
+      }
+    ]
+  },
+  {
+    "class_name": "Hitem3dV2ImageTo3d",
+    "internal_name": "RH_Hitem3dV2ImageTo3d",
+    "display_name": "RH HiTem3D V2 Image to 3D",
+    "endpoint": "hitem3d-v2/image-to-3d",
+    "output_type": "3d",
+    "category": "RunningHub/HiTem3D",
+    "params": [
+      {
+        "fieldKey": "requestType",
+        "type": "LIST",
+        "required": true,
+        "label": "Request Type",
+        "description": "Output type: mesh or both",
+        "defaultValue": "mesh",
+        "options": [
+          {
+            "value": "mesh"
+          },
+          {
+            "value": "both"
+          }
+        ]
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "Image",
+        "description": "Input image for 3D generation"
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "Resolution",
+        "description": "Output resolution",
+        "defaultValue": "1536",
+        "options": [
+          {
+            "value": "1536"
+          },
+          {
+            "value": "1536pro"
+          }
+        ]
+      },
+      {
+        "fieldKey": "face",
+        "type": "INT",
+        "required": false,
+        "label": "Face Count",
+        "description": "Target face count",
+        "defaultValue": 1000000,
+        "min": 100000,
+        "max": 2000000,
+        "step": 10000
+      }
+    ]
+  },
+  {
+    "class_name": "Hitem3dV15MultiImageTo3d",
+    "internal_name": "RH_Hitem3dV15MultiImageTo3d",
+    "display_name": "RH HiTem3D V1.5 Multi-Image to 3D",
+    "endpoint": "hitem3d-v15/multi-image-to-3d",
+    "output_type": "3d",
+    "category": "RunningHub/HiTem3D",
+    "params": [
+      {
+        "fieldKey": "requestType",
+        "type": "LIST",
+        "required": true,
+        "label": "Request Type",
+        "description": "Output type: mesh or both",
+        "defaultValue": "mesh",
+        "options": [
+          {
+            "value": "mesh"
+          },
+          {
+            "value": "both"
+          }
+        ]
+      },
+      {
+        "fieldKey": "frontImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "Front Image",
+        "description": "Front view image"
+      },
+      {
+        "fieldKey": "backImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Back Image",
+        "description": "Back view image"
+      },
+      {
+        "fieldKey": "leftImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Left Image",
+        "description": "Left view image"
+      },
+      {
+        "fieldKey": "rightImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Right Image",
+        "description": "Right view image"
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "Resolution",
+        "description": "Output resolution",
+        "defaultValue": "1024",
+        "options": [
+          {
+            "value": "512"
+          },
+          {
+            "value": "1024"
+          },
+          {
+            "value": "1536"
+          },
+          {
+            "value": "1536pro"
+          }
+        ]
+      },
+      {
+        "fieldKey": "face",
+        "type": "INT",
+        "required": false,
+        "label": "Face Count",
+        "description": "Target face count",
+        "defaultValue": 1000000,
+        "min": 100000,
+        "max": 2000000,
+        "step": 10000
+      }
+    ]
+  },
+  {
+    "class_name": "Hitem3dV2MultiImageTo3d",
+    "internal_name": "RH_Hitem3dV2MultiImageTo3d",
+    "display_name": "RH HiTem3D V2 Multi-Image to 3D",
+    "endpoint": "hitem3d-v2/multi-image-to-3d",
+    "output_type": "3d",
+    "category": "RunningHub/HiTem3D",
+    "params": [
+      {
+        "fieldKey": "requestType",
+        "type": "LIST",
+        "required": true,
+        "label": "Request Type",
+        "description": "Output type: mesh or both",
+        "defaultValue": "mesh",
+        "options": [
+          {
+            "value": "mesh"
+          },
+          {
+            "value": "both"
+          }
+        ]
+      },
+      {
+        "fieldKey": "frontImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "Front Image",
+        "description": "Front view image"
+      },
+      {
+        "fieldKey": "backImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Back Image",
+        "description": "Back view image"
+      },
+      {
+        "fieldKey": "leftImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Left Image",
+        "description": "Left view image"
+      },
+      {
+        "fieldKey": "rightImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Right Image",
+        "description": "Right view image"
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "Resolution",
+        "description": "Output resolution",
+        "defaultValue": "1536",
+        "options": [
+          {
+            "value": "1536"
+          },
+          {
+            "value": "1536pro"
+          }
+        ]
+      },
+      {
+        "fieldKey": "face",
+        "type": "INT",
+        "required": false,
+        "label": "Face Count",
+        "description": "Target face count",
+        "defaultValue": 1000000,
+        "min": 100000,
+        "max": 2000000,
+        "step": 10000
+      }
+    ]
+  },
+  {
+    "class_name": "Hitem3dPortraitV21ImageTo3d",
+    "internal_name": "RH_Hitem3dPortraitV21ImageTo3d",
+    "display_name": "RH HiTem3D Portrait V2.1 Image to 3D",
+    "endpoint": "hitem3d-portrait-v21/image-to-3d",
+    "output_type": "3d",
+    "category": "RunningHub/HiTem3D",
+    "params": [
+      {
+        "fieldKey": "requestType",
+        "type": "LIST",
+        "required": true,
+        "label": "Request Type",
+        "description": "Output type: mesh or both",
+        "defaultValue": "mesh",
+        "options": [
+          {
+            "value": "mesh"
+          },
+          {
+            "value": "both"
+          }
+        ]
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "Image",
+        "description": "Input portrait image"
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "Resolution",
+        "description": "Output resolution",
+        "defaultValue": "1536pro",
+        "options": [
+          {
+            "value": "1536pro"
+          }
+        ]
+      },
+      {
+        "fieldKey": "face",
+        "type": "INT",
+        "required": false,
+        "label": "Face Count",
+        "description": "Target face count",
+        "defaultValue": 2000000,
+        "min": 100000,
+        "max": 2000000,
+        "step": 10000
+      }
+    ]
+  },
+  {
+    "class_name": "Hitem3dPortraitV21MultiImageTo3d",
+    "internal_name": "RH_Hitem3dPortraitV21MultiImageTo3d",
+    "display_name": "RH HiTem3D Portrait V2.1 Multi-Image to 3D",
+    "endpoint": "hitem3d-portrait-v21/multi-image-to-3d",
+    "output_type": "3d",
+    "category": "RunningHub/HiTem3D",
+    "params": [
+      {
+        "fieldKey": "requestType",
+        "type": "LIST",
+        "required": true,
+        "label": "Request Type",
+        "description": "Output type: mesh or both",
+        "defaultValue": "mesh",
+        "options": [
+          {
+            "value": "mesh"
+          },
+          {
+            "value": "both"
+          }
+        ]
+      },
+      {
+        "fieldKey": "frontImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "Front Image",
+        "description": "Front view image"
+      },
+      {
+        "fieldKey": "backImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Back Image",
+        "description": "Back view image"
+      },
+      {
+        "fieldKey": "leftImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Left Image",
+        "description": "Left view image"
+      },
+      {
+        "fieldKey": "rightImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Right Image",
+        "description": "Right view image"
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "Resolution",
+        "description": "Output resolution",
+        "defaultValue": "1536pro",
+        "options": [
+          {
+            "value": "1536pro"
+          }
+        ]
+      },
+      {
+        "fieldKey": "face",
+        "type": "INT",
+        "required": false,
+        "label": "Face Count",
+        "description": "Target face count",
+        "defaultValue": 2000000,
+        "min": 100000,
+        "max": 2000000,
+        "step": 10000
+      }
+    ]
+  },
+  {
+    "class_name": "Hitem3dPortraitV20ImageTo3d",
+    "internal_name": "RH_Hitem3dPortraitV20ImageTo3d",
+    "display_name": "RH HiTem3D Portrait V2.0 Image to 3D",
+    "endpoint": "hitem3d-portrait-v20/image-to-3d",
+    "output_type": "3d",
+    "category": "RunningHub/HiTem3D",
+    "params": [
+      {
+        "fieldKey": "requestType",
+        "type": "LIST",
+        "required": true,
+        "label": "Request Type",
+        "description": "Output type: mesh or both",
+        "defaultValue": "mesh",
+        "options": [
+          {
+            "value": "mesh"
+          },
+          {
+            "value": "both"
+          }
+        ]
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "Image",
+        "description": "Input portrait image"
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "Resolution",
+        "description": "Output resolution",
+        "defaultValue": "1536pro",
+        "options": [
+          {
+            "value": "1536pro"
+          }
+        ]
+      },
+      {
+        "fieldKey": "face",
+        "type": "INT",
+        "required": false,
+        "label": "Face Count",
+        "description": "Target face count",
+        "defaultValue": 2000000,
+        "min": 100000,
+        "max": 2000000,
+        "step": 10000
+      }
+    ]
+  },
+  {
+    "class_name": "Hitem3dPortraitV20MultiImageTo3d",
+    "internal_name": "RH_Hitem3dPortraitV20MultiImageTo3d",
+    "display_name": "RH HiTem3D Portrait V2.0 Multi-Image to 3D",
+    "endpoint": "hitem3d-portrait-v20/multi-image-to-3d",
+    "output_type": "3d",
+    "category": "RunningHub/HiTem3D",
+    "params": [
+      {
+        "fieldKey": "requestType",
+        "type": "LIST",
+        "required": true,
+        "label": "Request Type",
+        "description": "Output type: mesh or both",
+        "defaultValue": "mesh",
+        "options": [
+          {
+            "value": "mesh"
+          },
+          {
+            "value": "both"
+          }
+        ]
+      },
+      {
+        "fieldKey": "frontImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "Front Image",
+        "description": "Front view image"
+      },
+      {
+        "fieldKey": "backImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Back Image",
+        "description": "Back view image"
+      },
+      {
+        "fieldKey": "leftImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Left Image",
+        "description": "Left view image"
+      },
+      {
+        "fieldKey": "rightImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Right Image",
+        "description": "Right view image"
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "Resolution",
+        "description": "Output resolution",
+        "defaultValue": "1536pro",
+        "options": [
+          {
+            "value": "1536pro"
+          }
+        ]
+      },
+      {
+        "fieldKey": "face",
+        "type": "INT",
+        "required": false,
+        "label": "Face Count",
+        "description": "Target face count",
+        "defaultValue": 2000000,
+        "min": 100000,
+        "max": 2000000,
+        "step": 10000
+      }
+    ]
+  },
+  {
+    "class_name": "Hitem3dPortraitV15ImageTo3d",
+    "internal_name": "RH_Hitem3dPortraitV15ImageTo3d",
+    "display_name": "RH HiTem3D Portrait V1.5 Image to 3D",
+    "endpoint": "hitem3d-portrait-v15/image-to-3d",
+    "output_type": "3d",
+    "category": "RunningHub/HiTem3D",
+    "params": [
+      {
+        "fieldKey": "requestType",
+        "type": "LIST",
+        "required": true,
+        "label": "Request Type",
+        "description": "Output type: mesh or both",
+        "defaultValue": "mesh",
+        "options": [
+          {
+            "value": "mesh"
+          },
+          {
+            "value": "both"
+          }
+        ]
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "Image",
+        "description": "Input portrait image"
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "Resolution",
+        "description": "Output resolution",
+        "defaultValue": "1536",
+        "options": [
+          {
+            "value": "1536"
+          }
+        ]
+      },
+      {
+        "fieldKey": "face",
+        "type": "INT",
+        "required": false,
+        "label": "Face Count",
+        "description": "Target face count",
+        "defaultValue": 2000000,
+        "min": 100000,
+        "max": 2000000,
+        "step": 10000
+      }
+    ]
+  },
+  {
+    "class_name": "Hitem3dPortraitV15MultiImageTo3d",
+    "internal_name": "RH_Hitem3dPortraitV15MultiImageTo3d",
+    "display_name": "RH HiTem3D Portrait V1.5 Multi-Image to 3D",
+    "endpoint": "hitem3d-portrait-v15/multi-image-to-3d",
+    "output_type": "3d",
+    "category": "RunningHub/HiTem3D",
+    "params": [
+      {
+        "fieldKey": "requestType",
+        "type": "LIST",
+        "required": true,
+        "label": "Request Type",
+        "description": "Output type: mesh or both",
+        "defaultValue": "mesh",
+        "options": [
+          {
+            "value": "mesh"
+          },
+          {
+            "value": "both"
+          }
+        ]
+      },
+      {
+        "fieldKey": "frontImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "Front Image",
+        "description": "Front view image"
+      },
+      {
+        "fieldKey": "backImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Back Image",
+        "description": "Back view image"
+      },
+      {
+        "fieldKey": "leftImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Left Image",
+        "description": "Left view image"
+      },
+      {
+        "fieldKey": "rightImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Right Image",
+        "description": "Right view image"
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "Resolution",
+        "description": "Output resolution",
+        "defaultValue": "1536",
+        "options": [
+          {
+            "value": "1536"
+          }
+        ]
+      },
+      {
+        "fieldKey": "face",
+        "type": "INT",
+        "required": false,
+        "label": "Face Count",
+        "description": "Target face count",
+        "defaultValue": 2000000,
+        "min": 100000,
+        "max": 2000000,
+        "step": 10000
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaWan26ReferenceToVideoFlash",
+    "internal_name": "RH_AlibabaWan26ReferenceToVideoFlash",
+    "display_name": "RH Wan 2.6 Reference to Video Flash",
+    "endpoint": "alibaba/wan-2.6/reference-to-video-flash",
+    "output_type": "video",
+    "category": "RunningHub/Alibaba",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "Prompt",
+        "description": "Text prompt for video generation",
+        "defaultValue": ""
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "Negative Prompt",
+        "description": "Negative prompt"
+      },
+      {
+        "fieldKey": "videoUrls",
+        "type": "VIDEO",
+        "required": false,
+        "label": "Reference Video",
+        "description": "Reference video(s)",
+        "multipleInputs": true,
+        "maxInputNum": 3
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Reference Images",
+        "description": "Reference image(s)",
+        "multipleInputs": true,
+        "maxInputNum": 5
+      },
+      {
+        "fieldKey": "size",
+        "type": "LIST",
+        "required": true,
+        "label": "Size",
+        "description": "Output video size",
+        "defaultValue": "1920*1080",
+        "options": [
+          {
+            "value": "1280*720"
+          },
+          {
+            "value": "720*1280"
+          },
+          {
+            "value": "960*960"
+          },
+          {
+            "value": "1088*832"
+          },
+          {
+            "value": "832*1088"
+          },
+          {
+            "value": "1920*1080"
+          },
+          {
+            "value": "1080*1920"
+          },
+          {
+            "value": "1440*1440"
+          },
+          {
+            "value": "1632*1248"
+          },
+          {
+            "value": "1248*1632"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "Duration",
+        "description": "Video duration in seconds",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "5"
+          },
+          {
+            "value": "6"
+          },
+          {
+            "value": "7"
+          },
+          {
+            "value": "8"
+          },
+          {
+            "value": "9"
+          },
+          {
+            "value": "10"
+          }
+        ]
+      },
+      {
+        "fieldKey": "shotType",
+        "type": "LIST",
+        "required": false,
+        "label": "Shot Type",
+        "description": "Single or multi shot",
+        "defaultValue": "single",
+        "options": [
+          {
+            "value": "single"
+          },
+          {
+            "value": "multi"
+          }
+        ]
+      },
+      {
+        "fieldKey": "audio",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "Audio",
+        "description": "Enable audio generation",
+        "defaultValue": true
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaWan26ReferenceToVideo",
+    "internal_name": "RH_AlibabaWan26ReferenceToVideo",
+    "display_name": "RH Wan 2.6 Reference to Video",
+    "endpoint": "alibaba/wan-2.6/reference-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Alibaba",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "Prompt",
+        "description": "Text prompt for video generation",
+        "defaultValue": ""
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "Negative Prompt",
+        "description": "Negative prompt"
+      },
+      {
+        "fieldKey": "videoUrls",
+        "type": "VIDEO",
+        "required": false,
+        "label": "Reference Video",
+        "description": "Reference video(s)",
+        "multipleInputs": true,
+        "maxInputNum": 3
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "Reference Images",
+        "description": "Reference image(s)",
+        "multipleInputs": true,
+        "maxInputNum": 5
+      },
+      {
+        "fieldKey": "size",
+        "type": "LIST",
+        "required": true,
+        "label": "Size",
+        "description": "Output video size",
+        "defaultValue": "1920*1080",
+        "options": [
+          {
+            "value": "1280*720"
+          },
+          {
+            "value": "720*1280"
+          },
+          {
+            "value": "960*960"
+          },
+          {
+            "value": "1088*832"
+          },
+          {
+            "value": "832*1088"
+          },
+          {
+            "value": "1920*1080"
+          },
+          {
+            "value": "1080*1920"
+          },
+          {
+            "value": "1440*1440"
+          },
+          {
+            "value": "1632*1248"
+          },
+          {
+            "value": "1248*1632"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "Duration",
+        "description": "Video duration in seconds",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "5"
+          },
+          {
+            "value": "6"
+          },
+          {
+            "value": "7"
+          },
+          {
+            "value": "8"
+          },
+          {
+            "value": "9"
+          },
+          {
+            "value": "10"
+          }
+        ]
+      },
+      {
+        "fieldKey": "shotType",
+        "type": "LIST",
+        "required": false,
+        "label": "Shot Type",
+        "description": "Single or multi shot",
+        "defaultValue": "single",
+        "options": [
+          {
+            "value": "single"
+          },
+          {
+            "value": "multi"
+          }
+        ]
       }
     ]
   }

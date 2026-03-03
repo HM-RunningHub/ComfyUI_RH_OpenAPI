@@ -1,24 +1,25 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-149-blue)
+![Nodes](https://img.shields.io/badge/Nodes-161-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 **English** | [中文](README.md)
 
 **ComfyUI_RH_OpenAPI** is a **1:1 ComfyUI implementation** of the [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api).
 
-RunningHub provides 149 standard model APIs covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. This project converts every API endpoint into a corresponding ComfyUI node, enabling you to access all RunningHub model capabilities directly within ComfyUI workflows — no local GPU required, zero cold-start latency.
+RunningHub provides 161 standard model APIs covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. This project converts every API endpoint into a corresponding ComfyUI node, enabling you to access all RunningHub model capabilities directly within ComfyUI workflows — no local GPU required, zero cold-start latency.
 
 ## 📌 Features
 
-- **Full Coverage** — 149 ComfyUI nodes, mapping 1:1 to [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api)
+- **Full Coverage** — 161 ComfyUI nodes, mapping 1:1 to [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api)
 - **Plug & Play** — No model downloads, no GPU needed — just an API Key
 - **Dynamic Registration** — Nodes are auto-generated from a JSON registry; adding new models requires only a registry update
 - **Media Support** — Automatic upload/download/conversion for images, videos, and audio, seamlessly integrated with ComfyUI native types
 - **Flexible Configuration** — Three configuration methods: node settings, environment variables, or `.env` file
 - **Progress Tracking** — Real-time polling progress display after task submission
 - **Robust Error Handling** — Submit/upload/poll all have retry with exponential backoff, auto-distinguishing retryable vs non-retryable errors
+- **Skip Error** — Every node supports a `skip_error` toggle; when enabled, errors produce type-appropriate placeholders instead of stopping the workflow
 - **Example Workflows** — Every node comes with an importable example workflow
 
 ## 🎨 Supported Models
@@ -39,7 +40,7 @@ RunningHub provides 149 standard model APIs covering image generation, video gen
 | Seedream v4 / v4.5 / v5 Lite | Text-to-Image, Image-to-Image | 6 |
 | Youchuan | Text-to-Image (v6/v61/niji6/niji7/v7) | 5 |
 
-### Video Generation (90 Nodes)
+### Video Generation (92 Nodes)
 
 | Model Series | Capabilities | Nodes |
 |-------------|-------------|-------|
@@ -49,7 +50,7 @@ RunningHub provides 149 standard model APIs covering image generation, video gen
 | RHArt Video G Official | Text/Image-to-Video, Edit Video | 3 |
 | Kling | v2.5/v2.6/v3.0/o1/o3, Text/Image/Start-End/Reference/Motion Control/Edit | 24 |
 | Vidu | q2/q3, Text/Image/Start-End/Reference-to-Video | 15 |
-| Wan 2.6 | Text/Image-to-Video, Flash | 3 |
+| Wan 2.6 | Text/Image/Reference-to-Video, Flash | 5 |
 | Hailuo | 02/2.3/2.3-fast, Text/Image-to-Video | 13 |
 | Seedance v1.5 | Text/Image-to-Video, Fast, Reference-to-Video | 5 |
 | TopazLabs Video Upscale | Video Enhancement & Upscaling | 1 |
@@ -71,11 +72,13 @@ RunningHub provides 149 standard model APIs covering image generation, video gen
 | Minimax Music 2.5 | Text-to-Music | 1 |
 | Minimax Voice Clone | Voice Cloning | 1 |
 
-### 3D Modeling (2 Nodes)
+### 3D Modeling (12 Nodes)
 
 | Model Series | Capabilities | Nodes |
 |-------------|-------------|-------|
 | Hunyuan 3D v3.1 | Text-to-3D, Image-to-3D | 2 |
+| HiTem3D V1.5 / V2 | Image-to-3D, Multi-Image-to-3D | 4 |
+| HiTem3D Portrait V1.5 / V2.0 / V2.1 | Portrait Image-to-3D, Multi-Image-to-3D | 6 |
 
 ## 🛠️ Installation
 
@@ -126,14 +129,14 @@ cp config/.env.example config/.env
 
 ### Example Workflows
 
-The project includes 149 example workflow JSON files in the `examples/` directory, covering every model node. Download and import directly into ComfyUI.
+The project includes 161 example workflow JSON files in the `examples/` directory, covering every model node. Download and import directly into ComfyUI.
 
 ## 📁 Project Structure
 
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # Entry point, registers all nodes
-├── models_registry.json     # Model registry (149 model definitions)
+├── models_registry.json     # Model registry (161 model definitions)
 ├── config/
 │   └── .env.example         # Configuration template
 ├── core/                    # Core infrastructure
@@ -147,7 +150,7 @@ ComfyUI_RH_OpenAPI/
 ├── nodes/                   # Node implementations
 │   ├── settings_node.py     # RH OpenAPI Settings node
 │   └── node_factory.py      # Dynamic node factory
-└── examples/                # 149 example workflows
+└── examples/                # 161 example workflows
 ```
 
 ## 🔧 Architecture

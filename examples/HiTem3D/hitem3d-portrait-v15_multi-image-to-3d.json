@@ -1,0 +1,154 @@
+{
+  "last_node_id": 4,
+  "last_link_id": 2,
+  "nodes": [
+    {
+      "id": "1",
+      "type": "RH_SettingsNode",
+      "pos": [
+        100,
+        200
+      ],
+      "size": [
+        300,
+        150
+      ],
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "api_config",
+          "type": "RH_OPENAPI_CONFIG",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "https://www.runninghub.cn",
+        "",
+        30,
+        5,
+        600
+      ]
+    },
+    {
+      "id": "2",
+      "type": "LoadImage",
+      "pos": [
+        100,
+        450
+      ],
+      "size": [
+        300,
+        300
+      ],
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            2
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "rh_test_image.png",
+        "image"
+      ]
+    },
+    {
+      "id": "3",
+      "type": "RH_Hitem3dPortraitV15MultiImageTo3d",
+      "pos": [
+        500,
+        200
+      ],
+      "size": [
+        400,
+        400
+      ],
+      "inputs": [
+        {
+          "name": "api_config",
+          "type": "RH_OPENAPI_CONFIG",
+          "link": 1
+        },
+        {
+          "name": "front_image",
+          "type": "IMAGE",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model_url",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "url",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "response",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "mesh",
+        "1536",
+        2000000
+      ]
+    },
+    {
+      "id": "4",
+      "type": "Note",
+      "pos": [
+        900,
+        200
+      ],
+      "size": [
+        300,
+        150
+      ],
+      "properties": {
+        "text": "3D model URL output. Connect additional images for back/left/right views."
+      },
+      "widgets_values": [
+        "3D model URL output. Connect additional images for back/left/right views."
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      "1",
+      0,
+      "3",
+      0,
+      "RH_OPENAPI_CONFIG"
+    ],
+    [
+      2,
+      "2",
+      0,
+      "3",
+      1,
+      "IMAGE"
+    ]
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

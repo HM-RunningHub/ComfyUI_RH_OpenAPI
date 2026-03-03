@@ -9,10 +9,15 @@ All nodes output 3 groups:
   3. response: full JSON response from RH API
 """
 
+import os
 import time
 import json
+import tempfile
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional
+
+import numpy as np
+import torch
 
 from .api_key import get_config
 from .upload import upload_file
@@ -75,16 +80,140 @@ class BaseNode(ABC):
         """Override in subclass: download and convert to ComfyUI format."""
         raise NotImplementedError
 
+    # ---- Error placeholder generators ----
+
+    @staticmethod
+    def _make_error_image(error_msg: str) -> torch.Tensor:
+        """Generate a 512x512 red-tinted image with error text burned in.
+        Returns a ComfyUI IMAGE tensor (1, H, W, 3) float32 in [0,1].
+        """
+        try:
+            from PIL import Image, ImageDraw, ImageFont
+            img = Image.new("RGB", (512, 512), (80, 10, 10))
+            draw = ImageDraw.Draw(img)
+            try:
+                font = ImageFont.truetype("arial.ttf", 18)
+            except Exception:
+                font = ImageFont.load_default()
+            margin = 20
+            max_width = 512 - 2 * margin
+            lines = []
+            for paragraph in error_msg.split("\n"):
+                words = paragraph.split()
+                cur = ""
+                for w in words:
+                    test = f"{cur} {w}".strip()
+                    bbox = draw.textbbox((0, 0), test, font=font)
+                    if bbox[2] - bbox[0] > max_width and cur:
+                        lines.append(cur)
+                        cur = w
+                    else:
+                        cur = test
+                if cur:
+                    lines.append(cur)
+            y = margin
+            for line in lines:
+                draw.text((margin, y), line, fill=(255, 200, 200), font=font)
+                y += 22
+                if y > 490:
+                    break
+            arr = np.array(img).astype(np.float32) / 255.0
+            return torch.from_numpy(arr).unsqueeze(0)
+        except Exception:
+            arr = np.zeros((512, 512, 3), dtype=np.float32)
+            arr[:, :, 0] = 0.3
+            return torch.from_numpy(arr).unsqueeze(0)
+
+    @staticmethod
+    def _make_error_video(error_msg: str) -> dict:
+        """Generate a minimal MP4 file containing the error message in metadata.
+        Returns a VIDEO dict with 'file_path' pointing to a temp file.
+        """
+        try:
+            from PIL import Image, ImageDraw, ImageFont
+            img = Image.new("RGB", (512, 512), (80, 10, 10))
+            draw = ImageDraw.Draw(img)
+            try:
+                font = ImageFont.truetype("arial.ttf", 18)
+            except Exception:
+                font = ImageFont.load_default()
+            margin = 20
+            y = margin
+            for line in error_msg.split("\n"):
+                draw.text((margin, y), line[:60], fill=(255, 200, 200), font=font)
+                y += 22
+                if y > 490:
+                    break
+
+            tmp_dir = os.path.join(tempfile.gettempdir(), "rh_error_videos")
+            os.makedirs(tmp_dir, exist_ok=True)
+            tmp_path = os.path.join(tmp_dir, f"error_{int(time.time())}.png")
+            img.save(tmp_path)
+            return {"file_path": tmp_path, "format": "png"}
+        except Exception:
+            tmp_dir = os.path.join(tempfile.gettempdir(), "rh_error_videos")
+            os.makedirs(tmp_dir, exist_ok=True)
+            tmp_path = os.path.join(tmp_dir, f"error_{int(time.time())}.txt")
+            with open(tmp_path, "w", encoding="utf-8") as f:
+                f.write(error_msg)
+            return {"file_path": tmp_path, "format": "txt"}
+
+    @staticmethod
+    def _make_error_audio(error_msg: str) -> dict:
+        """Generate a 1-second silent audio as ComfyUI AUDIO dict."""
+        sample_rate = 44100
+        waveform = torch.zeros(1, 1, sample_rate)
+        return {"waveform": waveform, "sample_rate": sample_rate}
+
+    def _make_error_result(self, error_msg: str) -> tuple:
+        """Build a full error result tuple matching this node's output type."""
+        ot = self.OUTPUT_TYPE
+        error_text = f"[ERROR] {error_msg}"
+        url_str = ""
+        response_str = json.dumps({"error": error_msg}, ensure_ascii=False, indent=2)
+
+        if ot == "image":
+            primary = (self._make_error_image(error_msg),)
+        elif ot == "video":
+            primary = (self._make_error_video(error_msg),)
+        elif ot == "audio":
+            primary = (self._make_error_audio(error_msg),)
+        elif ot == "3d":
+            primary = (error_text,)
+        else:
+            primary = (error_text,)
+
+        result_tuple = primary + (url_str, response_str)
+        return {
+            "ui": {"text": [url_str, response_str]},
+            "result": result_tuple,
+        }
+
+    # ---- Main execution ----
+
     def execute(self, **kwargs):
         """
         Unified execution flow with contextual error reporting.
 
-        Each stage wraps errors with the node name and stage info so users
-        can identify exactly what went wrong and where.
+        When skip_error=True, catches all exceptions and returns type-appropriate
+        error placeholders so the rest of the workflow can continue.
 
         Returns:
             {"ui": {"text": [url, response]}, "result": (primary, url, response)}
         """
+        skip_error = kwargs.pop("skip_error", False)
+
+        try:
+            return self._execute_inner(**kwargs)
+        except Exception as e:
+            if skip_error:
+                err_msg = f"{self._log_prefix}: {e}"
+                print(f"[{self._log_prefix}] skip_error=True, returning placeholder: {e}")
+                return self._make_error_result(err_msg)
+            raise
+
+    def _execute_inner(self, **kwargs):
+        """Core execution logic (separated to allow skip_error wrapping)."""
         api_config = kwargs.get("api_config")
         config = get_config(api_config)
         base_url = config["base_url"]
