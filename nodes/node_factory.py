@@ -215,6 +215,20 @@ def create_node_class(model_def: Dict) -> type:
     media_params = [p for p in model_params if p["type"] in ("IMAGE", "VIDEO", "AUDIO")]
     non_media_params = [p for p in model_params if p["type"] not in ("IMAGE", "VIDEO", "AUDIO")]
 
+    # Sort non-media: prompt/text fields first, then negative_prompt, then others
+    _PROMPT_KEYS = {"prompt", "text"}
+    _NEG_PROMPT_KEYS = {"negativeprompt", "negative_prompt"}
+
+    def _param_sort_key(p):
+        fk_lower = p["fieldKey"].lower()
+        if fk_lower in _PROMPT_KEYS:
+            return (0, fk_lower)
+        if fk_lower in _NEG_PROMPT_KEYS:
+            return (1, fk_lower)
+        return (2, "")
+
+    non_media_params = sorted(non_media_params, key=_param_sort_key)
+
     # ---- Build INPUT_TYPES with controlled ordering ----
     required_inputs = {}
     optional_inputs = {"api_config": ("RH_OPENAPI_CONFIG",)}
