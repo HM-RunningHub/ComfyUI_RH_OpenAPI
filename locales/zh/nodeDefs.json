@@ -1,0 +1,488 @@
+{
+  "RH_RhartVideoSOfficialImageToVideoRealistic": {
+    "display_name": "RH 全能视频S-官方-图生视频-支持真人"
+  },
+  "RH_RhartVideoSImageToVideo": {
+    "display_name": "RH 全能视频S-图生视频"
+  },
+  "RH_RhartVideoSTextToVideo": {
+    "display_name": "RH 全能视频S-文生视频"
+  },
+  "RH_RhartImageV1Edit": {
+    "display_name": "RH 全能图片V1-图生图"
+  },
+  "RH_RhartImageV1TextToImage": {
+    "display_name": "RH 全能图片V1-文生图"
+  },
+  "RH_RhartImageNProEdit": {
+    "display_name": "RH 全能图片PRO-图生图"
+  },
+  "RH_RhartImageNProTextToImage": {
+    "display_name": "RH 全能图片PRO-文生图"
+  },
+  "RH_RhartImageNProOfficialEdit": {
+    "display_name": "RH 全能图片PRO-官方-图生图"
+  },
+  "RH_RhartImageNProOfficialTextToImage": {
+    "display_name": "RH 全能图片PRO-官方-文生图"
+  },
+  "RH_RhartImageG15TextToImage": {
+    "display_name": "RH 全能图片G-1.5-文生图"
+  },
+  "RH_RhartImageG15Edit": {
+    "display_name": "RH 全能图片G-1.5-图生图"
+  },
+  "RH_RhartVideoV31FastTextToVideo": {
+    "display_name": "RH 全能视频V3.1-fast-文生视频"
+  },
+  "RH_RhartVideoV31ProTextToVideo": {
+    "display_name": "RH 全能视频V3.1-pro-文生视频"
+  },
+  "RH_RhartVideoV31FastImageToVideo": {
+    "display_name": "RH 全能视频V3.1-fast-图生视频"
+  },
+  "RH_RhartVideoSImageToVideoPro": {
+    "display_name": "RH 全能视频S-图生视频-pro"
+  },
+  "RH_RhartVideoSTextToVideoPro": {
+    "display_name": "RH 全能视频S-文生视频-pro"
+  },
+  "RH_RhartVideoSSoraUploadCharacter": {
+    "display_name": "RH 全能视频S-角色上传"
+  },
+  "RH_AlibabaWan26TextToVideo": {
+    "display_name": "RH 万相2.6-文生视频"
+  },
+  "RH_AlibabaWan26ImageToVideo": {
+    "display_name": "RH 万相2.6-图生视频"
+  },
+  "RH_KlingV25TurboProTextToVideo": {
+    "display_name": "RH 可灵文生视频2.5-turbo-pro"
+  },
+  "RH_KlingV25TurboProImageToVideo": {
+    "display_name": "RH 可灵图生视频2.5-turbo-pro"
+  },
+  "RH_KlingV25TurboStdImageToVideo": {
+    "display_name": "RH 可灵图生视频2.5-turbo-std"
+  },
+  "RH_ViduTextToVideo": {
+    "display_name": "RH Vidu-文生视频-q2"
+  },
+  "RH_ViduStartEndToVideoQ2Pro": {
+    "display_name": "RH Vidu-首尾帧生视频-q2-pro"
+  },
+  "RH_ViduStartEndToVideoQ2Turbo": {
+    "display_name": "RH Vidu-首尾帧生视频-q2-turbo"
+  },
+  "RH_RhartVideoSOfficialTextToVideo": {
+    "display_name": "RH 全能视频S-官方-文生视频"
+  },
+  "RH_SeedreamV45TextToImage": {
+    "display_name": "RH seedream-v4.5-文生图"
+  },
+  "RH_MinimaxHailuo02T2vStandard": {
+    "display_name": "RH 海螺-02-文生视频-标准"
+  },
+  "RH_MinimaxHailuo23T2vStandard": {
+    "display_name": "RH 海螺-2.3-文生视频-标准"
+  },
+  "RH_MinimaxHailuo02I2vStandard": {
+    "display_name": "RH 海螺-02-图生视频-标准"
+  },
+  "RH_MinimaxHailuo23I2vStandard": {
+    "display_name": "RH 海螺-2.3-图生视频-标准"
+  },
+  "RH_MinimaxHailuo23FastImageToVideo": {
+    "display_name": "RH 海螺-2.3-fast-图生视频"
+  },
+  "RH_MinimaxHailuo23FastProImageToVideo": {
+    "display_name": "RH 海螺-2.3-fast-pro-图生视频"
+  },
+  "RH_SeedreamV45ImageToImage": {
+    "display_name": "RH seedream-v4.5-图生图"
+  },
+  "RH_MinimaxHailuo23ImageToVideoPro": {
+    "display_name": "RH 海螺-2.3-图生视频-pro"
+  },
+  "RH_MinimaxHailuo23T2vPro": {
+    "display_name": "RH 海螺-2.3-文生视频-pro"
+  },
+  "RH_KlingVideoO1TextToVideo": {
+    "display_name": "RH 可灵文生视频o1"
+  },
+  "RH_MinimaxHailuo02I2vPro": {
+    "display_name": "RH 海螺-02-图生视频-pro"
+  },
+  "RH_KlingVideoO1ImageToVideo": {
+    "display_name": "RH 可灵图生视频o1"
+  },
+  "RH_MinimaxHailuo02T2vPro": {
+    "display_name": "RH 海螺-02-文生视频-pro"
+  },
+  "RH_MinimaxHailuo02Standard": {
+    "display_name": "RH 海螺-02-标准"
+  },
+  "RH_MinimaxHailuo02Pro": {
+    "display_name": "RH 海螺-02-pro"
+  },
+  "RH_MinimaxHailuo02Fast": {
+    "display_name": "RH 海螺-02-fast"
+  },
+  "RH_KlingVideoO1StartToEnd": {
+    "display_name": "RH 可灵首尾帧生视频o1"
+  },
+  "RH_RhartVideoSOfficialImageToVideo": {
+    "display_name": "RH 全能视频S-官方-图生视频"
+  },
+  "RH_RhartVideoSOfficialTextToVideoPro": {
+    "display_name": "RH 全能视频S-官方-文生视频-pro"
+  },
+  "RH_RhartVideoSOfficialImageToVideoPro": {
+    "display_name": "RH 全能视频S-官方-图生视频-pro"
+  },
+  "RH_KlingVideoO1StdRefrenceToVideo": {
+    "display_name": "RH 可灵参考生视频o1"
+  },
+  "RH_KlingVideoO1StdEditVideo": {
+    "display_name": "RH 可灵视频编辑o1"
+  },
+  "RH_SeedreamV4TextToImage": {
+    "display_name": "RH seedream-v4-文生图"
+  },
+  "RH_SeedreamV4ImageToImage": {
+    "display_name": "RH seedream-v4-图生图"
+  },
+  "RH_KlingV26ProTextToVideo": {
+    "display_name": "RH 可灵文生视频2.6-pro"
+  },
+  "RH_KlingV26ProImageToVideo": {
+    "display_name": "RH 可灵图生视频2.6-pro"
+  },
+  "RH_AlibabaWan26ImageToVideoFlash": {
+    "display_name": "RH 万相2.6-图生视频Flash"
+  },
+  "RH_ViduImageToVideoQ2Pro": {
+    "display_name": "RH Vidu-图生视频-q2-pro"
+  },
+  "RH_ViduImageToVideoQ2Turbo": {
+    "display_name": "RH Vidu-图生视频-q2-turbo"
+  },
+  "RH_ViduReferenceToVideoQ2": {
+    "display_name": "RH Vidu-参考生视频-q2"
+  },
+  "RH_SeedanceV15ProTextToVideo": {
+    "display_name": "RH seedance-v1.5-pro-text-to-video"
+  },
+  "RH_SeedanceV15ProTextToVideoFast": {
+    "display_name": "RH seedance-v1.5-pro-text-to-video-fast"
+  },
+  "RH_SeedanceV15ProImageToVideo": {
+    "display_name": "RH seedance-v1.5-pro-image-to-video"
+  },
+  "RH_SeedanceV15ProImageToVideoFast": {
+    "display_name": "RH seedance-v1.5-pro-image-to-video-fast"
+  },
+  "RH_SeedanceV1LiteReferenceToVideo": {
+    "display_name": "RH seedance-v1-lite-reference-to-video"
+  },
+  "RH_RhartImageNProOfficialTextToImageUltra": {
+    "display_name": "RH 全能图片PRO-官方-文生图Ultra"
+  },
+  "RH_RhartImageNProOfficialEditUltra": {
+    "display_name": "RH 全能图片PRO-官方-图生图Ultra"
+  },
+  "RH_RhartVideoV31FastStartEndToVideo": {
+    "display_name": "RH 全能视频V3.1-fast-首尾帧生视频"
+  },
+  "RH_ViduReferenceToVideoQ2Pro": {
+    "display_name": "RH Vidu-参考生视频-q2-pro"
+  },
+  "RH_YouchuanImageToVideo": {
+    "display_name": "RH 悠船图生视频"
+  },
+  "RH_YouchuanTextToImageV6": {
+    "display_name": "RH 悠船文生图-v6"
+  },
+  "RH_YouchuanTextToImageV61": {
+    "display_name": "RH 悠船文生图-v61"
+  },
+  "RH_YouchuanTextToImageNiji6": {
+    "display_name": "RH 悠船文生图-niji6"
+  },
+  "RH_YouchuanTextToImageNiji7": {
+    "display_name": "RH 悠船文生图-niji7"
+  },
+  "RH_YouchuanTextToImageV7": {
+    "display_name": "RH 悠船文生图-v7"
+  },
+  "RH_ViduTextToVideoQ3Pro": {
+    "display_name": "RH Vidu-文生视频-q3-pro"
+  },
+  "RH_ViduImageToVideoQ3Pro": {
+    "display_name": "RH Vidu-图生视频-q3-pro"
+  },
+  "RH_RhartVideoV31ProStartEndToVideo": {
+    "display_name": "RH 全能视频V3.1-pro-首尾帧生视频"
+  },
+  "RH_ViduImageToVideoQ2ProFast": {
+    "display_name": "RH Vidu-图生视频-q2-pro-fast"
+  },
+  "RH_ViduStartEndToVideoQ2ProFast": {
+    "display_name": "RH Vidu-首尾帧生视频-q2-pro-fast"
+  },
+  "RH_RhartAudioTextToAudioSpeech28Hd": {
+    "display_name": "RH minimax/speech-2.8-hd"
+  },
+  "RH_RhartAudioTextToAudioSpeech02Hd": {
+    "display_name": "RH minimax/speech-02-hd"
+  },
+  "RH_RhartAudioTextToAudioSpeech02Turbo": {
+    "display_name": "RH minimax/speech-02-turbo"
+  },
+  "RH_RhartAudioTextToAudioSpeech26Hd": {
+    "display_name": "RH minimax/speech-2.6-hd"
+  },
+  "RH_RhartAudioTextToAudioSpeech26Turbo": {
+    "display_name": "RH minimax/speech-2.6-turbo"
+  },
+  "RH_RhartAudioTextToAudioSpeech28Turbo": {
+    "display_name": "RH minimax/speech-2.8-turbo"
+  },
+  "RH_KlingV30StdTextToVideo": {
+    "display_name": "RH 可灵文生视频3.0-std"
+  },
+  "RH_KlingV30StdImageToVideo": {
+    "display_name": "RH 可灵图生视频3.0-std"
+  },
+  "RH_KlingV30ProTextToVideo": {
+    "display_name": "RH 可灵文生视频3.0-pro"
+  },
+  "RH_KlingV30ProImageToVideo": {
+    "display_name": "RH 可灵图生视频3.0-pro"
+  },
+  "RH_RhartVideoGImageToVideo": {
+    "display_name": "RH 全能视频G-图生视频"
+  },
+  "RH_RhartVideoGTextToVideo": {
+    "display_name": "RH 全能视频G-文生视频"
+  },
+  "RH_Hunyuan3dV31TextTo3d": {
+    "display_name": "RH 混元文生3D模型v3.1"
+  },
+  "RH_Hunyuan3dV31ImageTo3d": {
+    "display_name": "RH 混元图生3D模型v3.1"
+  },
+  "RH_KlingVideoO3StdTextToVideo": {
+    "display_name": "RH 可灵文生视频o3-std"
+  },
+  "RH_KlingVideoO3ProTextToVideo": {
+    "display_name": "RH 可灵文生视频o3-pro"
+  },
+  "RH_KlingVideoO3StdImageToVideo": {
+    "display_name": "RH 可灵图生视频o3-std"
+  },
+  "RH_KlingVideoO3ProImageToVideo": {
+    "display_name": "RH 可灵图生视频o3-pro"
+  },
+  "RH_ViduTextToVideoQ3Turbo": {
+    "display_name": "RH Vidu-文生视频-q3-turbo"
+  },
+  "RH_ViduImageToVideoQ3Turbo": {
+    "display_name": "RH Vidu-图生视频-q3-turbo"
+  },
+  "RH_ViduStartEndToVideoQ3Turbo": {
+    "display_name": "RH Vidu-首尾帧生视频-q3-turbo"
+  },
+  "RH_ViduStartEndToVideoQ3Pro": {
+    "display_name": "RH Vidu-首尾帧生视频-q3-pro"
+  },
+  "RH_RhartAudioTextToAudioMusic25": {
+    "display_name": "RH minimax/music-2.5"
+  },
+  "RH_KlingV26StdMotionControl": {
+    "display_name": "RH kling-v2.6-std-动作控制"
+  },
+  "RH_KlingV26ProMotionControl": {
+    "display_name": "RH kling-v2.6-pro-动作控制"
+  },
+  "RH_RhartAudioTextToAudioVoiceClone": {
+    "display_name": "RH minimax/voice-clone"
+  },
+  "RH_RhartVideoV31ProOfficialTextToVideo": {
+    "display_name": "RH 全能视频V3.1-pro-文生视频 - 官方"
+  },
+  "RH_RhartVideoV31ProOfficialImageToVideo": {
+    "display_name": "RH 全能视频V3.1-pro-图生视频 - 官方"
+  },
+  "RH_RhartVideoV31FastOfficialTextToVideo": {
+    "display_name": "RH 全能视频V3.1-fast-文生视频 - 官方"
+  },
+  "RH_RhartVideoV31ProOfficialReferenceToVideo": {
+    "display_name": "RH 全能视频V3.1-pro-参考生视频-官方"
+  },
+  "RH_RhartVideoV31FastOfficialVideoExtend": {
+    "display_name": "RH 全能视频V3.1-fast-视频扩展- 官方"
+  },
+  "RH_RhartVideoV31FastOfficialImageToVideo": {
+    "display_name": "RH 全能视频V3.1-fast-图生视频 - 官方"
+  },
+  "RH_RhartVideoV31ProOfficialVideoExtend": {
+    "display_name": "RH 全能视频V3.1-pro-视频扩展- 官方"
+  },
+  "RH_SeedreamV5LiteTextToImage": {
+    "display_name": "RH seedream-v5-lite-文生图"
+  },
+  "RH_SeedreamV5LiteImageToImage": {
+    "display_name": "RH seedream-v5-lite-图生图"
+  },
+  "RH_RhartImageNG31FlashTextToImage": {
+    "display_name": "RH 全能图片V2-文生图"
+  },
+  "RH_RhartImageNG31FlashImageToImage": {
+    "display_name": "RH 全能图片V2-图生图"
+  },
+  "RH_RhartImageNG31FlashOfficialTextToImage": {
+    "display_name": "RH 全能图片V2-官方-文生图"
+  },
+  "RH_RhartImageNG31FlashOfficialImageToImage": {
+    "display_name": "RH 全能图片V2-官方-图生图"
+  },
+  "RH_RhartVideoGOfficialImageToVideo": {
+    "display_name": "RH 全能视频G--官方-图生视频"
+  },
+  "RH_RhartVideoGOfficialTextToVideo": {
+    "display_name": "RH 全能视频G-官方-文生视频"
+  },
+  "RH_RhartVideoGOfficialEditVideo": {
+    "display_name": "RH 全能视频G--官方-编辑视频"
+  },
+  "RH_RhartImageG15OfficialTextToImage": {
+    "display_name": "RH 全能图片G-1.5-官方-文生图"
+  },
+  "RH_RhartImageG15OfficialImageToImage": {
+    "display_name": "RH 全能图片G-1.5-官方-图生图"
+  },
+  "RH_RhartVideoSImageToVideoAsyn": {
+    "display_name": "RH 全能视频S-图生视频（异步）"
+  },
+  "RH_RhartTextG3FlashPreviewImageToText": {
+    "display_name": "RH rhart-text-g-3-flash-preview/image-to-text"
+  },
+  "RH_RhartTextG3FlashPreviewTextToText": {
+    "display_name": "RH rhart-text-g-3-flash-preview/text-to-text"
+  },
+  "RH_RhartTextG3FlashPreviewVideoToText": {
+    "display_name": "RH rhart-text-g-3-flash-preview/video-to-text"
+  },
+  "RH_RhartTextG3ProPreviewImageToText": {
+    "display_name": "RH rhart-text-g-3-pro-preview/image-to-text"
+  },
+  "RH_RhartTextG3ProPreviewTextToText": {
+    "display_name": "RH rhart-text-g-3-pro-preview/text-to-text"
+  },
+  "RH_RhartTextG3ProPreviewVideoToText": {
+    "display_name": "RH rhart-text-g-3-pro-preview/video-to-text"
+  },
+  "RH_RhartTextG25FlashImageToText": {
+    "display_name": "RH rhart-text-g-25-flash/image-to-text"
+  },
+  "RH_RhartVideoV31ProImageToVideo": {
+    "display_name": "RH 全能视频V3.1-pro-图生视频"
+  },
+  "RH_RhartTextG25FlashTextToText": {
+    "display_name": "RH rhart-text-g-25-flash/text-to-text"
+  },
+  "RH_RhartTextG25FlashVideoToText": {
+    "display_name": "RH rhart-text-g-25-flash/video-to-text"
+  },
+  "RH_RhartTextG25ProImageToText": {
+    "display_name": "RH rhart-text-g-25-pro/image-to-text"
+  },
+  "RH_RhartTextG25ProTextToText": {
+    "display_name": "RH rhart-text-g-25-pro/text-to-text"
+  },
+  "RH_RhartTextG25ProVideoToText": {
+    "display_name": "RH rhart-text-g-25-pro/video-to-text"
+  },
+  "RH_TopazlabsImageUpscaleStandardV2": {
+    "display_name": "RH topazlabs图像放大StandardV2"
+  },
+  "RH_TopazlabsImageUpscaleLowResolutionV2": {
+    "display_name": "RH topazlabs图像放大Low Resolution V2"
+  },
+  "RH_TopazlabsImageUpscaleCgi": {
+    "display_name": "RH topazlabs图像放大CGI"
+  },
+  "RH_TopazlabsImageUpscaleHighFidelityV2": {
+    "display_name": "RH topazlabs图像放大High Fidelity V2"
+  },
+  "RH_TopazlabsImageUpscaleTextRefine": {
+    "display_name": "RH topazlabs图像放大Text Refine"
+  },
+  "RH_TopazlabsVideoUpscale": {
+    "display_name": "RH topazlabs视频放大"
+  },
+  "RH_KlingVideoO3StdVideoEdit": {
+    "display_name": "RH kling-video-o3-std-video-edit"
+  },
+  "RH_KlingVideoO3ProVideoEdit": {
+    "display_name": "RH kling-video-o3-pro-video-edit"
+  },
+  "RH_KlingVideoO3StdReferenceToVideo": {
+    "display_name": "RH kling-video-o3-std-reference-to-video"
+  },
+  "RH_KlingVideoO3ProReferenceToVideo": {
+    "display_name": "RH kling-video-o3-pro-reference-to-video"
+  },
+  "RH_RhartImageG3ImageToImage": {
+    "display_name": "RH 全能图片X-3-图生图"
+  },
+  "RH_RhartImageG4ImageToImage": {
+    "display_name": "RH 全能图片X-4-图生图"
+  },
+  "RH_RhartImageG3TextToImage": {
+    "display_name": "RH 全能图片X-3-文生图"
+  },
+  "RH_RhartImageG4TextToImage": {
+    "display_name": "RH 全能图片X-4-文生图"
+  },
+  "RH_Hitem3dV15ImageTo3d": {
+    "display_name": "RH HiTem3D V1.5 Image to 3D"
+  },
+  "RH_Hitem3dV2ImageTo3d": {
+    "display_name": "RH HiTem3D V2 Image to 3D"
+  },
+  "RH_Hitem3dV15MultiImageTo3d": {
+    "display_name": "RH HiTem3D V1.5 Multi-Image to 3D"
+  },
+  "RH_Hitem3dV2MultiImageTo3d": {
+    "display_name": "RH HiTem3D V2 Multi-Image to 3D"
+  },
+  "RH_Hitem3dPortraitV21ImageTo3d": {
+    "display_name": "RH HiTem3D Portrait V2.1 Image to 3D"
+  },
+  "RH_Hitem3dPortraitV21MultiImageTo3d": {
+    "display_name": "RH HiTem3D Portrait V2.1 Multi-Image to 3D"
+  },
+  "RH_Hitem3dPortraitV20ImageTo3d": {
+    "display_name": "RH HiTem3D Portrait V2.0 Image to 3D"
+  },
+  "RH_Hitem3dPortraitV20MultiImageTo3d": {
+    "display_name": "RH HiTem3D Portrait V2.0 Multi-Image to 3D"
+  },
+  "RH_Hitem3dPortraitV15ImageTo3d": {
+    "display_name": "RH HiTem3D Portrait V1.5 Image to 3D"
+  },
+  "RH_Hitem3dPortraitV15MultiImageTo3d": {
+    "display_name": "RH HiTem3D Portrait V1.5 Multi-Image to 3D"
+  },
+  "RH_AlibabaWan26ReferenceToVideoFlash": {
+    "display_name": "RH Wan 2.6 Reference to Video Flash"
+  },
+  "RH_AlibabaWan26ReferenceToVideo": {
+    "display_name": "RH Wan 2.6 Reference to Video"
+  },
+  "RHSettingsNode": {
+    "display_name": "RH OpenAPI 设置"
+  }
+}
