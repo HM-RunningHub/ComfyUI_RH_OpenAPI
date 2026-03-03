@@ -1,0 +1,21 @@
+{
+  "nodeCategories": {
+    "RunningHub": "RunningHub",
+    "Alibaba": "Alibaba Wan",
+    "Audio": "Audio",
+    "HiTem3D": "HiTem 3D",
+    "Hunyuan3D": "Hunyuan 3D",
+    "Kling": "Kling",
+    "MiniMax": "MiniMax",
+    "RHArt Image": "RHArt Image",
+    "RHArt Text": "RHArt Text",
+    "RHArt Video": "RHArt Video",
+    "RHArt Video G": "RHArt Video G",
+    "Seedance": "Seedance",
+    "Seedream": "Seedream",
+    "TopazLabs": "Topaz Labs",
+    "Vidu": "Vidu",
+    "Wan": "Wan",
+    "Youchuan": "Midjourney"
+  }
+}
