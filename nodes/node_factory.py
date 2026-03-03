@@ -283,9 +283,10 @@ def create_node_class(model_def: Dict) -> type:
     required_inputs.update(req_media)
     required_inputs.update(req_non_media)
 
-    # Optional order: media connectors -> widget params
+    # Optional order: media connectors -> widget params -> skip_error (always last)
     optional_inputs.update(opt_media)
     optional_inputs.update(opt_non_media)
+    optional_inputs["skip_error"] = ("BOOLEAN", {"default": False})
 
     ret_types, ret_names = _get_return_types(output_type)
 
