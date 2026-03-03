@@ -121,6 +121,8 @@ cp config/.env.example config/.env
 
 **配置优先级**：节点配置 > 环境变量 > `.env` 文件
 
+> **提示**：如果已通过环境变量或 `config/.env` 配置了 `RH_API_BASE_URL` 和 `RH_API_KEY`，则每个节点的 `api_config` 输入为可选项，无需连接 **RH OpenAPI Settings** 节点即可直接运行。
+
 ## 🚀 使用方法
 
 1. 配置好 API Key（参见上方配置说明）

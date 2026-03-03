@@ -216,9 +216,8 @@ def create_node_class(model_def: Dict) -> type:
     non_media_params = [p for p in model_params if p["type"] not in ("IMAGE", "VIDEO", "AUDIO")]
 
     # ---- Build INPUT_TYPES with controlled ordering ----
-    # api_config is always first required input so it shows at the top
-    required_inputs = {"api_config": ("RH_OPENAPI_CONFIG",)}
-    optional_inputs = {}
+    required_inputs = {}
+    optional_inputs = {"api_config": ("RH_OPENAPI_CONFIG",)}
 
     # Collect non-media params into required/optional buckets
     req_non_media = {}
