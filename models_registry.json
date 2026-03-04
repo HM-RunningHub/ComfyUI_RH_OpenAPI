@@ -14687,7 +14687,7 @@
     "display_name": "RH Wan 2.6 Reference to Video Flash",
     "endpoint": "alibaba/wan-2.6/reference-to-video-flash",
     "output_type": "video",
-    "category": "RunningHub/Alibaba",
+    "category": "RunningHub/Wan",
     "params": [
       {
         "fieldKey": "prompt",
@@ -14831,7 +14831,7 @@
     "display_name": "RH Wan 2.6 Reference to Video",
     "endpoint": "alibaba/wan-2.6/reference-to-video",
     "output_type": "video",
-    "category": "RunningHub/Alibaba",
+    "category": "RunningHub/Wan",
     "params": [
       {
         "fieldKey": "prompt",
