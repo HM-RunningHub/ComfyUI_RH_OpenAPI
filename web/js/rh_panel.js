@@ -127,7 +127,7 @@ app.registerExtension({
         "Seedream": "🌱 Seedream 图像", "Seedance": "💃 Seedance 视频",
         "Youchuan": "🚢 有船 Midjourney", "Audio": "🎵 音频生成",
         "Hunyuan3D": "🧊 混元 3D", "HiTem3D": "🔷 HiTem 3D",
-        "TopazLabs": "💎 Topaz Labs", "Alibaba": "☁️ 阿里 Wan 系列",
+        "TopazLabs": "💎 Topaz Labs",
       },
       en: {
         "RHArt Image": "🖼️ RHArt Image", "RHArt Video": "🎬 RHArt Video",
@@ -137,7 +137,7 @@ app.registerExtension({
         "Seedream": "🌱 Seedream", "Seedance": "💃 Seedance",
         "Youchuan": "🚢 Midjourney", "Audio": "🎵 Audio",
         "Hunyuan3D": "🧊 Hunyuan 3D", "HiTem3D": "🔷 HiTem 3D",
-        "TopazLabs": "💎 Topaz Labs", "Alibaba": "☁️ Alibaba Wan",
+        "TopazLabs": "💎 Topaz Labs",
       },
     };
 
@@ -151,7 +151,7 @@ app.registerExtension({
       "RHArt Image", "RHArt Video", "RHArt Video G", "RHArt Text",
       "Kling", "Vidu", "Wan", "MiniMax",
       "Seedream", "Seedance", "Youchuan", "Audio",
-      "Hunyuan3D", "HiTem3D", "TopazLabs", "Alibaba",
+      "Hunyuan3D", "HiTem3D", "TopazLabs",
     ];
 
     let allowedNodes = null;
