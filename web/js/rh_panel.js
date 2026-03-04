@@ -380,6 +380,7 @@ app.registerExtension({
                 if (node) {
                   node.pos = [app.canvas.graph_mouse[0], app.canvas.graph_mouse[1]];
                   app.graph.add(node);
+                  node.title = display;
                   app.canvas.selectNode(node);
                   app.graph.setDirtyCanvas(true, true);
                   btn.style.background = "rgba(128,128,128,0.2)";
