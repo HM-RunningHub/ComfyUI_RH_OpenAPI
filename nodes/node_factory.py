@@ -355,17 +355,31 @@ def create_node_class(model_def: Dict) -> type:
                     )
 
                 elif mt == "VIDEO":
-                    video_path = None
-                    if hasattr(value, "path"):
-                        video_path = value.path
-                    elif hasattr(value, "file_path"):
-                        video_path = value.file_path
-                    elif isinstance(value, str) and os.path.isfile(value):
-                        video_path = value
+                    vbytes = None
 
-                    if video_path:
-                        with open(video_path, "rb") as f:
+                    if hasattr(value, "get_stream_source"):
+                        source = value.get_stream_source()
+                        if isinstance(source, str):
+                            with open(source, "rb") as f:
+                                vbytes = f.read()
+                        elif hasattr(source, "read"):
+                            vbytes = source.read()
+                    elif hasattr(value, "path"):
+                        with open(value.path, "rb") as f:
                             vbytes = f.read()
+                    elif hasattr(value, "file_path"):
+                        with open(value.file_path, "rb") as f:
+                            vbytes = f.read()
+                    elif isinstance(value, dict):
+                        p = value.get("file_path") or value.get("path")
+                        if p and os.path.isfile(p):
+                            with open(p, "rb") as f:
+                                vbytes = f.read()
+                    elif isinstance(value, str) and os.path.isfile(value):
+                        with open(value, "rb") as f:
+                            vbytes = f.read()
+
+                    if vbytes:
                         fn = f"upload_{hash(vbytes) % 10**10}.mp4"
                         url = upload_file(
                             vbytes, fn, "video/mp4",
@@ -373,6 +387,8 @@ def create_node_class(model_def: Dict) -> type:
                             timeout=config.get("upload_timeout", 120),
                             logger_prefix=self._log_prefix,
                         )
+                    else:
+                        print(f"[{self._log_prefix}] WARNING: Could not extract video data from {type(value).__name__}")
 
                 elif mt == "AUDIO":
                     if isinstance(value, dict) and "waveform" in value:
