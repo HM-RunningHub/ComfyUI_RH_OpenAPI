@@ -482,6 +482,27 @@
   "RH_AlibabaWan26ReferenceToVideo": {
     "display_name": "RH Wan 2.6 Reference to Video"
   },
+  "RH_RhartMinimaxHailuo23TextToVideo": {
+    "display_name": "RH rhart-minimax-hailuo-2.3/text-to-video"
+  },
+  "RH_RhartMinimaxHailuo23ImageToVideo": {
+    "display_name": "RH rhart-minimax-hailuo-2.3/image-to-video"
+  },
+  "RH_RhartMinimaxHailuo23FastImageToVideo": {
+    "display_name": "RH rhart-minimax-hailuo-2.3-fast/image-to-video"
+  },
+  "RH_RhartMinimaxHailuo02ImageToVideo": {
+    "display_name": "RH rhart-minimax-hailuo-02/image-to-video"
+  },
+  "RH_RhartMinimaxHailuo02StartEndToVideo": {
+    "display_name": "RH rhart-minimax-hailuo-02/start-end-to-video"
+  },
+  "RH_RhartMinimaxHailuo02TextToVideo": {
+    "display_name": "RH rhart-minimax-hailuo-02/text-to-video"
+  },
+  "RH_KlingElements": {
+    "display_name": "RH kling-elements"
+  },
   "RHSettingsNode": {
     "display_name": "RH OpenAPI 设置"
   }
