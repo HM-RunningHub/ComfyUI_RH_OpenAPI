@@ -14960,5 +14960,456 @@
         ]
       }
     ]
+  },
+  {
+    "class_name": "RhartMinimaxHailuo23TextToVideo",
+    "internal_name": "RH_RhartMinimaxHailuo23TextToVideo",
+    "display_name": "RH rhart-minimax-hailuo-2.3/text-to-video",
+    "name_cn": "rhart-minimax-hailuo-2.3/text-to-video",
+    "name_en": "rhart-minimax-hailuo-2.3/text-to-video",
+    "endpoint": "rhart-minimax-hailuo-2.3/text-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频的文本描述，最大 2000 字符",
+        "defaultValue": "逆光，中景，日落，柔光，剪影，中心构图，环绕运镜，镜头跟随人物背面运镜至正面，展现一位粗犷的牛仔紧握枪套，目光警觉地在荒凉的西部鬼城中巡视。牛仔身穿磨损的棕色皮衣，腰间挂着子弹带，帽檐压得很低，轮廓被夕阳勾勒出柔和的剪影效果。身后是破败的木质建筑，窗户早已破碎，玻璃碎片散落在地，尘土随风卷起。镜头从他背后缓缓绕行至正面，光线由后方洒下，营造出强烈的戏剧对比，画面呈现暖色调，增强苍凉氛围。"
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒），默认值为 6。其可用值与模型和分辨率相关：768P：6 or 10；1080P：6",
+        "defaultValue": "6",
+        "options": [
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "视频分辨率。其可用值与模型和时长相关。6s：768P (default)、1080P；10s：768P",
+        "defaultValue": "768p",
+        "options": [
+          {
+            "value": "768p",
+            "description": "768p",
+            "descriptionEn": "768p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartMinimaxHailuo23ImageToVideo",
+    "internal_name": "RH_RhartMinimaxHailuo23ImageToVideo",
+    "display_name": "RH rhart-minimax-hailuo-2.3/image-to-video",
+    "name_cn": "rhart-minimax-hailuo-2.3/image-to-video",
+    "name_en": "rhart-minimax-hailuo-2.3/image-to-video",
+    "endpoint": "rhart-minimax-hailuo-2.3/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频的文本描述，最大 2000 字符",
+        "defaultValue": "视频展示了一位身穿黑色丝绸衬衫、长发披肩的女子在现代录音棚中。她戴着带有蓝色灯光的耳机，眼神专注地闭着眼睛，深情地对着一个专业电容麦克风演唱着中文歌曲。演唱结束后，她摘下耳机，脸上露出轻松愉悦的笑容。背景透过玻璃窗可见录音控制室。整个视频捕捉了她从专注的演唱状态到放松微笑的瞬间，充满艺术气息。"
+      },
+      {
+        "fieldKey": "firstImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstImageUrl",
+        "description": "指定图片作为视频的起始帧",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒），默认值为 6。其可用值与模型和分辨率相关：768P：6 or 10；1080P：6",
+        "defaultValue": "6",
+        "options": [
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "视频分辨率。其可用值与模型和时长相关。6s：768P (default)、1080P；10s：768P",
+        "defaultValue": "768p",
+        "options": [
+          {
+            "value": "768p",
+            "description": "768p",
+            "descriptionEn": "768p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartMinimaxHailuo23FastImageToVideo",
+    "internal_name": "RH_RhartMinimaxHailuo23FastImageToVideo",
+    "display_name": "RH rhart-minimax-hailuo-2.3-fast/image-to-video",
+    "name_cn": "rhart-minimax-hailuo-2.3-fast/image-to-video",
+    "name_en": "rhart-minimax-hailuo-2.3-fast/image-to-video",
+    "endpoint": "rhart-minimax-hailuo-2.3-fast/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频的文本描述，最大 2000 字符",
+        "defaultValue": "暖色调，极端全景，航拍，晴天光，硬光，白天，定场镜头。在一片荒芜的沙漠中，一辆黑色SUV正在高速公路上疾驰。俯拍镜头，车辆行驶在道路的左侧，车顶上装有行李架和一个红色尾灯。镜头缓缓前推，车辆前方是一片广阔的黄色沙丘，远处可以看到几座山峰。天空呈现出淡蓝色，阳光透过云层洒下，给这片荒凉之地带来了一丝温暖。道路两侧是干燥的草地，点缀着一些低矮的灌木丛。"
+      },
+      {
+        "fieldKey": "firstImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstImageUrl",
+        "description": "指定图片作为视频的起始帧",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒），默认值为 6。其可用值与模型和分辨率相关：768P：6 or 10；1080P：6",
+        "defaultValue": "6",
+        "options": [
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "视频分辨率。其可用值与模型和时长相关。6s：768P (default)、1080P；10s：768P",
+        "defaultValue": "768p",
+        "options": [
+          {
+            "value": "768p",
+            "description": "768p",
+            "descriptionEn": "768p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartMinimaxHailuo02ImageToVideo",
+    "internal_name": "RH_RhartMinimaxHailuo02ImageToVideo",
+    "display_name": "RH rhart-minimax-hailuo-02/image-to-video",
+    "name_cn": "rhart-minimax-hailuo-02/image-to-video",
+    "name_en": "rhart-minimax-hailuo-02/image-to-video",
+    "endpoint": "rhart-minimax-hailuo-02/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频的文本描述，最大 2000 字符",
+        "defaultValue": "日光，暖色调，侧光，特写镜头，居中构图。 一位拥有波浪形栗色长发的年轻女子，身穿浅蓝色吊带连衣裙，裙边饰有精致的蕾丝花边，亭亭玉立于阳光普照的花园中。她纤细的指尖轻轻捏住一片粉色玫瑰花瓣的边缘，以流畅而从容的动作，慢慢将其从花朵上摘下。摄像机紧密聚焦于她的手和花朵，捕捉到每一个细微的动作——指尖的轻微颤抖，花瓣从花茎上柔和地脱离。 她的脸部在柔和的虚焦中若隐若现，双眼低垂，神情宁静而专注，嘴唇微启。她身后，一片繁盛的盛开花田——牡丹、雏菊和薰衣草——模糊成绿意与柔和色彩交织的渐变。阳光在她皮肤和连衣裙的面料上投下柔和的高光，营造出自然的容光。没有对白或人声；环境音包括树叶轻柔的沙沙声、远处鸟儿的鸣叫，以及微风拂过花瓣的声音。"
+      },
+      {
+        "fieldKey": "firstImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstImageUrl",
+        "description": "指定图片作为视频的起始帧",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒），默认值为 6。其可用值与模型和分辨率相关：768P：6 or 10；1080P：6",
+        "defaultValue": "6",
+        "options": [
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "视频分辨率。其可用值与模型和时长相关。6s：768P (default)、1080P；10s：768P",
+        "defaultValue": "768p",
+        "options": [
+          {
+            "value": "768p",
+            "description": "768p",
+            "descriptionEn": "768p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartMinimaxHailuo02StartEndToVideo",
+    "internal_name": "RH_RhartMinimaxHailuo02StartEndToVideo",
+    "display_name": "RH rhart-minimax-hailuo-02/start-end-to-video",
+    "name_cn": "rhart-minimax-hailuo-02/start-end-to-video",
+    "name_en": "rhart-minimax-hailuo-02/start-end-to-video",
+    "endpoint": "rhart-minimax-hailuo-02/start-end-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频的文本描述，最大 2000 字符",
+        "defaultValue": "两只毛色不同的小猫在开阔的绿色草坪上相向奔跑，四爪腾空，尾巴高高翘起，从画面左右两侧快速接近；随后同时跃起，前爪伸展，身体在空中交错，最终扭打成一团，在草地上翻滚纠缠，毛发因剧烈动作而飞扬，全程动作流畅连贯，物理碰撞真实自然，阳光明媚的午后户外，固定机位拍摄"
+      },
+      {
+        "fieldKey": "firstImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstImageUrl",
+        "description": "指定图片作为视频的起始帧",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "lastImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "lastImageUrl",
+        "description": "指定图片作为视频的结束帧",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒），默认值为 6。其可用值与模型和分辨率相关：768P：6 or 10；1080P：6",
+        "defaultValue": "6",
+        "options": [
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "视频分辨率。其可用值与模型和时长相关。6s：768P (default)、1080P；10s：768P",
+        "defaultValue": "768p",
+        "options": [
+          {
+            "value": "768p",
+            "description": "768p",
+            "descriptionEn": "768p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartMinimaxHailuo02TextToVideo",
+    "internal_name": "RH_RhartMinimaxHailuo02TextToVideo",
+    "display_name": "RH rhart-minimax-hailuo-02/text-to-video",
+    "name_cn": "rhart-minimax-hailuo-02/text-to-video",
+    "name_en": "rhart-minimax-hailuo-02/text-to-video",
+    "endpoint": "rhart-minimax-hailuo-02/text-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频的文本描述，最大 2000 字符",
+        "defaultValue": "边缘光，低对比度，中近景，日光，左侧重构图，干净的单人镜头，暖色调，柔光，晴天光，侧光，白天，一个年轻的女孩坐在高草丛生的田野中，两条毛发蓬松的小毛驴站在她身后。女孩大约十一二岁，穿着简单的碎花裙子，头发扎成两条麻花辫，脸上带着纯真的笑容。她双腿交叉坐下，双手轻轻抚弄身旁的野花。小毛驴体型健壮，耳朵竖起，好奇地望着镜头方向。阳光洒在田野上，营造出温暖自然的画面感。"
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒），默认值为 6。其可用值与模型和分辨率相关：768P：6 or 10；1080P：6",
+        "defaultValue": "6",
+        "options": [
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "视频分辨率。其可用值与模型和时长相关。6s：768P (default)、1080P；10s：768P",
+        "defaultValue": "768p",
+        "options": [
+          {
+            "value": "768p",
+            "description": "768p",
+            "descriptionEn": "768p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "KlingElements",
+    "internal_name": "RH_KlingElements",
+    "display_name": "RH kling-elements",
+    "name_cn": "kling-elements",
+    "name_en": "kling-elements",
+    "endpoint": "kling-elements",
+    "output_type": "string",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "name",
+        "type": "STRING",
+        "required": true,
+        "label": "name",
+        "description": "Name for the element (e.g., \"Work Suit\", \"Main Character\")"
+      },
+      {
+        "fieldKey": "description",
+        "type": "STRING",
+        "required": true,
+        "label": "description",
+        "description": "Description of the element's visual characteristics"
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "Primary reference image",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "elementReferList",
+        "type": "IMAGE",
+        "required": true,
+        "label": "elementReferList",
+        "description": "Additional reference images",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
+      }
+    ]
   }
 ]

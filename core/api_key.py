@@ -12,7 +12,7 @@ from typing import Optional, Dict, Any
 # Default values when env/config do not set RH_API_* or RH_UPLOAD_*
 DEFAULT_TIMEOUT = 60
 DEFAULT_POLLING_INTERVAL = 5.0
-DEFAULT_MAX_POLLING_TIME = 600
+DEFAULT_MAX_POLLING_TIME = 1800
 DEFAULT_UPLOAD_TIMEOUT = 60
 DEFAULT_BASE_URL = "https://www.runninghub.cn/openapi/v2"
 

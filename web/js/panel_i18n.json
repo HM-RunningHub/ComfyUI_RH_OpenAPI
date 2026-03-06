@@ -200,6 +200,13 @@
       "RH_Hitem3dPortraitV15MultiImageTo3d": "RH HiTem3D Portrait V1.5 Multi-Image to 3D",
       "RH_AlibabaWan26ReferenceToVideoFlash": "RH Wan 2.6 Reference to Video Flash",
       "RH_AlibabaWan26ReferenceToVideo": "RH Wan 2.6 Reference to Video",
+      "RH_RhartMinimaxHailuo23TextToVideo": "RH rhart-minimax-hailuo-2.3/text-to-video",
+      "RH_RhartMinimaxHailuo23ImageToVideo": "RH rhart-minimax-hailuo-2.3/image-to-video",
+      "RH_RhartMinimaxHailuo23FastImageToVideo": "RH rhart-minimax-hailuo-2.3-fast/image-to-video",
+      "RH_RhartMinimaxHailuo02ImageToVideo": "RH rhart-minimax-hailuo-02/image-to-video",
+      "RH_RhartMinimaxHailuo02StartEndToVideo": "RH rhart-minimax-hailuo-02/start-end-to-video",
+      "RH_RhartMinimaxHailuo02TextToVideo": "RH rhart-minimax-hailuo-02/text-to-video",
+      "RH_KlingElements": "RH kling-elements",
       "RHSettingsNode": "RH OpenAPI 设置"
     },
     "en": {
@@ -364,6 +371,13 @@
       "RH_Hitem3dPortraitV15MultiImageTo3d": "RH Hitem3d Portrait V15 Multi Image to 3D",
       "RH_AlibabaWan26ReferenceToVideoFlash": "RH Alibaba Wan 2.6 Reference to Video Flash",
       "RH_AlibabaWan26ReferenceToVideo": "RH Alibaba Wan 2.6 Reference to Video",
+      "RH_RhartMinimaxHailuo23TextToVideo": "RH Rhart Minimax Hailuo 2.3 Text to Video",
+      "RH_RhartMinimaxHailuo23ImageToVideo": "RH Rhart Minimax Hailuo 2.3 Image to Video",
+      "RH_RhartMinimaxHailuo23FastImageToVideo": "RH Rhart Minimax Hailuo 2.3 Fast Image to Video",
+      "RH_RhartMinimaxHailuo02ImageToVideo": "RH Rhart Minimax Hailuo 02 Image to Video",
+      "RH_RhartMinimaxHailuo02StartEndToVideo": "RH Rhart Minimax Hailuo 02 Start End to Video",
+      "RH_RhartMinimaxHailuo02TextToVideo": "RH Rhart Minimax Hailuo 02 Text to Video",
+      "RH_KlingElements": "RH Kling Elements",
       "RHSettingsNode": "RH OpenAPI Settings"
     }
   },
