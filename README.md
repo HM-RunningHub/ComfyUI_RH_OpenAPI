@@ -28,9 +28,9 @@ RunningHub 平台提供了 168 个标准模型 API（涵盖主流最新所有的
 
 | 模型 | RH 平台名称 | 能力 | 节点数 |
 |------|-----------|------|--------|
-| RHArt Image V1 | 全能图片 V1 | 文生图、图生图 | 2 |
-| RHArt Image V2（Gemini 3.1 Flash） | 全能图片 V2 / V2 官方 | 文生图、图生图 | 4 |
-| RHArt Image PRO | 全能图片 PRO / PRO 官方 | 文生图、图生图、Ultra | 6 |
+| Nano Banana V1 | 全能图片 V1 | 文生图、图生图 | 2 |
+| Nano Banana V2（Gemini 3.1 Flash） | 全能图片 V2 / V2 官方 | 文生图、图生图 | 4 |
+| Nano Banana Pro | 全能图片 PRO / PRO 官方 | 文生图、图生图、Ultra | 6 |
 | GPT Image 1.5（OpenAI） | 全能图片 G-1.5 / G-1.5 官方 | 文生图、图生图 | 4 |
 | Grok 3 / Grok 4 Image（xAI） | 全能图片 X-3 / X-4 | 文生图、图生图 | 4 |
 | TopazLabs | — | 图像放大 Standard V2 / Low Res V2 / CGI / High Fidelity V2 / Text Refine | 5 |
