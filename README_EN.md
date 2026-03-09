@@ -26,39 +26,39 @@ RunningHub provides 168 standard model APIs covering image generation, video gen
 
 ### Image Generation (36 Nodes)
 
-| Model Series | Capabilities | Nodes |
-|-------------|-------------|-------|
-| RHArt Image V1 | Text-to-Image, Image-to-Image | 2 |
-| RHArt Image V2 (Gemini 3.1 Flash) | Text-to-Image, Image-to-Image | 4 |
-| RHArt Image PRO | Text-to-Image, Image-to-Image, Ultra | 6 |
-| GPT Image 1.5 (OpenAI) | Text-to-Image, Image-to-Image | 4 |
-| Grok 3 / Grok 4 Image (xAI) | Text-to-Image, Image-to-Image | 4 |
-| TopazLabs Image Upscale | Standard V2, Low Resolution V2, CGI, High Fidelity V2, Text Refine | 5 |
-| Seedream v4 / v4.5 / v5 Lite (ByteDance) | Text-to-Image, Image-to-Image | 6 |
-| Midjourney | Text-to-Image v6/v6.1/niji6/niji7/v7 | 5 |
+| Model | RH Platform Name | Capabilities | Nodes |
+|-------|-----------------|-------------|-------|
+| RHArt Image V1 | 全能图片 V1 | Text-to-Image, Image-to-Image | 2 |
+| RHArt Image V2 (Gemini 3.1 Flash) | 全能图片 V2 / V2 Official | Text-to-Image, Image-to-Image | 4 |
+| RHArt Image PRO | 全能图片 PRO / PRO Official | Text-to-Image, Image-to-Image, Ultra | 6 |
+| GPT Image 1.5 (OpenAI) | 全能图片 G-1.5 / G-1.5 Official | Text-to-Image, Image-to-Image | 4 |
+| Grok 3 / Grok 4 Image (xAI) | 全能图片 X-3 / X-4 | Text-to-Image, Image-to-Image | 4 |
+| TopazLabs | — | Image Upscale: Standard V2 / Low Res V2 / CGI / High Fidelity V2 / Text Refine | 5 |
+| Seedream v4 / v4.5 / v5 Lite (ByteDance) | — | Text-to-Image, Image-to-Image | 6 |
+| Midjourney | 悠船 | Text-to-Image v6/v6.1/niji6/niji7/v7 | 5 |
 
 ### Video Generation (100 Nodes)
 
-| Model Series | Capabilities | Nodes |
-|-------------|-------------|-------|
-| Sora 2 (OpenAI) | Text/Image-to-Video, Pro, Official, Character Upload, Async | 12 |
-| Google Veo 3.1 | Fast/Pro Text/Image/Start-End-to-Video, Reference, Video Extend | 13 |
-| Grok Imagine (xAI) | Text/Image-to-Video, Edit Video | 5 |
-| Kling (Kuaishou) | v2.5/v2.6/v3.0/o1/o3, Text/Image/Start-End/Reference/Motion Control/Edit/Elements | 25 |
-| Vidu (Shengshu) | q2/q3, Text/Image/Start-End/Reference-to-Video | 15 |
-| Wan 2.6 (Alibaba) | Text/Image/Reference-to-Video, Flash | 5 |
-| MiniMax Hailuo | 02/2.3/2.3-fast, Text/Image/Start-End-to-Video, Direct+RHArt | 19 |
-| Seedance v1.5 (ByteDance) | Text/Image-to-Video, Fast, Reference-to-Video | 5 |
-| TopazLabs Video Upscale | Video Enhancement & Upscaling | 1 |
+| Model | RH Platform Name | Capabilities | Nodes |
+|-------|-----------------|-------------|-------|
+| Sora 2 (OpenAI) | 全能视频 S / S Official | Text/Image-to-Video, Pro, Character Upload, Async | 12 |
+| Google Veo 3.1 | 全能视频 V3.1 | Fast/Pro Text/Image/Start-End-to-Video, Reference, Video Extend | 13 |
+| Grok Imagine (xAI) | 全能视频 G / G Official | Text/Image-to-Video, Edit Video | 5 |
+| Kling (Kuaishou) | — | v2.5/v2.6/v3.0/o1/o3, Text/Image/Start-End/Reference/Motion Control/Edit/Elements | 25 |
+| Vidu (Shengshu) | — | q2/q3, Text/Image/Start-End/Reference-to-Video | 15 |
+| Wan 2.6 (Alibaba) | — | Text/Image/Reference-to-Video, Flash | 5 |
+| MiniMax Hailuo | Hailuo 海螺 / RHArt Hailuo | 02/2.3/2.3-fast, Text/Image/Start-End-to-Video | 19 |
+| Seedance v1.5 (ByteDance) | — | Text/Image-to-Video, Fast, Reference-to-Video | 5 |
+| TopazLabs | — | Video Enhancement & Upscaling | 1 |
 
 ### Text Understanding (12 Nodes)
 
-| Model Series | Capabilities | Nodes |
-|-------------|-------------|-------|
-| Gemini 3 Flash Preview (Google) | Image-to-Text, Text-to-Text, Video Understanding | 3 |
-| Gemini 3 Pro Preview (Google) | Image-to-Text, Text-to-Text, Video Understanding | 3 |
-| Gemini 2.5 Flash (Google) | Image-to-Text, Text-to-Text, Video Understanding | 3 |
-| Gemini 2.5 Pro (Google) | Image-to-Text, Text-to-Text, Video Understanding | 3 |
+| Model | RH Platform Name | Capabilities | Nodes |
+|-------|-----------------|-------------|-------|
+| Gemini 3 Flash Preview (Google) | RHArt Text G-3 Flash Preview | Image-to-Text, Text-to-Text, Video Understanding | 3 |
+| Gemini 3 Pro Preview (Google) | RHArt Text G-3 Pro Preview | Image-to-Text, Text-to-Text, Video Understanding | 3 |
+| Gemini 2.5 Flash (Google) | RHArt Text G-2.5 Flash | Image-to-Text, Text-to-Text, Video Understanding | 3 |
+| Gemini 2.5 Pro (Google) | RHArt Text G-2.5 Pro | Image-to-Text, Text-to-Text, Video Understanding | 3 |
 
 ### Audio Synthesis (8 Nodes)
 
