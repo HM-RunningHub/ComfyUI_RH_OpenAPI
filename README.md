@@ -28,42 +28,37 @@ RunningHub 平台提供了 168 个标准模型 API（涵盖主流最新所有的
 
 | 模型系列 | 能力 | 节点数 |
 |---------|------|--------|
-| 全能图片 V1 | 文生图、图生图 | 2 |
-| 全能图片 V2 | 文生图、图生图 | 2 |
-| 全能图片 V2 官方 | 文生图、图生图 | 2 |
-| 全能图片 PRO | 文生图、图生图 | 2 |
-| 全能图片 PRO 官方 | 文生图、图生图、Ultra | 4 |
-| 全能图片 G-1.5 | 文生图、图生图 | 2 |
-| 全能图片 G-1.5 官方 | 文生图、图生图 | 2 |
-| 全能图片 X-3 / X-4 | 文生图、图生图 | 4 |
+| RHArt Image V1 | 文生图、图生图 | 2 |
+| RHArt Image V2 (Gemini 3.1 Flash) | 文生图、图生图 | 4 |
+| RHArt Image PRO | 文生图、图生图、Ultra | 6 |
+| GPT Image 1.5 (OpenAI) | 文生图、图生图 | 4 |
+| Grok 3 / Grok 4 Image (xAI) | 文生图、图生图 | 4 |
 | TopazLabs 图像放大 | Standard V2、Low Resolution V2、CGI、High Fidelity V2、Text Refine | 5 |
-| Seedream v4 / v4.5 / v5 Lite | 文生图、图生图 | 6 |
-| 悠船 | 文生图（v6/v61/niji6/niji7/v7）、图生视频 | 5 |
+| Seedream v4 / v4.5 / v5 Lite (字节跳动) | 文生图、图生图 | 6 |
+| Midjourney | 文生图 v6/v6.1/niji6/niji7/v7 | 5 |
 
-### 视频生成（98 个节点）
+### 视频生成（100 个节点）
 
 | 模型系列 | 能力 | 节点数 |
 |---------|------|--------|
-| 全能视频 S | 图生视频、文生视频、Pro、官方、角色上传、异步 | 12 |
-| 全能视频 V3.1 | Fast/Pro 文生视频、图生视频、首尾帧、参考生视频、视频扩展 | 13 |
-| 全能视频 G | 文生视频、图生视频 | 2 |
-| 全能视频 G 官方 | 文生视频、图生视频、编辑视频 | 3 |
-| 全能视频 RHArt MiniMax Hailuo | 2.3/2.3-fast/02，文/图/首尾帧生视频 | 6 |
-| 可灵 Kling | v2.5/v2.6/v3.0/o1/o3，文/图/首尾帧/参考/动作控制/编辑/元素创建 | 25 |
-| Vidu | q2/q3，文/图/首尾帧/参考生视频 | 15 |
-| 万相 2.6 | 文生视频、图生视频、参考生视频、Flash | 5 |
-| 海螺 Hailuo | 02/2.3/2.3-fast，文/图生视频 | 13 |
-| Seedance v1.5 | 文/图生视频、Fast、参考生视频 | 5 |
+| Sora 2 (OpenAI) | 文/图生视频、Pro、官方直调、角色上传、异步 | 12 |
+| Google Veo 3.1 | Fast/Pro 文/图/首尾帧生视频、参考生视频、视频扩展 | 13 |
+| Grok Imagine (xAI) | 文/图生视频、编辑视频 | 5 |
+| Kling 可灵 (快手) | v2.5/v2.6/v3.0/o1/o3，文/图/首尾帧/参考/动作控制/编辑/元素创建 | 25 |
+| Vidu (生数科技) | q2/q3，文/图/首尾帧/参考生视频 | 15 |
+| Wan 万相 2.6 (阿里巴巴) | 文/图/参考生视频、Flash | 5 |
+| MiniMax Hailuo 海螺 | 02/2.3/2.3-fast，文/图/首尾帧生视频，直调+RHArt | 19 |
+| Seedance v1.5 (字节跳动) | 文/图生视频、Fast、参考生视频 | 5 |
 | TopazLabs 视频放大 | 视频增强放大 | 1 |
 
 ### 文本理解（12 个节点）
 
 | 模型系列 | 能力 | 节点数 |
 |---------|------|--------|
-| RHArt Text G-3 Flash Preview | 图生文、文生文、视频理解 | 3 |
-| RHArt Text G-3 Pro Preview | 图生文、文生文、视频理解 | 3 |
-| RHArt Text G-2.5 Flash | 图生文、文生文、视频理解 | 3 |
-| RHArt Text G-2.5 Pro | 图生文、文生文、视频理解 | 3 |
+| Gemini 3 Flash Preview (Google) | 图生文、文生文、视频理解 | 3 |
+| Gemini 3 Pro Preview (Google) | 图生文、文生文、视频理解 | 3 |
+| Gemini 2.5 Flash (Google) | 图生文、文生文、视频理解 | 3 |
+| Gemini 2.5 Pro (Google) | 图生文、文生文、视频理解 | 3 |
 
 ### 音频合成（8 个节点）
 
