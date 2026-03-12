@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "type": "RH_RhartMinimaxHailuo02TextToVideo",
+      "type": "RH_AlibabaQwenImage20ImageEdit",
       "pos": [
         500,
         100
@@ -51,6 +51,21 @@
       "mode": 0,
       "inputs": [
         {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image3",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
           "name": "api_config",
           "type": "RH_OPENAPI_CONFIG",
           "link": 1
@@ -58,8 +73,8 @@
       ],
       "outputs": [
         {
-          "name": "video",
-          "type": "VIDEO",
+          "name": "image",
+          "type": "IMAGE",
           "links": [
             2
           ],
@@ -79,14 +94,10 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "RH_RhartMinimaxHailuo02TextToVideo"
+        "Node name for S&R": "RH_AlibabaQwenImage20ImageEdit"
       },
-      "widgets_values": [
-        "A cat walking in a garden, cinematic, high quality",
-        "6",
-        "768p"
-      ],
-      "title": "RH MiniMax Hailuo 02 Text to Video"
+      "widgets_values": [],
+      "title": "RH 千问2.0-图像编辑"
     },
     {
       "id": 3,
@@ -105,17 +116,17 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "Example: RH MiniMax Hailuo 02 Text to Video\nEndpoint: /rhart-minimax-hailuo-02/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
+        "text": "Example: RH 千问2.0-图像编辑\nEndpoint: /alibaba/qwen-image-2.0/image-edit\nOutput: image\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image1 (IMAGE)\n  - image2 (IMAGE)\n  - image3 (IMAGE)"
       },
       "widgets_values": [
-        "Example: RH MiniMax Hailuo 02 Text to Video\nEndpoint: /rhart-minimax-hailuo-02/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
+        "Example: RH 千问2.0-图像编辑\nEndpoint: /alibaba/qwen-image-2.0/image-edit\nOutput: image\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image1 (IMAGE)\n  - image2 (IMAGE)\n  - image3 (IMAGE)"
       ],
       "color": "#432",
       "bgcolor": "#653"
     },
     {
       "id": 4,
-      "type": "SaveVideo",
+      "type": "SaveImage",
       "pos": [
         900,
         100
@@ -129,14 +140,14 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "video",
-          "type": "VIDEO",
+          "name": "images",
+          "type": "IMAGE",
           "link": 2
         }
       ],
       "outputs": [],
       "properties": {
-        "Node name for S&R": "SaveVideo"
+        "Node name for S&R": "SaveImage"
       },
       "widgets_values": [
         "RH_"
@@ -149,7 +160,7 @@
       1,
       0,
       2,
-      0,
+      3,
       "RH_OPENAPI_CONFIG"
     ],
     [
@@ -158,7 +169,7 @@
       0,
       4,
       0,
-      "VIDEO"
+      "IMAGE"
     ]
   ],
   "groups": [],

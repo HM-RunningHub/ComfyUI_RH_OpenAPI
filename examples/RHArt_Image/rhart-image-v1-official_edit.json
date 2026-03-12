@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "type": "RH_RhartMinimaxHailuo23FastImageToVideo",
+      "type": "RH_RhartImageV1OfficialEdit",
       "pos": [
         500,
         100
@@ -51,7 +51,27 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "first_image",
+          "name": "image1",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image3",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image4",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image5",
           "type": "IMAGE",
           "link": null
         },
@@ -63,8 +83,8 @@
       ],
       "outputs": [
         {
-          "name": "video",
-          "type": "VIDEO",
+          "name": "image",
+          "type": "IMAGE",
           "links": [
             2
           ],
@@ -84,14 +104,10 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "RH_RhartMinimaxHailuo23FastImageToVideo"
+        "Node name for S&R": "RH_RhartImageV1OfficialEdit"
       },
-      "widgets_values": [
-        "A cat walking in a garden, cinematic, high quality",
-        "6",
-        "768p"
-      ],
-      "title": "RH MiniMax Hailuo 2.3 Fast Image to Video"
+      "widgets_values": [],
+      "title": "RH 全能图片V1-图生图-官方稳定版"
     },
     {
       "id": 3,
@@ -110,17 +126,17 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "Example: RH MiniMax Hailuo 2.3 Fast Image to Video\nEndpoint: /rhart-minimax-hailuo-2.3-fast/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - first_image (IMAGE)"
+        "text": "Example: RH 全能图片V1-图生图-官方稳定版\nEndpoint: /rhart-image-v1-official/edit\nOutput: image\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image1 (IMAGE)\n  - image2 (IMAGE)\n  - image3 (IMAGE)\n  - image4 (IMAGE)\n  - image5 (IMAGE)"
       },
       "widgets_values": [
-        "Example: RH MiniMax Hailuo 2.3 Fast Image to Video\nEndpoint: /rhart-minimax-hailuo-2.3-fast/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - first_image (IMAGE)"
+        "Example: RH 全能图片V1-图生图-官方稳定版\nEndpoint: /rhart-image-v1-official/edit\nOutput: image\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image1 (IMAGE)\n  - image2 (IMAGE)\n  - image3 (IMAGE)\n  - image4 (IMAGE)\n  - image5 (IMAGE)"
       ],
       "color": "#432",
       "bgcolor": "#653"
     },
     {
       "id": 4,
-      "type": "SaveVideo",
+      "type": "SaveImage",
       "pos": [
         900,
         100
@@ -134,14 +150,14 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "video",
-          "type": "VIDEO",
+          "name": "images",
+          "type": "IMAGE",
           "link": 2
         }
       ],
       "outputs": [],
       "properties": {
-        "Node name for S&R": "SaveVideo"
+        "Node name for S&R": "SaveImage"
       },
       "widgets_values": [
         "RH_"
@@ -154,7 +170,7 @@
       1,
       0,
       2,
-      1,
+      5,
       "RH_OPENAPI_CONFIG"
     ],
     [
@@ -163,7 +179,7 @@
       0,
       4,
       0,
-      "VIDEO"
+      "IMAGE"
     ]
   ],
   "groups": [],

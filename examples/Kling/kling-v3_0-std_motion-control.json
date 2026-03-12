@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "type": "RH_RhartMinimaxHailuo02StartEndToVideo",
+      "type": "RH_KlingV30StdMotionControl",
       "pos": [
         500,
         100
@@ -51,13 +51,13 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "first_image",
+          "name": "image",
           "type": "IMAGE",
           "link": null
         },
         {
-          "name": "last_image",
-          "type": "IMAGE",
+          "name": "video",
+          "type": "VIDEO",
           "link": null
         },
         {
@@ -89,14 +89,10 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "RH_RhartMinimaxHailuo02StartEndToVideo"
+        "Node name for S&R": "RH_KlingV30StdMotionControl"
       },
-      "widgets_values": [
-        "A cat walking in a garden, cinematic, high quality",
-        "6",
-        "768p"
-      ],
-      "title": "RH MiniMax Hailuo 02 Start End to Video"
+      "widgets_values": [],
+      "title": "RH 可灵动作控制V3.0-std"
     },
     {
       "id": 3,
@@ -115,10 +111,10 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "Example: RH MiniMax Hailuo 02 Start End to Video\nEndpoint: /rhart-minimax-hailuo-02/start-end-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - first_image (IMAGE)\n  - last_image (IMAGE)"
+        "text": "Example: RH 可灵动作控制V3.0-std\nEndpoint: /kling-v3.0-std/motion-control\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image (IMAGE)\n  - video (VIDEO)"
       },
       "widgets_values": [
-        "Example: RH MiniMax Hailuo 02 Start End to Video\nEndpoint: /rhart-minimax-hailuo-02/start-end-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - first_image (IMAGE)\n  - last_image (IMAGE)"
+        "Example: RH 可灵动作控制V3.0-std\nEndpoint: /kling-v3.0-std/motion-control\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image (IMAGE)\n  - video (VIDEO)"
       ],
       "color": "#432",
       "bgcolor": "#653"

@@ -16,7 +16,8 @@
       "Hunyuan3D": "🧊 混元 3D",
       "HiTem3D": "🔷 HiTem 3D",
       "TopazLabs": "💎 Topaz Labs",
-      "RHArt Image Qwen": "🤖 RHArt 图像 Qwen"
+      "RHArt Image Qwen": "🤖 RHArt 图像 Qwen",
+      "Alibaba": "🎨 阿里 通义万相 Qwen"
     },
     "en": {
       "RHArt Image": "🖼️ RHArt Image",
@@ -34,7 +35,8 @@
       "Hunyuan3D": "🧊 Hunyuan 3D",
       "HiTem3D": "🔷 HiTem 3D",
       "TopazLabs": "💎 Topaz Labs",
-      "RHArt Image Qwen": "🤖 RHArt Image Qwen"
+      "RHArt Image Qwen": "🤖 RHArt Image Qwen",
+      "Alibaba": "🎨 Alibaba Qwen"
     }
   },
   "nodes": {
@@ -200,13 +202,15 @@
       "RH_Hitem3dPortraitV15MultiImageTo3d": "RH HiTem3D Portrait V1.5 Multi-Image to 3D",
       "RH_AlibabaWan26ReferenceToVideoFlash": "RH Wan 2.6 Reference to Video Flash",
       "RH_AlibabaWan26ReferenceToVideo": "RH Wan 2.6 Reference to Video",
-      "RH_RhartMinimaxHailuo23TextToVideo": "RH rhart-minimax-hailuo-2.3/text-to-video",
-      "RH_RhartMinimaxHailuo23ImageToVideo": "RH rhart-minimax-hailuo-2.3/image-to-video",
-      "RH_RhartMinimaxHailuo23FastImageToVideo": "RH rhart-minimax-hailuo-2.3-fast/image-to-video",
-      "RH_RhartMinimaxHailuo02ImageToVideo": "RH rhart-minimax-hailuo-02/image-to-video",
-      "RH_RhartMinimaxHailuo02StartEndToVideo": "RH rhart-minimax-hailuo-02/start-end-to-video",
-      "RH_RhartMinimaxHailuo02TextToVideo": "RH rhart-minimax-hailuo-02/text-to-video",
       "RH_KlingElements": "RH kling-elements",
+      "RH_RhartImageV1OfficialTextToImage": "RH 全能图片V1-文生图-官方稳定版",
+      "RH_RhartImageV1OfficialEdit": "RH 全能图片V1-图生图-官方稳定版",
+      "RH_RhartImageGImageToImage": "RH 全能图片X-图生图-低价渠道版",
+      "RH_RhartImageGTextToImage": "RH 全能图片X-文生图-低价渠道版",
+      "RH_KlingV30StdMotionControl": "RH 可灵动作控制V3.0-std",
+      "RH_KlingV30ProMotionControl": "RH 可灵动作控制V3.0-pro",
+      "RH_AlibabaQwenImage20ProImageEdit": "RH 千问2.0Pro-图像编辑",
+      "RH_AlibabaQwenImage20ImageEdit": "RH 千问2.0-图像编辑",
       "RHSettingsNode": "RH OpenAPI 设置"
     },
     "en": {
@@ -371,13 +375,15 @@
       "RH_Hitem3dPortraitV15MultiImageTo3d": "RH Hitem3d Portrait V15 Multi Image to 3D",
       "RH_AlibabaWan26ReferenceToVideoFlash": "RH Alibaba Wan 2.6 Reference to Video Flash",
       "RH_AlibabaWan26ReferenceToVideo": "RH Alibaba Wan 2.6 Reference to Video",
-      "RH_RhartMinimaxHailuo23TextToVideo": "RH Rhart Minimax Hailuo 2.3 Text to Video",
-      "RH_RhartMinimaxHailuo23ImageToVideo": "RH Rhart Minimax Hailuo 2.3 Image to Video",
-      "RH_RhartMinimaxHailuo23FastImageToVideo": "RH Rhart Minimax Hailuo 2.3 Fast Image to Video",
-      "RH_RhartMinimaxHailuo02ImageToVideo": "RH Rhart Minimax Hailuo 02 Image to Video",
-      "RH_RhartMinimaxHailuo02StartEndToVideo": "RH Rhart Minimax Hailuo 02 Start End to Video",
-      "RH_RhartMinimaxHailuo02TextToVideo": "RH Rhart Minimax Hailuo 02 Text to Video",
       "RH_KlingElements": "RH Kling Elements",
+      "RH_RhartImageV1OfficialTextToImage": "RH Nano Banana Text to Image Official Stable",
+      "RH_RhartImageV1OfficialEdit": "RH Nano Banana Edit Official Stable",
+      "RH_RhartImageGImageToImage": "RH Grok Image Image to Image Channel Low Price",
+      "RH_RhartImageGTextToImage": "RH Grok Image Text to Image Channel Low Price",
+      "RH_KlingV30StdMotionControl": "RH Kling V3.0 STD Motion Control",
+      "RH_KlingV30ProMotionControl": "RH Kling V3.0 PRO Motion Control",
+      "RH_AlibabaQwenImage20ProImageEdit": "RH Qwen Image 2.0 PRO Image Edit",
+      "RH_AlibabaQwenImage20ImageEdit": "RH Qwen Image 2.0 Image Edit",
       "RHSettingsNode": "RH OpenAPI Settings"
     }
   },

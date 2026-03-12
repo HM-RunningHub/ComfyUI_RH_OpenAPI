@@ -54,6 +54,7 @@ _CATEGORY_NAME_EN = {
     "HiTem3D": "🔷 HiTem 3D",
     "TopazLabs": "💎 Topaz Labs",
     "RHArt Image Qwen": "🤖 RHArt Image Qwen",
+    "Alibaba": "🎨 Alibaba Qwen",
 }
 
 _CATEGORY_NAME_ZH = {
@@ -73,6 +74,7 @@ _CATEGORY_NAME_ZH = {
     "HiTem3D": "🔷 HiTem 3D",
     "TopazLabs": "💎 Topaz Labs",
     "RHArt Image Qwen": "🤖 RHArt 图像 Qwen",
+    "Alibaba": "🎨 阿里 通义万相 Qwen",
 }
 
 

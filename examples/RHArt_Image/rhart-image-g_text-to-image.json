@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "type": "RH_RhartMinimaxHailuo23TextToVideo",
+      "type": "RH_RhartImageGTextToImage",
       "pos": [
         500,
         100
@@ -58,8 +58,8 @@
       ],
       "outputs": [
         {
-          "name": "video",
-          "type": "VIDEO",
+          "name": "image",
+          "type": "IMAGE",
           "links": [
             2
           ],
@@ -79,14 +79,10 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "RH_RhartMinimaxHailuo23TextToVideo"
+        "Node name for S&R": "RH_RhartImageGTextToImage"
       },
-      "widgets_values": [
-        "A cat walking in a garden, cinematic, high quality",
-        "6",
-        "768p"
-      ],
-      "title": "RH MiniMax Hailuo 2.3 Text to Video"
+      "widgets_values": [],
+      "title": "RH 全能图片X-文生图-低价渠道版"
     },
     {
       "id": 3,
@@ -105,17 +101,17 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "Example: RH MiniMax Hailuo 2.3 Text to Video\nEndpoint: /rhart-minimax-hailuo-2.3/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
+        "text": "Example: RH 全能图片X-文生图-低价渠道版\nEndpoint: /rhart-image-g/text-to-image\nOutput: image\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
       },
       "widgets_values": [
-        "Example: RH MiniMax Hailuo 2.3 Text to Video\nEndpoint: /rhart-minimax-hailuo-2.3/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
+        "Example: RH 全能图片X-文生图-低价渠道版\nEndpoint: /rhart-image-g/text-to-image\nOutput: image\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
       ],
       "color": "#432",
       "bgcolor": "#653"
     },
     {
       "id": 4,
-      "type": "SaveVideo",
+      "type": "SaveImage",
       "pos": [
         900,
         100
@@ -129,14 +125,14 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "video",
-          "type": "VIDEO",
+          "name": "images",
+          "type": "IMAGE",
           "link": 2
         }
       ],
       "outputs": [],
       "properties": {
-        "Node name for S&R": "SaveVideo"
+        "Node name for S&R": "SaveImage"
       },
       "widgets_values": [
         "RH_"
@@ -158,7 +154,7 @@
       0,
       4,
       0,
-      "VIDEO"
+      "IMAGE"
     ]
   ],
   "groups": [],
