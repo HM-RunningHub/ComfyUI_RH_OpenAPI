@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "type": "RH_RhartMinimaxHailuo02ImageToVideo",
+      "type": "RH_KlingV30ProMotionControl",
       "pos": [
         500,
         100
@@ -51,8 +51,13 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "first_image",
+          "name": "image",
           "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "video",
+          "type": "VIDEO",
           "link": null
         },
         {
@@ -84,14 +89,10 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "RH_RhartMinimaxHailuo02ImageToVideo"
+        "Node name for S&R": "RH_KlingV30ProMotionControl"
       },
-      "widgets_values": [
-        "A cat walking in a garden, cinematic, high quality",
-        "6",
-        "768p"
-      ],
-      "title": "RH MiniMax Hailuo 02 Image to Video"
+      "widgets_values": [],
+      "title": "RH 可灵动作控制V3.0-pro"
     },
     {
       "id": 3,
@@ -110,10 +111,10 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "Example: RH MiniMax Hailuo 02 Image to Video\nEndpoint: /rhart-minimax-hailuo-02/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - first_image (IMAGE)"
+        "text": "Example: RH 可灵动作控制V3.0-pro\nEndpoint: /kling-v3.0-pro/motion-control\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image (IMAGE)\n  - video (VIDEO)"
       },
       "widgets_values": [
-        "Example: RH MiniMax Hailuo 02 Image to Video\nEndpoint: /rhart-minimax-hailuo-02/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - first_image (IMAGE)"
+        "Example: RH 可灵动作控制V3.0-pro\nEndpoint: /kling-v3.0-pro/motion-control\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image (IMAGE)\n  - video (VIDEO)"
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -154,7 +155,7 @@
       1,
       0,
       2,
-      1,
+      2,
       "RH_OPENAPI_CONFIG"
     ],
     [

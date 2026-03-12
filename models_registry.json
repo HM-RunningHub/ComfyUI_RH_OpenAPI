@@ -2226,24 +2226,24 @@
       {
         "fieldKey": "width",
         "type": "INT",
-        "required": true,
+        "required": false,
         "label": "width",
         "description": "width",
-        "min": 1024,
-        "max": 4096,
-        "step": 8,
-        "defaultValue": 2048
+        "defaultValue": 2048,
+        "min": 512,
+        "max": 8192,
+        "step": 8
       },
       {
         "fieldKey": "height",
         "type": "INT",
-        "required": true,
+        "required": false,
         "label": "height",
         "description": "height",
-        "min": 1024,
-        "max": 4096,
-        "step": 1,
-        "defaultValue": 2048
+        "defaultValue": 2048,
+        "min": 512,
+        "max": 8192,
+        "step": 8
       },
       {
         "fieldKey": "sequentialImageGeneration",
@@ -2251,17 +2251,19 @@
         "required": false,
         "label": "sequentialImageGeneration",
         "description": "sequentialImageGeneration",
+        "defaultValue": "disabled",
         "options": [
           {
             "value": "disabled",
-            "description": "disabled"
+            "description": "disabled",
+            "descriptionEn": "disabled"
           },
           {
             "value": "auto",
-            "description": "auto"
+            "description": "auto",
+            "descriptionEn": "auto"
           }
-        ],
-        "defaultValue": "disabled"
+        ]
       },
       {
         "fieldKey": "maxImages",
@@ -2269,10 +2271,29 @@
         "required": false,
         "label": "maxImages",
         "description": "maxImages",
+        "defaultValue": 1,
         "min": 1,
         "max": 15,
-        "step": 1,
-        "defaultValue": 1
+        "step": 1
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "优先级高于widthxheight，传递resolution则使用resolution，不再使用widthxheight",
+        "options": [
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
       }
     ]
   },
@@ -2631,24 +2652,24 @@
       {
         "fieldKey": "width",
         "type": "INT",
-        "required": true,
+        "required": false,
         "label": "width",
         "description": "width",
-        "min": 1024,
-        "max": 4096,
-        "step": 8,
-        "defaultValue": 2048
+        "defaultValue": 2048,
+        "min": 512,
+        "max": 8192,
+        "step": 8
       },
       {
         "fieldKey": "height",
         "type": "INT",
-        "required": true,
+        "required": false,
         "label": "height",
         "description": "height",
-        "min": 1024,
-        "max": 4096,
-        "step": 1,
-        "defaultValue": 2048
+        "defaultValue": 2048,
+        "min": 512,
+        "max": 8192,
+        "step": 1
       },
       {
         "fieldKey": "imageUrls",
@@ -2667,17 +2688,19 @@
         "required": false,
         "label": "sequentialImageGeneration",
         "description": "sequentialImageGeneration",
+        "defaultValue": "disabled",
         "options": [
           {
             "value": "disabled",
-            "description": "disabled"
+            "description": "disabled",
+            "descriptionEn": "disabled"
           },
           {
             "value": "auto",
-            "description": "auto"
+            "description": "auto",
+            "descriptionEn": "auto"
           }
-        ],
-        "defaultValue": "disabled"
+        ]
       },
       {
         "fieldKey": "maxImages",
@@ -2685,10 +2708,29 @@
         "required": false,
         "label": "maxImages",
         "description": "maxImages",
+        "defaultValue": 1,
         "min": 1,
         "max": 15,
-        "step": 1,
-        "defaultValue": 1
+        "step": 1
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "优先级高于widthxheight，传递resolution则使用resolution，不再使用widthxheight",
+        "options": [
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
       }
     ]
   },
@@ -3695,24 +3737,24 @@
       {
         "fieldKey": "width",
         "type": "INT",
-        "required": true,
+        "required": false,
         "label": "width",
         "description": "width",
-        "min": 1024,
-        "max": 4096,
-        "step": 8,
-        "defaultValue": 2048
+        "defaultValue": 2048,
+        "min": 512,
+        "max": 8192,
+        "step": 8
       },
       {
         "fieldKey": "height",
         "type": "INT",
-        "required": true,
+        "required": false,
         "label": "height",
         "description": "height",
-        "min": 1024,
-        "max": 4096,
-        "step": 1,
-        "defaultValue": 2048
+        "defaultValue": 2048,
+        "min": 512,
+        "max": 8192,
+        "step": 1
       },
       {
         "fieldKey": "sequentialImageGeneration",
@@ -3720,17 +3762,19 @@
         "required": false,
         "label": "sequentialImageGeneration",
         "description": "sequentialImageGeneration",
+        "defaultValue": "disabled",
         "options": [
           {
             "value": "disabled",
-            "description": "disabled"
+            "description": "disabled",
+            "descriptionEn": "disabled"
           },
           {
             "value": "auto",
-            "description": "auto"
+            "description": "auto",
+            "descriptionEn": "auto"
           }
-        ],
-        "defaultValue": "disabled"
+        ]
       },
       {
         "fieldKey": "maxImages",
@@ -3738,10 +3782,34 @@
         "required": false,
         "label": "maxImages",
         "description": "maxImages",
+        "defaultValue": 1,
         "min": 1,
         "max": 15,
-        "step": 1,
-        "defaultValue": 1
+        "step": 1
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "优先级高于widthxheight，传递resolution则使用resolution，不再使用widthxheight",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
       }
     ]
   },
@@ -3767,24 +3835,24 @@
       {
         "fieldKey": "width",
         "type": "INT",
-        "required": true,
+        "required": false,
         "label": "width",
         "description": "width",
-        "min": 1024,
-        "max": 4096,
-        "step": 8,
-        "defaultValue": 2048
+        "defaultValue": 2048,
+        "min": 512,
+        "max": 8192,
+        "step": 8
       },
       {
         "fieldKey": "height",
         "type": "INT",
-        "required": true,
+        "required": false,
         "label": "height",
         "description": "height",
-        "min": 1024,
-        "max": 4096,
-        "step": 1,
-        "defaultValue": 2048
+        "defaultValue": 2048,
+        "min": 512,
+        "max": 8192,
+        "step": 1
       },
       {
         "fieldKey": "imageUrls",
@@ -3803,17 +3871,19 @@
         "required": false,
         "label": "sequentialImageGeneration",
         "description": "sequentialImageGeneration",
+        "defaultValue": "disabled",
         "options": [
           {
             "value": "disabled",
-            "description": "disabled"
+            "description": "disabled",
+            "descriptionEn": "disabled"
           },
           {
             "value": "auto",
-            "description": "auto"
+            "description": "auto",
+            "descriptionEn": "auto"
           }
-        ],
-        "defaultValue": "disabled"
+        ]
       },
       {
         "fieldKey": "maxImages",
@@ -3821,10 +3891,34 @@
         "required": false,
         "label": "maxImages",
         "description": "maxImages",
+        "defaultValue": 1,
         "min": 1,
         "max": 15,
-        "step": 1,
-        "defaultValue": 1
+        "step": 1
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "优先级高于widthxheight，传递resolution则使用resolution，不再使用widthxheight",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
       }
     ]
   },
@@ -11471,13 +11565,13 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "",
+        "defaultValue": "制作一张上海未来5日的天气预报图，采用现代扁平化插画风格，清晰展示每日天气、温度和穿搭建议。 整体为横向排版，标题为“上海未来5日天气预报”，包含5个等宽的垂直卡片，从左到右依次排列。 整体风格为现代、干净、友好的扁平化矢量插画风格，线条清晰，色彩柔和。人物形象采用年轻男女的卡通插画，表情自然，姿态放松，服装细节清晰。",
         "maxLength": 2000
       },
       {
         "fieldKey": "width",
         "type": "INT",
-        "required": true,
+        "required": false,
         "label": "width",
         "description": "width",
         "defaultValue": 2048,
@@ -11488,7 +11582,7 @@
       {
         "fieldKey": "height",
         "type": "INT",
-        "required": true,
+        "required": false,
         "label": "height",
         "description": "height",
         "defaultValue": 2048,
@@ -11506,11 +11600,13 @@
         "options": [
           {
             "value": "disabled",
-            "description": "disabled"
+            "description": "disabled",
+            "descriptionEn": "disabled"
           },
           {
             "value": "auto",
-            "description": "auto"
+            "description": "auto",
+            "descriptionEn": "auto"
           }
         ]
       },
@@ -11535,7 +11631,27 @@
         "options": [
           {
             "value": "web_search",
-            "description": "web_search"
+            "description": "web_search",
+            "descriptionEn": "web_search"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "优先级高于widthxheight，传递resolution则使用resolution，不再使用widthxheight",
+        "options": [
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "3k",
+            "description": "3k",
+            "descriptionEn": "3k"
           }
         ]
       }
@@ -11557,13 +11673,13 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "",
+        "defaultValue": "请融合输入的图1与图2，生成一组共3张连贯的国漫风格（Guoman style）横版概念设计图。画面主体为青年方文与他的宠物黑羽乌鸦。第一张：方文穿着图1中锦衣卫风格的服饰，站在图2那座阴雨连绵的古寺大门前，乌鸦在雨中盘旋。第二张：视角拉近，方文推开古寺斑驳的木门，微弱的光影从门缝折射在他脸上。第三张：方文进入古寺内部，乌鸦停在破败的佛像上，周围弥漫着神秘的雾气。要求： 完美提取并融合图1的服装材质细节与图2的环境氛围，3张图需保持完美的主角特征与场景一致性。",
         "maxLength": 2000
       },
       {
         "fieldKey": "width",
         "type": "INT",
-        "required": true,
+        "required": false,
         "label": "width",
         "description": "width",
         "defaultValue": 2048,
@@ -11574,7 +11690,7 @@
       {
         "fieldKey": "height",
         "type": "INT",
-        "required": true,
+        "required": false,
         "label": "height",
         "description": "height",
         "defaultValue": 2048,
@@ -11603,11 +11719,13 @@
         "options": [
           {
             "value": "disabled",
-            "description": "disabled"
+            "description": "disabled",
+            "descriptionEn": "disabled"
           },
           {
             "value": "auto",
-            "description": "auto"
+            "description": "auto",
+            "descriptionEn": "auto"
           }
         ]
       },
@@ -11621,6 +11739,25 @@
         "min": 1,
         "max": 15,
         "step": 1
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "优先级高于widthxheight，传递resolution则使用resolution，不再使用widthxheight",
+        "options": [
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "3k",
+            "description": "3k",
+            "descriptionEn": "3k"
+          }
+        ]
       }
     ]
   },
@@ -14962,411 +15099,6 @@
     ]
   },
   {
-    "class_name": "RhartMinimaxHailuo23TextToVideo",
-    "internal_name": "RH_RhartMinimaxHailuo23TextToVideo",
-    "display_name": "RH rhart-minimax-hailuo-2.3/text-to-video",
-    "name_cn": "rhart-minimax-hailuo-2.3/text-to-video",
-    "name_en": "rhart-minimax-hailuo-2.3/text-to-video",
-    "endpoint": "rhart-minimax-hailuo-2.3/text-to-video",
-    "output_type": "video",
-    "category": "RunningHub/RHArt Video",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "视频的文本描述，最大 2000 字符",
-        "defaultValue": "逆光，中景，日落，柔光，剪影，中心构图，环绕运镜，镜头跟随人物背面运镜至正面，展现一位粗犷的牛仔紧握枪套，目光警觉地在荒凉的西部鬼城中巡视。牛仔身穿磨损的棕色皮衣，腰间挂着子弹带，帽檐压得很低，轮廓被夕阳勾勒出柔和的剪影效果。身后是破败的木质建筑，窗户早已破碎，玻璃碎片散落在地，尘土随风卷起。镜头从他背后缓缓绕行至正面，光线由后方洒下，营造出强烈的戏剧对比，画面呈现暖色调，增强苍凉氛围。"
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），默认值为 6。其可用值与模型和分辨率相关：768P：6 or 10；1080P：6",
-        "defaultValue": "6",
-        "options": [
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          }
-        ]
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "视频分辨率。其可用值与模型和时长相关。6s：768P (default)、1080P；10s：768P",
-        "defaultValue": "768p",
-        "options": [
-          {
-            "value": "768p",
-            "description": "768p",
-            "descriptionEn": "768p"
-          },
-          {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "class_name": "RhartMinimaxHailuo23ImageToVideo",
-    "internal_name": "RH_RhartMinimaxHailuo23ImageToVideo",
-    "display_name": "RH rhart-minimax-hailuo-2.3/image-to-video",
-    "name_cn": "rhart-minimax-hailuo-2.3/image-to-video",
-    "name_en": "rhart-minimax-hailuo-2.3/image-to-video",
-    "endpoint": "rhart-minimax-hailuo-2.3/image-to-video",
-    "output_type": "video",
-    "category": "RunningHub/RHArt Video",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "视频的文本描述，最大 2000 字符",
-        "defaultValue": "视频展示了一位身穿黑色丝绸衬衫、长发披肩的女子在现代录音棚中。她戴着带有蓝色灯光的耳机，眼神专注地闭着眼睛，深情地对着一个专业电容麦克风演唱着中文歌曲。演唱结束后，她摘下耳机，脸上露出轻松愉悦的笑容。背景透过玻璃窗可见录音控制室。整个视频捕捉了她从专注的演唱状态到放松微笑的瞬间，充满艺术气息。"
-      },
-      {
-        "fieldKey": "firstImageUrl",
-        "type": "IMAGE",
-        "required": true,
-        "label": "firstImageUrl",
-        "description": "指定图片作为视频的起始帧",
-        "accept": "[\"JPG\",\"PNG\"]",
-        "maxSize": 20
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），默认值为 6。其可用值与模型和分辨率相关：768P：6 or 10；1080P：6",
-        "defaultValue": "6",
-        "options": [
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          }
-        ]
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "视频分辨率。其可用值与模型和时长相关。6s：768P (default)、1080P；10s：768P",
-        "defaultValue": "768p",
-        "options": [
-          {
-            "value": "768p",
-            "description": "768p",
-            "descriptionEn": "768p"
-          },
-          {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "class_name": "RhartMinimaxHailuo23FastImageToVideo",
-    "internal_name": "RH_RhartMinimaxHailuo23FastImageToVideo",
-    "display_name": "RH rhart-minimax-hailuo-2.3-fast/image-to-video",
-    "name_cn": "rhart-minimax-hailuo-2.3-fast/image-to-video",
-    "name_en": "rhart-minimax-hailuo-2.3-fast/image-to-video",
-    "endpoint": "rhart-minimax-hailuo-2.3-fast/image-to-video",
-    "output_type": "video",
-    "category": "RunningHub/RHArt Video",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "视频的文本描述，最大 2000 字符",
-        "defaultValue": "暖色调，极端全景，航拍，晴天光，硬光，白天，定场镜头。在一片荒芜的沙漠中，一辆黑色SUV正在高速公路上疾驰。俯拍镜头，车辆行驶在道路的左侧，车顶上装有行李架和一个红色尾灯。镜头缓缓前推，车辆前方是一片广阔的黄色沙丘，远处可以看到几座山峰。天空呈现出淡蓝色，阳光透过云层洒下，给这片荒凉之地带来了一丝温暖。道路两侧是干燥的草地，点缀着一些低矮的灌木丛。"
-      },
-      {
-        "fieldKey": "firstImageUrl",
-        "type": "IMAGE",
-        "required": true,
-        "label": "firstImageUrl",
-        "description": "指定图片作为视频的起始帧",
-        "accept": "[\"JPG\",\"PNG\"]",
-        "maxSize": 20
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），默认值为 6。其可用值与模型和分辨率相关：768P：6 or 10；1080P：6",
-        "defaultValue": "6",
-        "options": [
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          }
-        ]
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "视频分辨率。其可用值与模型和时长相关。6s：768P (default)、1080P；10s：768P",
-        "defaultValue": "768p",
-        "options": [
-          {
-            "value": "768p",
-            "description": "768p",
-            "descriptionEn": "768p"
-          },
-          {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "class_name": "RhartMinimaxHailuo02ImageToVideo",
-    "internal_name": "RH_RhartMinimaxHailuo02ImageToVideo",
-    "display_name": "RH rhart-minimax-hailuo-02/image-to-video",
-    "name_cn": "rhart-minimax-hailuo-02/image-to-video",
-    "name_en": "rhart-minimax-hailuo-02/image-to-video",
-    "endpoint": "rhart-minimax-hailuo-02/image-to-video",
-    "output_type": "video",
-    "category": "RunningHub/RHArt Video",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "视频的文本描述，最大 2000 字符",
-        "defaultValue": "日光，暖色调，侧光，特写镜头，居中构图。 一位拥有波浪形栗色长发的年轻女子，身穿浅蓝色吊带连衣裙，裙边饰有精致的蕾丝花边，亭亭玉立于阳光普照的花园中。她纤细的指尖轻轻捏住一片粉色玫瑰花瓣的边缘，以流畅而从容的动作，慢慢将其从花朵上摘下。摄像机紧密聚焦于她的手和花朵，捕捉到每一个细微的动作——指尖的轻微颤抖，花瓣从花茎上柔和地脱离。 她的脸部在柔和的虚焦中若隐若现，双眼低垂，神情宁静而专注，嘴唇微启。她身后，一片繁盛的盛开花田——牡丹、雏菊和薰衣草——模糊成绿意与柔和色彩交织的渐变。阳光在她皮肤和连衣裙的面料上投下柔和的高光，营造出自然的容光。没有对白或人声；环境音包括树叶轻柔的沙沙声、远处鸟儿的鸣叫，以及微风拂过花瓣的声音。"
-      },
-      {
-        "fieldKey": "firstImageUrl",
-        "type": "IMAGE",
-        "required": true,
-        "label": "firstImageUrl",
-        "description": "指定图片作为视频的起始帧",
-        "accept": "[\"JPG\",\"PNG\"]",
-        "maxSize": 20
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），默认值为 6。其可用值与模型和分辨率相关：768P：6 or 10；1080P：6",
-        "defaultValue": "6",
-        "options": [
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          }
-        ]
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "视频分辨率。其可用值与模型和时长相关。6s：768P (default)、1080P；10s：768P",
-        "defaultValue": "768p",
-        "options": [
-          {
-            "value": "768p",
-            "description": "768p",
-            "descriptionEn": "768p"
-          },
-          {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "class_name": "RhartMinimaxHailuo02StartEndToVideo",
-    "internal_name": "RH_RhartMinimaxHailuo02StartEndToVideo",
-    "display_name": "RH rhart-minimax-hailuo-02/start-end-to-video",
-    "name_cn": "rhart-minimax-hailuo-02/start-end-to-video",
-    "name_en": "rhart-minimax-hailuo-02/start-end-to-video",
-    "endpoint": "rhart-minimax-hailuo-02/start-end-to-video",
-    "output_type": "video",
-    "category": "RunningHub/RHArt Video",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "视频的文本描述，最大 2000 字符",
-        "defaultValue": "两只毛色不同的小猫在开阔的绿色草坪上相向奔跑，四爪腾空，尾巴高高翘起，从画面左右两侧快速接近；随后同时跃起，前爪伸展，身体在空中交错，最终扭打成一团，在草地上翻滚纠缠，毛发因剧烈动作而飞扬，全程动作流畅连贯，物理碰撞真实自然，阳光明媚的午后户外，固定机位拍摄"
-      },
-      {
-        "fieldKey": "firstImageUrl",
-        "type": "IMAGE",
-        "required": true,
-        "label": "firstImageUrl",
-        "description": "指定图片作为视频的起始帧",
-        "accept": "[\"JPG\",\"PNG\"]",
-        "maxSize": 20
-      },
-      {
-        "fieldKey": "lastImageUrl",
-        "type": "IMAGE",
-        "required": false,
-        "label": "lastImageUrl",
-        "description": "指定图片作为视频的结束帧",
-        "accept": "[\"JPG\",\"PNG\"]",
-        "maxSize": 20
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），默认值为 6。其可用值与模型和分辨率相关：768P：6 or 10；1080P：6",
-        "defaultValue": "6",
-        "options": [
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          }
-        ]
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "视频分辨率。其可用值与模型和时长相关。6s：768P (default)、1080P；10s：768P",
-        "defaultValue": "768p",
-        "options": [
-          {
-            "value": "768p",
-            "description": "768p",
-            "descriptionEn": "768p"
-          },
-          {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "class_name": "RhartMinimaxHailuo02TextToVideo",
-    "internal_name": "RH_RhartMinimaxHailuo02TextToVideo",
-    "display_name": "RH rhart-minimax-hailuo-02/text-to-video",
-    "name_cn": "rhart-minimax-hailuo-02/text-to-video",
-    "name_en": "rhart-minimax-hailuo-02/text-to-video",
-    "endpoint": "rhart-minimax-hailuo-02/text-to-video",
-    "output_type": "video",
-    "category": "RunningHub/RHArt Video",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "视频的文本描述，最大 2000 字符",
-        "defaultValue": "边缘光，低对比度，中近景，日光，左侧重构图，干净的单人镜头，暖色调，柔光，晴天光，侧光，白天，一个年轻的女孩坐在高草丛生的田野中，两条毛发蓬松的小毛驴站在她身后。女孩大约十一二岁，穿着简单的碎花裙子，头发扎成两条麻花辫，脸上带着纯真的笑容。她双腿交叉坐下，双手轻轻抚弄身旁的野花。小毛驴体型健壮，耳朵竖起，好奇地望着镜头方向。阳光洒在田野上，营造出温暖自然的画面感。"
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），默认值为 6。其可用值与模型和分辨率相关：768P：6 or 10；1080P：6",
-        "defaultValue": "6",
-        "options": [
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          }
-        ]
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "视频分辨率。其可用值与模型和时长相关。6s：768P (default)、1080P；10s：768P",
-        "defaultValue": "768p",
-        "options": [
-          {
-            "value": "768p",
-            "description": "768p",
-            "descriptionEn": "768p"
-          },
-          {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "class_name": "KlingElements",
     "internal_name": "RH_KlingElements",
     "display_name": "RH kling-elements",
@@ -15409,6 +15141,814 @@
         "maxInputNum": 3,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 20
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageV1OfficialTextToImage",
+    "internal_name": "RH_RhartImageV1OfficialTextToImage",
+    "display_name": "RH 全能图片V1-文生图-官方稳定版",
+    "name_cn": "全能图片V1-文生图-官方稳定版",
+    "name_en": "nano-banana/text-to-image-official-stable",
+    "endpoint": "rhart-image-v1-official/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "写实风格照片，一位未来的手工艺人正在一间质朴、布满灰尘的赛博朋克工作室里，细致地制作一朵发光的霓虹玻璃玫瑰。温暖、自然的金色时刻阳光透过污浊的窗户射入，与玻璃发出的清冷柔和的蓝色环境光完美平衡。电影级的构图，聚焦于她的双手，画面高度清晰，富有表现力的氛围。"
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "3:4",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageV1OfficialEdit",
+    "internal_name": "RH_RhartImageV1OfficialEdit",
+    "display_name": "RH 全能图片V1-图生图-官方稳定版",
+    "name_cn": "全能图片V1-图生图-官方稳定版",
+    "name_en": "nano-banana/edit-official-stable",
+    "endpoint": "rhart-image-v1-official/edit",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "将人物手中的普通折扇替换为一把精致的白玉骨丝绸团扇，并在背景的木质回廊上悬挂两盏点亮的红灯笼。请保持原图明代官服的丝绸质感与阴影走势完全不变。"
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "multipleInputs": true,
+        "maxInputNum": 5,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageGImageToImage",
+    "internal_name": "RH_RhartImageGImageToImage",
+    "display_name": "RH 全能图片X-图生图-低价渠道版",
+    "name_cn": "全能图片X-图生图-低价渠道版",
+    "name_en": "grok-image/image-to-image/channel-low-price",
+    "endpoint": "rhart-image-g/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "model",
+        "type": "LIST",
+        "required": true,
+        "label": "model",
+        "description": "model",
+        "defaultValue": "g-4.2",
+        "options": [
+          {
+            "value": "g-3",
+            "description": "g-3",
+            "descriptionEn": "g-3"
+          },
+          {
+            "value": "g-4",
+            "description": "g-4",
+            "descriptionEn": "g-4"
+          },
+          {
+            "value": "g-4.1",
+            "description": "g-4.1",
+            "descriptionEn": "g-4.1"
+          },
+          {
+            "value": "g-4.2",
+            "description": "g-4.2",
+            "descriptionEn": "g-4.2"
+          }
+        ]
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "将这张手绘草图转换为高保真的现代 SaaS 开发者平台 UI 设计。采用深色模式（Dark Mode），主色调为赛博朋克风格的霓虹蓝和紫色。严格保留原有的导航栏和数据看板布局，使其看起来充满科技感和未来感，适合作为高阶 API 管理后台的视觉参考。"
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageGTextToImage",
+    "internal_name": "RH_RhartImageGTextToImage",
+    "display_name": "RH 全能图片X-文生图-低价渠道版",
+    "name_cn": "全能图片X-文生图-低价渠道版",
+    "name_en": "grok-image/text-to-image/channel-low-price",
+    "endpoint": "rhart-image-g/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "model",
+        "type": "LIST",
+        "required": true,
+        "label": "model",
+        "description": "model",
+        "defaultValue": "g-4.2",
+        "options": [
+          {
+            "value": "g-3",
+            "description": "g-3",
+            "descriptionEn": "g-3"
+          },
+          {
+            "value": "g-4",
+            "description": "g-4",
+            "descriptionEn": "g-4"
+          },
+          {
+            "value": "g-4.1",
+            "description": "g-4.1",
+            "descriptionEn": "g-4.1"
+          },
+          {
+            "value": "g-4.2",
+            "description": "g-4.2",
+            "descriptionEn": "g-4.2"
+          }
+        ]
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "画面中心是一位古代侠客，身穿飘逸的暗青色汉服，站在陡峭的悬崖边缘。他的身后，一只由赤色火焰和金色光芒交织而成的巨大凤凰正在展翅腾飞。电影级光影，史诗感，极高清晰度，背景是云雾缭绕的东方水墨群山，色彩对比强烈。"
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "options": [
+          {
+            "value": "960x960",
+            "description": "960x960",
+            "descriptionEn": "960x960"
+          },
+          {
+            "value": "720x1280",
+            "description": "720x1280",
+            "descriptionEn": "720x1280"
+          },
+          {
+            "value": "1280x720",
+            "description": "1280x720",
+            "descriptionEn": "1280x720"
+          },
+          {
+            "value": "1168x784",
+            "description": "1168x784",
+            "descriptionEn": "1168x784"
+          },
+          {
+            "value": "784x1168",
+            "description": "784x1168",
+            "descriptionEn": "784x1168"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "KlingV30StdMotionControl",
+    "internal_name": "RH_KlingV30StdMotionControl",
+    "display_name": "RH 可灵动作控制V3.0-std",
+    "name_cn": "可灵动作控制V3.0-std",
+    "name_en": "kling-v3.0-std-motion-control",
+    "endpoint": "kling-v3.0-std/motion-control",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "角色参考图片",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "动作参考视频，时长3-30秒",
+        "accept": "[\"MP4\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "characterOrientation",
+        "type": "LIST",
+        "required": true,
+        "label": "characterOrientation",
+        "description": "角色朝向模式：image=跟随图片朝向(视频最长10s)，video=跟随视频朝向(视频最长30s)",
+        "defaultValue": "video",
+        "options": [
+          {
+            "value": "image",
+            "description": "image",
+            "descriptionEn": "image"
+          },
+          {
+            "value": "video",
+            "description": "video",
+            "descriptionEn": "video"
+          }
+        ]
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "引导动作迁移的文本提示",
+        "maxLength": 2500
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "负向提示词",
+        "maxLength": 2500
+      },
+      {
+        "fieldKey": "keepOriginalSound",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "keepOriginalSound",
+        "description": "是否保留原始视频声音",
+        "defaultValue": true
+      }
+    ]
+  },
+  {
+    "class_name": "KlingV30ProMotionControl",
+    "internal_name": "RH_KlingV30ProMotionControl",
+    "display_name": "RH 可灵动作控制V3.0-pro",
+    "name_cn": "可灵动作控制V3.0-pro",
+    "name_en": "kling-v3.0-pro-motion-control",
+    "endpoint": "kling-v3.0-pro/motion-control",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "角色参考图片",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "动作参考视频，时长3-30秒",
+        "accept": "[\"MP4\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "characterOrientation",
+        "type": "LIST",
+        "required": true,
+        "label": "characterOrientation",
+        "description": "角色朝向模式：image=跟随图片朝向(视频最长10s)，video=跟随视频朝向(视频最长30s)",
+        "defaultValue": "video",
+        "options": [
+          {
+            "value": "image",
+            "description": "image",
+            "descriptionEn": "image"
+          },
+          {
+            "value": "video",
+            "description": "video",
+            "descriptionEn": "video"
+          }
+        ]
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "引导动作迁移的文本提示",
+        "maxLength": 2500
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "负向提示词",
+        "maxLength": 2500
+      },
+      {
+        "fieldKey": "keepOriginalSound",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "keepOriginalSound",
+        "description": "是否保留原始视频声音",
+        "defaultValue": true
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaQwenImage20ProImageEdit",
+    "internal_name": "RH_AlibabaQwenImage20ProImageEdit",
+    "display_name": "RH 千问2.0Pro-图像编辑",
+    "name_cn": "千问2.0Pro-图像编辑",
+    "name_en": "qwen-image-2.0-pro/image-edit",
+    "endpoint": "alibaba/qwen-image-2.0-pro/image-edit",
+    "output_type": "image",
+    "category": "RunningHub/Alibaba",
+    "params": [
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "输入图像（1-3张），支持单图编辑和多图融合。多图输入时按数组顺序定义图像编号，输出图像比例以最后一张为准。图像分辨率建议384~3072像素，大小不超过10MB。",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"BMP\",\"TIFF\",\"WEBP\",\"GIF\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "正向提示词，描述期望生成的图像内容、风格和构图。支持中英文，每个汉字、字母、数字或符号计为一个字符。仅支持传入一个text。",
+        "maxLength": 800
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "反向提示词，描述不希望在画面中出现的内容。支持中英文，每个汉字、字母、数字或符号计为一个字符。",
+        "maxLength": 500
+      },
+      {
+        "fieldKey": "size",
+        "type": "LIST",
+        "required": false,
+        "label": "size",
+        "description": "输出图像分辨率，格式为宽*高。图像总像素需在512*512至2048*2048之间。不设置则与输入图（多图输入时为最后一张）一致。",
+        "options": [
+          {
+            "value": "1024*1024",
+            "description": "1024*1024 (1:1)",
+            "descriptionEn": "1024*1024 (1:1)"
+          },
+          {
+            "value": "1536*1536",
+            "description": "1536*1536 (1:1 HD)",
+            "descriptionEn": "1536*1536 (1:1 HD)"
+          },
+          {
+            "value": "768*1152",
+            "description": "768*1152 (2:3)",
+            "descriptionEn": "768*1152 (2:3)"
+          },
+          {
+            "value": "1024*1536",
+            "description": "1024*1536 (2:3 HD)",
+            "descriptionEn": "1024*1536 (2:3 HD)"
+          },
+          {
+            "value": "1152*768",
+            "description": "1152*768 (3:2)",
+            "descriptionEn": "1152*768 (3:2)"
+          },
+          {
+            "value": "1536*1024",
+            "description": "1536*1024 (3:2 HD)",
+            "descriptionEn": "1536*1024 (3:2 HD)"
+          },
+          {
+            "value": "960*1280",
+            "description": "960*1280 (3:4)",
+            "descriptionEn": "960*1280 (3:4)"
+          },
+          {
+            "value": "1080*1440",
+            "description": "1080*1440 (3:4 HD)",
+            "descriptionEn": "1080*1440 (3:4 HD)"
+          },
+          {
+            "value": "1280*960",
+            "description": "1280*960 (4:3)",
+            "descriptionEn": "1280*960 (4:3)"
+          },
+          {
+            "value": "1440*1080",
+            "description": "1440*1080 (4:3 HD)",
+            "descriptionEn": "1440*1080 (4:3 HD)"
+          },
+          {
+            "value": "720*1280",
+            "description": "720*1280 (9:16)",
+            "descriptionEn": "720*1280 (9:16)"
+          },
+          {
+            "value": "1080*1920",
+            "description": "1080*1920 (9:16 HD)",
+            "descriptionEn": "1080*1920 (9:16 HD)"
+          },
+          {
+            "value": "1280*720",
+            "description": "1280*720 (16:9)",
+            "descriptionEn": "1280*720 (16:9)"
+          },
+          {
+            "value": "1920*1080",
+            "description": "1920*1080 (16:9 HD)",
+            "descriptionEn": "1920*1080 (16:9 HD)"
+          },
+          {
+            "value": "1344*576",
+            "description": "1344*576 (21:9)",
+            "descriptionEn": "1344*576 (21:9)"
+          },
+          {
+            "value": "2048*872",
+            "description": "2048*872 (21:9 HD)",
+            "descriptionEn": "2048*872 (21:9 HD)"
+          }
+        ]
+      },
+      {
+        "fieldKey": "imageNum",
+        "type": "LIST",
+        "required": false,
+        "label": "imageNum",
+        "description": "输出图片数量，默认1张，最多6张。",
+        "defaultValue": "1",
+        "options": [
+          {
+            "value": "1",
+            "description": "1",
+            "descriptionEn": "1"
+          },
+          {
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaQwenImage20ImageEdit",
+    "internal_name": "RH_AlibabaQwenImage20ImageEdit",
+    "display_name": "RH 千问2.0-图像编辑",
+    "name_cn": "千问2.0-图像编辑",
+    "name_en": "qwen-image-2.0/image-edit",
+    "endpoint": "alibaba/qwen-image-2.0/image-edit",
+    "output_type": "image",
+    "category": "RunningHub/Alibaba",
+    "params": [
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "输入图像（1-3张），支持单图编辑和多图融合。多图输入时按数组顺序定义图像编号，输出图像比例以最后一张为准。图像分辨率建议384~3072像素，大小不超过10MB。",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"BMP\",\"TIFF\",\"WEBP\",\"GIF\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "正向提示词，描述期望生成的图像内容、风格和构图。支持中英文，每个汉字、字母、数字或符号计为一个字符。仅支持传入一个text。",
+        "maxLength": 800
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "反向提示词，描述不希望在画面中出现的内容。支持中英文，每个汉字、字母、数字或符号计为一个字符。",
+        "maxLength": 500
+      },
+      {
+        "fieldKey": "size",
+        "type": "LIST",
+        "required": false,
+        "label": "size",
+        "description": "输出图像分辨率，格式为宽*高。图像总像素需在512*512至2048*2048之间。不设置则与输入图（多图输入时为最后一张）一致。",
+        "options": [
+          {
+            "value": "1024*1024",
+            "description": "1024*1024 (1:1)",
+            "descriptionEn": "1024*1024 (1:1)"
+          },
+          {
+            "value": "1536*1536",
+            "description": "1536*1536 (1:1 HD)",
+            "descriptionEn": "1536*1536 (1:1 HD)"
+          },
+          {
+            "value": "768*1152",
+            "description": "768*1152 (2:3)",
+            "descriptionEn": "768*1152 (2:3)"
+          },
+          {
+            "value": "1024*1536",
+            "description": "1024*1536 (2:3 HD)",
+            "descriptionEn": "1024*1536 (2:3 HD)"
+          },
+          {
+            "value": "1152*768",
+            "description": "1152*768 (3:2)",
+            "descriptionEn": "1152*768 (3:2)"
+          },
+          {
+            "value": "1536*1024",
+            "description": "1536*1024 (3:2 HD)",
+            "descriptionEn": "1536*1024 (3:2 HD)"
+          },
+          {
+            "value": "960*1280",
+            "description": "960*1280 (3:4)",
+            "descriptionEn": "960*1280 (3:4)"
+          },
+          {
+            "value": "1080*1440",
+            "description": "1080*1440 (3:4 HD)",
+            "descriptionEn": "1080*1440 (3:4 HD)"
+          },
+          {
+            "value": "1280*960",
+            "description": "1280*960 (4:3)",
+            "descriptionEn": "1280*960 (4:3)"
+          },
+          {
+            "value": "1440*1080",
+            "description": "1440*1080 (4:3 HD)",
+            "descriptionEn": "1440*1080 (4:3 HD)"
+          },
+          {
+            "value": "720*1280",
+            "description": "720*1280 (9:16)",
+            "descriptionEn": "720*1280 (9:16)"
+          },
+          {
+            "value": "1080*1920",
+            "description": "1080*1920 (9:16 HD)",
+            "descriptionEn": "1080*1920 (9:16 HD)"
+          },
+          {
+            "value": "1280*720",
+            "description": "1280*720 (16:9)",
+            "descriptionEn": "1280*720 (16:9)"
+          },
+          {
+            "value": "1920*1080",
+            "description": "1920*1080 (16:9 HD)",
+            "descriptionEn": "1920*1080 (16:9 HD)"
+          },
+          {
+            "value": "1344*576",
+            "description": "1344*576 (21:9)",
+            "descriptionEn": "1344*576 (21:9)"
+          },
+          {
+            "value": "2048*872",
+            "description": "2048*872 (21:9 HD)",
+            "descriptionEn": "2048*872 (21:9 HD)"
+          }
+        ]
+      },
+      {
+        "fieldKey": "imageNum",
+        "type": "LIST",
+        "required": false,
+        "label": "imageNum",
+        "description": "输出图片数量，默认1张，最多6张。",
+        "defaultValue": "1",
+        "options": [
+          {
+            "value": "1",
+            "description": "1",
+            "descriptionEn": "1"
+          },
+          {
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          }
+        ]
       }
     ]
   }

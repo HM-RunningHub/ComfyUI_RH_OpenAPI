@@ -482,26 +482,32 @@
   "RH_AlibabaWan26ReferenceToVideo": {
     "display_name": "RH Alibaba Wan 2.6 Reference to Video"
   },
-  "RH_RhartMinimaxHailuo23TextToVideo": {
-    "display_name": "RH Rhart Minimax Hailuo 2.3 Text to Video"
-  },
-  "RH_RhartMinimaxHailuo23ImageToVideo": {
-    "display_name": "RH Rhart Minimax Hailuo 2.3 Image to Video"
-  },
-  "RH_RhartMinimaxHailuo23FastImageToVideo": {
-    "display_name": "RH Rhart Minimax Hailuo 2.3 Fast Image to Video"
-  },
-  "RH_RhartMinimaxHailuo02ImageToVideo": {
-    "display_name": "RH Rhart Minimax Hailuo 02 Image to Video"
-  },
-  "RH_RhartMinimaxHailuo02StartEndToVideo": {
-    "display_name": "RH Rhart Minimax Hailuo 02 Start End to Video"
-  },
-  "RH_RhartMinimaxHailuo02TextToVideo": {
-    "display_name": "RH Rhart Minimax Hailuo 02 Text to Video"
-  },
   "RH_KlingElements": {
     "display_name": "RH Kling Elements"
+  },
+  "RH_RhartImageV1OfficialTextToImage": {
+    "display_name": "RH Nano Banana Text to Image Official Stable"
+  },
+  "RH_RhartImageV1OfficialEdit": {
+    "display_name": "RH Nano Banana Edit Official Stable"
+  },
+  "RH_RhartImageGImageToImage": {
+    "display_name": "RH Grok Image Image to Image Channel Low Price"
+  },
+  "RH_RhartImageGTextToImage": {
+    "display_name": "RH Grok Image Text to Image Channel Low Price"
+  },
+  "RH_KlingV30StdMotionControl": {
+    "display_name": "RH Kling V3.0 STD Motion Control"
+  },
+  "RH_KlingV30ProMotionControl": {
+    "display_name": "RH Kling V3.0 PRO Motion Control"
+  },
+  "RH_AlibabaQwenImage20ProImageEdit": {
+    "display_name": "RH Qwen Image 2.0 PRO Image Edit"
+  },
+  "RH_AlibabaQwenImage20ImageEdit": {
+    "display_name": "RH Qwen Image 2.0 Image Edit"
   },
   "RHSettingsNode": {
     "display_name": "RH OpenAPI Settings"

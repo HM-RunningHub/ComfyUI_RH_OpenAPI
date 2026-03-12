@@ -128,6 +128,7 @@ app.registerExtension({
         "Youchuan": "🚢 有船 Midjourney", "Audio": "🎵 音频生成",
         "Hunyuan3D": "🧊 混元 3D", "HiTem3D": "🔷 HiTem 3D",
         "TopazLabs": "💎 Topaz Labs",
+        "Alibaba": "🎨 阿里 通义万相 Qwen",
       },
       en: {
         "RHArt Image": "🖼️ RHArt Image", "RHArt Video": "🎬 RHArt Video",
@@ -138,6 +139,7 @@ app.registerExtension({
         "Youchuan": "🚢 Midjourney", "Audio": "🎵 Audio",
         "Hunyuan3D": "🧊 Hunyuan 3D", "HiTem3D": "🔷 HiTem 3D",
         "TopazLabs": "💎 Topaz Labs",
+        "Alibaba": "🎨 Alibaba Qwen",
       },
     };
 
@@ -151,7 +153,7 @@ app.registerExtension({
       "RHArt Image", "RHArt Video", "RHArt Video G", "RHArt Text",
       "Kling", "Vidu", "Wan", "MiniMax",
       "Seedream", "Seedance", "Youchuan", "Audio",
-      "Hunyuan3D", "HiTem3D", "TopazLabs",
+      "Hunyuan3D", "HiTem3D", "TopazLabs", "Alibaba",
     ];
 
     let allowedNodes = null;
