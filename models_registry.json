@@ -2,9 +2,9 @@
   {
     "class_name": "RhartVideoSOfficialImageToVideoRealistic",
     "internal_name": "RH_RhartVideoSOfficialImageToVideoRealistic",
-    "display_name": "RH 全能视频S-官方-图生视频-支持真人",
-    "name_cn": "全能视频S-官方-图生视频-支持真人",
-    "name_en": "sora-2-official/image-to-video-realistic",
+    "display_name": "RH 全能视频S-图生视频-支持真人-官方稳定版",
+    "name_cn": "全能视频S-图生视频-支持真人-官方稳定版",
+    "name_en": "sora-2/image-to-video-realistic-official-stable",
     "endpoint": "rhart-video-s-official/image-to-video-realistic",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -55,9 +55,9 @@
   {
     "class_name": "RhartVideoSImageToVideo",
     "internal_name": "RH_RhartVideoSImageToVideo",
-    "display_name": "RH 全能视频S-图生视频",
-    "name_cn": "全能视频S-图生视频",
-    "name_en": "sora-2/image-to-video",
+    "display_name": "RH 全能视频S-图生视频-低价渠道版",
+    "name_cn": "全能视频S-图生视频-低价渠道版",
+    "name_en": "sora-2/image-to-video-channel-low-price",
     "endpoint": "rhart-video-s/image-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -131,9 +131,9 @@
   {
     "class_name": "RhartVideoSTextToVideo",
     "internal_name": "RH_RhartVideoSTextToVideo",
-    "display_name": "RH 全能视频S-文生视频",
-    "name_cn": "全能视频S-文生视频",
-    "name_en": "sora-2/text-to-video",
+    "display_name": "RH 全能视频S-文生视频-低价渠道版",
+    "name_cn": "全能视频S-文生视频-低价渠道版",
+    "name_en": "sora-2/text-to-video-channel-low-price",
     "endpoint": "rhart-video-s/text-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -196,9 +196,9 @@
   {
     "class_name": "RhartImageV1Edit",
     "internal_name": "RH_RhartImageV1Edit",
-    "display_name": "RH 全能图片V1-图生图",
-    "name_cn": "全能图片V1-图生图",
-    "name_en": "nano-banana/edit",
+    "display_name": "RH 全能图片V1-图生图-低价渠道版",
+    "name_cn": "全能图片V1-图生图-低价渠道版",
+    "name_en": "nano-banana/edit-channel-low-price",
     "endpoint": "rhart-image-v1/edit",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -281,9 +281,9 @@
   {
     "class_name": "RhartImageV1TextToImage",
     "internal_name": "RH_RhartImageV1TextToImage",
-    "display_name": "RH 全能图片V1-文生图",
-    "name_cn": "全能图片V1-文生图",
-    "name_en": "nano-banana/text-to-image",
+    "display_name": "RH 全能图片V1-文生图-低价渠道版",
+    "name_cn": "全能图片V1-文生图-低价渠道版",
+    "name_en": "nano-banana/text-to-image-channel-low-price",
     "endpoint": "rhart-image-v1/text-to-image",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -355,9 +355,9 @@
   {
     "class_name": "RhartImageNProEdit",
     "internal_name": "RH_RhartImageNProEdit",
-    "display_name": "RH 全能图片PRO-图生图",
-    "name_cn": "全能图片PRO-图生图",
-    "name_en": "nano-banana-pro/edit",
+    "display_name": "RH 全能图片PRO-图生图-低价渠道版",
+    "name_cn": "全能图片PRO-图生图-低价渠道版",
+    "name_en": "nano-banana-pro/edit-channel-low-price",
     "endpoint": "rhart-image-n-pro/edit",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -470,9 +470,9 @@
   {
     "class_name": "RhartImageNProTextToImage",
     "internal_name": "RH_RhartImageNProTextToImage",
-    "display_name": "RH 全能图片PRO-文生图",
-    "name_cn": "全能图片PRO-文生图",
-    "name_en": "nano-banana-pro/text-to-image",
+    "display_name": "RH 全能图片PRO-文生图-低价渠道版",
+    "name_cn": "全能图片PRO-文生图-低价渠道版",
+    "name_en": "nano-banana-pro/text-to-image-channel-low-price",
     "endpoint": "rhart-image-n-pro/text-to-image",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -574,9 +574,9 @@
   {
     "class_name": "RhartImageNProOfficialEdit",
     "internal_name": "RH_RhartImageNProOfficialEdit",
-    "display_name": "RH 全能图片PRO-官方-图生图",
-    "name_cn": "全能图片PRO-官方-图生图",
-    "name_en": "nano-banana-pro-official/edit",
+    "display_name": "RH 全能图片PRO-图生图-官方稳定版",
+    "name_cn": "全能图片PRO-图生图-官方稳定版",
+    "name_en": "nano-banana-pro/edit-official-stable",
     "endpoint": "rhart-image-n-pro-official/edit",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -677,9 +677,9 @@
   {
     "class_name": "RhartImageNProOfficialTextToImage",
     "internal_name": "RH_RhartImageNProOfficialTextToImage",
-    "display_name": "RH 全能图片PRO-官方-文生图",
-    "name_cn": "全能图片PRO-官方-文生图",
-    "name_en": "nano-banana-pro-official/text-to-image",
+    "display_name": "RH 全能图片PRO-文生图-官方稳定版",
+    "name_cn": "全能图片PRO-文生图-官方稳定版",
+    "name_en": "nano-banana-pro/text-to-image-official-stable",
     "endpoint": "rhart-image-n-pro-official/text-to-image",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -770,9 +770,9 @@
   {
     "class_name": "RhartImageG15TextToImage",
     "internal_name": "RH_RhartImageG15TextToImage",
-    "display_name": "RH 全能图片G-1.5-文生图",
-    "name_cn": "全能图片G-1.5-文生图",
-    "name_en": "gpt-image-1.5/text-to-image",
+    "display_name": "RH 全能图片G-1.5-文生图-低价渠道版",
+    "name_cn": "全能图片G-1.5-文生图-低价渠道版",
+    "name_en": "gpt-image-1.5/text-to-image-channel-low-price",
     "endpoint": "rhart-image-g-1.5/text-to-image",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -817,9 +817,9 @@
   {
     "class_name": "RhartImageG15Edit",
     "internal_name": "RH_RhartImageG15Edit",
-    "display_name": "RH 全能图片G-1.5-图生图",
-    "name_cn": "全能图片G-1.5-图生图",
-    "name_en": "gpt-image-1.5/edit",
+    "display_name": "RH 全能图片G-1.5-图生图-低价渠道版",
+    "name_cn": "全能图片G-1.5-图生图-低价渠道版",
+    "name_en": "gpt-image-1.5/edit-channel-low-price",
     "endpoint": "rhart-image-g-1.5/edit",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -875,9 +875,9 @@
   {
     "class_name": "RhartVideoV31FastTextToVideo",
     "internal_name": "RH_RhartVideoV31FastTextToVideo",
-    "display_name": "RH 全能视频V3.1-fast-文生视频",
-    "name_cn": "全能视频V3.1-fast-文生视频",
-    "name_en": "google/veo3.1-fast/text-to-video",
+    "display_name": "RH 全能视频V3.1-fast-文生视频-低价渠道版",
+    "name_cn": "全能视频V3.1-fast-文生视频-低价渠道版",
+    "name_en": "google/veo3.1-fast/text-to-video-channel-low-price",
     "endpoint": "rhart-video-v3.1-fast/text-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -950,9 +950,9 @@
   {
     "class_name": "RhartVideoV31ProTextToVideo",
     "internal_name": "RH_RhartVideoV31ProTextToVideo",
-    "display_name": "RH 全能视频V3.1-pro-文生视频",
-    "name_cn": "全能视频V3.1-pro-文生视频",
-    "name_en": "google/veo3.1-pro/text-to-video",
+    "display_name": "RH 全能视频V3.1-pro-文生视频-低价渠道版",
+    "name_cn": "全能视频V3.1-pro-文生视频-低价渠道版",
+    "name_en": "google/veo3.1-pro/text-to-video-channel-low-price",
     "endpoint": "rhart-video-v3.1-pro/text-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -1025,9 +1025,9 @@
   {
     "class_name": "RhartVideoV31FastImageToVideo",
     "internal_name": "RH_RhartVideoV31FastImageToVideo",
-    "display_name": "RH 全能视频V3.1-fast-图生视频",
-    "name_cn": "全能视频V3.1-fast-图生视频",
-    "name_en": "google/veo3.1-fast/image-to-video",
+    "display_name": "RH 全能视频V3.1-fast-图生视频-低价渠道版",
+    "name_cn": "全能视频V3.1-fast-图生视频-低价渠道版",
+    "name_en": "google/veo3.1-fast/image-to-video-channel-low-price",
     "endpoint": "rhart-video-v3.1-fast/image-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -1111,9 +1111,9 @@
   {
     "class_name": "RhartVideoSImageToVideoPro",
     "internal_name": "RH_RhartVideoSImageToVideoPro",
-    "display_name": "RH 全能视频S-图生视频-pro",
-    "name_cn": "全能视频S-图生视频-pro",
-    "name_en": "sora-2/image-to-video-pro",
+    "display_name": "RH 全能视频S-图生视频-pro-低价渠道版",
+    "name_cn": "全能视频S-图生视频-pro-低价渠道版",
+    "name_en": "sora-2/image-to-video-pro-channel-low-price",
     "endpoint": "rhart-video-s/image-to-video-pro",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -1187,9 +1187,9 @@
   {
     "class_name": "RhartVideoSTextToVideoPro",
     "internal_name": "RH_RhartVideoSTextToVideoPro",
-    "display_name": "RH 全能视频S-文生视频-pro",
-    "name_cn": "全能视频S-文生视频-pro",
-    "name_en": "sora-2/text-to-video-pro",
+    "display_name": "RH 全能视频S-文生视频-pro-低价渠道版",
+    "name_cn": "全能视频S-文生视频-pro-低价渠道版",
+    "name_en": "sora-2/text-to-video-pro-channel-low-price",
     "endpoint": "rhart-video-s/text-to-video-pro",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -1256,9 +1256,9 @@
   {
     "class_name": "RhartVideoSSoraUploadCharacter",
     "internal_name": "RH_RhartVideoSSoraUploadCharacter",
-    "display_name": "RH 全能视频S-角色上传",
-    "name_cn": "全能视频S-角色上传",
-    "name_en": "sora-upload-character",
+    "display_name": "RH 全能视频S-角色上传-低价渠道版",
+    "name_cn": "全能视频S-角色上传-低价渠道版",
+    "name_en": "sora-upload-character-channel-low-price",
     "endpoint": "rhart-video-s/sora-upload-character",
     "output_type": "string",
     "category": "RunningHub/RHArt Video",
@@ -2147,9 +2147,9 @@
   {
     "class_name": "RhartVideoSOfficialTextToVideo",
     "internal_name": "RH_RhartVideoSOfficialTextToVideo",
-    "display_name": "RH 全能视频S-官方-文生视频",
-    "name_cn": "全能视频S-官方-文生视频",
-    "name_en": "sora-2-official/text-to-video",
+    "display_name": "RH 全能视频S-文生视频-官方稳定版",
+    "name_cn": "全能视频S-文生视频-官方稳定版",
+    "name_en": "sora-2/text-to-video-official-stable",
     "endpoint": "rhart-video-s-official/text-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -3348,9 +3348,9 @@
   {
     "class_name": "RhartVideoSOfficialImageToVideo",
     "internal_name": "RH_RhartVideoSOfficialImageToVideo",
-    "display_name": "RH 全能视频S-官方-图生视频",
-    "name_cn": "全能视频S-官方-图生视频",
-    "name_en": "sora-2-official/image-to-video",
+    "display_name": "RH 全能视频S-图生视频-官方稳定版",
+    "name_cn": "全能视频S-图生视频-官方稳定版",
+    "name_en": "sora-2/image-to-video-official-stable",
     "endpoint": "rhart-video-s-official/image-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -3401,9 +3401,9 @@
   {
     "class_name": "RhartVideoSOfficialTextToVideoPro",
     "internal_name": "RH_RhartVideoSOfficialTextToVideoPro",
-    "display_name": "RH 全能视频S-官方-文生视频-pro",
-    "name_cn": "全能视频S-官方-文生视频-pro",
-    "name_en": "sora-2-official/text-to-video-pro",
+    "display_name": "RH 全能视频S-文生视频-pro-官方稳定版",
+    "name_cn": "全能视频S-文生视频-pro-官方稳定版",
+    "name_en": "sora-2/text-to-video-pro-official-stable",
     "endpoint": "rhart-video-s-official/text-to-video-pro",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -3469,9 +3469,9 @@
   {
     "class_name": "RhartVideoSOfficialImageToVideoPro",
     "internal_name": "RH_RhartVideoSOfficialImageToVideoPro",
-    "display_name": "RH 全能视频S-官方-图生视频-pro",
-    "name_cn": "全能视频S-官方-图生视频-pro",
-    "name_en": "sora-2-official/image-to-video-pro",
+    "display_name": "RH 全能视频S-图生视频-pro-官方稳定版",
+    "name_cn": "全能视频S-图生视频-pro-官方稳定版",
+    "name_en": "sora-2/image-to-video-pro-official-stable",
     "endpoint": "rhart-video-s-official/image-to-video-pro",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -5527,9 +5527,9 @@
   {
     "class_name": "RhartImageNProOfficialTextToImageUltra",
     "internal_name": "RH_RhartImageNProOfficialTextToImageUltra",
-    "display_name": "RH 全能图片PRO-官方-文生图Ultra",
-    "name_cn": "全能图片PRO-官方-文生图Ultra",
-    "name_en": "nano-banana-pro-official/text-to-image-ultra",
+    "display_name": "RH 全能图片PRO-文生图Ultra-官方稳定版",
+    "name_cn": "全能图片PRO-文生图Ultra-官方稳定版",
+    "name_en": "nano-banana-pro/text-to-image-ultra-official-stable",
     "endpoint": "rhart-image-n-pro-official/text-to-image-ultra",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -5616,9 +5616,9 @@
   {
     "class_name": "RhartImageNProOfficialEditUltra",
     "internal_name": "RH_RhartImageNProOfficialEditUltra",
-    "display_name": "RH 全能图片PRO-官方-图生图Ultra",
-    "name_cn": "全能图片PRO-官方-图生图Ultra",
-    "name_en": "nano-banana-pro-official/edit-ultra",
+    "display_name": "RH 全能图片PRO-图生图Ultra-官方稳定版",
+    "name_cn": "全能图片PRO-图生图Ultra-官方稳定版",
+    "name_en": "nano-banana-pro/edit-ultra-official-stable",
     "endpoint": "rhart-image-n-pro-official/edit-ultra",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -5716,9 +5716,9 @@
   {
     "class_name": "RhartVideoV31FastStartEndToVideo",
     "internal_name": "RH_RhartVideoV31FastStartEndToVideo",
-    "display_name": "RH 全能视频V3.1-fast-首尾帧生视频",
-    "name_cn": "全能视频V3.1-fast-首尾帧生视频",
-    "name_en": "google/veo3.1-fast/start-end-to-video",
+    "display_name": "RH 全能视频V3.1-fast-首尾帧生视频-低价渠道版",
+    "name_cn": "全能视频V3.1-fast-首尾帧生视频-低价渠道版",
+    "name_en": "google/veo3.1-fast/start-end-to-video-channel-low-price",
     "endpoint": "rhart-video-v3.1-fast/start-end-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -7435,9 +7435,9 @@
   {
     "class_name": "RhartVideoV31ProStartEndToVideo",
     "internal_name": "RH_RhartVideoV31ProStartEndToVideo",
-    "display_name": "RH 全能视频V3.1-pro-首尾帧生视频",
-    "name_cn": "全能视频V3.1-pro-首尾帧生视频",
-    "name_en": "google/veo3.1-pro/start-end-to-video",
+    "display_name": "RH 全能视频V3.1-pro-首尾帧生视频-低价渠道版",
+    "name_cn": "全能视频V3.1-pro-首尾帧生视频-低价渠道版",
+    "name_en": "google/veo3.1-pro/start-end-to-video-channel-low-price",
     "endpoint": "rhart-video-v3.1-pro/start-end-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -9131,9 +9131,9 @@
   {
     "class_name": "RhartVideoGImageToVideo",
     "internal_name": "RH_RhartVideoGImageToVideo",
-    "display_name": "RH 全能视频G-图生视频",
-    "name_cn": "全能视频G-图生视频",
-    "name_en": "xai/grok-imagine/image-to-video",
+    "display_name": "RH 全能视频X-图生视频-低价渠道版",
+    "name_cn": "全能视频X-图生视频-低价渠道版",
+    "name_en": "xai/grok-imagine/image-to-video-channel-low-price",
     "endpoint": "rhart-video-g/image-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -9234,9 +9234,9 @@
   {
     "class_name": "RhartVideoGTextToVideo",
     "internal_name": "RH_RhartVideoGTextToVideo",
-    "display_name": "RH 全能视频G-文生视频",
-    "name_cn": "全能视频G-文生视频",
-    "name_en": "xai/grok-imagine/text-to-video",
+    "display_name": "RH 全能视频X-文生视频-低价渠道版",
+    "name_cn": "全能视频X-文生视频-低价渠道版",
+    "name_en": "xai/grok-imagine/text-to-video-channel-low-price",
     "endpoint": "rhart-video-g/text-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -10879,9 +10879,9 @@
   {
     "class_name": "RhartVideoV31ProOfficialTextToVideo",
     "internal_name": "RH_RhartVideoV31ProOfficialTextToVideo",
-    "display_name": "RH 全能视频V3.1-pro-文生视频 - 官方",
-    "name_cn": "全能视频V3.1-pro-文生视频 - 官方",
-    "name_en": "google/veo3.1-pro-official/text-to-video",
+    "display_name": "RH 全能视频V3.1-pro-文生视频-官方稳定版",
+    "name_cn": "全能视频V3.1-pro-文生视频-官方稳定版",
+    "name_en": "google/veo3.1-pro/text-to-video-official-stable",
     "endpoint": "rhart-video-v3.1-pro-official/text-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -10985,9 +10985,9 @@
   {
     "class_name": "RhartVideoV31ProOfficialImageToVideo",
     "internal_name": "RH_RhartVideoV31ProOfficialImageToVideo",
-    "display_name": "RH 全能视频V3.1-pro-图生视频 - 官方",
-    "name_cn": "全能视频V3.1-pro-图生视频 - 官方",
-    "name_en": "google/veo3.1-pro-official/image-to-video",
+    "display_name": "RH 全能视频V3.1-pro-图生视频-官方稳定版",
+    "name_cn": "全能视频V3.1-pro-图生视频-官方稳定版",
+    "name_en": "google/veo3.1-pro/image-to-video-official-stable",
     "endpoint": "rhart-video-v3.1-pro-official/image-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -11113,9 +11113,9 @@
   {
     "class_name": "RhartVideoV31FastOfficialTextToVideo",
     "internal_name": "RH_RhartVideoV31FastOfficialTextToVideo",
-    "display_name": "RH 全能视频V3.1-fast-文生视频 - 官方",
-    "name_cn": "全能视频V3.1-fast-文生视频 - 官方",
-    "name_en": "google/veo3.1-fast-official/text-to-video",
+    "display_name": "RH 全能视频V3.1-fast-文生视频-官方稳定版",
+    "name_cn": "全能视频V3.1-fast-文生视频-官方稳定版",
+    "name_en": "google/veo3.1-fast/text-to-video-official-stable",
     "endpoint": "rhart-video-v3.1-fast-official/text-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -11219,9 +11219,9 @@
   {
     "class_name": "RhartVideoV31ProOfficialReferenceToVideo",
     "internal_name": "RH_RhartVideoV31ProOfficialReferenceToVideo",
-    "display_name": "RH 全能视频V3.1-pro-参考生视频-官方",
-    "name_cn": "全能视频V3.1-pro-参考生视频-官方",
-    "name_en": "google/veo3.1-pro-official/reference-to-video",
+    "display_name": "RH 全能视频V3.1-pro-参考生视频-官方稳定版",
+    "name_cn": "全能视频V3.1-pro-参考生视频-官方稳定版",
+    "name_en": "google/veo3.1-pro/reference-to-video-official-stable",
     "endpoint": "rhart-video-v3.1-pro-official/reference-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -11296,9 +11296,9 @@
   {
     "class_name": "RhartVideoV31FastOfficialVideoExtend",
     "internal_name": "RH_RhartVideoV31FastOfficialVideoExtend",
-    "display_name": "RH 全能视频V3.1-fast-视频扩展- 官方",
-    "name_cn": "全能视频V3.1-fast-视频扩展- 官方",
-    "name_en": "google/veo3.1-fast/video-extend-official",
+    "display_name": "RH 全能视频V3.1-fast-视频扩展-官方稳定版",
+    "name_cn": "全能视频V3.1-fast-视频扩展-官方稳定版",
+    "name_en": "google/veo3.1-fast/video-extend-official-stable",
     "endpoint": "rhart-video-v3.1-fast-official/video-extend",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -11360,9 +11360,9 @@
   {
     "class_name": "RhartVideoV31FastOfficialImageToVideo",
     "internal_name": "RH_RhartVideoV31FastOfficialImageToVideo",
-    "display_name": "RH 全能视频V3.1-fast-图生视频 - 官方",
-    "name_cn": "全能视频V3.1-fast-图生视频 - 官方",
-    "name_en": "google/veo3.1-fast-official/image-to-video",
+    "display_name": "RH 全能视频V3.1-fast-图生视频-官方稳定版",
+    "name_cn": "全能视频V3.1-fast-图生视频-官方稳定版",
+    "name_en": "google/veo3.1-fast/image-to-video-official-stable",
     "endpoint": "rhart-video-v3.1-fast-official/image-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -11488,9 +11488,9 @@
   {
     "class_name": "RhartVideoV31ProOfficialVideoExtend",
     "internal_name": "RH_RhartVideoV31ProOfficialVideoExtend",
-    "display_name": "RH 全能视频V3.1-pro-视频扩展- 官方",
-    "name_cn": "全能视频V3.1-pro-视频扩展- 官方",
-    "name_en": "google/veo3.1-pro/video-extend-official",
+    "display_name": "RH 全能视频V3.1-pro-视频扩展-官方稳定版",
+    "name_cn": "全能视频V3.1-pro-视频扩展-官方稳定版",
+    "name_en": "google/veo3.1-pro/video-extend-official-stable",
     "endpoint": "rhart-video-v3.1-pro-official/video-extend",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -11764,9 +11764,9 @@
   {
     "class_name": "RhartImageNG31FlashTextToImage",
     "internal_name": "RH_RhartImageNG31FlashTextToImage",
-    "display_name": "RH 全能图片V2-文生图",
-    "name_cn": "全能图片V2-文生图",
-    "name_en": "nano-banana2-gemini31flash/text-to-image",
+    "display_name": "RH 全能图片V2-文生图-低价渠道版",
+    "name_cn": "全能图片V2-文生图-低价渠道版",
+    "name_en": "nano-banana2-gemini31flash/text-to-image-channel-low-price",
     "endpoint": "rhart-image-n-g31-flash/text-to-image",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -11889,9 +11889,9 @@
   {
     "class_name": "RhartImageNG31FlashImageToImage",
     "internal_name": "RH_RhartImageNG31FlashImageToImage",
-    "display_name": "RH 全能图片V2-图生图",
-    "name_cn": "全能图片V2-图生图",
-    "name_en": "nano-banana2-gemini31flash/image-to-image",
+    "display_name": "RH 全能图片V2-图生图-低价渠道版",
+    "name_cn": "全能图片V2-图生图-低价渠道版",
+    "name_en": "nano-banana2-gemini31flash/image-to-image-channel-low-price",
     "endpoint": "rhart-image-n-g31-flash/image-to-image",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -12026,9 +12026,9 @@
   {
     "class_name": "RhartImageNG31FlashOfficialTextToImage",
     "internal_name": "RH_RhartImageNG31FlashOfficialTextToImage",
-    "display_name": "RH 全能图片V2-官方-文生图",
-    "name_cn": "全能图片V2-官方-文生图",
-    "name_en": "nano-banana2-gemini31flash-official/text-to-image",
+    "display_name": "RH 全能图片V2-文生图-官方稳定版",
+    "name_cn": "全能图片V2-文生图-官方稳定版",
+    "name_en": "nano-banana2-gemini31flash/text-to-image-official-stable",
     "endpoint": "rhart-image-n-g31-flash-official/text-to-image",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -12151,9 +12151,9 @@
   {
     "class_name": "RhartImageNG31FlashOfficialImageToImage",
     "internal_name": "RH_RhartImageNG31FlashOfficialImageToImage",
-    "display_name": "RH 全能图片V2-官方-图生图",
-    "name_cn": "全能图片V2-官方-图生图",
-    "name_en": "nano-banana2-gemini31flash-official/image-to-image",
+    "display_name": "RH 全能图片V2-图生图-官方稳定版",
+    "name_cn": "全能图片V2-图生图-官方稳定版",
+    "name_en": "nano-banana2-gemini31flash/image-to-image-official-stable",
     "endpoint": "rhart-image-n-g31-flash-official/image-to-image",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -12288,9 +12288,9 @@
   {
     "class_name": "RhartVideoGOfficialImageToVideo",
     "internal_name": "RH_RhartVideoGOfficialImageToVideo",
-    "display_name": "RH 全能视频G--官方-图生视频",
-    "name_cn": "全能视频G--官方-图生视频",
-    "name_en": "xai/grok-imagine-official/image-to-video",
+    "display_name": "RH 全能视频X-图生视频-官方稳定版",
+    "name_cn": "全能视频X-图生视频-官方稳定版",
+    "name_en": "xai/grok-imagine/image-to-video-official-stable",
     "endpoint": "rhart-video-g-official/image-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video G",
@@ -12361,9 +12361,9 @@
   {
     "class_name": "RhartVideoGOfficialTextToVideo",
     "internal_name": "RH_RhartVideoGOfficialTextToVideo",
-    "display_name": "RH 全能视频G-官方-文生视频",
-    "name_cn": "全能视频G-官方-文生视频",
-    "name_en": "xai/grok-imagine-official/text-to-video",
+    "display_name": "RH 全能视频X-文生视频-官方稳定版",
+    "name_cn": "全能视频X-文生视频-官方稳定版",
+    "name_en": "xai/grok-imagine/text-to-video-official-stable",
     "endpoint": "rhart-video-g-official/text-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video G",
@@ -12447,9 +12447,9 @@
   {
     "class_name": "RhartVideoGOfficialEditVideo",
     "internal_name": "RH_RhartVideoGOfficialEditVideo",
-    "display_name": "RH 全能视频G--官方-编辑视频",
-    "name_cn": "全能视频G--官方-编辑视频",
-    "name_en": "xai/grok-imagine-official/edit-video",
+    "display_name": "RH 全能视频X-编辑视频-官方稳定版",
+    "name_cn": "全能视频X-编辑视频-官方稳定版",
+    "name_en": "xai/grok-imagine/edit-video-official-stable",
     "endpoint": "rhart-video-g-official/edit-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video G",
@@ -12500,9 +12500,9 @@
   {
     "class_name": "RhartImageG15OfficialTextToImage",
     "internal_name": "RH_RhartImageG15OfficialTextToImage",
-    "display_name": "RH 全能图片G-1.5-官方-文生图",
-    "name_cn": "全能图片G-1.5-官方-文生图",
-    "name_en": "gpt-image-1.5-official/text-to-image",
+    "display_name": "RH 全能图片G-1.5-文生图-官方稳定版",
+    "name_cn": "全能图片G-1.5-文生图-官方稳定版",
+    "name_en": "gpt-image-1.5/text-to-image-official-stable",
     "endpoint": "rhart-image-g-1.5-official/text-to-image",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -12575,9 +12575,9 @@
   {
     "class_name": "RhartImageG15OfficialImageToImage",
     "internal_name": "RH_RhartImageG15OfficialImageToImage",
-    "display_name": "RH 全能图片G-1.5-官方-图生图",
-    "name_cn": "全能图片G-1.5-官方-图生图",
-    "name_en": "gpt-image-1.5-official/image-to-image",
+    "display_name": "RH 全能图片G-1.5-图生图-官方稳定版",
+    "name_cn": "全能图片G-1.5-图生图-官方稳定版",
+    "name_en": "gpt-image-1.5/image-to-image-official-stable",
     "endpoint": "rhart-image-g-1.5-official/image-to-image",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -12680,9 +12680,9 @@
   {
     "class_name": "RhartVideoSImageToVideoAsyn",
     "internal_name": "RH_RhartVideoSImageToVideoAsyn",
-    "display_name": "RH 全能视频S-图生视频（异步）",
-    "name_cn": "全能视频S-图生视频（异步）",
-    "name_en": "sora-2/image-to-video-asyn",
+    "display_name": "RH 全能视频S-图生视频（异步）-低价渠道版",
+    "name_cn": "全能视频S-图生视频（异步）-低价渠道版",
+    "name_en": "sora-2/image-to-video-asyn-channel-low-price",
     "endpoint": "rhart-video-s/image-to-video-asyn",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -12943,9 +12943,9 @@
   {
     "class_name": "RhartVideoV31ProImageToVideo",
     "internal_name": "RH_RhartVideoV31ProImageToVideo",
-    "display_name": "RH 全能视频V3.1-pro-图生视频",
-    "name_cn": "全能视频V3.1-pro-图生视频",
-    "name_en": "google/veo3.1-pro/image-to-video",
+    "display_name": "RH 全能视频V3.1-pro-图生视频-低价渠道版",
+    "name_cn": "全能视频V3.1-pro-图生视频-低价渠道版",
+    "name_en": "google/veo3.1-pro/image-to-video-channel-low-price",
     "endpoint": "rhart-video-v3.1-pro/image-to-video",
     "output_type": "video",
     "category": "RunningHub/RHArt Video",
@@ -13722,9 +13722,9 @@
   {
     "class_name": "KlingVideoO3StdVideoEdit",
     "internal_name": "RH_KlingVideoO3StdVideoEdit",
-    "display_name": "RH kling-video-o3-std-video-edit",
-    "name_cn": "kling-video-o3-std-video-edit",
-    "name_en": "kling-video-o3-std-video-edit",
+    "display_name": "RH kling-video-o3-std/video-edit",
+    "name_cn": "kling-video-o3-std/video-edit",
+    "name_en": "kling-video-o3-std/video-edit",
     "endpoint": "kling-video-o3-std/video-edit",
     "output_type": "video",
     "category": "RunningHub/Kling",
@@ -13774,9 +13774,9 @@
   {
     "class_name": "KlingVideoO3ProVideoEdit",
     "internal_name": "RH_KlingVideoO3ProVideoEdit",
-    "display_name": "RH kling-video-o3-pro-video-edit",
-    "name_cn": "kling-video-o3-pro-video-edit",
-    "name_en": "kling-video-o3-pro-video-edit",
+    "display_name": "RH kling-video-o3-pro/video-edit",
+    "name_cn": "kling-video-o3-pro/video-edit",
+    "name_en": "kling-video-o3-pro/video-edit",
     "endpoint": "kling-video-o3-pro/video-edit",
     "output_type": "video",
     "category": "RunningHub/Kling",
@@ -13827,9 +13827,9 @@
   {
     "class_name": "KlingVideoO3StdReferenceToVideo",
     "internal_name": "RH_KlingVideoO3StdReferenceToVideo",
-    "display_name": "RH kling-video-o3-std-reference-to-video",
-    "name_cn": "kling-video-o3-std-reference-to-video",
-    "name_en": "kling-video-o3-std-reference-to-video",
+    "display_name": "RH kling-video-o3-std/reference-to-video",
+    "name_cn": "kling-video-o3-std/reference-to-video",
+    "name_en": "kling-video-o3-std/reference-to-video",
     "endpoint": "kling-video-o3-std/reference-to-video",
     "output_type": "video",
     "category": "RunningHub/Kling",
@@ -13924,9 +13924,9 @@
   {
     "class_name": "KlingVideoO3ProReferenceToVideo",
     "internal_name": "RH_KlingVideoO3ProReferenceToVideo",
-    "display_name": "RH kling-video-o3-pro-reference-to-video",
-    "name_cn": "kling-video-o3-pro-reference-to-video",
-    "name_en": "kling-video-o3-pro-reference-to-video",
+    "display_name": "RH kling-video-o3-pro/reference-to-video",
+    "name_cn": "kling-video-o3-pro/reference-to-video",
+    "name_en": "kling-video-o3-pro/reference-to-video",
     "endpoint": "kling-video-o3-pro/reference-to-video",
     "output_type": "video",
     "category": "RunningHub/Kling",
@@ -14122,7 +14122,7 @@
   {
     "class_name": "Hitem3dV15ImageTo3d",
     "internal_name": "RH_Hitem3dV15ImageTo3d",
-    "display_name": "RH HiTem3D V1.5 Image to 3D",
+    "display_name": "RH hitem3d-v15/image-to-3d",
     "endpoint": "hitem3d-v15/image-to-3d",
     "output_type": "3d",
     "category": "RunningHub/HiTem3D",
@@ -14183,12 +14183,14 @@
         "max": 2000000,
         "step": 10000
       }
-    ]
+    ],
+    "name_cn": "hitem3d-v15/image-to-3d",
+    "name_en": "hitem3d-v15/image-to-3d"
   },
   {
     "class_name": "Hitem3dV2ImageTo3d",
     "internal_name": "RH_Hitem3dV2ImageTo3d",
-    "display_name": "RH HiTem3D V2 Image to 3D",
+    "display_name": "RH hitem3d-v2/image-to-3d",
     "endpoint": "hitem3d-v2/image-to-3d",
     "output_type": "3d",
     "category": "RunningHub/HiTem3D",
@@ -14243,12 +14245,14 @@
         "max": 2000000,
         "step": 10000
       }
-    ]
+    ],
+    "name_cn": "hitem3d-v2/image-to-3d",
+    "name_en": "hitem3d-v2/image-to-3d"
   },
   {
     "class_name": "Hitem3dV15MultiImageTo3d",
     "internal_name": "RH_Hitem3dV15MultiImageTo3d",
-    "display_name": "RH HiTem3D V1.5 Multi-Image to 3D",
+    "display_name": "RH hitem3d-v15/multi-image-to-3d",
     "endpoint": "hitem3d-v15/multi-image-to-3d",
     "output_type": "3d",
     "category": "RunningHub/HiTem3D",
@@ -14330,12 +14334,14 @@
         "max": 2000000,
         "step": 10000
       }
-    ]
+    ],
+    "name_cn": "hitem3d-v15/multi-image-to-3d",
+    "name_en": "hitem3d-v15/multi-image-to-3d"
   },
   {
     "class_name": "Hitem3dV2MultiImageTo3d",
     "internal_name": "RH_Hitem3dV2MultiImageTo3d",
-    "display_name": "RH HiTem3D V2 Multi-Image to 3D",
+    "display_name": "RH hitem3d-v2/multi-image-to-3d",
     "endpoint": "hitem3d-v2/multi-image-to-3d",
     "output_type": "3d",
     "category": "RunningHub/HiTem3D",
@@ -14411,12 +14417,14 @@
         "max": 2000000,
         "step": 10000
       }
-    ]
+    ],
+    "name_cn": "hitem3d-v2/multi-image-to-3d",
+    "name_en": "hitem3d-v2/multi-image-to-3d"
   },
   {
     "class_name": "Hitem3dPortraitV21ImageTo3d",
     "internal_name": "RH_Hitem3dPortraitV21ImageTo3d",
-    "display_name": "RH HiTem3D Portrait V2.1 Image to 3D",
+    "display_name": "RH hitem3d-portrait-v21/image-to-3d",
     "endpoint": "hitem3d-portrait-v21/image-to-3d",
     "output_type": "3d",
     "category": "RunningHub/HiTem3D",
@@ -14468,12 +14476,14 @@
         "max": 2000000,
         "step": 10000
       }
-    ]
+    ],
+    "name_cn": "hitem3d-portrait-v21/image-to-3d",
+    "name_en": "hitem3d-portrait-v21/image-to-3d"
   },
   {
     "class_name": "Hitem3dPortraitV21MultiImageTo3d",
     "internal_name": "RH_Hitem3dPortraitV21MultiImageTo3d",
-    "display_name": "RH HiTem3D Portrait V2.1 Multi-Image to 3D",
+    "display_name": "RH hitem3d-portrait-v21/multi-image-to-3d",
     "endpoint": "hitem3d-portrait-v21/multi-image-to-3d",
     "output_type": "3d",
     "category": "RunningHub/HiTem3D",
@@ -14546,12 +14556,14 @@
         "max": 2000000,
         "step": 10000
       }
-    ]
+    ],
+    "name_cn": "hitem3d-portrait-v21/multi-image-to-3d",
+    "name_en": "hitem3d-portrait-v21/multi-image-to-3d"
   },
   {
     "class_name": "Hitem3dPortraitV20ImageTo3d",
     "internal_name": "RH_Hitem3dPortraitV20ImageTo3d",
-    "display_name": "RH HiTem3D Portrait V2.0 Image to 3D",
+    "display_name": "RH hitem3d-portrait-v20/image-to-3d",
     "endpoint": "hitem3d-portrait-v20/image-to-3d",
     "output_type": "3d",
     "category": "RunningHub/HiTem3D",
@@ -14603,12 +14615,14 @@
         "max": 2000000,
         "step": 10000
       }
-    ]
+    ],
+    "name_cn": "hitem3d-portrait-v20/image-to-3d",
+    "name_en": "hitem3d-portrait-v20/image-to-3d"
   },
   {
     "class_name": "Hitem3dPortraitV20MultiImageTo3d",
     "internal_name": "RH_Hitem3dPortraitV20MultiImageTo3d",
-    "display_name": "RH HiTem3D Portrait V2.0 Multi-Image to 3D",
+    "display_name": "RH hitem3d-portrait-v20/multi-image-to-3d",
     "endpoint": "hitem3d-portrait-v20/multi-image-to-3d",
     "output_type": "3d",
     "category": "RunningHub/HiTem3D",
@@ -14681,12 +14695,14 @@
         "max": 2000000,
         "step": 10000
       }
-    ]
+    ],
+    "name_cn": "hitem3d-portrait-v20/multi-image-to-3d",
+    "name_en": "hitem3d-portrait-v20/multi-image-to-3d"
   },
   {
     "class_name": "Hitem3dPortraitV15ImageTo3d",
     "internal_name": "RH_Hitem3dPortraitV15ImageTo3d",
-    "display_name": "RH HiTem3D Portrait V1.5 Image to 3D",
+    "display_name": "RH hitem3d-portrait-v15/image-to-3d",
     "endpoint": "hitem3d-portrait-v15/image-to-3d",
     "output_type": "3d",
     "category": "RunningHub/HiTem3D",
@@ -14738,12 +14754,14 @@
         "max": 2000000,
         "step": 10000
       }
-    ]
+    ],
+    "name_cn": "hitem3d-portrait-v15/image-to-3d",
+    "name_en": "hitem3d-portrait-v15/image-to-3d"
   },
   {
     "class_name": "Hitem3dPortraitV15MultiImageTo3d",
     "internal_name": "RH_Hitem3dPortraitV15MultiImageTo3d",
-    "display_name": "RH HiTem3D Portrait V1.5 Multi-Image to 3D",
+    "display_name": "RH hitem3d-portrait-v15/multi-image-to-3d",
     "endpoint": "hitem3d-portrait-v15/multi-image-to-3d",
     "output_type": "3d",
     "category": "RunningHub/HiTem3D",
@@ -14816,12 +14834,14 @@
         "max": 2000000,
         "step": 10000
       }
-    ]
+    ],
+    "name_cn": "hitem3d-portrait-v15/multi-image-to-3d",
+    "name_en": "hitem3d-portrait-v15/multi-image-to-3d"
   },
   {
     "class_name": "AlibabaWan26ReferenceToVideoFlash",
     "internal_name": "RH_AlibabaWan26ReferenceToVideoFlash",
-    "display_name": "RH Wan 2.6 Reference to Video Flash",
+    "display_name": "RH 万相2.6-参考生视频Flash",
     "endpoint": "alibaba/wan-2.6/reference-to-video-flash",
     "output_type": "video",
     "category": "RunningHub/Wan",
@@ -14960,12 +14980,14 @@
         "description": "Enable audio generation",
         "defaultValue": true
       }
-    ]
+    ],
+    "name_cn": "万相2.6-参考生视频Flash",
+    "name_en": "wan-2.6-reference-to-video-flash"
   },
   {
     "class_name": "AlibabaWan26ReferenceToVideo",
     "internal_name": "RH_AlibabaWan26ReferenceToVideo",
-    "display_name": "RH Wan 2.6 Reference to Video",
+    "display_name": "RH 万相2.6-参考生视频",
     "endpoint": "alibaba/wan-2.6/reference-to-video",
     "output_type": "video",
     "category": "RunningHub/Wan",
@@ -15096,7 +15118,9 @@
           }
         ]
       }
-    ]
+    ],
+    "name_cn": "万相2.6-参考生视频",
+    "name_en": "wan-2.6-reference-to-video"
   },
   {
     "class_name": "KlingElements",
@@ -17104,8 +17128,8 @@
   {
     "class_name": "CinematicVideoGenerator",
     "internal_name": "RH_CinematicVideoGenerator",
-    "display_name": "RH 全能视频sd2.0",
-    "name_cn": "全能视频sd2.0",
+    "display_name": "RH 全能视频sd2.0体验版",
+    "name_cn": "全能视频sd2.0体验版",
     "name_en": "cinematic-video-generator-sd2.0",
     "endpoint": "cinematic-video-generator",
     "output_type": "video",

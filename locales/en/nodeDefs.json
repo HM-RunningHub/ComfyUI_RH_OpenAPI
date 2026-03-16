@@ -1,54 +1,54 @@
 {
   "RH_RhartVideoSOfficialImageToVideoRealistic": {
-    "display_name": "RH Sora 2 Official Image to Video Realistic"
+    "display_name": "RH Sora 2 Image to Video Realistic Official Stable"
   },
   "RH_RhartVideoSImageToVideo": {
-    "display_name": "RH Sora 2 Image to Video"
+    "display_name": "RH Sora 2 Image to Video Channel Low Price"
   },
   "RH_RhartVideoSTextToVideo": {
-    "display_name": "RH Sora 2 Text to Video"
+    "display_name": "RH Sora 2 Text to Video Channel Low Price"
   },
   "RH_RhartImageV1Edit": {
-    "display_name": "RH Nano Banana Edit"
+    "display_name": "RH Nano Banana Edit Channel Low Price"
   },
   "RH_RhartImageV1TextToImage": {
-    "display_name": "RH Nano Banana Text to Image"
+    "display_name": "RH Nano Banana Text to Image Channel Low Price"
   },
   "RH_RhartImageNProEdit": {
-    "display_name": "RH Nano Banana PRO Edit"
+    "display_name": "RH Nano Banana PRO Edit Channel Low Price"
   },
   "RH_RhartImageNProTextToImage": {
-    "display_name": "RH Nano Banana PRO Text to Image"
+    "display_name": "RH Nano Banana PRO Text to Image Channel Low Price"
   },
   "RH_RhartImageNProOfficialEdit": {
-    "display_name": "RH Nano Banana PRO Official Edit"
+    "display_name": "RH Nano Banana PRO Edit Official Stable"
   },
   "RH_RhartImageNProOfficialTextToImage": {
-    "display_name": "RH Nano Banana PRO Official Text to Image"
+    "display_name": "RH Nano Banana PRO Text to Image Official Stable"
   },
   "RH_RhartImageG15TextToImage": {
-    "display_name": "RH GPT Image 1.5 Text to Image"
+    "display_name": "RH GPT Image 1.5 Text to Image Channel Low Price"
   },
   "RH_RhartImageG15Edit": {
-    "display_name": "RH GPT Image 1.5 Edit"
+    "display_name": "RH GPT Image 1.5 Edit Channel Low Price"
   },
   "RH_RhartVideoV31FastTextToVideo": {
-    "display_name": "RH Google Veo3.1 Fast Text to Video"
+    "display_name": "RH Google Veo3.1 Fast Text to Video Channel Low Price"
   },
   "RH_RhartVideoV31ProTextToVideo": {
-    "display_name": "RH Google Veo3.1 PRO Text to Video"
+    "display_name": "RH Google Veo3.1 PRO Text to Video Channel Low Price"
   },
   "RH_RhartVideoV31FastImageToVideo": {
-    "display_name": "RH Google Veo3.1 Fast Image to Video"
+    "display_name": "RH Google Veo3.1 Fast Image to Video Channel Low Price"
   },
   "RH_RhartVideoSImageToVideoPro": {
-    "display_name": "RH Sora 2 Image to Video PRO"
+    "display_name": "RH Sora 2 Image to Video PRO Channel Low Price"
   },
   "RH_RhartVideoSTextToVideoPro": {
-    "display_name": "RH Sora 2 Text to Video PRO"
+    "display_name": "RH Sora 2 Text to Video PRO Channel Low Price"
   },
   "RH_RhartVideoSSoraUploadCharacter": {
-    "display_name": "RH Sora Upload Character"
+    "display_name": "RH Sora Upload Character Channel Low Price"
   },
   "RH_AlibabaWan26TextToVideo": {
     "display_name": "RH Alibaba Wan 2.6 Text to Video"
@@ -75,7 +75,7 @@
     "display_name": "RH Vidu Start End to Video Q2 Turbo"
   },
   "RH_RhartVideoSOfficialTextToVideo": {
-    "display_name": "RH Sora 2 Official Text to Video"
+    "display_name": "RH Sora 2 Text to Video Official Stable"
   },
   "RH_SeedreamV45TextToImage": {
     "display_name": "RH Seedream V4.5 Text to Image"
@@ -132,13 +132,13 @@
     "display_name": "RH Kling Video O1 Start to End"
   },
   "RH_RhartVideoSOfficialImageToVideo": {
-    "display_name": "RH Sora 2 Official Image to Video"
+    "display_name": "RH Sora 2 Image to Video Official Stable"
   },
   "RH_RhartVideoSOfficialTextToVideoPro": {
-    "display_name": "RH Sora 2 Official Text to Video PRO"
+    "display_name": "RH Sora 2 Text to Video PRO Official Stable"
   },
   "RH_RhartVideoSOfficialImageToVideoPro": {
-    "display_name": "RH Sora 2 Official Image to Video PRO"
+    "display_name": "RH Sora 2 Image to Video PRO Official Stable"
   },
   "RH_KlingVideoO1StdRefrenceToVideo": {
     "display_name": "RH Kling Video O1 STD Refrence to Video"
@@ -186,13 +186,13 @@
     "display_name": "RH Seedance V1 Lite Reference to Video"
   },
   "RH_RhartImageNProOfficialTextToImageUltra": {
-    "display_name": "RH Nano Banana PRO Official Text to Image Ultra"
+    "display_name": "RH Nano Banana PRO Text to Image Ultra Official Stable"
   },
   "RH_RhartImageNProOfficialEditUltra": {
-    "display_name": "RH Nano Banana PRO Official Edit Ultra"
+    "display_name": "RH Nano Banana PRO Edit Ultra Official Stable"
   },
   "RH_RhartVideoV31FastStartEndToVideo": {
-    "display_name": "RH Google Veo3.1 Fast Start End to Video"
+    "display_name": "RH Google Veo3.1 Fast Start End to Video Channel Low Price"
   },
   "RH_ViduReferenceToVideoQ2Pro": {
     "display_name": "RH Vidu Reference to Video Q2 PRO"
@@ -222,7 +222,7 @@
     "display_name": "RH Vidu Image to Video Q3 PRO"
   },
   "RH_RhartVideoV31ProStartEndToVideo": {
-    "display_name": "RH Google Veo3.1 PRO Start End to Video"
+    "display_name": "RH Google Veo3.1 PRO Start End to Video Channel Low Price"
   },
   "RH_ViduImageToVideoQ2ProFast": {
     "display_name": "RH Vidu Image to Video Q2 PRO Fast"
@@ -261,10 +261,10 @@
     "display_name": "RH Kling V3.0 PRO Image to Video"
   },
   "RH_RhartVideoGImageToVideo": {
-    "display_name": "RH XAI Grok Imagine Image to Video"
+    "display_name": "RH XAI Grok Imagine Image to Video Channel Low Price"
   },
   "RH_RhartVideoGTextToVideo": {
-    "display_name": "RH XAI Grok Imagine Text to Video"
+    "display_name": "RH XAI Grok Imagine Text to Video Channel Low Price"
   },
   "RH_Hunyuan3dV31TextTo3d": {
     "display_name": "RH Hunyuan3d V3.1 Text to 3D"
@@ -309,25 +309,25 @@
     "display_name": "RH Minimax Voice Clone"
   },
   "RH_RhartVideoV31ProOfficialTextToVideo": {
-    "display_name": "RH Google Veo3.1 PRO Official Text to Video"
+    "display_name": "RH Google Veo3.1 PRO Text to Video Official Stable"
   },
   "RH_RhartVideoV31ProOfficialImageToVideo": {
-    "display_name": "RH Google Veo3.1 PRO Official Image to Video"
+    "display_name": "RH Google Veo3.1 PRO Image to Video Official Stable"
   },
   "RH_RhartVideoV31FastOfficialTextToVideo": {
-    "display_name": "RH Google Veo3.1 Fast Official Text to Video"
+    "display_name": "RH Google Veo3.1 Fast Text to Video Official Stable"
   },
   "RH_RhartVideoV31ProOfficialReferenceToVideo": {
-    "display_name": "RH Google Veo3.1 PRO Official Reference to Video"
+    "display_name": "RH Google Veo3.1 PRO Reference to Video Official Stable"
   },
   "RH_RhartVideoV31FastOfficialVideoExtend": {
-    "display_name": "RH Google Veo3.1 Fast Video Extend Official"
+    "display_name": "RH Google Veo3.1 Fast Video Extend Official Stable"
   },
   "RH_RhartVideoV31FastOfficialImageToVideo": {
-    "display_name": "RH Google Veo3.1 Fast Official Image to Video"
+    "display_name": "RH Google Veo3.1 Fast Image to Video Official Stable"
   },
   "RH_RhartVideoV31ProOfficialVideoExtend": {
-    "display_name": "RH Google Veo3.1 PRO Video Extend Official"
+    "display_name": "RH Google Veo3.1 PRO Video Extend Official Stable"
   },
   "RH_SeedreamV5LiteTextToImage": {
     "display_name": "RH Seedream V5 Lite Text to Image"
@@ -336,34 +336,34 @@
     "display_name": "RH Seedream V5 Lite Image to Image"
   },
   "RH_RhartImageNG31FlashTextToImage": {
-    "display_name": "RH Nano Banana2 Gemini31flash Text to Image"
+    "display_name": "RH Nano Banana2 Gemini31flash Text to Image Channel Low Price"
   },
   "RH_RhartImageNG31FlashImageToImage": {
-    "display_name": "RH Nano Banana2 Gemini31flash Image to Image"
+    "display_name": "RH Nano Banana2 Gemini31flash Image to Image Channel Low Price"
   },
   "RH_RhartImageNG31FlashOfficialTextToImage": {
-    "display_name": "RH Nano Banana2 Gemini31flash Official Text to Image"
+    "display_name": "RH Nano Banana2 Gemini31flash Text to Image Official Stable"
   },
   "RH_RhartImageNG31FlashOfficialImageToImage": {
-    "display_name": "RH Nano Banana2 Gemini31flash Official Image to Image"
+    "display_name": "RH Nano Banana2 Gemini31flash Image to Image Official Stable"
   },
   "RH_RhartVideoGOfficialImageToVideo": {
-    "display_name": "RH XAI Grok Imagine Official Image to Video"
+    "display_name": "RH XAI Grok Imagine Image to Video Official Stable"
   },
   "RH_RhartVideoGOfficialTextToVideo": {
-    "display_name": "RH XAI Grok Imagine Official Text to Video"
+    "display_name": "RH XAI Grok Imagine Text to Video Official Stable"
   },
   "RH_RhartVideoGOfficialEditVideo": {
-    "display_name": "RH XAI Grok Imagine Official Edit Video"
+    "display_name": "RH XAI Grok Imagine Edit Video Official Stable"
   },
   "RH_RhartImageG15OfficialTextToImage": {
-    "display_name": "RH GPT Image 1.5 Official Text to Image"
+    "display_name": "RH GPT Image 1.5 Text to Image Official Stable"
   },
   "RH_RhartImageG15OfficialImageToImage": {
-    "display_name": "RH GPT Image 1.5 Official Image to Image"
+    "display_name": "RH GPT Image 1.5 Image to Image Official Stable"
   },
   "RH_RhartVideoSImageToVideoAsyn": {
-    "display_name": "RH Sora 2 Image to Video Asyn"
+    "display_name": "RH Sora 2 Image to Video Asyn Channel Low Price"
   },
   "RH_RhartTextG3FlashPreviewImageToText": {
     "display_name": "RH Rhart Text G 3 Flash Preview Image to Text"
@@ -387,7 +387,7 @@
     "display_name": "RH Rhart Text G 25 Flash Image to Text"
   },
   "RH_RhartVideoV31ProImageToVideo": {
-    "display_name": "RH Google Veo3.1 PRO Image to Video"
+    "display_name": "RH Google Veo3.1 PRO Image to Video Channel Low Price"
   },
   "RH_RhartTextG25FlashTextToText": {
     "display_name": "RH Rhart Text G 25 Flash Text to Text"
@@ -477,10 +477,10 @@
     "display_name": "RH Hitem3d Portrait V15 Multi Image to 3D"
   },
   "RH_AlibabaWan26ReferenceToVideoFlash": {
-    "display_name": "RH Alibaba Wan 2.6 Reference to Video Flash"
+    "display_name": "RH Wan 2.6 Reference to Video Flash"
   },
   "RH_AlibabaWan26ReferenceToVideo": {
-    "display_name": "RH Alibaba Wan 2.6 Reference to Video"
+    "display_name": "RH Wan 2.6 Reference to Video"
   },
   "RH_KlingElements": {
     "display_name": "RH Kling Elements"
