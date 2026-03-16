@@ -509,6 +509,33 @@
   "RH_AlibabaQwenImage20ImageEdit": {
     "display_name": "RH Qwen Image 2.0 Image Edit"
   },
+  "RH_ViduReferenceToVideoQ3": {
+    "display_name": "RH Vidu Reference to Video Q3"
+  },
+  "RH_BytedanceDreamactorV2": {
+    "display_name": "RH Bytedance Dreamactor V2"
+  },
+  "RH_AlibabaQwenImage20ProTextToImage": {
+    "display_name": "RH Qwen Image 2.0 PRO Text to Image"
+  },
+  "RH_AlibabaQwenImage20TextToImage": {
+    "display_name": "RH Qwen Image 2.0 Text to Image"
+  },
+  "RH_PixverseV55TextToVideo": {
+    "display_name": "RH Pixverse V5.5 Text to Video"
+  },
+  "RH_PixverseV55ImageToVideo": {
+    "display_name": "RH Pixverse V5.5 Image to Video"
+  },
+  "RH_PixverseV55Transition": {
+    "display_name": "RH Pixverse V5.5 Transition"
+  },
+  "RH_PixverseV55Effects": {
+    "display_name": "RH Pixverse V5.5 Effects"
+  },
+  "RH_CinematicVideoGenerator": {
+    "display_name": "RH Cinematic Video Generator Sd2.0"
+  },
   "RHSettingsNode": {
     "display_name": "RH OpenAPI Settings"
   }

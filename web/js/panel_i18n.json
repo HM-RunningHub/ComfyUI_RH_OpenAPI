@@ -17,7 +17,10 @@
       "HiTem3D": "🔷 HiTem 3D",
       "TopazLabs": "💎 Topaz Labs",
       "RHArt Image Qwen": "🤖 RHArt 图像 Qwen",
-      "Alibaba": "🎨 阿里 通义万相 Qwen"
+      "Alibaba": "🎨 阿里 通义万相 Qwen",
+      "ByteDance": "🎭 字节跳动",
+      "PixVerse": "🎬 PixVerse 可灵替代",
+      "Other": "📦 其他模型"
     },
     "en": {
       "RHArt Image": "🖼️ RHArt Image",
@@ -36,7 +39,10 @@
       "HiTem3D": "🔷 HiTem 3D",
       "TopazLabs": "💎 Topaz Labs",
       "RHArt Image Qwen": "🤖 RHArt Image Qwen",
-      "Alibaba": "🎨 Alibaba Qwen"
+      "Alibaba": "🎨 Alibaba Qwen",
+      "ByteDance": "🎭 ByteDance",
+      "PixVerse": "🎬 PixVerse",
+      "Other": "📦 Other"
     }
   },
   "nodes": {
@@ -211,6 +217,15 @@
       "RH_KlingV30ProMotionControl": "RH 可灵动作控制V3.0-pro",
       "RH_AlibabaQwenImage20ProImageEdit": "RH 千问2.0Pro-图像编辑",
       "RH_AlibabaQwenImage20ImageEdit": "RH 千问2.0-图像编辑",
+      "RH_ViduReferenceToVideoQ3": "RH Vidu-参考生视频-q3",
+      "RH_BytedanceDreamactorV2": "RH 即梦/动作模仿2.0",
+      "RH_AlibabaQwenImage20ProTextToImage": "RH 千问2.0Pro-文生图",
+      "RH_AlibabaQwenImage20TextToImage": "RH 千问2.0-文生图",
+      "RH_PixverseV55TextToVideo": "RH PixVerse V5.5 文生视频",
+      "RH_PixverseV55ImageToVideo": "RH PixVerse V5.5 图生视频",
+      "RH_PixverseV55Transition": "RH PixVerse V5.5 转场",
+      "RH_PixverseV55Effects": "RH PixVerse V5.5 特效",
+      "RH_CinematicVideoGenerator": "RH 全能视频sd2.0",
       "RHSettingsNode": "RH OpenAPI 设置"
     },
     "en": {
@@ -384,6 +399,15 @@
       "RH_KlingV30ProMotionControl": "RH Kling V3.0 PRO Motion Control",
       "RH_AlibabaQwenImage20ProImageEdit": "RH Qwen Image 2.0 PRO Image Edit",
       "RH_AlibabaQwenImage20ImageEdit": "RH Qwen Image 2.0 Image Edit",
+      "RH_ViduReferenceToVideoQ3": "RH Vidu Reference to Video Q3",
+      "RH_BytedanceDreamactorV2": "RH Bytedance Dreamactor V2",
+      "RH_AlibabaQwenImage20ProTextToImage": "RH Qwen Image 2.0 PRO Text to Image",
+      "RH_AlibabaQwenImage20TextToImage": "RH Qwen Image 2.0 Text to Image",
+      "RH_PixverseV55TextToVideo": "RH Pixverse V5.5 Text to Video",
+      "RH_PixverseV55ImageToVideo": "RH Pixverse V5.5 Image to Video",
+      "RH_PixverseV55Transition": "RH Pixverse V5.5 Transition",
+      "RH_PixverseV55Effects": "RH Pixverse V5.5 Effects",
+      "RH_CinematicVideoGenerator": "RH Cinematic Video Generator Sd2.0",
       "RHSettingsNode": "RH OpenAPI Settings"
     }
   },

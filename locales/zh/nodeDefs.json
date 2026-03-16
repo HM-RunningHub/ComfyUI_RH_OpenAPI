@@ -509,6 +509,33 @@
   "RH_AlibabaQwenImage20ImageEdit": {
     "display_name": "RH 千问2.0-图像编辑"
   },
+  "RH_ViduReferenceToVideoQ3": {
+    "display_name": "RH Vidu-参考生视频-q3"
+  },
+  "RH_BytedanceDreamactorV2": {
+    "display_name": "RH 即梦/动作模仿2.0"
+  },
+  "RH_AlibabaQwenImage20ProTextToImage": {
+    "display_name": "RH 千问2.0Pro-文生图"
+  },
+  "RH_AlibabaQwenImage20TextToImage": {
+    "display_name": "RH 千问2.0-文生图"
+  },
+  "RH_PixverseV55TextToVideo": {
+    "display_name": "RH PixVerse V5.5 文生视频"
+  },
+  "RH_PixverseV55ImageToVideo": {
+    "display_name": "RH PixVerse V5.5 图生视频"
+  },
+  "RH_PixverseV55Transition": {
+    "display_name": "RH PixVerse V5.5 转场"
+  },
+  "RH_PixverseV55Effects": {
+    "display_name": "RH PixVerse V5.5 特效"
+  },
+  "RH_CinematicVideoGenerator": {
+    "display_name": "RH 全能视频sd2.0"
+  },
   "RHSettingsNode": {
     "display_name": "RH OpenAPI 设置"
   }

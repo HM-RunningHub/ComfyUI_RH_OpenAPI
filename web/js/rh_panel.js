@@ -129,6 +129,8 @@ app.registerExtension({
         "Hunyuan3D": "🧊 混元 3D", "HiTem3D": "🔷 HiTem 3D",
         "TopazLabs": "💎 Topaz Labs",
         "Alibaba": "🎨 阿里 通义万相 Qwen",
+        "ByteDance": "🎭 字节跳动", "PixVerse": "🎬 PixVerse 可灵替代",
+        "Other": "📦 其他模型",
       },
       en: {
         "RHArt Image": "🖼️ RHArt Image", "RHArt Video": "🎬 RHArt Video",
@@ -140,6 +142,8 @@ app.registerExtension({
         "Hunyuan3D": "🧊 Hunyuan 3D", "HiTem3D": "🔷 HiTem 3D",
         "TopazLabs": "💎 Topaz Labs",
         "Alibaba": "🎨 Alibaba Qwen",
+        "ByteDance": "🎭 ByteDance", "PixVerse": "🎬 PixVerse",
+        "Other": "📦 Other",
       },
     };
 
@@ -154,6 +158,7 @@ app.registerExtension({
       "Kling", "Vidu", "Wan", "MiniMax",
       "Seedream", "Seedance", "Youchuan", "Audio",
       "Hunyuan3D", "HiTem3D", "TopazLabs", "Alibaba",
+      "ByteDance", "PixVerse", "Other",
     ];
 
     let allowedNodes = null;
