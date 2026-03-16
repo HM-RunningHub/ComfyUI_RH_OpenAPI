@@ -16107,7 +16107,7 @@
     "name_en": "bytedance/dreamactor-v2",
     "endpoint": "bytedance/dreamactor-v2",
     "output_type": "video",
-    "category": "RunningHub/ByteDance",
+    "category": "RunningHub/Seedance",
     "params": [
       {
         "fieldKey": "imageUrl",
@@ -17133,7 +17133,7 @@
     "name_en": "cinematic-video-generator-sd2.0",
     "endpoint": "cinematic-video-generator",
     "output_type": "video",
-    "category": "RunningHub/Other",
+    "category": "RunningHub/RHArt Video",
     "params": [
       {
         "fieldKey": "prompt",

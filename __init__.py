@@ -55,9 +55,7 @@ _CATEGORY_NAME_EN = {
     "TopazLabs": "💎 Topaz Labs",
     "RHArt Image Qwen": "🤖 RHArt Image Qwen",
     "Alibaba": "🎨 Alibaba Qwen",
-    "ByteDance": "🎭 ByteDance",
     "PixVerse": "🎬 PixVerse",
-    "Other": "📦 Other",
 }
 
 _CATEGORY_NAME_ZH = {
@@ -78,9 +76,7 @@ _CATEGORY_NAME_ZH = {
     "TopazLabs": "💎 Topaz Labs",
     "RHArt Image Qwen": "🤖 RHArt 图像 Qwen",
     "Alibaba": "🎨 阿里 通义万相 Qwen",
-    "ByteDance": "🎭 字节跳动",
     "PixVerse": "🎬 PixVerse 可灵替代",
-    "Other": "📦 其他模型",
 }
 
 
