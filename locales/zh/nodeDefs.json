@@ -512,8 +512,8 @@
   "RH_ViduReferenceToVideoQ3": {
     "display_name": "RH Vidu-参考生视频-q3"
   },
-  "RH_BytedanceDreamactorV2": {
-    "display_name": "RH 即梦/动作模仿2.0"
+  "RH_SeedanceVideoRefToVideo": {
+    "display_name": "RH Seedance 2.0 视频参考生视频(体验版)"
   },
   "RH_AlibabaQwenImage20ProTextToImage": {
     "display_name": "RH 千问2.0Pro-文生图"

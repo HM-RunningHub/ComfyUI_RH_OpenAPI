@@ -512,8 +512,8 @@
   "RH_ViduReferenceToVideoQ3": {
     "display_name": "RH Vidu Reference to Video Q3"
   },
-  "RH_BytedanceDreamactorV2": {
-    "display_name": "RH Bytedance Dreamactor V2"
+  "RH_SeedanceVideoRefToVideo": {
+    "display_name": "RH Seedance 2.0 Video Ref to Video (Trial)"
   },
   "RH_AlibabaQwenImage20ProTextToImage": {
     "display_name": "RH Qwen Image 2.0 PRO Text to Image"

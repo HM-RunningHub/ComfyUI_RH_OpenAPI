@@ -16100,11 +16100,11 @@
     ]
   },
   {
-    "class_name": "BytedanceDreamactorV2",
-    "internal_name": "RH_BytedanceDreamactorV2",
-    "display_name": "RH 即梦/动作模仿2.0",
-    "name_cn": "即梦/动作模仿2.0",
-    "name_en": "bytedance/dreamactor-v2",
+    "class_name": "SeedanceVideoRefToVideo",
+    "internal_name": "RH_SeedanceVideoRefToVideo",
+    "display_name": "RH Seedance 2.0 视频参考生视频(体验版)",
+    "name_cn": "Seedance 2.0 视频参考生视频(体验版)",
+    "name_en": "seedance-2.0/video-ref-to-video-trial",
     "endpoint": "bytedance/dreamactor-v2",
     "output_type": "video",
     "category": "RunningHub/Seedance",
