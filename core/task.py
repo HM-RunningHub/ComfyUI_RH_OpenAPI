@@ -159,7 +159,9 @@ def poll(
         elapsed = time.time() - start_time
         if elapsed > max_polling_time:
             raise RuntimeError(
-                f"Polling timeout after {max_polling_time}s [taskId: {task_id}]"
+                f"Task exceeded {max_polling_time}s, real-time status polling has stopped. "
+                f"You can check the task status and retrieve generated results at "
+                f"https://www.runninghub.cn/call-api/call-record-detail/{task_id}"
             )
 
         if on_progress:
