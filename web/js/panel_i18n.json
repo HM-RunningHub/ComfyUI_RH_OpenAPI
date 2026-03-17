@@ -225,7 +225,7 @@
       "RH_PixverseV55ImageToVideo": "RH PixVerse V5.5 图生视频",
       "RH_PixverseV55Transition": "RH PixVerse V5.5 转场",
       "RH_PixverseV55Effects": "RH PixVerse V5.5 特效",
-      "RH_CinematicVideoGenerator": "RH 全能视频sd2.0体验版",
+      "RH_CinematicVideoGenerator": "RH Seedance 2.0 视频生成(体验版)",
       "RHSettingsNode": "RH OpenAPI 设置"
     },
     "en": {
@@ -407,7 +407,7 @@
       "RH_PixverseV55ImageToVideo": "RH Pixverse V5.5 Image to Video",
       "RH_PixverseV55Transition": "RH Pixverse V5.5 Transition",
       "RH_PixverseV55Effects": "RH Pixverse V5.5 Effects",
-      "RH_CinematicVideoGenerator": "RH Cinematic Video Generator Sd2.0",
+      "RH_CinematicVideoGenerator": "RH Seedance 2.0 Video Generator (Trial)",
       "RHSettingsNode": "RH OpenAPI Settings"
     }
   },
