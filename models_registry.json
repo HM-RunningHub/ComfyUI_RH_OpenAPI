@@ -379,57 +379,68 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "基于原图风格，将老奶奶替换为一只年迈慈祥的猴子奶奶，她穿着格子围裙，正用香蕉制作晚餐，锅里是香蕉炖菜或香蕉泥。厨房环境保持不变：木制家具、悬挂的辣椒大蒜、陶罐、篮子里的新鲜蔬菜。窗外阳光温暖，整体氛围依旧温馨宁静。风格为手绘水彩插画，色彩柔和，细节丰富，充满家庭温情。"
+        "defaultValue": "基于原图风格，将老奶奶替换为一只年迈慈祥的猴子奶奶，她穿着格子围裙，正用香蕉制作晚餐，锅里是香蕉炖菜或香蕉泥。厨房环境保持不变：木制家具、悬挂的辣椒大蒜、陶罐、篮子里的新鲜蔬菜。窗外阳光温暖，整体氛围依旧温馨宁静。风格为手绘水彩插画，色彩柔和，细节丰富，充满家庭温情。",
+        "maxLength": 20000
       },
       {
         "fieldKey": "aspectRatio",
         "type": "LIST",
         "required": false,
         "label": "aspectRatio",
-        "description": "When the aspectRatio parameter is not provided, the image size adapts automatically.",
+        "description": "不传 aspectRatio 参数时为自适应图片尺寸",
+        "defaultValue": "3:4",
         "options": [
           {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           },
           {
             "value": "16:9",
-            "description": "16:9"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           },
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           },
           {
             "value": "4:3",
-            "description": "4:3"
+            "description": "4:3",
+            "descriptionEn": "4:3"
           },
           {
             "value": "3:4",
-            "description": "3:4"
+            "description": "3:4",
+            "descriptionEn": "3:4"
           },
           {
             "value": "3:2",
-            "description": "3:2"
+            "description": "3:2",
+            "descriptionEn": "3:2"
           },
           {
             "value": "2:3",
-            "description": "2:3"
+            "description": "2:3",
+            "descriptionEn": "2:3"
           },
           {
             "value": "5:4",
-            "description": "5:4"
+            "description": "5:4",
+            "descriptionEn": "5:4"
           },
           {
             "value": "4:5",
-            "description": "4:5"
+            "description": "4:5",
+            "descriptionEn": "4:5"
           },
           {
             "value": "21:9",
-            "description": "21:9"
+            "description": "21:9",
+            "descriptionEn": "21:9"
           }
-        ],
-        "defaultValue": "3:4"
+        ]
       },
       {
         "fieldKey": "resolution",
@@ -437,33 +448,39 @@
         "required": true,
         "label": "resolution",
         "description": "resolution",
+        "defaultValue": "1k",
         "options": [
           {
             "value": "1k",
-            "description": "1k"
+            "description": "1k",
+            "descriptionEn": "1k"
           },
           {
             "value": "2k",
-            "description": "2k"
+            "description": "2k",
+            "descriptionEn": "2k"
           },
           {
             "value": "4k",
-            "description": "4k"
+            "description": "4k",
+            "descriptionEn": "4k"
           },
           {
             "value": "1K",
-            "description": "1K"
+            "description": "1K",
+            "descriptionEn": "1K"
           },
           {
             "value": "2K",
-            "description": "2K"
+            "description": "2K",
+            "descriptionEn": "2K"
           },
           {
             "value": "4K",
-            "description": "4K"
+            "description": "4K",
+            "descriptionEn": "4K"
           }
-        ],
-        "defaultValue": "1k"
+        ]
       }
     ]
   },
@@ -690,21 +707,24 @@
         "required": true,
         "label": "resolution",
         "description": "resolution",
+        "defaultValue": "1k",
         "options": [
           {
             "value": "1k",
-            "description": "1k"
+            "description": "1k",
+            "descriptionEn": "1k"
           },
           {
             "value": "2k",
-            "description": "2k"
+            "description": "2k",
+            "descriptionEn": "2k"
           },
           {
             "value": "4k",
-            "description": "4k"
+            "description": "4k",
+            "descriptionEn": "4k"
           }
-        ],
-        "defaultValue": "1k"
+        ]
       },
       {
         "fieldKey": "prompt",
@@ -718,52 +738,62 @@
       {
         "fieldKey": "aspectRatio",
         "type": "LIST",
-        "required": true,
+        "required": false,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "3:4",
         "options": [
           {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           },
           {
             "value": "3:2",
-            "description": "3:2"
+            "description": "3:2",
+            "descriptionEn": "3:2"
           },
           {
             "value": "2:3",
-            "description": "2:3"
+            "description": "2:3",
+            "descriptionEn": "2:3"
           },
           {
             "value": "3:4",
-            "description": "3:4"
+            "description": "3:4",
+            "descriptionEn": "3:4"
           },
           {
             "value": "4:3",
-            "description": "4:3"
+            "description": "4:3",
+            "descriptionEn": "4:3"
           },
           {
             "value": "4:5",
-            "description": "4:5"
+            "description": "4:5",
+            "descriptionEn": "4:5"
           },
           {
             "value": "5:4",
-            "description": "5:4"
+            "description": "5:4",
+            "descriptionEn": "5:4"
           },
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           },
           {
             "value": "16:9",
-            "description": "16:9"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           },
           {
             "value": "21:9",
-            "description": "21:9"
+            "description": "21:9",
+            "descriptionEn": "21:9"
           }
-        ],
-        "defaultValue": "3:4"
+        ]
       }
     ]
   },
@@ -4713,33 +4743,39 @@
         "required": true,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "3:4",
         "options": [
           {
             "value": "16:9",
-            "description": "16:9"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           },
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           },
           {
             "value": "4:3",
-            "description": "4:3"
+            "description": "4:3",
+            "descriptionEn": "4:3"
           },
           {
             "value": "3:4",
-            "description": "3:4"
+            "description": "3:4",
+            "descriptionEn": "3:4"
           },
           {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           },
           {
             "value": "21:9",
-            "description": "21:9"
+            "description": "21:9",
+            "descriptionEn": "21:9"
           }
-        ],
-        "defaultValue": "3:4"
+        ]
       },
       {
         "fieldKey": "duration",
@@ -4747,45 +4783,54 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": "5",
         "options": [
           {
             "value": "4",
-            "description": "4"
+            "description": "4",
+            "descriptionEn": "4"
           },
           {
             "value": "5",
-            "description": "5"
+            "description": "5",
+            "descriptionEn": "5"
           },
           {
             "value": "6",
-            "description": "6"
+            "description": "6",
+            "descriptionEn": "6"
           },
           {
             "value": "7",
-            "description": "7"
+            "description": "7",
+            "descriptionEn": "7"
           },
           {
             "value": "8",
-            "description": "8"
+            "description": "8",
+            "descriptionEn": "8"
           },
           {
             "value": "9",
-            "description": "9"
+            "description": "9",
+            "descriptionEn": "9"
           },
           {
             "value": "10",
-            "description": "10"
+            "description": "10",
+            "descriptionEn": "10"
           },
           {
             "value": "11",
-            "description": "11"
+            "description": "11",
+            "descriptionEn": "11"
           },
           {
             "value": "12",
-            "description": "12"
+            "description": "12",
+            "descriptionEn": "12"
           }
-        ],
-        "defaultValue": "5"
+        ]
       },
       {
         "fieldKey": "resolution",
@@ -4793,21 +4838,24 @@
         "required": true,
         "label": "resolution",
         "description": "resolution",
+        "defaultValue": "720p",
         "options": [
           {
-            "value": "720p",
-            "description": "720p"
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
           },
           {
-            "value": "480p",
-            "description": "480p"
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
           },
           {
             "value": "1080p",
-            "description": "1080p"
+            "description": "1080p",
+            "descriptionEn": "1080p"
           }
-        ],
-        "defaultValue": "720p"
+        ]
       },
       {
         "fieldKey": "generateAudio",
@@ -4815,17 +4863,19 @@
         "required": true,
         "label": "generateAudio",
         "description": "generateAudio",
+        "defaultValue": "true",
         "options": [
           {
             "value": "true",
-            "description": "true"
+            "description": "true",
+            "descriptionEn": "true"
           },
           {
             "value": "false",
-            "description": "false"
+            "description": "false",
+            "descriptionEn": "false"
           }
-        ],
-        "defaultValue": "true"
+        ]
       },
       {
         "fieldKey": "cameraFixed",
@@ -4833,17 +4883,19 @@
         "required": true,
         "label": "cameraFixed",
         "description": "cameraFixed",
+        "defaultValue": "false",
         "options": [
           {
             "value": "false",
-            "description": "false"
+            "description": "false",
+            "descriptionEn": "false"
           },
           {
             "value": "true",
-            "description": "true"
+            "description": "true",
+            "descriptionEn": "true"
           }
-        ],
-        "defaultValue": "false"
+        ]
       }
     ]
   },
@@ -5027,8 +5079,6 @@
         "required": true,
         "label": "firstImageUrl",
         "description": "firstImageUrl",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       },
@@ -5038,8 +5088,6 @@
         "required": false,
         "label": "lastImageUrl",
         "description": "lastImageUrl",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       },
@@ -5049,37 +5097,44 @@
         "required": true,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "adaptive",
         "options": [
           {
             "value": "16:9",
-            "description": "16:9"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           },
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           },
           {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           },
           {
             "value": "4:3",
-            "description": "4:3"
+            "description": "4:3",
+            "descriptionEn": "4:3"
           },
           {
             "value": "3:4",
-            "description": "3:4"
+            "description": "3:4",
+            "descriptionEn": "3:4"
           },
           {
             "value": "21:9",
-            "description": "21:9"
+            "description": "21:9",
+            "descriptionEn": "21:9"
           },
           {
             "value": "adaptive",
-            "description": "auto"
+            "description": "auto",
+            "descriptionEn": "auto"
           }
-        ],
-        "defaultValue": "adaptive"
+        ]
       },
       {
         "fieldKey": "duration",
@@ -5087,45 +5142,54 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": "5",
         "options": [
           {
             "value": "4",
-            "description": "4"
+            "description": "4",
+            "descriptionEn": "4"
           },
           {
             "value": "5",
-            "description": "5"
+            "description": "5",
+            "descriptionEn": "5"
           },
           {
             "value": "6",
-            "description": "6"
+            "description": "6",
+            "descriptionEn": "6"
           },
           {
             "value": "7",
-            "description": "7"
+            "description": "7",
+            "descriptionEn": "7"
           },
           {
             "value": "8",
-            "description": "8"
+            "description": "8",
+            "descriptionEn": "8"
           },
           {
             "value": "9",
-            "description": "9"
+            "description": "9",
+            "descriptionEn": "9"
           },
           {
             "value": "10",
-            "description": "10"
+            "description": "10",
+            "descriptionEn": "10"
           },
           {
             "value": "11",
-            "description": "11"
+            "description": "11",
+            "descriptionEn": "11"
           },
           {
             "value": "12",
-            "description": "12"
+            "description": "12",
+            "descriptionEn": "12"
           }
-        ],
-        "defaultValue": "5"
+        ]
       },
       {
         "fieldKey": "resolution",
@@ -5133,21 +5197,24 @@
         "required": true,
         "label": "resolution",
         "description": "resolution",
+        "defaultValue": "720p",
         "options": [
           {
-            "value": "720p",
-            "description": "720p"
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
           },
           {
-            "value": "480p",
-            "description": "480p"
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
           },
           {
             "value": "1080p",
-            "description": "1080p"
+            "description": "1080p",
+            "descriptionEn": "1080p"
           }
-        ],
-        "defaultValue": "720p"
+        ]
       },
       {
         "fieldKey": "generateAudio",
@@ -5155,17 +5222,19 @@
         "required": true,
         "label": "generateAudio",
         "description": "generateAudio",
+        "defaultValue": "true",
         "options": [
           {
             "value": "true",
-            "description": "true"
+            "description": "true",
+            "descriptionEn": "true"
           },
           {
             "value": "false",
-            "description": "false"
+            "description": "false",
+            "descriptionEn": "false"
           }
-        ],
-        "defaultValue": "true"
+        ]
       },
       {
         "fieldKey": "cameraFixed",
@@ -5173,17 +5242,19 @@
         "required": true,
         "label": "cameraFixed",
         "description": "cameraFixed",
+        "defaultValue": "false",
         "options": [
           {
             "value": "false",
-            "description": "false"
+            "description": "false",
+            "descriptionEn": "false"
           },
           {
             "value": "true",
-            "description": "true"
+            "description": "true",
+            "descriptionEn": "true"
           }
-        ],
-        "defaultValue": "false"
+        ]
       }
     ]
   },
@@ -5843,7 +5914,7 @@
       {
         "fieldKey": "videos",
         "type": "VIDEO",
-        "required": true,
+        "required": false,
         "label": "videos",
         "description": "videos",
         "multipleInputs": true,
@@ -5857,29 +5928,34 @@
         "required": false,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "16:9",
         "options": [
           {
             "value": "16:9",
-            "description": "16:9"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           },
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           },
           {
             "value": "4:3",
-            "description": "4:3"
+            "description": "4:3",
+            "descriptionEn": "4:3"
           },
           {
             "value": "3:4",
-            "description": "3:4"
+            "description": "3:4",
+            "descriptionEn": "3:4"
           },
           {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           }
-        ],
-        "defaultValue": "16:9"
+        ]
       },
       {
         "fieldKey": "resolution",
@@ -5887,21 +5963,24 @@
         "required": false,
         "label": "resolution",
         "description": "resolution",
+        "defaultValue": "720p",
         "options": [
           {
             "value": "540p",
-            "description": "540p"
+            "description": "540p",
+            "descriptionEn": "540p"
           },
           {
             "value": "720p",
-            "description": "720p"
+            "description": "720p",
+            "descriptionEn": "720p"
           },
           {
             "value": "1080p",
-            "description": "1080p"
+            "description": "1080p",
+            "descriptionEn": "1080p"
           }
-        ],
-        "defaultValue": "720p"
+        ]
       },
       {
         "fieldKey": "duration",
@@ -5909,49 +5988,59 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": "5",
         "options": [
           {
             "value": "1",
-            "description": "1"
+            "description": "1",
+            "descriptionEn": "1"
           },
           {
             "value": "2",
-            "description": "2"
+            "description": "2",
+            "descriptionEn": "2"
           },
           {
             "value": "3",
-            "description": "3"
+            "description": "3",
+            "descriptionEn": "3"
           },
           {
             "value": "4",
-            "description": "4"
+            "description": "4",
+            "descriptionEn": "4"
           },
           {
             "value": "5",
-            "description": "5"
+            "description": "5",
+            "descriptionEn": "5"
           },
           {
             "value": "6",
-            "description": "6"
+            "description": "6",
+            "descriptionEn": "6"
           },
           {
             "value": "7",
-            "description": "7"
+            "description": "7",
+            "descriptionEn": "7"
           },
           {
             "value": "8",
-            "description": "8"
+            "description": "8",
+            "descriptionEn": "8"
           },
           {
             "value": "9",
-            "description": "9"
+            "description": "9",
+            "descriptionEn": "9"
           },
           {
             "value": "10",
-            "description": "10"
+            "description": "10",
+            "descriptionEn": "10"
           }
-        ],
-        "defaultValue": "5"
+        ]
       },
       {
         "fieldKey": "movementAmplitude",
@@ -5959,25 +6048,29 @@
         "required": false,
         "label": "movementAmplitude",
         "description": "movementAmplitude",
+        "defaultValue": "auto",
         "options": [
           {
             "value": "auto",
-            "description": "auto"
+            "description": "auto",
+            "descriptionEn": "auto"
           },
           {
             "value": "small",
-            "description": "small"
+            "description": "small",
+            "descriptionEn": "small"
           },
           {
             "value": "medium",
-            "description": "medium"
+            "description": "medium",
+            "descriptionEn": "medium"
           },
           {
             "value": "large",
-            "description": "large"
+            "description": "large",
+            "descriptionEn": "large"
           }
-        ],
-        "defaultValue": "auto"
+        ]
       }
     ]
   },
@@ -7824,7 +7917,9 @@
         "required": false,
         "label": "pronunciation_dict",
         "description": "pronunciation_dict",
-        "defaultValue": "ASAP/As soon as possible"
+        "defaultValue": "ASAP/As soon as possible",
+        "multipleInputs": true,
+        "maxInputNum": 1
       },
       {
         "fieldKey": "voice_id",
@@ -7840,10 +7935,10 @@
         "required": false,
         "label": "speed",
         "description": "speed",
+        "defaultValue": 1.0,
         "min": 0.5,
         "max": 2,
-        "step": 0.01,
-        "defaultValue": 1
+        "step": 0.01
       },
       {
         "fieldKey": "volume",
@@ -7851,10 +7946,10 @@
         "required": false,
         "label": "volume",
         "description": "volume",
+        "defaultValue": 1.0,
         "min": 0.1,
         "max": 10,
-        "step": 0.01,
-        "defaultValue": 1
+        "step": 0.01
       },
       {
         "fieldKey": "pitch",
@@ -7862,10 +7957,10 @@
         "required": false,
         "label": "pitch",
         "description": "pitch",
+        "defaultValue": 0,
         "min": -12,
         "max": 12,
-        "step": 1,
-        "defaultValue": 0
+        "step": 1
       },
       {
         "fieldKey": "emotion",
@@ -7873,37 +7968,44 @@
         "required": false,
         "label": "emotion",
         "description": "emotion",
+        "defaultValue": "happy",
         "options": [
           {
             "value": "happy",
-            "description": "happy"
+            "description": "happy",
+            "descriptionEn": "happy"
           },
           {
             "value": "sad",
-            "description": "sad"
+            "description": "sad",
+            "descriptionEn": "sad"
           },
           {
             "value": "angry",
-            "description": "angry"
+            "description": "angry",
+            "descriptionEn": "angry"
           },
           {
             "value": "fearful",
-            "description": "fearful"
+            "description": "fearful",
+            "descriptionEn": "fearful"
           },
           {
             "value": "disgusted",
-            "description": "disgusted"
+            "description": "disgusted",
+            "descriptionEn": "disgusted"
           },
           {
             "value": "surprised",
-            "description": "surprised"
+            "description": "surprised",
+            "descriptionEn": "surprised"
           },
           {
             "value": "neutral",
-            "description": "neutral"
+            "description": "neutral",
+            "descriptionEn": "neutral"
           }
-        ],
-        "defaultValue": "happy"
+        ]
       },
       {
         "fieldKey": "enable_base64_output",
@@ -7947,7 +8049,9 @@
         "required": false,
         "label": "pronunciation_dict",
         "description": "pronunciation_dict",
-        "defaultValue": "ASAP/As soon as possible"
+        "defaultValue": "ASAP/As soon as possible",
+        "multipleInputs": true,
+        "maxInputNum": 20
       },
       {
         "fieldKey": "voice_id",
@@ -7963,10 +8067,10 @@
         "required": false,
         "label": "speed",
         "description": "speed",
+        "defaultValue": 1.0,
         "min": 0.5,
         "max": 2,
-        "step": 0.01,
-        "defaultValue": 1
+        "step": 0.01
       },
       {
         "fieldKey": "volume",
@@ -7974,10 +8078,10 @@
         "required": false,
         "label": "volume",
         "description": "volume",
+        "defaultValue": 1.0,
         "min": 0.1,
         "max": 10,
-        "step": 0.01,
-        "defaultValue": 1
+        "step": 0.01
       },
       {
         "fieldKey": "pitch",
@@ -7985,10 +8089,10 @@
         "required": false,
         "label": "pitch",
         "description": "pitch",
+        "defaultValue": 0,
         "min": -12,
         "max": 12,
-        "step": 1,
-        "defaultValue": 0
+        "step": 1
       },
       {
         "fieldKey": "emotion",
@@ -7996,37 +8100,44 @@
         "required": false,
         "label": "emotion",
         "description": "emotion",
+        "defaultValue": "happy",
         "options": [
           {
             "value": "happy",
-            "description": "happy"
+            "description": "happy",
+            "descriptionEn": "happy"
           },
           {
             "value": "sad",
-            "description": "sad"
+            "description": "sad",
+            "descriptionEn": "sad"
           },
           {
             "value": "angry",
-            "description": "angry"
+            "description": "angry",
+            "descriptionEn": "angry"
           },
           {
             "value": "fearful",
-            "description": "fearful"
+            "description": "fearful",
+            "descriptionEn": "fearful"
           },
           {
             "value": "disgusted",
-            "description": "disgusted"
+            "description": "disgusted",
+            "descriptionEn": "disgusted"
           },
           {
             "value": "surprised",
-            "description": "surprised"
+            "description": "surprised",
+            "descriptionEn": "surprised"
           },
           {
             "value": "neutral",
-            "description": "neutral"
+            "description": "neutral",
+            "descriptionEn": "neutral"
           }
-        ],
-        "defaultValue": "happy"
+        ]
       },
       {
         "fieldKey": "enable_base64_output",
@@ -8070,7 +8181,9 @@
         "required": false,
         "label": "pronunciation_dict",
         "description": "pronunciation_dict",
-        "defaultValue": "ASAP/As soon as possible"
+        "defaultValue": "ASAP/As soon as possible",
+        "multipleInputs": true,
+        "maxInputNum": 20
       },
       {
         "fieldKey": "voice_id",
@@ -8086,10 +8199,10 @@
         "required": false,
         "label": "speed",
         "description": "speed",
+        "defaultValue": 1.0,
         "min": 0.5,
         "max": 2,
-        "step": 0.01,
-        "defaultValue": 1
+        "step": 0.01
       },
       {
         "fieldKey": "volume",
@@ -8097,10 +8210,10 @@
         "required": false,
         "label": "volume",
         "description": "volume",
+        "defaultValue": 1.0,
         "min": 0.1,
         "max": 10,
-        "step": 0.01,
-        "defaultValue": 1
+        "step": 0.01
       },
       {
         "fieldKey": "pitch",
@@ -8108,10 +8221,10 @@
         "required": false,
         "label": "pitch",
         "description": "pitch",
+        "defaultValue": 0,
         "min": -12,
         "max": 12,
-        "step": 1,
-        "defaultValue": 0
+        "step": 1
       },
       {
         "fieldKey": "emotion",
@@ -8119,37 +8232,44 @@
         "required": false,
         "label": "emotion",
         "description": "emotion",
+        "defaultValue": "happy",
         "options": [
           {
             "value": "happy",
-            "description": "happy"
+            "description": "happy",
+            "descriptionEn": "happy"
           },
           {
             "value": "sad",
-            "description": "sad"
+            "description": "sad",
+            "descriptionEn": "sad"
           },
           {
             "value": "angry",
-            "description": "angry"
+            "description": "angry",
+            "descriptionEn": "angry"
           },
           {
             "value": "fearful",
-            "description": "fearful"
+            "description": "fearful",
+            "descriptionEn": "fearful"
           },
           {
             "value": "disgusted",
-            "description": "disgusted"
+            "description": "disgusted",
+            "descriptionEn": "disgusted"
           },
           {
             "value": "surprised",
-            "description": "surprised"
+            "description": "surprised",
+            "descriptionEn": "surprised"
           },
           {
             "value": "neutral",
-            "description": "neutral"
+            "description": "neutral",
+            "descriptionEn": "neutral"
           }
-        ],
-        "defaultValue": "happy"
+        ]
       },
       {
         "fieldKey": "enable_base64_output",
@@ -8193,7 +8313,9 @@
         "required": false,
         "label": "pronunciation_dict",
         "description": "pronunciation_dict",
-        "defaultValue": "ASAP/As soon as possible"
+        "defaultValue": "ASAP/As soon as possible",
+        "multipleInputs": true,
+        "maxInputNum": 20
       },
       {
         "fieldKey": "voice_id",
@@ -8209,10 +8331,10 @@
         "required": false,
         "label": "speed",
         "description": "speed",
+        "defaultValue": 1.0,
         "min": 0.5,
         "max": 2,
-        "step": 0.01,
-        "defaultValue": 1
+        "step": 0.01
       },
       {
         "fieldKey": "volume",
@@ -8220,10 +8342,10 @@
         "required": false,
         "label": "volume",
         "description": "volume",
+        "defaultValue": 1.0,
         "min": 0.1,
         "max": 10,
-        "step": 0.01,
-        "defaultValue": 1
+        "step": 0.01
       },
       {
         "fieldKey": "pitch",
@@ -8231,10 +8353,10 @@
         "required": false,
         "label": "pitch",
         "description": "pitch",
+        "defaultValue": 0,
         "min": -12,
         "max": 12,
-        "step": 1,
-        "defaultValue": 0
+        "step": 1
       },
       {
         "fieldKey": "emotion",
@@ -8242,37 +8364,44 @@
         "required": false,
         "label": "emotion",
         "description": "emotion",
+        "defaultValue": "happy",
         "options": [
           {
             "value": "happy",
-            "description": "happy"
+            "description": "happy",
+            "descriptionEn": "happy"
           },
           {
             "value": "sad",
-            "description": "sad"
+            "description": "sad",
+            "descriptionEn": "sad"
           },
           {
             "value": "angry",
-            "description": "angry"
+            "description": "angry",
+            "descriptionEn": "angry"
           },
           {
             "value": "fearful",
-            "description": "fearful"
+            "description": "fearful",
+            "descriptionEn": "fearful"
           },
           {
             "value": "disgusted",
-            "description": "disgusted"
+            "description": "disgusted",
+            "descriptionEn": "disgusted"
           },
           {
             "value": "surprised",
-            "description": "surprised"
+            "description": "surprised",
+            "descriptionEn": "surprised"
           },
           {
             "value": "neutral",
-            "description": "neutral"
+            "description": "neutral",
+            "descriptionEn": "neutral"
           }
-        ],
-        "defaultValue": "happy"
+        ]
       },
       {
         "fieldKey": "enable_base64_output",
@@ -8315,7 +8444,9 @@
         "required": false,
         "label": "pronunciation_dict",
         "description": "pronunciation_dict",
-        "defaultValue": "ASAP/As soon as possible"
+        "defaultValue": "ASAP/As soon as possible",
+        "multipleInputs": true,
+        "maxInputNum": 20
       },
       {
         "fieldKey": "voice_id",
@@ -8331,10 +8462,10 @@
         "required": false,
         "label": "speed",
         "description": "speed",
+        "defaultValue": 1.0,
         "min": 0.5,
         "max": 2,
-        "step": 0.01,
-        "defaultValue": 1
+        "step": 0.01
       },
       {
         "fieldKey": "volume",
@@ -8342,10 +8473,10 @@
         "required": false,
         "label": "volume",
         "description": "volume",
+        "defaultValue": 1.0,
         "min": 0.1,
         "max": 10,
-        "step": 0.01,
-        "defaultValue": 1
+        "step": 0.01
       },
       {
         "fieldKey": "pitch",
@@ -8353,10 +8484,10 @@
         "required": false,
         "label": "pitch",
         "description": "pitch",
+        "defaultValue": 0,
         "min": -12,
         "max": 12,
-        "step": 1,
-        "defaultValue": 0
+        "step": 1
       },
       {
         "fieldKey": "emotion",
@@ -8364,37 +8495,44 @@
         "required": false,
         "label": "emotion",
         "description": "emotion",
+        "defaultValue": "happy",
         "options": [
           {
             "value": "happy",
-            "description": "happy"
+            "description": "happy",
+            "descriptionEn": "happy"
           },
           {
             "value": "sad",
-            "description": "sad"
+            "description": "sad",
+            "descriptionEn": "sad"
           },
           {
             "value": "angry",
-            "description": "angry"
+            "description": "angry",
+            "descriptionEn": "angry"
           },
           {
             "value": "fearful",
-            "description": "fearful"
+            "description": "fearful",
+            "descriptionEn": "fearful"
           },
           {
             "value": "disgusted",
-            "description": "disgusted"
+            "description": "disgusted",
+            "descriptionEn": "disgusted"
           },
           {
             "value": "surprised",
-            "description": "surprised"
+            "description": "surprised",
+            "descriptionEn": "surprised"
           },
           {
             "value": "neutral",
-            "description": "neutral"
+            "description": "neutral",
+            "descriptionEn": "neutral"
           }
-        ],
-        "defaultValue": "happy"
+        ]
       },
       {
         "fieldKey": "enable_base64_output",
@@ -8438,7 +8576,9 @@
         "required": false,
         "label": "pronunciation_dict",
         "description": "pronunciation_dict",
-        "defaultValue": "ASAP/As soon as possible"
+        "defaultValue": "ASAP/As soon as possible",
+        "multipleInputs": true,
+        "maxInputNum": 20
       },
       {
         "fieldKey": "voice_id",
@@ -8454,10 +8594,10 @@
         "required": false,
         "label": "speed",
         "description": "speed",
+        "defaultValue": 1.0,
         "min": 0.5,
         "max": 2,
-        "step": 0.01,
-        "defaultValue": 1
+        "step": 0.01
       },
       {
         "fieldKey": "volume",
@@ -8465,10 +8605,10 @@
         "required": false,
         "label": "volume",
         "description": "volume",
+        "defaultValue": 1.0,
         "min": 0.1,
         "max": 10,
-        "step": 0.01,
-        "defaultValue": 1
+        "step": 0.01
       },
       {
         "fieldKey": "pitch",
@@ -8476,10 +8616,10 @@
         "required": false,
         "label": "pitch",
         "description": "pitch",
+        "defaultValue": 0,
         "min": -12,
         "max": 12,
-        "step": 1,
-        "defaultValue": 0
+        "step": 1
       },
       {
         "fieldKey": "emotion",
@@ -8487,37 +8627,44 @@
         "required": false,
         "label": "emotion",
         "description": "emotion",
+        "defaultValue": "happy",
         "options": [
           {
             "value": "happy",
-            "description": "happy"
+            "description": "happy",
+            "descriptionEn": "happy"
           },
           {
             "value": "sad",
-            "description": "sad"
+            "description": "sad",
+            "descriptionEn": "sad"
           },
           {
             "value": "angry",
-            "description": "angry"
+            "description": "angry",
+            "descriptionEn": "angry"
           },
           {
             "value": "fearful",
-            "description": "fearful"
+            "description": "fearful",
+            "descriptionEn": "fearful"
           },
           {
             "value": "disgusted",
-            "description": "disgusted"
+            "description": "disgusted",
+            "descriptionEn": "disgusted"
           },
           {
             "value": "surprised",
-            "description": "surprised"
+            "description": "surprised",
+            "descriptionEn": "surprised"
           },
           {
             "value": "neutral",
-            "description": "neutral"
+            "description": "neutral",
+            "descriptionEn": "neutral"
           }
-        ],
-        "defaultValue": "happy"
+        ]
       },
       {
         "fieldKey": "enable_base64_output",
@@ -9178,9 +9325,8 @@
         "required": false,
         "label": "imageUrls",
         "description": "imageUrls",
-        "defaultValue": "https://www.runninghub.cn/view?filename=1c35849fb2547490f25c08dfecb2dbc587e720a4698eca9a4643c2a654d5c59d.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzA5OTk0NDgwNTYsInRzIjoxNzcwMzk0NjQ4MDU2LCJzaWduIjoiNTNlY2U4YTY5OWRmMjA0OTE4YjE4NDVkMDFlNTU5OWEifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.79992383645995",
         "multipleInputs": true,
-        "maxInputNum": 1,
+        "maxInputNum": 7,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       },
@@ -10683,8 +10829,6 @@
         "required": true,
         "label": "audio",
         "description": "audio",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"MP3\",\"WAV\"]",
         "maxSize": 10
       },
@@ -10693,7 +10837,7 @@
         "type": "STRING",
         "required": true,
         "label": "custom_voice_id",
-        "description": "Hint: Custom user-defined ID: Must be at least 8 characters long, starting with a letter, and include both letters and numbers (e.g., RH-20250717-1050). Duplicate voice IDs will result in an error. This ID can be used with the following models:minimax/speech-02-hd minimax/speech-02-turbo",
+        "description": "自定义用户定义 ID：必须至少有 8 个字符，以字母开头，并包括字母和数字（例如，RH-20250717-1050）。重复的语音 ID 将导致错误。此 ID 可用于以下型号：minimax/speech-02-hd minimax/speech-02-turbo",
         "defaultValue": "Elegant_Man"
       },
       {
@@ -10701,7 +10845,7 @@
         "type": "STRING",
         "required": true,
         "label": "text",
-        "description": "Hello! Welcome to RunningHub! This is a preview of your cloned voice. I hope you enjoy it!",
+        "description": "你好！欢迎来到 RunningHub！这是您克隆的声音预览。希望您喜欢！",
         "defaultValue": "基于 Speech-02 与最新 Speech 2.6 HD/Turbo 系列打造的尖端声纹克隆引擎。它仅需数秒音频样本即可实现高保真的零样本（Zero-shot）克隆，精准复刻目标说话人的音色、口音与独特的叙事风格。"
       },
       {
@@ -10710,10 +10854,10 @@
         "required": false,
         "label": "accuracy",
         "description": "accuracy",
+        "defaultValue": 0.7,
         "min": 0,
         "max": 1,
-        "step": 0.1,
-        "defaultValue": 0.7
+        "step": 0.1
       },
       {
         "fieldKey": "need_noise_reduction",
@@ -10736,141 +10880,182 @@
         "type": "LIST",
         "required": true,
         "label": "model",
-        "description": "Specify the TTS model to be used for the preview. This is only a preview after cloning. Once the model is generated, any Minimax Turbo or HD voice model can be used for inference.",
+        "description": "指定用于预览的 TTS 模型。这只是克隆后的预览。模型生成后，任何 Minimax Turbo 或 HD 语音模型都可用于推理。",
+        "defaultValue": "speech-02-hd",
         "options": [
           {
             "value": "speech-02-hd",
-            "description": "speech-02-hd"
+            "description": "speech-02-hd",
+            "descriptionEn": "speech-02-hd"
           },
           {
             "value": "speech-02-turbo",
-            "description": "speech-02-turbo"
+            "description": "speech-02-turbo",
+            "descriptionEn": "speech-02-turbo"
           },
           {
             "value": "speech-2.5-hd-preview",
-            "description": "speech-2.5-hd-preview"
+            "description": "speech-2.5-hd-preview",
+            "descriptionEn": "speech-2.5-hd-preview"
           },
           {
             "value": "speech-2.5-turbo-preview",
-            "description": "speech-2.5-turbo-preview"
+            "description": "speech-2.5-turbo-preview",
+            "descriptionEn": "speech-2.5-turbo-preview"
           },
           {
             "value": "speech-2.6-hd",
-            "description": "speech-2.6-hd"
+            "description": "speech-2.6-hd",
+            "descriptionEn": "speech-2.6-hd"
           },
           {
             "value": "speech-2.6-turbo",
-            "description": "speech-2.6-turbo"
+            "description": "speech-2.6-turbo",
+            "descriptionEn": "speech-2.6-turbo"
+          },
+          {
+            "value": "speech-2.8-turbo",
+            "description": "speech-2.8-turbo",
+            "descriptionEn": "speech-2.8-turbo"
+          },
+          {
+            "value": "speech-2.8-hd",
+            "description": "speech-2.8-hd",
+            "descriptionEn": "speech-2.8-hd"
           }
-        ],
-        "defaultValue": "speech-02-hd"
+        ]
       },
       {
         "fieldKey": "language_boost",
         "type": "LIST",
         "required": false,
         "label": "language_boost",
-        "description": "Enhance the ability to recognize specified languages and dialects",
+        "description": "增强对指定语言和方言的识别能力",
         "options": [
           {
             "value": "Chinese",
-            "description": "Chinese"
+            "description": "Chinese",
+            "descriptionEn": "Chinese"
           },
           {
             "value": "Chinese,Yue",
-            "description": "Chinese,Yue"
+            "description": "Chinese,Yue",
+            "descriptionEn": "Chinese,Yue"
           },
           {
             "value": "English",
-            "description": "English"
+            "description": "English",
+            "descriptionEn": "English"
           },
           {
             "value": "Arabic",
-            "description": "Arabic"
+            "description": "Arabic",
+            "descriptionEn": "Arabic"
           },
           {
             "value": "Russian",
-            "description": "Russian"
+            "description": "Russian",
+            "descriptionEn": "Russian"
           },
           {
             "value": "Spanish",
-            "description": "Spanish"
+            "description": "Spanish",
+            "descriptionEn": "Spanish"
           },
           {
             "value": "French",
-            "description": "French"
+            "description": "French",
+            "descriptionEn": "French"
           },
           {
             "value": "Portuguese",
-            "description": "Portuguese"
+            "description": "Portuguese",
+            "descriptionEn": "Portuguese"
           },
           {
             "value": "German",
-            "description": "German"
+            "description": "German",
+            "descriptionEn": "German"
           },
           {
             "value": "Turkish",
-            "description": "Turkish"
+            "description": "Turkish",
+            "descriptionEn": "Turkish"
           },
           {
             "value": "Dutch",
-            "description": "Dutch"
+            "description": "Dutch",
+            "descriptionEn": "Dutch"
           },
           {
             "value": "Ukrainian",
-            "description": "Ukrainian"
+            "description": "Ukrainian",
+            "descriptionEn": "Ukrainian"
           },
           {
             "value": "Vietnamese",
-            "description": "Vietnamese"
+            "description": "Vietnamese",
+            "descriptionEn": "Vietnamese"
           },
           {
             "value": "Indonesian",
-            "description": "Indonesian"
+            "description": "Indonesian",
+            "descriptionEn": "Indonesian"
           },
           {
             "value": "Japanese",
-            "description": "Japanese"
+            "description": "Japanese",
+            "descriptionEn": "Japanese"
           },
           {
             "value": "Italian",
-            "description": "Italian"
+            "description": "Italian",
+            "descriptionEn": "Italian"
           },
           {
             "value": "Korean",
-            "description": "Korean"
+            "description": "Korean",
+            "descriptionEn": "Korean"
           },
           {
             "value": "Thai",
-            "description": "Thai"
+            "description": "Thai",
+            "descriptionEn": "Thai"
           },
           {
             "value": "Polish",
-            "description": "Polish"
+            "description": "Polish",
+            "descriptionEn": "Polish"
           },
           {
             "value": "Romanian",
-            "description": "Romanian"
+            "description": "Romanian",
+            "descriptionEn": "Romanian"
           },
           {
             "value": "Greek",
-            "description": "Greek"
+            "description": "Greek",
+            "descriptionEn": "Greek"
           },
           {
             "value": "Czech",
-            "description": "Czech"
+            "description": "Czech",
+            "descriptionEn": "Czech"
           },
           {
             "value": "Finnish",
-            "description": "Finnish"
+            "description": "Finnish",
+            "descriptionEn": "Finnish"
           },
           {
             "value": "Hindi",
-            "description": "Hindi"
+            "description": "Hindi",
+            "descriptionEn": "Hindi"
           },
           {
             "value": "auto",
-            "description": "auto"
+            "description": "auto",
+            "descriptionEn": "auto"
           }
         ]
       }
@@ -11902,11 +12087,10 @@
         "required": true,
         "label": "imageUrls",
         "description": "imageUrls",
-        "defaultValue": "https://www.runninghub.cn/view?filename=174ba2c54b8af1fdd5a01370049dd6407a693d8b05b4717079698e87680e038e.png&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzI3NjM5NDg5OTQsInRzIjoxNzcyMTU5MTQ4OTk0LCJzaWduIjoiNjAxNWY0MjI2NzI2Yzk0YTFkOTExNjg2NGRkZmU2ZTAifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.8958046627705756",
         "multipleInputs": true,
         "maxInputNum": 10,
         "accept": "[\"JPG\",\"PNG\"]",
-        "maxSize": 10
+        "maxSize": 30
       },
       {
         "fieldKey": "prompt",
@@ -12513,7 +12697,7 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "夏夜街头大排档，灯火通明，食客围坐吃烧烤、喝啤酒。厨师在炭火烤架前翻动羊肉串和鸡翅，火星四溅，烟雾缭绕。桌上摆满烤串、毛豆、小龙虾和玻璃瓶啤酒，背景是霓虹灯与穿梭的电动车。氛围热闹喧哗，烟火气十足，真实摄影风格，暖色调。"
+        "defaultValue": "冬日清晨早餐铺，蒸汽升腾，顾客排队等热豆浆、油条。摊主在油锅前翻炸麻团和油条，油花翻滚，香气弥漫。桌上摆满豆腐脑、小笼包、茶叶蛋，背景是来往的自行车和电动车。氛围忙碌温馨，生活气息浓厚，纪实摄影风格，冷调暖光交织。"
       },
       {
         "fieldKey": "size",
@@ -12523,11 +12707,6 @@
         "description": "size",
         "defaultValue": "1024*1024",
         "options": [
-          {
-            "value": "auto",
-            "description": "auto",
-            "descriptionEn": "auto"
-          },
           {
             "value": "1024*1024",
             "description": "1024*1024",
@@ -12588,7 +12767,7 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "夏夜街头大排档，灯火通明，食客围坐吃烧烤、喝啤酒。厨师在炭火烤架前翻动羊肉串和鸡翅，火星四溅，烟雾缭绕。桌上摆满烤串、毛豆、小龙虾和玻璃瓶啤酒，背景是霓虹灯与穿梭的电动车。氛围热闹喧哗，烟火气十足，真实摄影风格，暖色调。"
+        "defaultValue": "晴空骤然转阴，暴雨倾盆而下，雨帘密集模糊远景。前景三人慌忙应对：一人双手护头起身找伞，一人紧抱书本蜷缩遮挡，第三人拽起餐布试图保护食物。雨水在地面溅起水花，打湿的头发贴在脸上，衣物迅速浸透变色，背景树木在风雨中剧烈摇晃，整体氛围狼狈慌乱，却带着夏日阵雨的即兴趣味，真实摄影风格，冷灰色调。"
       },
       {
         "fieldKey": "imageUrls",
@@ -12597,7 +12776,7 @@
         "label": "imageUrls",
         "description": "imageUrls",
         "multipleInputs": true,
-        "maxInputNum": 1,
+        "maxInputNum": 10,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 50
       },
@@ -13846,12 +14025,9 @@
       {
         "fieldKey": "videoUrl",
         "type": "VIDEO",
-        "required": true,
+        "required": false,
         "label": "videoUrl",
         "description": "The video URL. Video duration can not be longer than 10s.",
-        "defaultValue": "https://www.runninghub.cn/view?filename=27441819c3a0aac4150ade4eb4d2e1aa1ce34fda0580839fc6bee4240954aa5d.mp4&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzEwNTE3NDYyMDcsInRzIjoxNzcwNDQ2OTQ2MjA3LCJzaWduIjoiM2Q0NTczNTUzMmUyNGJmNjczMzk5NjBmNDliNGJkYTMifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.8032385821652667",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"MP4\"]",
         "maxSize": 50
       },
@@ -13861,7 +14037,6 @@
         "required": false,
         "label": "imageUrls",
         "description": "imageUrls",
-        "defaultValue": "https://www.runninghub.cn/view?filename=2ddabe87fbbc255fbfd176c49c7660eb45adf61b38f6e554cfe5944192bd2f86.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzEwNTE3NDYyMDcsInRzIjoxNzcwNDQ2OTQ2MjA3LCJzaWduIjoiM2Q0NTczNTUzMmUyNGJmNjczMzk5NjBmNDliNGJkYTMifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.4817534481980411",
         "multipleInputs": true,
         "maxInputNum": 7,
         "accept": "[\"JPG\",\"PNG\"]",
@@ -13878,10 +14053,10 @@
       {
         "fieldKey": "sound",
         "type": "BOOLEAN",
-        "required": true,
+        "required": false,
         "label": "sound",
         "description": "sound",
-        "defaultValue": true
+        "defaultValue": false
       },
       {
         "fieldKey": "aspectRatio",
@@ -13943,12 +14118,9 @@
       {
         "fieldKey": "videoUrl",
         "type": "VIDEO",
-        "required": true,
+        "required": false,
         "label": "videoUrl",
         "description": "The video URL. Video duration can not be longer than 10s.",
-        "defaultValue": "https://www.runninghub.cn/view?filename=e0d96e940fe24a2381b2e5f5eb2fe45dcb90bd40ea253f47b2902b1f0d929486.mp4&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzEwNjg4Njg2NTksInRzIjoxNzcwNDY0MDY4NjU5LCJzaWduIjoiMDM3YThhMjU0MWJhN2M5Y2IwYmU3MGJjOWRhOTUwM2QifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.3217910824967488",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"MP4\"]",
         "maxSize": 50
       },
@@ -13958,7 +14130,6 @@
         "required": false,
         "label": "imageUrls",
         "description": "imageUrls",
-        "defaultValue": "https://www.runninghub.cn/view?filename=c07e37eb45b827c8b0b6b2c7428ef202b9ab70613845ddf66b4a9921b40ba250.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzEwNjgxNzU3NTcsInRzIjoxNzcwNDYzMzc1NzU3LCJzaWduIjoiYmU0OTljOGVkZDA3YmFkODc1ZGY4Nzc3NDIwMzhlNTUifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.9645205288406946",
         "multipleInputs": true,
         "maxInputNum": 7,
         "accept": "[\"JPG\",\"PNG\"]",
@@ -13975,10 +14146,10 @@
       {
         "fieldKey": "sound",
         "type": "BOOLEAN",
-        "required": true,
+        "required": false,
         "label": "sound",
         "description": "sound",
-        "defaultValue": true
+        "defaultValue": false
       },
       {
         "fieldKey": "aspectRatio",
@@ -14131,15 +14302,19 @@
         "fieldKey": "requestType",
         "type": "LIST",
         "required": true,
-        "label": "Request Type",
-        "description": "Output type: mesh or both",
+        "label": "requestType",
+        "description": "请求类型，mesh：仅生成纯几何；both：一次性生成几何+纹理模型；默认为几何",
         "defaultValue": "mesh",
         "options": [
           {
-            "value": "mesh"
+            "value": "mesh",
+            "description": "mesh（仅生成纯几何）",
+            "descriptionEn": "mesh (geometry only)"
           },
           {
-            "value": "both"
+            "value": "both",
+            "description": "both（一次性生成几何+纹理模型）",
+            "descriptionEn": "both (geometry + texture)"
           }
         ]
       },
@@ -14147,28 +14322,38 @@
         "fieldKey": "imageUrl",
         "type": "IMAGE",
         "required": true,
-        "label": "Image",
-        "description": "Input image for 3D generation"
+        "label": "imageUrl",
+        "description": "上传图像，模型将以此参数中传入的图片来生成3D模型",
+        "accept": "[\"PNG\",\"JPEG\",\"JPG\",\"WEBP\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "resolution",
         "type": "LIST",
         "required": true,
-        "label": "Resolution",
-        "description": "Output resolution",
+        "label": "resolution",
+        "description": "resolution",
         "defaultValue": "1024",
         "options": [
           {
-            "value": "512"
+            "value": "512",
+            "description": "512",
+            "descriptionEn": "512"
           },
           {
-            "value": "1024"
+            "value": "1024",
+            "description": "1024",
+            "descriptionEn": "1024"
           },
           {
-            "value": "1536"
+            "value": "1536",
+            "description": "1536",
+            "descriptionEn": "1536"
           },
           {
-            "value": "1536pro"
+            "value": "1536pro",
+            "description": "1536pro",
+            "descriptionEn": "1536pro"
           }
         ]
       },
@@ -14176,8 +14361,8 @@
         "fieldKey": "face",
         "type": "INT",
         "required": false,
-        "label": "Face Count",
-        "description": "Target face count",
+        "label": "face",
+        "description": "模型面数，取值范围100000~2000000，推荐：512：500000；1024：1000000；1536：2000000；1536Pro：2000000",
         "defaultValue": 1000000,
         "min": 100000,
         "max": 2000000,
@@ -14199,15 +14384,19 @@
         "fieldKey": "requestType",
         "type": "LIST",
         "required": true,
-        "label": "Request Type",
-        "description": "Output type: mesh or both",
+        "label": "requestType",
+        "description": "请求类型，mesh：仅生成纯几何；both：一次性生成几何+纹理模型；默认为几何",
         "defaultValue": "mesh",
         "options": [
           {
-            "value": "mesh"
+            "value": "mesh",
+            "description": "mesh（仅生成纯几何）",
+            "descriptionEn": "mesh (geometry only)"
           },
           {
-            "value": "both"
+            "value": "both",
+            "description": "both（一次性生成几何+纹理模型）",
+            "descriptionEn": "both (geometry + texture)"
           }
         ]
       },
@@ -14215,22 +14404,28 @@
         "fieldKey": "imageUrl",
         "type": "IMAGE",
         "required": true,
-        "label": "Image",
-        "description": "Input image for 3D generation"
+        "label": "imageUrl",
+        "description": "上传图像，模型将以此参数中传入的图片来生成3D模型",
+        "accept": "[\"PNG\",\"JPEG\",\"JPG\",\"WEBP\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "resolution",
         "type": "LIST",
         "required": true,
-        "label": "Resolution",
-        "description": "Output resolution",
+        "label": "resolution",
+        "description": "resolution",
         "defaultValue": "1536",
         "options": [
           {
-            "value": "1536"
+            "value": "1536",
+            "description": "1536",
+            "descriptionEn": "1536"
           },
           {
-            "value": "1536pro"
+            "value": "1536pro",
+            "description": "1536pro",
+            "descriptionEn": "1536pro"
           }
         ]
       },
@@ -14238,8 +14433,8 @@
         "fieldKey": "face",
         "type": "INT",
         "required": false,
-        "label": "Face Count",
-        "description": "Target face count",
+        "label": "face",
+        "description": "模型面数，取值范围100000~2000000，推荐：1536：2000000；1536Pro：2000000",
         "defaultValue": 1000000,
         "min": 100000,
         "max": 2000000,
@@ -14261,15 +14456,19 @@
         "fieldKey": "requestType",
         "type": "LIST",
         "required": true,
-        "label": "Request Type",
-        "description": "Output type: mesh or both",
+        "label": "requestType",
+        "description": "请求类型，mesh：仅生成纯几何；both：一次性生成几何+纹理模型；默认为几何",
         "defaultValue": "mesh",
         "options": [
           {
-            "value": "mesh"
+            "value": "mesh",
+            "description": "mesh（仅生成纯几何）",
+            "descriptionEn": "mesh (geometry only)"
           },
           {
-            "value": "both"
+            "value": "both",
+            "description": "both（一次性生成几何+纹理模型）",
+            "descriptionEn": "both (geometry + texture)"
           }
         ]
       },
@@ -14277,49 +14476,65 @@
         "fieldKey": "frontImageUrl",
         "type": "IMAGE",
         "required": true,
-        "label": "Front Image",
-        "description": "Front view image"
+        "label": "frontImageUrl",
+        "description": "frontImageUrl",
+        "accept": "[\"PNG\",\"JPEG\",\"JPG\",\"WEBP\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "backImageUrl",
         "type": "IMAGE",
         "required": false,
-        "label": "Back Image",
-        "description": "Back view image"
+        "label": "backImageUrl",
+        "description": "backImageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "leftImageUrl",
         "type": "IMAGE",
         "required": false,
-        "label": "Left Image",
-        "description": "Left view image"
+        "label": "leftImageUrl",
+        "description": "leftImageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "rightImageUrl",
         "type": "IMAGE",
         "required": false,
-        "label": "Right Image",
-        "description": "Right view image"
+        "label": "rightImageUrl",
+        "description": "rightImageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "resolution",
         "type": "LIST",
         "required": true,
-        "label": "Resolution",
-        "description": "Output resolution",
+        "label": "resolution",
+        "description": "resolution",
         "defaultValue": "1024",
         "options": [
           {
-            "value": "512"
+            "value": "512",
+            "description": "512",
+            "descriptionEn": "512"
           },
           {
-            "value": "1024"
+            "value": "1024",
+            "description": "1024",
+            "descriptionEn": "1024"
           },
           {
-            "value": "1536"
+            "value": "1536",
+            "description": "1536",
+            "descriptionEn": "1536"
           },
           {
-            "value": "1536pro"
+            "value": "1536pro",
+            "description": "1536pro",
+            "descriptionEn": "1536pro"
           }
         ]
       },
@@ -14327,8 +14542,8 @@
         "fieldKey": "face",
         "type": "INT",
         "required": false,
-        "label": "Face Count",
-        "description": "Target face count",
+        "label": "face",
+        "description": "模型面数，取值范围100000~2000000，推荐：512：500000；1024：1000000；1536：2000000；1536Pro：2000000",
         "defaultValue": 1000000,
         "min": 100000,
         "max": 2000000,
@@ -14350,15 +14565,19 @@
         "fieldKey": "requestType",
         "type": "LIST",
         "required": true,
-        "label": "Request Type",
-        "description": "Output type: mesh or both",
+        "label": "requestType",
+        "description": "请求类型，mesh：仅生成纯几何；both：一次性生成几何+纹理模型；默认为几何",
         "defaultValue": "mesh",
         "options": [
           {
-            "value": "mesh"
+            "value": "mesh",
+            "description": "mesh（仅生成纯几何）",
+            "descriptionEn": "mesh (geometry only)"
           },
           {
-            "value": "both"
+            "value": "both",
+            "description": "both（一次性生成几何+纹理模型）",
+            "descriptionEn": "both (geometry + texture)"
           }
         ]
       },
@@ -14366,43 +14585,55 @@
         "fieldKey": "frontImageUrl",
         "type": "IMAGE",
         "required": true,
-        "label": "Front Image",
-        "description": "Front view image"
+        "label": "frontImageUrl",
+        "description": "frontImageUrl",
+        "accept": "[\"PNG\",\"JPEG\",\"JPG\",\"WEBP\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "backImageUrl",
         "type": "IMAGE",
         "required": false,
-        "label": "Back Image",
-        "description": "Back view image"
+        "label": "backImageUrl",
+        "description": "backImageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "leftImageUrl",
         "type": "IMAGE",
         "required": false,
-        "label": "Left Image",
-        "description": "Left view image"
+        "label": "leftImageUrl",
+        "description": "leftImageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "rightImageUrl",
         "type": "IMAGE",
         "required": false,
-        "label": "Right Image",
-        "description": "Right view image"
+        "label": "rightImageUrl",
+        "description": "rightImageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "resolution",
         "type": "LIST",
         "required": true,
-        "label": "Resolution",
-        "description": "Output resolution",
+        "label": "resolution",
+        "description": "resolution",
         "defaultValue": "1536",
         "options": [
           {
-            "value": "1536"
+            "value": "1536",
+            "description": "1536",
+            "descriptionEn": "1536"
           },
           {
-            "value": "1536pro"
+            "value": "1536pro",
+            "description": "1536pro",
+            "descriptionEn": "1536pro"
           }
         ]
       },
@@ -14410,8 +14641,8 @@
         "fieldKey": "face",
         "type": "INT",
         "required": false,
-        "label": "Face Count",
-        "description": "Target face count",
+        "label": "face",
+        "description": "模型面数，取值范围100000~2000000，推荐：1536：2000000；1536Pro：2000000",
         "defaultValue": 1000000,
         "min": 100000,
         "max": 2000000,
@@ -14433,15 +14664,19 @@
         "fieldKey": "requestType",
         "type": "LIST",
         "required": true,
-        "label": "Request Type",
-        "description": "Output type: mesh or both",
+        "label": "requestType",
+        "description": "请求类型，mesh：仅生成纯几何；both：一次性生成几何+纹理模型；默认为几何",
         "defaultValue": "mesh",
         "options": [
           {
-            "value": "mesh"
+            "value": "mesh",
+            "description": "mesh（仅生成纯几何）",
+            "descriptionEn": "mesh (geometry only)"
           },
           {
-            "value": "both"
+            "value": "both",
+            "description": "both（一次性生成几何+纹理模型）",
+            "descriptionEn": "both (geometry + texture)"
           }
         ]
       },
@@ -14449,19 +14684,23 @@
         "fieldKey": "imageUrl",
         "type": "IMAGE",
         "required": true,
-        "label": "Image",
-        "description": "Input portrait image"
+        "label": "imageUrl",
+        "description": "上传图像，模型将以此参数中传入的图片来生成3D模型",
+        "accept": "[\"PNG\",\"JPEG\",\"JPG\",\"WEBP\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "resolution",
         "type": "LIST",
         "required": true,
-        "label": "Resolution",
-        "description": "Output resolution",
+        "label": "resolution",
+        "description": "resolution",
         "defaultValue": "1536pro",
         "options": [
           {
-            "value": "1536pro"
+            "value": "1536pro",
+            "description": "1536pro",
+            "descriptionEn": "1536pro"
           }
         ]
       },
@@ -14469,8 +14708,8 @@
         "fieldKey": "face",
         "type": "INT",
         "required": false,
-        "label": "Face Count",
-        "description": "Target face count",
+        "label": "face",
+        "description": "模型面数，取值范围100000~2000000，推荐：1536Pro：2000000",
         "defaultValue": 2000000,
         "min": 100000,
         "max": 2000000,
@@ -14492,15 +14731,19 @@
         "fieldKey": "requestType",
         "type": "LIST",
         "required": true,
-        "label": "Request Type",
-        "description": "Output type: mesh or both",
+        "label": "requestType",
+        "description": "请求类型，mesh：仅生成纯几何；both：一次性生成几何+纹理模型；默认为几何",
         "defaultValue": "mesh",
         "options": [
           {
-            "value": "mesh"
+            "value": "mesh",
+            "description": "mesh（仅生成纯几何）",
+            "descriptionEn": "mesh (geometry only)"
           },
           {
-            "value": "both"
+            "value": "both",
+            "description": "both（一次性生成几何+纹理模型）",
+            "descriptionEn": "both (geometry + texture)"
           }
         ]
       },
@@ -14508,40 +14751,50 @@
         "fieldKey": "frontImageUrl",
         "type": "IMAGE",
         "required": true,
-        "label": "Front Image",
-        "description": "Front view image"
+        "label": "frontImageUrl",
+        "description": "frontImageUrl",
+        "accept": "[\"PNG\",\"JPEG\",\"JPG\",\"WEBP\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "backImageUrl",
         "type": "IMAGE",
         "required": false,
-        "label": "Back Image",
-        "description": "Back view image"
+        "label": "backImageUrl",
+        "description": "backImageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "leftImageUrl",
         "type": "IMAGE",
         "required": false,
-        "label": "Left Image",
-        "description": "Left view image"
+        "label": "leftImageUrl",
+        "description": "leftImageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "rightImageUrl",
         "type": "IMAGE",
         "required": false,
-        "label": "Right Image",
-        "description": "Right view image"
+        "label": "rightImageUrl",
+        "description": "rightImageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "resolution",
         "type": "LIST",
         "required": true,
-        "label": "Resolution",
-        "description": "Output resolution",
+        "label": "resolution",
+        "description": "resolution",
         "defaultValue": "1536pro",
         "options": [
           {
-            "value": "1536pro"
+            "value": "1536pro",
+            "description": "1536pro",
+            "descriptionEn": "1536pro"
           }
         ]
       },
@@ -14549,8 +14802,8 @@
         "fieldKey": "face",
         "type": "INT",
         "required": false,
-        "label": "Face Count",
-        "description": "Target face count",
+        "label": "face",
+        "description": "模型面数，取值范围100000~2000000，推荐：1536Pro：2000000",
         "defaultValue": 2000000,
         "min": 100000,
         "max": 2000000,
@@ -14572,15 +14825,19 @@
         "fieldKey": "requestType",
         "type": "LIST",
         "required": true,
-        "label": "Request Type",
-        "description": "Output type: mesh or both",
+        "label": "requestType",
+        "description": "请求类型，mesh：仅生成纯几何；both：一次性生成几何+纹理模型；默认为几何",
         "defaultValue": "mesh",
         "options": [
           {
-            "value": "mesh"
+            "value": "mesh",
+            "description": "mesh（仅生成纯几何）",
+            "descriptionEn": "mesh (geometry only)"
           },
           {
-            "value": "both"
+            "value": "both",
+            "description": "both（一次性生成几何+纹理模型）",
+            "descriptionEn": "both (geometry + texture)"
           }
         ]
       },
@@ -14588,19 +14845,23 @@
         "fieldKey": "imageUrl",
         "type": "IMAGE",
         "required": true,
-        "label": "Image",
-        "description": "Input portrait image"
+        "label": "imageUrl",
+        "description": "上传图像，模型将以此参数中传入的图片来生成3D模型",
+        "accept": "[\"PNG\",\"JPEG\",\"JPG\",\"WEBP\"]",
+        "maxSize": 10
       },
       {
         "fieldKey": "resolution",
         "type": "LIST",
         "required": true,
-        "label": "Resolution",
-        "description": "Output resolution",
+        "label": "resolution",
+        "description": "resolution",
         "defaultValue": "1536pro",
         "options": [
           {
-            "value": "1536pro"
+            "value": "1536pro",
+            "description": "1536pro",
+            "descriptionEn": "1536pro"
           }
         ]
       },
@@ -14608,8 +14869,8 @@
         "fieldKey": "face",
         "type": "INT",
         "required": false,
-        "label": "Face Count",
-        "description": "Target face count",
+        "label": "face",
+        "description": "模型面数，取值范围100000~2000000，推荐：1536Pro：2000000",
         "defaultValue": 2000000,
         "min": 100000,
         "max": 2000000,
@@ -14631,15 +14892,19 @@
         "fieldKey": "requestType",
         "type": "LIST",
         "required": true,
-        "label": "Request Type",
-        "description": "Output type: mesh or both",
+        "label": "requestType",
+        "description": "请求类型，mesh：仅生成纯几何；both：一次性生成几何+纹理模型；默认为几何",
         "defaultValue": "mesh",
         "options": [
           {
-            "value": "mesh"
+            "value": "mesh",
+            "description": "mesh（仅生成纯几何）",
+            "descriptionEn": "mesh (geometry only)"
           },
           {
-            "value": "both"
+            "value": "both",
+            "description": "both（一次性生成几何+纹理模型）",
+            "descriptionEn": "both (geometry + texture)"
           }
         ]
       },
@@ -14647,40 +14912,50 @@
         "fieldKey": "frontImageUrl",
         "type": "IMAGE",
         "required": true,
-        "label": "Front Image",
-        "description": "Front view image"
+        "label": "frontImageUrl",
+        "description": "frontImageUrl",
+        "accept": "[\"PNG\",\"JPEG\",\"JPG\",\"WEBP\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "backImageUrl",
         "type": "IMAGE",
         "required": false,
-        "label": "Back Image",
-        "description": "Back view image"
+        "label": "backImageUrl",
+        "description": "backImageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "leftImageUrl",
         "type": "IMAGE",
         "required": false,
-        "label": "Left Image",
-        "description": "Left view image"
+        "label": "leftImageUrl",
+        "description": "leftImageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "rightImageUrl",
         "type": "IMAGE",
         "required": false,
-        "label": "Right Image",
-        "description": "Right view image"
+        "label": "rightImageUrl",
+        "description": "rightImageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "resolution",
         "type": "LIST",
         "required": true,
-        "label": "Resolution",
-        "description": "Output resolution",
+        "label": "resolution",
+        "description": "resolution",
         "defaultValue": "1536pro",
         "options": [
           {
-            "value": "1536pro"
+            "value": "1536pro",
+            "description": "1536pro",
+            "descriptionEn": "1536pro"
           }
         ]
       },
@@ -14688,8 +14963,8 @@
         "fieldKey": "face",
         "type": "INT",
         "required": false,
-        "label": "Face Count",
-        "description": "Target face count",
+        "label": "face",
+        "description": "模型面数，取值范围100000~2000000，推荐：1536Pro：2000000",
         "defaultValue": 2000000,
         "min": 100000,
         "max": 2000000,
@@ -14711,15 +14986,19 @@
         "fieldKey": "requestType",
         "type": "LIST",
         "required": true,
-        "label": "Request Type",
-        "description": "Output type: mesh or both",
+        "label": "requestType",
+        "description": "请求类型，mesh：仅生成纯几何；both：一次性生成几何+纹理模型；默认为几何",
         "defaultValue": "mesh",
         "options": [
           {
-            "value": "mesh"
+            "value": "mesh",
+            "description": "mesh（仅生成纯几何）",
+            "descriptionEn": "mesh (geometry only)"
           },
           {
-            "value": "both"
+            "value": "both",
+            "description": "both（一次性生成几何+纹理模型）",
+            "descriptionEn": "both (geometry + texture)"
           }
         ]
       },
@@ -14727,19 +15006,23 @@
         "fieldKey": "imageUrl",
         "type": "IMAGE",
         "required": true,
-        "label": "Image",
-        "description": "Input portrait image"
+        "label": "imageUrl",
+        "description": "上传图像，模型将以此参数中传入的图片来生成3D模型",
+        "accept": "[\"PNG\",\"JPEG\",\"JPG\",\"WEBP\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "resolution",
         "type": "LIST",
         "required": true,
-        "label": "Resolution",
-        "description": "Output resolution",
+        "label": "resolution",
+        "description": "resolution",
         "defaultValue": "1536",
         "options": [
           {
-            "value": "1536"
+            "value": "1536",
+            "description": "1536",
+            "descriptionEn": "1536"
           }
         ]
       },
@@ -14747,8 +15030,8 @@
         "fieldKey": "face",
         "type": "INT",
         "required": false,
-        "label": "Face Count",
-        "description": "Target face count",
+        "label": "face",
+        "description": "模型面数，取值范围100000~2000000，推荐：1536：2000000",
         "defaultValue": 2000000,
         "min": 100000,
         "max": 2000000,
@@ -14770,15 +15053,19 @@
         "fieldKey": "requestType",
         "type": "LIST",
         "required": true,
-        "label": "Request Type",
-        "description": "Output type: mesh or both",
+        "label": "requestType",
+        "description": "请求类型，mesh：仅生成纯几何；both：一次性生成几何+纹理模型；默认为几何",
         "defaultValue": "mesh",
         "options": [
           {
-            "value": "mesh"
+            "value": "mesh",
+            "description": "mesh（仅生成纯几何）",
+            "descriptionEn": "mesh (geometry only)"
           },
           {
-            "value": "both"
+            "value": "both",
+            "description": "both（一次性生成几何+纹理模型）",
+            "descriptionEn": "both (geometry + texture)"
           }
         ]
       },
@@ -14786,40 +15073,50 @@
         "fieldKey": "frontImageUrl",
         "type": "IMAGE",
         "required": true,
-        "label": "Front Image",
-        "description": "Front view image"
+        "label": "frontImageUrl",
+        "description": "前视图",
+        "accept": "[\"PNG\",\"JPEG\",\"JPG\",\"WEBP\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "backImageUrl",
         "type": "IMAGE",
         "required": false,
-        "label": "Back Image",
-        "description": "Back view image"
+        "label": "backImageUrl",
+        "description": "后视图",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "leftImageUrl",
         "type": "IMAGE",
         "required": false,
-        "label": "Left Image",
-        "description": "Left view image"
+        "label": "leftImageUrl",
+        "description": "左视图",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "rightImageUrl",
         "type": "IMAGE",
         "required": false,
-        "label": "Right Image",
-        "description": "Right view image"
+        "label": "rightImageUrl",
+        "description": "右视图",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 20
       },
       {
         "fieldKey": "resolution",
         "type": "LIST",
         "required": true,
-        "label": "Resolution",
-        "description": "Output resolution",
+        "label": "resolution",
+        "description": "resolution",
         "defaultValue": "1536",
         "options": [
           {
-            "value": "1536"
+            "value": "1536",
+            "description": "1536",
+            "descriptionEn": "1536"
           }
         ]
       },
@@ -14827,8 +15124,8 @@
         "fieldKey": "face",
         "type": "INT",
         "required": false,
-        "label": "Face Count",
-        "description": "Target face count",
+        "label": "face",
+        "description": "模型面数，取值范围100000~2000000，推荐：1536：2000000",
         "defaultValue": 2000000,
         "min": 100000,
         "max": 2000000,
@@ -14850,72 +15147,96 @@
         "fieldKey": "prompt",
         "type": "STRING",
         "required": true,
-        "label": "Prompt",
-        "description": "Text prompt for video generation",
-        "defaultValue": ""
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "核心指令： 使用上传的视频作为环境、光影和车辆参考。使用上传的线稿图片作为人物参考。 画面风格： 电影感，超写实，好莱坞大片美学。将线稿人物完全转化为具有真实皮肤纹理的写实人类，并完美融入日落光影。 剧情动作序列： 图片中扎着高马尾、带着匕首的年轻女子，已经坐在了悬崖边红色敞篷跑车的驾驶座上。 环境保持原视频中绝美的海岸日落和不断拍打的海浪。 她眼神坚毅，启动了引擎。跑车的车灯猛地亮起，照亮了前方的崎岖土路。 随着她一脚踩下油门，镜头产生动态的跟随感，她驾驶着红色跑车沿着海岸悬崖公路向前加速开走，在暮色中扬起一阵尘土。"
       },
       {
         "fieldKey": "negativePrompt",
         "type": "STRING",
         "required": false,
-        "label": "Negative Prompt",
-        "description": "Negative prompt"
+        "label": "negativePrompt",
+        "description": "negativePrompt"
       },
       {
         "fieldKey": "videoUrls",
         "type": "VIDEO",
         "required": false,
-        "label": "Reference Video",
-        "description": "Reference video(s)",
+        "label": "videoUrls",
+        "description": "Reference videos for subject consistency (0-3 videos).Combined with image_urls, total references cannot exceed 5. Reference order: video_urls are numbered first (Character1, Character2...), then image_urls continue the sequence.",
         "multipleInputs": true,
-        "maxInputNum": 3
+        "maxInputNum": 3,
+        "accept": "[\"MP4\",\"MOV\"]",
+        "maxSize": 100
       },
       {
         "fieldKey": "imageUrls",
         "type": "IMAGE",
         "required": false,
-        "label": "Reference Images",
-        "description": "Reference image(s)",
+        "label": "imageUrls",
+        "description": "Reference images for subject consistency (0-5 images). Combined with video_urls, total references cannot exceed 5. Reference order: image_urls continue numbering after video_urls.",
         "multipleInputs": true,
-        "maxInputNum": 5
+        "maxInputNum": 5,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
       },
       {
         "fieldKey": "size",
         "type": "LIST",
         "required": true,
-        "label": "Size",
-        "description": "Output video size",
+        "label": "size",
+        "description": "size",
         "defaultValue": "1920*1080",
         "options": [
           {
-            "value": "1280*720"
+            "value": "1280*720",
+            "description": "1280*720",
+            "descriptionEn": "1280*720"
           },
           {
-            "value": "720*1280"
+            "value": "720*1280",
+            "description": "720*1280",
+            "descriptionEn": "720*1280"
           },
           {
-            "value": "960*960"
+            "value": "960*960",
+            "description": "960*960",
+            "descriptionEn": "960*960"
           },
           {
-            "value": "1088*832"
+            "value": "1088*832",
+            "description": "1088*832",
+            "descriptionEn": "1088*832"
           },
           {
-            "value": "832*1088"
+            "value": "832*1088",
+            "description": "832*1088",
+            "descriptionEn": "832*1088"
           },
           {
-            "value": "1920*1080"
+            "value": "1920*1080",
+            "description": "1920*1080",
+            "descriptionEn": "1920*1080"
           },
           {
-            "value": "1080*1920"
+            "value": "1080*1920",
+            "description": "1080*1920",
+            "descriptionEn": "1080*1920"
           },
           {
-            "value": "1440*1440"
+            "value": "1440*1440",
+            "description": "1440*1440",
+            "descriptionEn": "1440*1440"
           },
           {
-            "value": "1632*1248"
+            "value": "1632*1248",
+            "description": "1632*1248",
+            "descriptionEn": "1632*1248"
           },
           {
-            "value": "1248*1632"
+            "value": "1248*1632",
+            "description": "1248*1632",
+            "descriptionEn": "1248*1632"
           }
         ]
       },
@@ -14923,36 +15244,54 @@
         "fieldKey": "duration",
         "type": "LIST",
         "required": true,
-        "label": "Duration",
-        "description": "Video duration in seconds",
+        "label": "duration",
+        "description": "duration",
         "defaultValue": "5",
         "options": [
           {
-            "value": "2"
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
           },
           {
-            "value": "3"
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
           },
           {
-            "value": "4"
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
           },
           {
-            "value": "5"
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
           },
           {
-            "value": "6"
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
           },
           {
-            "value": "7"
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
           },
           {
-            "value": "8"
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
           },
           {
-            "value": "9"
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
           },
           {
-            "value": "10"
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
           }
         ]
       },
@@ -14960,15 +15299,19 @@
         "fieldKey": "shotType",
         "type": "LIST",
         "required": false,
-        "label": "Shot Type",
-        "description": "Single or multi shot",
+        "label": "shotType",
+        "description": "shotType",
         "defaultValue": "single",
         "options": [
           {
-            "value": "single"
+            "value": "single",
+            "description": "single",
+            "descriptionEn": "single"
           },
           {
-            "value": "multi"
+            "value": "multi",
+            "description": "multi",
+            "descriptionEn": "multi"
           }
         ]
       },
@@ -14976,8 +15319,8 @@
         "fieldKey": "audio",
         "type": "BOOLEAN",
         "required": true,
-        "label": "Audio",
-        "description": "Enable audio generation",
+        "label": "audio",
+        "description": "audio",
         "defaultValue": true
       }
     ],
@@ -14996,72 +15339,96 @@
         "fieldKey": "prompt",
         "type": "STRING",
         "required": true,
-        "label": "Prompt",
-        "description": "Text prompt for video generation",
-        "defaultValue": ""
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "character1 坐在靠窗的椅子上，手持 character2，在演奏一首舒缓的美国乡村民谣。"
       },
       {
         "fieldKey": "negativePrompt",
         "type": "STRING",
         "required": false,
-        "label": "Negative Prompt",
-        "description": "Negative prompt"
+        "label": "negativePrompt",
+        "description": "negativePrompt"
       },
       {
         "fieldKey": "videoUrls",
         "type": "VIDEO",
         "required": false,
-        "label": "Reference Video",
-        "description": "Reference video(s)",
+        "label": "videoUrls",
+        "description": "Reference videos for subject consistency (0-3 videos).Combined with image_urls, total references cannot exceed 5. Reference order: video_urls are numbered first (Character1, Character2...), then image_urls continue the sequence.",
         "multipleInputs": true,
-        "maxInputNum": 3
+        "maxInputNum": 3,
+        "accept": "[\"MP4\",\"MOV\"]",
+        "maxSize": 100
       },
       {
         "fieldKey": "imageUrls",
         "type": "IMAGE",
         "required": false,
-        "label": "Reference Images",
-        "description": "Reference image(s)",
+        "label": "imageUrls",
+        "description": "Reference images for subject consistency (0-5 images). Combined with video_urls, total references cannot exceed 5. Reference order: image_urls continue numbering after video_urls.",
         "multipleInputs": true,
-        "maxInputNum": 5
+        "maxInputNum": 5,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
       },
       {
         "fieldKey": "size",
         "type": "LIST",
         "required": true,
-        "label": "Size",
-        "description": "Output video size",
+        "label": "size",
+        "description": "size",
         "defaultValue": "1920*1080",
         "options": [
           {
-            "value": "1280*720"
+            "value": "1280*720",
+            "description": "1280*720",
+            "descriptionEn": "1280*720"
           },
           {
-            "value": "720*1280"
+            "value": "720*1280",
+            "description": "720*1280",
+            "descriptionEn": "720*1280"
           },
           {
-            "value": "960*960"
+            "value": "960*960",
+            "description": "960*960",
+            "descriptionEn": "960*960"
           },
           {
-            "value": "1088*832"
+            "value": "1088*832",
+            "description": "1088*832",
+            "descriptionEn": "1088*832"
           },
           {
-            "value": "832*1088"
+            "value": "832*1088",
+            "description": "832*1088",
+            "descriptionEn": "832*1088"
           },
           {
-            "value": "1920*1080"
+            "value": "1920*1080",
+            "description": "1920*1080",
+            "descriptionEn": "1920*1080"
           },
           {
-            "value": "1080*1920"
+            "value": "1080*1920",
+            "description": "1080*1920",
+            "descriptionEn": "1080*1920"
           },
           {
-            "value": "1440*1440"
+            "value": "1440*1440",
+            "description": "1440*1440",
+            "descriptionEn": "1440*1440"
           },
           {
-            "value": "1632*1248"
+            "value": "1632*1248",
+            "description": "1632*1248",
+            "descriptionEn": "1632*1248"
           },
           {
-            "value": "1248*1632"
+            "value": "1248*1632",
+            "description": "1248*1632",
+            "descriptionEn": "1248*1632"
           }
         ]
       },
@@ -15069,36 +15436,54 @@
         "fieldKey": "duration",
         "type": "LIST",
         "required": true,
-        "label": "Duration",
-        "description": "Video duration in seconds",
+        "label": "duration",
+        "description": "duration",
         "defaultValue": "5",
         "options": [
           {
-            "value": "2"
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
           },
           {
-            "value": "3"
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
           },
           {
-            "value": "4"
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
           },
           {
-            "value": "5"
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
           },
           {
-            "value": "6"
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
           },
           {
-            "value": "7"
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
           },
           {
-            "value": "8"
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
           },
           {
-            "value": "9"
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
           },
           {
-            "value": "10"
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
           }
         ]
       },
@@ -15106,15 +15491,19 @@
         "fieldKey": "shotType",
         "type": "LIST",
         "required": false,
-        "label": "Shot Type",
-        "description": "Single or multi shot",
+        "label": "shotType",
+        "description": "shotType",
         "defaultValue": "single",
         "options": [
           {
-            "value": "single"
+            "value": "single",
+            "description": "single",
+            "descriptionEn": "single"
           },
           {
-            "value": "multi"
+            "value": "multi",
+            "description": "multi",
+            "descriptionEn": "multi"
           }
         ]
       }
@@ -15137,14 +15526,16 @@
         "type": "STRING",
         "required": true,
         "label": "name",
-        "description": "Name for the element (e.g., \"Work Suit\", \"Main Character\")"
+        "description": "Name for the element (e.g., \"Work Suit\", \"Main Character\")",
+        "defaultValue": "灰色羊毛商务西装"
       },
       {
         "fieldKey": "description",
         "type": "STRING",
         "required": true,
         "label": "description",
-        "description": "Description of the element's visual characteristics"
+        "description": "Description of the element's visual characteristics",
+        "defaultValue": "精选女士商务西装，采用混纺灰格纹羊毛面料。单排扣西装外套，翻领设计，配两颗黑色纽扣，腰部与胸部设有翻盖口袋。同色系直筒裤装。面料呈现细腻人字纹纹理。专业极简风格，适合职场环境。中性色系：灰、黑、白。"
       },
       {
         "fieldKey": "imageUrl",
@@ -15667,6 +16058,7 @@
         "required": false,
         "label": "prompt",
         "description": "正向提示词，描述期望生成的图像内容、风格和构图。支持中英文，每个汉字、字母、数字或符号计为一个字符。仅支持传入一个text。",
+        "defaultValue": "阳光海滩场景，广角镜头，浅景深，黄金时段光线。一位年轻女士身着飘逸亚麻吊带裙，赤脚立于细沙之上，回眸展露温暖笑容。波浪长发随风轻扬，宽檐草帽随意后戴。身后碧蓝海浪与棕榈叶虚化出奶油般散景。抓拍风格海滩摄影，暖色调，高动态范围。中景略低角度， 海岸优雅气质。",
         "maxLength": 800
       },
       {
@@ -15835,6 +16227,7 @@
         "required": true,
         "label": "prompt",
         "description": "正向提示词，描述期望生成的图像内容、风格和构图。支持中英文，每个汉字、字母、数字或符号计为一个字符。仅支持传入一个text。",
+        "defaultValue": "金色的阳光从地平线破晓而出，将温暖的定向光投射在海岸线上。高动态范围，色彩对比鲜明——饱和的湛蓝天空与被阳光晒得发白的沙滩以及深邃的碧绿海水形成鲜明对比。湿漉漉的表面有着硬朗的阴影和明亮的高光。广角构图，35 毫米镜头的视角。营造出令人向往的度假胜地美学和地中海休闲文化。",
         "maxLength": 800
       },
       {
@@ -17207,6 +17600,351 @@
             "value": "15",
             "description": "15秒",
             "descriptionEn": "15 seconds"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartVideoRGen4TurboOfficialImageToVideo",
+    "internal_name": "RH_RhartVideoRGen4TurboOfficialImageToVideo",
+    "display_name": "RH 全能视频R/gen4-turbo/图生视频-官方稳定版",
+    "name_cn": "全能视频R/gen4-turbo/图生视频-官方稳定版",
+    "name_en": "runwayml/gen4-turbo/image-to-video-official-stable",
+    "endpoint": "rhart-video-r/gen4-turbo-official/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "描述视频中的运动和动作",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "输入图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "视频画面比例（留空则匹配原图）",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartVideoRGen4AlephOfficialVideoToVideo",
+    "internal_name": "RH_RhartVideoRGen4AlephOfficialVideoToVideo",
+    "display_name": "RH 全能视频R-gen4-aleph/视频编辑-官方稳定版",
+    "name_cn": "全能视频R-gen4-aleph/视频编辑-官方稳定版",
+    "name_en": "runwayml/gen4-aleph/video-to-video-official-stable",
+    "endpoint": "rhart-video-r/gen4-aleph-official/video-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "描述你想要的编辑效果",
+        "defaultValue": "将视频中的人物替换成图片中的人物",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "输入视频（仅使用前5秒）",
+        "accept": "[\"MP4\"]",
+        "maxSize": 16
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "视频画面比例",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          }
+        ]
+      },
+      {
+        "fieldKey": "referenceImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "referenceImageUrl",
+        "description": "参考图片（引导风格方向）",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      }
+    ]
+  },
+  {
+    "class_name": "RhartVideoLtx2ImageToVideo",
+    "internal_name": "RH_RhartVideoLtx2ImageToVideo",
+    "display_name": "RH ltx-2-19b/image-to-video-lora",
+    "name_cn": "ltx-2-19b/image-to-video-lora",
+    "name_en": "ltx-2-19b/image-to-video-lora",
+    "endpoint": "rhart-video/ltx-2/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": []
+  },
+  {
+    "class_name": "RhartVideoRGen4TurboImageToVideo",
+    "internal_name": "RH_RhartVideoRGen4TurboImageToVideo",
+    "display_name": "RH 全能视频R/gen4-turbo/图生视频-低价渠道版",
+    "name_cn": "全能视频R/gen4-turbo/图生视频-低价渠道版",
+    "name_en": "runwayml/gen4-turbo/image-to-video-channel-low-price",
+    "endpoint": "rhart-video-r/gen4-turbo/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "字符串(≤1000字符)，详细描述期望在视频中出现的内容",
+        "maxLength": 1000
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "视频首帧图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长",
+        "defaultValue": "10",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "视频画面比例",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "SkyreelsV4TextToVideo",
+    "internal_name": "RH_SkyreelsV4TextToVideo",
+    "display_name": "RH SkyReels V4 文生视频",
+    "name_cn": "SkyReels V4 文生视频",
+    "name_en": "skyreels-v4/text-to-video",
+    "endpoint": "skyreels-v4/text-to-video",
+    "output_type": "video",
+    "category": "RunningHub/SkyReels",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "描述视频内容的文本提示词",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "sound",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "sound",
+        "description": "是否生成视频音效",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长（秒）",
+        "defaultValue": 5,
+        "min": 3,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "视频画面比例",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          }
+        ]
+      },
+      {
+        "fieldKey": "mode",
+        "type": "LIST",
+        "required": false,
+        "label": "mode",
+        "description": "mode",
+        "defaultValue": "std",
+        "options": [
+          {
+            "value": "std",
+            "description": "std",
+            "descriptionEn": "std"
           }
         ]
       }

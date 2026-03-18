@@ -513,7 +513,7 @@
     "display_name": "RH Vidu Reference to Video Q3"
   },
   "RH_SeedanceVideoRefToVideo": {
-    "display_name": "RH Seedance 2.0 Video Ref to Video (Trial)"
+    "display_name": "RH Seedance 2.0 Video Ref to Video Trial"
   },
   "RH_AlibabaQwenImage20ProTextToImage": {
     "display_name": "RH Qwen Image 2.0 PRO Text to Image"
@@ -534,7 +534,22 @@
     "display_name": "RH Pixverse V5.5 Effects"
   },
   "RH_CinematicVideoGenerator": {
-    "display_name": "RH Seedance 2.0 Video Generator (Trial)"
+    "display_name": "RH Seedance 2.0 Video Generator Trial"
+  },
+  "RH_RhartVideoRGen4TurboOfficialImageToVideo": {
+    "display_name": "RH Runwayml Gen4 Turbo Image to Video Official Stable"
+  },
+  "RH_RhartVideoRGen4AlephOfficialVideoToVideo": {
+    "display_name": "RH Runwayml Gen4 Aleph Video to Video Official Stable"
+  },
+  "RH_RhartVideoLtx2ImageToVideo": {
+    "display_name": "RH Ltx 2 19b Image to Video Lora"
+  },
+  "RH_RhartVideoRGen4TurboImageToVideo": {
+    "display_name": "RH Runwayml Gen4 Turbo Image to Video Channel Low Price"
+  },
+  "RH_SkyreelsV4TextToVideo": {
+    "display_name": "RH Skyreels V4 Text to Video"
   },
   "RHSettingsNode": {
     "display_name": "RH OpenAPI Settings"
