@@ -33,7 +33,7 @@ WEB_DIRECTORY = "./web"
 _UPPER_WORDS = {
     "hd", "cgi", "3d", "ai", "gpt", "xai", "q2", "q3",
     "pro", "std", "v1", "v2", "v3", "v4", "v5", "v6", "v7",
-    "i2v", "t2v",
+    "i2v", "t2v", "sd2.0",
 }
 _LOWER_WORDS = {"to", "of", "and", "the", "a"}
 

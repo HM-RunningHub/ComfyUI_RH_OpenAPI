@@ -1,18 +1,18 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-184-blue)
+![Nodes](https://img.shields.io/badge/Nodes-192-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 **English** | [中文](README.md)
 
 **ComfyUI_RH_OpenAPI** is a **1:1 ComfyUI implementation** of the [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api).
 
-RunningHub provides 184 standard model APIs covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. This project converts every API endpoint into a corresponding ComfyUI node, enabling you to access all RunningHub model capabilities directly within ComfyUI workflows — no local GPU required, zero cold-start latency.
+RunningHub provides 192 standard model APIs covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. This project converts every API endpoint into a corresponding ComfyUI node, enabling you to access all RunningHub model capabilities directly within ComfyUI workflows — no local GPU required, zero cold-start latency.
 
 ## 📌 Features
 
-- **Full Coverage** — 184 ComfyUI nodes, mapping 1:1 to [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api)
+- **Full Coverage** — 192 ComfyUI nodes, mapping 1:1 to [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api)
 - **Plug & Play** — No model downloads, no GPU needed — just an API Key
 - **Dynamic Registration** — Nodes are auto-generated from a JSON registry; adding new models requires only a registry update
 - **Media Support** — Automatic upload/download/conversion for images, videos, and audio, seamlessly integrated with ComfyUI native types
@@ -24,7 +24,7 @@ RunningHub provides 184 standard model APIs covering image generation, video gen
 
 ## 🎨 Supported Models
 
-### Image Generation (44 Nodes)
+### Image Generation (46 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
@@ -37,9 +37,10 @@ RunningHub provides 184 standard model APIs covering image generation, video gen
 | Qwen Image 2.0 / 2.0 Pro (Alibaba) | 千问 | Text-to-Image, Image Editing | 4 |
 | TopazLabs | — | Image Upscale: Standard V2 / Low Res V2 / CGI / High Fidelity V2 / Text Refine | 5 |
 | Seedream v4 / v4.5 / v5 Lite (ByteDance) | — | Text-to-Image, Image-to-Image | 6 |
+| FLUX Dev (Black Forest Labs) | — | Text-to-Image, Text-to-Image LoRA | 2 |
 | Midjourney | 悠船 | Text-to-Image v6/v6.1/niji6/niji7/v7 | 5 |
 
-### Video Generation (106 Nodes)
+### Video Generation (112 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
@@ -53,9 +54,9 @@ RunningHub provides 184 standard model APIs covering image generation, video gen
 | Seedance v1.5 (ByteDance) | — | Text/Image-to-Video, Fast, Reference-to-Video | 5 |
 | DreamActor V2 (ByteDance) | — | Digital Human Video Generation | 1 |
 | Runway Gen-4 Turbo / Aleph | 全能视频R | Image-to-Video, Video Editing | 3 |
-| LTX-2 19B (Lightricks) | — | Image-to-Video | 1 |
+| LTX-2 19B (Lightricks) | — | Text-to-Video LoRA | 1 |
 | PixVerse v5.5 | — | Text/Image-to-Video, Transition, Effects | 4 |
-| SkyReels V4 (Kunlun) | — | Text-to-Video | 1 |
+| SkyReels V3/V4 (Kunlun) | — | Text/Image-to-Video, Reference, Restyling, Video Extension | 7 |
 | TopazLabs | — | Video Enhancement & Upscaling | 1 |
 
 ### Text Understanding (12 Nodes)
@@ -134,14 +135,14 @@ cp config/.env.example config/.env
 
 ### Example Workflows
 
-The project includes 184 example workflow JSON files in the `examples/` directory, covering every model node. Download and import directly into ComfyUI.
+The project includes 192 example workflow JSON files in the `examples/` directory, covering every model node. Download and import directly into ComfyUI.
 
 ## 📁 Project Structure
 
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # Entry point, registers all nodes
-├── models_registry.json     # Model registry (184 model definitions)
+├── models_registry.json     # Model registry (192 model definitions)
 ├── config/
 │   └── .env.example         # Configuration template
 ├── core/                    # Core infrastructure
@@ -155,7 +156,7 @@ ComfyUI_RH_OpenAPI/
 ├── nodes/                   # Node implementations
 │   ├── settings_node.py     # RH OpenAPI Settings node
 │   └── node_factory.py      # Dynamic node factory
-└── examples/                # 184 example workflows
+└── examples/                # 192 example workflows
 ```
 
 ## 🔧 Architecture

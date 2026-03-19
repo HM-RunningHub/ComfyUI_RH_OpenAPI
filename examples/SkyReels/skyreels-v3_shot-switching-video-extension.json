@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "type": "RH_RhartVideoLtx2ImageToVideo",
+      "type": "RH_SkyreelsV3ShotSwitchingVideoExtension",
       "pos": [
         500,
         100
@@ -50,6 +50,11 @@
       "order": 1,
       "mode": 0,
       "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": null
+        },
         {
           "name": "api_config",
           "type": "RH_OPENAPI_CONFIG",
@@ -79,10 +84,10 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "RH_RhartVideoLtx2ImageToVideo"
+        "Node name for S&R": "RH_SkyreelsV3ShotSwitchingVideoExtension"
       },
       "widgets_values": [],
-      "title": "RH ltx-2-19b/image-to-video-lora"
+      "title": "RH SkyReels V3 视频续写（镜头切换）"
     },
     {
       "id": 3,
@@ -101,10 +106,10 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "Example: RH ltx-2-19b/image-to-video-lora\nEndpoint: /rhart-video/ltx-2/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
+        "text": "Example: RH SkyReels V3 视频续写（镜头切换）\nEndpoint: /skyreels-v3/shot-switching-video-extension\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - video (VIDEO)"
       },
       "widgets_values": [
-        "Example: RH ltx-2-19b/image-to-video-lora\nEndpoint: /rhart-video/ltx-2/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
+        "Example: RH SkyReels V3 视频续写（镜头切换）\nEndpoint: /skyreels-v3/shot-switching-video-extension\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - video (VIDEO)"
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -145,7 +150,7 @@
       1,
       0,
       2,
-      0,
+      1,
       "RH_OPENAPI_CONFIG"
     ],
     [

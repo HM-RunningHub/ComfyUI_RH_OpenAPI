@@ -38,6 +38,9 @@ def upload_file(
     if isinstance(file_content, BytesIO):
         file_content = file_content.getvalue()
 
+    content_size = len(file_content) if isinstance(file_content, bytes) else 0
+    _log(logger_prefix, f"Upload -> {filename} ({mime_type}, {content_size / 1024:.1f} KB)")
+
     files = {"file": (filename, file_content, mime_type)}
 
     last_error = None
@@ -71,8 +74,10 @@ def upload_file(
 
             download_url = (data.get("data") or {}).get("download_url")
             if not download_url:
+                _log(logger_prefix, f"  Upload response (no download_url): {str(data)[:300]}")
                 raise RuntimeError("No download_url in response")
 
+            _log(logger_prefix, f"  Upload success: {download_url[:200]}")
             return download_url
 
         except requests.exceptions.RequestException as e:

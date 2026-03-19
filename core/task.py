@@ -25,6 +25,32 @@ def _log(prefix: str, msg: str):
     print(f"[{prefix}] {msg}")
 
 
+def _truncate_value(v, max_len: int = 200):
+    """Truncate long string values for log readability."""
+    s = str(v)
+    return s if len(s) <= max_len else s[:max_len] + f"...({len(s)} chars)"
+
+
+def _sanitize_payload(payload: dict, max_val_len: int = 200) -> dict:
+    """Create a log-safe copy: truncate long values, mask sensitive fields."""
+    safe = {}
+    for k, v in payload.items():
+        if isinstance(v, str):
+            safe[k] = _truncate_value(v, max_val_len)
+        elif isinstance(v, dict):
+            safe[k] = _sanitize_payload(v, max_val_len)
+        elif isinstance(v, list):
+            safe[k] = [
+                _truncate_value(item, max_val_len) if isinstance(item, str)
+                else _sanitize_payload(item, max_val_len) if isinstance(item, dict)
+                else item
+                for item in v
+            ]
+        else:
+            safe[k] = v
+    return safe
+
+
 MAX_SUBMIT_RETRIES = 3
 
 
@@ -74,6 +100,9 @@ def submit(
         "Authorization": f"Bearer {api_key}",
     }
 
+    _log(logger_prefix, f"Submit -> POST {endpoint}")
+    _log(logger_prefix, f"  Payload: {json.dumps(_sanitize_payload(payload), ensure_ascii=False)}")
+
     last_error = None
     for attempt in range(max_retries):
         if attempt > 0:
@@ -122,8 +151,10 @@ def submit(
 
         task_id = data.get("taskId") or data.get("task_id")
         if not task_id:
+            _log(logger_prefix, f"  Response (no taskId): {json.dumps(data, ensure_ascii=False)[:500]}")
             raise RuntimeError("Submit failed: No task ID in response")
 
+        _log(logger_prefix, f"  Success: taskId={task_id}")
         return str(task_id)
 
     raise last_error or RuntimeError(f"Submit failed after {max_retries} attempts")
@@ -151,9 +182,12 @@ def poll(
     }
     payload = {"taskId": task_id}
 
+    _log(logger_prefix, f"Poll -> taskId={task_id}, interval={polling_interval}s, max={max_polling_time}s")
+
     start_time = time.time()
     iteration = 0
     consecutive_failures = 0
+    last_status = ""
 
     while True:
         elapsed = time.time() - start_time
@@ -214,11 +248,16 @@ def poll(
         err_code = data.get("errorCode") or data.get("error_code") or ""
         err_msg = data.get("errorMessage") or data.get("error_message") or ""
         if err_code or err_msg:
+            _log(logger_prefix, f"  Poll error response: errorCode={err_code}, errorMessage={err_msg[:200]}")
             raise RuntimeError(
                 f"Task failed: {err_msg or f'Error code {err_code}'} [errorCode: {err_code}, taskId: {task_id}]"
             )
 
         status = (data.get("status") or "").strip().upper()
+
+        if status != last_status:
+            _log(logger_prefix, f"  Poll #{iteration}: status={status} ({int(elapsed)}s elapsed)")
+            last_status = status
 
         if status == STATUS_SUCCESS:
             results = data.get("results") or []
@@ -240,6 +279,10 @@ def poll(
 
             result_items = urls if urls else texts
 
+            _log(logger_prefix, f"  Poll complete: {len(urls)} url(s), {len(texts)} text(s), {int(elapsed)}s total")
+            for i, item in enumerate(result_items):
+                _log(logger_prefix, f"    result[{i}]: {_truncate_value(item, 300)}")
+
             if on_progress:
                 try:
                     on_progress(100)
@@ -248,11 +291,14 @@ def poll(
             return result_items, data
 
         if status == STATUS_FAILED:
+            _log(logger_prefix, f"  Task FAILED: {err_msg or 'no message'} [errorCode: {err_code}]")
+            _log(logger_prefix, f"  Full response: {json.dumps(data, ensure_ascii=False)[:500]}")
             raise RuntimeError(
                 f"Task failed: {err_msg or 'Task failed'} [errorCode: {err_code}, taskId: {task_id}]"
             )
 
         if status == STATUS_CANCEL:
+            _log(logger_prefix, f"  Task CANCELLED")
             raise RuntimeError(f"Task was cancelled [taskId: {task_id}]")
 
         if status and status not in (STATUS_CREATE, STATUS_QUEUED, STATUS_RUNNING):

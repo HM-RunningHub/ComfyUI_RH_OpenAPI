@@ -16495,12 +16495,12 @@
   {
     "class_name": "SeedanceVideoRefToVideo",
     "internal_name": "RH_SeedanceVideoRefToVideo",
-    "display_name": "RH Seedance 2.0 视频参考生视频(体验版)",
-    "name_cn": "Seedance 2.0 视频参考生视频(体验版)",
-    "name_en": "seedance-2.0/video-ref-to-video-trial",
+    "display_name": "RH SD2.0 视频参考生视频(体验版)",
+    "name_cn": "SD2.0 视频参考生视频(体验版)",
+    "name_en": "sd2.0/video-ref-to-video-trial",
     "endpoint": "bytedance/dreamactor-v2",
     "output_type": "video",
-    "category": "RunningHub/Seedance",
+    "category": "RunningHub/RHArt Video",
     "params": [
       {
         "fieldKey": "imageUrl",
@@ -17521,12 +17521,12 @@
   {
     "class_name": "CinematicVideoGenerator",
     "internal_name": "RH_CinematicVideoGenerator",
-    "display_name": "RH Seedance 2.0 视频生成(体验版)",
-    "name_cn": "Seedance 2.0 视频生成(体验版)",
-    "name_en": "seedance-2.0/video-generator-trial",
+    "display_name": "RH SD2.0 视频生成(体验版)",
+    "name_cn": "SD2.0 视频生成(体验版)",
+    "name_en": "sd2.0/video-generator-trial",
     "endpoint": "cinematic-video-generator",
     "output_type": "video",
-    "category": "RunningHub/Seedance",
+    "category": "RunningHub/RHArt Video",
     "params": [
       {
         "fieldKey": "prompt",
@@ -17762,17 +17762,6 @@
     ]
   },
   {
-    "class_name": "RhartVideoLtx2ImageToVideo",
-    "internal_name": "RH_RhartVideoLtx2ImageToVideo",
-    "display_name": "RH ltx-2-19b/image-to-video-lora",
-    "name_cn": "ltx-2-19b/image-to-video-lora",
-    "name_en": "ltx-2-19b/image-to-video-lora",
-    "endpoint": "rhart-video/ltx-2/image-to-video",
-    "output_type": "video",
-    "category": "RunningHub/RHArt Video",
-    "params": []
-  },
-  {
     "class_name": "RhartVideoRGen4TurboImageToVideo",
     "internal_name": "RH_RhartVideoRGen4TurboImageToVideo",
     "display_name": "RH 全能视频R/gen4-turbo/图生视频-低价渠道版",
@@ -17932,6 +17921,456 @@
             "descriptionEn": "3:4"
           }
         ]
+      },
+      {
+        "fieldKey": "mode",
+        "type": "LIST",
+        "required": false,
+        "label": "mode",
+        "description": "mode",
+        "defaultValue": "std",
+        "options": [
+          {
+            "value": "std",
+            "description": "std",
+            "descriptionEn": "std"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartVideoLtx2TextToVideoLora",
+    "internal_name": "RH_RhartVideoLtx2TextToVideoLora",
+    "display_name": "RH ltx-2-19b/text-to-video-lora",
+    "name_cn": "ltx-2-19b/text-to-video-lora",
+    "name_en": "ltx-2-19b/text-to-video-lora",
+    "endpoint": "rhart-video/ltx-2/text-to-video-lora",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": []
+  },
+  {
+    "class_name": "RhartImageFDev",
+    "internal_name": "RH_RhartImageFDev",
+    "display_name": "RH f-dev",
+    "name_cn": "f-dev",
+    "name_en": "f-dev",
+    "endpoint": "rhart-image/f-dev",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": []
+  },
+  {
+    "class_name": "RhartImageFDevLora",
+    "internal_name": "RH_RhartImageFDevLora",
+    "display_name": "RH f-dev-lora",
+    "name_cn": "f-dev-lora",
+    "name_en": "f-dev-lora",
+    "endpoint": "rhart-image/f-dev-lora",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": []
+  },
+  {
+    "class_name": "SkyreelsV4ImageToVideo",
+    "internal_name": "RH_SkyreelsV4ImageToVideo",
+    "display_name": "RH SkyReels V4 图生视频",
+    "name_cn": "SkyReels V4 图生视频",
+    "name_en": "skyreels-v4/image-to-video",
+    "endpoint": "skyreels-v4/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/SkyReels",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "描述视频内容的文本提示词",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "firstFrameImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstFrameImageUrl",
+        "description": "视频首帧图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"GIF\",\"BMP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "sound",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "sound",
+        "description": "是否生成视频音效",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长（秒）",
+        "defaultValue": 5,
+        "min": 3,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "mode",
+        "type": "LIST",
+        "required": false,
+        "label": "mode",
+        "description": "mode",
+        "defaultValue": "std",
+        "options": [
+          {
+            "value": "std",
+            "description": "std",
+            "descriptionEn": "std"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "SkyreelsV3ReferenceToVideo",
+    "internal_name": "RH_SkyreelsV3ReferenceToVideo",
+    "display_name": "RH SkyReels V3 参考图生视频",
+    "name_cn": "SkyReels V3 参考图生视频",
+    "name_en": "skyreels-v3/reference-to-video",
+    "endpoint": "skyreels-v3/reference-to-video",
+    "output_type": "video",
+    "category": "RunningHub/SkyReels",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频描述提示词",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "参考图片（1-4张）",
+        "multipleInputs": true,
+        "maxInputNum": 4,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"GIF\",\"BMP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长（秒）",
+        "defaultValue": 5,
+        "min": 5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "视频画面比例",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "SkyreelsV3VideoRestyling",
+    "internal_name": "RH_SkyreelsV3VideoRestyling",
+    "display_name": "RH SkyReels V3 视频风格化",
+    "name_cn": "SkyReels V3 视频风格化",
+    "name_en": "skyreels-v3/video-restyling",
+    "endpoint": "skyreels-v3/video-restyling",
+    "output_type": "video",
+    "category": "RunningHub/SkyReels",
+    "params": [
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "输入视频（最长30秒）",
+        "accept": "[\"MP4\"]",
+        "maxSize": 100
+      },
+      {
+        "fieldKey": "styleName",
+        "type": "LIST",
+        "required": true,
+        "label": "styleName",
+        "description": "视频风格",
+        "defaultValue": "cyberpunk",
+        "options": [
+          {
+            "value": "cyberpunk",
+            "description": "赛博朋克",
+            "descriptionEn": "3D Cyberpunk"
+          },
+          {
+            "value": "cartoon",
+            "description": "卡通",
+            "descriptionEn": "Cartoon"
+          },
+          {
+            "value": "lego",
+            "description": "乐高",
+            "descriptionEn": "Lego"
+          },
+          {
+            "value": "paper_cutting",
+            "description": "剪纸",
+            "descriptionEn": "Paper Cutting"
+          },
+          {
+            "value": "anime_aki",
+            "description": "动漫",
+            "descriptionEn": "Anime (Aki)"
+          },
+          {
+            "value": "anime_illustration",
+            "description": "动漫插画",
+            "descriptionEn": "Anime Illustration"
+          },
+          {
+            "value": "van_gogh",
+            "description": "梵高油画",
+            "descriptionEn": "Van Gogh"
+          },
+          {
+            "value": "pixel_art",
+            "description": "像素艺术",
+            "descriptionEn": "Pixel Art"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "SkyreelsV3SingleShotVideoExtension",
+    "internal_name": "RH_SkyreelsV3SingleShotVideoExtension",
+    "display_name": "RH SkyReels V3 视频续写（单镜头）",
+    "name_cn": "SkyReels V3 视频续写（单镜头）",
+    "name_en": "skyreels-v3/single-shot-video-extension",
+    "endpoint": "skyreels-v3/single-shot-video-extension",
+    "output_type": "video",
+    "category": "RunningHub/SkyReels",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频描述提示词",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "待续写的视频",
+        "accept": "[\"MP4\"]",
+        "maxSize": 100
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": false,
+        "label": "duration",
+        "description": "续写时长（秒）",
+        "defaultValue": 5,
+        "min": 5,
+        "max": 10,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "SkyreelsV3ShotSwitchingVideoExtension",
+    "internal_name": "RH_SkyreelsV3ShotSwitchingVideoExtension",
+    "display_name": "RH SkyReels V3 视频续写（镜头切换）",
+    "name_cn": "SkyReels V3 视频续写（镜头切换）",
+    "name_en": "skyreels-v3/shot-switching-video-extension",
+    "endpoint": "skyreels-v3/shot-switching-video-extension",
+    "output_type": "video",
+    "category": "RunningHub/SkyReels",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频描述提示词",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "待续写的视频",
+        "accept": "[\"MP4\"]",
+        "maxSize": 100
+      },
+      {
+        "fieldKey": "cutType",
+        "type": "LIST",
+        "required": false,
+        "label": "cutType",
+        "description": "镜头切换方式",
+        "defaultValue": "Auto",
+        "options": [
+          {
+            "value": "Auto",
+            "description": "自动（推荐）",
+            "descriptionEn": "Auto (Recommended)"
+          },
+          {
+            "value": "Cut In",
+            "description": "推近（远景→近景）",
+            "descriptionEn": "Cut In (Wide to Close-up)"
+          },
+          {
+            "value": "Cut Out",
+            "description": "拉远（近景→远景）",
+            "descriptionEn": "Cut Out (Close-up to Wide)"
+          },
+          {
+            "value": "Shot/Reverse Shot",
+            "description": "正反打（对话场景）",
+            "descriptionEn": "Shot/Reverse Shot (Dialogue)"
+          },
+          {
+            "value": "Multi-Angle",
+            "description": "多角度切换",
+            "descriptionEn": "Multi-Angle"
+          },
+          {
+            "value": "Cut Away",
+            "description": "切离（临时转场）",
+            "descriptionEn": "Cut Away (Temporary Shift)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "SkyreelsV4OmniReference",
+    "internal_name": "RH_SkyreelsV4OmniReference",
+    "display_name": "RH SkyReels V4 Omni Reference",
+    "name_cn": "SkyReels V4 Omni Reference",
+    "name_en": "skyreels-v4/omni-reference",
+    "endpoint": "skyreels-v4/omni-reference",
+    "output_type": "video",
+    "category": "RunningHub/SkyReels",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频描述提示词，支持 @tag 引用参考图片/视频",
+        "maxLength": 2500
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "视频画面比例",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长（秒）。如果提供了 ref_videos（参考视频），此参数将被覆盖；这种情况下，输出视频的时长将与参考视频一致（最长不超过 10 秒）。",
+        "defaultValue": 5,
+        "min": 3,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "sound",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "sound",
+        "description": "是否生成视频音效",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "promptOptimizer",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptOptimizer",
+        "description": "是否启用提示词优化",
+        "defaultValue": true
       },
       {
         "fieldKey": "mode",
