@@ -575,6 +575,18 @@
   "RH_SkyreelsV4OmniReference": {
     "display_name": "RH SkyReels V4 Omni Reference"
   },
+  "RH_KlingLipSyncIdentifyFace": {
+    "display_name": "RH 可灵对口型-人脸识别"
+  },
+  "RH_KlingLipSyncTts": {
+    "display_name": "RH 可灵对口型-语音合成"
+  },
+  "RH_KlingLipSyncLipSyncVideo": {
+    "display_name": "RH 可灵对口型-视频生成"
+  },
+  "RH_RhartVideoSOfficialSoraUploadCharacter": {
+    "display_name": "RH 全能视频S-角色上传-官方稳定版"
+  },
   "RHSettingsNode": {
     "display_name": "RH OpenAPI 设置"
   }

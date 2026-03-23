@@ -1,18 +1,18 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-192-blue)
+![Nodes](https://img.shields.io/badge/Nodes-196-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 [English](README_EN.md) | **中文**
 
 **ComfyUI_RH_OpenAPI** 是 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 的 **1:1 ComfyUI 实现**。
 
-RunningHub 平台提供了 192 个标准模型 API（涵盖主流最新所有的图像生成、视频生成、音频合成、3D 建模、文本理解、图像放大），本项目将每一个 API 端点都转化为对应的 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的全部标准模型能力，无需本地 GPU，无冷启动延迟。
+RunningHub 平台提供了 196 个标准模型 API（涵盖主流最新所有的图像生成、视频生成、音频合成、3D 建模、文本理解、图像放大），本项目将每一个 API 端点都转化为对应的 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的全部标准模型能力，无需本地 GPU，无冷启动延迟。
 
 ## 📌 项目特点
 
-- **完整覆盖** — 192 个 ComfyUI 节点，与 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 一一对应
+- **完整覆盖** — 196 个 ComfyUI 节点，与 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 一一对应
 - **即插即用** — 无需下载模型、无需 GPU，只需 API Key 即可调用全部能力
 - **动态注册** — 基于 JSON 注册表自动生成节点，新模型上线后仅需更新注册表
 - **多媒体支持** — 图片、视频、音频自动上传 / 下载 / 格式转换，与 ComfyUI 原生类型无缝衔接
@@ -40,14 +40,14 @@ RunningHub 平台提供了 192 个标准模型 API（涵盖主流最新所有的
 | FLUX Dev（Black Forest Labs） | — | 文生图、文生图 LoRA | 2 |
 | Midjourney | 悠船 | 文生图 v6/v6.1/niji6/niji7/v7 | 5 |
 
-### 视频生成（112 个节点）
+### 视频生成（114 个节点）
 
 | 模型 | RH 平台名称 | 能力 | 节点数 |
 |------|-----------|------|--------|
-| Sora 2（OpenAI） | 全能视频 S / S 官方 | 文/图生视频、Pro、角色上传、异步 | 12 |
+| Sora 2（OpenAI） | 全能视频 S / S 官方 | 文/图生视频、Pro、角色上传、异步 | 13 |
 | Google Veo 3.1 | 全能视频 V3.1 | Fast/Pro 文/图/首尾帧生视频、参考生视频、视频扩展 | 13 |
 | Grok Imagine（xAI） | 全能视频 G / G 官方 | 文/图生视频、编辑视频 | 5 |
-| Kling 可灵（快手） | — | v2.5/v2.6/v3.0/o1/o3，文/图/首尾帧/参考/动作控制/编辑/元素创建 | 27 |
+| Kling 可灵（快手） | — | v2.5/v2.6/v3.0/o1/o3，文/图/首尾帧/参考/动作控制/编辑/元素/口型同步 | 30 |
 | Vidu（生数科技） | — | q2/q3，文/图/首尾帧/参考生视频 | 16 |
 | Wan 万相 2.6（阿里巴巴） | — | 文/图/参考生视频、Flash | 5 |
 | MiniMax Hailuo 海螺 | — | 02/2.3/2.3-fast，文/图/首尾帧生视频 | 13 |
@@ -135,14 +135,14 @@ cp config/.env.example config/.env
 
 ### 示例工作流
 
-项目在 `examples/` 目录下提供了 192 个示例工作流 JSON 文件，覆盖每一个模型节点。下载后直接导入 ComfyUI 即可使用。
+项目在 `examples/` 目录下提供了 196 个示例工作流 JSON 文件，覆盖每一个模型节点。下载后直接导入 ComfyUI 即可使用。
 
 ## 📁 项目结构
 
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # 入口文件，注册所有节点
-├── models_registry.json     # 模型注册表（192 个模型定义）
+├── models_registry.json     # 模型注册表（196 个模型定义）
 ├── config/
 │   └── .env.example         # 配置文件示例
 ├── core/                    # 核心基础设施
@@ -156,7 +156,7 @@ ComfyUI_RH_OpenAPI/
 ├── nodes/                   # 节点实现
 │   ├── settings_node.py     # RH OpenAPI Settings 配置节点
 │   └── node_factory.py      # 动态节点工厂
-└── examples/                # 192 个示例工作流
+└── examples/                # 196 个示例工作流
 ```
 
 ## 🔧 架构说明

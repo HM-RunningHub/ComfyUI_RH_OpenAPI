@@ -237,6 +237,10 @@
       "RH_SkyreelsV3SingleShotVideoExtension": "RH SkyReels V3 视频续写（单镜头）",
       "RH_SkyreelsV3ShotSwitchingVideoExtension": "RH SkyReels V3 视频续写（镜头切换）",
       "RH_SkyreelsV4OmniReference": "RH SkyReels V4 Omni Reference",
+      "RH_KlingLipSyncIdentifyFace": "RH 可灵对口型-人脸识别",
+      "RH_KlingLipSyncTts": "RH 可灵对口型-语音合成",
+      "RH_KlingLipSyncLipSyncVideo": "RH 可灵对口型-视频生成",
+      "RH_RhartVideoSOfficialSoraUploadCharacter": "RH 全能视频S-角色上传-官方稳定版",
       "RHSettingsNode": "RH OpenAPI 设置"
     },
     "en": {
@@ -432,6 +436,10 @@
       "RH_SkyreelsV3SingleShotVideoExtension": "RH Skyreels V3 Single Shot Video Extension",
       "RH_SkyreelsV3ShotSwitchingVideoExtension": "RH Skyreels V3 Shot Switching Video Extension",
       "RH_SkyreelsV4OmniReference": "RH Skyreels V4 Omni Reference",
+      "RH_KlingLipSyncIdentifyFace": "RH Kling Lip Sync Identify Face",
+      "RH_KlingLipSyncTts": "RH Kling Lip Sync Tts",
+      "RH_KlingLipSyncLipSyncVideo": "RH Kling Lip Sync Lip Sync Video",
+      "RH_RhartVideoSOfficialSoraUploadCharacter": "RH Sora Upload Character Official",
       "RHSettingsNode": "RH OpenAPI Settings"
     }
   },

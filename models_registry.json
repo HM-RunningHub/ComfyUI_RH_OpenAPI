@@ -3452,25 +3452,39 @@
         "required": true,
         "label": "size",
         "description": "size",
+        "defaultValue": "720x1280",
         "options": [
           {
             "value": "720x1280",
-            "description": "720x1280"
+            "description": "720x1280",
+            "descriptionEn": "720x1280"
           },
           {
             "value": "1280x720",
-            "description": "1280x720"
+            "description": "1280x720",
+            "descriptionEn": "1280x720"
           },
           {
             "value": "1024x1792",
-            "description": "1024x1792"
+            "description": "1024x1792",
+            "descriptionEn": "1024x1792"
           },
           {
             "value": "1792x1024",
-            "description": "1792x1024"
+            "description": "1792x1024",
+            "descriptionEn": "1792x1024"
+          },
+          {
+            "value": "1080x1920",
+            "description": "1080x1920",
+            "descriptionEn": "1080x1920"
+          },
+          {
+            "value": "1920x1080",
+            "description": "1920x1080",
+            "descriptionEn": "1920x1080"
           }
-        ],
-        "defaultValue": "720x1280"
+        ]
       },
       {
         "fieldKey": "duration",
@@ -3478,21 +3492,34 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": "12",
         "options": [
           {
             "value": "4",
-            "description": "4"
+            "description": "4",
+            "descriptionEn": "4"
           },
           {
             "value": "8",
-            "description": "8"
+            "description": "8",
+            "descriptionEn": "8"
           },
           {
             "value": "12",
-            "description": "12"
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "16",
+            "description": "16",
+            "descriptionEn": "16"
+          },
+          {
+            "value": "20",
+            "description": "20",
+            "descriptionEn": "20"
           }
-        ],
-        "defaultValue": "12"
+        ]
       }
     ]
   },
@@ -3520,17 +3547,19 @@
         "required": true,
         "label": "resolution",
         "description": "resolution",
+        "defaultValue": "720p",
         "options": [
           {
             "value": "720p",
-            "description": "720p"
+            "description": "720p",
+            "descriptionEn": "720p"
           },
           {
             "value": "1080p",
-            "description": "1080p"
+            "description": "1080p",
+            "descriptionEn": "1080p"
           }
-        ],
-        "defaultValue": "720p"
+        ]
       },
       {
         "fieldKey": "duration",
@@ -3538,30 +3567,41 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": "4",
         "options": [
           {
             "value": "4",
-            "description": "4"
+            "description": "4",
+            "descriptionEn": "4"
           },
           {
             "value": "8",
-            "description": "8"
+            "description": "8",
+            "descriptionEn": "8"
           },
           {
             "value": "12",
-            "description": "12"
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "16",
+            "description": "16",
+            "descriptionEn": "16"
+          },
+          {
+            "value": "20",
+            "description": "20",
+            "descriptionEn": "20"
           }
-        ],
-        "defaultValue": "4"
+        ]
       },
       {
         "fieldKey": "imageUrl",
         "type": "IMAGE",
         "required": true,
         "label": "imageUrl",
-        "description": "The image dimensions must match the aspect ratio of the model-generated video (allowed values: 720x1280, 1280x720, 1024x1792, 1792x1024).",
-        "multipleInputs": false,
-        "maxInputNum": 1,
+        "description": "图像尺寸须与模型生成视频长宽比一致（允许的值：720x1280，1280x720，1024x1792，1792x1024）",
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       }
@@ -8830,6 +8870,34 @@
         "label": "sound",
         "description": "sound",
         "defaultValue": true
+      },
+      {
+        "fieldKey": "multiShot",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "multiShot",
+        "description": "是否生成多镜头视频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "shotType",
+        "type": "LIST",
+        "required": false,
+        "label": "shotType",
+        "description": "分镜方式",
+        "defaultValue": "customize",
+        "options": [
+          {
+            "value": "customize",
+            "description": "自定义分镜",
+            "descriptionEn": "Customize"
+          },
+          {
+            "value": "intelligence",
+            "description": "智能分镜",
+            "descriptionEn": "Intelligence"
+          }
+        ]
       }
     ]
   },
@@ -8866,9 +8934,6 @@
         "required": true,
         "label": "firstImageUrl",
         "description": "firstImageUrl",
-        "defaultValue": "https://www.runninghub.cn/view?filename=92cb39af79424185dce6016ea654eee1f0e22091a0990afd6b293707719bff86.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzA4OTA0Mzk0NDYsInRzIjoxNzcwMjg1NjM5NDQ2LCJzaWduIjoiNzM4MjQ5NjYxY2YwMGZjMzhhOThjNzRkMzU0ZmExZTEifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.9580433249908384",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 50
       },
@@ -8878,9 +8943,6 @@
         "required": false,
         "label": "lastImageUrl",
         "description": "lastImageUrl",
-        "defaultValue": "https://www.runninghub.cn/view?filename=5ba17f8245b07b3ebc4a3d69d77dd953077e04dad1c01f94150886778a250c12.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzA4OTA0Mzk0NDYsInRzIjoxNzcwMjg1NjM5NDQ2LCJzaWduIjoiNzM4MjQ5NjYxY2YwMGZjMzhhOThjNzRkMzU0ZmExZTEifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.4748683756172115",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 50
       },
@@ -8977,6 +9039,34 @@
         "label": "sound",
         "description": "sound",
         "defaultValue": true
+      },
+      {
+        "fieldKey": "multiShot",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "multiShot",
+        "description": "是否生成多镜头视频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "shotType",
+        "type": "LIST",
+        "required": false,
+        "label": "shotType",
+        "description": "分镜方式",
+        "defaultValue": "customize",
+        "options": [
+          {
+            "value": "customize",
+            "description": "自定义分镜",
+            "descriptionEn": "Customize"
+          },
+          {
+            "value": "intelligence",
+            "description": "智能分镜",
+            "descriptionEn": "Intelligence"
+          }
+        ]
       }
     ]
   },
@@ -9126,6 +9216,34 @@
         "label": "sound",
         "description": "sound",
         "defaultValue": true
+      },
+      {
+        "fieldKey": "multiShot",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "multiShot",
+        "description": "是否生成多镜头视频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "shotType",
+        "type": "LIST",
+        "required": false,
+        "label": "shotType",
+        "description": "分镜方式",
+        "defaultValue": "customize",
+        "options": [
+          {
+            "value": "customize",
+            "description": "自定义分镜",
+            "descriptionEn": "Customize"
+          },
+          {
+            "value": "intelligence",
+            "description": "智能分镜",
+            "descriptionEn": "Intelligence"
+          }
+        ]
       }
     ]
   },
@@ -9162,9 +9280,6 @@
         "required": true,
         "label": "firstImageUrl",
         "description": "firstImageUrl",
-        "defaultValue": "https://www.runninghub.cn/view?filename=6ea666eb43d1e867e9d31b26aa16fed41e77a2387fea0d0c330c250df47344ee.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzA4Nzk1NjgzNDUsInRzIjoxNzcwMjc0NzY4MzQ1LCJzaWduIjoiNWY0OWUyMzBmNjM0NTViOGZhZWM5NzQzMDYzMjIzOWYifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.7161105046578343",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 50
       },
@@ -9174,8 +9289,6 @@
         "required": false,
         "label": "lastImageUrl",
         "description": "lastImageUrl",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 50
       },
@@ -9272,6 +9385,34 @@
         "label": "sound",
         "description": "sound",
         "defaultValue": true
+      },
+      {
+        "fieldKey": "multiShot",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "multiShot",
+        "description": "是否生成多镜头视频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "shotType",
+        "type": "LIST",
+        "required": false,
+        "label": "shotType",
+        "description": "分镜方式",
+        "defaultValue": "customize",
+        "options": [
+          {
+            "value": "customize",
+            "description": "自定义分镜",
+            "descriptionEn": "Customize"
+          },
+          {
+            "value": "intelligence",
+            "description": "智能分镜",
+            "descriptionEn": "Intelligence"
+          }
+        ]
       }
     ]
   },
@@ -9316,6 +9457,16 @@
             "value": "1:1",
             "description": "1:1",
             "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
           }
         ]
       },
@@ -9326,7 +9477,7 @@
         "label": "imageUrls",
         "description": "imageUrls",
         "multipleInputs": true,
-        "maxInputNum": 7,
+        "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       },
@@ -9335,45 +9486,31 @@
         "type": "LIST",
         "required": true,
         "label": "resolution",
-        "description": "resolution（仅15s支持1080p）",
-        "defaultValue": "720P",
+        "description": "resolution",
+        "defaultValue": "480p",
         "options": [
           {
-            "value": "720P",
-            "description": "720P",
-            "descriptionEn": "720P"
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
           },
           {
-            "value": "1080P",
-            "description": "1080P",
-            "descriptionEn": "1080P"
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
           }
         ]
       },
       {
         "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
+        "type": "INT",
+        "required": false,
         "label": "duration",
-        "description": "duration",
-        "defaultValue": "6s",
-        "options": [
-          {
-            "value": "6s",
-            "description": "6s",
-            "descriptionEn": "6s"
-          },
-          {
-            "value": "10s",
-            "description": "10s",
-            "descriptionEn": "10s"
-          },
-          {
-            "value": "15s",
-            "description": "15s",
-            "descriptionEn": "15s"
-          }
-        ]
+        "description": "视频时长（秒），范围6-30秒",
+        "defaultValue": 6,
+        "min": 6,
+        "max": 30,
+        "step": 1
       }
     ]
   },
@@ -9418,6 +9555,16 @@
             "value": "1:1",
             "description": "1:1",
             "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
           }
         ]
       },
@@ -9426,45 +9573,31 @@
         "type": "LIST",
         "required": true,
         "label": "resolution",
-        "description": "resolution（仅15s支持1080p）",
-        "defaultValue": "720P",
+        "description": "resolution",
+        "defaultValue": "720p",
         "options": [
           {
-            "value": "720P",
-            "description": "720P",
-            "descriptionEn": "720P"
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
           },
           {
-            "value": "1080P",
-            "description": "1080P",
-            "descriptionEn": "1080P"
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
           }
         ]
       },
       {
         "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
+        "type": "INT",
+        "required": false,
         "label": "duration",
-        "description": "duration",
-        "defaultValue": "6s",
-        "options": [
-          {
-            "value": "6s",
-            "description": "6s",
-            "descriptionEn": "6s"
-          },
-          {
-            "value": "10s",
-            "description": "10s",
-            "descriptionEn": "10s"
-          },
-          {
-            "value": "15s",
-            "description": "15s",
-            "descriptionEn": "15s"
-          }
-        ]
+        "description": "视频时长（秒），范围6-30秒",
+        "defaultValue": 6,
+        "min": 6,
+        "max": 30,
+        "step": 1
       }
     ]
   },
@@ -17621,6 +17754,7 @@
         "required": true,
         "label": "prompt",
         "description": "描述视频中的运动和动作",
+        "defaultValue": "电影般的缓慢从左向右平移镜头，并向中央数据核心微微推进。发光的青色神经网络丝线如同脉冲般跳动，从左侧的视频帧源源不断地流入旋转的中央水晶中。在右侧的三个屏幕内，相同的卡通宇航员有着微妙的动态：上面的在环顾红色沙漠，中间的轻轻拨开一片丛林树叶，下面的在观察闪烁的霓虹灯。摄影棚的灯光随着鲜艳的紫色和青色反射光动态变化。高端3D动画质感，运动流畅",
         "maxLength": 2048
       },
       {
@@ -17638,6 +17772,7 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": "5",
         "options": [
           {
             "value": "5",
@@ -17777,6 +17912,7 @@
         "required": false,
         "label": "prompt",
         "description": "字符串(≤1000字符)，详细描述期望在视频中出现的内容",
+        "defaultValue": "画面主体：红色神龙盘踞在青黑色山巅，鳞片与龙须随云雾轻轻飘动，龙眼金光流转；下方的九尾白狐缓步前行，九条狐尾在山风中轻柔舒展；右上方的朱雀神鸟振翅盘旋，羽毛流光溢彩。 环境动态：山间云雾缓慢流动翻涌，石阶旁的花草轻轻摇曳，松树上的红果微微晃动，石碑旁的花草随风摆动。 氛围与色调：保留传统工笔水墨的青绿与朱砂色调，暖橙色晚霞晕染天际，整体节奏舒缓静谧，充满东方祥瑞与古典意境。",
         "maxLength": 1000
       },
       {
@@ -17866,6 +18002,7 @@
         "required": true,
         "label": "prompt",
         "description": "描述视频内容的文本提示词",
+        "defaultValue": "真人实拍电影感追逐场景。两名骑手骑马疾驰穿过沙漠峡谷的超远景镜头。切换到领队骑手坚毅面庞的特写，皮肤上有尘土。",
         "maxLength": 2048
       },
       {
@@ -17988,6 +18125,7 @@
         "required": true,
         "label": "prompt",
         "description": "描述视频内容的文本提示词",
+        "defaultValue": "一个青少年男孩坐在窗边，夏雨中戴着耳机，闭着眼睛，手指随着音乐轻敲，外面的雨滴顺着玻璃快速滑下。",
         "maxLength": 2048
       },
       {
@@ -18051,6 +18189,7 @@
         "required": true,
         "label": "prompt",
         "description": "视频描述提示词",
+        "defaultValue": "从低角度开始缓慢环绕女生运镜，镜头匀速 360° 环形移动，背景根据视角转换舞台场景，女生优雅地进行谢幕动作，鞠躬谢幕。摄影运镜，无卡顿，流畅",
         "maxLength": 2048
       },
       {
@@ -18071,7 +18210,7 @@
         "label": "duration",
         "description": "视频时长（秒）",
         "defaultValue": 5,
-        "min": 5,
+        "min": 1,
         "max": 5,
         "step": 1
       },
@@ -18137,47 +18276,41 @@
         "required": true,
         "label": "styleName",
         "description": "视频风格",
-        "defaultValue": "cyberpunk",
         "options": [
           {
-            "value": "cyberpunk",
-            "description": "赛博朋克",
-            "descriptionEn": "3D Cyberpunk"
-          },
-          {
-            "value": "cartoon",
-            "description": "卡通",
-            "descriptionEn": "Cartoon"
+            "value": "simpsons",
+            "description": "simpsons",
+            "descriptionEn": "simpsons"
           },
           {
             "value": "lego",
-            "description": "乐高",
-            "descriptionEn": "Lego"
+            "description": "lego",
+            "descriptionEn": "lego"
           },
           {
             "value": "paper_cutting",
-            "description": "剪纸",
-            "descriptionEn": "Paper Cutting"
+            "description": "paper_cutting",
+            "descriptionEn": "paper_cutting"
           },
           {
-            "value": "anime_aki",
-            "description": "动漫",
-            "descriptionEn": "Anime (Aki)"
+            "value": "amigurumi",
+            "description": "amigurumi",
+            "descriptionEn": "amigurumi"
           },
           {
-            "value": "anime_illustration",
-            "description": "动漫插画",
-            "descriptionEn": "Anime Illustration"
+            "value": "animal_crossing",
+            "description": "animal_crossing",
+            "descriptionEn": "animal_crossing"
           },
           {
             "value": "van_gogh",
-            "description": "梵高油画",
-            "descriptionEn": "Van Gogh"
+            "description": "van_gogh",
+            "descriptionEn": "van_gogh"
           },
           {
             "value": "pixel_art",
-            "description": "像素艺术",
-            "descriptionEn": "Pixel Art"
+            "description": "pixel_art",
+            "descriptionEn": "pixel_art"
           }
         ]
       }
@@ -18199,14 +18332,14 @@
         "required": true,
         "label": "prompt",
         "description": "视频描述提示词",
-        "maxLength": 2048
+        "defaultValue": "一阵微风吹过，有粉色的花瓣从镜头前飘过，女生微微抬眸，向镜头看过来"
       },
       {
         "fieldKey": "videoUrl",
         "type": "VIDEO",
         "required": true,
         "label": "videoUrl",
-        "description": "待续写的视频",
+        "description": "Video to be extended. ",
         "accept": "[\"MP4\"]",
         "maxSize": 100
       },
@@ -18218,7 +18351,7 @@
         "description": "续写时长（秒）",
         "defaultValue": 5,
         "min": 5,
-        "max": 10,
+        "max": 30,
         "step": 1
       }
     ]
@@ -18239,6 +18372,7 @@
         "required": true,
         "label": "prompt",
         "description": "视频描述提示词",
+        "defaultValue": "多角度切换",
         "maxLength": 2048
       },
       {
@@ -18246,9 +18380,20 @@
         "type": "VIDEO",
         "required": true,
         "label": "videoUrl",
-        "description": "待续写的视频",
+        "description": "Video to be extended. ",
         "accept": "[\"MP4\"]",
         "maxSize": 100
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": false,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": 5,
+        "min": 2,
+        "max": 5,
+        "step": 1
       },
       {
         "fieldKey": "cutType",
@@ -18264,12 +18409,12 @@
             "descriptionEn": "Auto (Recommended)"
           },
           {
-            "value": "Cut In",
+            "value": "Cut-In",
             "description": "推近（远景→近景）",
             "descriptionEn": "Cut In (Wide to Close-up)"
           },
           {
-            "value": "Cut Out",
+            "value": "Cut-Out",
             "description": "拉远（近景→远景）",
             "descriptionEn": "Cut Out (Close-up to Wide)"
           },
@@ -18386,6 +18531,205 @@
             "descriptionEn": "std"
           }
         ]
+      }
+    ]
+  },
+  {
+    "class_name": "KlingLipSyncIdentifyFace",
+    "internal_name": "RH_KlingLipSyncIdentifyFace",
+    "display_name": "RH 可灵对口型-人脸识别",
+    "name_cn": "可灵对口型-人脸识别",
+    "name_en": "kling-lip-sync/identify-face",
+    "endpoint": "kling-lip-sync/identify-face",
+    "output_type": "string",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": false,
+        "label": "videoUrl",
+        "description": "视频URL，与video_id二选一填写。支持.mp4/.mov格式，文件不超过100MB，视频时长2-60秒，仅支持720p和1080p，长宽边长512px~2160px",
+        "accept": "[\"MP4\",\"MOV\"]",
+        "maxSize": 100
+      },
+      {
+        "fieldKey": "videoId",
+        "type": "STRING",
+        "required": false,
+        "label": "videoId",
+        "description": "通过可灵AI生成的视频ID，与videoUrl二选一填写。仅支持30天内生成的时长不超过60秒的视频"
+      }
+    ]
+  },
+  {
+    "class_name": "KlingLipSyncTts",
+    "internal_name": "RH_KlingLipSyncTts",
+    "display_name": "RH 可灵对口型-语音合成",
+    "name_cn": "可灵对口型-语音合成",
+    "name_en": "kling-lip-sync/tts",
+    "endpoint": "kling-lip-sync/tts",
+    "output_type": "string",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "text",
+        "type": "STRING",
+        "required": true,
+        "label": "text",
+        "description": "合成音频的文案。文本内容最大长度1000，内容过长会返回错误",
+        "maxLength": 1000
+      },
+      {
+        "fieldKey": "voiceId",
+        "type": "STRING",
+        "required": true,
+        "label": "voiceId",
+        "description": "音色ID。系统提供多种音色可供选择，具体音色效果和音色ID对应关系请参考官方文档"
+      },
+      {
+        "fieldKey": "voiceLanguage",
+        "type": "LIST",
+        "required": true,
+        "label": "voiceLanguage",
+        "description": "音色语种，与音色ID对应。默认为zh",
+        "defaultValue": "zh",
+        "options": [
+          {
+            "value": "zh",
+            "description": "zh (中文)",
+            "descriptionEn": "zh (Chinese)"
+          },
+          {
+            "value": "en",
+            "description": "en (英文)",
+            "descriptionEn": "en (English)"
+          }
+        ]
+      },
+      {
+        "fieldKey": "voiceSpeed",
+        "type": "FLOAT",
+        "required": false,
+        "label": "voiceSpeed",
+        "description": "语速，默认为1.0。有效范围0.8~2.0，精确至小数点后1位",
+        "defaultValue": 1.0,
+        "min": 0.8,
+        "max": 2
+      }
+    ]
+  },
+  {
+    "class_name": "KlingLipSyncLipSyncVideo",
+    "internal_name": "RH_KlingLipSyncLipSyncVideo",
+    "display_name": "RH 可灵对口型-视频生成",
+    "name_cn": "可灵对口型-视频生成",
+    "name_en": "kling-lip-sync/lip-sync-video",
+    "endpoint": "kling-lip-sync/lip-sync-video",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "sessionId",
+        "type": "STRING",
+        "required": true,
+        "label": "sessionId",
+        "description": "会话ID，由人脸识别接口返回"
+      },
+      {
+        "fieldKey": "faceId",
+        "type": "STRING",
+        "required": true,
+        "label": "faceId",
+        "description": "人脸ID，由人脸识别接口返回"
+      },
+      {
+        "fieldKey": "audioId",
+        "type": "STRING",
+        "required": false,
+        "label": "audioId",
+        "description": "通过语音合成接口生成的音频ID，与audioUrl二选一。仅支持30天内生成的、时长2~60秒的音频"
+      },
+      {
+        "fieldKey": "audioUrl",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrl",
+        "description": "音频URL，与audioId二选一。支持.mp3/.wav/.m4a格式，文件不超过5MB，时长2~60秒",
+        "accept": "[\"MP3\",\"WAV\",\"M4A\"]",
+        "maxSize": 5
+      },
+      {
+        "fieldKey": "soundStartTime",
+        "type": "INT",
+        "required": true,
+        "label": "soundStartTime",
+        "description": "音频裁剪起点时间（单位ms）。起点之前的音频会被裁剪，裁剪后音频不得短于2秒",
+        "min": 0
+      },
+      {
+        "fieldKey": "soundEndTime",
+        "type": "INT",
+        "required": true,
+        "label": "soundEndTime",
+        "description": "音频裁剪终点时间（单位ms）。终点之后的音频会被裁剪，裁剪后音频不得短于2秒"
+      },
+      {
+        "fieldKey": "soundInsertTime",
+        "type": "INT",
+        "required": true,
+        "label": "soundInsertTime",
+        "description": "裁剪后音频插入时间（单位ms）。插入音频时间范围需与人脸可对口型时间区间至少重合2秒",
+        "min": 0
+      },
+      {
+        "fieldKey": "soundVolume",
+        "type": "FLOAT",
+        "required": false,
+        "label": "soundVolume",
+        "description": "音频音量大小，取值范围[0, 2]，默认为1",
+        "defaultValue": 1.0,
+        "min": 0,
+        "max": 2
+      },
+      {
+        "fieldKey": "originalAudioVolume",
+        "type": "FLOAT",
+        "required": false,
+        "label": "originalAudioVolume",
+        "description": "原始视频音量大小，取值范围[0, 2]，默认为1。原视频无声时参数无效",
+        "defaultValue": 1.0,
+        "min": 0,
+        "max": 2
+      }
+    ]
+  },
+  {
+    "class_name": "RhartVideoSOfficialSoraUploadCharacter",
+    "internal_name": "RH_RhartVideoSOfficialSoraUploadCharacter",
+    "display_name": "RH 全能视频S-角色上传-官方稳定版",
+    "name_cn": "全能视频S-角色上传-官方稳定版",
+    "name_en": "sora-upload-character-official",
+    "endpoint": "rhart-video-s-official/sora-upload-character",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "角色参考视频（2-4秒，720p以上）",
+        "accept": "[\"MP4\"]",
+        "maxSize": 100
+      },
+      {
+        "fieldKey": "name",
+        "type": "STRING",
+        "required": true,
+        "label": "name",
+        "description": "角色名称（1-80字符），后续在文生视频中通过此名称引用角色",
+        "maxLength": 80
       }
     ]
   }

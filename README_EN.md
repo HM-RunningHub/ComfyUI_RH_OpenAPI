@@ -1,18 +1,18 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-192-blue)
+![Nodes](https://img.shields.io/badge/Nodes-196-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 **English** | [中文](README.md)
 
 **ComfyUI_RH_OpenAPI** is a **1:1 ComfyUI implementation** of the [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api).
 
-RunningHub provides 192 standard model APIs covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. This project converts every API endpoint into a corresponding ComfyUI node, enabling you to access all RunningHub model capabilities directly within ComfyUI workflows — no local GPU required, zero cold-start latency.
+RunningHub provides 196 standard model APIs covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. This project converts every API endpoint into a corresponding ComfyUI node, enabling you to access all RunningHub model capabilities directly within ComfyUI workflows — no local GPU required, zero cold-start latency.
 
 ## 📌 Features
 
-- **Full Coverage** — 192 ComfyUI nodes, mapping 1:1 to [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api)
+- **Full Coverage** — 196 ComfyUI nodes, mapping 1:1 to [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api)
 - **Plug & Play** — No model downloads, no GPU needed — just an API Key
 - **Dynamic Registration** — Nodes are auto-generated from a JSON registry; adding new models requires only a registry update
 - **Media Support** — Automatic upload/download/conversion for images, videos, and audio, seamlessly integrated with ComfyUI native types
@@ -40,14 +40,14 @@ RunningHub provides 192 standard model APIs covering image generation, video gen
 | FLUX Dev (Black Forest Labs) | — | Text-to-Image, Text-to-Image LoRA | 2 |
 | Midjourney | 悠船 | Text-to-Image v6/v6.1/niji6/niji7/v7 | 5 |
 
-### Video Generation (112 Nodes)
+### Video Generation (114 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
-| Sora 2 (OpenAI) | 全能视频 S / S Official | Text/Image-to-Video, Pro, Character Upload, Async | 12 |
+| Sora 2 (OpenAI) | 全能视频 S / S Official | Text/Image-to-Video, Pro, Character Upload, Async | 13 |
 | Google Veo 3.1 | 全能视频 V3.1 | Fast/Pro Text/Image/Start-End-to-Video, Reference, Video Extend | 13 |
 | Grok Imagine (xAI) | 全能视频 G / G Official | Text/Image-to-Video, Edit Video | 5 |
-| Kling (Kuaishou) | — | v2.5/v2.6/v3.0/o1/o3, Text/Image/Start-End/Reference/Motion Control/Edit/Elements | 27 |
+| Kling (Kuaishou) | — | v2.5/v2.6/v3.0/o1/o3, Text/Image/Start-End/Reference/Motion Control/Edit/Elements/Lip Sync | 30 |
 | Vidu (Shengshu) | — | q2/q3, Text/Image/Start-End/Reference-to-Video | 16 |
 | Wan 2.6 (Alibaba) | — | Text/Image/Reference-to-Video, Flash | 5 |
 | MiniMax Hailuo | — | 02/2.3/2.3-fast, Text/Image/Start-End-to-Video | 13 |
@@ -135,14 +135,14 @@ cp config/.env.example config/.env
 
 ### Example Workflows
 
-The project includes 192 example workflow JSON files in the `examples/` directory, covering every model node. Download and import directly into ComfyUI.
+The project includes 196 example workflow JSON files in the `examples/` directory, covering every model node. Download and import directly into ComfyUI.
 
 ## 📁 Project Structure
 
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # Entry point, registers all nodes
-├── models_registry.json     # Model registry (192 model definitions)
+├── models_registry.json     # Model registry (196 model definitions)
 ├── config/
 │   └── .env.example         # Configuration template
 ├── core/                    # Core infrastructure
@@ -156,7 +156,7 @@ ComfyUI_RH_OpenAPI/
 ├── nodes/                   # Node implementations
 │   ├── settings_node.py     # RH OpenAPI Settings node
 │   └── node_factory.py      # Dynamic node factory
-└── examples/                # 192 example workflows
+└── examples/                # 196 example workflows
 ```
 
 ## 🔧 Architecture

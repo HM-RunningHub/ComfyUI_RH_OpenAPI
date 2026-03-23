@@ -575,6 +575,18 @@
   "RH_SkyreelsV4OmniReference": {
     "display_name": "RH Skyreels V4 Omni Reference"
   },
+  "RH_KlingLipSyncIdentifyFace": {
+    "display_name": "RH Kling Lip Sync Identify Face"
+  },
+  "RH_KlingLipSyncTts": {
+    "display_name": "RH Kling Lip Sync Tts"
+  },
+  "RH_KlingLipSyncLipSyncVideo": {
+    "display_name": "RH Kling Lip Sync Lip Sync Video"
+  },
+  "RH_RhartVideoSOfficialSoraUploadCharacter": {
+    "display_name": "RH Sora Upload Character Official"
+  },
   "RHSettingsNode": {
     "display_name": "RH OpenAPI Settings"
   }
