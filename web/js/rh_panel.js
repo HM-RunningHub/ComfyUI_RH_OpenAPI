@@ -131,6 +131,7 @@ app.registerExtension({
         "Alibaba": "🎨 阿里 通义万相 Qwen",
         "PixVerse": "🎬 PixVerse 可灵替代",
         "SkyReels": "🎥 昆仑 SkyReels",
+        "Higgsfield": "🎭 Higgsfield",
       },
       en: {
         "RHArt Image": "🖼️ RHArt Image", "RHArt Video": "🎬 RHArt Video",
@@ -144,6 +145,7 @@ app.registerExtension({
         "Alibaba": "🎨 Alibaba Qwen",
         "PixVerse": "🎬 PixVerse",
         "SkyReels": "🎥 SkyReels",
+        "Higgsfield": "🎭 Higgsfield",
       },
     };
 
@@ -158,7 +160,7 @@ app.registerExtension({
       "Kling", "Vidu", "Wan", "MiniMax",
       "Seedream", "Seedance", "Youchuan", "Audio",
       "Hunyuan3D", "HiTem3D", "TopazLabs", "Alibaba",
-      "PixVerse", "SkyReels",
+      "PixVerse", "SkyReels", "Higgsfield",
     ];
 
     let allowedNodes = null;

@@ -19,7 +19,8 @@
       "RHArt Image Qwen": "🤖 RHArt 图像 Qwen",
       "Alibaba": "🎨 阿里 通义万相 Qwen",
       "PixVerse": "🎬 PixVerse 可灵替代",
-      "SkyReels": "🎥 昆仑 SkyReels"
+      "SkyReels": "🎥 昆仑 SkyReels",
+      "Higgsfield": "🎭 Higgsfield"
     },
     "en": {
       "RHArt Image": "🖼️ RHArt Image",
@@ -40,7 +41,8 @@
       "RHArt Image Qwen": "🤖 RHArt Image Qwen",
       "Alibaba": "🎨 Alibaba Qwen",
       "PixVerse": "🎬 PixVerse",
-      "SkyReels": "🎥 SkyReels"
+      "SkyReels": "🎥 SkyReels",
+      "Higgsfield": "🎭 Higgsfield"
     }
   },
   "nodes": {
@@ -241,6 +243,19 @@
       "RH_KlingLipSyncTts": "RH 可灵对口型-语音合成",
       "RH_KlingLipSyncLipSyncVideo": "RH 可灵对口型-视频生成",
       "RH_RhartVideoSOfficialSoraUploadCharacter": "RH 全能视频S-角色上传-官方稳定版",
+      "RH_ViduTextToVideoQ3ProFast": "RH Vidu-文生视频-q3-pro-fast",
+      "RH_ViduImageToVideoQ3ProFast": "RH Vidu-图生视频-q3-pro-fast",
+      "RH_ViduStartEndToVideoQ3ProFast": "RH Vidu-首尾帧生视频-q3-pro-fast",
+      "RH_PixverseV56TextToVideo": "RH PixVerse V5.6 文生视频",
+      "RH_PixverseV56ImageToVideo": "RH PixVerse V5.6 图生视频",
+      "RH_HiggsfieldSoulImageToImage": "RH Higgsfield Soul 图生图",
+      "RH_HiggsfieldDopImageToVideo": "RH Higgsfield DoP 图生视频",
+      "RH_DoubaoSeedance20TextToVideo": "RH 豆包 Seedance 2.0 文生视频",
+      "RH_DoubaoSeedance20FastTextToVideo": "RH 豆包 Seedance 2.0 Fast 文生视频",
+      "RH_DoubaoSeedance20ImageToVideo": "RH 豆包 Seedance 2.0 图生视频",
+      "RH_DoubaoSeedance20FastImageToVideo": "RH 豆包 Seedance 2.0 Fast 图生视频",
+      "RH_DoubaoSeedance20MultimodalVideo": "RH 豆包 Seedance 2.0 多模态视频",
+      "RH_DoubaoSeedance20FastMultimodalVideo": "RH 豆包 Seedance 2.0 Fast 多模态视频",
       "RHSettingsNode": "RH OpenAPI 设置"
     },
     "en": {
@@ -440,6 +455,19 @@
       "RH_KlingLipSyncTts": "RH Kling Lip Sync Tts",
       "RH_KlingLipSyncLipSyncVideo": "RH Kling Lip Sync Lip Sync Video",
       "RH_RhartVideoSOfficialSoraUploadCharacter": "RH Sora Upload Character Official",
+      "RH_ViduTextToVideoQ3ProFast": "RH Vidu Text to Video Q3 PRO Fast",
+      "RH_ViduImageToVideoQ3ProFast": "RH Vidu Image to Video Q3 PRO Fast",
+      "RH_ViduStartEndToVideoQ3ProFast": "RH Vidu Start End to Video Q3 PRO Fast",
+      "RH_PixverseV56TextToVideo": "RH Pixverse V5.6 Text to Video",
+      "RH_PixverseV56ImageToVideo": "RH Pixverse V5.6 Image to Video",
+      "RH_HiggsfieldSoulImageToImage": "RH Higgsfield Soul Image to Image",
+      "RH_HiggsfieldDopImageToVideo": "RH Higgsfield Dop Image to Video",
+      "RH_DoubaoSeedance20TextToVideo": "RH Doubao Seedance 2.0 Text to Video",
+      "RH_DoubaoSeedance20FastTextToVideo": "RH Doubao Seedance 2.0 Fast Text to Video",
+      "RH_DoubaoSeedance20ImageToVideo": "RH Doubao Seedance 2.0 Image to Video",
+      "RH_DoubaoSeedance20FastImageToVideo": "RH Doubao Seedance 2.0 Fast Image to Video",
+      "RH_DoubaoSeedance20MultimodalVideo": "RH Doubao Seedance 2.0 Multimodal Video",
+      "RH_DoubaoSeedance20FastMultimodalVideo": "RH Doubao Seedance 2.0 Fast Multimodal Video",
       "RHSettingsNode": "RH OpenAPI Settings"
     }
   },

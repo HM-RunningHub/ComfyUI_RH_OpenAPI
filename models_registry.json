@@ -9433,7 +9433,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "少女缓缓在废墟中转身，她的液态金属皮肤随着动作产生流动感，反射着周围斑驳的火光。丝绸长裙在风中剧烈摆动，展现出真实的布料物理褶皱。少女伸出手，指尖在虚空中划出金色的火星，火星产生的强光在她的面部形成自然的动态阴影偏移。",
-        "maxLength": 800
+        "maxLength": 20000
       },
       {
         "fieldKey": "aspectRatio",
@@ -9531,7 +9531,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "一个微观视角下的森林。一滴巨大的晨露从翠绿的叶尖滑落，正好击中下方平静的水洼，产生扩散的彩色涟漪。涟漪中映射出天空飞过的机械飞鸟。随着镜头上摇，阳光穿透厚重的云层，形成丁达尔效应，光束照亮了正在林间奔跑的一只半透明材质的电子鹿",
-        "maxLength": 800
+        "maxLength": 20000
       },
       {
         "fieldKey": "aspectRatio",
@@ -9828,21 +9828,24 @@
         "required": false,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "16:9",
         "options": [
           {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           },
           {
             "value": "16:9",
-            "description": "16:9"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           },
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           }
-        ],
-        "defaultValue": "16:9"
+        ]
       },
       {
         "fieldKey": "sound",
@@ -9858,10 +9861,38 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": 5,
         "min": 3,
         "max": 15,
-        "step": 1,
-        "defaultValue": 5
+        "step": 1
+      },
+      {
+        "fieldKey": "multiShot",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "multiShot",
+        "description": "是否生成多镜头视频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "shotType",
+        "type": "LIST",
+        "required": false,
+        "label": "shotType",
+        "description": "分镜方式",
+        "defaultValue": "customize",
+        "options": [
+          {
+            "value": "customize",
+            "description": "自定义分镜",
+            "descriptionEn": "Customize"
+          },
+          {
+            "value": "intelligence",
+            "description": "智能分镜",
+            "descriptionEn": "Intelligence"
+          }
+        ]
       }
     ]
   },
@@ -9890,21 +9921,24 @@
         "required": false,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "16:9",
         "options": [
           {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           },
           {
             "value": "16:9",
-            "description": "16:9"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           },
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           }
-        ],
-        "defaultValue": "16:9"
+        ]
       },
       {
         "fieldKey": "sound",
@@ -9920,10 +9954,38 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": 5,
         "min": 3,
         "max": 15,
-        "step": 1,
-        "defaultValue": 5
+        "step": 1
+      },
+      {
+        "fieldKey": "multiShot",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "multiShot",
+        "description": "是否生成多镜头视频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "shotType",
+        "type": "LIST",
+        "required": false,
+        "label": "shotType",
+        "description": "分镜方式",
+        "defaultValue": "customize",
+        "options": [
+          {
+            "value": "customize",
+            "description": "自定义分镜",
+            "descriptionEn": "Customize"
+          },
+          {
+            "value": "intelligence",
+            "description": "智能分镜",
+            "descriptionEn": "Intelligence"
+          }
+        ]
       }
     ]
   },
@@ -9952,8 +10014,6 @@
         "required": true,
         "label": "firstImageUrl",
         "description": "firstImageUrl",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 50
       },
@@ -9963,8 +10023,6 @@
         "required": false,
         "label": "lastImageUrl",
         "description": "lastImageUrl",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 50
       },
@@ -9974,10 +10032,10 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": 5,
         "min": 3,
         "max": 15,
-        "step": 1,
-        "defaultValue": 5
+        "step": 1
       },
       {
         "fieldKey": "sound",
@@ -9986,6 +10044,34 @@
         "label": "sound",
         "description": "sound",
         "defaultValue": true
+      },
+      {
+        "fieldKey": "multiShot",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "multiShot",
+        "description": "是否生成多镜头视频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "shotType",
+        "type": "LIST",
+        "required": false,
+        "label": "shotType",
+        "description": "分镜方式",
+        "defaultValue": "customize",
+        "options": [
+          {
+            "value": "customize",
+            "description": "自定义分镜",
+            "descriptionEn": "Customize"
+          },
+          {
+            "value": "intelligence",
+            "description": "智能分镜",
+            "descriptionEn": "Intelligence"
+          }
+        ]
       }
     ]
   },
@@ -10014,8 +10100,6 @@
         "required": true,
         "label": "firstImageUrl",
         "description": "firstImageUrl",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 50
       },
@@ -10025,8 +10109,6 @@
         "required": false,
         "label": "lastImageUrl",
         "description": "lastImageUrl",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 50
       },
@@ -10036,10 +10118,10 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": 5,
         "min": 3,
         "max": 15,
-        "step": 1,
-        "defaultValue": 5
+        "step": 1
       },
       {
         "fieldKey": "sound",
@@ -10048,6 +10130,34 @@
         "label": "sound",
         "description": "sound",
         "defaultValue": true
+      },
+      {
+        "fieldKey": "multiShot",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "multiShot",
+        "description": "是否生成多镜头视频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "shotType",
+        "type": "LIST",
+        "required": false,
+        "label": "shotType",
+        "description": "分镜方式",
+        "defaultValue": "customize",
+        "options": [
+          {
+            "value": "customize",
+            "description": "自定义分镜",
+            "descriptionEn": "Customize"
+          },
+          {
+            "value": "intelligence",
+            "description": "智能分镜",
+            "descriptionEn": "Intelligence"
+          }
+        ]
       }
     ]
   },
@@ -14226,6 +14336,33 @@
         "min": 3,
         "max": 15,
         "step": 1
+      },
+      {
+        "fieldKey": "multiShot",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "multiShot",
+        "description": "是否生成多镜头视频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "shotType",
+        "type": "LIST",
+        "required": false,
+        "label": "shotType",
+        "description": "分镜方式",
+        "options": [
+          {
+            "value": "customize",
+            "description": "自定义分镜",
+            "descriptionEn": "Customize"
+          },
+          {
+            "value": "intelligence",
+            "description": "智能分镜",
+            "descriptionEn": "Intelligence"
+          }
+        ]
       }
     ]
   },
@@ -14319,6 +14456,33 @@
         "min": 3,
         "max": 15,
         "step": 1
+      },
+      {
+        "fieldKey": "multiShot",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "multiShot",
+        "description": "是否生成多镜头视频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "shotType",
+        "type": "LIST",
+        "required": false,
+        "label": "shotType",
+        "description": "分镜方式",
+        "options": [
+          {
+            "value": "customize",
+            "description": "自定义分镜",
+            "descriptionEn": "Customize"
+          },
+          {
+            "value": "intelligence",
+            "description": "智能分镜",
+            "descriptionEn": "Intelligence"
+          }
+        ]
       }
     ]
   },
@@ -17106,22 +17270,6 @@
         ]
       },
       {
-        "fieldKey": "generateAudioSwitch",
-        "type": "BOOLEAN",
-        "required": true,
-        "label": "generateAudioSwitch",
-        "description": "是否生成视频音频",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "generateMultiClipSwitch",
-        "type": "BOOLEAN",
-        "required": true,
-        "label": "generateMultiClipSwitch",
-        "description": "是否生成多镜头视频",
-        "defaultValue": false
-      },
-      {
         "fieldKey": "thinkingType",
         "type": "LIST",
         "required": false,
@@ -17143,6 +17291,46 @@
             "value": "disabled",
             "description": "disabled",
             "descriptionEn": "disabled"
+          }
+        ]
+      },
+      {
+        "fieldKey": "generateAudioSwitch",
+        "type": "LIST",
+        "required": true,
+        "label": "generateAudioSwitch",
+        "description": "是否生成视频音频",
+        "defaultValue": "false",
+        "options": [
+          {
+            "value": "true",
+            "description": "true",
+            "descriptionEn": "true"
+          },
+          {
+            "value": "false",
+            "description": "false",
+            "descriptionEn": "false"
+          }
+        ]
+      },
+      {
+        "fieldKey": "generateMultiClipSwitch",
+        "type": "LIST",
+        "required": true,
+        "label": "generateMultiClipSwitch",
+        "description": "是否生成多镜头视频",
+        "defaultValue": "false",
+        "options": [
+          {
+            "value": "true",
+            "description": "true",
+            "descriptionEn": "true"
+          },
+          {
+            "value": "false",
+            "description": "false",
+            "descriptionEn": "false"
           }
         ]
       }
@@ -17178,7 +17366,7 @@
       {
         "fieldKey": "resolution",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "resolution",
         "description": "视频分辨率",
         "defaultValue": "540p",
@@ -17208,7 +17396,7 @@
       {
         "fieldKey": "duration",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "duration",
         "description": "视频时长（秒）",
         "defaultValue": "5",
@@ -17229,22 +17417,6 @@
             "descriptionEn": "10"
           }
         ]
-      },
-      {
-        "fieldKey": "generateAudioSwitch",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudioSwitch",
-        "description": "是否生成视频音频",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "generateMultiClipSwitch",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateMultiClipSwitch",
-        "description": "是否生成多镜头视频",
-        "defaultValue": false
       },
       {
         "fieldKey": "thinkingType",
@@ -17278,6 +17450,46 @@
         "label": "negativePrompt",
         "description": "负向提示词",
         "maxLength": 2048
+      },
+      {
+        "fieldKey": "generateAudioSwitch",
+        "type": "LIST",
+        "required": true,
+        "label": "generateAudioSwitch",
+        "description": "是否生成视频音频",
+        "defaultValue": "false",
+        "options": [
+          {
+            "value": "true",
+            "description": "true",
+            "descriptionEn": "true"
+          },
+          {
+            "value": "false",
+            "description": "false",
+            "descriptionEn": "false"
+          }
+        ]
+      },
+      {
+        "fieldKey": "generateMultiClipSwitch",
+        "type": "LIST",
+        "required": true,
+        "label": "generateMultiClipSwitch",
+        "description": "是否生成多镜头视频",
+        "defaultValue": "false",
+        "options": [
+          {
+            "value": "true",
+            "description": "true",
+            "descriptionEn": "true"
+          },
+          {
+            "value": "false",
+            "description": "false",
+            "descriptionEn": "false"
+          }
+        ]
       }
     ]
   },
@@ -17355,7 +17567,7 @@
       {
         "fieldKey": "duration",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "duration",
         "description": "视频时长（秒）",
         "defaultValue": "5",
@@ -17380,7 +17592,7 @@
       {
         "fieldKey": "resolution",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "resolution",
         "description": "视频分辨率",
         "defaultValue": "540p",
@@ -18578,14 +18790,248 @@
         "required": true,
         "label": "text",
         "description": "合成音频的文案。文本内容最大长度1000，内容过长会返回错误",
+        "defaultValue": "欢迎使用可灵对口型模型，可基于人脸识别结果和音频，生成唇形同步的视频，保持人物一致性，生成想要的音频，让人物去对口型。这就是用可灵对口型模型生成的视频哦。",
         "maxLength": 1000
       },
       {
         "fieldKey": "voiceId",
-        "type": "STRING",
+        "type": "LIST",
         "required": true,
         "label": "voiceId",
-        "description": "音色ID。系统提供多种音色可供选择，具体音色效果和音色ID对应关系请参考官方文档"
+        "description": "音色ID。系统提供多种音色可供选择，具体音色效果和音色ID对应关系请参考官方文档：https://docs.qingque.cn/s/home/eZQDvafJ4vXQkP8T9ZPvmye8S?identityId=2E1MlYrrPk4",
+        "defaultValue": "genshin_klee2",
+        "options": [
+          {
+            "value": "genshin_vindi2",
+            "description": "genshin_vindi2",
+            "descriptionEn": "genshin_vindi2"
+          },
+          {
+            "value": "zhinen_xuesheng",
+            "description": "zhinen_xuesheng",
+            "descriptionEn": "zhinen_xuesheng"
+          },
+          {
+            "value": "tiyuxi_xuedi",
+            "description": "tiyuxi_xuedi",
+            "descriptionEn": "tiyuxi_xuedi"
+          },
+          {
+            "value": "ai_shatang",
+            "description": "ai_shatang",
+            "descriptionEn": "ai_shatang"
+          },
+          {
+            "value": "genshin_klee2",
+            "description": "genshin_klee2",
+            "descriptionEn": "genshin_klee2"
+          },
+          {
+            "value": "genshin_kirara",
+            "description": "genshin_kirara",
+            "descriptionEn": "genshin_kirara"
+          },
+          {
+            "value": "ai_kaiya",
+            "description": "ai_kaiya",
+            "descriptionEn": "ai_kaiya"
+          },
+          {
+            "value": "tiexin_nanyou",
+            "description": "tiexin_nanyou",
+            "descriptionEn": "tiexin_nanyou"
+          },
+          {
+            "value": "ai_chenjiahao_712",
+            "description": "ai_chenjiahao_712",
+            "descriptionEn": "ai_chenjiahao_712"
+          },
+          {
+            "value": "girlfriend_1_speech02",
+            "description": "girlfriend_1_speech02",
+            "descriptionEn": "girlfriend_1_speech02"
+          },
+          {
+            "value": "chat1_female_new-3",
+            "description": "chat1_female_new-3",
+            "descriptionEn": "chat1_female_new-3"
+          },
+          {
+            "value": "girlfriend_2_speech02",
+            "description": "girlfriend_2_speech02",
+            "descriptionEn": "girlfriend_2_speech02"
+          },
+          {
+            "value": "cartoon-boy-07",
+            "description": "cartoon-boy-07",
+            "descriptionEn": "cartoon-boy-07"
+          },
+          {
+            "value": "cartoon-girl-01",
+            "description": "cartoon-girl-01",
+            "descriptionEn": "cartoon-girl-01"
+          },
+          {
+            "value": "ai_huangyaoshi_712",
+            "description": "ai_huangyaoshi_712",
+            "descriptionEn": "ai_huangyaoshi_712"
+          },
+          {
+            "value": "you_pingjing",
+            "description": "you_pingjing",
+            "descriptionEn": "you_pingjing"
+          },
+          {
+            "value": "ai_laoguowang_712",
+            "description": "ai_laoguowang_712",
+            "descriptionEn": "ai_laoguowang_712"
+          },
+          {
+            "value": "chengshu_jiejie",
+            "description": "chengshu_jiejie",
+            "descriptionEn": "chengshu_jiejie"
+          },
+          {
+            "value": "zhuxi_speech02",
+            "description": "zhuxi_speech02",
+            "descriptionEn": "zhuxi_speech02"
+          },
+          {
+            "value": "uk_oldman3",
+            "description": "uk_oldman3",
+            "descriptionEn": "uk_oldman3"
+          },
+          {
+            "value": "laopopo_speech02",
+            "description": "laopopo_speech02",
+            "descriptionEn": "laopopo_speech02"
+          },
+          {
+            "value": "heainainai_speech02",
+            "description": "heainainai_speech02",
+            "descriptionEn": "heainainai_speech02"
+          },
+          {
+            "value": "dongbeilaotie_speech02",
+            "description": "dongbeilaotie_speech02",
+            "descriptionEn": "dongbeilaotie_speech02"
+          },
+          {
+            "value": "chongqingxiaohuo_speech02",
+            "description": "chongqingxiaohuo_speech02",
+            "descriptionEn": "chongqingxiaohuo_speech02"
+          },
+          {
+            "value": "chuanmeizi_speech02",
+            "description": "chuanmeizi_speech02",
+            "descriptionEn": "chuanmeizi_speech02"
+          },
+          {
+            "value": "chaoshandashu_speech02",
+            "description": "chaoshandashu_speech02",
+            "descriptionEn": "chaoshandashu_speech02"
+          },
+          {
+            "value": "ai_taiwan_man2_speech02",
+            "description": "ai_taiwan_man2_speech02",
+            "descriptionEn": "ai_taiwan_man2_speech02"
+          },
+          {
+            "value": "xianzhanggui_speech02",
+            "description": "xianzhanggui_speech02",
+            "descriptionEn": "xianzhanggui_speech02"
+          },
+          {
+            "value": "tianjinjiejie_speech02",
+            "description": "tianjinjiejie_speech02",
+            "descriptionEn": "tianjinjiejie_speech02"
+          },
+          {
+            "value": "diyinnansang_DB_CN_M_04-v2",
+            "description": "diyinnansang_DB_CN_M_04-v2",
+            "descriptionEn": "diyinnansang_DB_CN_M_04-v2"
+          },
+          {
+            "value": "yizhipiannan-v1",
+            "description": "yizhipiannan-v1",
+            "descriptionEn": "yizhipiannan-v1"
+          },
+          {
+            "value": "guanxiaofang-v2",
+            "description": "guanxiaofang-v2",
+            "descriptionEn": "guanxiaofang-v2"
+          },
+          {
+            "value": "tianmeixuemei-v1",
+            "description": "tianmeixuemei-v1",
+            "descriptionEn": "tianmeixuemei-v1"
+          },
+          {
+            "value": "daopianyansang-v1",
+            "description": "daopianyansang-v1",
+            "descriptionEn": "daopianyansang-v1"
+          },
+          {
+            "value": "mengwa-v1",
+            "description": "mengwa-v1",
+            "descriptionEn": "mengwa-v1"
+          },
+          {
+            "value": "AOT",
+            "description": "AOT",
+            "descriptionEn": "AOT"
+          },
+          {
+            "value": "oversea_male1",
+            "description": "oversea_male1",
+            "descriptionEn": "oversea_male1"
+          },
+          {
+            "value": "girlfriend_4_speech02",
+            "description": "girlfriend_4_speech02",
+            "descriptionEn": "girlfriend_4_speech02"
+          },
+          {
+            "value": "chat_0407_5-1",
+            "description": "chat_0407_5-1",
+            "descriptionEn": "chat_0407_5-1"
+          },
+          {
+            "value": "uk_boy1",
+            "description": "uk_boy1",
+            "descriptionEn": "uk_boy1"
+          },
+          {
+            "value": "PeppaPig_platform",
+            "description": "PeppaPig_platform",
+            "descriptionEn": "PeppaPig_platform"
+          },
+          {
+            "value": "ai_huangzhong_712",
+            "description": "ai_huangzhong_712",
+            "descriptionEn": "ai_huangzhong_712"
+          },
+          {
+            "value": "calm_story1",
+            "description": "calm_story1",
+            "descriptionEn": "calm_story1"
+          },
+          {
+            "value": "uk_man2",
+            "description": "uk_man2",
+            "descriptionEn": "uk_man2"
+          },
+          {
+            "value": "reader_en_m-v1",
+            "description": "reader_en_m-v1",
+            "descriptionEn": "reader_en_m-v1"
+          },
+          {
+            "value": "commercial_lady_en_f-v1",
+            "description": "commercial_lady_en_f-v1",
+            "descriptionEn": "commercial_lady_en_f-v1"
+          }
+        ]
       },
       {
         "fieldKey": "voiceLanguage",
@@ -18615,7 +19061,8 @@
         "description": "语速，默认为1.0。有效范围0.8~2.0，精确至小数点后1位",
         "defaultValue": 1.0,
         "min": 0.8,
-        "max": 2
+        "max": 2,
+        "step": 0.1
       }
     ]
   },
@@ -18634,21 +19081,24 @@
         "type": "STRING",
         "required": true,
         "label": "sessionId",
-        "description": "会话ID，由人脸识别接口返回"
+        "description": "会话ID，由人脸识别接口返回",
+        "defaultValue": "865289575831703581"
       },
       {
         "fieldKey": "faceId",
         "type": "STRING",
         "required": true,
         "label": "faceId",
-        "description": "人脸ID，由人脸识别接口返回"
+        "description": "人脸ID，由人脸识别接口返回",
+        "defaultValue": "0"
       },
       {
         "fieldKey": "audioId",
         "type": "STRING",
         "required": false,
         "label": "audioId",
-        "description": "通过语音合成接口生成的音频ID，与audioUrl二选一。仅支持30天内生成的、时长2~60秒的音频"
+        "description": "通过语音合成接口生成的音频ID，与audioUrl二选一。仅支持30天内生成的、时长2~60秒的音频",
+        "defaultValue": "865272148167389266"
       },
       {
         "fieldKey": "audioUrl",
@@ -18730,6 +19180,2646 @@
         "label": "name",
         "description": "角色名称（1-80字符），后续在文生视频中通过此名称引用角色",
         "maxLength": 80
+      }
+    ]
+  },
+  {
+    "class_name": "ViduTextToVideoQ3ProFast",
+    "internal_name": "RH_ViduTextToVideoQ3ProFast",
+    "display_name": "RH Vidu-文生视频-q3-pro-fast",
+    "name_cn": "Vidu-文生视频-q3-pro-fast",
+    "name_en": "Vidu-text-to-video-q3-pro-fast",
+    "endpoint": "vidu/text-to-video-q3-pro-fast",
+    "output_type": "video",
+    "category": "RunningHub/Vidu",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "画面比例",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长(秒)",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "1",
+            "description": "1",
+            "descriptionEn": "1"
+          },
+          {
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          },
+          {
+            "value": "16",
+            "description": "16",
+            "descriptionEn": "16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "audio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "audio",
+        "description": "是否使用音视频直出能力",
+        "defaultValue": true
+      }
+    ]
+  },
+  {
+    "class_name": "ViduImageToVideoQ3ProFast",
+    "internal_name": "RH_ViduImageToVideoQ3ProFast",
+    "display_name": "RH Vidu-图生视频-q3-pro-fast",
+    "name_cn": "Vidu-图生视频-q3-pro-fast",
+    "name_en": "Vidu-image-to-video-q3-pro-fast",
+    "endpoint": "vidu/image-to-video-q3-pro-fast",
+    "output_type": "video",
+    "category": "RunningHub/Vidu",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "文本提示词",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "输入图片(作为视频首帧)",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长(秒)",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "1",
+            "description": "1",
+            "descriptionEn": "1"
+          },
+          {
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          },
+          {
+            "value": "16",
+            "description": "16",
+            "descriptionEn": "16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "audio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "audio",
+        "description": "是否使用音视频直出能力",
+        "defaultValue": true
+      }
+    ]
+  },
+  {
+    "class_name": "ViduStartEndToVideoQ3ProFast",
+    "internal_name": "RH_ViduStartEndToVideoQ3ProFast",
+    "display_name": "RH Vidu-首尾帧生视频-q3-pro-fast",
+    "name_cn": "Vidu-首尾帧生视频-q3-pro-fast",
+    "name_en": "Vidu-start-end-to-video-q3-pro-fast",
+    "endpoint": "vidu/start-end-to-video-q3-pro-fast",
+    "output_type": "video",
+    "category": "RunningHub/Vidu",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "文本提示词",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "firstImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstImageUrl",
+        "description": "首帧图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "lastImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "lastImageUrl",
+        "description": "尾帧图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长(秒)",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "1",
+            "description": "1",
+            "descriptionEn": "1"
+          },
+          {
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          },
+          {
+            "value": "16",
+            "description": "16",
+            "descriptionEn": "16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "audio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "audio",
+        "description": "是否使用音视频直出能力",
+        "defaultValue": true
+      }
+    ]
+  },
+  {
+    "class_name": "PixverseV56TextToVideo",
+    "internal_name": "RH_PixverseV56TextToVideo",
+    "display_name": "RH PixVerse V5.6 文生视频",
+    "name_cn": "PixVerse V5.6 文生视频",
+    "name_en": "pixverse-v5.6/text-to-video",
+    "endpoint": "pixverse-v5.6/text-to-video",
+    "output_type": "video",
+    "category": "RunningHub/PixVerse",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词，描述视频场景、动作和风格",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "视频分辨率",
+        "defaultValue": "540p",
+        "options": [
+          {
+            "value": "360p",
+            "description": "360p",
+            "descriptionEn": "360p"
+          },
+          {
+            "value": "540p",
+            "description": "540p",
+            "descriptionEn": "540p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长(秒)，1080p 不支持 10 秒",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "画面比例",
+        "defaultValue": "1:1",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "generateAudioSwitch",
+        "type": "LIST",
+        "required": true,
+        "label": "generateAudioSwitch",
+        "description": "是否生成视频音频",
+        "defaultValue": "false",
+        "options": [
+          {
+            "value": "true",
+            "description": "true",
+            "descriptionEn": "true"
+          },
+          {
+            "value": "false",
+            "description": "false",
+            "descriptionEn": "false"
+          }
+        ]
+      },
+      {
+        "fieldKey": "thinkingType",
+        "type": "LIST",
+        "required": false,
+        "label": "thinkingType",
+        "description": "AI 思考模式",
+        "defaultValue": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "enabled",
+            "description": "enabled",
+            "descriptionEn": "enabled"
+          },
+          {
+            "value": "disabled",
+            "description": "disabled",
+            "descriptionEn": "disabled"
+          }
+        ]
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "反向提示词，描述不希望出现的元素",
+        "maxLength": 2048
+      }
+    ]
+  },
+  {
+    "class_name": "PixverseV56ImageToVideo",
+    "internal_name": "RH_PixverseV56ImageToVideo",
+    "display_name": "RH PixVerse V5.6 图生视频",
+    "name_cn": "PixVerse V5.6 图生视频",
+    "name_en": "pixverse-v5.6/image-to-video",
+    "endpoint": "pixverse-v5.6/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/PixVerse",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词，描述视频动作和风格",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "输入图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "视频分辨率",
+        "defaultValue": "540p",
+        "options": [
+          {
+            "value": "360p",
+            "description": "360p",
+            "descriptionEn": "360p"
+          },
+          {
+            "value": "540p",
+            "description": "540p",
+            "descriptionEn": "540p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长(秒)，1080p 不支持 10 秒",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      },
+      {
+        "fieldKey": "generateAudioSwitch",
+        "type": "LIST",
+        "required": true,
+        "label": "generateAudioSwitch",
+        "description": "是否生成视频音频",
+        "defaultValue": "false",
+        "options": [
+          {
+            "value": "true",
+            "description": "true",
+            "descriptionEn": "true"
+          },
+          {
+            "value": "false",
+            "description": "false",
+            "descriptionEn": "false"
+          }
+        ]
+      },
+      {
+        "fieldKey": "thinkingType",
+        "type": "LIST",
+        "required": false,
+        "label": "thinkingType",
+        "description": "AI 思考模式",
+        "defaultValue": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "enabled",
+            "description": "enabled",
+            "descriptionEn": "enabled"
+          },
+          {
+            "value": "disabled",
+            "description": "disabled",
+            "descriptionEn": "disabled"
+          }
+        ]
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "反向提示词，描述不希望出现的元素",
+        "maxLength": 2048
+      }
+    ]
+  },
+  {
+    "class_name": "HiggsfieldSoulImageToImage",
+    "internal_name": "RH_HiggsfieldSoulImageToImage",
+    "display_name": "RH Higgsfield Soul 图生图",
+    "name_cn": "Higgsfield Soul 图生图",
+    "name_en": "higgsfield/soul/image-to-image",
+    "endpoint": "higgsfield/soul/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/Higgsfield",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "图片生成提示词",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "输入图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "size",
+        "type": "LIST",
+        "required": true,
+        "label": "size",
+        "description": "输出图片尺寸（宽*高）",
+        "defaultValue": "1152*2048",
+        "options": [
+          {
+            "value": "960*1696",
+            "description": "960*1696",
+            "descriptionEn": "960*1696"
+          },
+          {
+            "value": "1088*1632",
+            "description": "1088*1632",
+            "descriptionEn": "1088*1632"
+          },
+          {
+            "value": "1152*1536",
+            "description": "1152*1536",
+            "descriptionEn": "1152*1536"
+          },
+          {
+            "value": "1152*2048",
+            "description": "1152*2048",
+            "descriptionEn": "1152*2048"
+          },
+          {
+            "value": "1536*1536",
+            "description": "1536*1536",
+            "descriptionEn": "1536*1536"
+          },
+          {
+            "value": "1536*1152",
+            "description": "1536*1152",
+            "descriptionEn": "1536*1152"
+          },
+          {
+            "value": "1536*2048",
+            "description": "1536*2048",
+            "descriptionEn": "1536*2048"
+          },
+          {
+            "value": "1344*2016",
+            "description": "1344*2016",
+            "descriptionEn": "1344*2016"
+          },
+          {
+            "value": "1632*1088",
+            "description": "1632*1088",
+            "descriptionEn": "1632*1088"
+          },
+          {
+            "value": "1696*960",
+            "description": "1696*960",
+            "descriptionEn": "1696*960"
+          },
+          {
+            "value": "2016*1344",
+            "description": "2016*1344",
+            "descriptionEn": "2016*1344"
+          },
+          {
+            "value": "2048*1152",
+            "description": "2048*1152",
+            "descriptionEn": "2048*1152"
+          },
+          {
+            "value": "2048*1536",
+            "description": "2048*1536",
+            "descriptionEn": "2048*1536"
+          }
+        ]
+      },
+      {
+        "fieldKey": "style",
+        "type": "LIST",
+        "required": false,
+        "label": "style",
+        "description": "图像生成风格预设",
+        "defaultValue": "Realistic",
+        "options": [
+          {
+            "value": "Creatures",
+            "description": "Creatures",
+            "descriptionEn": "Creatures"
+          },
+          {
+            "value": "Medieval",
+            "description": "Medieval",
+            "descriptionEn": "Medieval"
+          },
+          {
+            "value": "Spotlight",
+            "description": "Spotlight",
+            "descriptionEn": "Spotlight"
+          },
+          {
+            "value": "Giant People",
+            "description": "Giant People",
+            "descriptionEn": "Giant People"
+          },
+          {
+            "value": "Red balloon",
+            "description": "Red balloon",
+            "descriptionEn": "Red balloon"
+          },
+          {
+            "value": "green editorial",
+            "description": "green editorial",
+            "descriptionEn": "green editorial"
+          },
+          {
+            "value": "Subway",
+            "description": "Subway",
+            "descriptionEn": "Subway"
+          },
+          {
+            "value": "Library",
+            "description": "Library",
+            "descriptionEn": "Library"
+          },
+          {
+            "value": "Realistic",
+            "description": "Realistic",
+            "descriptionEn": "Realistic"
+          },
+          {
+            "value": "DigitalCam",
+            "description": "DigitalCam",
+            "descriptionEn": "DigitalCam"
+          },
+          {
+            "value": "Grillz Selfie",
+            "description": "Grillz Selfie",
+            "descriptionEn": "Grillz Selfie"
+          },
+          {
+            "value": "Bleached Brows",
+            "description": "Bleached Brows",
+            "descriptionEn": "Bleached Brows"
+          },
+          {
+            "value": "Sitting on the Street",
+            "description": "Sitting on the Street",
+            "descriptionEn": "Sitting on the Street"
+          },
+          {
+            "value": "Crossing the street",
+            "description": "Crossing the street",
+            "descriptionEn": "Crossing the street"
+          },
+          {
+            "value": "Angel Wings",
+            "description": "Angel Wings",
+            "descriptionEn": "Angel Wings"
+          },
+          {
+            "value": "Duplicate",
+            "description": "Duplicate",
+            "descriptionEn": "Duplicate"
+          },
+          {
+            "value": "Quiet luxury",
+            "description": "Quiet luxury",
+            "descriptionEn": "Quiet luxury"
+          },
+          {
+            "value": "Fireproof",
+            "description": "Fireproof",
+            "descriptionEn": "Fireproof"
+          },
+          {
+            "value": "Elevator Mirror",
+            "description": "Elevator Mirror",
+            "descriptionEn": "Elevator Mirror"
+          },
+          {
+            "value": "360 cam",
+            "description": "360 cam",
+            "descriptionEn": "360 cam"
+          },
+          {
+            "value": "Glitch",
+            "description": "Glitch",
+            "descriptionEn": "Glitch"
+          },
+          {
+            "value": "FashionShow",
+            "description": "FashionShow",
+            "descriptionEn": "FashionShow"
+          },
+          {
+            "value": "PixeletedFace",
+            "description": "PixeletedFace",
+            "descriptionEn": "PixeletedFace"
+          },
+          {
+            "value": "Sunbathing",
+            "description": "Sunbathing",
+            "descriptionEn": "Sunbathing"
+          },
+          {
+            "value": "Paper Face",
+            "description": "Paper Face",
+            "descriptionEn": "Paper Face"
+          },
+          {
+            "value": "90s Grain",
+            "description": "90s Grain",
+            "descriptionEn": "90s Grain"
+          },
+          {
+            "value": "Geominimal",
+            "description": "Geominimal",
+            "descriptionEn": "Geominimal"
+          },
+          {
+            "value": "Foggy Morning",
+            "description": "Foggy Morning",
+            "descriptionEn": "Foggy Morning"
+          },
+          {
+            "value": "Overexposed",
+            "description": "Overexposed",
+            "descriptionEn": "Overexposed"
+          },
+          {
+            "value": "Sunset beach",
+            "description": "Sunset beach",
+            "descriptionEn": "Sunset beach"
+          },
+          {
+            "value": "Giant Accessory",
+            "description": "Giant Accessory",
+            "descriptionEn": "Giant Accessory"
+          },
+          {
+            "value": "RingSelfie",
+            "description": "RingSelfie",
+            "descriptionEn": "RingSelfie"
+          },
+          {
+            "value": "Street view",
+            "description": "Street view",
+            "descriptionEn": "Street view"
+          },
+          {
+            "value": "90's Editorial",
+            "description": "90's Editorial",
+            "descriptionEn": "90's Editorial"
+          },
+          {
+            "value": "Rhyme & blues",
+            "description": "Rhyme & blues",
+            "descriptionEn": "Rhyme & blues"
+          },
+          {
+            "value": "2000s Cam",
+            "description": "2000s Cam",
+            "descriptionEn": "2000s Cam"
+          },
+          {
+            "value": "CCTV",
+            "description": "CCTV",
+            "descriptionEn": "CCTV"
+          },
+          {
+            "value": "0.5 Outfit",
+            "description": "0.5 Outfit",
+            "descriptionEn": "0.5 Outfit"
+          },
+          {
+            "value": "Amalfi Summer",
+            "description": "Amalfi Summer",
+            "descriptionEn": "Amalfi Summer"
+          },
+          {
+            "value": "Bimbocore",
+            "description": "Bimbocore",
+            "descriptionEn": "Bimbocore"
+          },
+          {
+            "value": "0.5 Selfie",
+            "description": "0.5 Selfie",
+            "descriptionEn": "0.5 Selfie"
+          },
+          {
+            "value": "Sand",
+            "description": "Sand",
+            "descriptionEn": "Sand"
+          },
+          {
+            "value": "Vintage PhotoBooth",
+            "description": "Vintage PhotoBooth",
+            "descriptionEn": "Vintage PhotoBooth"
+          },
+          {
+            "value": "afterparty cam",
+            "description": "afterparty cam",
+            "descriptionEn": "afterparty cam"
+          },
+          {
+            "value": "Babydoll MakeUp",
+            "description": "Babydoll MakeUp",
+            "descriptionEn": "Babydoll MakeUp"
+          },
+          {
+            "value": "Through The Glass",
+            "description": "Through The Glass",
+            "descriptionEn": "Through The Glass"
+          },
+          {
+            "value": "Gallery",
+            "description": "Gallery",
+            "descriptionEn": "Gallery"
+          },
+          {
+            "value": "Eating Food",
+            "description": "Eating Food",
+            "descriptionEn": "Eating Food"
+          },
+          {
+            "value": "Swords Hill",
+            "description": "Swords Hill",
+            "descriptionEn": "Swords Hill"
+          },
+          {
+            "value": "Office beach",
+            "description": "Office beach",
+            "descriptionEn": "Office beach"
+          },
+          {
+            "value": "Help It's Too Big",
+            "description": "Help It's Too Big",
+            "descriptionEn": "Help It's Too Big"
+          },
+          {
+            "value": "Japandi",
+            "description": "Japandi",
+            "descriptionEn": "Japandi"
+          },
+          {
+            "value": "iPhone",
+            "description": "iPhone",
+            "descriptionEn": "iPhone"
+          },
+          {
+            "value": "Gorpcore",
+            "description": "Gorpcore",
+            "descriptionEn": "Gorpcore"
+          },
+          {
+            "value": "Indie sleaze",
+            "description": "Indie sleaze",
+            "descriptionEn": "Indie sleaze"
+          },
+          {
+            "value": "Fairycore",
+            "description": "Fairycore",
+            "descriptionEn": "Fairycore"
+          },
+          {
+            "value": "Tumblr",
+            "description": "Tumblr",
+            "descriptionEn": "Tumblr"
+          },
+          {
+            "value": "Avant-garde",
+            "description": "Avant-garde",
+            "descriptionEn": "Avant-garde"
+          },
+          {
+            "value": "HairClips",
+            "description": "HairClips",
+            "descriptionEn": "HairClips"
+          },
+          {
+            "value": "birthday mess",
+            "description": "birthday mess",
+            "descriptionEn": "birthday mess"
+          },
+          {
+            "value": "Clouded Dream",
+            "description": "Clouded Dream",
+            "descriptionEn": "Clouded Dream"
+          },
+          {
+            "value": "Y2K Posters",
+            "description": "Y2K Posters",
+            "descriptionEn": "Y2K Posters"
+          },
+          {
+            "value": "tokyo drift",
+            "description": "tokyo drift",
+            "descriptionEn": "tokyo drift"
+          },
+          {
+            "value": "Object Makeup",
+            "description": "Object Makeup",
+            "descriptionEn": "Object Makeup"
+          },
+          {
+            "value": "Graffiti",
+            "description": "Graffiti",
+            "descriptionEn": "Graffiti"
+          },
+          {
+            "value": "Sunburnt",
+            "description": "Sunburnt",
+            "descriptionEn": "Sunburnt"
+          },
+          {
+            "value": "hallway noir",
+            "description": "hallway noir",
+            "descriptionEn": "hallway noir"
+          },
+          {
+            "value": "2000s Fashion",
+            "description": "2000s Fashion",
+            "descriptionEn": "2000s Fashion"
+          },
+          {
+            "value": "Night Beach",
+            "description": "Night Beach",
+            "descriptionEn": "Night Beach"
+          },
+          {
+            "value": "Movie",
+            "description": "Movie",
+            "descriptionEn": "Movie"
+          },
+          {
+            "value": "Long legs",
+            "description": "Long legs",
+            "descriptionEn": "Long legs"
+          },
+          {
+            "value": "7\"",
+            "description": "7\"",
+            "descriptionEn": "7\""
+          },
+          {
+            "value": "General",
+            "description": "General",
+            "descriptionEn": "General"
+          },
+          {
+            "value": "Nail Check",
+            "description": "Nail Check",
+            "descriptionEn": "Nail Check"
+          },
+          {
+            "value": "Coquette core",
+            "description": "Coquette core",
+            "descriptionEn": "Coquette core"
+          },
+          {
+            "value": "Mixed Media",
+            "description": "Mixed Media",
+            "descriptionEn": "Mixed Media"
+          },
+          {
+            "value": "Selfcare",
+            "description": "Selfcare",
+            "descriptionEn": "Selfcare"
+          },
+          {
+            "value": "Grunge",
+            "description": "Grunge",
+            "descriptionEn": "Grunge"
+          },
+          {
+            "value": "Double take",
+            "description": "Double take",
+            "descriptionEn": "Double take"
+          },
+          {
+            "value": "505room",
+            "description": "505room",
+            "descriptionEn": "505room"
+          },
+          {
+            "value": "Flight mode",
+            "description": "Flight mode",
+            "descriptionEn": "Flight mode"
+          },
+          {
+            "value": "Escalator",
+            "description": "Escalator",
+            "descriptionEn": "Escalator"
+          },
+          {
+            "value": "burgundy suit",
+            "description": "burgundy suit",
+            "descriptionEn": "burgundy suit"
+          },
+          {
+            "value": "Fisheye",
+            "description": "Fisheye",
+            "descriptionEn": "Fisheye"
+          },
+          {
+            "value": "Shoe Check",
+            "description": "Shoe Check",
+            "descriptionEn": "Shoe Check"
+          },
+          {
+            "value": "Rainy Day",
+            "description": "Rainy Day",
+            "descriptionEn": "Rainy Day"
+          },
+          {
+            "value": "Mt. Fuji",
+            "description": "Mt. Fuji",
+            "descriptionEn": "Mt. Fuji"
+          },
+          {
+            "value": "Sea breeze",
+            "description": "Sea breeze",
+            "descriptionEn": "Sea breeze"
+          },
+          {
+            "value": "Invertethereal",
+            "description": "Invertethereal",
+            "descriptionEn": "Invertethereal"
+          },
+          {
+            "value": "Y2K",
+            "description": "Y2K",
+            "descriptionEn": "Y2K"
+          },
+          {
+            "value": "Tokyo Streetstyle",
+            "description": "Tokyo Streetstyle",
+            "descriptionEn": "Tokyo Streetstyle"
+          },
+          {
+            "value": "chrome exit",
+            "description": "chrome exit",
+            "descriptionEn": "chrome exit"
+          },
+          {
+            "value": "Night rider",
+            "description": "Night rider",
+            "descriptionEn": "Night rider"
+          },
+          {
+            "value": "Artwork",
+            "description": "Artwork",
+            "descriptionEn": "Artwork"
+          },
+          {
+            "value": "Glazed doll skin makeup",
+            "description": "Glazed doll skin makeup",
+            "descriptionEn": "Glazed doll skin makeup"
+          },
+          {
+            "value": "mount view",
+            "description": "mount view",
+            "descriptionEn": "mount view"
+          },
+          {
+            "value": "2049",
+            "description": "2049",
+            "descriptionEn": "2049"
+          },
+          {
+            "value": "blackout fit",
+            "description": "blackout fit",
+            "descriptionEn": "blackout fit"
+          },
+          {
+            "value": "Bike mafia",
+            "description": "Bike mafia",
+            "descriptionEn": "Bike mafia"
+          },
+          {
+            "value": "static glow",
+            "description": "static glow",
+            "descriptionEn": "static glow"
+          },
+          {
+            "value": "Nicotine glow",
+            "description": "Nicotine glow",
+            "descriptionEn": "Nicotine glow"
+          },
+          {
+            "value": "brick shade",
+            "description": "brick shade",
+            "descriptionEn": "brick shade"
+          },
+          {
+            "value": "dmv",
+            "description": "dmv",
+            "descriptionEn": "dmv"
+          },
+          {
+            "value": "Fish-eye twin",
+            "description": "Fish-eye twin",
+            "descriptionEn": "Fish-eye twin"
+          },
+          {
+            "value": "It's french",
+            "description": "It's french",
+            "descriptionEn": "It's french"
+          },
+          {
+            "value": "cocktail",
+            "description": "cocktail",
+            "descriptionEn": "cocktail"
+          }
+        ]
+      },
+      {
+        "fieldKey": "strength",
+        "type": "FLOAT",
+        "required": false,
+        "label": "strength",
+        "description": "风格迁移强度，0到1之间",
+        "defaultValue": 1.0,
+        "min": 0,
+        "max": 1,
+        "step": 0.01
+      },
+      {
+        "fieldKey": "quality",
+        "type": "LIST",
+        "required": true,
+        "label": "quality",
+        "description": "输出图片质量",
+        "defaultValue": "medium",
+        "options": [
+          {
+            "value": "medium",
+            "description": "medium",
+            "descriptionEn": "medium"
+          },
+          {
+            "value": "high",
+            "description": "high",
+            "descriptionEn": "high"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "HiggsfieldDopImageToVideo",
+    "internal_name": "RH_HiggsfieldDopImageToVideo",
+    "display_name": "RH Higgsfield DoP 图生视频",
+    "name_cn": "Higgsfield DoP 图生视频",
+    "name_en": "higgsfield/dop/image-to-video",
+    "endpoint": "higgsfield/dop/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Higgsfield",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频生成提示词",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "输入图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "endImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "endImageUrl",
+        "description": "尾帧图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "options",
+        "type": "LIST",
+        "required": true,
+        "label": "options",
+        "description": "模型版本",
+        "defaultValue": "dop-turbo",
+        "options": [
+          {
+            "value": "dop-lite",
+            "description": "dop-lite",
+            "descriptionEn": "dop-lite"
+          },
+          {
+            "value": "dop-turbo",
+            "description": "dop-turbo",
+            "descriptionEn": "dop-turbo"
+          },
+          {
+            "value": "dop-preview",
+            "description": "dop-preview",
+            "descriptionEn": "dop-preview"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "DoubaoSeedance20TextToVideo",
+    "internal_name": "RH_DoubaoSeedance20TextToVideo",
+    "display_name": "RH official SD2.0 文生视频",
+    "name_cn": "official SD2.0 文生视频",
+    "name_en": "official-sd2.0/text-to-video",
+    "endpoint": "doubao-seedance-2.0/text-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Seedance",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频生成提示词",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "generateAudio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "generateAudio",
+        "description": "是否生成视频音频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "视频分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "ratio",
+        "type": "LIST",
+        "required": false,
+        "label": "ratio",
+        "description": "视频宽高比",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "adaptive",
+            "descriptionEn": "adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒），自动表示由模型智能选择",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "-1",
+            "description": "自动",
+            "descriptionEn": "Auto"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      },
+      {
+        "fieldKey": "webSearch",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "webSearch",
+        "description": "启用联网搜索增强",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "DoubaoSeedance20FastTextToVideo",
+    "internal_name": "RH_DoubaoSeedance20FastTextToVideo",
+    "display_name": "RH official SD2.0 Fast 文生视频",
+    "name_cn": "official SD2.0 Fast 文生视频",
+    "name_en": "official-sd2.0-fast/text-to-video",
+    "endpoint": "doubao-seedance-2.0-fast/text-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Seedance",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频生成提示词",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "generateAudio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "generateAudio",
+        "description": "是否生成视频音频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "视频分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "ratio",
+        "type": "LIST",
+        "required": false,
+        "label": "ratio",
+        "description": "视频宽高比",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "自适应",
+            "descriptionEn": "Adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长（秒），自动表示由模型智能选择",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "-1",
+            "description": "自动",
+            "descriptionEn": "Auto"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      },
+      {
+        "fieldKey": "webSearch",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "webSearch",
+        "description": "启用联网搜索增强",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "DoubaoSeedance20ImageToVideo",
+    "internal_name": "RH_DoubaoSeedance20ImageToVideo",
+    "display_name": "RH official SD2.0 图生视频",
+    "name_cn": "official SD2.0 图生视频",
+    "name_en": "official-sd2.0/image-to-video",
+    "endpoint": "doubao-seedance-2.0/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Seedance",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "视频生成提示词",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "firstFrameUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstFrameUrl",
+        "description": "首帧图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "lastFrameUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "lastFrameUrl",
+        "description": "尾帧图片（可选，首尾帧模式）",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "generateAudio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "generateAudio",
+        "description": "是否生成视频音频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "视频分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "ratio",
+        "type": "LIST",
+        "required": false,
+        "label": "ratio",
+        "description": "视频宽高比",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "自适应",
+            "descriptionEn": "Adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长（秒），自动表示由模型智能选择",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "-1",
+            "description": "自动",
+            "descriptionEn": "Auto"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "DoubaoSeedance20FastImageToVideo",
+    "internal_name": "RH_DoubaoSeedance20FastImageToVideo",
+    "display_name": "RH official SD2.0 Fast 图生视频",
+    "name_cn": "official SD2.0 Fast 图生视频",
+    "name_en": "official-sd2.0-fast/image-to-video",
+    "endpoint": "doubao-seedance-2.0-fast/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Seedance",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "视频生成提示词",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "firstFrameUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstFrameUrl",
+        "description": "首帧图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "lastFrameUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "lastFrameUrl",
+        "description": "尾帧图片（可选，首尾帧模式）",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "generateAudio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "generateAudio",
+        "description": "是否生成视频音频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "视频分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "ratio",
+        "type": "LIST",
+        "required": false,
+        "label": "ratio",
+        "description": "视频宽高比",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "自适应",
+            "descriptionEn": "Adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长（秒），自动表示由模型智能选择",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "-1",
+            "description": "自动",
+            "descriptionEn": "Auto"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "DoubaoSeedance20MultimodalVideo",
+    "internal_name": "RH_DoubaoSeedance20MultimodalVideo",
+    "display_name": "RH official SD2.0 多模态视频",
+    "name_cn": "official SD2.0 多模态视频",
+    "name_en": "official-sd2.0/multimodal-video",
+    "endpoint": "doubao-seedance-2.0/multimodal-video",
+    "output_type": "video",
+    "category": "RunningHub/Seedance",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频生成提示词",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrls",
+        "description": "参考图片（0-9张）",
+        "multipleInputs": true,
+        "maxInputNum": 9,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "videoUrls",
+        "type": "VIDEO",
+        "required": false,
+        "label": "videoUrls",
+        "description": "参考视频（0-3个，用于多模态参考/视频编辑/视频续写）",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"MP4\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "audioUrls",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrls",
+        "description": "参考音频（0-3个，需至少包含1个参考视频或图片）",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"MP3\",\"WAV\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "generateAudio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "generateAudio",
+        "description": "是否生成视频音频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "视频分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "ratio",
+        "type": "LIST",
+        "required": false,
+        "label": "ratio",
+        "description": "视频宽高比",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "自适应",
+            "descriptionEn": "Adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长（秒），自动表示由模型智能选择",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "-1",
+            "description": "自动",
+            "descriptionEn": "Auto"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "DoubaoSeedance20FastMultimodalVideo",
+    "internal_name": "RH_DoubaoSeedance20FastMultimodalVideo",
+    "display_name": "RH official SD2.0 Fast 多模态视频",
+    "name_cn": "official SD2.0 Fast 多模态视频",
+    "name_en": "official-sd2.0-fast/multimodal-video",
+    "endpoint": "doubao-seedance-2.0-fast/multimodal-video",
+    "output_type": "video",
+    "category": "RunningHub/Seedance",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频生成提示词",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrls",
+        "description": "参考图片（0-9张）",
+        "multipleInputs": true,
+        "maxInputNum": 9,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "videoUrls",
+        "type": "VIDEO",
+        "required": false,
+        "label": "videoUrls",
+        "description": "参考视频（0-3个，用于多模态参考/视频编辑/视频续写）",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"MP4\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "audioUrls",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrls",
+        "description": "参考音频（0-3个，需至少包含1个参考视频或图片）",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"MP3\",\"WAV\"]",
+        "maxSize": 15
+      },
+      {
+        "fieldKey": "generateAudio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "generateAudio",
+        "description": "是否生成视频音频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "视频分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "ratio",
+        "type": "LIST",
+        "required": false,
+        "label": "ratio",
+        "description": "视频宽高比",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "自适应",
+            "descriptionEn": "Adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长（秒），自动表示由模型智能选择",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "-1",
+            "description": "自动",
+            "descriptionEn": "Auto"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
       }
     ]
   }

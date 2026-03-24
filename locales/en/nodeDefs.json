@@ -587,6 +587,45 @@
   "RH_RhartVideoSOfficialSoraUploadCharacter": {
     "display_name": "RH Sora Upload Character Official"
   },
+  "RH_ViduTextToVideoQ3ProFast": {
+    "display_name": "RH Vidu Text to Video Q3 PRO Fast"
+  },
+  "RH_ViduImageToVideoQ3ProFast": {
+    "display_name": "RH Vidu Image to Video Q3 PRO Fast"
+  },
+  "RH_ViduStartEndToVideoQ3ProFast": {
+    "display_name": "RH Vidu Start End to Video Q3 PRO Fast"
+  },
+  "RH_PixverseV56TextToVideo": {
+    "display_name": "RH Pixverse V5.6 Text to Video"
+  },
+  "RH_PixverseV56ImageToVideo": {
+    "display_name": "RH Pixverse V5.6 Image to Video"
+  },
+  "RH_HiggsfieldSoulImageToImage": {
+    "display_name": "RH Higgsfield Soul Image to Image"
+  },
+  "RH_HiggsfieldDopImageToVideo": {
+    "display_name": "RH Higgsfield Dop Image to Video"
+  },
+  "RH_DoubaoSeedance20TextToVideo": {
+    "display_name": "RH Doubao Seedance 2.0 Text to Video"
+  },
+  "RH_DoubaoSeedance20FastTextToVideo": {
+    "display_name": "RH Doubao Seedance 2.0 Fast Text to Video"
+  },
+  "RH_DoubaoSeedance20ImageToVideo": {
+    "display_name": "RH Doubao Seedance 2.0 Image to Video"
+  },
+  "RH_DoubaoSeedance20FastImageToVideo": {
+    "display_name": "RH Doubao Seedance 2.0 Fast Image to Video"
+  },
+  "RH_DoubaoSeedance20MultimodalVideo": {
+    "display_name": "RH Doubao Seedance 2.0 Multimodal Video"
+  },
+  "RH_DoubaoSeedance20FastMultimodalVideo": {
+    "display_name": "RH Doubao Seedance 2.0 Fast Multimodal Video"
+  },
   "RHSettingsNode": {
     "display_name": "RH OpenAPI Settings"
   }

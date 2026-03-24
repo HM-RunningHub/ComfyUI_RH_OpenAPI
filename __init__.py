@@ -57,6 +57,7 @@ _CATEGORY_NAME_EN = {
     "Alibaba": "🎨 Alibaba Qwen",
     "PixVerse": "🎬 PixVerse",
     "SkyReels": "🎥 SkyReels",
+    "Higgsfield": "🎭 Higgsfield",
 }
 
 _CATEGORY_NAME_ZH = {
@@ -79,6 +80,7 @@ _CATEGORY_NAME_ZH = {
     "Alibaba": "🎨 阿里 通义万相 Qwen",
     "PixVerse": "🎬 PixVerse 可灵替代",
     "SkyReels": "🎥 昆仑 SkyReels",
+    "Higgsfield": "🎭 Higgsfield",
 }
 
 
