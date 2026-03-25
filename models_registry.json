@@ -20700,10 +20700,10 @@
   {
     "class_name": "DoubaoSeedance20TextToVideo",
     "internal_name": "RH_DoubaoSeedance20TextToVideo",
-    "display_name": "RH超能视频SD2.0 文生视频",
-    "name_cn": "超能视频SD2.0 文生视频",
-    "name_en": "official-sd2.0/text-to-video",
-    "endpoint": "doubao-seedance-2.0/text-to-video",
+    "display_name": "RH 超能视频2.0/文生视频",
+    "name_cn": "超能视频2.0/文生视频",
+    "name_en": "sparkvideo-2.0/text-to-video",
+    "endpoint": "rhart-video/sparkvideo-2.0/text-to-video",
     "output_type": "video",
     "category": "RunningHub/Seedance",
     "params": [
@@ -20713,20 +20713,13 @@
         "required": true,
         "label": "prompt",
         "description": "视频生成提示词",
+        "defaultValue": "一部武侠风格的电影级大片。大雨滂沱的暗夜竹林中，一名白衣剑客与一名披着蓑衣的刺客正在激烈近战。镜头首先是广角全景，展示两人在竹林中高速穿梭和见招拆招的肢体互动；随后镜头平滑且无缝地急推至极限特写，两把利剑在半空中猛烈碰撞，迸发出极其耀眼的火花。雨滴真实地溅落在冰冷的剑刃上并随动作瞬间甩出。人物面部表情清晰，物理运动规律极其准确。",
         "maxLength": 2048
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否生成视频音频",
-        "defaultValue": false
       },
       {
         "fieldKey": "resolution",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "resolution",
         "description": "视频分辨率",
         "defaultValue": "720p",
@@ -20744,51 +20737,6 @@
         ]
       },
       {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比",
-        "defaultValue": "adaptive",
-        "options": [
-          {
-            "value": "adaptive",
-            "description": "adaptive",
-            "descriptionEn": "adaptive"
-          },
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          }
-        ]
-      },
-      {
         "fieldKey": "duration",
         "type": "LIST",
         "required": true,
@@ -20796,11 +20744,6 @@
         "description": "视频时长（秒），自动表示由模型智能选择",
         "defaultValue": "5",
         "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
           {
             "value": "4",
             "description": "4",
@@ -20864,6 +20807,59 @@
         ]
       },
       {
+        "fieldKey": "generateAudio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "generateAudio",
+        "description": "是否生成视频音频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "ratio",
+        "type": "LIST",
+        "required": false,
+        "label": "ratio",
+        "description": "视频宽高比",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "adaptive",
+            "descriptionEn": "adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
         "fieldKey": "webSearch",
         "type": "BOOLEAN",
         "required": false,
@@ -20876,10 +20872,10 @@
   {
     "class_name": "DoubaoSeedance20FastTextToVideo",
     "internal_name": "RH_DoubaoSeedance20FastTextToVideo",
-    "display_name": "RH超能视频SD2.0 Fast 文生视频",
-    "name_cn": "超能视频SD2.0 Fast 文生视频",
-    "name_en": "official-sd2.0-fast/text-to-video",
-    "endpoint": "doubao-seedance-2.0-fast/text-to-video",
+    "display_name": "RH 超能视频2.0-Fast/文生视频",
+    "name_cn": "超能视频2.0-Fast/文生视频",
+    "name_en": "sparkvideo-2.0-fast/text-to-video",
+    "endpoint": "rhart-video/sparkvideo-2.0-fast/text-to-video",
     "output_type": "video",
     "category": "RunningHub/Seedance",
     "params": [
@@ -20889,6 +20885,7 @@
         "required": true,
         "label": "prompt",
         "description": "视频生成提示词",
+        "defaultValue": "一部武侠风格的电影级大片。大雨滂沱的暗夜竹林中，一名白衣剑客与一名披着蓑衣的刺客正在激烈近战。镜头首先是广角全景，展示两人在竹林中高速穿梭和见招拆招的肢体互动；随后镜头平滑且无缝地急推至极限特写，两把利剑在半空中猛烈碰撞，迸发出极其耀眼的火花。雨滴真实地溅落在冰冷的剑刃上并随动作瞬间甩出。人物面部表情清晰，物理运动规律极其准确。",
         "maxLength": 2048
       },
       {
@@ -20902,7 +20899,7 @@
       {
         "fieldKey": "resolution",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "resolution",
         "description": "视频分辨率",
         "defaultValue": "720p",
@@ -20967,16 +20964,11 @@
       {
         "fieldKey": "duration",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "duration",
         "description": "视频时长（秒），自动表示由模型智能选择",
         "defaultValue": "5",
         "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
           {
             "value": "4",
             "description": "4",
@@ -21052,10 +21044,10 @@
   {
     "class_name": "DoubaoSeedance20ImageToVideo",
     "internal_name": "RH_DoubaoSeedance20ImageToVideo",
-    "display_name": "RH超能视频SD2.0 图生视频",
-    "name_cn": "超能视频SD2.0 图生视频",
-    "name_en": "official-sd2.0/image-to-video",
-    "endpoint": "doubao-seedance-2.0/image-to-video",
+    "display_name": "RH 超能视频2.0/图生视频",
+    "name_cn": "超能视频2.0/图生视频",
+    "name_en": "sparkvideo-2.0/image-to-video",
+    "endpoint": "rhart-video/sparkvideo-2.0/image-to-video",
     "output_type": "video",
     "category": "RunningHub/Seedance",
     "params": [
@@ -21068,35 +21060,9 @@
         "maxLength": 2048
       },
       {
-        "fieldKey": "firstFrameUrl",
-        "type": "IMAGE",
-        "required": true,
-        "label": "firstFrameUrl",
-        "description": "首帧图片",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 30
-      },
-      {
-        "fieldKey": "lastFrameUrl",
-        "type": "IMAGE",
-        "required": false,
-        "label": "lastFrameUrl",
-        "description": "尾帧图片（可选，首尾帧模式）",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 30
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否生成视频音频",
-        "defaultValue": false
-      },
-      {
         "fieldKey": "resolution",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "resolution",
         "description": "视频分辨率",
         "defaultValue": "720p",
@@ -21114,63 +21080,13 @@
         ]
       },
       {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比",
-        "defaultValue": "adaptive",
-        "options": [
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "Adaptive"
-          },
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          }
-        ]
-      },
-      {
         "fieldKey": "duration",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "duration",
         "description": "视频时长（秒），自动表示由模型智能选择",
         "defaultValue": "5",
         "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
           {
             "value": "4",
             "description": "4",
@@ -21232,16 +21148,85 @@
             "descriptionEn": "15"
           }
         ]
+      },
+      {
+        "fieldKey": "firstFrameUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstFrameUrl",
+        "description": "首帧图片",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "lastFrameUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "lastFrameUrl",
+        "description": "尾帧图片（可选，首尾帧模式）",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "generateAudio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "generateAudio",
+        "description": "是否生成视频音频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "ratio",
+        "type": "LIST",
+        "required": false,
+        "label": "ratio",
+        "description": "视频宽高比",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "自适应",
+            "descriptionEn": "Adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
       }
     ]
   },
   {
     "class_name": "DoubaoSeedance20FastImageToVideo",
     "internal_name": "RH_DoubaoSeedance20FastImageToVideo",
-    "display_name": "RH超能视频SD2.0 Fast 图生视频",
-    "name_cn": "超能视频SD2.0 Fast 图生视频",
-    "name_en": "official-sd2.0-fast/image-to-video",
-    "endpoint": "doubao-seedance-2.0-fast/image-to-video",
+    "display_name": "RH 超能视频2.0-Fast/图生视频",
+    "name_cn": "超能视频2.0-Fast/图生视频",
+    "name_en": "sparkvideo-2.0-fast/image-to-video",
+    "endpoint": "rhart-video/sparkvideo-2.0-fast/image-to-video",
     "output_type": "video",
     "category": "RunningHub/Seedance",
     "params": [
@@ -21259,7 +21244,6 @@
         "required": true,
         "label": "firstFrameUrl",
         "description": "首帧图片",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
         "maxSize": 30
       },
       {
@@ -21268,7 +21252,6 @@
         "required": false,
         "label": "lastFrameUrl",
         "description": "尾帧图片（可选，首尾帧模式）",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
         "maxSize": 30
       },
       {
@@ -21282,7 +21265,7 @@
       {
         "fieldKey": "resolution",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "resolution",
         "description": "视频分辨率",
         "defaultValue": "720p",
@@ -21347,16 +21330,11 @@
       {
         "fieldKey": "duration",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "duration",
         "description": "视频时长（秒），自动表示由模型智能选择",
         "defaultValue": "5",
         "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
           {
             "value": "4",
             "description": "4",
@@ -21424,10 +21402,10 @@
   {
     "class_name": "DoubaoSeedance20MultimodalVideo",
     "internal_name": "RH_DoubaoSeedance20MultimodalVideo",
-    "display_name": "RH超能视频SD2.0 多模态视频",
-    "name_cn": "超能视频SD2.0 多模态视频",
-    "name_en": "official-sd2.0/multimodal-video",
-    "endpoint": "doubao-seedance-2.0/multimodal-video",
+    "display_name": "RH 超能视频2.0/多模态视频",
+    "name_cn": "超能视频2.0/多模态视频",
+    "name_en": "sparkvideo-2.0/multimodal-video",
+    "endpoint": "rhart-video/sparkvideo-2.0/multimodal-video",
     "output_type": "video",
     "category": "RunningHub/Seedance",
     "params": [
@@ -21440,50 +21418,9 @@
         "maxLength": 2048
       },
       {
-        "fieldKey": "imageUrls",
-        "type": "IMAGE",
-        "required": false,
-        "label": "imageUrls",
-        "description": "参考图片（0-9张）",
-        "multipleInputs": true,
-        "maxInputNum": 9,
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 30
-      },
-      {
-        "fieldKey": "videoUrls",
-        "type": "VIDEO",
-        "required": false,
-        "label": "videoUrls",
-        "description": "参考视频（0-3个，用于多模态参考/视频编辑/视频续写）",
-        "multipleInputs": true,
-        "maxInputNum": 3,
-        "accept": "[\"MP4\"]",
-        "maxSize": 50
-      },
-      {
-        "fieldKey": "audioUrls",
-        "type": "AUDIO",
-        "required": false,
-        "label": "audioUrls",
-        "description": "参考音频（0-3个，需至少包含1个参考视频或图片）",
-        "multipleInputs": true,
-        "maxInputNum": 3,
-        "accept": "[\"MP3\",\"WAV\"]",
-        "maxSize": 50
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否生成视频音频",
-        "defaultValue": false
-      },
-      {
         "fieldKey": "resolution",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "resolution",
         "description": "视频分辨率",
         "defaultValue": "720p",
@@ -21501,63 +21438,13 @@
         ]
       },
       {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比",
-        "defaultValue": "adaptive",
-        "options": [
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "Adaptive"
-          },
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          }
-        ]
-      },
-      {
         "fieldKey": "duration",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "duration",
         "description": "视频时长（秒），自动表示由模型智能选择",
         "defaultValue": "5",
         "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
           {
             "value": "4",
             "description": "4",
@@ -21619,16 +21506,93 @@
             "descriptionEn": "15"
           }
         ]
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrls",
+        "description": "参考图片（0-9张）",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "videoUrls",
+        "type": "VIDEO",
+        "required": false,
+        "label": "videoUrls",
+        "description": "参考视频（0-3个，用于多模态参考/视频编辑/视频续写）。单个视频时长 [2, 15] s，最多传入 3 个参考视频，所有视频总时长不超过 15s。",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "audioUrls",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrls",
+        "description": "参考音频（0-3个，需至少包含1个参考视频或图片）。单个音频时长 [2, 15] s，最多传入 3 段参考音频，所有音频总时长不超过 15 s。",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "generateAudio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "generateAudio",
+        "description": "是否生成视频音频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "ratio",
+        "type": "LIST",
+        "required": false,
+        "label": "ratio",
+        "description": "视频宽高比",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "自适应",
+            "descriptionEn": "Adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
       }
     ]
   },
   {
     "class_name": "DoubaoSeedance20FastMultimodalVideo",
     "internal_name": "RH_DoubaoSeedance20FastMultimodalVideo",
-    "display_name": "RH超能视频SD2.0 Fast 多模态视频",
-    "name_cn": "超能视频SD2.0 Fast 多模态视频",
-    "name_en": "official-sd2.0-fast/multimodal-video",
-    "endpoint": "doubao-seedance-2.0-fast/multimodal-video",
+    "display_name": "RH 超能视频2.0-Fast/多模态视频",
+    "name_cn": "超能视频2.0-Fast/多模态视频",
+    "name_en": "sparkvideo-2.0-fast/multimodal-video",
+    "endpoint": "rhart-video/sparkvideo-2.0-fast/multimodal-video",
     "output_type": "video",
     "category": "RunningHub/Seedance",
     "params": [
@@ -21641,50 +21605,9 @@
         "maxLength": 2048
       },
       {
-        "fieldKey": "imageUrls",
-        "type": "IMAGE",
-        "required": false,
-        "label": "imageUrls",
-        "description": "参考图片（0-9张）",
-        "multipleInputs": true,
-        "maxInputNum": 9,
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 30
-      },
-      {
-        "fieldKey": "videoUrls",
-        "type": "VIDEO",
-        "required": false,
-        "label": "videoUrls",
-        "description": "参考视频（0-3个，用于多模态参考/视频编辑/视频续写）",
-        "multipleInputs": true,
-        "maxInputNum": 3,
-        "accept": "[\"MP4\"]",
-        "maxSize": 50
-      },
-      {
-        "fieldKey": "audioUrls",
-        "type": "AUDIO",
-        "required": false,
-        "label": "audioUrls",
-        "description": "参考音频（0-3个，需至少包含1个参考视频或图片）",
-        "multipleInputs": true,
-        "maxInputNum": 3,
-        "accept": "[\"MP3\",\"WAV\"]",
-        "maxSize": 15
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否生成视频音频",
-        "defaultValue": false
-      },
-      {
         "fieldKey": "resolution",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "resolution",
         "description": "视频分辨率",
         "defaultValue": "720p",
@@ -21700,6 +21623,38 @@
             "descriptionEn": "720p"
           }
         ]
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrls",
+        "description": "参考图片（0-9张）",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "videoUrls",
+        "type": "VIDEO",
+        "required": false,
+        "label": "videoUrls",
+        "description": "参考视频（0-3个，用于多模态参考/视频编辑/视频续写）。单个视频时长 [2, 15] s，最多传入 3 个参考视频，所有视频总时长不超过 15s。",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "audioUrls",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrls",
+        "description": "参考音频（0-3个，需至少包含1个参考视频或图片）。单个音频时长 [2, 15] s，最多传入 3 段参考音频，所有音频总时长不超过 15 s。",
+        "maxSize": 15
+      },
+      {
+        "fieldKey": "generateAudio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "generateAudio",
+        "description": "是否生成视频音频",
+        "defaultValue": false
       },
       {
         "fieldKey": "ratio",
@@ -21749,16 +21704,11 @@
       {
         "fieldKey": "duration",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "duration",
-        "description": "视频时长（秒），自动表示由模型智能选择",
+        "description": "视频时长（秒），-1自动表示由模型智能选择",
         "defaultValue": "5",
         "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
           {
             "value": "4",
             "description": "4",
