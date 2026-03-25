@@ -209,6 +209,48 @@ app.registerExtension({
       };
     };
 
+    const getPanelAwareNodePosition = (node, panelEl) => {
+      const fallback = Array.isArray(app.canvas?.graph_mouse)
+        ? [...app.canvas.graph_mouse]
+        : [200, 200];
+
+      const canvasEl = app.canvas?.canvas;
+      const convertCanvasToOffset = app.canvas?.convertCanvasToOffset?.bind(app.canvas);
+      if (!canvasEl || !convertCanvasToOffset) return fallback;
+
+      const canvasRect = canvasEl.getBoundingClientRect();
+      const panelRect = panelEl?.getBoundingClientRect?.();
+      const panelOverlap = panelRect
+        ? Math.max(0, Math.min(canvasRect.width, panelRect.right - canvasRect.left))
+        : 0;
+      const padding = 24;
+      const visibleLeft = Math.min(canvasRect.width - padding, panelOverlap + padding);
+      const visibleRight = Math.max(visibleLeft + padding, canvasRect.width - padding);
+      const visibleTop = padding;
+      const visibleBottom = Math.max(visibleTop + padding, canvasRect.height - padding);
+
+      const targetCanvasPos = [
+        visibleLeft + (visibleRight - visibleLeft) * 0.5,
+        visibleTop + (visibleBottom - visibleTop) * 0.5,
+      ];
+      const targetGraphPos = convertCanvasToOffset(targetCanvasPos);
+      const nodeWidth = node?.size?.[0] || 0;
+      const nodeHeight = node?.size?.[1] || 0;
+      const minGraphX = convertCanvasToOffset([visibleLeft, 0])[0];
+      const maxGraphX = convertCanvasToOffset([visibleRight, 0])[0] - nodeWidth;
+      const minGraphY = convertCanvasToOffset([0, visibleTop])[1];
+      const maxGraphY = convertCanvasToOffset([0, visibleBottom])[1] - nodeHeight;
+      const clamp = (value, min, max) => {
+        if (max < min) return min;
+        return Math.min(Math.max(value, min), max);
+      };
+
+      return [
+        clamp(targetGraphPos[0] - nodeWidth * 0.5, minGraphX, maxGraphX),
+        clamp(targetGraphPos[1] - nodeHeight * 0.5, minGraphY, maxGraphY),
+      ];
+    };
+
     app.extensionManager.registerSidebarTab({
       id: "rh-openapi-panel",
       icon: "pi pi-cloud",
@@ -387,7 +429,7 @@ app.registerExtension({
               btn.addEventListener("click", () => {
                 const node = LiteGraph.createNode(name);
                 if (node) {
-                  node.pos = [app.canvas.graph_mouse[0], app.canvas.graph_mouse[1]];
+                  node.pos = getPanelAwareNodePosition(node, el);
                   app.graph.add(node);
                   node.title = display;
                   app.canvas.selectNode(node);
