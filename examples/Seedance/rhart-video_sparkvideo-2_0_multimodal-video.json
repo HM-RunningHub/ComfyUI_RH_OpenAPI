@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "type": "RH_DoubaoSeedance20MultimodalVideo",
+      "type": "RH_RhartVideoSparkvideo20MultimodalVideo",
       "pos": [
         500,
         100
@@ -94,7 +94,7 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "RH_DoubaoSeedance20MultimodalVideo"
+        "Node name for S&R": "RH_RhartVideoSparkvideo20MultimodalVideo"
       },
       "widgets_values": [],
       "title": "RH 超能视频2.0/多模态视频"

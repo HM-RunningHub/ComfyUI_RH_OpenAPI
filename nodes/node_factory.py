@@ -182,6 +182,8 @@ _MEDIA_COMFY_TYPE = {
     "AUDIO": ("AUDIO",),
 }
 
+_DEFAULT_MULTI_COUNT = {"IMAGE": 9, "VIDEO": 3, "AUDIO": 3}
+
 
 # ---------------------------------------------------------------------------
 # Main factory
@@ -254,7 +256,11 @@ def create_node_class(model_def: Dict) -> type:
         media_type = p["type"]
         is_required = p.get("required", False)
         is_multiple = p.get("multipleInputs", False)
-        max_num = p.get("maxInputNum", 1) or 1
+        max_num = p.get("maxInputNum") or 0
+        if is_multiple and max_num <= 1:
+            max_num = _DEFAULT_MULTI_COUNT.get(media_type, 5)
+        elif max_num <= 0:
+            max_num = 1
         base_name = _field_key_to_comfy_name(field_key)
         is_array = _is_array_field(field_key) or (is_multiple and max_num > 1)
         comfy_type = _MEDIA_COMFY_TYPE.get(media_type, ("IMAGE",))

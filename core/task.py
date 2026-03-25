@@ -192,10 +192,12 @@ def poll(
     while True:
         elapsed = time.time() - start_time
         if elapsed > max_polling_time:
+            detail_url = f"https://www.runninghub.cn/call-api/call-record-detail/{task_id}"
             raise RuntimeError(
+                f"该任务超过{max_polling_time}s，不再实时刷新任务状态。"
+                f"您可以通过 {detail_url} 继续查看任务状态，获取生成结果。 | "
                 f"Task exceeded {max_polling_time}s, real-time status polling has stopped. "
-                f"You can check the task status and retrieve generated results at "
-                f"https://www.runninghub.cn/call-api/call-record-detail/{task_id}"
+                f"You can check the task status and retrieve generated results at {detail_url}"
             )
 
         if on_progress:

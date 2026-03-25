@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "type": "RH_DoubaoSeedance20FastImageToVideo",
+      "type": "RH_RhartVideoSparkvideo20FastImageToVideo",
       "pos": [
         500,
         100
@@ -89,7 +89,7 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "RH_DoubaoSeedance20FastImageToVideo"
+        "Node name for S&R": "RH_RhartVideoSparkvideo20FastImageToVideo"
       },
       "widgets_values": [],
       "title": "RH 超能视频2.0-Fast/图生视频"

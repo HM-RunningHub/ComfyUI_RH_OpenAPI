@@ -17169,6 +17169,7 @@
         "required": true,
         "label": "prompt",
         "description": "文本提示词，描述期望生成的视频内容",
+        "defaultValue": "日落时分城市屋顶上的一幕动漫场景。画面中是柔和的橙色天空和远处的天际线，风轻轻吹动晾衣绳和天线电缆。一名穿着校服的少女站在天台边，头发和丝带在风中飞舞，动漫风格的线条和阴影。背景有轻柔的钢琴声和蝉鸣，日本动漫风格配音，镜头微微晃动并拉近以增强情感表达。",
         "maxLength": 2048
       },
       {
@@ -17352,6 +17353,7 @@
         "required": true,
         "label": "prompt",
         "description": "文本提示词，描述期望生成的视频内容",
+        "defaultValue": "将上传的动漫屋顶插画用作第一帧。保持女孩的面部、发型、服装和屋顶背景一致。从原始构图开始，然后慢慢将镜头推向她的脸，她的头发和裙子在微风中轻轻飘动。她眨了一下眼睛，然后看向镜头，用平静而坚定的动漫声说：“无论如何，我都会改变我的未来。” 风格：电影感动漫，天空有柔和渐变，略微的镜头抖动以增强情感效果。声音：温柔的傍晚城市环境音，远处的交通声和蝉鸣，背景有柔和钢琴声，同步的日式女性配音，屏幕上无额外文字。",
         "maxLength": 2048
       },
       {
@@ -17509,6 +17511,7 @@
         "required": true,
         "label": "prompt",
         "description": "文本提示词，描述场景如何变化",
+        "defaultValue": "从第一张图片的白天自然森林平滑过渡到第二张图片中发光的魔法森林。保持相机在同一个广角位置，随着白昼逐渐消退，颜色转向深蓝色和紫色，沿路径的生物发光植物、蘑菇和萤火虫逐渐亮起。沿路径慢慢推进镜头，加入微风和鸟鸣逐渐淡入柔和的魔法钟声和环境音垫景，不要对白。",
         "maxLength": 2048
       },
       {
@@ -19199,6 +19202,7 @@
         "required": true,
         "label": "prompt",
         "description": "文本提示词",
+        "defaultValue": "一个拥有飘逸栗色长发的年轻女子缓慢地抬起目光看向镜头。柔和的金色时光光线在她的脸上投下温暖的阴影。轻柔的微风吹动几缕头发。镜头从中景慢慢推进到特写。电影般的胶片颗粒感，浅景深，暖琥珀色调。",
         "maxLength": 2000
       },
       {
@@ -19372,6 +19376,7 @@
         "required": false,
         "label": "prompt",
         "description": "文本提示词",
+        "defaultValue": "女孩缓缓拿起茶杯喝茶，享受品尝，慢慢放下后微笑",
         "maxLength": 2000
       },
       {
@@ -19519,6 +19524,7 @@
         "required": false,
         "label": "prompt",
         "description": "文本提示词",
+        "defaultValue": "女明星朝着镜头微笑招手，闪光灯闪烁。然后缓缓转身，向大门走去",
         "maxLength": 5000
       },
       {
@@ -19675,6 +19681,7 @@
         "required": true,
         "label": "prompt",
         "description": "文本提示词，描述视频场景、动作和风格",
+        "defaultValue": "一个帅气的青少年坐在海滩上的躺椅上，蓝天白云，阳光明媚，潮水涨落。远处有人在海边玩耍。风吹乱了男孩的头发，他向远处玩耍的人挥手。画面从角色的侧后方拍摄，面向大海。画风写实，明暗对比强烈。写实摄影风格。",
         "maxLength": 2048
       },
       {
@@ -19838,6 +19845,7 @@
         "required": true,
         "label": "prompt",
         "description": "文本提示词，描述视频动作和风格",
+        "defaultValue": "画中的女孩缓缓面向镜头微笑招手，威风吹动，头发和衣角，花朵都缓缓晃动。远处的牛羊慢慢的吃草或移动，云也慢悠悠的移动，一切都很祥和，宁静。",
         "maxLength": 2048
       },
       {
@@ -20698,8 +20706,8 @@
     ]
   },
   {
-    "class_name": "DoubaoSeedance20TextToVideo",
-    "internal_name": "RH_DoubaoSeedance20TextToVideo",
+    "class_name": "RhartVideoSparkvideo20TextToVideo",
+    "internal_name": "RH_RhartVideoSparkvideo20TextToVideo",
     "display_name": "RH 超能视频2.0/文生视频",
     "name_cn": "超能视频2.0/文生视频",
     "name_en": "sparkvideo-2.0/text-to-video",
@@ -20812,7 +20820,7 @@
         "required": false,
         "label": "generateAudio",
         "description": "是否生成视频音频",
-        "defaultValue": false
+        "defaultValue": true
       },
       {
         "fieldKey": "ratio",
@@ -20870,8 +20878,8 @@
     ]
   },
   {
-    "class_name": "DoubaoSeedance20FastTextToVideo",
-    "internal_name": "RH_DoubaoSeedance20FastTextToVideo",
+    "class_name": "RhartVideoSparkvideo20FastTextToVideo",
+    "internal_name": "RH_RhartVideoSparkvideo20FastTextToVideo",
     "display_name": "RH 超能视频2.0-Fast/文生视频",
     "name_cn": "超能视频2.0-Fast/文生视频",
     "name_en": "sparkvideo-2.0-fast/text-to-video",
@@ -20887,14 +20895,6 @@
         "description": "视频生成提示词",
         "defaultValue": "一部武侠风格的电影级大片。大雨滂沱的暗夜竹林中，一名白衣剑客与一名披着蓑衣的刺客正在激烈近战。镜头首先是广角全景，展示两人在竹林中高速穿梭和见招拆招的肢体互动；随后镜头平滑且无缝地急推至极限特写，两把利剑在半空中猛烈碰撞，迸发出极其耀眼的火花。雨滴真实地溅落在冰冷的剑刃上并随动作瞬间甩出。人物面部表情清晰，物理运动规律极其准确。",
         "maxLength": 2048
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否生成视频音频",
-        "defaultValue": false
       },
       {
         "fieldKey": "resolution",
@@ -20913,51 +20913,6 @@
             "value": "720p",
             "description": "720p",
             "descriptionEn": "720p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比",
-        "defaultValue": "adaptive",
-        "options": [
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "Adaptive"
-          },
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
           }
         ]
       },
@@ -21032,6 +20987,59 @@
         ]
       },
       {
+        "fieldKey": "generateAudio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "generateAudio",
+        "description": "是否生成视频音频",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "ratio",
+        "type": "LIST",
+        "required": false,
+        "label": "ratio",
+        "description": "视频宽高比",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "自适应",
+            "descriptionEn": "Adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
         "fieldKey": "webSearch",
         "type": "BOOLEAN",
         "required": false,
@@ -21042,8 +21050,8 @@
     ]
   },
   {
-    "class_name": "DoubaoSeedance20ImageToVideo",
-    "internal_name": "RH_DoubaoSeedance20ImageToVideo",
+    "class_name": "RhartVideoSparkvideo20ImageToVideo",
+    "internal_name": "RH_RhartVideoSparkvideo20ImageToVideo",
     "display_name": "RH 超能视频2.0/图生视频",
     "name_cn": "超能视频2.0/图生视频",
     "name_en": "sparkvideo-2.0/image-to-video",
@@ -21155,6 +21163,7 @@
         "required": true,
         "label": "firstFrameUrl",
         "description": "首帧图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
         "maxSize": 30
       },
       {
@@ -21163,6 +21172,7 @@
         "required": false,
         "label": "lastFrameUrl",
         "description": "尾帧图片（可选，首尾帧模式）",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
         "maxSize": 30
       },
       {
@@ -21171,7 +21181,7 @@
         "required": false,
         "label": "generateAudio",
         "description": "是否生成视频音频",
-        "defaultValue": false
+        "defaultValue": true
       },
       {
         "fieldKey": "ratio",
@@ -21221,8 +21231,8 @@
     ]
   },
   {
-    "class_name": "DoubaoSeedance20FastImageToVideo",
-    "internal_name": "RH_DoubaoSeedance20FastImageToVideo",
+    "class_name": "RhartVideoSparkvideo20FastImageToVideo",
+    "internal_name": "RH_RhartVideoSparkvideo20FastImageToVideo",
     "display_name": "RH 超能视频2.0-Fast/图生视频",
     "name_cn": "超能视频2.0-Fast/图生视频",
     "name_en": "sparkvideo-2.0-fast/image-to-video",
@@ -21237,30 +21247,6 @@
         "label": "prompt",
         "description": "视频生成提示词",
         "maxLength": 2048
-      },
-      {
-        "fieldKey": "firstFrameUrl",
-        "type": "IMAGE",
-        "required": true,
-        "label": "firstFrameUrl",
-        "description": "首帧图片",
-        "maxSize": 30
-      },
-      {
-        "fieldKey": "lastFrameUrl",
-        "type": "IMAGE",
-        "required": false,
-        "label": "lastFrameUrl",
-        "description": "尾帧图片（可选，首尾帧模式）",
-        "maxSize": 30
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否生成视频音频",
-        "defaultValue": false
       },
       {
         "fieldKey": "resolution",
@@ -21279,51 +21265,6 @@
             "value": "720p",
             "description": "720p",
             "descriptionEn": "720p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比",
-        "defaultValue": "adaptive",
-        "options": [
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "Adaptive"
-          },
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
           }
         ]
       },
@@ -21396,12 +21337,83 @@
             "descriptionEn": "15"
           }
         ]
+      },
+      {
+        "fieldKey": "firstFrameUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstFrameUrl",
+        "description": "首帧图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "lastFrameUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "lastFrameUrl",
+        "description": "尾帧图片（可选，首尾帧模式）",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "generateAudio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "generateAudio",
+        "description": "是否生成视频音频",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "ratio",
+        "type": "LIST",
+        "required": false,
+        "label": "ratio",
+        "description": "视频宽高比",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "自适应",
+            "descriptionEn": "Adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
       }
     ]
   },
   {
-    "class_name": "DoubaoSeedance20MultimodalVideo",
-    "internal_name": "RH_DoubaoSeedance20MultimodalVideo",
+    "class_name": "RhartVideoSparkvideo20MultimodalVideo",
+    "internal_name": "RH_RhartVideoSparkvideo20MultimodalVideo",
     "display_name": "RH 超能视频2.0/多模态视频",
     "name_cn": "超能视频2.0/多模态视频",
     "name_en": "sparkvideo-2.0/multimodal-video",
@@ -21513,6 +21525,9 @@
         "required": false,
         "label": "imageUrls",
         "description": "参考图片（0-9张）",
+        "multipleInputs": true,
+        "maxInputNum": 9,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
         "maxSize": 30
       },
       {
@@ -21521,6 +21536,9 @@
         "required": false,
         "label": "videoUrls",
         "description": "参考视频（0-3个，用于多模态参考/视频编辑/视频续写）。单个视频时长 [2, 15] s，最多传入 3 个参考视频，所有视频总时长不超过 15s。",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"MP4\"]",
         "maxSize": 50
       },
       {
@@ -21529,6 +21547,9 @@
         "required": false,
         "label": "audioUrls",
         "description": "参考音频（0-3个，需至少包含1个参考视频或图片）。单个音频时长 [2, 15] s，最多传入 3 段参考音频，所有音频总时长不超过 15 s。",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"MP3\",\"WAV\"]",
         "maxSize": 50
       },
       {
@@ -21537,7 +21558,7 @@
         "required": false,
         "label": "generateAudio",
         "description": "是否生成视频音频",
-        "defaultValue": false
+        "defaultValue": true
       },
       {
         "fieldKey": "ratio",
@@ -21587,8 +21608,8 @@
     ]
   },
   {
-    "class_name": "DoubaoSeedance20FastMultimodalVideo",
-    "internal_name": "RH_DoubaoSeedance20FastMultimodalVideo",
+    "class_name": "RhartVideoSparkvideo20FastMultimodalVideo",
+    "internal_name": "RH_RhartVideoSparkvideo20FastMultimodalVideo",
     "display_name": "RH 超能视频2.0-Fast/多模态视频",
     "name_cn": "超能视频2.0-Fast/多模态视频",
     "name_en": "sparkvideo-2.0-fast/multimodal-video",
@@ -21602,6 +21623,7 @@
         "required": true,
         "label": "prompt",
         "description": "视频生成提示词",
+        "defaultValue": "把视频中的人物替换成图片中的人物，并延长这段视频",
         "maxLength": 2048
       },
       {
@@ -21621,83 +21643,6 @@
             "value": "720p",
             "description": "720p",
             "descriptionEn": "720p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "imageUrls",
-        "type": "IMAGE",
-        "required": false,
-        "label": "imageUrls",
-        "description": "参考图片（0-9张）",
-        "maxSize": 30
-      },
-      {
-        "fieldKey": "videoUrls",
-        "type": "VIDEO",
-        "required": false,
-        "label": "videoUrls",
-        "description": "参考视频（0-3个，用于多模态参考/视频编辑/视频续写）。单个视频时长 [2, 15] s，最多传入 3 个参考视频，所有视频总时长不超过 15s。",
-        "maxSize": 50
-      },
-      {
-        "fieldKey": "audioUrls",
-        "type": "AUDIO",
-        "required": false,
-        "label": "audioUrls",
-        "description": "参考音频（0-3个，需至少包含1个参考视频或图片）。单个音频时长 [2, 15] s，最多传入 3 段参考音频，所有音频总时长不超过 15 s。",
-        "maxSize": 15
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否生成视频音频",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比",
-        "defaultValue": "adaptive",
-        "options": [
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "Adaptive"
-          },
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
           }
         ]
       },
@@ -21768,6 +21713,92 @@
             "value": "15",
             "description": "15",
             "descriptionEn": "15"
+          }
+        ]
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrls",
+        "description": "参考图片（0-9张）",
+        "multipleInputs": true,
+        "maxInputNum": 9,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "videoUrls",
+        "type": "VIDEO",
+        "required": false,
+        "label": "videoUrls",
+        "description": "参考视频（0-3个，用于多模态参考/视频编辑/视频续写）。单个视频时长 [2, 15] s，最多传入 3 个参考视频，所有视频总时长不超过 15s。",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"MP4\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "audioUrls",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrls",
+        "description": "参考音频（0-3个，需至少包含1个参考视频或图片）。单个音频时长 [2, 15] s，最多传入 3 段参考音频，所有音频总时长不超过 15 s。",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"MP3\",\"WAV\"]",
+        "maxSize": 15
+      },
+      {
+        "fieldKey": "generateAudio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "generateAudio",
+        "description": "是否生成视频音频",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "ratio",
+        "type": "LIST",
+        "required": false,
+        "label": "ratio",
+        "description": "视频宽高比",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "自适应",
+            "descriptionEn": "Adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
           }
         ]
       }

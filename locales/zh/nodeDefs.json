@@ -608,22 +608,22 @@
   "RH_HiggsfieldDopImageToVideo": {
     "display_name": "RH Higgsfield DoP 图生视频"
   },
-  "RH_DoubaoSeedance20TextToVideo": {
+  "RH_RhartVideoSparkvideo20TextToVideo": {
     "display_name": "RH 豆包 Seedance 2.0 文生视频"
   },
-  "RH_DoubaoSeedance20FastTextToVideo": {
+  "RH_RhartVideoSparkvideo20FastTextToVideo": {
     "display_name": "RH 豆包 Seedance 2.0 Fast 文生视频"
   },
-  "RH_DoubaoSeedance20ImageToVideo": {
+  "RH_RhartVideoSparkvideo20ImageToVideo": {
     "display_name": "RH 豆包 Seedance 2.0 图生视频"
   },
-  "RH_DoubaoSeedance20FastImageToVideo": {
+  "RH_RhartVideoSparkvideo20FastImageToVideo": {
     "display_name": "RH 豆包 Seedance 2.0 Fast 图生视频"
   },
-  "RH_DoubaoSeedance20MultimodalVideo": {
+  "RH_RhartVideoSparkvideo20MultimodalVideo": {
     "display_name": "RH 豆包 Seedance 2.0 多模态视频"
   },
-  "RH_DoubaoSeedance20FastMultimodalVideo": {
+  "RH_RhartVideoSparkvideo20FastMultimodalVideo": {
     "display_name": "RH 豆包 Seedance 2.0 Fast 多模态视频"
   },
   "RHSettingsNode": {
