@@ -20,7 +20,8 @@
       "Alibaba": "🎨 阿里 通义万相 Qwen",
       "PixVerse": "🎬 PixVerse 可灵替代",
       "SkyReels": "🎥 昆仑 SkyReels",
-      "Higgsfield": "🎭 Higgsfield"
+      "Higgsfield": "🎭 Higgsfield",
+      "SparkVideo Assets": "📦 SparkVideo 素材"
     },
     "en": {
       "RHArt Image": "🖼️ RHArt Image",
@@ -42,7 +43,8 @@
       "Alibaba": "🎨 Alibaba Qwen",
       "PixVerse": "🎬 PixVerse",
       "SkyReels": "🎥 SkyReels",
-      "Higgsfield": "🎭 Higgsfield"
+      "Higgsfield": "🎭 Higgsfield",
+      "SparkVideo Assets": "📦 SparkVideo Assets"
     }
   },
   "nodes": {
@@ -250,12 +252,15 @@
       "RH_PixverseV56ImageToVideo": "RH PixVerse V5.6 图生视频",
       "RH_HiggsfieldSoulImageToImage": "RH Higgsfield Soul 图生图",
       "RH_HiggsfieldDopImageToVideo": "RH Higgsfield DoP 图生视频",
-      "RH_RhartVideoSparkvideo20TextToVideo": "RH 豆包 Seedance 2.0 文生视频",
-      "RH_RhartVideoSparkvideo20FastTextToVideo": "RH 豆包 Seedance 2.0 Fast 文生视频",
-      "RH_RhartVideoSparkvideo20ImageToVideo": "RH 豆包 Seedance 2.0 图生视频",
-      "RH_RhartVideoSparkvideo20FastImageToVideo": "RH 豆包 Seedance 2.0 Fast 图生视频",
-      "RH_RhartVideoSparkvideo20MultimodalVideo": "RH 豆包 Seedance 2.0 多模态视频",
-      "RH_RhartVideoSparkvideo20FastMultimodalVideo": "RH 豆包 Seedance 2.0 Fast 多模态视频",
+      "RH_RhartVideoSparkvideo20TextToVideo": "RH 超能视频2.0/文生视频",
+      "RH_RhartVideoSparkvideo20FastTextToVideo": "RH 超能视频2.0-Fast/文生视频",
+      "RH_RhartVideoSparkvideo20ImageToVideo": "RH 超能视频2.0/图生视频",
+      "RH_RhartVideoSparkvideo20FastImageToVideo": "RH 超能视频2.0-Fast/图生视频",
+      "RH_RhartVideoSparkvideo20MultimodalVideo": "RH 超能视频2.0/多模态视频",
+      "RH_RhartVideoSparkvideo20FastMultimodalVideo": "RH 超能视频2.0-Fast/多模态视频",
+      "RH_SparkVideoAssetCreate": "RH SparkVideo 素材/创建",
+      "RH_SparkVideoAssetQuery": "RH SparkVideo 素材/查询",
+      "RH_SparkVideoAssetIdsMerge": "RH SparkVideo 素材ID/合并",
       "RHSettingsNode": "RH OpenAPI 设置"
     },
     "en": {
@@ -462,12 +467,15 @@
       "RH_PixverseV56ImageToVideo": "RH Pixverse V5.6 Image to Video",
       "RH_HiggsfieldSoulImageToImage": "RH Higgsfield Soul Image to Image",
       "RH_HiggsfieldDopImageToVideo": "RH Higgsfield Dop Image to Video",
-      "RH_RhartVideoSparkvideo20TextToVideo": "RH Doubao Seedance 2.0 Text to Video",
-      "RH_RhartVideoSparkvideo20FastTextToVideo": "RH Doubao Seedance 2.0 Fast Text to Video",
-      "RH_RhartVideoSparkvideo20ImageToVideo": "RH Doubao Seedance 2.0 Image to Video",
-      "RH_RhartVideoSparkvideo20FastImageToVideo": "RH Doubao Seedance 2.0 Fast Image to Video",
-      "RH_RhartVideoSparkvideo20MultimodalVideo": "RH Doubao Seedance 2.0 Multimodal Video",
-      "RH_RhartVideoSparkvideo20FastMultimodalVideo": "RH Doubao Seedance 2.0 Fast Multimodal Video",
+      "RH_RhartVideoSparkvideo20TextToVideo": "RH Sparkvideo 2.0 Text to Video",
+      "RH_RhartVideoSparkvideo20FastTextToVideo": "RH Sparkvideo 2.0 Fast Text to Video",
+      "RH_RhartVideoSparkvideo20ImageToVideo": "RH Sparkvideo 2.0 Image to Video",
+      "RH_RhartVideoSparkvideo20FastImageToVideo": "RH Sparkvideo 2.0 Fast Image to Video",
+      "RH_RhartVideoSparkvideo20MultimodalVideo": "RH Sparkvideo 2.0 Multimodal Video",
+      "RH_RhartVideoSparkvideo20FastMultimodalVideo": "RH Sparkvideo 2.0 Fast Multimodal Video",
+      "RH_SparkVideoAssetCreate": "RH SparkVideo Asset/Create",
+      "RH_SparkVideoAssetQuery": "RH SparkVideo Asset/Query",
+      "RH_SparkVideoAssetIdsMerge": "RH SparkVideo Asset IDs/Merge",
       "RHSettingsNode": "RH OpenAPI Settings"
     }
   },

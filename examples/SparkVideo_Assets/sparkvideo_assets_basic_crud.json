@@ -1,0 +1,208 @@
+{
+  "last_node_id": 5,
+  "last_link_id": 4,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "RHSettingsNode",
+      "pos": [40, 80],
+      "size": [330, 82],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "api_config",
+          "type": "RH_OPENAPI_CONFIG",
+          "links": [1, 4],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RHSettingsNode"
+      },
+      "widgets_values": [
+        "https://www.runninghub.cn/openapi/v2",
+        "YOUR_API_KEY"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [40, 320],
+      "size": [315, 314],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [2],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "RH_SparkVideoAssetCreate",
+      "pos": [500, 220],
+      "size": [340, 140],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 2
+        },
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "api_config",
+          "type": "RH_OPENAPI_CONFIG",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "asset_id",
+          "type": "STRING",
+          "links": [3],
+          "slot_index": 0
+        },
+        {
+          "name": "status",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1
+        },
+        {
+          "name": "response",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RH_SparkVideoAssetCreate"
+      },
+      "widgets_values": [
+        false
+      ],
+      "title": "RH SparkVideo 素材/创建"
+    },
+    {
+      "id": 4,
+      "type": "RH_SparkVideoAssetQuery",
+      "pos": [960, 220],
+      "size": [340, 120],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "asset_id",
+          "type": "STRING",
+          "link": 3
+        },
+        {
+          "name": "api_config",
+          "type": "RH_OPENAPI_CONFIG",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "asset_id",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "status",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1
+        },
+        {
+          "name": "preview_url",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 2
+        },
+        {
+          "name": "response",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RH_SparkVideoAssetQuery"
+      },
+      "widgets_values": [
+        false
+      ],
+      "title": "RH SparkVideo 素材/查询"
+    },
+    {
+      "id": 5,
+      "type": "Note",
+      "pos": [40, -120],
+      "size": [760, 260],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": "Basic SparkVideo asset workflow\\n\\nFlow:\\n1. Upload a local image as an asset\\n2. Query the returned asset_id to inspect its status and preview\\n\\nNotes:\\n- RH SparkVideo 素材/创建 uses the fixed internal group group-20260327004931-dvjbj\\n- The asset name is also fixed internally as RHas01\\n- Replace LoadImage with VIDEO or AUDIO and reconnect it to the matching input when needed"
+      },
+      "widgets_values": [
+        "Basic SparkVideo asset workflow\\n\\nFlow:\\n1. Upload a local image as an asset\\n2. Query the returned asset_id to inspect its status and preview\\n\\nNotes:\\n- RH SparkVideo 素材/创建 uses the fixed internal group group-20260327004931-dvjbj\\n- The asset name is also fixed internally as RHas01\\n- Replace LoadImage with VIDEO or AUDIO and reconnect it to the matching input when needed"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [1, 1, 0, 3, 3, "RH_OPENAPI_CONFIG"],
+    [2, 2, 0, 3, 0, "IMAGE"],
+    [3, 3, 0, 4, 0, "STRING"],
+    [4, 1, 0, 4, 1, "RH_OPENAPI_CONFIG"]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.95,
+      "offset": [50, 40]
+    }
+  },
+  "version": 0.4
+}

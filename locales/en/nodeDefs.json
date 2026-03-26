@@ -609,22 +609,31 @@
     "display_name": "RH Higgsfield Dop Image to Video"
   },
   "RH_RhartVideoSparkvideo20TextToVideo": {
-    "display_name": "RH Doubao Seedance 2.0 Text to Video"
+    "display_name": "RH Sparkvideo 2.0 Text to Video"
   },
   "RH_RhartVideoSparkvideo20FastTextToVideo": {
-    "display_name": "RH Doubao Seedance 2.0 Fast Text to Video"
+    "display_name": "RH Sparkvideo 2.0 Fast Text to Video"
   },
   "RH_RhartVideoSparkvideo20ImageToVideo": {
-    "display_name": "RH Doubao Seedance 2.0 Image to Video"
+    "display_name": "RH Sparkvideo 2.0 Image to Video"
   },
   "RH_RhartVideoSparkvideo20FastImageToVideo": {
-    "display_name": "RH Doubao Seedance 2.0 Fast Image to Video"
+    "display_name": "RH Sparkvideo 2.0 Fast Image to Video"
   },
   "RH_RhartVideoSparkvideo20MultimodalVideo": {
-    "display_name": "RH Doubao Seedance 2.0 Multimodal Video"
+    "display_name": "RH Sparkvideo 2.0 Multimodal Video"
   },
   "RH_RhartVideoSparkvideo20FastMultimodalVideo": {
-    "display_name": "RH Doubao Seedance 2.0 Fast Multimodal Video"
+    "display_name": "RH Sparkvideo 2.0 Fast Multimodal Video"
+  },
+  "RH_SparkVideoAssetCreate": {
+    "display_name": "RH SparkVideo Asset/Create"
+  },
+  "RH_SparkVideoAssetQuery": {
+    "display_name": "RH SparkVideo Asset/Query"
+  },
+  "RH_SparkVideoAssetIdsMerge": {
+    "display_name": "RH SparkVideo Asset IDs/Merge"
   },
   "RHSettingsNode": {
     "display_name": "RH OpenAPI Settings"

@@ -1,21 +1,22 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-209-blue)
+![Nodes](https://img.shields.io/badge/Nodes-213-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 [English](README_EN.md) | **中文**
 
-**ComfyUI_RH_OpenAPI** 是 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 的 **1:1 ComfyUI 实现**。
+**ComfyUI_RH_OpenAPI** 是 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 的 **1:1 ComfyUI 实现**，并额外补充了 SparkVideo 素材资产管理节点。
 
-RunningHub 平台提供了 209 个标准模型 API（涵盖主流最新所有的图像生成、视频生成、音频合成、3D 建模、文本理解、图像放大），本项目将每一个 API 端点都转化为对应的 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的全部标准模型能力，无需本地 GPU，无冷启动延迟。
+RunningHub 平台提供了 209 个标准模型 API（涵盖主流最新所有的图像生成、视频生成、音频合成、3D 建模、文本理解、图像放大），本项目将每一个 API 端点都转化为对应的 ComfyUI 节点，并新增 3 个 SparkVideo 素材辅助节点与 1 个设置节点，总计提供 213 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的全部标准模型能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 SparkVideo 2.0 素材资产，无需本地 GPU，无冷启动延迟。
 
 ## 📌 项目特点
 
-- **完整覆盖** — 209 个 ComfyUI 节点，与 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 一一对应
+- **节点总量** — 共 213 个 ComfyUI 节点，其中包含 209 个标准模型节点、3 个 SparkVideo 素材节点和 1 个设置节点
 - **即插即用** — 无需下载模型、无需 GPU，只需 API Key 即可调用全部能力
 - **动态注册** — 基于 JSON 注册表自动生成节点，新模型上线后仅需更新注册表
 - **多媒体支持** — 图片、视频、音频自动上传 / 下载 / 格式转换，与 ComfyUI 原生类型无缝衔接
+- **素材资产管理** — 提供 3 个 SparkVideo 素材辅助节点，并支持通过统一的 `asset_ids` 输入或 `real_person_mode` 把本地图片/视频映射到 SparkVideo 2.0 / 2.0-Fast 节点
 - **灵活配置** — 支持节点配置、环境变量、`.env` 文件三种配置方式
 - **进度显示** — 任务提交后实时显示轮询进度
 - **容错机制** — 提交/上传/轮询均有重试与指数退避，自动区分可重试与不可重试错误
@@ -84,6 +85,19 @@ RunningHub 平台提供了 209 个标准模型 API（涵盖主流最新所有的
 | HiTem3D V1.5 / V2 | 图生 3D、多图生 3D | 4 |
 | HiTem3D Portrait V1.5 / V2.0 / V2.1 | 人像图生 3D、多图生 3D | 6 |
 
+### SparkVideo 素材资产（3 个节点）
+
+- 用户节点：`RH SparkVideo 素材/创建`、`RH SparkVideo 素材/查询`、`RH SparkVideo 素材ID/合并`
+- `RH SparkVideo 素材/创建` 使用固定素材组 `group-20260327004931-dvjbj`，并固定素材名称为 `RHas01`
+- SparkVideo 适配：`RH 超能视频2.0 / 2.0-Fast` 的图生视频、多模态视频节点提供统一的 `asset_ids` 输入，并新增 `real_person_mode`、`conversion_slots`
+- `asset_ids` 支持单个素材 ID、`asset://<asset_ID>`、逗号/换行分隔，以及 JSON 数组字符串
+- `real_person_mode=false` 时保持原始本地上传行为；`real_person_mode=true` 时会把选中的本地图片/视频槽位先转成素材，再写入 SparkVideo payload
+- `conversion_slots` 默认 `all`
+- 图生视频支持：`first_frame,last_frame`
+- 多模态视频支持：`image1..image9,video1..video3`
+- 某个槽位转素材失败时会自动回退到原始上传，不影响其它槽位
+- 这两个输入都补充了 hover 提示，鼠标悬停即可查看说明和可用槽位格式
+
 ## 🛠️ 安装
 
 ### 方式一：通过 ComfyUI Manager 安装（推荐）
@@ -131,11 +145,12 @@ cp config/.env.example config/.env
 
 1. 配置好 API Key（参见上方配置说明）
 2. 在 ComfyUI 节点菜单中找到 `RunningHub` 分类
-3. 选择你需要的模型节点，连线后运行即可
+3. 选择你需要的模型节点，或在 `RunningHub > SparkVideo Assets` 下选择素材管理节点
+4. 连线后运行即可
 
 ### 示例工作流
 
-项目在 `examples/` 目录下提供了 209 个示例工作流 JSON 文件，覆盖每一个模型节点。下载后直接导入 ComfyUI 即可使用。
+项目在 `examples/` 目录下提供了 212 个示例工作流 JSON 文件，其中包含 3 个 SparkVideo 素材相关工作流。下载后直接导入 ComfyUI 即可使用。
 
 ## 📁 项目结构
 
@@ -148,6 +163,7 @@ ComfyUI_RH_OpenAPI/
 ├── core/                    # 核心基础设施
 │   ├── base.py              # 节点基类（统一执行流程）
 │   ├── api_key.py           # API Key 配置解析
+│   ├── rest.py              # 同步 REST 请求封装
 │   ├── upload.py            # 文件上传
 │   ├── task.py              # 任务提交与轮询
 │   ├── image.py             # 图像工具（Tensor ↔ PIL）
@@ -155,8 +171,9 @@ ComfyUI_RH_OpenAPI/
 │   └── audio.py             # 音频下载/转换工具
 ├── nodes/                   # 节点实现
 │   ├── settings_node.py     # RH OpenAPI Settings 配置节点
-│   └── node_factory.py      # 动态节点工厂
-└── examples/                # 209 个示例工作流
+│   ├── node_factory.py      # 动态节点工厂
+│   └── assets/              # SparkVideo 素材资产节点
+└── examples/                # 212 个示例工作流
 ```
 
 ## 🔧 架构说明
@@ -168,7 +185,7 @@ ComfyUI_RH_OpenAPI/
 3. **统一执行流程**（`core/base.py`）— `准备输入 → 上传媒体 → 提交任务 → 轮询状态 → 处理结果`
 4. **媒体工具**（`core/image.py`, `video.py`, `audio.py`）— 负责 ComfyUI 原生类型与 API 之间的格式转换
 
-新增模型只需在注册表中添加一条 JSON 记录，无需编写任何 Python 代码。
+新增标准模型只需在注册表中添加一条 JSON 记录，无需编写任何 Python 代码；SparkVideo 素材管理节点则采用手写 REST 封装。
 
 ## 📝 注意事项
 

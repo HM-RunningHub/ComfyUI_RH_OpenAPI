@@ -9,6 +9,11 @@ import json
 import os
 import re
 
+from .nodes.assets import (
+    NODE_CLASS_MAPPINGS as _asset_class_mappings,
+    NODE_DISPLAY_NAME_MAPPINGS as _asset_display_mappings,
+    NODE_I18N_DEFINITIONS as _asset_i18n_definitions,
+)
 from .nodes.settings_node import RHSettingsNode
 from .nodes.node_factory import create_all_nodes
 
@@ -16,11 +21,13 @@ _class_mappings, _display_mappings = create_all_nodes()
 
 NODE_CLASS_MAPPINGS = {
     "RHSettingsNode": RHSettingsNode,
+    **_asset_class_mappings,
     **_class_mappings,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     "RHSettingsNode": "RH OpenAPI Settings",
+    **_asset_display_mappings,
     **_display_mappings,
 }
 
@@ -58,6 +65,7 @@ _CATEGORY_NAME_EN = {
     "PixVerse": "🎬 PixVerse",
     "SkyReels": "🎥 SkyReels",
     "Higgsfield": "🎭 Higgsfield",
+    "SparkVideo Assets": "📦 SparkVideo Assets",
 }
 
 _CATEGORY_NAME_ZH = {
@@ -81,6 +89,7 @@ _CATEGORY_NAME_ZH = {
     "PixVerse": "🎬 PixVerse 可灵替代",
     "SkyReels": "🎥 昆仑 SkyReels",
     "Higgsfield": "🎭 Higgsfield",
+    "SparkVideo Assets": "📦 SparkVideo 素材",
 }
 
 
@@ -114,21 +123,27 @@ def _generate_i18n_files():
     except Exception:
         return
 
+    all_node_defs = list(registry) + list(_asset_i18n_definitions)
+
     # Build nodeDefs for en and zh
     node_defs_en = {}
     node_defs_zh = {}
     panel_nodes_en = {}
     panel_nodes_zh = {}
 
-    for m in registry:
+    for m in all_node_defs:
         iname = m.get("internal_name", "")
         name_cn = m.get("name_cn", "")
         name_en = m.get("name_en", "")
         display_cn = m.get("display_name", "")
+        display_en = m.get("display_name_en", "")
         endpoint = m.get("endpoint", "")
 
-        en_source = name_en.strip() or endpoint
-        en_display = ("RH " + _name_en_to_display(en_source)) if en_source else iname
+        if display_en:
+            en_display = display_en
+        else:
+            en_source = name_en.strip() or endpoint
+            en_display = ("RH " + _name_en_to_display(en_source)) if en_source else iname
         zh_display = display_cn or ("RH " + name_cn if name_cn else iname)
 
         node_defs_en[iname] = {"display_name": en_display}
@@ -153,7 +168,7 @@ def _generate_i18n_files():
     # Write locales main.json (category translations)
     categories = sorted(set(
         m.get("category", "").replace("RunningHub/", "")
-        for m in registry if m.get("category")
+        for m in all_node_defs if m.get("category")
     ))
 
     en_cats = {"RunningHub": "RunningHub"}

@@ -1,0 +1,306 @@
+{
+  "last_node_id": 7,
+  "last_link_id": 5,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "RHSettingsNode",
+      "pos": [40, 80],
+      "size": [330, 82],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "api_config",
+          "type": "RH_OPENAPI_CONFIG",
+          "links": [1],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RHSettingsNode"
+      },
+      "widgets_values": [
+        "https://www.runninghub.cn/openapi/v2",
+        "YOUR_API_KEY"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [40, 300],
+      "size": [315, 314],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [2],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example_person.png",
+        "image"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [40, 660],
+      "size": [315, 314],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [3],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example_style.png",
+        "image"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "LoadVideo",
+      "pos": [40, 1030],
+      "size": [235, 290],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [4],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "example_motion.mp4"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "RH_RhartVideoSparkvideo20MultimodalVideo",
+      "pos": [520, 320],
+      "size": [420, 360],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 2
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 3
+        },
+        {
+          "name": "image3",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image4",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image5",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image6",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image7",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image8",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image9",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "video1",
+          "type": "VIDEO",
+          "link": 4
+        },
+        {
+          "name": "video2",
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "video3",
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "audio1",
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "audio2",
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "audio3",
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "asset_ids",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "api_config",
+          "type": "RH_OPENAPI_CONFIG",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": [5],
+          "slot_index": 0
+        },
+        {
+          "name": "url",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1
+        },
+        {
+          "name": "response",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RH_RhartVideoSparkvideo20MultimodalVideo"
+      },
+      "widgets_values": [
+        "Keep image1 as a direct upload, but convert image2 and video1 into SparkVideo assets before generation.",
+        "720p",
+        "5",
+        true,
+        "adaptive",
+        false,
+        0,
+        true,
+        "image2,video1"
+      ],
+      "title": "RH 超能视频2.0/多模态视频"
+    },
+    {
+      "id": 6,
+      "type": "SaveVideo",
+      "pos": [1040, 360],
+      "size": [300, 200],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 5
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "RH_"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "Note",
+      "pos": [40, -140],
+      "size": [980, 280],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": "SparkVideo real person material mode\\n\\nFlow:\\n1. image1 stays on the normal direct-upload path\\n2. image2 and video1 are pre-converted to SparkVideo assets because real_person_mode=true and conversion_slots=image2,video1\\n3. If asset creation fails for image2 or video1, that slot automatically falls back to the original upload path\\n\\nNotes:\\n- real_person_mode only affects local IMAGE / VIDEO slots on the 4 SparkVideo 2.0 / 2.0-Fast image-capable nodes\\n- conversion_slots=all converts every supported image/video slot\\n- asset_ids can still be connected at the same time for manually managed assets"
+      },
+      "widgets_values": [
+        "SparkVideo real person material mode\\n\\nFlow:\\n1. image1 stays on the normal direct-upload path\\n2. image2 and video1 are pre-converted to SparkVideo assets because real_person_mode=true and conversion_slots=image2,video1\\n3. If asset creation fails for image2 or video1, that slot automatically falls back to the original upload path\\n\\nNotes:\\n- real_person_mode only affects local IMAGE / VIDEO slots on the 4 SparkVideo 2.0 / 2.0-Fast image-capable nodes\\n- conversion_slots=all converts every supported image/video slot\\n- asset_ids can still be connected at the same time for manually managed assets"
+      ],
+      "color": "#243",
+      "bgcolor": "#365"
+    }
+  ],
+  "links": [
+    [1, 1, 0, 5, 16, "RH_OPENAPI_CONFIG"],
+    [2, 2, 0, 5, 0, "IMAGE"],
+    [3, 3, 0, 5, 1, "IMAGE"],
+    [4, 4, 0, 5, 9, "VIDEO"],
+    [5, 5, 0, 6, 0, "VIDEO"]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.86,
+      "offset": [80, 20]
+    }
+  },
+  "version": 0.4
+}

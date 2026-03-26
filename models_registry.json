@@ -21058,6 +21058,8 @@
     "endpoint": "rhart-video/sparkvideo-2.0/image-to-video",
     "output_type": "video",
     "category": "RunningHub/Seedance",
+    "asset_ids_mode": "image_to_video",
+    "real_person_asset_slots": ["first_frame", "last_frame"],
     "params": [
       {
         "fieldKey": "prompt",
@@ -21239,6 +21241,8 @@
     "endpoint": "rhart-video/sparkvideo-2.0-fast/image-to-video",
     "output_type": "video",
     "category": "RunningHub/Seedance",
+    "asset_ids_mode": "image_to_video",
+    "real_person_asset_slots": ["first_frame", "last_frame"],
     "params": [
       {
         "fieldKey": "prompt",
@@ -21420,6 +21424,11 @@
     "endpoint": "rhart-video/sparkvideo-2.0/multimodal-video",
     "output_type": "video",
     "category": "RunningHub/Seedance",
+    "asset_ids_mode": "multimodal_video",
+    "real_person_asset_slots": [
+      "image1", "image2", "image3", "image4", "image5", "image6", "image7", "image8", "image9",
+      "video1", "video2", "video3"
+    ],
     "params": [
       {
         "fieldKey": "prompt",
@@ -21616,6 +21625,11 @@
     "endpoint": "rhart-video/sparkvideo-2.0-fast/multimodal-video",
     "output_type": "video",
     "category": "RunningHub/Seedance",
+    "asset_ids_mode": "multimodal_video",
+    "real_person_asset_slots": [
+      "image1", "image2", "image3", "image4", "image5", "image6", "image7", "image8", "image9",
+      "video1", "video2", "video3"
+    ],
     "params": [
       {
         "fieldKey": "prompt",
