@@ -358,6 +358,7 @@ app.registerExtension({
         statsBar.textContent = t("stats")
           .replace("{categories}", Object.keys(allNodes).length)
           .replace("{nodes}", totalNodes);
+        const formatCategoryTitle = (label, count) => `${label} (${count})`;
 
         const renderNodes = (filter = "") => {
           nodesContainer.innerHTML = "";
@@ -378,7 +379,7 @@ app.registerExtension({
             categoryDiv.style.marginBottom = "8px";
 
             const title = document.createElement("div");
-            title.textContent = `${filter ? "\u25bc" : "\u25b6"} ${catData.display} (${filteredItems.length})`;
+            title.textContent = formatCategoryTitle(catData.display, filteredItems.length);
             title.style.cssText = `
               font-size: 13px;
               font-weight: 600;
@@ -452,25 +453,10 @@ app.registerExtension({
                 nodesContainer.querySelectorAll(".rh-items-container").forEach(c => {
                   if (c !== container) {
                     c.style.display = "none";
-                    const ti = c.previousSibling;
-                    if (ti && ti.textContent) {
-                      const m = ti.textContent.match(/^[▶▼]\s*(.+?)\s*\(\d+\)/);
-                      if (m) {
-                        const count = ti.textContent.match(/\(\d+\)/);
-                        ti.textContent = `▶ ${m[1]} ${count ? count[0] : ""}`;
-                      }
-                    }
                   }
                 });
                 const isOpen = container.style.display === "block";
                 container.style.display = isOpen ? "none" : "block";
-                const m = title.textContent.match(/^[▶▼]\s*(.+?)\s*\(\d+\)/);
-                if (m) {
-                  const count = title.textContent.match(/\(\d+\)/);
-                  title.textContent = isOpen
-                    ? `▶ ${m[1]} ${count ? count[0] : ""}`
-                    : `▼ ${m[1]} ${count ? count[0] : ""}`;
-                }
               }
             });
 
