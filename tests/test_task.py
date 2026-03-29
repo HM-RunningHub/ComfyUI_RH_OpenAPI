@@ -12,7 +12,8 @@ class TaskErrorMessageTests(unittest.TestCase):
         )
 
         self.assertIn("real_person_mode", message)
-        self.assertIn("不支持真人", message)
+        self.assertIn("普通真人内容", message)
+        self.assertIn("若已开启 real_person_mode 仍报错", message)
         self.assertIn("名人", message)
         self.assertIn("IP", message)
 

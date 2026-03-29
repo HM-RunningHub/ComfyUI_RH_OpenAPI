@@ -81,11 +81,14 @@ def _enhance_api_error_message(err_msg: str, err_code: Any, logger_prefix: str) 
         return message
     if _supports_real_person_mode(logger_prefix) and _is_real_person_rejection(err_code, message):
         return (
-            "Photorealistic real people are prohibited. Please modify the prompt or "
-            "reference image, or enable real_person_mode to support real-person content. "
-            "Please avoid celebrity, public figure, or protected IP content. | "
-            "不支持真人，请修改提示词或参考图，或开启 real_person_mode 来支持真人。"
-            "但请注意避免涉及名人、公众人物或受保护的 IP 角色。"
+            "This request contains restricted real-person content. For ordinary real-person "
+            "content, please modify the prompt or reference image, or enable real_person_mode. "
+            "If real_person_mode is already enabled and the error still appears, the reference "
+            "image or video may contain a celebrity, public figure, or protected IP character, "
+            "which is still not supported. | "
+            "当前请求包含受限的人物内容。若为普通真人内容，请修改提示词或参考图，或开启 "
+            "real_person_mode。若已开启 real_person_mode 仍报错，通常是因为参考图或视频 "
+            "包含名人、公众人物或受保护的 IP 角色，这类内容仍不支持。"
         )
     return message
 
