@@ -2,6 +2,7 @@
 SparkVideo asset management nodes.
 """
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
 import math
 import os
@@ -16,6 +17,7 @@ from io import BytesIO
 import torch
 from PIL import Image
 
+from ...core.api_key import get_config
 from ...core.audio import audio_to_bytes
 from ...core.image import tensor_to_pil
 from ...core.rest import dumps_json, post_json
@@ -1408,6 +1410,18 @@ def _split_asset_ids(*values) -> list:
     return result
 
 
+def _collect_asset_media_inputs(image=None, video=None, audio=None) -> list:
+    """Collect connected media inputs in a stable merge order."""
+    media_inputs = []
+    if image is not None:
+        media_inputs.append(("image", image))
+    if video is not None:
+        media_inputs.append(("video", video))
+    if audio is not None:
+        media_inputs.append(("audio", audio))
+    return media_inputs
+
+
 class RH_SparkVideoAssetCreate(AssetRestNodeBase):
     ENDPOINT = "assets/create"
     RETURN_TYPES = ("STRING", "STRING", "STRING")
@@ -1425,25 +1439,87 @@ class RH_SparkVideoAssetCreate(AssetRestNodeBase):
             },
         }
 
-    def prepare_payload(self, config, image=None, video=None, audio=None, **kwargs):
-        media_inputs = []
-        if image is not None:
-            media_inputs.append(("Image", image))
-        if video is not None:
-            media_inputs.append(("Video", video))
-        if audio is not None:
-            media_inputs.append(("Audio", audio))
+    def execute(self, **kwargs):
+        skip_error = kwargs.pop("skip_error", False)
+        try:
+            media_inputs = _collect_asset_media_inputs(
+                image=kwargs.get("image"),
+                video=kwargs.get("video"),
+                audio=kwargs.get("audio"),
+            )
+            if not media_inputs:
+                raise ValueError("At least one of image, video, or audio must be provided")
 
+            config = get_config(kwargs.get("api_config"))
+            if len(media_inputs) == 1:
+                payload = self.prepare_payload(config, **kwargs)
+                response = self.request(config, payload)
+                return self.parse_response(response, config=config, **kwargs)
+
+            created_assets = [None] * len(media_inputs)
+            max_workers = min(3, len(media_inputs))
+            with ThreadPoolExecutor(max_workers=max_workers, thread_name_prefix="rh-asset-create") as executor:
+                future_to_index = {}
+                for index, (media_type, media_value) in enumerate(media_inputs):
+                    future = executor.submit(
+                        create_fixed_asset_from_media,
+                        config,
+                        media_type,
+                        media_value,
+                        f"{self._log_prefix}_{media_type.capitalize()}",
+                    )
+                    future_to_index[future] = index
+
+                for future in as_completed(future_to_index):
+                    index = future_to_index[future]
+                    media_type, _ = media_inputs[index]
+                    created_assets[index] = {"media_type": media_type, **future.result()}
+
+            asset_ids = []
+            unique_statuses = []
+            for item in created_assets:
+                asset_id = clean_string(item.get("asset_id"))
+                status = clean_string(item.get("status"))
+                if asset_id:
+                    asset_ids.append(asset_id)
+                if status and status not in unique_statuses:
+                    unique_statuses.append(status)
+
+            if not asset_ids:
+                raise RuntimeError("No asset ids returned from asset create API")
+
+            merged_asset_ids = ", ".join(asset_ids)
+            merged_status = ", ".join(unique_statuses)
+            merged_response = {
+                "data": {
+                    "assetId": merged_asset_ids,
+                    "assetIds": asset_ids,
+                    "status": merged_status,
+                    "items": created_assets,
+                    "count": len(created_assets),
+                }
+            }
+            return (
+                merged_asset_ids,
+                merged_status,
+                self._response_json(merged_response),
+            )
+        except Exception as e:
+            if skip_error:
+                return self._error_result(f"{self._log_prefix}: {e}")
+            raise
+
+    def prepare_payload(self, config, image=None, video=None, audio=None, **kwargs):
+        media_inputs = _collect_asset_media_inputs(image=image, video=video, audio=audio)
         if len(media_inputs) == 0:
-            raise ValueError("Exactly one of image, video, or audio must be provided")
+            raise ValueError("At least one of image, video, or audio must be provided")
         if len(media_inputs) > 1:
-            names = [name for name, _ in media_inputs]
             raise ValueError(
-                f"Only one media input is allowed, but got {len(media_inputs)}: {', '.join(names)}"
+                "Multiple media inputs must be handled before prepare_payload"
             )
 
-        asset_type, media_value = media_inputs[0]
-        return prepare_fixed_asset_create_payload(config, asset_type, media_value, self._log_prefix)
+        media_type, media_value = media_inputs[0]
+        return prepare_fixed_asset_create_payload(config, media_type, media_value, self._log_prefix)
 
     def parse_response(self, response, config=None, image=None, video=None, audio=None, **kwargs):
         data = response.get("data") or {}
@@ -1451,13 +1527,8 @@ class RH_SparkVideoAssetCreate(AssetRestNodeBase):
         status = clean_string(data.get("status"))
         final_response = response
 
-        media_type = ""
-        if image is not None:
-            media_type = "image"
-        elif video is not None:
-            media_type = "video"
-        elif audio is not None:
-            media_type = "audio"
+        media_inputs = _collect_asset_media_inputs(image=image, video=video, audio=audio)
+        media_type = media_inputs[0][0] if media_inputs else ""
 
         if config is not None and asset_id:
             ready_info = wait_for_asset_ready(
