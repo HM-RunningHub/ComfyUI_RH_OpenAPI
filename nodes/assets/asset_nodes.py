@@ -1434,8 +1434,13 @@ class RH_SparkVideoAssetCreate(AssetRestNodeBase):
         if audio is not None:
             media_inputs.append(("Audio", audio))
 
-        if len(media_inputs) != 1:
+        if len(media_inputs) == 0:
             raise ValueError("Exactly one of image, video, or audio must be provided")
+        if len(media_inputs) > 1:
+            names = [name for name, _ in media_inputs]
+            raise ValueError(
+                f"Only one media input is allowed, but got {len(media_inputs)}: {', '.join(names)}"
+            )
 
         asset_type, media_value = media_inputs[0]
         return prepare_fixed_asset_create_payload(config, asset_type, media_value, self._log_prefix)
