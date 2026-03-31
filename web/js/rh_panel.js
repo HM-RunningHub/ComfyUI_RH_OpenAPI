@@ -132,7 +132,7 @@ app.registerExtension({
         "PixVerse": "🎬 PixVerse 可灵替代",
         "SkyReels": "🎥 昆仑 SkyReels",
         "Higgsfield": "🎭 Higgsfield",
-        "SparkVideo Assets": "📦 SparkVideo 素材",
+        "SparkVideo Assets": "📦 超能视频2.0素材",
       },
       en: {
         "RHArt Image": "🖼️ RHArt Image", "RHArt Video": "🎬 RHArt Video",

@@ -109,6 +109,11 @@ class SparkVideoAssetCreateTests(unittest.TestCase):
             json.loads(response)["error"],
         )
 
+    def test_asset_ready_timeout_defaults_match_policy(self):
+        self.assertEqual(self.asset_nodes._asset_ready_timeout({}, "image"), 180)
+        self.assertEqual(self.asset_nodes._asset_ready_timeout({}, "video"), 300)
+        self.assertEqual(self.asset_nodes._asset_ready_timeout({}, "audio"), 180)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -627,13 +627,13 @@
     "display_name": "RH 超能视频2.0-Fast/多模态视频"
   },
   "RH_SparkVideoAssetCreate": {
-    "display_name": "RH SparkVideo 素材/创建"
+    "display_name": "RH 超能视频2.0素材/创建"
   },
   "RH_SparkVideoAssetQuery": {
-    "display_name": "RH SparkVideo 素材/查询"
+    "display_name": "RH 超能视频2.0素材/查询"
   },
   "RH_SparkVideoAssetIdsMerge": {
-    "display_name": "RH SparkVideo 素材ID/合并"
+    "display_name": "RH 超能视频2.0素材ID/合并"
   },
   "RHSettingsNode": {
     "display_name": "RH OpenAPI 设置"

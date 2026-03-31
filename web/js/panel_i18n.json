@@ -21,7 +21,7 @@
       "PixVerse": "🎬 PixVerse 可灵替代",
       "SkyReels": "🎥 昆仑 SkyReels",
       "Higgsfield": "🎭 Higgsfield",
-      "SparkVideo Assets": "📦 SparkVideo 素材"
+      "SparkVideo Assets": "📦 超能视频2.0素材"
     },
     "en": {
       "RHArt Image": "🖼️ RHArt Image",
@@ -258,9 +258,9 @@
       "RH_RhartVideoSparkvideo20FastImageToVideo": "RH 超能视频2.0-Fast/图生视频",
       "RH_RhartVideoSparkvideo20MultimodalVideo": "RH 超能视频2.0/多模态视频",
       "RH_RhartVideoSparkvideo20FastMultimodalVideo": "RH 超能视频2.0-Fast/多模态视频",
-      "RH_SparkVideoAssetCreate": "RH SparkVideo 素材/创建",
-      "RH_SparkVideoAssetQuery": "RH SparkVideo 素材/查询",
-      "RH_SparkVideoAssetIdsMerge": "RH SparkVideo 素材ID/合并",
+      "RH_SparkVideoAssetCreate": "RH 超能视频2.0素材/创建",
+      "RH_SparkVideoAssetQuery": "RH 超能视频2.0素材/查询",
+      "RH_SparkVideoAssetIdsMerge": "RH 超能视频2.0素材ID/合并",
       "RHSettingsNode": "RH OpenAPI 设置"
     },
     "en": {
