@@ -153,6 +153,13 @@ app.registerExtension({
 
     const categoryNameMap = (i18n.categories && i18n.categories[locale])
       || fallbackCategories[locale] || {};
+    const categoryAliases = {
+      "音频": "Audio",
+      "音频生成": "Audio",
+      "SparkVideo 素材": "SparkVideo Assets",
+      "超能视频2.0素材": "SparkVideo Assets",
+    };
+    const normalizeCategoryName = (name) => categoryAliases[name] || name;
     const nodeNameMap = (i18n.nodes && i18n.nodes[locale]) || {};
     const t = (key) =>
       ((i18n.ui && i18n.ui[locale]) || fallbackUI[locale] || fallbackUI.en)[key] || key;
@@ -181,7 +188,8 @@ app.registerExtension({
         const category = nodeClass.category;
         if (!category || !category.toLowerCase().startsWith("runninghub/")) continue;
 
-        const categoryName = category.split("/").slice(1).join("/");
+        const rawCategoryName = category.split("/").slice(1).join("/");
+        const categoryName = normalizeCategoryName(rawCategoryName);
         const displayCategory = categoryNameMap[categoryName] || categoryName;
 
         if (!categories[categoryName]) {
