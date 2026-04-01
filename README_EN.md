@@ -88,7 +88,6 @@ RunningHub provides 212 standard model APIs covering image generation, video gen
 ### SparkVideo Assets (3 Nodes)
 
 - User-facing nodes: `RH SparkVideo Asset/Create`, `RH SparkVideo Asset/Query`, `RH SparkVideo Asset IDs/Merge`
-- `RH SparkVideo Asset/Create` always uses the fixed asset group `group-20260327004931-dvjbj` and the fixed asset name `RHas01`
 - SparkVideo integration: `RH Sparkvideo 2.0 / 2.0-Fast` image-to-video and multimodal-video nodes expose a unified `asset_ids` input and two extra widgets: `real_person_mode` and `conversion_slots`
 - `asset_ids` supports a single asset ID, an `asset://<asset_ID>` URL, comma/newline separated values, or a JSON array string
 - `real_person_mode=false` keeps the original direct-upload path; `real_person_mode=true` converts selected local image/video slots to SparkVideo assets before the API request
