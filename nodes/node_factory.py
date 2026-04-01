@@ -24,7 +24,12 @@ from ..core.image import tensor_to_bytes, download_images_to_tensor
 from ..core.video import download_video
 from ..core.audio import download_audio, audio_to_bytes
 from ..core.rest import post_json
-from .assets.asset_nodes import create_fixed_asset_from_media, preprocess_video_for_volc_asset
+from .assets.asset_nodes import (
+    create_fixed_asset_from_media,
+    preprocess_image_for_volc_asset,
+    preprocess_audio_for_volc_asset,
+    preprocess_video_for_volc_asset,
+)
 
 
 def _load_registry() -> List[Dict]:
@@ -541,10 +546,31 @@ def create_node_class(model_def: Dict) -> type:
                 url = None
 
                 if mt == "IMAGE":
-                    img_bytes = tensor_to_bytes(value)
-                    fn = f"upload_{hash(img_bytes) % 10**10}.png"
+                    img_bytes = None
+                    upload_filename = None
+                    upload_mime_type = "image/png"
+                    should_normalize_image_upload = _asset_ids_mode in {"multimodal_video", "image_to_video"}
+
+                    if should_normalize_image_upload:
+                        try:
+                            prepared_image = preprocess_image_for_volc_asset(
+                                value,
+                                f"{self._log_prefix}_{mi['comfy_name']}_DirectUpload",
+                            )
+                            img_bytes = prepared_image.get("file_bytes")
+                            upload_filename = prepared_image.get("filename")
+                            upload_mime_type = prepared_image.get("mime_type") or "image/png"
+                        except Exception as e:
+                            print(
+                                f"[{self._log_prefix}] WARNING: image preprocessing failed for "
+                                f"{mi['comfy_name']}, fallback to original upload: {e}"
+                            )
+
+                    if not img_bytes:
+                        img_bytes = tensor_to_bytes(value)
+                    fn = upload_filename or f"upload_{hash(img_bytes) % 10**10}.png"
                     url = upload_file(
-                        img_bytes, fn, "image/png",
+                        img_bytes, fn, upload_mime_type,
                         config["api_key"], config["base_url"],
                         timeout=config.get("upload_timeout", 60),
                         logger_prefix=self._log_prefix,
@@ -608,11 +634,34 @@ def create_node_class(model_def: Dict) -> type:
                         print(f"[{self._log_prefix}] WARNING: Could not extract video data from {type(value).__name__}")
 
                 elif mt == "AUDIO":
+                    abytes = None
+                    upload_filename = None
+                    upload_mime_type = "audio/wav"
+                    should_normalize_audio_upload = (
+                        mi["field_key"] == "audioUrls" and _asset_ids_mode == "multimodal_video"
+                    )
+
+                    if should_normalize_audio_upload:
+                        try:
+                            prepared_audio = preprocess_audio_for_volc_asset(
+                                value,
+                                f"{self._log_prefix}_{mi['comfy_name']}_DirectUpload",
+                            )
+                            abytes = prepared_audio.get("file_bytes")
+                            upload_filename = prepared_audio.get("filename")
+                            upload_mime_type = prepared_audio.get("mime_type") or "audio/wav"
+                        except Exception as e:
+                            print(
+                                f"[{self._log_prefix}] WARNING: audio preprocessing failed for "
+                                f"{mi['comfy_name']}, fallback to original upload: {e}"
+                            )
+
                     if isinstance(value, dict) and "waveform" in value:
-                        abytes = audio_to_bytes(value)
-                        fn = f"upload_{hash(abytes) % 10**10}.wav"
+                        if not abytes:
+                            abytes = audio_to_bytes(value)
+                        fn = upload_filename or f"upload_{hash(abytes) % 10**10}.wav"
                         url = upload_file(
-                            abytes, fn, "audio/wav",
+                            abytes, fn, upload_mime_type,
                             config["api_key"], config["base_url"],
                             timeout=config.get("upload_timeout", 60),
                             logger_prefix=self._log_prefix,

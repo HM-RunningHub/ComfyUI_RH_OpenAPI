@@ -11,11 +11,13 @@ import subprocess
 import tempfile
 import time
 from fractions import Fraction
+from io import BytesIO
 
 import torch
+from PIL import Image
 
 from ...core.audio import audio_to_bytes
-from ...core.image import tensor_to_bytes
+from ...core.image import tensor_to_pil
 from ...core.rest import dumps_json, post_json
 from ...core.upload import upload_file
 from .base import AssetRestNodeBase, clean_string, connectable_string_input, text_input
@@ -49,6 +51,12 @@ VOLC_AUDIO_MIN_DURATION_SECONDS = 2.0
 VOLC_AUDIO_MAX_DURATION_SECONDS = 15.0
 VOLC_AUDIO_MAX_SIZE_BYTES = 15 * 1024 * 1024
 VOLC_AUDIO_MAX_SAMPLE_RATE = 48000
+VOLC_IMAGE_MIN_RATIO = 0.4
+VOLC_IMAGE_MAX_RATIO = 2.5
+VOLC_IMAGE_MIN_DIMENSION = 300
+VOLC_IMAGE_MAX_DIMENSION = 6000
+VOLC_IMAGE_MAX_SIZE_BYTES = 10 * 1024 * 1024
+VOLC_IMAGE_TARGET_FORMAT = "JPEG"
 
 
 def _log_video_asset(logger_prefix: str, message: str):
@@ -56,6 +64,10 @@ def _log_video_asset(logger_prefix: str, message: str):
 
 
 def _log_audio_asset(logger_prefix: str, message: str):
+    print(f"[{logger_prefix}] {message}")
+
+
+def _log_image_asset(logger_prefix: str, message: str):
     print(f"[{logger_prefix}] {message}")
 
 
@@ -129,6 +141,200 @@ def _describe_audio_info(info: dict) -> str:
         f"duration={float(info.get('duration') or 0.0):.2f}s, "
         f"size={_format_size_mb(int(info.get('size_bytes') or 0))}"
     )
+
+
+def _build_image_info(image: Image.Image, file_size_bytes: int = 0, format_name: str = "") -> dict:
+    width = int(image.width or 0)
+    height = int(image.height or 0)
+    ratio = float(width) / float(height) if width > 0 and height > 0 else 0.0
+    return {
+        "width": width,
+        "height": height,
+        "ratio": ratio,
+        "mode": str(image.mode or ""),
+        "size_bytes": int(file_size_bytes or 0),
+        "format_name": str(format_name or ""),
+    }
+
+
+def _describe_image_info(info: dict) -> str:
+    return (
+        f"format={str(info.get('format_name') or 'unknown')}, "
+        f"resolution={int(info.get('width') or 0)}x{int(info.get('height') or 0)}, "
+        f"ratio={float(info.get('ratio') or 0.0):.4f}, "
+        f"mode={str(info.get('mode') or 'unknown')}, "
+        f"size={_format_size_mb(int(info.get('size_bytes') or 0))}"
+    )
+
+
+def _validate_preprocessed_image_info(info: dict):
+    errors = []
+    width = int(info.get("width") or 0)
+    height = int(info.get("height") or 0)
+    ratio = float(info.get("ratio") or 0.0)
+    size_bytes = int(info.get("size_bytes") or 0)
+
+    if width < VOLC_IMAGE_MIN_DIMENSION or width > VOLC_IMAGE_MAX_DIMENSION:
+        errors.append(f"width={width}")
+    if height < VOLC_IMAGE_MIN_DIMENSION or height > VOLC_IMAGE_MAX_DIMENSION:
+        errors.append(f"height={height}")
+    if ratio < VOLC_IMAGE_MIN_RATIO or ratio > VOLC_IMAGE_MAX_RATIO:
+        errors.append(f"ratio={ratio:.4f}")
+    if size_bytes > VOLC_IMAGE_MAX_SIZE_BYTES:
+        errors.append(f"size={_format_size_mb(size_bytes)}")
+
+    if errors:
+        raise RuntimeError(
+            "Preprocessed image still does not meet Volc asset requirements: "
+            + ", ".join(errors)
+        )
+
+
+def _image_has_alpha(image: Image.Image) -> bool:
+    if image.mode in {"RGBA", "LA"}:
+        return True
+    return image.mode == "P" and "transparency" in image.info
+
+
+def _normalize_image_mode(image: Image.Image) -> Image.Image:
+    if _image_has_alpha(image):
+        rgba_image = image.convert("RGBA")
+        background = Image.new("RGBA", rgba_image.size, (255, 255, 255, 255))
+        composited = Image.alpha_composite(background, rgba_image)
+        return composited.convert("RGB")
+    if image.mode != "RGB":
+        return image.convert("RGB")
+    return image
+
+
+def _crop_image_to_ratio_bounds(image: Image.Image) -> tuple[Image.Image, str]:
+    width = int(image.width or 0)
+    height = int(image.height or 0)
+    if width <= 0 or height <= 0:
+        raise RuntimeError("Image has invalid dimensions")
+
+    ratio = float(width) / float(height)
+    if ratio > VOLC_IMAGE_MAX_RATIO:
+        target_width = max(1, int(round(height * VOLC_IMAGE_MAX_RATIO)))
+        left = max(0, (width - target_width) // 2)
+        right = min(width, left + target_width)
+        return image.crop((left, 0, right, height)), f"crop=center width {width} -> {right - left}"
+
+    if ratio < VOLC_IMAGE_MIN_RATIO:
+        target_height = max(1, int(round(width / VOLC_IMAGE_MIN_RATIO)))
+        top = max(0, (height - target_height) // 2)
+        bottom = min(height, top + target_height)
+        return image.crop((0, top, width, bottom)), f"crop=center height {height} -> {bottom - top}"
+
+    return image, "crop=keep"
+
+
+def _resize_image_to_dimension_bounds(image: Image.Image) -> tuple[Image.Image, str]:
+    width = int(image.width or 0)
+    height = int(image.height or 0)
+    min_dimension = min(width, height)
+    max_dimension = max(width, height)
+
+    if min_dimension <= 0 or max_dimension <= 0:
+        raise RuntimeError("Image has invalid dimensions")
+
+    scale = 1.0
+    if min_dimension < VOLC_IMAGE_MIN_DIMENSION:
+        scale = float(VOLC_IMAGE_MIN_DIMENSION) / float(min_dimension)
+    elif max_dimension > VOLC_IMAGE_MAX_DIMENSION:
+        scale = float(VOLC_IMAGE_MAX_DIMENSION) / float(max_dimension)
+
+    if abs(scale - 1.0) < 1e-6:
+        return image, "scale=keep"
+
+    new_width = max(VOLC_IMAGE_MIN_DIMENSION, min(VOLC_IMAGE_MAX_DIMENSION, int(round(width * scale))))
+    new_height = max(VOLC_IMAGE_MIN_DIMENSION, min(VOLC_IMAGE_MAX_DIMENSION, int(round(height * scale))))
+    resized = image.resize((new_width, new_height), Image.Resampling.LANCZOS)
+    return resized, f"scale={width}x{height} -> {new_width}x{new_height}"
+
+
+def _encode_image_bytes(image: Image.Image) -> tuple[bytes, str, str]:
+    if image.mode != "RGB":
+        image = image.convert("RGB")
+
+    best_result = None
+    working_image = image
+    qualities = (95, 90, 85, 80, 75, 70, 65, 60)
+
+    for _attempt in range(6):
+        for quality in qualities:
+            buffer = BytesIO()
+            working_image.save(
+                buffer,
+                format=VOLC_IMAGE_TARGET_FORMAT,
+                quality=quality,
+                optimize=True,
+                progressive=True,
+            )
+            payload = buffer.getvalue()
+            result = (payload, VOLC_IMAGE_TARGET_FORMAT, "image/jpeg")
+            if len(payload) <= VOLC_IMAGE_MAX_SIZE_BYTES:
+                return result
+            if best_result is None or len(payload) < len(best_result[0]):
+                best_result = result
+
+        width = int(working_image.width or 0)
+        height = int(working_image.height or 0)
+        if width <= VOLC_IMAGE_MIN_DIMENSION and height <= VOLC_IMAGE_MIN_DIMENSION:
+            break
+
+        next_width = max(VOLC_IMAGE_MIN_DIMENSION, int(round(width * 0.9)))
+        next_height = max(VOLC_IMAGE_MIN_DIMENSION, int(round(height * 0.9)))
+        if next_width == width and next_height == height:
+            break
+        working_image = working_image.resize((next_width, next_height), Image.Resampling.LANCZOS)
+
+    if best_result is None:
+        raise RuntimeError("Failed to encode image")
+    return best_result
+
+
+def preprocess_image_for_volc_asset(media_value, logger_prefix: str) -> dict:
+    """Normalize arbitrary IMAGE input into a Volc-compatible image asset."""
+    images = tensor_to_pil(media_value)
+    if not images:
+        raise ValueError("image input must contain at least one frame")
+
+    processed_image = _normalize_image_mode(images[0])
+    original_info = _build_image_info(processed_image, format_name=processed_image.mode)
+
+    _log_image_asset(logger_prefix, "Image asset preprocessing started")
+    _log_image_asset(
+        logger_prefix,
+        f"Original image info: {_describe_image_info(original_info)}",
+    )
+
+    processed_image, crop_action = _crop_image_to_ratio_bounds(processed_image)
+    processed_image, scale_action = _resize_image_to_dimension_bounds(processed_image)
+    _log_image_asset(
+        logger_prefix,
+        f"Normalization plan: {crop_action}, {scale_action}",
+    )
+
+    file_bytes, format_name, mime_type = _encode_image_bytes(processed_image)
+    final_info = _build_image_info(processed_image, len(file_bytes), format_name)
+    _validate_preprocessed_image_info(final_info)
+    _log_image_asset(logger_prefix, "Validation passed; image asset is ready for RH upload")
+    _log_image_asset(
+        logger_prefix,
+        f"Final image info: {_describe_image_info(final_info)}",
+    )
+
+    extension = {
+        "PNG": ".png",
+        "JPEG": ".jpg",
+        "WEBP": ".webp",
+    }.get(format_name.upper(), ".png")
+    return {
+        "file_bytes": file_bytes,
+        "filename": f"asset_{abs(hash(file_bytes)) % 10**10}{extension}",
+        "mime_type": mime_type,
+    }
 
 
 def _resample_audio_waveform(waveform: torch.Tensor, source_rate: int, target_rate: int) -> torch.Tensor:
@@ -1113,9 +1319,10 @@ def _upload_media_for_asset(config, media_type: str, media_value, logger_prefix:
     asset_type = _normalize_asset_media_type(media_type)
 
     if asset_type == "Image":
-        file_bytes = tensor_to_bytes(media_value)
-        filename = f"asset_{abs(hash(file_bytes)) % 10**10}.png"
-        mime_type = "image/png"
+        prepared_image = preprocess_image_for_volc_asset(media_value, logger_prefix)
+        file_bytes = prepared_image["file_bytes"]
+        filename = prepared_image["filename"]
+        mime_type = prepared_image["mime_type"]
         upload_timeout = config.get("upload_timeout", 60)
     elif asset_type == "Video":
         prepared_video = preprocess_video_for_volc_asset(media_value, logger_prefix)
