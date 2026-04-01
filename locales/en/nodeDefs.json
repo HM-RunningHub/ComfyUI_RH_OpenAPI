@@ -626,6 +626,15 @@
   "RH_RhartVideoSparkvideo20FastMultimodalVideo": {
     "display_name": "RH Sparkvideo 2.0 Fast Multimodal Video"
   },
+  "RH_RhVideoUpscaler": {
+    "display_name": "RH Rh Video Upscaler"
+  },
+  "RH_RhVideoFpsIncreaser": {
+    "display_name": "RH Rh Video Fps Increaser"
+  },
+  "RH_ViduReferenceToVideoQ3Mix": {
+    "display_name": "RH Vidu Reference to Video Q3 Mix"
+  },
   "RH_SparkVideoAssetCreate": {
     "display_name": "RH SparkVideo Asset/Create"
   },

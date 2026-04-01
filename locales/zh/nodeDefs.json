@@ -626,6 +626,15 @@
   "RH_RhartVideoSparkvideo20FastMultimodalVideo": {
     "display_name": "RH 超能视频2.0-Fast/多模态视频"
   },
+  "RH_RhVideoUpscaler": {
+    "display_name": "RH RH视频超分辨率"
+  },
+  "RH_RhVideoFpsIncreaser": {
+    "display_name": "RH RH视频帧率增强"
+  },
+  "RH_ViduReferenceToVideoQ3Mix": {
+    "display_name": "RH Vidu-参考生视频-q3-mix"
+  },
   "RH_SparkVideoAssetCreate": {
     "display_name": "RH 超能视频2.0素材/创建"
   },
