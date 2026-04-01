@@ -173,12 +173,12 @@ REAL_PERSON_ASSET_MODE_INPUT = "real_person_mode"
 REAL_PERSON_TARGETS_INPUT = "conversion_slots"
 
 
-def _build_real_person_mode_input_def() -> tuple:
+def _build_real_person_mode_input_def(default_enabled: bool = False) -> tuple:
     """Build the real person mode toggle input."""
     return (
         "BOOLEAN",
         {
-            "default": False,
+            "default": bool(default_enabled),
             "tooltip": (
                 "When enabled, selected local IMAGE/VIDEO inputs are first converted "
                 "to SparkVideo assets before the API request. If conversion fails for "
@@ -358,6 +358,7 @@ def create_node_class(model_def: Dict) -> type:
         for slot in model_def.get("real_person_asset_slots", [])
         if str(slot).strip()
     ]
+    real_person_mode_default = bool(model_def.get("real_person_mode_default", False))
 
     # ---- Separate media vs non-media params ----
     media_params = [p for p in model_params if p["type"] in ("IMAGE", "VIDEO", "AUDIO")]
@@ -465,7 +466,9 @@ def create_node_class(model_def: Dict) -> type:
     optional_inputs["skip_error"] = ("BOOLEAN", {"default": False})
     optional_inputs["seed"] = ("INT", {"default": 0, "min": 0, "max": 0xFFFFFFFFFFFFFFFF})
     if real_person_asset_slots:
-        optional_inputs[REAL_PERSON_ASSET_MODE_INPUT] = _build_real_person_mode_input_def()
+        optional_inputs[REAL_PERSON_ASSET_MODE_INPUT] = _build_real_person_mode_input_def(
+            default_enabled=real_person_mode_default
+        )
         optional_inputs[REAL_PERSON_TARGETS_INPUT] = _build_real_person_targets_input_def(
             real_person_asset_slots
         )
