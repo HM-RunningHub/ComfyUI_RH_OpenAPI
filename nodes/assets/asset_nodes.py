@@ -2,9 +2,17 @@
 SparkVideo asset management nodes.
 """
 
+import json
+import math
 import os
 import re
+import shutil
+import subprocess
+import tempfile
 import time
+from fractions import Fraction
+
+import torch
 
 from ...core.audio import audio_to_bytes
 from ...core.image import tensor_to_bytes
@@ -22,6 +30,322 @@ ASSET_READY_TIMEOUTS = {
     "video": 180,
     "audio": 60,
 }
+VOLC_VIDEO_MIN_DURATION_SECONDS = 2.0
+VOLC_VIDEO_MAX_DURATION_SECONDS = 15.0
+VOLC_VIDEO_MIN_RATIO = 0.4
+VOLC_VIDEO_MAX_RATIO = 2.5
+VOLC_VIDEO_MIN_DIMENSION = 300
+VOLC_VIDEO_MAX_DIMENSION = 6000
+VOLC_VIDEO_MIN_PIXELS = 640 * 640
+VOLC_VIDEO_MAX_PIXELS = 834 * 1112
+VOLC_VIDEO_MIN_FPS = 24.0
+VOLC_VIDEO_MAX_FPS = 60.0
+VOLC_VIDEO_MAX_SIZE_BYTES = 50 * 1024 * 1024
+VOLC_VIDEO_AUDIO_BITRATE_KBPS = 128
+VOLC_VIDEO_DEFAULT_FPS = 30.0
+VOLC_VIDEO_FFPROBE_TIMEOUT_SECONDS = 60
+VOLC_VIDEO_FFMPEG_TIMEOUT_SECONDS = 300
+VOLC_AUDIO_MIN_DURATION_SECONDS = 2.0
+VOLC_AUDIO_MAX_DURATION_SECONDS = 15.0
+VOLC_AUDIO_MAX_SIZE_BYTES = 15 * 1024 * 1024
+VOLC_AUDIO_MAX_SAMPLE_RATE = 48000
+
+
+def _log_video_asset(logger_prefix: str, message: str):
+    print(f"[{logger_prefix}] {message}")
+
+
+def _log_audio_asset(logger_prefix: str, message: str):
+    print(f"[{logger_prefix}] {message}")
+
+
+def _format_size_mb(size_bytes: int) -> str:
+    return f"{float(size_bytes or 0) / (1024 * 1024):.2f}MB"
+
+
+def _describe_video_info(info: dict) -> str:
+    width = int(info.get("width") or 0)
+    height = int(info.get("height") or 0)
+    duration = float(info.get("duration") or 0.0)
+    fps = float(info.get("fps") or 0.0)
+    size_bytes = int(info.get("size_bytes") or 0)
+    format_name = str(info.get("format_name") or "unknown")
+    audio = "yes" if info.get("has_audio") else "no"
+    return (
+        f"format={format_name}, "
+        f"resolution={width}x{height}, "
+        f"duration={duration:.2f}s, "
+        f"fps={fps:.2f}, "
+        f"size={_format_size_mb(size_bytes)}, "
+        f"audio={audio}"
+    )
+
+
+def _normalize_audio_waveform(audio_dict) -> tuple[torch.Tensor, int]:
+    if not isinstance(audio_dict, dict) or "waveform" not in audio_dict or "sample_rate" not in audio_dict:
+        raise ValueError("audio input must be a valid ComfyUI AUDIO value")
+
+    waveform = audio_dict["waveform"]
+    sample_rate = int(audio_dict["sample_rate"])
+    if sample_rate <= 0:
+        raise ValueError(f"Invalid audio sample_rate: {sample_rate}")
+
+    if not isinstance(waveform, torch.Tensor):
+        raise ValueError("audio waveform must be a torch.Tensor")
+
+    waveform = waveform.detach().cpu().float()
+    if waveform.dim() == 3:
+        waveform = waveform.squeeze(0)
+    if waveform.dim() == 1:
+        waveform = waveform.unsqueeze(0)
+    if waveform.dim() != 2:
+        raise ValueError(f"Unsupported audio waveform shape: {tuple(waveform.shape)}")
+    if waveform.shape[-1] <= 0:
+        raise ValueError("audio waveform has no samples")
+
+    waveform = torch.nan_to_num(waveform, nan=0.0, posinf=1.0, neginf=-1.0)
+    waveform = waveform.clamp(-1.0, 1.0).contiguous()
+    return waveform, sample_rate
+
+
+def _build_audio_info(waveform: torch.Tensor, sample_rate: int, file_size_bytes: int = 0) -> dict:
+    channels = int(waveform.shape[0]) if waveform.dim() >= 2 else 1
+    samples = int(waveform.shape[-1]) if waveform.dim() >= 1 else 0
+    duration = float(samples) / float(sample_rate) if sample_rate > 0 and samples > 0 else 0.0
+    return {
+        "channels": channels,
+        "samples": samples,
+        "sample_rate": int(sample_rate),
+        "duration": duration,
+        "size_bytes": int(file_size_bytes or 0),
+    }
+
+
+def _describe_audio_info(info: dict) -> str:
+    return (
+        f"channels={int(info.get('channels') or 0)}, "
+        f"sample_rate={int(info.get('sample_rate') or 0)}Hz, "
+        f"samples={int(info.get('samples') or 0)}, "
+        f"duration={float(info.get('duration') or 0.0):.2f}s, "
+        f"size={_format_size_mb(int(info.get('size_bytes') or 0))}"
+    )
+
+
+def _resample_audio_waveform(waveform: torch.Tensor, source_rate: int, target_rate: int) -> torch.Tensor:
+    if source_rate == target_rate:
+        return waveform
+
+    if target_rate <= 0:
+        raise ValueError(f"Invalid target audio sample_rate: {target_rate}")
+
+    try:
+        import torchaudio.functional as torchaudio_functional
+
+        return torchaudio_functional.resample(waveform, source_rate, target_rate)
+    except Exception:
+        target_samples = max(
+            1,
+            int(round(float(waveform.shape[-1]) * float(target_rate) / float(source_rate))),
+        )
+        resampled = torch.nn.functional.interpolate(
+            waveform.unsqueeze(0),
+            size=target_samples,
+            mode="linear",
+            align_corners=False,
+        )
+        return resampled.squeeze(0)
+
+
+def _summarize_audio_plan(
+    original_info: dict,
+    target_channels: int,
+    target_sample_rate: int,
+    target_duration: float,
+) -> str:
+    changes = []
+
+    original_channels = int(original_info["channels"])
+    if original_channels != target_channels:
+        changes.append(f"channels=mix {original_channels} -> {target_channels}")
+    else:
+        changes.append(f"channels=keep {target_channels}")
+
+    original_sample_rate = int(original_info["sample_rate"])
+    if original_sample_rate != target_sample_rate:
+        changes.append(f"sample_rate=resample {original_sample_rate} -> {target_sample_rate}")
+    else:
+        changes.append(f"sample_rate=keep {target_sample_rate}")
+
+    original_duration = float(original_info["duration"])
+    if original_duration < VOLC_AUDIO_MIN_DURATION_SECONDS:
+        changes.append(f"duration=pad {original_duration:.2f}s -> {target_duration:.2f}s")
+    elif original_duration > VOLC_AUDIO_MAX_DURATION_SECONDS:
+        changes.append(f"duration=trim {original_duration:.2f}s -> {target_duration:.2f}s")
+    else:
+        changes.append(f"duration=keep {target_duration:.2f}s")
+
+    changes.append("format=wav")
+    return ", ".join(changes)
+
+
+def _validate_preprocessed_audio_info(info: dict):
+    errors = []
+    duration = float(info.get("duration") or 0.0)
+    size_bytes = int(info.get("size_bytes") or 0)
+    sample_rate = int(info.get("sample_rate") or 0)
+    channels = int(info.get("channels") or 0)
+
+    if duration < VOLC_AUDIO_MIN_DURATION_SECONDS - 0.05 or duration > VOLC_AUDIO_MAX_DURATION_SECONDS + 0.05:
+        errors.append(f"duration={duration:.3f}s")
+    if size_bytes > VOLC_AUDIO_MAX_SIZE_BYTES:
+        errors.append(f"size={_format_size_mb(size_bytes)}")
+    if sample_rate <= 0:
+        errors.append(f"sample_rate={sample_rate}")
+    if channels <= 0:
+        errors.append(f"channels={channels}")
+
+    if errors:
+        raise RuntimeError(
+            "Preprocessed audio still does not meet Volc asset requirements: "
+            + ", ".join(errors)
+        )
+
+
+def preprocess_audio_for_volc_asset(media_value, logger_prefix: str) -> dict:
+    """Normalize arbitrary AUDIO input into a Volc-compatible WAV asset."""
+    try:
+        waveform, sample_rate = _normalize_audio_waveform(media_value)
+        original_info = _build_audio_info(waveform, sample_rate)
+
+        target_channels = int(waveform.shape[0])
+        if target_channels > 2:
+            target_channels = 1
+
+        target_sample_rate = min(sample_rate, VOLC_AUDIO_MAX_SAMPLE_RATE)
+        target_duration = max(
+            VOLC_AUDIO_MIN_DURATION_SECONDS,
+            min(VOLC_AUDIO_MAX_DURATION_SECONDS, original_info["duration"]),
+        )
+
+        _log_audio_asset(logger_prefix, "Audio asset preprocessing started")
+        _log_audio_asset(
+            logger_prefix,
+            f"Original audio info: {_describe_audio_info(original_info)}",
+        )
+        _log_audio_asset(
+            logger_prefix,
+            "Normalization plan: "
+            + _summarize_audio_plan(original_info, target_channels, target_sample_rate, target_duration),
+        )
+
+        processed_waveform = waveform
+        if processed_waveform.shape[0] > target_channels:
+            processed_waveform = processed_waveform.mean(dim=0, keepdim=True)
+            _log_audio_asset(
+                logger_prefix,
+                f"Downmixed audio to {target_channels} channel(s)",
+            )
+
+        if target_sample_rate != sample_rate:
+            processed_waveform = _resample_audio_waveform(processed_waveform, sample_rate, target_sample_rate)
+            _log_audio_asset(
+                logger_prefix,
+                f"Resampled audio from {sample_rate}Hz to {target_sample_rate}Hz",
+            )
+
+        current_samples = int(processed_waveform.shape[-1])
+        current_duration = float(current_samples) / float(target_sample_rate)
+
+        if current_duration > VOLC_AUDIO_MAX_DURATION_SECONDS:
+            max_samples = int(round(VOLC_AUDIO_MAX_DURATION_SECONDS * target_sample_rate))
+            processed_waveform = processed_waveform[:, :max_samples]
+            _log_audio_asset(
+                logger_prefix,
+                f"Trimmed audio from {current_duration:.2f}s to {VOLC_AUDIO_MAX_DURATION_SECONDS:.2f}s",
+            )
+        elif current_duration < VOLC_AUDIO_MIN_DURATION_SECONDS:
+            target_samples = int(round(VOLC_AUDIO_MIN_DURATION_SECONDS * target_sample_rate))
+            padding = target_samples - current_samples
+            processed_waveform = torch.nn.functional.pad(processed_waveform, (0, padding))
+            _log_audio_asset(
+                logger_prefix,
+                f"Padded audio from {current_duration:.2f}s to {VOLC_AUDIO_MIN_DURATION_SECONDS:.2f}s",
+            )
+
+        processed_waveform = processed_waveform.clamp(-1.0, 1.0).contiguous()
+        processed_audio = {
+            "waveform": processed_waveform.unsqueeze(0),
+            "sample_rate": int(target_sample_rate),
+        }
+
+        file_bytes = audio_to_bytes(processed_audio, format="wav")
+        output_info = _build_audio_info(processed_waveform, target_sample_rate, len(file_bytes))
+        _log_audio_asset(
+            logger_prefix,
+            f"Pass 1 output info: {_describe_audio_info(output_info)}",
+        )
+
+        if len(file_bytes) > VOLC_AUDIO_MAX_SIZE_BYTES and processed_waveform.shape[0] > 1:
+            _log_audio_asset(
+                logger_prefix,
+                "Pass 1 output exceeds 15MB; retrying with mono mixdown",
+            )
+            mono_waveform = processed_waveform.mean(dim=0, keepdim=True).contiguous()
+            mono_audio = {
+                "waveform": mono_waveform.unsqueeze(0),
+                "sample_rate": int(target_sample_rate),
+            }
+            file_bytes = audio_to_bytes(mono_audio, format="wav")
+            processed_waveform = mono_waveform
+            output_info = _build_audio_info(processed_waveform, target_sample_rate, len(file_bytes))
+            _log_audio_asset(
+                logger_prefix,
+                f"Pass 2 output info: {_describe_audio_info(output_info)}",
+            )
+
+        if len(file_bytes) > VOLC_AUDIO_MAX_SIZE_BYTES:
+            current_waveform = processed_waveform
+            current_rate = int(target_sample_rate)
+            for fallback_rate in (32000, 24000, 16000):
+                if current_rate <= fallback_rate:
+                    continue
+                _log_audio_asset(
+                    logger_prefix,
+                    f"Output still exceeds 15MB; retrying with {fallback_rate}Hz resample",
+                )
+                current_waveform = _resample_audio_waveform(processed_waveform, target_sample_rate, fallback_rate)
+                current_rate = fallback_rate
+                fallback_audio = {
+                    "waveform": current_waveform.unsqueeze(0),
+                    "sample_rate": current_rate,
+                }
+                file_bytes = audio_to_bytes(fallback_audio, format="wav")
+                output_info = _build_audio_info(current_waveform, current_rate, len(file_bytes))
+                _log_audio_asset(
+                    logger_prefix,
+                    f"Fallback output info: {_describe_audio_info(output_info)}",
+                )
+                processed_waveform = current_waveform
+                target_sample_rate = current_rate
+                if len(file_bytes) <= VOLC_AUDIO_MAX_SIZE_BYTES:
+                    break
+
+        final_info = _build_audio_info(processed_waveform, target_sample_rate, len(file_bytes))
+        _validate_preprocessed_audio_info(final_info)
+        _log_audio_asset(logger_prefix, "Validation passed; audio asset is ready for RH upload")
+        _log_audio_asset(
+            logger_prefix,
+            f"Final audio info: {_describe_audio_info(final_info)}",
+        )
+
+        return {
+            "file_bytes": file_bytes,
+            "filename": f"asset_{abs(hash(file_bytes)) % 10**10}.wav",
+            "mime_type": "audio/wav",
+        }
+    except Exception as e:
+        _log_audio_asset(logger_prefix, f"ERROR: audio asset preprocessing failed: {e}")
+        raise
 
 
 def _video_to_bytes(value) -> bytes:
@@ -52,6 +376,643 @@ def _video_to_bytes(value) -> bytes:
             return f.read()
 
     raise ValueError(f"Could not extract video bytes from {type(value).__name__}")
+
+
+def _extract_video_path(value) -> str:
+    if value is None:
+        return ""
+
+    if hasattr(value, "get_stream_source"):
+        source = value.get_stream_source()
+        if isinstance(source, str) and os.path.isfile(source):
+            return source
+
+    for attr_name in ("path", "file_path", "filename"):
+        path_value = getattr(value, attr_name, None)
+        if isinstance(path_value, str) and os.path.isfile(path_value):
+            return path_value
+
+    if isinstance(value, dict):
+        for key in ("file_path", "path", "filename", "file", "video_path"):
+            path_value = value.get(key)
+            if isinstance(path_value, str) and os.path.isfile(path_value):
+                return path_value
+
+    if isinstance(value, (list, tuple)) and value:
+        first_item = value[0]
+        if isinstance(first_item, str) and os.path.isfile(first_item):
+            return first_item
+        if isinstance(first_item, dict):
+            for key in ("file_path", "path", "filename", "file", "video_path"):
+                path_value = first_item.get(key)
+                if isinstance(path_value, str) and os.path.isfile(path_value):
+                    return path_value
+
+    if isinstance(value, str) and os.path.isfile(value):
+        return value
+
+    return ""
+
+
+def _materialize_video_input(value) -> tuple[str, bool]:
+    video_path = _extract_video_path(value)
+    if video_path:
+        return video_path, False
+
+    video_bytes = _video_to_bytes(value)
+    temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=".bin")
+    try:
+        temp_file.write(video_bytes)
+    finally:
+        temp_file.close()
+    return temp_file.name, True
+
+
+def _require_video_tool(tool_name: str):
+    if not shutil.which(tool_name):
+        raise RuntimeError(
+            f"{tool_name} is required to preprocess VIDEO assets. "
+            f"Please install {tool_name} in the ComfyUI runtime environment."
+        )
+
+
+def _parse_ffprobe_rate(raw_value) -> float:
+    text = str(raw_value or "").strip()
+    if not text or text in {"0/0", "N/A"}:
+        return 0.0
+    try:
+        if "/" in text:
+            return float(Fraction(text))
+        return float(text)
+    except (TypeError, ValueError, ZeroDivisionError):
+        return 0.0
+
+
+def _get_video_rotation_degrees(stream: dict) -> int:
+    tags = stream.get("tags") or {}
+    raw_rotation = tags.get("rotate")
+    if raw_rotation not in (None, ""):
+        try:
+            return int(float(raw_rotation))
+        except (TypeError, ValueError):
+            pass
+
+    for side_data in stream.get("side_data_list") or []:
+        raw_rotation = side_data.get("rotation")
+        if raw_rotation not in (None, ""):
+            try:
+                return int(float(raw_rotation))
+            except (TypeError, ValueError):
+                continue
+
+    return 0
+
+
+def _probe_video_info(path: str) -> dict:
+    _require_video_tool("ffprobe")
+
+    probe_cmd = [
+        "ffprobe",
+        "-v",
+        "error",
+        "-print_format",
+        "json",
+        "-show_format",
+        "-show_streams",
+        path,
+    ]
+    try:
+        result = subprocess.run(
+            probe_cmd,
+            capture_output=True,
+            text=True,
+            timeout=VOLC_VIDEO_FFPROBE_TIMEOUT_SECONDS,
+            check=True,
+        )
+    except subprocess.TimeoutExpired as e:
+        raise RuntimeError(f"ffprobe timed out while reading video metadata: {path}") from e
+    except subprocess.CalledProcessError as e:
+        stderr = (e.stderr or "").strip()
+        raise RuntimeError(f"ffprobe failed to read video metadata: {stderr or path}") from e
+
+    try:
+        payload = json.loads(result.stdout or "{}")
+    except ValueError as e:
+        raise RuntimeError("ffprobe returned invalid JSON while reading video metadata") from e
+
+    streams = payload.get("streams") or []
+    format_info = payload.get("format") or {}
+    video_stream = next((stream for stream in streams if stream.get("codec_type") == "video"), None)
+    if not video_stream:
+        raise RuntimeError("No video stream found in the provided VIDEO input")
+
+    width = int(video_stream.get("width") or 0)
+    height = int(video_stream.get("height") or 0)
+    if width <= 0 or height <= 0:
+        raise RuntimeError("Could not determine video dimensions from ffprobe")
+
+    rotation = _get_video_rotation_degrees(video_stream)
+    if abs(rotation) % 180 == 90:
+        width, height = height, width
+
+    duration = 0.0
+    for raw_duration in (
+        format_info.get("duration"),
+        video_stream.get("duration"),
+        video_stream.get("tags", {}).get("DURATION"),
+    ):
+        try:
+            if raw_duration not in (None, ""):
+                duration = float(raw_duration)
+                break
+        except (TypeError, ValueError):
+            continue
+
+    size_bytes = 0
+    for raw_size in (format_info.get("size"),):
+        try:
+            if raw_size not in (None, ""):
+                size_bytes = int(raw_size)
+                break
+        except (TypeError, ValueError):
+            continue
+    if size_bytes <= 0 and os.path.isfile(path):
+        size_bytes = os.path.getsize(path)
+
+    fps = _parse_ffprobe_rate(
+        video_stream.get("avg_frame_rate") or video_stream.get("r_frame_rate")
+    )
+
+    return {
+        "format_name": str(format_info.get("format_name") or ""),
+        "width": width,
+        "height": height,
+        "duration": duration,
+        "size_bytes": size_bytes,
+        "fps": fps,
+        "has_audio": any(stream.get("codec_type") == "audio" for stream in streams),
+    }
+
+
+def _clamp_number(value: float, minimum: float, maximum: float) -> float:
+    return max(minimum, min(maximum, value))
+
+
+def _clamp_even(value: float, minimum: int, maximum: int) -> int:
+    minimum = int(minimum)
+    maximum = int(maximum)
+    if minimum % 2 != 0:
+        minimum += 1
+    if maximum % 2 != 0:
+        maximum -= 1
+
+    value = int(round(value))
+    value = max(minimum, min(maximum, value))
+    if value % 2 != 0:
+        if value < maximum:
+            value += 1
+        else:
+            value -= 1
+    return max(minimum, min(maximum, value))
+
+
+def _find_best_scaled_dimensions(ratio: float, target_area: float) -> tuple[int, int]:
+    min_even = VOLC_VIDEO_MIN_DIMENSION + (VOLC_VIDEO_MIN_DIMENSION % 2)
+    max_even = VOLC_VIDEO_MAX_DIMENSION - (VOLC_VIDEO_MAX_DIMENSION % 2)
+    ideal_width = math.sqrt(float(target_area) * float(ratio))
+    best_candidate = None
+    best_score = None
+
+    for width in range(min_even, max_even + 1, 2):
+        height = int(round(width / float(ratio)))
+        if height % 2 != 0:
+            height += 1
+        if height < min_even or height > max_even:
+            continue
+
+        actual_ratio = float(width) / float(height)
+        if actual_ratio < VOLC_VIDEO_MIN_RATIO or actual_ratio > VOLC_VIDEO_MAX_RATIO:
+            continue
+
+        area = width * height
+        if area < VOLC_VIDEO_MIN_PIXELS or area > VOLC_VIDEO_MAX_PIXELS:
+            continue
+
+        score = (
+            abs(area - target_area),
+            abs(actual_ratio - ratio),
+            abs(width - ideal_width),
+        )
+        if best_score is None or score < best_score:
+            best_score = score
+            best_candidate = (width, height)
+
+    if best_candidate is None:
+        raise RuntimeError(
+            f"Could not derive a valid target resolution for ratio={ratio:.4f}"
+        )
+    return best_candidate
+
+
+def _compute_volc_video_geometry(width: int, height: int) -> dict:
+    crop_width = int(width)
+    crop_height = int(height)
+    ratio = float(crop_width) / float(crop_height)
+
+    if ratio > VOLC_VIDEO_MAX_RATIO:
+        crop_width = _clamp_even(crop_height * VOLC_VIDEO_MAX_RATIO, 2, crop_width)
+    elif ratio < VOLC_VIDEO_MIN_RATIO:
+        crop_height = _clamp_even(crop_width / VOLC_VIDEO_MIN_RATIO, 2, crop_height)
+
+    crop_x = max(0, (width - crop_width) // 2)
+    crop_y = max(0, (height - crop_height) // 2)
+
+    crop_pixels = max(1, crop_width * crop_height)
+    target_pixels = _clamp_number(
+        float(crop_pixels),
+        float(VOLC_VIDEO_MIN_PIXELS),
+        float(VOLC_VIDEO_MAX_PIXELS),
+    )
+    scale_width, scale_height = _find_best_scaled_dimensions(
+        float(crop_width) / float(crop_height),
+        target_pixels,
+    )
+
+    return {
+        "crop_width": crop_width,
+        "crop_height": crop_height,
+        "crop_x": crop_x,
+        "crop_y": crop_y,
+        "scale_width": scale_width,
+        "scale_height": scale_height,
+    }
+
+
+def _format_fps_value(value: float) -> str:
+    rounded = round(float(value), 3)
+    if abs(rounded - int(round(rounded))) < 0.001:
+        return str(int(round(rounded)))
+    return f"{rounded:.3f}"
+
+
+def _build_volc_video_filters(input_info: dict, geometry: dict, target_fps: float) -> str:
+    filters = []
+
+    if (
+        geometry["crop_width"] != input_info["width"]
+        or geometry["crop_height"] != input_info["height"]
+        or geometry["crop_x"] != 0
+        or geometry["crop_y"] != 0
+    ):
+        filters.append(
+            "crop="
+            f"{geometry['crop_width']}:{geometry['crop_height']}:"
+            f"{geometry['crop_x']}:{geometry['crop_y']}"
+        )
+
+    filters.append(
+        f"scale={geometry['scale_width']}:{geometry['scale_height']}:flags=lanczos"
+    )
+    filters.append(f"fps={_format_fps_value(target_fps)}")
+
+    if input_info["duration"] < VOLC_VIDEO_MIN_DURATION_SECONDS:
+        pad_duration = VOLC_VIDEO_MIN_DURATION_SECONDS - input_info["duration"]
+        filters.append(f"tpad=stop_mode=clone:stop_duration={pad_duration:.3f}")
+
+    filters.append("format=yuv420p")
+    return ",".join(filters)
+
+
+def _build_volc_video_bitrate_limit_kbps(output_duration: float, has_audio: bool) -> int:
+    duration = max(float(output_duration), VOLC_VIDEO_MIN_DURATION_SECONDS)
+    audio_budget_kbps = VOLC_VIDEO_AUDIO_BITRATE_KBPS if has_audio else 0
+    total_budget_kbps = int((VOLC_VIDEO_MAX_SIZE_BYTES * 8 * 0.95) / 1024 / duration)
+    return max(500, total_budget_kbps - audio_budget_kbps - 64)
+
+
+def _summarize_volc_video_plan(
+    input_info: dict,
+    geometry: dict,
+    target_duration: float,
+    target_fps: float,
+) -> str:
+    changes = []
+    original_ratio = (
+        float(input_info["width"]) / float(input_info["height"])
+        if input_info.get("width") and input_info.get("height")
+        else 0.0
+    )
+
+    if (
+        geometry["crop_width"] != input_info["width"]
+        or geometry["crop_height"] != input_info["height"]
+        or geometry["crop_x"] != 0
+        or geometry["crop_y"] != 0
+    ):
+        changes.append(
+            "crop="
+            f"{geometry['crop_width']}x{geometry['crop_height']}@"
+            f"({geometry['crop_x']},{geometry['crop_y']})"
+        )
+    else:
+        changes.append("crop=keep")
+
+    changes.append(
+        f"scale={geometry['scale_width']}x{geometry['scale_height']}"
+    )
+
+    source_duration = float(input_info.get("duration") or 0.0)
+    if source_duration < VOLC_VIDEO_MIN_DURATION_SECONDS:
+        changes.append(f"duration=pad {source_duration:.2f}s -> {target_duration:.2f}s")
+    elif source_duration > VOLC_VIDEO_MAX_DURATION_SECONDS:
+        changes.append(f"duration=trim {source_duration:.2f}s -> {target_duration:.2f}s")
+    else:
+        changes.append(f"duration=keep {target_duration:.2f}s")
+
+    source_fps = float(input_info.get("fps") or 0.0)
+    if source_fps <= 0:
+        changes.append(f"fps=set default -> {target_fps:.2f}")
+    elif abs(source_fps - target_fps) > 0.1:
+        changes.append(f"fps=normalize {source_fps:.2f} -> {target_fps:.2f}")
+    else:
+        changes.append(f"fps=keep {target_fps:.2f}")
+
+    changes.append(f"source_ratio={original_ratio:.4f}")
+    changes.append(
+        f"target_pixels={geometry['scale_width'] * geometry['scale_height']}"
+    )
+    return ", ".join(changes)
+
+
+def _run_volc_video_transcode(
+    input_path: str,
+    output_path: str,
+    input_info: dict,
+    geometry: dict,
+    target_fps: float,
+    target_duration: float,
+    logger_prefix: str,
+    stage_label: str,
+    video_bitrate_kbps: int | None = None,
+):
+    _require_video_tool("ffmpeg")
+
+    filters = _build_volc_video_filters(input_info, geometry, target_fps)
+    encode_mode = (
+        "quality mode (CRF 23)"
+        if video_bitrate_kbps is None
+        else f"size-constrained mode ({int(video_bitrate_kbps)}k)"
+    )
+    _log_video_asset(
+        logger_prefix,
+        (
+            f"{stage_label}: starting ffmpeg transcode, "
+            f"target={geometry['scale_width']}x{geometry['scale_height']}, "
+            f"duration={target_duration:.2f}s, fps={target_fps:.2f}, "
+            f"audio={'keep' if input_info['has_audio'] else 'drop'}, "
+            f"mode={encode_mode}"
+        ),
+    )
+
+    ffmpeg_cmd = [
+        "ffmpeg",
+        "-y",
+        "-i",
+        input_path,
+        "-map",
+        "0:v:0",
+        "-vf",
+        filters,
+        "-c:v",
+        "libx264",
+        "-preset",
+        "medium",
+        "-pix_fmt",
+        "yuv420p",
+        "-movflags",
+        "+faststart",
+        "-r",
+        _format_fps_value(target_fps),
+    ]
+
+    if video_bitrate_kbps is None:
+        ffmpeg_cmd += ["-crf", "23"]
+    else:
+        ffmpeg_cmd += [
+            "-b:v",
+            f"{int(video_bitrate_kbps)}k",
+            "-maxrate",
+            f"{int(video_bitrate_kbps)}k",
+            "-bufsize",
+            f"{int(video_bitrate_kbps) * 2}k",
+        ]
+
+    if input_info["has_audio"]:
+        ffmpeg_cmd += ["-map", "0:a:0?"]
+        if input_info["duration"] < VOLC_VIDEO_MIN_DURATION_SECONDS:
+            pad_duration = VOLC_VIDEO_MIN_DURATION_SECONDS - input_info["duration"]
+            ffmpeg_cmd += ["-af", f"apad=pad_dur={pad_duration:.3f}"]
+        ffmpeg_cmd += [
+            "-c:a",
+            "aac",
+            "-b:a",
+            f"{VOLC_VIDEO_AUDIO_BITRATE_KBPS}k",
+            "-ar",
+            "48000",
+        ]
+    else:
+        ffmpeg_cmd += ["-an"]
+
+    ffmpeg_cmd += ["-t", f"{target_duration:.3f}", output_path]
+
+    try:
+        result = subprocess.run(
+            ffmpeg_cmd,
+            capture_output=True,
+            text=True,
+            timeout=VOLC_VIDEO_FFMPEG_TIMEOUT_SECONDS,
+        )
+    except subprocess.TimeoutExpired as e:
+        raise RuntimeError("ffmpeg timed out while preprocessing the video asset") from e
+
+    if result.returncode != 0:
+        stderr = (result.stderr or "").strip()
+        raise RuntimeError(
+            f"ffmpeg failed while preprocessing the video asset: {stderr[:500]}"
+        )
+    _log_video_asset(logger_prefix, f"{stage_label}: ffmpeg transcode completed")
+
+
+def _validate_preprocessed_video_info(info: dict):
+    errors = []
+    format_name = str(info.get("format_name") or "").lower()
+    duration = float(info.get("duration") or 0.0)
+    fps = float(info.get("fps") or 0.0)
+    width = int(info.get("width") or 0)
+    height = int(info.get("height") or 0)
+    size_bytes = int(info.get("size_bytes") or 0)
+    area = width * height
+    ratio = float(width) / float(height) if width > 0 and height > 0 else 0.0
+
+    if not any(token in format_name for token in ("mp4", "mov")):
+        errors.append(f"format={format_name or 'unknown'}")
+    if duration < VOLC_VIDEO_MIN_DURATION_SECONDS - 0.05 or duration > VOLC_VIDEO_MAX_DURATION_SECONDS + 0.05:
+        errors.append(f"duration={duration:.3f}s")
+    if fps < VOLC_VIDEO_MIN_FPS - 0.1 or fps > VOLC_VIDEO_MAX_FPS + 0.1:
+        errors.append(f"fps={fps:.3f}")
+    if width < VOLC_VIDEO_MIN_DIMENSION or width > VOLC_VIDEO_MAX_DIMENSION:
+        errors.append(f"width={width}")
+    if height < VOLC_VIDEO_MIN_DIMENSION or height > VOLC_VIDEO_MAX_DIMENSION:
+        errors.append(f"height={height}")
+    if ratio < VOLC_VIDEO_MIN_RATIO - 0.01 or ratio > VOLC_VIDEO_MAX_RATIO + 0.01:
+        errors.append(f"ratio={ratio:.4f}")
+    if area < VOLC_VIDEO_MIN_PIXELS or area > VOLC_VIDEO_MAX_PIXELS:
+        errors.append(f"pixels={area}")
+    if size_bytes > VOLC_VIDEO_MAX_SIZE_BYTES:
+        errors.append(f"size={size_bytes / (1024 * 1024):.2f}MB")
+
+    if errors:
+        raise RuntimeError(
+            "Preprocessed video still does not meet Volc asset requirements: "
+            + ", ".join(errors)
+        )
+
+
+def preprocess_video_for_volc_asset(media_value, logger_prefix: str) -> dict:
+    """Normalize arbitrary VIDEO input into a Volc-compatible MP4 asset."""
+    input_path = ""
+    input_is_temp = False
+    temp_paths = []
+
+    try:
+        input_path, input_is_temp = _materialize_video_input(media_value)
+        if input_is_temp:
+            temp_paths.append(input_path)
+            _log_video_asset(
+                logger_prefix,
+                "No stable file path was available; materialized VIDEO input to a temporary file",
+            )
+        else:
+            _log_video_asset(
+                logger_prefix,
+                f"Using source video file: {input_path}",
+            )
+
+        input_info = _probe_video_info(input_path)
+        if input_info["duration"] <= 0:
+            raise RuntimeError("Could not determine a valid duration for the VIDEO input")
+
+        target_duration = _clamp_number(
+            input_info["duration"],
+            VOLC_VIDEO_MIN_DURATION_SECONDS,
+            VOLC_VIDEO_MAX_DURATION_SECONDS,
+        )
+        target_fps = _clamp_number(
+            input_info["fps"] or VOLC_VIDEO_DEFAULT_FPS,
+            VOLC_VIDEO_MIN_FPS,
+            VOLC_VIDEO_MAX_FPS,
+        )
+        geometry = _compute_volc_video_geometry(input_info["width"], input_info["height"])
+
+        _log_video_asset(
+            logger_prefix,
+            "Video asset preprocessing started",
+        )
+        _log_video_asset(
+            logger_prefix,
+            f"Original video info: {_describe_video_info(input_info)}",
+        )
+        _log_video_asset(
+            logger_prefix,
+            "Normalization plan: "
+            + _summarize_volc_video_plan(input_info, geometry, target_duration, target_fps),
+        )
+
+        output_file = tempfile.NamedTemporaryFile(delete=False, suffix=".mp4")
+        output_file.close()
+        output_path = output_file.name
+        temp_paths.append(output_path)
+
+        _run_volc_video_transcode(
+            input_path,
+            output_path,
+            input_info,
+            geometry,
+            target_fps,
+            target_duration,
+            logger_prefix,
+            "Pass 1",
+        )
+
+        output_info = _probe_video_info(output_path)
+        _log_video_asset(
+            logger_prefix,
+            f"Pass 1 output info: {_describe_video_info(output_info)}",
+        )
+        if output_info["size_bytes"] > VOLC_VIDEO_MAX_SIZE_BYTES:
+            constrained_output = tempfile.NamedTemporaryFile(delete=False, suffix=".mp4")
+            constrained_output.close()
+            constrained_output_path = constrained_output.name
+            temp_paths.append(constrained_output_path)
+
+            bitrate_limit_kbps = _build_volc_video_bitrate_limit_kbps(
+                target_duration,
+                input_info["has_audio"],
+            )
+            _log_video_asset(
+                logger_prefix,
+                (
+                    "Pass 1 output exceeds the 50MB limit; "
+                    f"starting Pass 2 with bitrate cap {bitrate_limit_kbps}k"
+                ),
+            )
+            _run_volc_video_transcode(
+                input_path,
+                constrained_output_path,
+                input_info,
+                geometry,
+                target_fps,
+                target_duration,
+                logger_prefix,
+                "Pass 2",
+                video_bitrate_kbps=bitrate_limit_kbps,
+            )
+            output_path = constrained_output_path
+            output_info = _probe_video_info(output_path)
+            _log_video_asset(
+                logger_prefix,
+                f"Pass 2 output info: {_describe_video_info(output_info)}",
+            )
+
+        _validate_preprocessed_video_info(output_info)
+
+        _log_video_asset(
+            logger_prefix,
+            "Validation passed; video asset is ready for RH upload",
+        )
+        _log_video_asset(
+            logger_prefix,
+            f"Final video info: {_describe_video_info(output_info)}",
+        )
+
+        with open(output_path, "rb") as f:
+            file_bytes = f.read()
+
+        return {
+            "file_bytes": file_bytes,
+            "filename": f"asset_{abs(hash(file_bytes)) % 10**10}.mp4",
+            "mime_type": "video/mp4",
+        }
+    except Exception as e:
+        _log_video_asset(logger_prefix, f"ERROR: video asset preprocessing failed: {e}")
+        raise
+    finally:
+        for temp_path in temp_paths:
+            try:
+                if temp_path and os.path.exists(temp_path):
+                    os.remove(temp_path)
+            except OSError:
+                pass
 
 
 def _normalize_asset_media_type(media_type: str) -> str:
@@ -157,16 +1118,16 @@ def _upload_media_for_asset(config, media_type: str, media_value, logger_prefix:
         mime_type = "image/png"
         upload_timeout = config.get("upload_timeout", 60)
     elif asset_type == "Video":
-        file_bytes = _video_to_bytes(media_value)
-        filename = f"asset_{abs(hash(file_bytes)) % 10**10}.mp4"
-        mime_type = "video/mp4"
+        prepared_video = preprocess_video_for_volc_asset(media_value, logger_prefix)
+        file_bytes = prepared_video["file_bytes"]
+        filename = prepared_video["filename"]
+        mime_type = prepared_video["mime_type"]
         upload_timeout = max(config.get("upload_timeout", 60), 120)
     else:
-        if not isinstance(media_value, dict) or "waveform" not in media_value:
-            raise ValueError("audio input must be a valid ComfyUI AUDIO value")
-        file_bytes = audio_to_bytes(media_value)
-        filename = f"asset_{abs(hash(file_bytes)) % 10**10}.wav"
-        mime_type = "audio/wav"
+        prepared_audio = preprocess_audio_for_volc_asset(media_value, logger_prefix)
+        file_bytes = prepared_audio["file_bytes"]
+        filename = prepared_audio["filename"]
+        mime_type = prepared_audio["mime_type"]
         upload_timeout = config.get("upload_timeout", 60)
 
     source_url = upload_file(

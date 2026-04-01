@@ -19,6 +19,12 @@ STATUS_QUEUED = "QUEUED"
 STATUS_CREATE = "CREATE"
 
 MAX_CONSECUTIVE_POLL_FAILURES = 5
+_REAL_PERSON_MODE_NODE_PREFIXES = {
+    "RH_OpenAPI_RhartVideoSparkvideo20ImageToVideo",
+    "RH_OpenAPI_RhartVideoSparkvideo20FastImageToVideo",
+    "RH_OpenAPI_RhartVideoSparkvideo20MultimodalVideo",
+    "RH_OpenAPI_RhartVideoSparkvideo20FastMultimodalVideo",
+}
 
 
 def _log(prefix: str, msg: str):
@@ -49,6 +55,39 @@ def _sanitize_payload(payload: dict, max_val_len: int = 200) -> dict:
         else:
             safe[k] = v
     return safe
+
+
+def _supports_real_person_mode(logger_prefix: str) -> bool:
+    """Return True when the node supports SparkVideo real_person_mode."""
+    return str(logger_prefix or "").strip() in _REAL_PERSON_MODE_NODE_PREFIXES
+
+
+def _is_real_person_rejection(err_code: Any, err_msg: str) -> bool:
+    """Detect upstream real-person policy rejections for SparkVideo."""
+    code = str(err_code or "").strip()
+    msg = str(err_msg or "")
+    msg_lower = msg.lower()
+    return (
+        code == "1505"
+        or "photorealistic real people are prohibited" in msg_lower
+        or "不支持真人" in msg
+    )
+
+
+def _enhance_api_error_message(err_msg: str, err_code: Any, logger_prefix: str) -> str:
+    """Rewrite selected upstream errors into clearer user guidance."""
+    message = str(err_msg or "").strip()
+    if not message:
+        return message
+    if _supports_real_person_mode(logger_prefix) and _is_real_person_rejection(err_code, message):
+        return (
+            "Photorealistic real people are prohibited. Please modify the prompt or "
+            "reference image, or enable real_person_mode to support real-person content. "
+            "Please avoid celebrity, public figure, or protected IP content. | "
+            "不支持真人，请修改提示词或参考图，或开启 real_person_mode 来支持真人。"
+            "但请注意避免涉及名人、公众人物或受保护的 IP 角色。"
+        )
+    return message
 
 
 MAX_SUBMIT_RETRIES = 3
@@ -134,6 +173,7 @@ def submit(
         if response.status_code != 200:
             err_code = str(data.get("errorCode", ""))
             err_msg = data.get("errorMessage", response.text[:200]) or f"HTTP {response.status_code}"
+            err_msg = _enhance_api_error_message(err_msg, err_code, logger_prefix)
             last_error = RuntimeError(f"Submit failed: {err_msg} [errorCode: {err_code}]")
             if _is_retryable_error(err_msg, response.status_code):
                 _log(logger_prefix, f"Submit error (attempt {attempt + 1}): {err_msg[:100]}")
@@ -143,6 +183,7 @@ def submit(
         err_code = data.get("errorCode") or data.get("error_code") or ""
         err_msg = data.get("errorMessage") or data.get("error_message") or ""
         if err_code or err_msg:
+            err_msg = _enhance_api_error_message(err_msg, err_code, logger_prefix)
             last_error = RuntimeError(f"Submit failed: {err_msg or f'Error code {err_code}'} [errorCode: {err_code}]")
             if _is_retryable_error(err_msg):
                 _log(logger_prefix, f"Submit API error (attempt {attempt + 1}): {err_msg[:100]}")
@@ -250,6 +291,7 @@ def poll(
         err_code = data.get("errorCode") or data.get("error_code") or ""
         err_msg = data.get("errorMessage") or data.get("error_message") or ""
         if err_code or err_msg:
+            err_msg = _enhance_api_error_message(err_msg, err_code, logger_prefix)
             _log(logger_prefix, f"  Poll error response: errorCode={err_code}, errorMessage={err_msg[:200]}")
             raise RuntimeError(
                 f"Task failed: {err_msg or f'Error code {err_code}'} [errorCode: {err_code}, taskId: {task_id}]"
@@ -293,6 +335,7 @@ def poll(
             return result_items, data
 
         if status == STATUS_FAILED:
+            err_msg = _enhance_api_error_message(err_msg, err_code, logger_prefix)
             _log(logger_prefix, f"  Task FAILED: {err_msg or 'no message'} [errorCode: {err_code}]")
             _log(logger_prefix, f"  Full response: {json.dumps(data, ensure_ascii=False)[:500]}")
             raise RuntimeError(
