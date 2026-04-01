@@ -88,7 +88,6 @@ RunningHub 平台提供了 212 个标准模型 API（涵盖主流最新所有的
 ### SparkVideo 素材资产（3 个节点）
 
 - 用户节点：`RH SparkVideo 素材/创建`、`RH SparkVideo 素材/查询`、`RH SparkVideo 素材ID/合并`
-- `RH SparkVideo 素材/创建` 使用固定素材组 `group-20260327004931-dvjbj`，并固定素材名称为 `RHas01`
 - SparkVideo 适配：`RH 超能视频2.0 / 2.0-Fast` 的图生视频、多模态视频节点提供统一的 `asset_ids` 输入，并新增 `real_person_mode`、`conversion_slots`
 - `asset_ids` 支持单个素材 ID、`asset://<asset_ID>`、逗号/换行分隔，以及 JSON 数组字符串
 - `real_person_mode=false` 时保持原始本地上传行为；`real_person_mode=true` 时会把选中的本地图片/视频槽位先转成素材，再写入 SparkVideo payload
