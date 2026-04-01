@@ -24,7 +24,7 @@ from ..core.image import tensor_to_bytes, download_images_to_tensor
 from ..core.video import download_video
 from ..core.audio import download_audio, audio_to_bytes
 from ..core.rest import post_json
-from .assets.asset_nodes import create_fixed_asset_from_media
+from .assets.asset_nodes import create_fixed_asset_from_media, preprocess_video_for_volc_asset
 
 
 def _load_registry() -> List[Dict]:
@@ -534,7 +534,7 @@ def create_node_class(model_def: Dict) -> type:
                     except Exception as e:
                         print(
                             f"[{self._log_prefix}] WARNING: asset conversion failed for "
-                            f"{mi['comfy_name']}, fallback to original upload: {e}"
+                            f"{mi['comfy_name']}, fallback to standard upload path: {e}"
                         )
 
                 mt = mi["media_type"]
@@ -552,33 +552,54 @@ def create_node_class(model_def: Dict) -> type:
 
                 elif mt == "VIDEO":
                     vbytes = None
+                    upload_filename = None
+                    upload_mime_type = "video/mp4"
+                    should_normalize_video_upload = (
+                        mi["field_key"] == "videoUrls" and _asset_ids_mode == "multimodal_video"
+                    )
 
-                    if hasattr(value, "get_stream_source"):
-                        source = value.get_stream_source()
-                        if isinstance(source, str):
-                            with open(source, "rb") as f:
+                    if should_normalize_video_upload:
+                        try:
+                            prepared_video = preprocess_video_for_volc_asset(
+                                value,
+                                f"{self._log_prefix}_{mi['comfy_name']}_DirectUpload",
+                            )
+                            vbytes = prepared_video.get("file_bytes")
+                            upload_filename = prepared_video.get("filename")
+                            upload_mime_type = prepared_video.get("mime_type") or "video/mp4"
+                        except Exception as e:
+                            print(
+                                f"[{self._log_prefix}] WARNING: video preprocessing failed for "
+                                f"{mi['comfy_name']}, fallback to original upload: {e}"
+                            )
+
+                    if not vbytes:
+                        if hasattr(value, "get_stream_source"):
+                            source = value.get_stream_source()
+                            if isinstance(source, str):
+                                with open(source, "rb") as f:
+                                    vbytes = f.read()
+                            elif hasattr(source, "read"):
+                                vbytes = source.read()
+                        elif hasattr(value, "path"):
+                            with open(value.path, "rb") as f:
                                 vbytes = f.read()
-                        elif hasattr(source, "read"):
-                            vbytes = source.read()
-                    elif hasattr(value, "path"):
-                        with open(value.path, "rb") as f:
-                            vbytes = f.read()
-                    elif hasattr(value, "file_path"):
-                        with open(value.file_path, "rb") as f:
-                            vbytes = f.read()
-                    elif isinstance(value, dict):
-                        p = value.get("file_path") or value.get("path")
-                        if p and os.path.isfile(p):
-                            with open(p, "rb") as f:
+                        elif hasattr(value, "file_path"):
+                            with open(value.file_path, "rb") as f:
                                 vbytes = f.read()
-                    elif isinstance(value, str) and os.path.isfile(value):
-                        with open(value, "rb") as f:
-                            vbytes = f.read()
+                        elif isinstance(value, dict):
+                            p = value.get("file_path") or value.get("path")
+                            if p and os.path.isfile(p):
+                                with open(p, "rb") as f:
+                                    vbytes = f.read()
+                        elif isinstance(value, str) and os.path.isfile(value):
+                            with open(value, "rb") as f:
+                                vbytes = f.read()
 
                     if vbytes:
-                        fn = f"upload_{hash(vbytes) % 10**10}.mp4"
+                        fn = upload_filename or f"upload_{hash(vbytes) % 10**10}.mp4"
                         url = upload_file(
-                            vbytes, fn, "video/mp4",
+                            vbytes, fn, upload_mime_type,
                             config["api_key"], config["base_url"],
                             timeout=config.get("upload_timeout", 120),
                             logger_prefix=self._log_prefix,
