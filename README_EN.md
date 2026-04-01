@@ -115,6 +115,18 @@ pip install -r requirements.txt
 
 Restart ComfyUI after installation.
 
+### SparkVideo VIDEO Asset Preprocessing
+
+- `RH SparkVideo Asset/Create` requires `ffmpeg` and `ffprobe` when it preprocesses `VIDEO` inputs
+- On the public `main` branch, Windows builds automatically detect these tools and, if missing, download a portable FFmpeg bundle into a local cache without requiring a manual `PATH` update
+- Default cache locations:
+  - Windows: `%LOCALAPPDATA%\ComfyUI_RH_OpenAPI\ffmpeg`
+  - macOS: `~/Library/Caches/ComfyUI_RH_OpenAPI/ffmpeg`
+  - Linux: `~/.cache/ComfyUI_RH_OpenAPI/ffmpeg`
+- Auto-download tries GitHub Releases first, then gyan.dev; if your network is restricted, set `RH_FFMPEG_DOWNLOAD_URL` to point to a custom mirror
+- To override the detected binaries manually, set `RH_FFMPEG_PATH`, `RH_FFPROBE_PATH`, or `RH_FFMPEG_CACHE_DIR` in your environment or `config/.env`
+- To disable Windows auto-download, set `RH_DISABLE_AUTO_FFMPEG_DOWNLOAD=1`
+
 ## ⚙️ Configuration
 
 You need a RunningHub API Key. Register and get one at the [RunningHub API Console](https://www.runninghub.cn/enterprise-api/sharedApi).
@@ -140,6 +152,8 @@ cp config/.env.example config/.env
 **Priority**: Node Settings > Environment Variables > `.env` File
 
 > **Tip**: If `RH_API_BASE_URL` and `RH_API_KEY` are already configured via environment variables or `config/.env`, the `api_config` input on every node becomes optional — you can run nodes directly without connecting the **RH OpenAPI Settings** node.
+
+> **Video tool override**: If you already have your own FFmpeg installation, set `RH_FFMPEG_PATH` / `RH_FFPROBE_PATH` in `config/.env` or your system environment. Each value can point either to the executable itself or to a directory that contains it.
 
 ## 🚀 Usage
 
@@ -168,6 +182,7 @@ ComfyUI_RH_OpenAPI/
 │   ├── task.py              # Task submit & poll logic
 │   ├── image.py             # Image utilities (Tensor ↔ PIL)
 │   ├── video.py             # Video download utilities
+│   ├── ffmpeg_tools.py      # ffmpeg / ffprobe discovery and caching
 │   └── audio.py             # Audio download/convert utilities
 ├── nodes/                   # Node implementations
 │   ├── settings_node.py     # RH OpenAPI Settings node

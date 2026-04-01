@@ -7,7 +7,6 @@ import json
 import math
 import os
 import re
-import shutil
 import subprocess
 import tempfile
 import time
@@ -19,6 +18,7 @@ from PIL import Image
 
 from ...core.api_key import get_config
 from ...core.audio import audio_to_bytes
+from ...core.ffmpeg_tools import resolve_video_tool_path
 from ...core.image import tensor_to_pil
 from ...core.rest import dumps_json, post_json
 from ...core.upload import upload_file
@@ -637,11 +637,7 @@ def _materialize_video_input(value) -> tuple[str, bool]:
 
 
 def _require_video_tool(tool_name: str):
-    if not shutil.which(tool_name):
-        raise RuntimeError(
-            f"{tool_name} is required to preprocess VIDEO assets. "
-            f"Please install {tool_name} in the ComfyUI runtime environment."
-        )
+    return resolve_video_tool_path(tool_name)
 
 
 def _parse_ffprobe_rate(raw_value) -> float:
@@ -677,10 +673,10 @@ def _get_video_rotation_degrees(stream: dict) -> int:
 
 
 def _probe_video_info(path: str) -> dict:
-    _require_video_tool("ffprobe")
+    ffprobe_path = _require_video_tool("ffprobe")
 
     probe_cmd = [
-        "ffprobe",
+        ffprobe_path,
         "-v",
         "error",
         "-print_format",
@@ -963,7 +959,7 @@ def _run_volc_video_transcode(
     stage_label: str,
     video_bitrate_kbps: int | None = None,
 ):
-    _require_video_tool("ffmpeg")
+    ffmpeg_path = _require_video_tool("ffmpeg")
 
     filters = _build_volc_video_filters(input_info, geometry, target_fps)
     encode_mode = (
@@ -983,7 +979,7 @@ def _run_volc_video_transcode(
     )
 
     ffmpeg_cmd = [
-        "ffmpeg",
+        ffmpeg_path,
         "-y",
         "-i",
         input_path,

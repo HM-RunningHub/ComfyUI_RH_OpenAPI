@@ -115,6 +115,18 @@ pip install -r requirements.txt
 
 安装完成后重启 ComfyUI。
 
+### SparkVideo 视频素材预处理
+
+- `RH SparkVideo 素材/创建` 在处理 `VIDEO` 输入时需要 `ffmpeg` 和 `ffprobe`
+- 公开版 `main` 分支会在 Windows 环境下自动检测这两个工具；如果系统里不存在，会自动下载一套 portable FFmpeg 到本地缓存，无需手动加入 `PATH`
+- 默认缓存目录：
+  - Windows：`%LOCALAPPDATA%\ComfyUI_RH_OpenAPI\ffmpeg`
+  - macOS：`~/Library/Caches/ComfyUI_RH_OpenAPI/ffmpeg`
+  - Linux：`~/.cache/ComfyUI_RH_OpenAPI/ffmpeg`
+- 自动下载依次尝试 GitHub Releases 和 gyan.dev；如果网络受限，可设置 `RH_FFMPEG_DOWNLOAD_URL` 指向自定义镜像或内网地址
+- 如需手动覆盖，可在环境变量或 `config/.env` 中设置 `RH_FFMPEG_PATH`、`RH_FFPROBE_PATH` 或 `RH_FFMPEG_CACHE_DIR`
+- 如需禁用 Windows 自动下载，可设置 `RH_DISABLE_AUTO_FFMPEG_DOWNLOAD=1`
+
 ## ⚙️ 配置
 
 使用本插件前，你需要一个 RunningHub API Key。前往 [RunningHub API 控制台](https://www.runninghub.cn/enterprise-api/sharedApi) 注册账号并获取 API Key。
@@ -140,6 +152,8 @@ cp config/.env.example config/.env
 **配置优先级**：节点配置 > 环境变量 > `.env` 文件
 
 > **提示**：如果已通过环境变量或 `config/.env` 配置了 `RH_API_BASE_URL` 和 `RH_API_KEY`，则每个节点的 `api_config` 输入为可选项，无需连接 **RH OpenAPI Settings** 节点即可直接运行。
+
+> **视频工具覆盖**：如果你已经有自己的 FFmpeg 安装，也可以在 `config/.env` 或系统环境变量中设置 `RH_FFMPEG_PATH` / `RH_FFPROBE_PATH`，值既可以是可执行文件路径，也可以是包含这两个文件的目录。
 
 ## 🚀 使用方法
 
@@ -168,6 +182,7 @@ ComfyUI_RH_OpenAPI/
 │   ├── task.py              # 任务提交与轮询
 │   ├── image.py             # 图像工具（Tensor ↔ PIL）
 │   ├── video.py             # 视频下载工具
+│   ├── ffmpeg_tools.py      # ffmpeg / ffprobe 自动发现与缓存
 │   └── audio.py             # 音频下载/转换工具
 ├── nodes/                   # 节点实现
 │   ├── settings_node.py     # RH OpenAPI Settings 配置节点
