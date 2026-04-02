@@ -26,7 +26,8 @@ app.registerExtension({
     this._locale = detectLocale();
     try {
       const resp = await fetch(
-        "/extensions/ComfyUI_RH_OpenAPI/js/panel_i18n.json"
+        "/extensions/ComfyUI_RH_OpenAPI/js/panel_i18n.json",
+        { cache: "no-store" }
       );
       if (resp.ok) this._i18n = await resp.json();
     } catch (e) {
@@ -123,12 +124,12 @@ app.registerExtension({
         "RHArt Image": "🖼️ RH 全能图像", "RHArt Video": "🎬 RH 全能视频",
         "RHArt Video G": "🎥 RH 全能视频G", "RHArt Text": "📝 RH 多模态文本",
         "Kling": "🎞️ 可灵 Kling", "Vidu": "📹 生数 Vidu",
-        "Wan": "🌀 通义万相 Wan", "MiniMax": "🐚 MiniMax 海螺",
+        "Wan": "🌀 通义万相 Wan", "Qwe": "🎨 Qwe", "MiniMax": "🐚 MiniMax 海螺",
         "Seedream": "🌱 Seedream 图像", "Seedance": "💃 Seedance 视频",
         "Youchuan": "🚢 有船 Midjourney", "Audio": "🎵 音频生成",
         "Hunyuan3D": "🧊 混元 3D", "HiTem3D": "🔷 HiTem 3D",
         "TopazLabs": "💎 Topaz Labs",
-        "Alibaba": "🎨 阿里 通义万相 Qwen",
+        "Alibaba": "🎨 Alibaba",
         "PixVerse": "🎬 PixVerse 可灵替代",
         "SkyReels": "🎥 昆仑 SkyReels",
         "Higgsfield": "🎭 Higgsfield",
@@ -139,12 +140,12 @@ app.registerExtension({
         "RHArt Image": "🖼️ RHArt Image", "RHArt Video": "🎬 RHArt Video",
         "RHArt Video G": "🎥 RHArt Video G", "RHArt Text": "📝 RHArt Text",
         "Kling": "🎞️ Kling", "Vidu": "📹 Vidu",
-        "Wan": "🌀 Wan", "MiniMax": "🐚 MiniMax",
+        "Wan": "🌀 Wan", "Qwe": "🎨 Qwe", "MiniMax": "🐚 MiniMax",
         "Seedream": "🌱 Seedream", "Seedance": "💃 Seedance",
         "Youchuan": "🚢 Midjourney", "Audio": "🎵 Audio",
         "Hunyuan3D": "🧊 Hunyuan 3D", "HiTem3D": "🔷 HiTem 3D",
         "TopazLabs": "💎 Topaz Labs",
-        "Alibaba": "🎨 Alibaba Qwen",
+        "Alibaba": "🎨 Alibaba",
         "PixVerse": "🎬 PixVerse",
         "SkyReels": "🎥 SkyReels",
         "Higgsfield": "🎭 Higgsfield",
@@ -153,8 +154,11 @@ app.registerExtension({
       },
     };
 
-    const categoryNameMap = (i18n.categories && i18n.categories[locale])
-      || fallbackCategories[locale] || {};
+    const categoryNameMap = {
+      ...(fallbackCategories.en || {}),
+      ...(fallbackCategories[locale] || {}),
+      ...((i18n.categories && i18n.categories[locale]) || {}),
+    };
     const categoryAliases = {
       "音频": "Audio",
       "音频生成": "Audio",
@@ -164,13 +168,19 @@ app.registerExtension({
       "Seedance2.0素材": "Seedance2.0 Assets",
     };
     const normalizeCategoryName = (name) => categoryAliases[name] || name;
-    const nodeNameMap = (i18n.nodes && i18n.nodes[locale]) || {};
-    const t = (key) =>
-      ((i18n.ui && i18n.ui[locale]) || fallbackUI[locale] || fallbackUI.en)[key] || key;
+    const nodeNameMap = {
+      ...((i18n.nodes && i18n.nodes[locale]) || {}),
+    };
+    const uiMap = {
+      ...(fallbackUI.en || {}),
+      ...(fallbackUI[locale] || {}),
+      ...((i18n.ui && i18n.ui[locale]) || {}),
+    };
+    const t = (key) => uiMap[key] || key;
 
     const categoryOrder = [
       "RHArt Image", "RHArt Video", "RHArt Video G", "RHArt Text",
-      "Kling", "Vidu", "Wan", "MiniMax",
+      "Kling", "Vidu", "Wan", "Qwe", "MiniMax",
       "Seedream", "Seedance", "Youchuan", "Audio",
       "Hunyuan3D", "HiTem3D", "TopazLabs", "Alibaba",
       "PixVerse", "SkyReels", "Higgsfield", "Seedance2.0 Assets",
@@ -178,7 +188,10 @@ app.registerExtension({
 
     let allowedNodes = null;
     try {
-      const resp = await fetch("/extensions/ComfyUI_RH_OpenAPI/js/node_list.json");
+      const resp = await fetch(
+        "/extensions/ComfyUI_RH_OpenAPI/js/node_list.json",
+        { cache: "no-store" }
+      );
       if (resp.ok) allowedNodes = new Set(await resp.json());
     } catch (e) {
       console.warn("[RH OpenAPI] Failed to load node_list.json");

@@ -16339,7 +16339,7 @@
     "name_en": "qwen-image-2.0-pro/image-edit",
     "endpoint": "alibaba/qwen-image-2.0-pro/image-edit",
     "output_type": "image",
-    "category": "RunningHub/Alibaba",
+    "category": "RunningHub/Qwe",
     "params": [
       {
         "fieldKey": "imageUrls",
@@ -16508,7 +16508,7 @@
     "name_en": "qwen-image-2.0/image-edit",
     "endpoint": "alibaba/qwen-image-2.0/image-edit",
     "output_type": "image",
-    "category": "RunningHub/Alibaba",
+    "category": "RunningHub/Qwe",
     "params": [
       {
         "fieldKey": "imageUrls",
@@ -16835,7 +16835,7 @@
     "name_en": "qwen-image-2.0-pro/text-to-image",
     "endpoint": "alibaba/qwen-image-2.0-pro/text-to-image",
     "output_type": "image",
-    "category": "RunningHub/Alibaba",
+    "category": "RunningHub/Qwe",
     "params": [
       {
         "fieldKey": "prompt",
@@ -17002,7 +17002,7 @@
     "name_en": "qwen-image-2.0/text-to-image",
     "endpoint": "alibaba/qwen-image-2.0/text-to-image",
     "output_type": "image",
-    "category": "RunningHub/Alibaba",
+    "category": "RunningHub/Qwe",
     "params": [
       {
         "fieldKey": "prompt",
@@ -22151,7 +22151,7 @@
     "name_en": "alibaba/wan-2.7/text-to-video",
     "endpoint": "alibaba/wan-2.7/text-to-video",
     "output_type": "video",
-    "category": "RunningHub/Alibaba",
+    "category": "RunningHub/Wan",
     "params": [
       {
         "fieldKey": "prompt",
@@ -22268,7 +22268,7 @@
     "name_en": "alibaba/wan-2.7/image-to-video/First-last-frames-to-video",
     "endpoint": "alibaba/wan-2.7/image/image-to-video",
     "output_type": "video",
-    "category": "RunningHub/Alibaba",
+    "category": "RunningHub/Wan",
     "params": [
       {
         "fieldKey": "prompt",
@@ -22367,7 +22367,7 @@
     "name_en": "alibaba/wan-2.7/image-to-video/Video-Continuation",
     "endpoint": "alibaba/wan-2.7/video/image-to-video",
     "output_type": "video",
-    "category": "RunningHub/Alibaba",
+    "category": "RunningHub/Wan",
     "params": [
       {
         "fieldKey": "prompt",
@@ -22457,7 +22457,7 @@
     "name_en": "wan-2.7-reference-to-video",
     "endpoint": "alibaba/wan-2.7/reference-to-video",
     "output_type": "video",
-    "category": "RunningHub/Alibaba",
+    "category": "RunningHub/Wan",
     "params": [
       {
         "fieldKey": "prompt",
@@ -22586,7 +22586,7 @@
     "name_en": "Wan 2.7 Image Edit",
     "endpoint": "alibaba/wan-2.7/image-edit",
     "output_type": "image",
-    "category": "RunningHub/Alibaba",
+    "category": "RunningHub/Wan",
     "params": [
       {
         "fieldKey": "imageUrls",
@@ -22636,7 +22636,7 @@
     "name_en": "Wan 2.7 Image Edit Pro",
     "endpoint": "alibaba/wan-2.7/image-edit-pro",
     "output_type": "image",
-    "category": "RunningHub/Alibaba",
+    "category": "RunningHub/Wan",
     "params": [
       {
         "fieldKey": "imageUrls",
@@ -22686,7 +22686,7 @@
     "name_en": "Wan 2.7 Text-to-Image",
     "endpoint": "alibaba/wan-2.7/text-to-image",
     "output_type": "image",
-    "category": "RunningHub/Alibaba",
+    "category": "RunningHub/Wan",
     "params": [
       {
         "fieldKey": "prompt",
@@ -22734,7 +22734,7 @@
     "name_en": "Wan 2.7 Text-to-Image Pro",
     "endpoint": "alibaba/wan-2.7/text-to-image-pro",
     "output_type": "image",
-    "category": "RunningHub/Alibaba",
+    "category": "RunningHub/Wan",
     "params": [
       {
         "fieldKey": "prompt",

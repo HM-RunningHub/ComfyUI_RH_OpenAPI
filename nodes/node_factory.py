@@ -85,6 +85,13 @@ def _is_array_field(field_key: str) -> bool:
     return field_key.endswith("Urls") or field_key == "videos"
 
 
+_MEDIA_UI_ORDER = {
+    "IMAGE": 0,
+    "VIDEO": 1,
+    "AUDIO": 2,
+}
+
+
 # ---------------------------------------------------------------------------
 # INPUT_TYPES builder for non-media params
 # ---------------------------------------------------------------------------
@@ -404,6 +411,8 @@ def create_node_class(model_def: Dict) -> type:
     req_media = {}
     opt_media = {}
     media_info_list = []
+    media_input_entries = []
+    existing_input_names = set(required_inputs) | set(req_non_media) | set(opt_non_media)
 
     for p in media_params:
         field_key = p["fieldKey"]
@@ -424,33 +433,54 @@ def create_node_class(model_def: Dict) -> type:
             # Expand: image1 (required) + image2..imageN (optional)
             for i in range(1, max_num + 1):
                 comfy_name = f"{base_name}{i}"
-                if i == 1 and effective_required:
-                    req_media[comfy_name] = comfy_type
-                else:
-                    opt_media[comfy_name] = comfy_type
-                media_info_list.append({
+                existing_input_names.add(comfy_name)
+                media_input_entries.append({
                     "comfy_name": comfy_name,
                     "field_key": field_key,
                     "media_type": media_type,
                     "is_array_in_payload": True,
+                    "comfy_type": comfy_type,
+                    "ui_required": i == 1 and effective_required,
                 })
         else:
             # Single input
             comfy_name = base_name
             # Avoid name collisions with non-media params
-            all_existing = {**required_inputs, **req_non_media, **opt_non_media, **req_media, **opt_media}
-            if comfy_name in all_existing:
+            if comfy_name in existing_input_names:
                 comfy_name = f"{base_name}_input"
-            if effective_required:
-                req_media[comfy_name] = comfy_type
-            else:
-                opt_media[comfy_name] = comfy_type
-            media_info_list.append({
+            existing_input_names.add(comfy_name)
+            media_input_entries.append({
                 "comfy_name": comfy_name,
                 "field_key": field_key,
                 "media_type": media_type,
                 "is_array_in_payload": is_array,
+                "comfy_type": comfy_type,
+                "ui_required": effective_required,
             })
+
+    media_info_list = [
+        {
+            "comfy_name": entry["comfy_name"],
+            "field_key": entry["field_key"],
+            "media_type": entry["media_type"],
+            "is_array_in_payload": entry["is_array_in_payload"],
+        }
+        for entry in media_input_entries
+    ]
+
+    # Normalize UI order across all nodes while preserving the original
+    # relative order within the same media type.
+    for _, entry in sorted(
+        enumerate(media_input_entries),
+        key=lambda item: (
+            _MEDIA_UI_ORDER.get(item[1]["media_type"], len(_MEDIA_UI_ORDER)),
+            item[0],
+        ),
+    ):
+        if entry["ui_required"]:
+            req_media[entry["comfy_name"]] = entry["comfy_type"]
+        else:
+            opt_media[entry["comfy_name"]] = entry["comfy_type"]
 
     # ---- Assemble final dicts with controlled order ----
     # Required order: api_config -> media connectors -> widget params

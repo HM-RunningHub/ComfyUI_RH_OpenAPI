@@ -1,7 +1,7 @@
 {
   "nodeCategories": {
     "RunningHub": "RunningHub",
-    "Alibaba": "Alibaba Qwen",
+    "Alibaba": "Alibaba",
     "Audio": "Audio",
     "HiTem3D": "HiTem 3D",
     "Higgsfield": "Higgsfield",
@@ -19,6 +19,7 @@
     "Seedance2.0 Assets": "Seedance2.0 Assets",
     "TopazLabs": "Topaz Labs",
     "Vidu": "Vidu",
+    "Qwe": "Qwe",
     "Wan": "Wan",
     "Youchuan": "Midjourney"
   }
