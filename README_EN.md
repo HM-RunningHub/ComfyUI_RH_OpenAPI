@@ -8,11 +8,11 @@
 
 **ComfyUI_RH_OpenAPI** is a **1:1 ComfyUI implementation** of the [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api), with additional Seedance2.0 asset management nodes.
 
-RunningHub provides 212 standard model APIs covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. This project converts every API endpoint into a corresponding ComfyUI node, and adds 3 Seedance2.0 asset helper nodes plus 1 settings node, for a total of 216 ComfyUI nodes. You can access all standard model capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the new `real_person_mode` toggle — no local GPU required, zero cold-start latency.
+RunningHub provides 220 standard model APIs covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. This project converts every API endpoint into a corresponding ComfyUI node, and adds 3 Seedance2.0 asset helper nodes plus 1 settings node, for a total of 224 ComfyUI nodes. You can access all standard model capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the new `real_person_mode` toggle — no local GPU required, zero cold-start latency.
 
 ## 📌 Features
 
-- **Node Count** — 216 ComfyUI nodes in total: 212 standard model nodes, 3 Seedance2.0 asset nodes, and 1 settings node
+- **Node Count** — 224 ComfyUI nodes in total: 220 standard model nodes, 3 Seedance2.0 asset nodes, and 1 settings node
 - **Plug & Play** — No model downloads, no GPU needed — just an API Key
 - **Dynamic Registration** — Nodes are auto-generated from a JSON registry; adding new models requires only a registry update
 - **Media Support** — Automatic upload/download/conversion for images, videos, and audio, seamlessly integrated with ComfyUI native types
@@ -21,11 +21,11 @@ RunningHub provides 212 standard model APIs covering image generation, video gen
 - **Progress Tracking** — Real-time polling progress display after task submission
 - **Robust Error Handling** — Submit/upload/poll all have retry with exponential backoff, auto-distinguishing retryable vs non-retryable errors
 - **Skip Error** — Every node supports a `skip_error` toggle; when enabled, errors produce type-appropriate placeholders instead of stopping the workflow
-- **Example Workflows** — Every node comes with an importable example workflow
+- **Example Workflows** — Includes importable example workflows covering major model capabilities
 
 ## 🎨 Supported Models
 
-### Image Generation (47 Nodes)
+### Image Generation (51 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
@@ -36,12 +36,13 @@ RunningHub provides 212 standard model APIs covering image generation, video gen
 | Grok 3 / Grok 4 Image (xAI) | 全能图片 X-3 / X-4 | Text-to-Image, Image-to-Image | 4 |
 | Grok Image Low-Price Channel (xAI) | 全能图片 X | Text-to-Image, Image-to-Image | 2 |
 | Qwen Image 2.0 / 2.0 Pro (Alibaba) | 千问 | Text-to-Image, Image Editing | 4 |
+| Wan 2.7 (Alibaba) | — | Text-to-Image, Image Edit | 4 |
 | TopazLabs | — | Image Upscale: Standard V2 / Low Res V2 / CGI / High Fidelity V2 / Text Refine | 5 |
 | Seedream v4 / v4.5 / v5 Lite (ByteDance) | — | Text-to-Image, Image-to-Image | 6 |
 | FLUX Dev (Black Forest Labs) | — | Text-to-Image, Text-to-Image LoRA | 2 |
 | Midjourney | 悠船 | Text-to-Image v6/v6.1/niji6/niji7/v7 | 5 |
 
-### Video Generation (129 Nodes)
+### Video Generation (133 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
@@ -50,7 +51,7 @@ RunningHub provides 212 standard model APIs covering image generation, video gen
 | Grok Imagine (xAI) | 全能视频 G / G Official | Text/Image-to-Video, Edit Video | 5 |
 | Kling (Kuaishou) | — | v2.5/v2.6/v3.0/o1/o3, Text/Image/Start-End/Reference/Motion Control/Edit/Elements/Lip Sync | 30 |
 | Vidu (Shengshu) | — | q2/q3, Text/Image/Start-End/Reference-to-Video, Pro Fast | 19 |
-| Wan 2.6 (Alibaba) | — | Text/Image/Reference-to-Video, Flash | 5 |
+| Wan 2.6 / 2.7 (Alibaba) | — | Text/Image/Reference-to-Video, Flash, Video Continuation | 9 |
 | MiniMax Hailuo | — | 02/2.3/2.3-fast, Text/Image/Start-End-to-Video | 13 |
 | Seedance v1.5 / 2.0 (ByteDance) | — | Text/Image/Multimodal-to-Video, Fast, Reference-to-Video | 11 |
 | Runway Gen-4 Turbo / Aleph | 全能视频R | Image-to-Video, Video Editing | 3 |
@@ -171,7 +172,7 @@ The project includes 215 example workflow JSON files in the `examples/` director
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # Entry point, registers all nodes
-├── models_registry.json     # Model registry (212 model definitions)
+├── models_registry.json     # Model registry (220 model definitions)
 ├── config/
 │   └── .env.example         # Configuration template
 ├── core/                    # Core infrastructure

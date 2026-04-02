@@ -56,6 +56,30 @@
   "RH_AlibabaWan26ImageToVideo": {
     "display_name": "RH Alibaba Wan 2.6 Image to Video"
   },
+  "RH_AlibabaWan27TextToVideo": {
+    "display_name": "RH Alibaba Wan 2.7 Text to Video"
+  },
+  "RH_AlibabaWan27ImageImageToVideo": {
+    "display_name": "RH Alibaba Wan 2.7 Image to Video First Last Frames to Video"
+  },
+  "RH_AlibabaWan27VideoImageToVideo": {
+    "display_name": "RH Alibaba Wan 2.7 Image to Video Video Continuation"
+  },
+  "RH_AlibabaWan27ReferenceToVideo": {
+    "display_name": "RH Wan 2.7 Reference to Video"
+  },
+  "RH_AlibabaWan27ImageEdit": {
+    "display_name": "RH Wan 2.7 Image Edit"
+  },
+  "RH_AlibabaWan27ImageEditPro": {
+    "display_name": "RH Wan 2.7 Image Edit PRO"
+  },
+  "RH_AlibabaWan27TextToImage": {
+    "display_name": "RH Wan 2.7 Text to Image"
+  },
+  "RH_AlibabaWan27TextToImagePro": {
+    "display_name": "RH Wan 2.7 Text to Image PRO"
+  },
   "RH_KlingV25TurboProTextToVideo": {
     "display_name": "RH Kling V2.5 Turbo PRO Text to Video"
   },

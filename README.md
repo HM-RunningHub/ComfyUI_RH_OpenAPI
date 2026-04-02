@@ -8,11 +8,11 @@
 
 **ComfyUI_RH_OpenAPI** 是 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 的 **1:1 ComfyUI 实现**，并额外补充了 Seedance2.0 素材资产管理节点。
 
-RunningHub 平台提供了 212 个标准模型 API（涵盖主流最新所有的图像生成、视频生成、音频合成、3D 建模、文本理解、图像放大），本项目将每一个 API 端点都转化为对应的 ComfyUI 节点，并新增 3 个 Seedance2.0 素材辅助节点与 1 个设置节点，总计提供 216 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的全部标准模型能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
+RunningHub 平台提供了 220 个标准模型 API（涵盖主流最新所有的图像生成、视频生成、音频合成、3D 建模、文本理解、图像放大），本项目将每一个 API 端点都转化为对应的 ComfyUI 节点，并新增 3 个 Seedance2.0 素材辅助节点与 1 个设置节点，总计提供 224 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的全部标准模型能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
 
 ## 📌 项目特点
 
-- **节点总量** — 共 216 个 ComfyUI 节点，其中包含 212 个标准模型节点、3 个 Seedance2.0 素材节点和 1 个设置节点
+- **节点总量** — 共 224 个 ComfyUI 节点，其中包含 220 个标准模型节点、3 个 Seedance2.0 素材节点和 1 个设置节点
 - **即插即用** — 无需下载模型、无需 GPU，只需 API Key 即可调用全部能力
 - **动态注册** — 基于 JSON 注册表自动生成节点，新模型上线后仅需更新注册表
 - **多媒体支持** — 图片、视频、音频自动上传 / 下载 / 格式转换，与 ComfyUI 原生类型无缝衔接
@@ -21,11 +21,11 @@ RunningHub 平台提供了 212 个标准模型 API（涵盖主流最新所有的
 - **进度显示** — 任务提交后实时显示轮询进度
 - **容错机制** — 提交/上传/轮询均有重试与指数退避，自动区分可重试与不可重试错误
 - **跳过错误** — 每个节点支持 `skip_error` 开关，开启后遇到错误不中断工作流，输出对应类型的错误占位符
-- **示例工作流** — 每个节点都附带可直接导入的示例工作流
+- **示例工作流** — 提供大量可直接导入的示例工作流，覆盖主要模型能力
 
 ## 🎨 支持的模型
 
-### 图像生成（47 个节点）
+### 图像生成（51 个节点）
 
 | 模型 | RH 平台名称 | 能力 | 节点数 |
 |------|-----------|------|--------|
@@ -36,12 +36,13 @@ RunningHub 平台提供了 212 个标准模型 API（涵盖主流最新所有的
 | Grok 3 / Grok 4 Image（xAI） | 全能图片 X-3 / X-4 | 文生图、图生图 | 4 |
 | Grok Image 低价通道（xAI） | 全能图片 X | 文生图、图生图 | 2 |
 | Qwen Image 2.0 / 2.0 Pro（阿里巴巴） | 千问 | 文生图、图像编辑 | 4 |
+| Wan 万相 2.7（阿里巴巴） | — | 文生图、图像编辑 | 4 |
 | TopazLabs | — | 图像放大 Standard V2 / Low Res V2 / CGI / High Fidelity V2 / Text Refine | 5 |
 | Seedream v4 / v4.5 / v5 Lite（字节跳动） | — | 文生图、图生图 | 6 |
 | FLUX Dev（Black Forest Labs） | — | 文生图、文生图 LoRA | 2 |
 | Midjourney | 悠船 | 文生图 v6/v6.1/niji6/niji7/v7 | 5 |
 
-### 视频生成（129 个节点）
+### 视频生成（133 个节点）
 
 | 模型 | RH 平台名称 | 能力 | 节点数 |
 |------|-----------|------|--------|
@@ -50,7 +51,7 @@ RunningHub 平台提供了 212 个标准模型 API（涵盖主流最新所有的
 | Grok Imagine（xAI） | 全能视频 G / G 官方 | 文/图生视频、编辑视频 | 5 |
 | Kling 可灵（快手） | — | v2.5/v2.6/v3.0/o1/o3，文/图/首尾帧/参考/动作控制/编辑/元素/口型同步 | 30 |
 | Vidu（生数科技） | — | q2/q3，文/图/首尾帧/参考生视频、Pro Fast | 19 |
-| Wan 万相 2.6（阿里巴巴） | — | 文/图/参考生视频、Flash | 5 |
+| Wan 万相 2.6 / 2.7（阿里巴巴） | — | 文/图/参考生视频、Flash、视频续写 | 9 |
 | MiniMax Hailuo 海螺 | — | 02/2.3/2.3-fast，文/图/首尾帧生视频 | 13 |
 | Seedance v1.5 / 2.0（字节跳动） | — | 文/图/多模态生视频、Fast、参考生视频 | 11 |
 | Runway Gen-4 Turbo / Aleph | 全能视频R | 图生视频、视频编辑 | 3 |
@@ -171,7 +172,7 @@ cp config/.env.example config/.env
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # 入口文件，注册所有节点
-├── models_registry.json     # 模型注册表（212 个模型定义）
+├── models_registry.json     # 模型注册表（220 个模型定义）
 ├── config/
 │   └── .env.example         # 配置文件示例
 ├── core/                    # 核心基础设施

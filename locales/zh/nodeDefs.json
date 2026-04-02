@@ -56,6 +56,30 @@
   "RH_AlibabaWan26ImageToVideo": {
     "display_name": "RH 万相2.6-图生视频"
   },
+  "RH_AlibabaWan27TextToVideo": {
+    "display_name": "RH 万相2.7-文生视频"
+  },
+  "RH_AlibabaWan27ImageImageToVideo": {
+    "display_name": "RH 万相2.7-图生视频-首尾帧生视频"
+  },
+  "RH_AlibabaWan27VideoImageToVideo": {
+    "display_name": "RH 万相2.7-图生视频-视频续写"
+  },
+  "RH_AlibabaWan27ReferenceToVideo": {
+    "display_name": "RH 万相2.7-参考生视频"
+  },
+  "RH_AlibabaWan27ImageEdit": {
+    "display_name": "RH 万相2.7 图像编辑"
+  },
+  "RH_AlibabaWan27ImageEditPro": {
+    "display_name": "RH 万相2.7 图像编辑Pro"
+  },
+  "RH_AlibabaWan27TextToImage": {
+    "display_name": "RH 万相2.7 文生图"
+  },
+  "RH_AlibabaWan27TextToImagePro": {
+    "display_name": "RH 万相2.7 文生图Pro"
+  },
   "RH_KlingV25TurboProTextToVideo": {
     "display_name": "RH 可灵文生视频2.5-turbo-pro"
   },
