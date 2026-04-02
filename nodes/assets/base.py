@@ -9,7 +9,7 @@ from ...core.api_key import get_config
 from ...core.rest import dumps_json, post_json
 
 
-ASSET_CATEGORY = "RunningHub/SparkVideo Assets"
+ASSET_CATEGORY = "RunningHub/Seedance2.0 Assets"
 
 
 def text_input(default: str = "", multiline: bool = False) -> tuple:

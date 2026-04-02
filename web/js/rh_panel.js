@@ -132,7 +132,8 @@ app.registerExtension({
         "PixVerse": "🎬 PixVerse 可灵替代",
         "SkyReels": "🎥 昆仑 SkyReels",
         "Higgsfield": "🎭 Higgsfield",
-        "SparkVideo Assets": "📦 超能视频2.0素材",
+        "Seedance2.0 Assets": "📦 Seedance2.0素材",
+        "SparkVideo Assets": "📦 Seedance2.0素材",
       },
       en: {
         "RHArt Image": "🖼️ RHArt Image", "RHArt Video": "🎬 RHArt Video",
@@ -147,7 +148,8 @@ app.registerExtension({
         "PixVerse": "🎬 PixVerse",
         "SkyReels": "🎥 SkyReels",
         "Higgsfield": "🎭 Higgsfield",
-        "SparkVideo Assets": "📦 SparkVideo Assets",
+        "Seedance2.0 Assets": "📦 Seedance2.0 Assets",
+        "SparkVideo Assets": "📦 Seedance2.0 Assets",
       },
     };
 
@@ -156,8 +158,10 @@ app.registerExtension({
     const categoryAliases = {
       "音频": "Audio",
       "音频生成": "Audio",
-      "SparkVideo 素材": "SparkVideo Assets",
-      "超能视频2.0素材": "SparkVideo Assets",
+      "SparkVideo Assets": "Seedance2.0 Assets",
+      "SparkVideo 素材": "Seedance2.0 Assets",
+      "超能视频2.0素材": "Seedance2.0 Assets",
+      "Seedance2.0素材": "Seedance2.0 Assets",
     };
     const normalizeCategoryName = (name) => categoryAliases[name] || name;
     const nodeNameMap = (i18n.nodes && i18n.nodes[locale]) || {};
@@ -169,7 +173,7 @@ app.registerExtension({
       "Kling", "Vidu", "Wan", "MiniMax",
       "Seedream", "Seedance", "Youchuan", "Audio",
       "Hunyuan3D", "HiTem3D", "TopazLabs", "Alibaba",
-      "PixVerse", "SkyReels", "Higgsfield", "SparkVideo Assets",
+      "PixVerse", "SkyReels", "Higgsfield", "Seedance2.0 Assets",
     ];
 
     let allowedNodes = null;

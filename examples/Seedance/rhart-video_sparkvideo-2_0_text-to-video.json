@@ -82,7 +82,7 @@
         "Node name for S&R": "RH_RhartVideoSparkvideo20TextToVideo"
       },
       "widgets_values": [],
-      "title": "RH 超能视频2.0/文生视频"
+      "title": "RH Seedance2.0/文生视频"
     },
     {
       "id": 3,
@@ -101,10 +101,10 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "Example: RH 超能视频2.0/文生视频\nEndpoint: /rhart-video/sparkvideo-2.0/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
+        "text": "Example: RH Seedance2.0/文生视频\nEndpoint: /rhart-video/sparkvideo-2.0/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
       },
       "widgets_values": [
-        "Example: RH 超能视频2.0/文生视频\nEndpoint: /rhart-video/sparkvideo-2.0/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
+        "Example: RH Seedance2.0/文生视频\nEndpoint: /rhart-video/sparkvideo-2.0/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
       ],
       "color": "#432",
       "bgcolor": "#653"

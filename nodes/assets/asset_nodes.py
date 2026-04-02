@@ -1620,7 +1620,7 @@ class RH_SparkVideoAssetQuery(AssetRestNodeBase):
 
 
 class RH_SparkVideoAssetIdsMerge:
-    CATEGORY = "RunningHub/SparkVideo Assets"
+    CATEGORY = "RunningHub/Seedance2.0 Assets"
     FUNCTION = "merge"
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("asset_ids",)

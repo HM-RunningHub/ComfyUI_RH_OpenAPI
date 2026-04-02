@@ -232,7 +232,7 @@
         "Node name for S&R": "RH_RhartVideoSparkvideo20MultimodalVideo"
       },
       "widgets_values": [
-        "Keep image1 as a direct upload, but convert image2 and video1 into SparkVideo assets before generation.",
+        "Keep image1 as a direct upload, but convert image2 and video1 into Seedance2.0 assets before generation.",
         "720p",
         "5",
         true,
@@ -242,7 +242,7 @@
         true,
         "image2,video1"
       ],
-      "title": "RH 超能视频2.0/多模态视频"
+      "title": "RH Seedance2.0/多模态视频"
     },
     {
       "id": 6,
@@ -278,10 +278,10 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "SparkVideo real person material mode\\n\\nFlow:\\n1. image1 stays on the normal direct-upload path\\n2. image2 and video1 are pre-converted to SparkVideo assets because real_person_mode=true and conversion_slots=image2,video1\\n3. If asset creation fails for image2 or video1, that slot automatically falls back to the original upload path\\n\\nNotes:\\n- real_person_mode only affects local IMAGE / VIDEO slots on the 4 SparkVideo 2.0 / 2.0-Fast image-capable nodes\\n- conversion_slots=all converts every supported image/video slot\\n- asset_ids can still be connected at the same time for manually managed assets"
+        "text": "Seedance2.0 real person material mode\\n\\nFlow:\\n1. image1 stays on the normal direct-upload path\\n2. image2 and video1 are pre-converted to Seedance2.0 assets because real_person_mode=true and conversion_slots=image2,video1\\n3. If asset creation fails for image2 or video1, that slot automatically falls back to the original upload path\\n\\nNotes:\\n- real_person_mode only affects local IMAGE / VIDEO slots on the 4 Seedance2.0 / Seedance2.0-Fast image-capable nodes\\n- conversion_slots=all converts every supported image/video slot\\n- asset_ids can still be connected at the same time for manually managed assets"
       },
       "widgets_values": [
-        "SparkVideo real person material mode\\n\\nFlow:\\n1. image1 stays on the normal direct-upload path\\n2. image2 and video1 are pre-converted to SparkVideo assets because real_person_mode=true and conversion_slots=image2,video1\\n3. If asset creation fails for image2 or video1, that slot automatically falls back to the original upload path\\n\\nNotes:\\n- real_person_mode only affects local IMAGE / VIDEO slots on the 4 SparkVideo 2.0 / 2.0-Fast image-capable nodes\\n- conversion_slots=all converts every supported image/video slot\\n- asset_ids can still be connected at the same time for manually managed assets"
+        "Seedance2.0 real person material mode\\n\\nFlow:\\n1. image1 stays on the normal direct-upload path\\n2. image2 and video1 are pre-converted to Seedance2.0 assets because real_person_mode=true and conversion_slots=image2,video1\\n3. If asset creation fails for image2 or video1, that slot automatically falls back to the original upload path\\n\\nNotes:\\n- real_person_mode only affects local IMAGE / VIDEO slots on the 4 Seedance2.0 / Seedance2.0-Fast image-capable nodes\\n- conversion_slots=all converts every supported image/video slot\\n- asset_ids can still be connected at the same time for manually managed assets"
       ],
       "color": "#243",
       "bgcolor": "#365"

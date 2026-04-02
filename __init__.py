@@ -65,7 +65,8 @@ _CATEGORY_NAME_EN = {
     "PixVerse": "🎬 PixVerse",
     "SkyReels": "🎥 SkyReels",
     "Higgsfield": "🎭 Higgsfield",
-    "SparkVideo Assets": "📦 SparkVideo Assets",
+    "Seedance2.0 Assets": "📦 Seedance2.0 Assets",
+    "SparkVideo Assets": "📦 Seedance2.0 Assets",
 }
 
 _CATEGORY_NAME_ZH = {
@@ -89,7 +90,8 @@ _CATEGORY_NAME_ZH = {
     "PixVerse": "🎬 PixVerse 可灵替代",
     "SkyReels": "🎥 昆仑 SkyReels",
     "Higgsfield": "🎭 Higgsfield",
-    "SparkVideo Assets": "📦 超能视频2.0素材",
+    "Seedance2.0 Assets": "📦 Seedance2.0素材",
+    "SparkVideo Assets": "📦 Seedance2.0素材",
 }
 
 

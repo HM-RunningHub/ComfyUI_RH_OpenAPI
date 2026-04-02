@@ -609,22 +609,22 @@
     "display_name": "RH Higgsfield Dop Image to Video"
   },
   "RH_RhartVideoSparkvideo20TextToVideo": {
-    "display_name": "RH Sparkvideo 2.0 Text to Video"
+    "display_name": "RH Seedance2.0 Text to Video"
   },
   "RH_RhartVideoSparkvideo20FastTextToVideo": {
-    "display_name": "RH Sparkvideo 2.0 Fast Text to Video"
+    "display_name": "RH Seedance2.0 Fast Text to Video"
   },
   "RH_RhartVideoSparkvideo20ImageToVideo": {
-    "display_name": "RH Sparkvideo 2.0 Image to Video"
+    "display_name": "RH Seedance2.0 Image to Video"
   },
   "RH_RhartVideoSparkvideo20FastImageToVideo": {
-    "display_name": "RH Sparkvideo 2.0 Fast Image to Video"
+    "display_name": "RH Seedance2.0 Fast Image to Video"
   },
   "RH_RhartVideoSparkvideo20MultimodalVideo": {
-    "display_name": "RH Sparkvideo 2.0 Multimodal Video"
+    "display_name": "RH Seedance2.0 Multimodal Video"
   },
   "RH_RhartVideoSparkvideo20FastMultimodalVideo": {
-    "display_name": "RH Sparkvideo 2.0 Fast Multimodal Video"
+    "display_name": "RH Seedance2.0 Fast Multimodal Video"
   },
   "RH_RhVideoUpscaler": {
     "display_name": "RH Rh Video Upscaler"
@@ -636,13 +636,13 @@
     "display_name": "RH Vidu Reference to Video Q3 Mix"
   },
   "RH_SparkVideoAssetCreate": {
-    "display_name": "RH SparkVideo Asset/Create"
+    "display_name": "RH Seedance2.0 Asset/Create"
   },
   "RH_SparkVideoAssetQuery": {
-    "display_name": "RH SparkVideo Asset/Query"
+    "display_name": "RH Seedance2.0 Asset/Query"
   },
   "RH_SparkVideoAssetIdsMerge": {
-    "display_name": "RH SparkVideo Asset IDs/Merge"
+    "display_name": "RH Seedance2.0 Asset IDs/Merge"
   },
   "RHSettingsNode": {
     "display_name": "RH OpenAPI Settings"

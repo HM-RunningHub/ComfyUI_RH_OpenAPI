@@ -114,7 +114,7 @@
       "widgets_values": [
         false
       ],
-      "title": "RH SparkVideo 素材/创建"
+      "title": "RH Seedance2.0素材/创建"
     },
     {
       "id": 4,
@@ -168,7 +168,7 @@
       "widgets_values": [
         false
       ],
-      "title": "RH SparkVideo 素材/查询"
+      "title": "RH Seedance2.0素材/查询"
     },
     {
       "id": 5,
@@ -181,10 +181,10 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "Basic SparkVideo asset workflow\\n\\nFlow:\\n1. Upload a local image as an asset\\n2. Query the returned asset_id to inspect its status and preview\\n\\nNotes:\\n- RH SparkVideo 素材/创建 uses the fixed internal group group-20260327004931-dvjbj\\n- The asset name is also fixed internally as RHas01\\n- Replace LoadImage with VIDEO or AUDIO and reconnect it to the matching input when needed"
+        "text": "Basic Seedance2.0 asset workflow\\n\\nFlow:\\n1. Upload a local image as an asset\\n2. Query the returned asset_id to inspect its status and preview\\n\\nNotes:\\n- RH Seedance2.0素材/创建 uses the fixed internal group group-20260327004931-dvjbj\\n- The asset name is also fixed internally as RHas01\\n- Replace LoadImage with VIDEO or AUDIO and reconnect it to the matching input when needed"
       },
       "widgets_values": [
-        "Basic SparkVideo asset workflow\\n\\nFlow:\\n1. Upload a local image as an asset\\n2. Query the returned asset_id to inspect its status and preview\\n\\nNotes:\\n- RH SparkVideo 素材/创建 uses the fixed internal group group-20260327004931-dvjbj\\n- The asset name is also fixed internally as RHas01\\n- Replace LoadImage with VIDEO or AUDIO and reconnect it to the matching input when needed"
+        "Basic Seedance2.0 asset workflow\\n\\nFlow:\\n1. Upload a local image as an asset\\n2. Query the returned asset_id to inspect its status and preview\\n\\nNotes:\\n- RH Seedance2.0素材/创建 uses the fixed internal group group-20260327004931-dvjbj\\n- The asset name is also fixed internally as RHas01\\n- Replace LoadImage with VIDEO or AUDIO and reconnect it to the matching input when needed"
       ],
       "color": "#432",
       "bgcolor": "#653"

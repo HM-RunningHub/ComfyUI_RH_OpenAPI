@@ -6,17 +6,17 @@
 
 **English** | [中文](README.md)
 
-**ComfyUI_RH_OpenAPI** is a **1:1 ComfyUI implementation** of the [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api), with additional SparkVideo asset management nodes.
+**ComfyUI_RH_OpenAPI** is a **1:1 ComfyUI implementation** of the [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api), with additional Seedance2.0 asset management nodes.
 
-RunningHub provides 212 standard model APIs covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. This project converts every API endpoint into a corresponding ComfyUI node, and adds 3 SparkVideo asset helper nodes plus 1 settings node, for a total of 216 ComfyUI nodes. You can access all standard model capabilities directly inside ComfyUI workflows and reuse SparkVideo assets through a unified `asset_ids` input or the new `real_person_mode` toggle — no local GPU required, zero cold-start latency.
+RunningHub provides 212 standard model APIs covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. This project converts every API endpoint into a corresponding ComfyUI node, and adds 3 Seedance2.0 asset helper nodes plus 1 settings node, for a total of 216 ComfyUI nodes. You can access all standard model capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the new `real_person_mode` toggle — no local GPU required, zero cold-start latency.
 
 ## 📌 Features
 
-- **Node Count** — 216 ComfyUI nodes in total: 212 standard model nodes, 3 SparkVideo asset nodes, and 1 settings node
+- **Node Count** — 216 ComfyUI nodes in total: 212 standard model nodes, 3 Seedance2.0 asset nodes, and 1 settings node
 - **Plug & Play** — No model downloads, no GPU needed — just an API Key
 - **Dynamic Registration** — Nodes are auto-generated from a JSON registry; adding new models requires only a registry update
 - **Media Support** — Automatic upload/download/conversion for images, videos, and audio, seamlessly integrated with ComfyUI native types
-- **Asset Management** — 3 SparkVideo asset helper nodes, plus a unified `asset_ids` input or `real_person_mode` workflow for SparkVideo 2.0 / 2.0-Fast image/video inputs
+- **Asset Management** — 3 Seedance2.0 asset helper nodes, plus a unified `asset_ids` input or `real_person_mode` workflow for Seedance2.0 / Seedance2.0-Fast image/video inputs
 - **Flexible Configuration** — Three configuration methods: node settings, environment variables, or `.env` file
 - **Progress Tracking** — Real-time polling progress display after task submission
 - **Robust Error Handling** — Submit/upload/poll all have retry with exponential backoff, auto-distinguishing retryable vs non-retryable errors
@@ -85,12 +85,13 @@ RunningHub provides 212 standard model APIs covering image generation, video gen
 | HiTem3D V1.5 / V2 | Image-to-3D, Multi-Image-to-3D | 4 |
 | HiTem3D Portrait V1.5 / V2.0 / V2.1 | Portrait Image-to-3D, Multi-Image-to-3D | 6 |
 
-### SparkVideo Assets (3 Nodes)
+### Seedance2.0 Assets (3 Nodes)
 
-- User-facing nodes: `RH SparkVideo Asset/Create`, `RH SparkVideo Asset/Query`, `RH SparkVideo Asset IDs/Merge`
-- SparkVideo integration: `RH Sparkvideo 2.0 / 2.0-Fast` image-to-video and multimodal-video nodes expose a unified `asset_ids` input and two extra widgets: `real_person_mode` and `conversion_slots`
+- User-facing nodes: `RH Seedance2.0 Asset/Create`, `RH Seedance2.0 Asset/Query`, `RH Seedance2.0 Asset IDs/Merge`
+- `RH Seedance2.0 Asset/Create` always uses the fixed asset group `group-20260327004931-dvjbj` and the fixed asset name `RHas01`
+- Seedance2.0 integration: `RH Seedance2.0 / Seedance2.0-Fast` image-to-video and multimodal-video nodes expose a unified `asset_ids` input and two extra widgets: `real_person_mode` and `conversion_slots`
 - `asset_ids` supports a single asset ID, an `asset://<asset_ID>` URL, comma/newline separated values, or a JSON array string
-- `real_person_mode=false` keeps the original direct-upload path; `real_person_mode=true` converts selected local image/video slots to SparkVideo assets before the API request
+- `real_person_mode=false` keeps the original direct-upload path; `real_person_mode=true` converts selected local image/video slots to Seedance2.0 assets before the API request
 - `conversion_slots` defaults to `all`
 - Image-to-video supports: `first_frame,last_frame`
 - Multimodal video supports: `image1..image9,video1..video3`
@@ -116,7 +117,7 @@ Restart ComfyUI after installation.
 
 ### SparkVideo VIDEO Asset Preprocessing
 
-- `RH SparkVideo Asset/Create` requires `ffmpeg` and `ffprobe` when it preprocesses `VIDEO` inputs
+- `RH Seedance2.0 Asset/Create` requires `ffmpeg` and `ffprobe` when it preprocesses `VIDEO` inputs
 - On the public `main` branch, Windows builds automatically detect these tools and, if missing, download a portable FFmpeg bundle into a local cache without requiring a manual `PATH` update
 - Default cache locations:
   - Windows: `%LOCALAPPDATA%\ComfyUI_RH_OpenAPI\ffmpeg`
@@ -158,12 +159,12 @@ cp config/.env.example config/.env
 
 1. Configure your API Key (see Configuration above)
 2. Find the `RunningHub` category in the ComfyUI node menu
-3. Select the model node you need, or use asset management nodes under `RunningHub > SparkVideo Assets`
+3. Select the model node you need, or use asset management nodes under `RunningHub > Seedance2.0 Assets`
 4. Wire the workflow and run it
 
 ### Example Workflows
 
-The project includes 215 example workflow JSON files in the `examples/` directory, including 3 SparkVideo asset-related workflows. Download and import directly into ComfyUI.
+The project includes 215 example workflow JSON files in the `examples/` directory, including 3 Seedance2.0 asset-related workflows. Download and import directly into ComfyUI.
 
 ## 📁 Project Structure
 
@@ -186,7 +187,7 @@ ComfyUI_RH_OpenAPI/
 ├── nodes/                   # Node implementations
 │   ├── settings_node.py     # RH OpenAPI Settings node
 │   ├── node_factory.py      # Dynamic node factory
-│   └── assets/              # SparkVideo asset management nodes
+│   └── assets/              # Seedance2.0 asset management nodes
 └── examples/                # 215 example workflows
 ```
 
@@ -199,7 +200,7 @@ This project uses a **data-driven + factory pattern** architecture:
 3. **Unified Execution Flow** (`core/base.py`) — `Prepare Inputs → Upload Media → Submit Task → Poll Status → Process Result`
 4. **Media Utilities** (`core/image.py`, `video.py`, `audio.py`) — Handle format conversion between ComfyUI native types and API formats
 
-Adding a new standard model only requires a JSON entry in the registry — no Python code needed. SparkVideo asset management nodes are implemented as hand-written REST wrappers.
+Adding a new standard model only requires a JSON entry in the registry — no Python code needed. Seedance2.0 asset management nodes are implemented as hand-written REST wrappers.
 
 ## 📝 Notes
 

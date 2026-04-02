@@ -181,7 +181,7 @@ def _build_real_person_mode_input_def(default_enabled: bool = False) -> tuple:
             "default": bool(default_enabled),
             "tooltip": (
                 "When enabled, selected local IMAGE/VIDEO inputs are first converted "
-                "to SparkVideo assets before the API request. If conversion fails for "
+                "to Seedance2.0 assets before the API request. If conversion fails for "
                 "one slot, that slot falls back to the original upload path."
             ),
         },

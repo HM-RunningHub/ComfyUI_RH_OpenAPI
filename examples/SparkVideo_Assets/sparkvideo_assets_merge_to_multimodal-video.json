@@ -145,7 +145,7 @@
       "widgets_values": [
         false
       ],
-      "title": "RH SparkVideo 素材/创建"
+      "title": "RH Seedance2.0素材/创建"
     },
     {
       "id": 5,
@@ -203,7 +203,7 @@
       "widgets_values": [
         false
       ],
-      "title": "RH SparkVideo 素材/创建"
+      "title": "RH Seedance2.0素材/创建"
     },
     {
       "id": 6,
@@ -277,7 +277,7 @@
         "Node name for S&R": "RH_SparkVideoAssetIdsMerge"
       },
       "widgets_values": [],
-      "title": "RH SparkVideo 素材ID/合并"
+      "title": "RH Seedance2.0素材ID/合并"
     },
     {
       "id": 7,
@@ -406,7 +406,7 @@
         false,
         0
       ],
-      "title": "RH 超能视频2.0/多模态视频"
+      "title": "RH Seedance2.0/多模态视频"
     },
     {
       "id": 8,
@@ -442,10 +442,10 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "SparkVideo asset merge workflow\\n\\nFlow:\\n1. Create two assets from local images\\n2. Merge the two returned asset_id values with RH SparkVideo 素材ID/合并\\n3. Feed the merged asset_ids string into RH 超能视频2.0/多模态视频\\n\\nNotes:\\n- The merge node outputs the raw format expected by the SparkVideo asset_ids input, for example: asset-xxx, asset-yyy\\n- RH SparkVideo 素材/创建 always uses the fixed internal group group-20260327004931-dvjbj\\n- Multimodal SparkVideo will query each asset automatically and route it to imageUrls / videoUrls / audioUrls"
+        "text": "Seedance2.0 asset merge workflow\\n\\nFlow:\\n1. Create two assets from local images\\n2. Merge the two returned asset_id values with RH Seedance2.0素材ID/合并\\n3. Feed the merged asset_ids string into RH Seedance2.0/多模态视频\\n\\nNotes:\\n- The merge node outputs the raw format expected by the Seedance2.0 asset_ids input, for example: asset-xxx, asset-yyy\\n- RH Seedance2.0素材/创建 always uses the fixed internal group group-20260327004931-dvjbj\\n- Multimodal Seedance2.0 will query each asset automatically and route it to imageUrls / videoUrls / audioUrls"
       },
       "widgets_values": [
-        "SparkVideo asset merge workflow\\n\\nFlow:\\n1. Create two assets from local images\\n2. Merge the two returned asset_id values with RH SparkVideo 素材ID/合并\\n3. Feed the merged asset_ids string into RH 超能视频2.0/多模态视频\\n\\nNotes:\\n- The merge node outputs the raw format expected by the SparkVideo asset_ids input, for example: asset-xxx, asset-yyy\\n- RH SparkVideo 素材/创建 always uses the fixed internal group group-20260327004931-dvjbj\\n- Multimodal SparkVideo will query each asset automatically and route it to imageUrls / videoUrls / audioUrls"
+        "Seedance2.0 asset merge workflow\\n\\nFlow:\\n1. Create two assets from local images\\n2. Merge the two returned asset_id values with RH Seedance2.0素材ID/合并\\n3. Feed the merged asset_ids string into RH Seedance2.0/多模态视频\\n\\nNotes:\\n- The merge node outputs the raw format expected by the Seedance2.0 asset_ids input, for example: asset-xxx, asset-yyy\\n- RH Seedance2.0素材/创建 always uses the fixed internal group group-20260327004931-dvjbj\\n- Multimodal Seedance2.0 will query each asset automatically and route it to imageUrls / videoUrls / audioUrls"
       ],
       "color": "#432",
       "bgcolor": "#653"

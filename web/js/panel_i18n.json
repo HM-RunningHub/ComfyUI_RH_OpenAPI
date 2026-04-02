@@ -21,7 +21,7 @@
       "PixVerse": "🎬 PixVerse 可灵替代",
       "SkyReels": "🎥 昆仑 SkyReels",
       "Higgsfield": "🎭 Higgsfield",
-      "SparkVideo Assets": "📦 超能视频2.0素材"
+      "Seedance2.0 Assets": "📦 Seedance2.0素材"
     },
     "en": {
       "RHArt Image": "🖼️ RHArt Image",
@@ -44,7 +44,7 @@
       "PixVerse": "🎬 PixVerse",
       "SkyReels": "🎥 SkyReels",
       "Higgsfield": "🎭 Higgsfield",
-      "SparkVideo Assets": "📦 SparkVideo Assets"
+      "Seedance2.0 Assets": "📦 Seedance2.0 Assets"
     }
   },
   "nodes": {
@@ -252,18 +252,18 @@
       "RH_PixverseV56ImageToVideo": "RH PixVerse V5.6 图生视频",
       "RH_HiggsfieldSoulImageToImage": "RH Higgsfield Soul 图生图",
       "RH_HiggsfieldDopImageToVideo": "RH Higgsfield DoP 图生视频",
-      "RH_RhartVideoSparkvideo20TextToVideo": "RH 超能视频2.0/文生视频",
-      "RH_RhartVideoSparkvideo20FastTextToVideo": "RH 超能视频2.0-Fast/文生视频",
-      "RH_RhartVideoSparkvideo20ImageToVideo": "RH 超能视频2.0/图生视频",
-      "RH_RhartVideoSparkvideo20FastImageToVideo": "RH 超能视频2.0-Fast/图生视频",
-      "RH_RhartVideoSparkvideo20MultimodalVideo": "RH 超能视频2.0/多模态视频",
-      "RH_RhartVideoSparkvideo20FastMultimodalVideo": "RH 超能视频2.0-Fast/多模态视频",
+      "RH_RhartVideoSparkvideo20TextToVideo": "RH Seedance2.0/文生视频",
+      "RH_RhartVideoSparkvideo20FastTextToVideo": "RH Seedance2.0-Fast/文生视频",
+      "RH_RhartVideoSparkvideo20ImageToVideo": "RH Seedance2.0/图生视频",
+      "RH_RhartVideoSparkvideo20FastImageToVideo": "RH Seedance2.0-Fast/图生视频",
+      "RH_RhartVideoSparkvideo20MultimodalVideo": "RH Seedance2.0/多模态视频",
+      "RH_RhartVideoSparkvideo20FastMultimodalVideo": "RH Seedance2.0-Fast/多模态视频",
       "RH_RhVideoUpscaler": "RH RH视频超分辨率",
       "RH_RhVideoFpsIncreaser": "RH RH视频帧率增强",
       "RH_ViduReferenceToVideoQ3Mix": "RH Vidu-参考生视频-q3-mix",
-      "RH_SparkVideoAssetCreate": "RH 超能视频2.0素材/创建",
-      "RH_SparkVideoAssetQuery": "RH 超能视频2.0素材/查询",
-      "RH_SparkVideoAssetIdsMerge": "RH 超能视频2.0素材ID/合并",
+      "RH_SparkVideoAssetCreate": "RH Seedance2.0素材/创建",
+      "RH_SparkVideoAssetQuery": "RH Seedance2.0素材/查询",
+      "RH_SparkVideoAssetIdsMerge": "RH Seedance2.0素材ID/合并",
       "RHSettingsNode": "RH OpenAPI 设置"
     },
     "en": {
@@ -470,18 +470,18 @@
       "RH_PixverseV56ImageToVideo": "RH Pixverse V5.6 Image to Video",
       "RH_HiggsfieldSoulImageToImage": "RH Higgsfield Soul Image to Image",
       "RH_HiggsfieldDopImageToVideo": "RH Higgsfield Dop Image to Video",
-      "RH_RhartVideoSparkvideo20TextToVideo": "RH Sparkvideo 2.0 Text to Video",
-      "RH_RhartVideoSparkvideo20FastTextToVideo": "RH Sparkvideo 2.0 Fast Text to Video",
-      "RH_RhartVideoSparkvideo20ImageToVideo": "RH Sparkvideo 2.0 Image to Video",
-      "RH_RhartVideoSparkvideo20FastImageToVideo": "RH Sparkvideo 2.0 Fast Image to Video",
-      "RH_RhartVideoSparkvideo20MultimodalVideo": "RH Sparkvideo 2.0 Multimodal Video",
-      "RH_RhartVideoSparkvideo20FastMultimodalVideo": "RH Sparkvideo 2.0 Fast Multimodal Video",
+      "RH_RhartVideoSparkvideo20TextToVideo": "RH Seedance2.0 Text to Video",
+      "RH_RhartVideoSparkvideo20FastTextToVideo": "RH Seedance2.0 Fast Text to Video",
+      "RH_RhartVideoSparkvideo20ImageToVideo": "RH Seedance2.0 Image to Video",
+      "RH_RhartVideoSparkvideo20FastImageToVideo": "RH Seedance2.0 Fast Image to Video",
+      "RH_RhartVideoSparkvideo20MultimodalVideo": "RH Seedance2.0 Multimodal Video",
+      "RH_RhartVideoSparkvideo20FastMultimodalVideo": "RH Seedance2.0 Fast Multimodal Video",
       "RH_RhVideoUpscaler": "RH Rh Video Upscaler",
       "RH_RhVideoFpsIncreaser": "RH Rh Video Fps Increaser",
       "RH_ViduReferenceToVideoQ3Mix": "RH Vidu Reference to Video Q3 Mix",
-      "RH_SparkVideoAssetCreate": "RH SparkVideo Asset/Create",
-      "RH_SparkVideoAssetQuery": "RH SparkVideo Asset/Query",
-      "RH_SparkVideoAssetIdsMerge": "RH SparkVideo Asset IDs/Merge",
+      "RH_SparkVideoAssetCreate": "RH Seedance2.0 Asset/Create",
+      "RH_SparkVideoAssetQuery": "RH Seedance2.0 Asset/Query",
+      "RH_SparkVideoAssetIdsMerge": "RH Seedance2.0 Asset IDs/Merge",
       "RHSettingsNode": "RH OpenAPI Settings"
     }
   },
