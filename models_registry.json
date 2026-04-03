@@ -22148,7 +22148,7 @@
     "internal_name": "RH_AlibabaWan27TextToVideo",
     "display_name": "RH 万相2.7-文生视频",
     "name_cn": "万相2.7-文生视频",
-    "name_en": "alibaba/wan-2.7/text-to-video",
+    "name_en": "wan-2.7/text-to-video",
     "endpoint": "alibaba/wan-2.7/text-to-video",
     "output_type": "video",
     "category": "RunningHub/Wan",
@@ -22581,9 +22581,9 @@
   {
     "class_name": "AlibabaWan27ImageEdit",
     "internal_name": "RH_AlibabaWan27ImageEdit",
-    "display_name": "RH 万相2.7 图像编辑",
-    "name_cn": "万相2.7 图像编辑",
-    "name_en": "Wan 2.7 Image Edit",
+    "display_name": "RH 万相2.7-图像编辑",
+    "name_cn": "万相2.7-图像编辑",
+    "name_en": "wan-2.7/image-edit",
     "endpoint": "alibaba/wan-2.7/image-edit",
     "output_type": "image",
     "category": "RunningHub/Wan",
@@ -22605,25 +22605,29 @@
         "required": true,
         "label": "prompt",
         "description": "编辑指令，描述需要修改和保留的内容",
+        "defaultValue": "将人物后面的竹林换成更加真实的竹林效果，使整个画面更加真实，写实，摄影风格",
         "maxLength": 2048
       },
       {
-        "fieldKey": "size",
-        "type": "STRING",
-        "required": false,
-        "label": "size",
-        "description": "输出尺寸，格式为 宽*高，如 1024*1024。不填则保持原图尺寸。范围512-4096",
-        "maxLength": 20
-      },
-      {
-        "fieldKey": "seed",
+        "fieldKey": "width",
         "type": "INT",
         "required": false,
-        "label": "seed",
-        "description": "随机种子，-1为随机",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
+        "label": "width",
+        "description": "输出宽度，范围512-4096，默认1024，为空不传递尺寸",
+        "defaultValue": 1024,
+        "min": 512,
+        "max": 4096,
+        "step": 1
+      },
+      {
+        "fieldKey": "height",
+        "type": "INT",
+        "required": false,
+        "label": "height",
+        "description": "输出高度，范围512-4096，默认1024，为空不传递尺寸",
+        "defaultValue": 1024,
+        "min": 512,
+        "max": 4096,
         "step": 1
       }
     ]
@@ -22631,9 +22635,9 @@
   {
     "class_name": "AlibabaWan27ImageEditPro",
     "internal_name": "RH_AlibabaWan27ImageEditPro",
-    "display_name": "RH 万相2.7 图像编辑Pro",
-    "name_cn": "万相2.7 图像编辑Pro",
-    "name_en": "Wan 2.7 Image Edit Pro",
+    "display_name": "RH 万相2.7-图像编辑Pro",
+    "name_cn": "万相2.7-图像编辑Pro",
+    "name_en": "wan-2.7/image-edit-pro",
     "endpoint": "alibaba/wan-2.7/image-edit-pro",
     "output_type": "image",
     "category": "RunningHub/Wan",
@@ -22655,25 +22659,29 @@
         "required": true,
         "label": "prompt",
         "description": "编辑指令，描述需要修改和保留的内容",
+        "defaultValue": "给女孩带上苗族的银饰头饰",
         "maxLength": 2048
       },
       {
-        "fieldKey": "size",
-        "type": "STRING",
-        "required": false,
-        "label": "size",
-        "description": "输出尺寸，格式为 宽*高，如 1024*1024。不填则保持原图尺寸。范围512-4096",
-        "maxLength": 20
-      },
-      {
-        "fieldKey": "seed",
+        "fieldKey": "width",
         "type": "INT",
         "required": false,
-        "label": "seed",
-        "description": "随机种子，-1为随机",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
+        "label": "width",
+        "description": "输出宽度，范围512-4096，默认1024，为空不传递尺寸",
+        "defaultValue": 1024,
+        "min": 512,
+        "max": 4096,
+        "step": 1
+      },
+      {
+        "fieldKey": "height",
+        "type": "INT",
+        "required": false,
+        "label": "height",
+        "description": "输出高度，范围512-4096，默认1024，为空不传递尺寸",
+        "defaultValue": 1024,
+        "min": 512,
+        "max": 4096,
         "step": 1
       }
     ]
@@ -22681,9 +22689,9 @@
   {
     "class_name": "AlibabaWan27TextToImage",
     "internal_name": "RH_AlibabaWan27TextToImage",
-    "display_name": "RH 万相2.7 文生图",
-    "name_cn": "万相2.7 文生图",
-    "name_en": "Wan 2.7 Text-to-Image",
+    "display_name": "RH 万相2.7-文生图",
+    "name_cn": "万相2.7-文生图",
+    "name_en": "wan-2.7/text-to-image",
     "endpoint": "alibaba/wan-2.7/text-to-image",
     "output_type": "image",
     "category": "RunningHub/Wan",
@@ -22694,16 +22702,30 @@
         "required": true,
         "label": "prompt",
         "description": "图像描述文本，包含主题、场景、风格、光影和氛围",
+        "defaultValue": "Vogue封面风格。年轻美丽的亚洲女明星身穿草莓红缎面礼服，高挑站立，一只手叉腰，另一只手撩起头发，裙摆开衩露出长腿，眼神专注，奢华的T台走廊，电影感浅景深，超细节，超写实8K魅力肖像。",
         "maxLength": 5000
       },
       {
-        "fieldKey": "size",
-        "type": "STRING",
+        "fieldKey": "width",
+        "type": "INT",
         "required": false,
-        "label": "size",
-        "description": "输出尺寸，格式为 宽*高，如 1024*1024。范围512-4096，默认1024*1024",
-        "defaultValue": "1024*1024",
-        "maxLength": 20
+        "label": "width",
+        "description": "输出宽度，范围512-4096，默认1024，为空不传递尺寸",
+        "defaultValue": 1024,
+        "min": 512,
+        "max": 4096,
+        "step": 1
+      },
+      {
+        "fieldKey": "height",
+        "type": "INT",
+        "required": false,
+        "label": "height",
+        "description": "输出高度，范围512-4096，默认1024，为空不传递尺寸",
+        "defaultValue": 1024,
+        "min": 512,
+        "max": 4096,
+        "step": 1
       },
       {
         "fieldKey": "thinkingMode",
@@ -22712,26 +22734,15 @@
         "label": "thinkingMode",
         "description": "启用思考模式以提升图像质量，会增加生成时间",
         "defaultValue": true
-      },
-      {
-        "fieldKey": "seed",
-        "type": "INT",
-        "required": false,
-        "label": "seed",
-        "description": "随机种子，-1为随机",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
-        "step": 1
       }
     ]
   },
   {
     "class_name": "AlibabaWan27TextToImagePro",
     "internal_name": "RH_AlibabaWan27TextToImagePro",
-    "display_name": "RH 万相2.7 文生图Pro",
-    "name_cn": "万相2.7 文生图Pro",
-    "name_en": "Wan 2.7 Text-to-Image Pro",
+    "display_name": "RH 万相2.7-文生图Pro",
+    "name_cn": "万相2.7-文生图Pro",
+    "name_en": "wan-2.7/text-to-image-pro",
     "endpoint": "alibaba/wan-2.7/text-to-image-pro",
     "output_type": "image",
     "category": "RunningHub/Wan",
@@ -22742,16 +22753,30 @@
         "required": true,
         "label": "prompt",
         "description": "图像描述文本，包含主题、场景、风格、光影和氛围",
+        "defaultValue": "一张雪豹全身肖像照。它的一只爪子抬起，正朝我们走来。地上的雪正在融化，露出一些小小的紫色和黄色花朵以及一些草。天空中有一个幻日。后面，一块尖锐的岩石高耸入云。温暖的光线照在岩石边缘。雪豹的眼睛是耀眼的蓝色。直接眼神交流。",
         "maxLength": 5000
       },
       {
-        "fieldKey": "size",
-        "type": "STRING",
+        "fieldKey": "width",
+        "type": "INT",
         "required": false,
-        "label": "size",
-        "description": "输出尺寸，格式为 宽*高，如 2048*2048。范围512-8192，默认1024*1024",
-        "defaultValue": "1024*1024",
-        "maxLength": 20
+        "label": "width",
+        "description": "输出宽度，范围512-4096，默认1024，为空不传递尺寸",
+        "defaultValue": 1024,
+        "min": 512,
+        "max": 4096,
+        "step": 1
+      },
+      {
+        "fieldKey": "height",
+        "type": "INT",
+        "required": false,
+        "label": "height",
+        "description": "输出高度，范围512-4096，默认1024，为空不传递尺寸",
+        "defaultValue": 1024,
+        "min": 512,
+        "max": 4096,
+        "step": 1
       },
       {
         "fieldKey": "thinkingMode",
@@ -22760,17 +22785,362 @@
         "label": "thinkingMode",
         "description": "启用思考模式以提升图像质量，会增加生成时间",
         "defaultValue": true
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextQwen27bChat",
+    "internal_name": "RH_RhartTextQwen27bChat",
+    "display_name": "RH rhart-text-qwen-27b/chat",
+    "name_cn": "rhart-text-qwen-27b/chat",
+    "name_en": "rhart-text-qwen-27b/chat",
+    "endpoint": "rhart-text-qwen-27b/chat",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词，支持纯文本对话、图片/视频理解等场景"
       },
       {
-        "fieldKey": "seed",
-        "type": "INT",
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
         "required": false,
-        "label": "seed",
-        "description": "随机种子，-1为随机",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
-        "step": 1
+        "label": "imageUrls",
+        "description": "输入图片（可多张），用于图片理解和多图对比",
+        "multipleInputs": true,
+        "maxInputNum": 5,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": false,
+        "label": "videoUrl",
+        "description": "输入视频，用于视频理解",
+        "accept": "[\"MP4\",\"MOV\"]",
+        "maxSize": 100
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaWan27ImageToVideo",
+    "internal_name": "RH_AlibabaWan27ImageToVideo",
+    "display_name": "RH 万相2.7-图生视频",
+    "name_cn": "万相2.7-图生视频",
+    "name_en": "wan-2.7/image-to-video",
+    "endpoint": "alibaba/wan-2.7/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Wan",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "基于首尾两张竹林武侠对决的画面，生成一段流畅自然的武侠打斗视频，保持人物造型、竹林场景一致，动作连贯，光影过渡自然，还原武侠氛围感。"
+      },
+      {
+        "fieldKey": "firstImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstImageUrl",
+        "description": "二选一：1，first_frame=首帧生视频。2，first_frame+last_frame=首尾帧生视频。",
+        "accept": "[\"JPG\",\"PNG\",\"JPEG\",\"BMP\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "lastImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "lastImageUrl",
+        "description": "二选一：1，first_frame=首帧生视频。2，first_frame+last_frame=首尾帧生视频。",
+        "accept": "[\"JPG\",\"PNG\",\"JPEG\",\"BMP\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "audioUrl",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrl",
+        "description": "audioUrl",
+        "accept": "[\"MP3\",\"WAV\"]",
+        "maxSize": 15
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "negativePrompt"
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "720P",
+        "options": [
+          {
+            "value": "720P",
+            "description": "720P",
+            "descriptionEn": "720P"
+          },
+          {
+            "value": "1080P",
+            "description": "1080P",
+            "descriptionEn": "1080P"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaWan27VideoExtend",
+    "internal_name": "RH_AlibabaWan27VideoExtend",
+    "display_name": "RH 万相2.7-视频续写",
+    "name_cn": "万相2.7-视频续写",
+    "name_en": "wan-2.7/video-extend",
+    "endpoint": "alibaba/wan-2.7/video-extend",
+    "output_type": "video",
+    "category": "RunningHub/Wan",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "探险家走入黑暗的山洞中，打开了手中明亮的手电筒。光束缓慢扫过湿润的岩壁，突然照亮了深处巨大的、散发着幽蓝色光芒的水晶簇。镜头紧随探险家的步伐移动，展现出神秘、令人敬畏的氛围，画面充满电影感和丰富的光影细节。"
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "基于⾸段视频⽚段，让模型⽣成后续内容",
+        "accept": "[\"MP4\",\"MOV\"]",
+        "maxSize": 100
+      },
+      {
+        "fieldKey": "audioUrl",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrl",
+        "description": "audioUrl",
+        "accept": "[\"MP3\",\"WAV\"]",
+        "maxSize": 15
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "negativePrompt",
+        "defaultValue": "模糊，低画质，画面扭曲，卡通动画风格，人物肢体畸形，光线突变不自然，穿模，与前置视频风格不一致。"
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1080P",
+        "options": [
+          {
+            "value": "720P",
+            "description": "720P",
+            "descriptionEn": "720P"
+          },
+          {
+            "value": "1080P",
+            "description": "1080P",
+            "descriptionEn": "1080P"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaWan27VideoEdit",
+    "internal_name": "RH_AlibabaWan27VideoEdit",
+    "display_name": "RH 万相2.7-视频编辑",
+    "name_cn": "万相2.7-视频编辑",
+    "name_en": "wan-2.7/video-edit",
+    "endpoint": "alibaba/wan-2.7/video-edit",
+    "output_type": "video",
+    "category": "RunningHub/Wan",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "把图片中的人添加到视频中，一起吃火锅"
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": false,
+        "label": "videoUrl",
+        "description": "videoUrl",
+        "accept": "[\"MP4\",\"MOV\"]",
+        "maxSize": 100
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"JPG\",\"PNG\",\"JPEG\",\"WEBP\",\"BMP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "negativePrompt"
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "720P",
+        "options": [
+          {
+            "value": "720P",
+            "description": "720P",
+            "descriptionEn": "720P"
+          },
+          {
+            "value": "1080P",
+            "description": "1080P",
+            "descriptionEn": "1080P"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          }
+        ]
       }
     ]
   }
