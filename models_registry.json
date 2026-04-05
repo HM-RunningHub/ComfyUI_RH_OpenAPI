@@ -22159,7 +22159,7 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "一只小巧可爱的卡通小猫将军，身穿细节精致的金色盔甲，头戴一个稍大的头盔，勇敢地站在悬崖上",
+        "defaultValue": "日光，暖色调，侧光，特写镜头，居中构图。 一位拥有波浪形栗色长发的年轻女子，身穿浅蓝色吊带连衣裙，裙边饰有精致的蕾丝花边，亭亭玉立于阳光普照的花园中。她的脸部在柔和的虚焦中若隐若现，双眼低垂，神情宁静而专注，嘴唇微启。她身后，一片繁盛的盛开花田——牡丹、雏菊和薰衣草——模糊成绿意与柔和色彩交织的渐变。阳光在她皮肤和连衣裙的面料上投下柔和的高光，营造出自然的容光。 没有对白或人声；环境音包括树叶轻柔的沙沙声、远处鸟儿的鸣叫，以及微风拂过花瓣的声音。",
         "maxLength": 5000
       },
       {
@@ -22167,7 +22167,8 @@
         "type": "STRING",
         "required": false,
         "label": "negativePrompt",
-        "description": "negativePrompt"
+        "description": "negativePrompt",
+        "maxLength": 500
       },
       {
         "fieldKey": "audioUrl",
@@ -22187,14 +22188,69 @@
         "defaultValue": "5",
         "options": [
           {
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
             "value": "5",
             "description": "5",
             "descriptionEn": "5"
           },
           {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
             "value": "10",
             "description": "10",
             "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
           },
           {
             "value": "15",
@@ -22465,7 +22521,8 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "视频1在弹奏图片1"
+        "defaultValue": "视频1在弹奏图片1",
+        "maxLength": 5000
       },
       {
         "fieldKey": "videoUrls",
@@ -22474,7 +22531,7 @@
         "label": "videoUrls",
         "description": "videoUrls",
         "multipleInputs": true,
-        "maxInputNum": 10,
+        "maxInputNum": 5,
         "accept": "[\"MP4\",\"MOV\"]",
         "maxSize": 100
       },
@@ -22485,7 +22542,7 @@
         "label": "imageUrls",
         "description": "imageUrls",
         "multipleInputs": true,
-        "maxInputNum": 10,
+        "maxInputNum": 5,
         "accept": "[\"JPG\",\"PNG\",\"JPEG\",\"WEBP\",\"BMP\"]",
         "maxSize": 20
       },
@@ -22494,7 +22551,8 @@
         "type": "STRING",
         "required": false,
         "label": "negativePrompt",
-        "description": "negativePrompt"
+        "description": "negativePrompt",
+        "maxLength": 500
       },
       {
         "fieldKey": "resolution",
@@ -22502,17 +22560,17 @@
         "required": true,
         "label": "resolution",
         "description": "resolution",
-        "defaultValue": "1080p",
+        "defaultValue": "1080P",
         "options": [
           {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
+            "value": "720P",
+            "description": "720P",
+            "descriptionEn": "720P"
           },
           {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
+            "value": "1080P",
+            "description": "1080P",
+            "descriptionEn": "1080P"
           }
         ]
       },
@@ -22525,19 +22583,49 @@
         "defaultValue": "5",
         "options": [
           {
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
             "value": "5",
             "description": "5",
             "descriptionEn": "5"
           },
           {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
             "value": "10",
             "description": "10",
             "descriptionEn": "10"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
           }
         ]
       },
@@ -22843,7 +22931,8 @@
         "required": false,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "基于首尾两张竹林武侠对决的画面，生成一段流畅自然的武侠打斗视频，保持人物造型、竹林场景一致，动作连贯，光影过渡自然，还原武侠氛围感。"
+        "defaultValue": "基于首尾两张竹林武侠对决的画面，生成一段流畅自然的武侠打斗视频，保持人物造型、竹林场景一致，动作连贯，光影过渡自然，还原武侠氛围感。",
+        "maxLength": 5000
       },
       {
         "fieldKey": "firstImageUrl",
@@ -22877,7 +22966,8 @@
         "type": "STRING",
         "required": false,
         "label": "negativePrompt",
-        "description": "negativePrompt"
+        "description": "negativePrompt",
+        "maxLength": 500
       },
       {
         "fieldKey": "resolution",
@@ -22908,14 +22998,69 @@
         "defaultValue": "5",
         "options": [
           {
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
             "value": "5",
             "description": "5",
             "descriptionEn": "5"
           },
           {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
             "value": "10",
             "description": "10",
             "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
           },
           {
             "value": "15",
@@ -22942,7 +23087,8 @@
         "required": false,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "探险家走入黑暗的山洞中，打开了手中明亮的手电筒。光束缓慢扫过湿润的岩壁，突然照亮了深处巨大的、散发着幽蓝色光芒的水晶簇。镜头紧随探险家的步伐移动，展现出神秘、令人敬畏的氛围，画面充满电影感和丰富的光影细节。"
+        "defaultValue": "探险家走入黑暗的山洞中，打开了手中明亮的手电筒。光束缓慢扫过湿润的岩壁，突然照亮了深处巨大的、散发着幽蓝色光芒的水晶簇。镜头紧随探险家的步伐移动，展现出神秘、令人敬畏的氛围，画面充满电影感和丰富的光影细节。",
+        "maxLength": 5000
       },
       {
         "fieldKey": "videoUrl",
@@ -22968,7 +23114,8 @@
         "required": false,
         "label": "negativePrompt",
         "description": "negativePrompt",
-        "defaultValue": "模糊，低画质，画面扭曲，卡通动画风格，人物肢体畸形，光线突变不自然，穿模，与前置视频风格不一致。"
+        "defaultValue": "模糊，低画质，画面扭曲，卡通动画风格，人物肢体畸形，光线突变不自然，穿模，与前置视频风格不一致。",
+        "maxLength": 500
       },
       {
         "fieldKey": "resolution",
@@ -22999,14 +23146,69 @@
         "defaultValue": "5",
         "options": [
           {
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
             "value": "5",
             "description": "5",
             "descriptionEn": "5"
           },
           {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
             "value": "10",
             "description": "10",
             "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
           },
           {
             "value": "15",
@@ -23033,14 +23235,15 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "把图片中的人添加到视频中，一起吃火锅"
+        "defaultValue": "把视频中的人物替换成图片中的人物",
+        "maxLength": 5000
       },
       {
         "fieldKey": "videoUrl",
         "type": "VIDEO",
         "required": false,
         "label": "videoUrl",
-        "description": "videoUrl",
+        "description": "视频时长必须为 2-10 秒",
         "accept": "[\"MP4\",\"MOV\"]",
         "maxSize": 100
       },
@@ -23060,7 +23263,8 @@
         "type": "STRING",
         "required": false,
         "label": "negativePrompt",
-        "description": "negativePrompt"
+        "description": "negativePrompt",
+        "maxLength": 500
       },
       {
         "fieldKey": "resolution",
@@ -23087,23 +23291,58 @@
         "type": "LIST",
         "required": true,
         "label": "duration",
-        "description": "duration",
+        "description": "输出视频时长控制。0 = 保留原视频完整时长；2-10 = 从视频开头截取对应秒数；设置值不得超过输入视频原始时长",
         "defaultValue": "5",
         "options": [
+          {
+            "value": "0",
+            "description": "0",
+            "descriptionEn": "0"
+          },
+          {
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
           {
             "value": "5",
             "description": "5",
             "descriptionEn": "5"
           },
           {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
             "value": "10",
             "description": "10",
             "descriptionEn": "10"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
           }
         ]
       },
