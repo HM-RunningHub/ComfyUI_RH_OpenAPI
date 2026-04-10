@@ -53,147 +53,6 @@
     ]
   },
   {
-    "class_name": "RhartVideoSImageToVideo",
-    "internal_name": "RH_RhartVideoSImageToVideo",
-    "display_name": "RH 全能视频S-图生视频-低价渠道版",
-    "name_cn": "全能视频S-图生视频-低价渠道版",
-    "name_en": "sora-2/image-to-video-channel-low-price",
-    "endpoint": "rhart-video-s/image-to-video",
-    "output_type": "video",
-    "category": "RunningHub/RHArt Video",
-    "params": [
-      {
-        "fieldKey": "imageUrl",
-        "type": "IMAGE",
-        "required": true,
-        "label": "imageUrl",
-        "description": "imageUrl",
-        "multipleInputs": false,
-        "maxInputNum": 1,
-        "accept": "[\"JPG\",\"PNG\"]",
-        "maxSize": 50
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "duration",
-        "options": [
-          {
-            "value": "10",
-            "description": "10"
-          },
-          {
-            "value": "15",
-            "description": "15"
-          }
-        ],
-        "defaultValue": "10"
-      },
-      {
-        "fieldKey": "aspectRatio",
-        "type": "LIST",
-        "required": true,
-        "label": "aspectRatio",
-        "description": "The size of the generated media in pixels ",
-        "options": [
-          {
-            "value": "9:16",
-            "description": "9:16"
-          },
-          {
-            "value": "16:9",
-            "description": "16:9"
-          }
-        ],
-        "defaultValue": "9:16"
-      },
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "prompt",
-        "defaultValue": "基于原图生成10秒动态视频，角色使用地道男声京腔配音，语气带点胡同大爷的调侃劲儿。 0–2秒：狸花猫翘着二郎腿，爪尖轻敲桌面，斜眼笑：“咱这节目今天炸了啊！” 2–5秒：哈士奇一愣，领结歪了也不管，急问：“真的啊？咱上热搜了？” 5–10秒：哈士奇瞬间石化，瞳孔地震；狸花猫憋不住，“噗”地笑出声，拍桌打滚，耳机滑到耳朵尖，背景霓虹灯“Whisker & Howl”同步闪红——全场爆笑收尾！",
-        "maxLength": 4000
-      },
-      {
-        "fieldKey": "storyboard",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "storyboard",
-        "description": "storyboard",
-        "defaultValue": false
-      }
-    ]
-  },
-  {
-    "class_name": "RhartVideoSTextToVideo",
-    "internal_name": "RH_RhartVideoSTextToVideo",
-    "display_name": "RH 全能视频S-文生视频-低价渠道版",
-    "name_cn": "全能视频S-文生视频-低价渠道版",
-    "name_en": "sora-2/text-to-video-channel-low-price",
-    "endpoint": "rhart-video-s/text-to-video",
-    "output_type": "video",
-    "category": "RunningHub/RHArt Video",
-    "params": [
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "duration",
-        "options": [
-          {
-            "value": "10",
-            "description": "10"
-          },
-          {
-            "value": "15",
-            "description": "15"
-          }
-        ],
-        "defaultValue": "10"
-      },
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "prompt",
-        "defaultValue": "阳光透过高大的橡树洒在一片魔法森林中，小狐狸与会说话的蘑菇一起跳舞，远处有瀑布和漂浮的蒲公英。画面柔和温暖，手绘动画质感，色彩明亮饱和，镜头缓慢推进，风格致敬宫崎骏《龙猫》。",
-        "maxLength": 4000
-      },
-      {
-        "fieldKey": "aspectRatio",
-        "type": "LIST",
-        "required": true,
-        "label": "aspectRatio",
-        "description": "aspectRatio",
-        "options": [
-          {
-            "value": "9:16",
-            "description": "9:16"
-          },
-          {
-            "value": "16:9",
-            "description": "16:9"
-          }
-        ],
-        "defaultValue": "9:16"
-      },
-      {
-        "fieldKey": "storyboard",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "storyboard",
-        "description": "storyboard",
-        "defaultValue": false
-      }
-    ]
-  },
-  {
     "class_name": "RhartImageV1Edit",
     "internal_name": "RH_RhartImageV1Edit",
     "display_name": "RH 全能图片V1-图生图-低价渠道版",
@@ -1141,151 +1000,6 @@
             "descriptionEn": "4k"
           }
         ]
-      }
-    ]
-  },
-  {
-    "class_name": "RhartVideoSImageToVideoPro",
-    "internal_name": "RH_RhartVideoSImageToVideoPro",
-    "display_name": "RH 全能视频S-图生视频-pro-低价渠道版",
-    "name_cn": "全能视频S-图生视频-pro-低价渠道版",
-    "name_en": "sora-2/image-to-video-pro-channel-low-price",
-    "endpoint": "rhart-video-s/image-to-video-pro",
-    "output_type": "video",
-    "category": "RunningHub/RHArt Video",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "prompt",
-        "defaultValue": "一只毛茸茸的白色小兔子站在森林里温馨的小木屋门前，眼睛亮晶晶，开心地挥着爪子说：“欢迎大家来我家玩！”阳光透过树叶洒在它身上，周围有野花和蝴蝶飞舞。镜头采用柔和近景，氛围温暖可爱，风格类似儿童绘本动画。",
-        "maxLength": 4000
-      },
-      {
-        "fieldKey": "imageUrl",
-        "type": "IMAGE",
-        "required": true,
-        "label": "imageUrl",
-        "description": "imageUrl",
-        "multipleInputs": false,
-        "maxInputNum": 1,
-        "accept": "[\"JPG\",\"PNG\"]",
-        "maxSize": 50
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "duration",
-        "options": [
-          {
-            "value": "15",
-            "description": "15"
-          },
-          {
-            "value": "25",
-            "description": "25"
-          }
-        ],
-        "defaultValue": "15"
-      },
-      {
-        "fieldKey": "aspectRatio",
-        "type": "LIST",
-        "required": true,
-        "label": "aspectRatio",
-        "description": "aspectRatio",
-        "options": [
-          {
-            "value": "9:16",
-            "description": "9:16"
-          },
-          {
-            "value": "16:9",
-            "description": "16:9"
-          }
-        ],
-        "defaultValue": "9:16"
-      },
-      {
-        "fieldKey": "storyboard",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "storyboard",
-        "description": "storyboard",
-        "defaultValue": false
-      }
-    ]
-  },
-  {
-    "class_name": "RhartVideoSTextToVideoPro",
-    "internal_name": "RH_RhartVideoSTextToVideoPro",
-    "display_name": "RH 全能视频S-文生视频-pro-低价渠道版",
-    "name_cn": "全能视频S-文生视频-pro-低价渠道版",
-    "name_en": "sora-2/text-to-video-pro-channel-low-price",
-    "endpoint": "rhart-video-s/text-to-video-pro",
-    "output_type": "video",
-    "category": "RunningHub/RHArt Video",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "prompt",
-        "defaultValue": "90 年代纪录片风格访谈，一位饱经风霜的老渔民坐在温馨的海边小屋里，说道：“我至今还能闻到年轻时海风的咸腥，还有鲜鱼的气息。”",
-        "maxLength": 4000
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "duration",
-        "defaultValue": "15",
-        "options": [
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
-          },
-          {
-            "value": "25",
-            "description": "25",
-            "descriptionEn": "25"
-          }
-        ]
-      },
-      {
-        "fieldKey": "aspectRatio",
-        "type": "LIST",
-        "required": true,
-        "label": "aspectRatio",
-        "description": "aspectRatio",
-        "defaultValue": "9:16",
-        "options": [
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          }
-        ]
-      },
-      {
-        "fieldKey": "storyboard",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "storyboard",
-        "description": "storyboard",
-        "defaultValue": false
       }
     ]
   },
@@ -21496,8 +21210,8 @@
   {
     "class_name": "RhartVideoSparkvideo20MultimodalVideo",
     "internal_name": "RH_RhartVideoSparkvideo20MultimodalVideo",
-    "display_name": "RH Seedance2.0/多模态视频",
-    "name_cn": "Seedance2.0/多模态视频",
+    "display_name": "RH Seedance2.0/全能参考视频",
+    "name_cn": "Seedance2.0/全能参考视频",
     "name_en": "Seedance2.0 Multimodal Video",
     "endpoint": "rhart-video/sparkvideo-2.0/multimodal-video",
     "output_type": "video",
@@ -21648,7 +21362,7 @@
         "type": "VIDEO",
         "required": false,
         "label": "videoUrls",
-        "description": "参考视频（0-3个，用于多模态参考/视频编辑/视频续写）。单个视频时长 [2, 15] s，最多传入 3 个参考视频，所有视频总时长不超过 15s。",
+        "description": "参考视频（0-3个，用于全能参考/视频编辑/视频续写）。单个视频时长 [2, 15] s，最多传入 3 个参考视频，所有视频总时长不超过 15s。",
         "multipleInputs": true,
         "maxInputNum": 3,
         "accept": "[\"MP4\"]",
@@ -21723,8 +21437,8 @@
   {
     "class_name": "RhartVideoSparkvideo20FastMultimodalVideo",
     "internal_name": "RH_RhartVideoSparkvideo20FastMultimodalVideo",
-    "display_name": "RH Seedance2.0-Fast/多模态视频",
-    "name_cn": "Seedance2.0-Fast/多模态视频",
+    "display_name": "RH Seedance2.0-Fast/全能参考视频",
+    "name_cn": "Seedance2.0-Fast/全能参考视频",
     "name_en": "Seedance2.0 Fast Multimodal Video",
     "endpoint": "rhart-video/sparkvideo-2.0-fast/multimodal-video",
     "output_type": "video",
@@ -21876,7 +21590,7 @@
         "type": "VIDEO",
         "required": false,
         "label": "videoUrls",
-        "description": "参考视频（0-3个，用于多模态参考/视频编辑/视频续写）。单个视频时长 [2, 15] s，最多传入 3 个参考视频，所有视频总时长不超过 15s。",
+        "description": "参考视频（0-3个，用于全能参考/视频编辑/视频续写）。单个视频时长 [2, 15] s，最多传入 3 个参考视频，所有视频总时长不超过 15s。",
         "multipleInputs": true,
         "maxInputNum": 3,
         "accept": "[\"MP4\"]",
@@ -22313,195 +22027,24 @@
             "descriptionEn": "3:4"
           }
         ]
-      }
-    ]
-  },
-  {
-    "class_name": "AlibabaWan27ImageImageToVideo",
-    "internal_name": "RH_AlibabaWan27ImageImageToVideo",
-    "display_name": "RH 万相2.7-图生视频-首尾帧生视频",
-    "name_cn": "万相2.7-图生视频-首尾帧生视频",
-    "name_en": "alibaba/wan-2.7/image-to-video/First-last-frames-to-video",
-    "endpoint": "alibaba/wan-2.7/image/image-to-video",
-    "output_type": "video",
-    "category": "RunningHub/Wan",
-    "params": [
+      },
       {
-        "fieldKey": "prompt",
-        "type": "STRING",
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
         "required": false,
-        "label": "prompt",
-        "description": "prompt",
-        "defaultValue": "写实风格，一只小猫好奇的仰望天空，镜头从平视角度逐渐升高，最后以俯视角度捕捉到它好奇的眼神"
+        "label": "promptExtend",
+        "description": "是否开启prompt智能改写。开启后使用大模型对输入prompt进行智能改写。对于较短的prompt生成效果提升明显，但会增加耗时。",
+        "defaultValue": true
       },
       {
-        "fieldKey": "firstImageUrl",
-        "type": "IMAGE",
-        "required": true,
-        "label": "firstImageUrl",
-        "description": "二选一：1，first_frame=首帧生视频。2，first_frame+last_frame=首尾帧生视频。",
-        "accept": "[\"JPG\",\"PNG\",\"JPEG\",\"BMP\",\"WEBP\"]",
-        "maxSize": 20
-      },
-      {
-        "fieldKey": "lastImageUrl",
-        "type": "IMAGE",
+        "fieldKey": "seed",
+        "type": "INT",
         "required": false,
-        "label": "lastImageUrl",
-        "description": "二选一：1，first_frame=首帧生视频。2，first_frame+last_frame=首尾帧生视频。",
-        "accept": "[\"JPG\",\"PNG\",\"JPEG\",\"BMP\",\"WEBP\"]",
-        "maxSize": 20
-      },
-      {
-        "fieldKey": "audioUrl",
-        "type": "AUDIO",
-        "required": false,
-        "label": "audioUrl",
-        "description": "audioUrl",
-        "accept": "[\"MP3\",\"WAV\"]",
-        "maxSize": 15
-      },
-      {
-        "fieldKey": "negativePrompt",
-        "type": "STRING",
-        "required": false,
-        "label": "negativePrompt",
-        "description": "negativePrompt"
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "resolution",
-        "defaultValue": "1080p",
-        "options": [
-          {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
-          },
-          {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "duration",
-        "defaultValue": "5",
-        "options": [
-          {
-            "value": "5",
-            "description": "5",
-            "descriptionEn": "5"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "class_name": "AlibabaWan27VideoImageToVideo",
-    "internal_name": "RH_AlibabaWan27VideoImageToVideo",
-    "display_name": "RH 万相2.7-图生视频-视频续写",
-    "name_cn": "万相2.7-图生视频-视频续写",
-    "name_en": "alibaba/wan-2.7/image-to-video/Video-Continuation",
-    "endpoint": "alibaba/wan-2.7/video/image-to-video",
-    "output_type": "video",
-    "category": "RunningHub/Wan",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "prompt",
-        "defaultValue": "⼀只戴着墨镜的狗在街道上滑滑板，3D卡通"
-      },
-      {
-        "fieldKey": "videoUrl",
-        "type": "VIDEO",
-        "required": true,
-        "label": "videoUrl",
-        "description": "基于⾸段视频⽚段，让模型⽣成后续内容",
-        "accept": "[\"MP4\",\"MOV\"]",
-        "maxSize": 100
-      },
-      {
-        "fieldKey": "audioUrl",
-        "type": "AUDIO",
-        "required": false,
-        "label": "audioUrl",
-        "description": "audioUrl",
-        "accept": "[\"MP3\",\"WAV\"]",
-        "maxSize": 15
-      },
-      {
-        "fieldKey": "negativePrompt",
-        "type": "STRING",
-        "required": false,
-        "label": "negativePrompt",
-        "description": "negativePrompt"
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "resolution",
-        "defaultValue": "1080p",
-        "options": [
-          {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
-          },
-          {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "duration",
-        "defaultValue": "5",
-        "options": [
-          {
-            "value": "5",
-            "description": "5",
-            "descriptionEn": "5"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
-          }
-        ]
+        "label": "seed",
+        "description": "随机数种种子，取值范围为 [0, 2147483647] ，未指定时，系统自动生成随机种子。若需提升生成结果的可复现性，建议固定seed值。 请注意，由于模型生成具有概率性，即使使用相同seed，也不能保证每次生成结果完全一致",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
       }
     ]
   },
@@ -22545,6 +22088,15 @@
         "maxInputNum": 5,
         "accept": "[\"JPG\",\"PNG\",\"JPEG\",\"WEBP\",\"BMP\"]",
         "maxSize": 20
+      },
+      {
+        "fieldKey": "audioUrl",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrl",
+        "description": "音频URL，用于指定参考素材（图像/视频）中主体角色的音乐",
+        "accept": "[\"MP3\",\"WAV\"]",
+        "maxSize": 15
       },
       {
         "fieldKey": "negativePrompt",
@@ -22663,6 +22215,24 @@
             "descriptionEn": "3:4"
           }
         ]
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启prompt智能改写。开启后使用大模型对输入prompt进行智能改写。对于较短的prompt生成效果提升明显，但会增加耗时。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机数种种子，取值范围为 [0, 2147483647] ，未指定时，系统自动生成随机种子。若需提升生成结果的可复现性，建议固定seed值。 请注意，由于模型生成具有概率性，即使使用相同seed，也不能保证每次生成结果完全一致",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
       }
     ]
   },
@@ -23068,6 +22638,24 @@
             "descriptionEn": "15"
           }
         ]
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启prompt智能改写。开启后使用大模型对输入prompt进行智能改写。对于较短的prompt生成效果提升明显，但会增加耗时。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机数种种子，取值范围为 [0, 2147483647] ，未指定时，系统自动生成随机种子。若需提升生成结果的可复现性，建议固定seed值。 请注意，由于模型生成具有概率性，即使使用相同seed，也不能保证每次生成结果完全一致",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
       }
     ]
   },
@@ -23216,6 +22804,24 @@
             "descriptionEn": "15"
           }
         ]
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启prompt智能改写。开启后使用大模型对输入prompt进行智能改写。对于较短的prompt生成效果提升明显，但会增加耗时。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机数种种子，取值范围为 [0, 2147483647] ，未指定时，系统自动生成随机种子。若需提升生成结果的可复现性，建议固定seed值。 请注意，由于模型生成具有概率性，即使使用相同seed，也不能保证每次生成结果完全一致",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
       }
     ]
   },
@@ -23380,6 +22986,1848 @@
             "descriptionEn": "3:4"
           }
         ]
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启prompt智能改写。开启后使用大模型对输入prompt进行智能改写。对于较短的prompt生成效果提升明显，但会增加耗时。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机数种种子，取值范围为 [0, 2147483647] ，未指定时，系统自动生成随机种子。若需提升生成结果的可复现性，建议固定seed值。 请注意，由于模型生成具有概率性，即使使用相同seed，也不能保证每次生成结果完全一致",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "RhartVideoSImageToVideoDeprecated",
+    "internal_name": "RH_RhartVideoSImageToVideoDeprecated",
+    "display_name": "RH 全能视频S-图生视频-低价渠道版-已下架",
+    "name_cn": "全能视频S-图生视频-低价渠道版-已下架",
+    "name_en": "sora-2/image-to-video-channel-low-price",
+    "endpoint": "rhart-video-s/image-to-video-deprecated",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "10",
+        "options": [
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "9:16",
+        "options": [
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "基于原图生成10秒动态视频，角色使用地道男声京腔配音，语气带点胡同大爷的调侃劲儿。 0–2秒：狸花猫翘着二郎腿，爪尖轻敲桌面，斜眼笑：“咱这节目今天炸了啊！” 2–5秒：哈士奇一愣，领结歪了也不管，急问：“真的啊？咱上热搜了？” 5–10秒：哈士奇瞬间石化，瞳孔地震；狸花猫憋不住，“噗”地笑出声，拍桌打滚，耳机滑到耳朵尖，背景霓虹灯“Whisker & Howl”同步闪红——全场爆笑收尾！",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "storyboard",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "storyboard",
+        "description": "storyboard",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "RhartVideoSTextToVideoDeprecated",
+    "internal_name": "RH_RhartVideoSTextToVideoDeprecated",
+    "display_name": "RH 全能视频S-文生视频-低价渠道版-已下架",
+    "name_cn": "全能视频S-文生视频-低价渠道版-已下架",
+    "name_en": "sora-2/text-to-video-channel-low-price",
+    "endpoint": "rhart-video-s/text-to-video-deprecated",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "10",
+        "options": [
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "阳光透过高大的橡树洒在一片魔法森林中，小狐狸与会说话的蘑菇一起跳舞，远处有瀑布和漂浮的蒲公英。画面柔和温暖，手绘动画质感，色彩明亮饱和，镜头缓慢推进，风格致敬宫崎骏《龙猫》。",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "9:16",
+        "options": [
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "storyboard",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "storyboard",
+        "description": "storyboard",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "RhartVideoSImageToVideoProDeprecated",
+    "internal_name": "RH_RhartVideoSImageToVideoProDeprecated",
+    "display_name": "RH 全能视频S-图生视频-pro-低价渠道版-已下架",
+    "name_cn": "全能视频S-图生视频-pro-低价渠道版-已下架",
+    "name_en": "sora-2/image-to-video-pro-channel-low-price",
+    "endpoint": "rhart-video-s/image-to-video-pro-deprecated",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "一只毛茸茸的白色小兔子站在森林里温馨的小木屋门前，眼睛亮晶晶，开心地挥着爪子说：“欢迎大家来我家玩！”阳光透过树叶洒在它身上，周围有野花和蝴蝶飞舞。镜头采用柔和近景，氛围温暖可爱，风格类似儿童绘本动画。",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "15",
+        "options": [
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          },
+          {
+            "value": "25",
+            "description": "25",
+            "descriptionEn": "25"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "9:16",
+        "options": [
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "storyboard",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "storyboard",
+        "description": "storyboard",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "RhartVideoSTextToVideoProDeprecated",
+    "internal_name": "RH_RhartVideoSTextToVideoProDeprecated",
+    "display_name": "RH 全能视频S-文生视频-pro-低价渠道版-已下架",
+    "name_cn": "全能视频S-文生视频-pro-低价渠道版-已下架",
+    "name_en": "sora-2/text-to-video-pro-channel-low-price",
+    "endpoint": "rhart-video-s/text-to-video-pro-deprecated",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "90 年代纪录片风格访谈，一位饱经风霜的老渔民坐在温馨的海边小屋里，说道：“我至今还能闻到年轻时海风的咸腥，还有鲜鱼的气息。”",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "15",
+        "options": [
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          },
+          {
+            "value": "25",
+            "description": "25",
+            "descriptionEn": "25"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "9:16",
+        "options": [
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "storyboard",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "storyboard",
+        "description": "storyboard",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "PixverseV6TextToVideo",
+    "internal_name": "RH_PixverseV6TextToVideo",
+    "display_name": "RH PixVerse V6 文生视频",
+    "name_cn": "PixVerse V6 文生视频",
+    "name_en": "pixverse-v6/text-to-video",
+    "endpoint": "pixverse-v6/text-to-video",
+    "output_type": "video",
+    "category": "RunningHub/PixVerse",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "场景、运动、镜头和氛围的文本描述",
+        "defaultValue": "一位年轻女性站在阳光明媚的城市街道上，棕色编发，佩戴珍珠耳环，戴着豹纹圆形太阳镜，围着深蓝色紫星图案围巾，身穿黑色皮夹克。她温暖地对着镜头微笑。背景是模糊的城市建筑和晴朗蓝天。柔和的自然阳光照亮她的脸庞。微风轻拂，发丝和围巾微微飘动。电影感构图，浅景深，暖色调调色，4K画质，流畅慢动作质感。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "360p",
+            "description": "360p",
+            "descriptionEn": "360p"
+          },
+          {
+            "value": "540p",
+            "description": "540p",
+            "descriptionEn": "540p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒）",
+        "defaultValue": 5,
+        "min": 1,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "generateAudioSwitch",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "generateAudioSwitch",
+        "description": "是否生成同步音频",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出画幅比例",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "thinkingType",
+        "type": "LIST",
+        "required": false,
+        "label": "thinkingType",
+        "description": "提示词推理优化模式",
+        "defaultValue": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "enabled",
+            "description": "enabled",
+            "descriptionEn": "enabled"
+          },
+          {
+            "value": "disabled",
+            "description": "disabled",
+            "descriptionEn": "disabled"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "PixverseV6ImageToVideo",
+    "internal_name": "RH_PixverseV6ImageToVideo",
+    "display_name": "RH PixVerse V6 图生视频",
+    "name_cn": "PixVerse V6 图生视频",
+    "name_en": "pixverse-v6/image-to-video",
+    "endpoint": "pixverse-v6/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/PixVerse",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "参考图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "运动、镜头和场景氛围的文本描述",
+        "defaultValue": "一个快乐的四口之家在阳光明媚的沙滩上玩耍。母亲穿着白色背心、牛仔短裤和太阳镜，温暖地微笑着低头看着她的孩子们。父亲穿着白色T恤和薄荷绿色短裤，身体前倾，调皮地伸手想抓向蹒跚学步的孩子。年长的男孩穿着白色T恤和蓝色短裤，好奇地走近母亲。年幼的蹒跚学步孩子穿着白色T恤和薄荷色短裤，兴奋地向父亲跳来，双臂张开。轻柔的海风轻拂着母亲的头发。孩子们笑着玩耍，赤脚踩在沙子上轻轻扬起。背景中，碧绿的海岸线缓缓卷起海浪。温暖的金色阳光，晴朗的蓝天。镜头缓慢推近，画面富有电影感与温暖感，浅景深，家庭生活风格摄影。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "360p",
+            "description": "360p",
+            "descriptionEn": "360p"
+          },
+          {
+            "value": "540p",
+            "description": "540p",
+            "descriptionEn": "540p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒）",
+        "defaultValue": 5,
+        "min": 1,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "generateAudioSwitch",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "generateAudioSwitch",
+        "description": "是否生成同步音频",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "thinkingType",
+        "type": "LIST",
+        "required": false,
+        "label": "thinkingType",
+        "description": "提示词推理优化模式",
+        "defaultValue": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "enabled",
+            "description": "enabled",
+            "descriptionEn": "enabled"
+          },
+          {
+            "value": "disabled",
+            "description": "disabled",
+            "descriptionEn": "disabled"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "PixverseV6Transition",
+    "internal_name": "RH_PixverseV6Transition",
+    "display_name": "RH PixVerse V6 转场",
+    "name_cn": "PixVerse V6 转场",
+    "name_en": "pixverse-v6/transition",
+    "endpoint": "pixverse-v6/transition",
+    "output_type": "video",
+    "category": "RunningHub/PixVerse",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "描述期望的转场和变换过程",
+        "defaultValue": "更换图片中模特的衣服以实现平滑过渡。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "firstImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstImageUrl",
+        "description": "起始帧图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "endImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "endImageUrl",
+        "description": "终止帧图片（可选）",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "360p",
+            "description": "360p",
+            "descriptionEn": "360p"
+          },
+          {
+            "value": "540p",
+            "description": "540p",
+            "descriptionEn": "540p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒）",
+        "defaultValue": 5,
+        "min": 1,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "generateAudioSwitch",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "generateAudioSwitch",
+        "description": "是否生成同步音频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "generateMultiClipSwitch",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "generateMultiClipSwitch",
+        "description": "是否启用多机位动态切换",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出画幅比例",
+        "defaultValue": "1:1",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "thinkingType",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "thinkingType",
+        "description": "提示词推理优化模式",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "style",
+        "type": "LIST",
+        "required": false,
+        "label": "style",
+        "description": "视觉风格（如 cyberpunk、cinematic）",
+        "options": [
+          {
+            "value": "anime",
+            "description": "anime",
+            "descriptionEn": "anime"
+          },
+          {
+            "value": "3d_animation",
+            "description": "3d_animation",
+            "descriptionEn": "3d_animation"
+          },
+          {
+            "value": "clay",
+            "description": "clay",
+            "descriptionEn": "clay"
+          },
+          {
+            "value": "comic",
+            "description": "comic",
+            "descriptionEn": "comic"
+          },
+          {
+            "value": "cyberpunk",
+            "description": "cyberpunk",
+            "descriptionEn": "cyberpunk"
+          }
+        ]
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "不希望出现的元素",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子，用于复现结果",
+        "min": -1,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "PixverseV6Extend",
+    "internal_name": "RH_PixverseV6Extend",
+    "display_name": "RH PixVerse V6 视频续写",
+    "name_cn": "PixVerse V6 视频续写",
+    "name_en": "pixverse-v6/extend",
+    "endpoint": "pixverse-v6/extend",
+    "output_type": "string",
+    "category": "RunningHub/PixVerse",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "描述续写片段中应发生的内容",
+        "defaultValue": "镜头缓慢拉远，慢慢显示出后面背景中的街景，男人侧头望向窗外。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "待续写的源视频",
+        "accept": "[\"MP4\",\"MOV\",\"WEBM\"]",
+        "maxSize": 100
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "360p",
+            "description": "360p",
+            "descriptionEn": "360p"
+          },
+          {
+            "value": "540p",
+            "description": "540p",
+            "descriptionEn": "540p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": true,
+        "label": "duration",
+        "description": "续写时长（秒）",
+        "defaultValue": 5,
+        "min": 1,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "generateAudioSwitch",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "generateAudioSwitch",
+        "description": "是否生成同步音频",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "不希望出现的元素",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "style",
+        "type": "LIST",
+        "required": false,
+        "label": "style",
+        "description": "视觉风格",
+        "options": [
+          {
+            "value": "anime",
+            "description": "anime",
+            "descriptionEn": "anime"
+          },
+          {
+            "value": "3d_animation",
+            "description": "3d_animation",
+            "descriptionEn": "3d_animation"
+          },
+          {
+            "value": "clay",
+            "description": "clay",
+            "descriptionEn": "clay"
+          },
+          {
+            "value": "comic",
+            "description": "comic",
+            "descriptionEn": "comic"
+          },
+          {
+            "value": "cyberpunk",
+            "description": "cyberpunk",
+            "descriptionEn": "cyberpunk"
+          }
+        ]
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子，用于复现结果",
+        "min": -1,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "MinimaxVoiceDesign",
+    "internal_name": "RH_MinimaxVoiceDesign",
+    "display_name": "RH minimax-音色设计",
+    "name_cn": "minimax-音色设计",
+    "name_en": "minimax/voice-design",
+    "endpoint": "minimax/voice-design",
+    "output_type": "audio",
+    "category": "RunningHub/MiniMax",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "音色描述"
+      },
+      {
+        "fieldKey": "previewText",
+        "type": "STRING",
+        "required": true,
+        "label": "previewText",
+        "description": "试听音频文本，最长500字符",
+        "maxLength": 500
+      },
+      {
+        "fieldKey": "voiceId",
+        "type": "STRING",
+        "required": false,
+        "label": "voiceId",
+        "description": "自定义生成音色的voice_id，不传则自动生成"
+      },
+      {
+        "fieldKey": "aigcWatermark",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "aigcWatermark",
+        "description": "是否在合成试听音频的末尾添加音频节奏标识",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG3ProPreviewCvImageToText",
+    "internal_name": "RH_RhartTextG3ProPreviewCvImageToText",
+    "display_name": "RH rhart-text-g-3-pro-preview-cv/image-to-text",
+    "name_cn": "rhart-text-g-3-pro-preview-cv/image-to-text",
+    "name_en": "rhart-text-g-3-pro-preview-cv/image-to-text",
+    "endpoint": "rhart-text-g-3-pro-preview-cv/image-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "请详细描述这些图像的内容。如果图像中有任何你熟悉的人物，如名人、电影角色或动画人物，请直接使用他们的名字。描述应该尽可能详细。"
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 30
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG25FlashCvImageToText",
+    "internal_name": "RH_RhartTextG25FlashCvImageToText",
+    "display_name": "RH rhart-text-g-25-flash-cv/image-to-text",
+    "name_cn": "rhart-text-g-25-flash-cv/image-to-text",
+    "name_en": "rhart-text-g-25-flash-cv/image-to-text ",
+    "endpoint": "rhart-text-g-25-flash-cv/image-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 30
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG3FlashPreviewCvImageToText",
+    "internal_name": "RH_RhartTextG3FlashPreviewCvImageToText",
+    "display_name": "RH rhart-text-g-3-flash-preview-cv/image-to-text",
+    "name_cn": "rhart-text-g-3-flash-preview-cv/image-to-text",
+    "name_en": "rhart-text-g-3-flash-preview-cv/image-to-text",
+    "endpoint": "rhart-text-g-3-flash-preview-cv/image-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 30
+      }
+    ]
+  },
+  {
+    "class_name": "RhartTextG25ProCvImageToText",
+    "internal_name": "RH_RhartTextG25ProCvImageToText",
+    "display_name": "RH rhart-text-g-25-pro-cv/image-to-text",
+    "name_cn": "rhart-text-g-25-pro-cv/image-to-text",
+    "name_en": "rhart-text-g-25-pro-cv/image-to-text",
+    "endpoint": "rhart-text-g-25-pro-cv/image-to-text",
+    "output_type": "string",
+    "category": "RunningHub/RHArt Text",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt"
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 30
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaWan25PreviewTextToVideo",
+    "internal_name": "RH_AlibabaWan25PreviewTextToVideo",
+    "display_name": "RH 万相2.5 Preview 文生视频",
+    "name_cn": "万相2.5 Preview 文生视频",
+    "name_en": "wan-2.5-preview/text-to-video",
+    "endpoint": "alibaba/wan-2.5-preview/text-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Wan",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "镜头跟随黑衣男子快速逃亡,后面一群人在追,镜头转为侧面跟拍,人物惊慌撞倒路边的水果摊爬起来继续逃,人群慌乱的声音",
+        "maxLength": 1500
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "negativePrompt",
+        "maxLength": 500
+      },
+      {
+        "fieldKey": "audioUrl",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrl",
+        "description": "音频文件URL，模型将使用该音频生成视频。时长：3～30s。文件大小：不超过15MB。超限处理：若音频长度超过 duration 值（ 如5秒），自动截取前5秒，其余部分丢弃。若音频长度不足视频时长，超出音频长度部分为无声视频。例如，音频为3秒，视频时长为5秒，输出视频前3秒有声，后2秒无声。",
+        "accept": "[\"MP3\",\"WAV\"]",
+        "maxSize": 15
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      },
+      {
+        "fieldKey": "size",
+        "type": "LIST",
+        "required": true,
+        "label": "size",
+        "description": "指定生成的视频分辨率，格式为宽*高",
+        "defaultValue": "1920*1080",
+        "options": [
+          {
+            "value": "832*480",
+            "description": "832*480 (16:9)",
+            "descriptionEn": "832*480 (16:9)"
+          },
+          {
+            "value": "480*832",
+            "description": "480*832 (9:16)",
+            "descriptionEn": "480*832 (9:16)"
+          },
+          {
+            "value": "624*624",
+            "description": "624*624 (1:1)",
+            "descriptionEn": "624*624 (1:1)"
+          },
+          {
+            "value": "1280*720",
+            "description": "1280*720 (16:9)",
+            "descriptionEn": "1280*720 (16:9)"
+          },
+          {
+            "value": "720*1280",
+            "description": "720*1280 (9:16)",
+            "descriptionEn": "720*1280 (9:16)"
+          },
+          {
+            "value": "960*960",
+            "description": "960*960 (1:1)",
+            "descriptionEn": "960*960 (1:1)"
+          },
+          {
+            "value": "1088*832",
+            "description": "1088*832 (4:3)",
+            "descriptionEn": "1088*832 (4:3)"
+          },
+          {
+            "value": "832*1088",
+            "description": "832*1088 (3:4)",
+            "descriptionEn": "832*1088 (3:4)"
+          },
+          {
+            "value": "1920*1080",
+            "description": "1920*1080 (16:9)",
+            "descriptionEn": "1920*1080 (16:9)"
+          },
+          {
+            "value": "1080*1920",
+            "description": "1080*1920 (9:16)",
+            "descriptionEn": "1080*1920 (9:16)"
+          },
+          {
+            "value": "1440*1440",
+            "description": "1440*1440 (1:1)",
+            "descriptionEn": "1440*1440 (1:1)"
+          },
+          {
+            "value": "1632*1248",
+            "description": "1632*1248 (4:3)",
+            "descriptionEn": "1632*1248 (4:3)"
+          },
+          {
+            "value": "1248*1632",
+            "description": "1248*1632 (3:4)",
+            "descriptionEn": "1248*1632 (3:4)"
+          }
+        ]
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启prompt智能改写",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机数种子",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaWan25PreviewImageToVideo",
+    "internal_name": "RH_AlibabaWan25PreviewImageToVideo",
+    "display_name": "RH 万相2.5 Preview 图生视频",
+    "name_cn": "万相2.5 Preview 图生视频",
+    "name_en": "wan-2.5-preview/image-to-video",
+    "endpoint": "alibaba/wan-2.5-preview/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Wan",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "现代都市夜景中的双人武术对决。镜头结构：先用广角展示空旷街巷与两人对峙，再用中景跟拍攻防节奏，关键打击点使用近景特写（拳脚命中、呼吸、肌肉发力）。加入低机位环绕、越肩镜头与快速平移，突出招式路线和空间关系。动作要符合真实重心与反作用力，避免漂浮感。灯光采用路灯+霓虹反射，地面有轻微积水与反光，整体风格写实、紧张、有电影感。",
+        "maxLength": 1500
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "图像分辨率：图像的宽度和高度范围为[240,8000]，单位为像素。文件大小：不超过10MB。",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"BMP\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "audioUrl",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrl",
+        "description": "音频文件URL，模型将使用该音频生成视频。时长：3～30s。文件大小：不超过15MB。超限处理：若音频长度超过 duration 值（ 如5秒），自动截取前5秒，其余部分丢弃。若音频长度不足视频时长，超出音频长度部分为无声视频。例如，音频为3秒，视频时长为5秒，输出视频前3秒有声，后2秒无声。",
+        "accept": "[\"MP3\",\"WAV\"]",
+        "maxSize": 15
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "negativePrompt",
+        "maxLength": 500
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启prompt智能改写",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机数种子",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaWan25PreviewTextToImage",
+    "internal_name": "RH_AlibabaWan25PreviewTextToImage",
+    "display_name": "RH 万相2.5 Preview 文生图",
+    "name_cn": "万相2.5 Preview 文生图",
+    "name_en": "wan-2.5-preview/text-to-image",
+    "endpoint": "alibaba/wan-2.5-preview/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/Wan",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "正向提示词，描述期望生成图像的内容和视觉特点",
+        "defaultValue": "黄金时刻窗边人像九宫格，同一位年轻成人（默认男性）保持完全一致的面容特征、肤色、眼型与自然表情。长直浅棕发自然披肩，身着简约深色无标T恤。九种姿势包括：仰光而视、微笑正对、侧脸低垂、回眸一瞥、放松唇形特写、手拨发丝、后仰迎光、干净侧颜、手托沉思。统一暖调窗光投射柔和阴影，自然肤质与柔和高光，面部锐利聚焦背景虚化。3×3网格布局，极简室内氛围，ins风编辑肖像美学，整体安静、亲密、唯美。",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "反向提示词，描述不希望出现的内容",
+        "maxLength": 500
+      },
+      {
+        "fieldKey": "size",
+        "type": "LIST",
+        "required": true,
+        "label": "size",
+        "description": "图片分辨率",
+        "defaultValue": "1280*1280",
+        "options": [
+          {
+            "value": "1280*1280",
+            "description": "1280*1280 (1:1)",
+            "descriptionEn": "1280*1280 (1:1)"
+          },
+          {
+            "value": "1104*1472",
+            "description": "1104*1472 (3:4)",
+            "descriptionEn": "1104*1472 (3:4)"
+          },
+          {
+            "value": "1472*1104",
+            "description": "1472*1104 (4:3)",
+            "descriptionEn": "1472*1104 (4:3)"
+          },
+          {
+            "value": "960*1696",
+            "description": "960*1696 (9:16)",
+            "descriptionEn": "960*1696 (9:16)"
+          },
+          {
+            "value": "1696*960",
+            "description": "1696*960 (16:9)",
+            "descriptionEn": "1696*960 (16:9)"
+          }
+        ]
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": false,
+        "label": "n",
+        "description": "生成图片数量（1-4张），直接影响费用",
+        "defaultValue": 1,
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启智能提示词改写",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机数种子，用于复现生成结果",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaWan25PreviewImageToImage",
+    "internal_name": "RH_AlibabaWan25PreviewImageToImage",
+    "display_name": "RH 万相2.5 Preview 图生图",
+    "name_cn": "万相2.5 Preview 图生图",
+    "name_en": "wan-2.5-preview/image-to-image",
+    "endpoint": "alibaba/wan-2.5-preview/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/Wan",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "正向提示词，描述期望对图片进行的编辑操作",
+        "defaultValue": "把这张照片的背景换成白天，阳光明媚",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "输入图片（1-3张）",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"BMP\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "反向提示词，描述不希望出现的内容",
+        "maxLength": 500
+      },
+      {
+        "fieldKey": "size",
+        "type": "LIST",
+        "required": false,
+        "label": "size",
+        "description": "输出图片分辨率，若未指定size，系统将默认生成总像素为 1280*1280 的图像，并按以下规则保持宽高比（近似值）：单图输入：宽高比与输入图像一致；多图输入：宽高比与最后一张输入图像一致。",
+        "defaultValue": "1280*1280",
+        "options": [
+          {
+            "value": "1280*1280",
+            "description": "1280*1280 (1:1)",
+            "descriptionEn": "1280*1280 (1:1)"
+          },
+          {
+            "value": "1024*1024",
+            "description": "1024*1024 (1:1)",
+            "descriptionEn": "1024*1024 (1:1)"
+          },
+          {
+            "value": "800*1200",
+            "description": "800*1200 (2:3)",
+            "descriptionEn": "800*1200 (2:3)"
+          },
+          {
+            "value": "1200*800",
+            "description": "1200*800 (3:2)",
+            "descriptionEn": "1200*800 (3:2)"
+          },
+          {
+            "value": "960*1280",
+            "description": "960*1280 (3:4)",
+            "descriptionEn": "960*1280 (3:4)"
+          },
+          {
+            "value": "1280*960",
+            "description": "1280*960 (4:3)",
+            "descriptionEn": "1280*960 (4:3)"
+          },
+          {
+            "value": "720*1280",
+            "description": "720*1280 (9:16)",
+            "descriptionEn": "720*1280 (9:16)"
+          },
+          {
+            "value": "1280*720",
+            "description": "1280*720 (16:9)",
+            "descriptionEn": "1280*720 (16:9)"
+          },
+          {
+            "value": "1344*576",
+            "description": "1344*576 (21:9)",
+            "descriptionEn": "1344*576 (21:9)"
+          }
+        ]
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "生成图片数量（1-4张），直接影响费用",
+        "defaultValue": 1,
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启智能提示词改写",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机数种子，用于复现生成结果",
+        "min": -1,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "GoogleVeo31LiteTextToVideo",
+    "internal_name": "RH_GoogleVeo31LiteTextToVideo",
+    "display_name": "RH 全能视频Veo 3.1 Lite 文生视频-官方稳定版",
+    "name_cn": "全能视频Veo 3.1 Lite 文生视频-官方稳定版",
+    "name_en": "google/veo3.1-lite/text-to-video-official-stable",
+    "endpoint": "google/veo3.1-lite/text-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词，描述场景、运动、镜头风格和氛围",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "反向提示词，指定不希望出现的元素",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出画幅比例",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "6",
+        "options": [
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          }
+        ]
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机数种子，用于复现结果",
+        "min": -1,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "GoogleVeo31LiteImageToVideo",
+    "internal_name": "RH_GoogleVeo31LiteImageToVideo",
+    "display_name": "RH 全能视频Veo 3.1 Lite 图生视频-官方稳定版",
+    "name_cn": "全能视频Veo 3.1 Lite 图生视频-官方稳定版",
+    "name_en": "google/veo3.1-lite/image-to-video-official-stable",
+    "endpoint": "google/veo3.1-lite/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词，描述期望的动画效果和场景氛围",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "反向提示词，指定不希望出现的元素",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "输入图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出画幅比例",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "6",
+        "options": [
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机数种子，用于复现结果",
+        "min": -1,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "GoogleVeo31LiteStartEndToVideo",
+    "internal_name": "RH_GoogleVeo31LiteStartEndToVideo",
+    "display_name": "RH 全能视频Veo 3.1 Lite 首尾帧生视频-官方稳定版",
+    "name_cn": "全能视频Veo 3.1 Lite 首尾帧生视频-官方稳定版",
+    "name_en": "google/veo3.1-lite/start-end-to-video-official-stable",
+    "endpoint": "google/veo3.1-lite/start-end-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词，描述期望的过渡效果和场景变化",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "firstImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstImageUrl",
+        "description": "起始帧图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "lastImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "lastImageUrl",
+        "description": "结束帧图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出画幅比例",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "反向提示词，指定不希望出现的元素",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机数种子，用于复现结果",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
       }
     ]
   }

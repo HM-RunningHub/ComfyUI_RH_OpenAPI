@@ -1,18 +1,18 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-216-blue)
+![Nodes](https://img.shields.io/badge/Nodes-242-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 **English** | [中文](README.md)
 
 **ComfyUI_RH_OpenAPI** is a **1:1 ComfyUI implementation** of the [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api), with additional Seedance2.0 asset management nodes.
 
-RunningHub provides 220 standard model APIs covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. This project converts every API endpoint into a corresponding ComfyUI node, and adds 3 Seedance2.0 asset helper nodes plus 1 settings node, for a total of 224 ComfyUI nodes. You can access all standard model capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the new `real_person_mode` toggle — no local GPU required, zero cold-start latency.
+The project currently includes 238 standard model API nodes covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. Together with 3 Seedance2.0 asset helper nodes and 1 settings node, it provides 242 ComfyUI nodes in total. You can access RunningHub standard model capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the `real_person_mode` toggle — no local GPU required, zero cold-start latency.
 
 ## 📌 Features
 
-- **Node Count** — 224 ComfyUI nodes in total: 220 standard model nodes, 3 Seedance2.0 asset nodes, and 1 settings node
+- **Node Count** — 242 ComfyUI nodes in total: 238 standard model nodes, 3 Seedance2.0 asset nodes, and 1 settings node
 - **Plug & Play** — No model downloads, no GPU needed — just an API Key
 - **Dynamic Registration** — Nodes are auto-generated from a JSON registry; adding new models requires only a registry update
 - **Media Support** — Automatic upload/download/conversion for images, videos, and audio, seamlessly integrated with ComfyUI native types
@@ -25,7 +25,7 @@ RunningHub provides 220 standard model APIs covering image generation, video gen
 
 ## 🎨 Supported Models
 
-### Image Generation (51 Nodes)
+### Image Generation (53 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
@@ -36,47 +36,49 @@ RunningHub provides 220 standard model APIs covering image generation, video gen
 | Grok 3 / Grok 4 Image (xAI) | 全能图片 X-3 / X-4 | Text-to-Image, Image-to-Image | 4 |
 | Grok Image Low-Price Channel (xAI) | 全能图片 X | Text-to-Image, Image-to-Image | 2 |
 | Qwen Image 2.0 / 2.0 Pro (Alibaba) | 千问 | Text-to-Image, Image Editing | 4 |
-| Wan 2.7 (Alibaba) | — | Text-to-Image, Image Edit | 4 |
+| Wan 2.5 / 2.7 (Alibaba) | — | Text-to-Image, Image Edit | 6 |
+| Higgsfield | — | Image-to-Image (Soul) | 1 |
 | TopazLabs | — | Image Upscale: Standard V2 / Low Res V2 / CGI / High Fidelity V2 / Text Refine | 5 |
 | Seedream v4 / v4.5 / v5 Lite (ByteDance) | — | Text-to-Image, Image-to-Image | 6 |
 | FLUX Dev (Black Forest Labs) | — | Text-to-Image, Text-to-Image LoRA | 2 |
 | Midjourney | 悠船 | Text-to-Image v6/v6.1/niji6/niji7/v7 | 5 |
 
-### Video Generation (133 Nodes)
+### Video Generation (142 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
 | Sora 2 (OpenAI) | 全能视频 S / S Official | Text/Image-to-Video, Pro, Character Upload, Async | 13 |
-| Google Veo 3.1 | 全能视频 V3.1 | Fast/Pro Text/Image/Start-End-to-Video, Reference, Video Extend | 13 |
+| Google Veo 3.1 / 3.1 Lite | 全能视频 V3.1 / Veo 3.1 Lite Official Stable | Fast/Pro/Lite Text/Image/Start-End-to-Video, Reference, Video Extend | 16 |
 | Grok Imagine (xAI) | 全能视频 G / G Official | Text/Image-to-Video, Edit Video | 5 |
 | Kling (Kuaishou) | — | v2.5/v2.6/v3.0/o1/o3, Text/Image/Start-End/Reference/Motion Control/Edit/Elements/Lip Sync | 30 |
 | Vidu (Shengshu) | — | q2/q3, Text/Image/Start-End/Reference-to-Video, Pro Fast | 19 |
-| Wan 2.6 / 2.7 (Alibaba) | — | Text/Image/Reference-to-Video, Flash, Video Continuation | 9 |
+| Wan 2.5 / 2.6 / 2.7 (Alibaba) | — | Text/Image/Reference-to-Video, Flash, Video Continuation | 11 |
 | MiniMax Hailuo | — | 02/2.3/2.3-fast, Text/Image/Start-End-to-Video | 13 |
 | Seedance v1.5 / 2.0 (ByteDance) | — | Text/Image/Multimodal-to-Video, Fast, Reference-to-Video | 11 |
-| Runway Gen-4 Turbo / Aleph | 全能视频R | Image-to-Video, Video Editing | 3 |
+| Runway Gen-4 Turbo / Aleph / SD2.0 Trial | 全能视频R | Image-to-Video, Video Editing, Trial Video Generation | 5 |
 | LTX-2 19B (Lightricks) | — | Text-to-Video LoRA | 1 |
-| PixVerse v5.5 / v5.6 | — | Text/Image-to-Video, Transition, Effects | 6 |
-| Higgsfield | — | Image-to-Image (Soul), Image-to-Video (Dop) | 2 |
+| PixVerse v5.5 / v5.6 / v6 | — | Text/Image-to-Video, Transition, Effects | 9 |
+| Higgsfield | — | Image-to-Video (Dop) | 1 |
 | SkyReels V3/V4 (Kunlun) | — | Text/Image-to-Video, Reference, Restyling, Video Extension | 7 |
 | TopazLabs | — | Video Enhancement & Upscaling | 1 |
 
-### Text Understanding (12 Nodes)
+### Text Understanding (17 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
-| Gemini 3 Flash Preview (Google) | RHArt Text G-3 Flash Preview | Image-to-Text, Text-to-Text, Video Understanding | 3 |
-| Gemini 3 Pro Preview (Google) | RHArt Text G-3 Pro Preview | Image-to-Text, Text-to-Text, Video Understanding | 3 |
-| Gemini 2.5 Flash (Google) | RHArt Text G-2.5 Flash | Image-to-Text, Text-to-Text, Video Understanding | 3 |
-| Gemini 2.5 Pro (Google) | RHArt Text G-2.5 Pro | Image-to-Text, Text-to-Text, Video Understanding | 3 |
+| Gemini 3 Flash Preview (Google) | RHArt Text G-3 Flash Preview | Image-to-Text, CV Image-to-Text, Text-to-Text, Video Understanding | 4 |
+| Gemini 3 Pro Preview (Google) | RHArt Text G-3 Pro Preview | Image-to-Text, CV Image-to-Text, Text-to-Text, Video Understanding | 4 |
+| Gemini 2.5 Flash (Google) | RHArt Text G-2.5 Flash | Image-to-Text, CV Image-to-Text, Text-to-Text, Video Understanding | 4 |
+| Gemini 2.5 Pro (Google) | RHArt Text G-2.5 Pro | Image-to-Text, CV Image-to-Text, Text-to-Text, Video Understanding | 4 |
+| Qwen 27B Chat (Alibaba) | RHArt Text Qwen 27B | Multi-turn Chat | 1 |
 
-### Audio Synthesis (8 Nodes)
+### Audio Synthesis (9 Nodes)
 
 | Model Series | Capabilities | Nodes |
 |-------------|-------------|-------|
 | Minimax Speech | 02/2.6/2.8 HD & Turbo | 6 |
 | Minimax Music 2.5 | Text-to-Music | 1 |
-| Minimax Voice Clone | Voice Cloning | 1 |
+| Minimax Voice Clone / Voice Design | Voice Cloning, Voice Design | 2 |
 
 ### 3D Modeling (12 Nodes)
 
@@ -116,18 +118,6 @@ pip install -r requirements.txt
 
 Restart ComfyUI after installation.
 
-### SparkVideo VIDEO Asset Preprocessing
-
-- `RH Seedance2.0 Asset/Create` requires `ffmpeg` and `ffprobe` when it preprocesses `VIDEO` inputs
-- On the public `main` branch, Windows builds automatically detect these tools and, if missing, download a portable FFmpeg bundle into a local cache without requiring a manual `PATH` update
-- Default cache locations:
-  - Windows: `%LOCALAPPDATA%\ComfyUI_RH_OpenAPI\ffmpeg`
-  - macOS: `~/Library/Caches/ComfyUI_RH_OpenAPI/ffmpeg`
-  - Linux: `~/.cache/ComfyUI_RH_OpenAPI/ffmpeg`
-- Auto-download tries GitHub Releases first, then gyan.dev; if your network is restricted, set `RH_FFMPEG_DOWNLOAD_URL` to point to a custom mirror
-- To override the detected binaries manually, set `RH_FFMPEG_PATH`, `RH_FFPROBE_PATH`, or `RH_FFMPEG_CACHE_DIR` in your environment or `config/.env`
-- To disable Windows auto-download, set `RH_DISABLE_AUTO_FFMPEG_DOWNLOAD=1`
-
 ## ⚙️ Configuration
 
 You need a RunningHub API Key. Register and get one at the [RunningHub API Console](https://www.runninghub.cn/enterprise-api/sharedApi).
@@ -154,8 +144,6 @@ cp config/.env.example config/.env
 
 > **Tip**: If `RH_API_BASE_URL` and `RH_API_KEY` are already configured via environment variables or `config/.env`, the `api_config` input on every node becomes optional — you can run nodes directly without connecting the **RH OpenAPI Settings** node.
 
-> **Video tool override**: If you already have your own FFmpeg installation, set `RH_FFMPEG_PATH` / `RH_FFPROBE_PATH` in `config/.env` or your system environment. Each value can point either to the executable itself or to a directory that contains it.
-
 ## 🚀 Usage
 
 1. Configure your API Key (see Configuration above)
@@ -165,14 +153,14 @@ cp config/.env.example config/.env
 
 ### Example Workflows
 
-The project includes 215 example workflow JSON files in the `examples/` directory, including 3 Seedance2.0 asset-related workflows. Download and import directly into ComfyUI.
+The project includes 239 example workflow JSON files in the `examples/` directory, including 3 Seedance2.0 asset-related workflows. Download and import directly into ComfyUI.
 
 ## 📁 Project Structure
 
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # Entry point, registers all nodes
-├── models_registry.json     # Model registry (220 model definitions)
+├── models_registry.json     # Model registry (238 model definitions)
 ├── config/
 │   └── .env.example         # Configuration template
 ├── core/                    # Core infrastructure
@@ -183,13 +171,12 @@ ComfyUI_RH_OpenAPI/
 │   ├── task.py              # Task submit & poll logic
 │   ├── image.py             # Image utilities (Tensor ↔ PIL)
 │   ├── video.py             # Video download utilities
-│   ├── ffmpeg_tools.py      # ffmpeg / ffprobe discovery and caching
 │   └── audio.py             # Audio download/convert utilities
 ├── nodes/                   # Node implementations
 │   ├── settings_node.py     # RH OpenAPI Settings node
 │   ├── node_factory.py      # Dynamic node factory
 │   └── assets/              # Seedance2.0 asset management nodes
-└── examples/                # 215 example workflows
+└── examples/                # 239 example workflows
 ```
 
 ## 🔧 Architecture
