@@ -1,20 +1,54 @@
 import { app } from "/scripts/app.js";
 
+const normalizeLocale = (value) =>
+  String(value || "").toLowerCase().startsWith("zh") ? "zh" : "en";
+
+function readVueLocale() {
+  try {
+    const vueRoot = document.querySelector("#vue-app")?.__vue_app__;
+    const i18nInst = vueRoot?.config?.globalProperties?.$i18n;
+    const localeCandidates = [
+      i18nInst?.locale?.value,
+      i18nInst?.global?.locale?.value,
+      i18nInst?.locale,
+      document.documentElement?.lang,
+      document.body?.dataset?.locale,
+    ];
+    for (const candidate of localeCandidates) {
+      if (typeof candidate === "string" && candidate.trim()) {
+        return normalizeLocale(candidate);
+      }
+    }
+  } catch (_) {}
+  return null;
+}
+
 function detectLocale() {
   // RunningHub stores locale in localStorage as "AGL.Locale"
   try {
     const aglLocale = (window.top || window).localStorage.getItem("AGL.Locale");
-    if (aglLocale) return aglLocale.startsWith("zh") ? "zh" : "en";
+    if (aglLocale) return normalizeLocale(aglLocale);
   } catch (_) {}
 
+  const vueLocale = readVueLocale();
+  if (vueLocale) return vueLocale;
+
   // Fallback: standard ComfyUI reads navigator.language
-  return (navigator.language || "en").startsWith("zh") ? "zh" : "en";
+  return normalizeLocale(navigator.languages?.[0] || navigator.language || "en");
 }
+
+const stripCategoryDecoration = (value) =>
+  String(value || "").replace(/^[^A-Za-z0-9\u4e00-\u9fff]+/u, "").trim();
 
 app.registerExtension({
   name: "RH.OpenAPI.Panel",
   _i18n: null,
   _locale: "en",
+
+  _resolveLocale() {
+    this._locale = detectLocale();
+    return this._locale;
+  },
 
   rh: {
     type: "nodes",
@@ -23,7 +57,7 @@ app.registerExtension({
 
   // init() runs BEFORE node registration — load translations here
   async init() {
-    this._locale = detectLocale();
+    this._resolveLocale();
     try {
       const resp = await fetch(
         "/extensions/ComfyUI_RH_OpenAPI/js/panel_i18n.json",
@@ -39,7 +73,7 @@ app.registerExtension({
   // Modifying nodeData.display_name here makes node.title use the translated name.
   beforeRegisterNodeDef(nodeType, nodeData) {
     if (!this._i18n?.nodes) return;
-    const nameMap = this._i18n.nodes[this._locale];
+    const nameMap = this._i18n.nodes[this._resolveLocale()];
     if (nameMap && nameMap[nodeData.name]) {
       nodeData.display_name = nameMap[nodeData.name];
     }
@@ -49,7 +83,7 @@ app.registerExtension({
   // Patching display_name here makes the Vue search/library show translated names.
   beforeRegisterVueAppNodeDefs(nodeDefArray) {
     if (!this._i18n?.nodes) return;
-    const nameMap = this._i18n.nodes[this._locale];
+    const nameMap = this._i18n.nodes[this._resolveLocale()];
     if (!nameMap) return;
     for (const def of nodeDefArray) {
       if (nameMap[def.name]) {
@@ -61,7 +95,7 @@ app.registerExtension({
   // Patch title when new node instances are created on the canvas
   nodeCreated(node) {
     if (!this._i18n?.nodes) return;
-    const nameMap = this._i18n.nodes[this._locale];
+    const nameMap = this._i18n.nodes[this._resolveLocale()];
     if (nameMap && nameMap[node.type]) {
       node.title = nameMap[node.type];
     }
@@ -72,14 +106,14 @@ app.registerExtension({
   // so it overrides any stale title persisted in the workflow JSON.
   loadedGraphNode(node) {
     if (!this._i18n?.nodes) return;
-    const nameMap = this._i18n.nodes[this._locale];
+    const nameMap = this._i18n.nodes[this._resolveLocale()];
     if (nameMap && nameMap[node.type]) {
       node.title = nameMap[node.type];
     }
   },
 
   async setup() {
-    const locale = this._locale;
+    const locale = this._resolveLocale();
     const i18n = this._i18n || {};
 
     // Also inject into vue-i18n so that st() calls work for our nodes
@@ -159,15 +193,36 @@ app.registerExtension({
       ...(fallbackCategories[locale] || {}),
       ...((i18n.categories && i18n.categories[locale]) || {}),
     };
-    const categoryAliases = {
-      "音频": "Audio",
-      "音频生成": "Audio",
-      "SparkVideo Assets": "Seedance2.0 Assets",
-      "SparkVideo 素材": "Seedance2.0 Assets",
-      "超能视频2.0素材": "Seedance2.0 Assets",
-      "Seedance2.0素材": "Seedance2.0 Assets",
+    const categoryAliases = {};
+    const registerCategoryAlias = (alias, canonical) => {
+      const cleanedAlias = stripCategoryDecoration(alias);
+      for (const candidate of [alias, cleanedAlias]) {
+        if (candidate) categoryAliases[candidate] = canonical;
+      }
     };
-    const normalizeCategoryName = (name) => categoryAliases[name] || name;
+    const knownCategoryKeys = new Set([
+      ...Object.keys(fallbackCategories.en || {}),
+      ...Object.keys(fallbackCategories.zh || {}),
+      ...Object.keys((i18n.categories && i18n.categories.en) || {}),
+      ...Object.keys((i18n.categories && i18n.categories.zh) || {}),
+    ]);
+    for (const canonical of knownCategoryKeys) {
+      registerCategoryAlias(canonical, canonical);
+      registerCategoryAlias(fallbackCategories.en?.[canonical], canonical);
+      registerCategoryAlias(fallbackCategories.zh?.[canonical], canonical);
+      registerCategoryAlias(i18n.categories?.en?.[canonical], canonical);
+      registerCategoryAlias(i18n.categories?.zh?.[canonical], canonical);
+    }
+    registerCategoryAlias("音频", "Audio");
+    registerCategoryAlias("音频生成", "Audio");
+    registerCategoryAlias("SparkVideo Assets", "Seedance2.0 Assets");
+    registerCategoryAlias("SparkVideo 素材", "Seedance2.0 Assets");
+    registerCategoryAlias("超能视频2.0素材", "Seedance2.0 Assets");
+    registerCategoryAlias("Seedance2.0素材", "Seedance2.0 Assets");
+    const normalizeCategoryName = (name) => {
+      const cleanedName = stripCategoryDecoration(name);
+      return categoryAliases[name] || categoryAliases[cleanedName] || cleanedName || name;
+    };
     const nodeNameMap = {
       ...((i18n.nodes && i18n.nodes[locale]) || {}),
     };
