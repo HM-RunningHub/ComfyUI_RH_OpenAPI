@@ -1,18 +1,18 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-242-blue)
+![Nodes](https://img.shields.io/badge/Nodes-250-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 [English](README_EN.md) | **中文**
 
 **ComfyUI_RH_OpenAPI** 是 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 的 **1:1 ComfyUI 实现**，并额外补充了 Seedance2.0 素材资产管理节点。
 
-本项目当前收录 238 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点与 1 个设置节点，总计提供 242 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
+本项目当前收录 246 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点与 1 个设置节点，总计提供 250 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
 
 ## 📌 项目特点
 
-- **节点总量** — 共 242 个 ComfyUI 节点，其中包含 238 个标准模型节点、3 个 Seedance2.0 素材节点和 1 个设置节点
+- **节点总量** — 共 250 个 ComfyUI 节点，其中包含 246 个标准模型节点、3 个 Seedance2.0 素材节点和 1 个设置节点
 - **即插即用** — 无需下载模型、无需 GPU，只需 API Key 即可调用全部能力
 - **动态注册** — 基于 JSON 注册表自动生成节点，新模型上线后仅需更新注册表
 - **多媒体支持** — 图片、视频、音频自动上传 / 下载 / 格式转换，与 ComfyUI 原生类型无缝衔接
@@ -43,21 +43,21 @@
 | FLUX Dev（Black Forest Labs） | — | 文生图、文生图 LoRA | 2 |
 | Midjourney | 悠船 | 文生图 v6/v6.1/niji6/niji7/v7 | 5 |
 
-### 视频生成（142 个节点）
+### 视频生成（155 个节点）
 
 | 模型 | RH 平台名称 | 能力 | 节点数 |
 |------|-----------|------|--------|
 | Sora 2（OpenAI） | 全能视频 S / S 官方 | 文/图生视频、Pro、角色上传、异步 | 13 |
-| Google Veo 3.1 / 3.1 Lite（Google） | 全能视频 V3.1 / Veo 3.1 Lite 官方稳定版 | Fast/Pro/Lite 文/图/首尾帧生视频、参考生视频、视频扩展 | 16 |
-| Grok Imagine（xAI） | 全能视频 G / G 官方 | 文/图生视频、编辑视频 | 5 |
+| Google Veo 3.1 / 3.1 Lite（Google） | 全能视频 V3.1 / Veo 3.1 Lite 官方稳定版 | Fast/Pro/Lite 文/图/首尾帧生视频、参考生视频、视频扩展 | 18 |
+| Grok Imagine（xAI） | 全能视频 G / G 官方 | 文/图/参考生视频、视频扩展、编辑视频 | 7 |
 | Kling 可灵（快手） | — | v2.5/v2.6/v3.0/o1/o3，文/图/首尾帧/参考/动作控制/编辑/元素/口型同步 | 30 |
-| Vidu（生数科技） | — | q2/q3，文/图/首尾帧/参考生视频、Pro Fast | 19 |
-| Wan 万相 2.5 / 2.6 / 2.7（阿里巴巴） | — | 文/图/参考生视频、Flash、视频续写 | 11 |
+| Vidu（生数科技） | — | q2/q3，文/图/首尾帧/参考生视频、Pro Fast | 20 |
+| Wan 万相 2.5 / 2.6 / 2.7（阿里巴巴） | — | 文/图/参考生视频、Flash、视频编辑、视频续写 | 12 |
 | MiniMax Hailuo 海螺 | — | 02/2.3/2.3-fast，文/图/首尾帧生视频 | 13 |
-| Seedance v1.5 / 2.0（字节跳动） | — | 文/图/多模态生视频、Fast、参考生视频 | 11 |
+| Seedance v1.5 / 2.0（字节跳动） | — | 文/图/多模态生视频、Fast、参考生视频 | 17 |
 | Runway Gen-4 Turbo / Aleph / SD2.0 Trial | 全能视频R | 图生视频、视频编辑、试用版视频生成 | 5 |
 | LTX-2 19B（Lightricks） | — | 文生视频 LoRA | 1 |
-| PixVerse v5.5 / v5.6 / v6 | — | 文/图生视频、转场、特效 | 9 |
+| PixVerse v5.5 / v5.6 / v6 | — | 文/图生视频、转场、特效 | 10 |
 | Higgsfield | — | 图生视频（Dop） | 1 |
 | SkyReels V3/V4（昆仑万维） | — | 文/图生视频、参考生视频、视频风格化、视频扩展 | 7 |
 | TopazLabs | — | 视频增强放大 | 1 |
@@ -153,14 +153,14 @@ cp config/.env.example config/.env
 
 ### 示例工作流
 
-项目在 `examples/` 目录下提供了 239 个示例工作流 JSON 文件，其中包含 3 个 Seedance2.0 素材相关工作流。下载后直接导入 ComfyUI 即可使用。
+项目在 `examples/` 目录下提供了 231 个示例工作流 JSON 文件，其中包含 3 个 Seedance2.0 素材相关工作流。下载后直接导入 ComfyUI 即可使用。
 
 ## 📁 项目结构
 
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # 入口文件，注册所有节点
-├── models_registry.json     # 模型注册表（238 个模型定义）
+├── models_registry.json     # 模型注册表（246 个模型定义）
 ├── config/
 │   └── .env.example         # 配置文件示例
 ├── core/                    # 核心基础设施
@@ -176,7 +176,7 @@ ComfyUI_RH_OpenAPI/
 │   ├── settings_node.py     # RH OpenAPI Settings 配置节点
 │   ├── node_factory.py      # 动态节点工厂
 │   └── assets/              # Seedance2.0 素材资产节点
-└── examples/                # 239 个示例工作流
+└── examples/                # 231 个示例工作流
 ```
 
 ## 🔧 架构说明

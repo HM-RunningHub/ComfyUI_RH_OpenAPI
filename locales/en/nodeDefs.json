@@ -2,12 +2,6 @@
   "RH_RhartVideoSOfficialImageToVideoRealistic": {
     "display_name": "RH Sora 2 Image to Video Realistic Official Stable"
   },
-  "RH_RhartVideoSImageToVideo": {
-    "display_name": "RH Sora 2 Image to Video Channel Low Price"
-  },
-  "RH_RhartVideoSTextToVideo": {
-    "display_name": "RH Sora 2 Text to Video Channel Low Price"
-  },
   "RH_RhartImageV1Edit": {
     "display_name": "RH Nano Banana Edit Channel Low Price"
   },
@@ -41,12 +35,6 @@
   "RH_RhartVideoV31FastImageToVideo": {
     "display_name": "RH Google Veo3.1 Fast Image to Video Channel Low Price"
   },
-  "RH_RhartVideoSImageToVideoPro": {
-    "display_name": "RH Sora 2 Image to Video PRO Channel Low Price"
-  },
-  "RH_RhartVideoSTextToVideoPro": {
-    "display_name": "RH Sora 2 Text to Video PRO Channel Low Price"
-  },
   "RH_RhartVideoSSoraUploadCharacter": {
     "display_name": "RH Sora Upload Character Channel Low Price"
   },
@@ -55,30 +43,6 @@
   },
   "RH_AlibabaWan26ImageToVideo": {
     "display_name": "RH Alibaba Wan 2.6 Image to Video"
-  },
-  "RH_AlibabaWan27TextToVideo": {
-    "display_name": "RH Alibaba Wan 2.7 Text to Video"
-  },
-  "RH_AlibabaWan27ImageImageToVideo": {
-    "display_name": "RH Alibaba Wan 2.7 Image to Video First Last Frames to Video"
-  },
-  "RH_AlibabaWan27VideoImageToVideo": {
-    "display_name": "RH Alibaba Wan 2.7 Image to Video Video Continuation"
-  },
-  "RH_AlibabaWan27ReferenceToVideo": {
-    "display_name": "RH Wan 2.7 Reference to Video"
-  },
-  "RH_AlibabaWan27ImageEdit": {
-    "display_name": "RH Wan 2.7 Image Edit"
-  },
-  "RH_AlibabaWan27ImageEditPro": {
-    "display_name": "RH Wan 2.7 Image Edit PRO"
-  },
-  "RH_AlibabaWan27TextToImage": {
-    "display_name": "RH Wan 2.7 Text to Image"
-  },
-  "RH_AlibabaWan27TextToImagePro": {
-    "display_name": "RH Wan 2.7 Text to Image PRO"
   },
   "RH_KlingV25TurboProTextToVideo": {
     "display_name": "RH Kling V2.5 Turbo PRO Text to Video"
@@ -650,14 +614,128 @@
   "RH_RhartVideoSparkvideo20FastMultimodalVideo": {
     "display_name": "RH Seedance2.0 Fast Multimodal Video"
   },
-  "RH_RhVideoUpscaler": {
-    "display_name": "RH Rh Video Upscaler"
-  },
-  "RH_RhVideoFpsIncreaser": {
-    "display_name": "RH Rh Video Fps Increaser"
-  },
   "RH_ViduReferenceToVideoQ3Mix": {
     "display_name": "RH Vidu Reference to Video Q3 Mix"
+  },
+  "RH_AlibabaWan27TextToVideo": {
+    "display_name": "RH Wan 2.7 Text to Video"
+  },
+  "RH_AlibabaWan27ReferenceToVideo": {
+    "display_name": "RH Wan 2.7 Reference to Video"
+  },
+  "RH_AlibabaWan27ImageEdit": {
+    "display_name": "RH Wan 2.7 Image Edit"
+  },
+  "RH_AlibabaWan27ImageEditPro": {
+    "display_name": "RH Wan 2.7 Image Edit PRO"
+  },
+  "RH_AlibabaWan27TextToImage": {
+    "display_name": "RH Wan 2.7 Text to Image"
+  },
+  "RH_AlibabaWan27TextToImagePro": {
+    "display_name": "RH Wan 2.7 Text to Image PRO"
+  },
+  "RH_RhartTextQwen27bChat": {
+    "display_name": "RH Rhart Text Qwen 27b Chat"
+  },
+  "RH_AlibabaWan27ImageToVideo": {
+    "display_name": "RH Wan 2.7 Image to Video"
+  },
+  "RH_AlibabaWan27VideoExtend": {
+    "display_name": "RH Wan 2.7 Video Extend"
+  },
+  "RH_AlibabaWan27VideoEdit": {
+    "display_name": "RH Wan 2.7 Video Edit"
+  },
+  "RH_RhartVideoSImageToVideoProDeprecated": {
+    "display_name": "RH Sora 2 Image to Video PRO Channel Low Price"
+  },
+  "RH_RhartVideoSTextToVideoProDeprecated": {
+    "display_name": "RH Sora 2 Text to Video PRO Channel Low Price"
+  },
+  "RH_PixverseV6TextToVideo": {
+    "display_name": "RH Pixverse V6 Text to Video"
+  },
+  "RH_PixverseV6ImageToVideo": {
+    "display_name": "RH Pixverse V6 Image to Video"
+  },
+  "RH_PixverseV6Transition": {
+    "display_name": "RH Pixverse V6 Transition"
+  },
+  "RH_PixverseV6Extend": {
+    "display_name": "RH Pixverse V6 Extend"
+  },
+  "RH_MinimaxVoiceDesign": {
+    "display_name": "RH Minimax Voice Design"
+  },
+  "RH_RhartTextG3ProPreviewCvImageToText": {
+    "display_name": "RH Rhart Text G 3 PRO Preview Cv Image to Text"
+  },
+  "RH_RhartTextG25FlashCvImageToText": {
+    "display_name": "RH Rhart Text G 25 Flash Cv Image to Text"
+  },
+  "RH_RhartTextG3FlashPreviewCvImageToText": {
+    "display_name": "RH Rhart Text G 3 Flash Preview Cv Image to Text"
+  },
+  "RH_RhartTextG25ProCvImageToText": {
+    "display_name": "RH Rhart Text G 25 PRO Cv Image to Text"
+  },
+  "RH_AlibabaWan25PreviewTextToVideo": {
+    "display_name": "RH Wan 2.5 Preview Text to Video"
+  },
+  "RH_AlibabaWan25PreviewImageToVideo": {
+    "display_name": "RH Wan 2.5 Preview Image to Video"
+  },
+  "RH_AlibabaWan25PreviewTextToImage": {
+    "display_name": "RH Wan 2.5 Preview Text to Image"
+  },
+  "RH_AlibabaWan25PreviewImageToImage": {
+    "display_name": "RH Wan 2.5 Preview Image to Image"
+  },
+  "RH_GoogleVeo31LiteTextToVideo": {
+    "display_name": "RH Google Veo3.1 Lite Text to Video Official Stable"
+  },
+  "RH_GoogleVeo31LiteImageToVideo": {
+    "display_name": "RH Google Veo3.1 Lite Image to Video Official Stable"
+  },
+  "RH_GoogleVeo31LiteStartEndToVideo": {
+    "display_name": "RH Google Veo3.1 Lite Start End to Video Official Stable"
+  },
+  "RH_RhartVideoSImageToVideo": {
+    "display_name": "RH Sora 2 Image to Video Channel Low Price"
+  },
+  "RH_RhartVideoSTextToVideo": {
+    "display_name": "RH Sora 2 Text to Video Channel Low Price"
+  },
+  "RH_RhartVideoVideoUpscaler": {
+    "display_name": "RH Rh Video Upscaler"
+  },
+  "RH_RhartVideoVideoFpsIncreaser": {
+    "display_name": "RH Rh Video Fps Increaser"
+  },
+  "RH_BytedanceSeedance20GlobalTextToVideo": {
+    "display_name": "RH Seedance 2.0 Global Text to Video"
+  },
+  "RH_BytedanceSeedance20GlobalImageToVideo": {
+    "display_name": "RH Seedance 2.0 Global Image to Video"
+  },
+  "RH_BytedanceSeedance20GlobalMultimodalVideo": {
+    "display_name": "RH Seedance 2.0 Global Multimodal Video"
+  },
+  "RH_BytedanceSeedance20GlobalFastTextToVideo": {
+    "display_name": "RH Seedance 2.0 Global Fast Text to Video"
+  },
+  "RH_BytedanceSeedance20GlobalFastImageToVideo": {
+    "display_name": "RH Seedance 2.0 Global Fast Image to Video"
+  },
+  "RH_BytedanceSeedance20GlobalFastMultimodalVideo": {
+    "display_name": "RH Seedance 2.0 Global Fast Multimodal Video"
+  },
+  "RH_RhartVideoGOfficialReferenceToVideo": {
+    "display_name": "RH XAI Grok Imagine Video Reference to Video Official Stable"
+  },
+  "RH_RhartVideoGOfficialVideoExtend": {
+    "display_name": "RH XAI Grok Imagine Video Video Extend Official Stable"
   },
   "RH_SparkVideoAssetCreate": {
     "display_name": "RH Seedance2.0 Asset/Create"
