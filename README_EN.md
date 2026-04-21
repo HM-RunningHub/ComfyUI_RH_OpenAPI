@@ -35,7 +35,7 @@ The project currently includes 255 standard model API nodes covering image gener
 | GPT Image 1.5 (OpenAI) | 全能图片 G-1.5 / G-1.5 Official | Text-to-Image, Image-to-Image | 4 |
 | Grok 3 / Grok 4 Image (xAI) | 全能图片 X-3 / X-4 | Text-to-Image, Image-to-Image | 4 |
 | Grok Image Low-Price Channel (xAI) | 全能图片 X | Text-to-Image, Image-to-Image | 2 |
-| Image G-2.0 Low-Price Channel | 全能图片 G-2.0 | Text-to-Image, Image-to-Image | 2 |
+| GPT Image 2.0 Low-Price Channel (OpenAI) | 全能图片 G-2.0 | Text-to-Image, Image-to-Image | 2 |
 | Qwen Image 2.0 / 2.0 Pro (Alibaba) | 千问 | Text-to-Image, Image Editing | 4 |
 | Wan 2.5 / 2.7 (Alibaba) | — | Text-to-Image, Image Edit | 6 |
 | Higgsfield | — | Image-to-Image (Soul) | 1 |
