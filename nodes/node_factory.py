@@ -92,6 +92,62 @@ _MEDIA_UI_ORDER = {
 }
 
 
+# Sentinel value for LIST params that should be omitted from the request
+# payload entirely when the user selects it. This lets us expose an optional
+# "don't send this field, let the server apply its own default" choice inside
+# a ComfyUI COMBO widget, which otherwise always emits a string.
+#
+# Registries opt in by adding ``{"value": "empty", ...}`` to a LIST param's
+# ``options`` list (optionally with ``"defaultValue": "empty"``).
+LIST_OMIT_SENTINEL = "empty"
+
+
+def _is_mostly_chinese(text: str) -> bool:
+    """Heuristic: return True if ``text`` contains a meaningful CJK share.
+
+    We compare the count of CJK ideographs (Unified CJK block only, which is
+    sufficient for Chinese/Japanese kanji usage in prompts) against the count
+    of ASCII letters. A 30% CJK ratio is enough to flip the prompt-language
+    decision toward Chinese. Pure-latin prompts always return False, and
+    prompts with zero alphabetic content also return False (no evidence).
+    """
+    if not text:
+        return False
+    cjk = 0
+    latin = 0
+    for ch in text:
+        if "\u4e00" <= ch <= "\u9fff":
+            cjk += 1
+        elif ch.isascii() and ch.isalpha():
+            latin += 1
+    total = cjk + latin
+    if total == 0:
+        return False
+    return cjk / total >= 0.3
+
+
+def _select_prompt_template(injection: Dict[str, Any], source_text: str) -> str:
+    """Pick the right template for a ``payload_as_prompt_suffix`` injection.
+
+    Supports three shapes (in order of precedence):
+
+    * ``template_zh`` + ``template_en`` - language-aware. We inspect
+      ``source_text`` (the target prompt's current value) and return the
+      Chinese template when the prompt is mostly CJK, otherwise English.
+    * ``template`` - single template used unconditionally (back-compat).
+    * Neither - fall back to a minimal ``" {value}"`` format.
+    """
+    tzh = injection.get("template_zh")
+    ten = injection.get("template_en")
+    if tzh and ten:
+        return tzh if _is_mostly_chinese(source_text or "") else ten
+    if tzh:
+        return tzh
+    if ten:
+        return ten
+    return injection.get("template") or " {value}"
+
+
 # ---------------------------------------------------------------------------
 # INPUT_TYPES builder for non-media params
 # ---------------------------------------------------------------------------
@@ -760,25 +816,71 @@ def create_node_class(model_def: Dict) -> type:
             """Build API request payload."""
             payload = {}
 
+            # Deferred prompt-suffix injections. Processed AFTER the normal
+            # fields so we know the final value of the target prompt field.
+            prompt_suffixes = []  # list of (target_field, injection, value)
+
             # Non-media params
             for p in _non_media:
                 fk = p["fieldKey"]
                 ft = p["type"]
                 val = kwargs.get(fk)
-                if val is not None:
-                    if ft == "INT":
-                        payload[fk] = int(val)
-                    elif ft == "FLOAT":
-                        payload[fk] = float(val)
-                    elif ft == "BOOLEAN":
-                        payload[fk] = bool(val)
-                    elif ft == "STRING":
-                        s = str(val).strip()
-                        if s:
-                            payload[fk] = s
-                    else:
-                        # LIST and others
-                        payload[fk] = str(val)
+                if val is None:
+                    continue
+
+                # ``payload_as_prompt_suffix``: the field is never serialised
+                # into the outgoing payload. Instead, its value is formatted
+                # via a template and appended to another field (typically
+                # ``prompt``). Values listed in ``skip_values`` (e.g. the
+                # ``empty`` sentinel) produce no suffix at all. Useful for
+                # parameters the upstream API does not accept directly but
+                # that we still want to surface as a UI choice by baking the
+                # intent into the prompt text.
+                injection = p.get("payload_as_prompt_suffix")
+                if injection:
+                    skip_values = injection.get("skip_values") or []
+                    sval = str(val)
+                    if sval and sval not in skip_values:
+                        prompt_suffixes.append(
+                            (injection.get("target_field", "prompt"), injection, sval)
+                        )
+                    continue
+
+                if ft == "INT":
+                    payload[fk] = int(val)
+                elif ft == "FLOAT":
+                    payload[fk] = float(val)
+                elif ft == "BOOLEAN":
+                    payload[fk] = bool(val)
+                elif ft == "STRING":
+                    s = str(val).strip()
+                    if s:
+                        payload[fk] = s
+                else:
+                    # LIST and others
+                    sval = str(val)
+                    # LIST params may expose an ``empty`` sentinel option
+                    # meaning "don't send this field at all, use the
+                    # server-side default". Skip the field entirely.
+                    if ft == "LIST" and sval == LIST_OMIT_SENTINEL:
+                        continue
+                    payload[fk] = sval
+
+            # Apply deferred prompt suffix injections now that all normal
+            # fields have been written to payload. Template selection is
+            # language-aware: it inspects the (possibly multi-injection)
+            # prompt state as it grows so the final suffix matches the
+            # dominant language of the final prompt.
+            for target_field, injection, value in prompt_suffixes:
+                existing = payload.get(target_field, "")
+                if not isinstance(existing, str):
+                    existing = ""
+                template = _select_prompt_template(injection, existing)
+                try:
+                    suffix = template.format(value=value)
+                except Exception:
+                    suffix = f" {value}"
+                payload[target_field] = (existing + suffix) if existing else suffix.lstrip()
 
             # Media params - group array fields
             array_urls = {}  # field_key -> [url1, url2, ...]
