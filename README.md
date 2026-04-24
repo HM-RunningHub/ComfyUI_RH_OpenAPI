@@ -1,18 +1,18 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-259-blue)
+![Nodes](https://img.shields.io/badge/Nodes-277-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 [English](README_EN.md) | **中文**
 
 **ComfyUI_RH_OpenAPI** 是 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 的 **1:1 ComfyUI 实现**，并额外补充了 Seedance2.0 素材资产管理节点。
 
-本项目当前收录 255 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点与 1 个设置节点，总计提供 259 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
+本项目当前收录 273 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点与 1 个设置节点，总计提供 277 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
 
 ## 📌 项目特点
 
-- **节点总量** — 共 259 个 ComfyUI 节点，其中包含 255 个标准模型节点、3 个 Seedance2.0 素材节点和 1 个设置节点
+- **节点总量** — 共 277 个 ComfyUI 节点，其中包含 273 个标准模型节点、3 个 Seedance2.0 素材节点和 1 个设置节点
 - **即插即用** — 无需下载模型、无需 GPU，只需 API Key 即可调用全部能力
 - **动态注册** — 基于 JSON 注册表自动生成节点，新模型上线后仅需更新注册表
 - **多媒体支持** — 图片、视频、音频自动上传 / 下载 / 格式转换，与 ComfyUI 原生类型无缝衔接
@@ -25,17 +25,18 @@
 
 ## 🎨 支持的模型
 
-### 图像生成（55 个节点）
+### 图像生成（59 个节点）
 
 | 模型 | RH 平台名称 | 能力 | 节点数 |
 |------|-----------|------|--------|
 | Nano Banana V1 | 全能图片 V1 / V1 官方稳定版 | 文生图、图生图 | 4 |
 | Nano Banana V2（Gemini 3.1 Flash） | 全能图片 V2 / V2 官方 | 文生图、图生图 | 4 |
 | Nano Banana Pro | 全能图片 PRO / PRO 官方 | 文生图、图生图、Ultra | 6 |
-| GPT Image 1.5（OpenAI） | 全能图片 G-1.5 / G-1.5 官方 | 文生图、图生图 | 4 |
+| GPT Image 1.5（OpenAI） | 全能图片 G-1.5 / G-1.5 官方（旧版标记 Deprecated） | 文生图、图生图 | 4 |
+| GPT Image 2.0（OpenAI） | 全能图片 G-2 / G-2 官方 | 文生图、图生图 | 4 |
 | Grok 3 / Grok 4 Image（xAI） | 全能图片 X-3 / X-4 | 文生图、图生图 | 4 |
 | Grok Image 低价通道（xAI） | 全能图片 X | 文生图、图生图 | 2 |
-| GPT Image 2.0 低价通道（OpenAI） | 全能图片 G-2.0 | 文生图、图生图 | 2 |
+| Grok Image 官方（xAI） | 全能图片 X 官方 | 文生图、图像编辑 | 2 |
 | Qwen Image 2.0 / 2.0 Pro（阿里巴巴） | 千问 | 文生图、图像编辑 | 4 |
 | Wan 万相 2.5 / 2.7（阿里巴巴） | — | 文生图、图像编辑 | 6 |
 | Higgsfield | — | 图生图（Soul） | 1 |
@@ -44,16 +45,17 @@
 | FLUX Dev（Black Forest Labs） | — | 文生图、文生图 LoRA | 2 |
 | Midjourney | 悠船 | 文生图 v6/v6.1/niji6/niji7/v7 | 5 |
 
-### 视频生成（161 个节点）
+### 视频生成（169 个节点）
 
 | 模型 | RH 平台名称 | 能力 | 节点数 |
 |------|-----------|------|--------|
 | Sora 2（OpenAI） | 全能视频 S / S 官方 | 文/图生视频、Pro、角色上传、异步 | 12 |
 | Google Veo 3.1 / 3.1 Lite（Google） | 全能视频 V3.1 / V3.1 Lite（Fast/Pro/Lite 官方 + 低价通道） | Fast/Pro/Lite 文/图/首尾帧生视频、参考生视频、视频扩展 | 18 |
 | Grok Imagine（xAI） | 全能视频 G / G 官方 | 文/图/参考生视频、视频扩展、编辑视频 | 7 |
-| Kling 可灵（快手） | — | v2.5/v2.5-turbo/v2.6/v3.0/o1/o3，文/图/首尾帧/参考/动作控制/编辑/元素/口型同步 | 30 |
+| Kling 可灵（快手） | — | v2.5/v2.5-turbo/v2.6/v3.0/v3-4k/v3.0-4k/o1/o3/o3-4k，文/图/首尾帧/参考/动作控制/编辑/元素/口型同步 | 36 |
 | Vidu（生数科技） | — | q2/q3，文/图/首尾帧/参考生视频、Pro Fast、Turbo | 20 |
 | Wan 万相 2.5 / 2.6 / 2.7（阿里巴巴） | — | 文/图/参考生视频、Flash、视频编辑、视频续写 | 12 |
+| Happyhorse 1.0（阿里巴巴） | — | 文/图生视频 | 2 |
 | MiniMax Hailuo 海螺 | — | 02/2.3/2.3-fast，文/图/首尾帧生视频 | 13 |
 | Seedance v1.5 / 2.0 / 2.0 Global（字节跳动） | — | 文/图/多模态生视频、Fast、Global、参考生视频 | 17 |
 | Runway Gen-4 Turbo / Aleph | 全能视频 R | 图生视频、视频编辑 | 3 |
@@ -75,14 +77,15 @@
 | Gemini 2.5 Pro（Google） | RHArt Text G-2.5 Pro | 图生文、CV 图生文、文生文、视频理解 | 4 |
 | Qwen 2.7B Chat（阿里巴巴） | RHArt Text Qwen 27B | 多轮对话 | 1 |
 
-### 音频合成（10 个节点）
+### 音频合成（16 个节点）
 
 | 模型系列 | 能力 | 节点数 |
 |---------|------|--------|
 | Minimax Speech | 02/2.6/2.8 HD & Turbo | 6 |
 | Minimax Music 2.5 | 文生音乐 | 1 |
 | Minimax Voice Clone / Voice Design | 声音克隆、音色设计 | 2 |
-| Suno v4.5（RHArt） | 单首歌生成（文生音乐） | 1 |
+| Suno v4.5 / v5 / v5.5（RHArt） | Single / Custom 文生音乐 | 6 |
+| Suno Lyrics（RHArt） | 歌词生成 | 1 |
 
 ### 3D 建模（12 个节点）
 
@@ -164,7 +167,7 @@ cp config/.env.example config/.env
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # 入口文件，注册所有节点
-├── models_registry.json     # 模型注册表（255 个模型定义）
+├── models_registry.json     # 模型注册表（273 个模型定义）
 ├── config/
 │   └── .env.example         # 配置文件示例
 ├── core/                    # 核心基础设施
