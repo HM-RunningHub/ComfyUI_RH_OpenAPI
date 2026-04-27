@@ -160,7 +160,7 @@ cp config/.env.example config/.env
 
 ### Example Workflows
 
-The project includes 249 example workflow JSON files in the `examples/` directory, including 3 Seedance2.0 asset-related workflows. Download and import directly into ComfyUI.
+The project includes 251 example workflow JSON files in the `examples/` directory, including 3 Seedance2.0 asset-related workflows. Download and import directly into ComfyUI.
 
 ## 📁 Project Structure
 
@@ -183,7 +183,7 @@ ComfyUI_RH_OpenAPI/
 │   ├── settings_node.py     # RH OpenAPI Settings node
 │   ├── node_factory.py      # Dynamic node factory
 │   └── assets/              # Seedance2.0 asset management nodes
-└── examples/                # 249 example workflows
+└── examples/                # 251 example workflows
 ```
 
 ## 🔧 Architecture

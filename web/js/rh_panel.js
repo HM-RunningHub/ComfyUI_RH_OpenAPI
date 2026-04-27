@@ -163,7 +163,7 @@ app.registerExtension({
         "Youchuan": "🚢 有船 Midjourney", "Audio": "🎵 音频生成",
         "Hunyuan3D": "🧊 混元 3D", "HiTem3D": "🔷 HiTem 3D",
         "TopazLabs": "💎 Topaz Labs",
-        "Alibaba": "🎨 Alibaba",
+        "HappyHorse": "🐎 HappyHorse",
         "PixVerse": "🎬 PixVerse 可灵替代",
         "SkyReels": "🎥 昆仑 SkyReels",
         "Higgsfield": "🎭 Higgsfield",
@@ -179,7 +179,7 @@ app.registerExtension({
         "Youchuan": "🚢 Midjourney", "Audio": "🎵 Audio",
         "Hunyuan3D": "🧊 Hunyuan 3D", "HiTem3D": "🔷 HiTem 3D",
         "TopazLabs": "💎 Topaz Labs",
-        "Alibaba": "🎨 Alibaba",
+        "HappyHorse": "🐎 HappyHorse",
         "PixVerse": "🎬 PixVerse",
         "SkyReels": "🎥 SkyReels",
         "Higgsfield": "🎭 Higgsfield",
@@ -237,7 +237,7 @@ app.registerExtension({
       "RHArt Image", "RHArt Video", "RHArt Video G", "RHArt Text",
       "Kling", "Vidu", "Wan", "Qwe", "MiniMax",
       "Seedream", "Seedance", "Youchuan", "Audio",
-      "Hunyuan3D", "HiTem3D", "TopazLabs", "Alibaba",
+      "Hunyuan3D", "HiTem3D", "TopazLabs", "HappyHorse",
       "PixVerse", "SkyReels", "Higgsfield", "Seedance2.0 Assets",
     ];
 

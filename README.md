@@ -160,7 +160,7 @@ cp config/.env.example config/.env
 
 ### 示例工作流
 
-项目在 `examples/` 目录下提供了 249 个示例工作流 JSON 文件，其中包含 3 个 Seedance2.0 素材相关工作流。下载后直接导入 ComfyUI 即可使用。
+项目在 `examples/` 目录下提供了 251 个示例工作流 JSON 文件，其中包含 3 个 Seedance2.0 素材相关工作流。下载后直接导入 ComfyUI 即可使用。
 
 ## 📁 项目结构
 
@@ -183,7 +183,7 @@ ComfyUI_RH_OpenAPI/
 │   ├── settings_node.py     # RH OpenAPI Settings 配置节点
 │   ├── node_factory.py      # 动态节点工厂
 │   └── assets/              # Seedance2.0 素材资产节点
-└── examples/                # 249 个示例工作流
+└── examples/                # 251 个示例工作流
 ```
 
 ## 🔧 架构说明
