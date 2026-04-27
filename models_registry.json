@@ -68,7 +68,8 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "Replace the dragon fruit in the image with an adorable, stylized monkey that matches the original artistic style and texture."
+        "defaultValue": "Replace the dragon fruit in the image with an adorable, stylized monkey that matches the original artistic style and texture.",
+        "maxLength": 20000
       },
       {
         "fieldKey": "aspectRatio",
@@ -76,53 +77,64 @@
         "required": true,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "auto",
         "options": [
           {
             "value": "auto",
-            "description": "auto"
+            "description": "auto",
+            "descriptionEn": "auto"
           },
           {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           },
           {
             "value": "16:9",
-            "description": "16:9"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           },
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           },
           {
             "value": "4:3",
-            "description": "4:3"
+            "description": "4:3",
+            "descriptionEn": "4:3"
           },
           {
             "value": "3:4",
-            "description": "3:4"
+            "description": "3:4",
+            "descriptionEn": "3:4"
           },
           {
             "value": "3:2",
-            "description": "3:2"
+            "description": "3:2",
+            "descriptionEn": "3:2"
           },
           {
             "value": "2:3",
-            "description": "2:3"
+            "description": "2:3",
+            "descriptionEn": "2:3"
           },
           {
             "value": "5:4",
-            "description": "5:4"
+            "description": "5:4",
+            "descriptionEn": "5:4"
           },
           {
             "value": "4:5",
-            "description": "4:5"
+            "description": "4:5",
+            "descriptionEn": "4:5"
           },
           {
             "value": "21:9",
-            "description": "21:9"
+            "description": "21:9",
+            "descriptionEn": "21:9"
           }
-        ],
-        "defaultValue": "auto"
+        ]
       },
       {
         "fieldKey": "imageUrls",
@@ -153,7 +165,8 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "A cute baby monkey with hyper-realistic soft fur, its body covered in intricate tribal-inspired geometric patterns that have a holographic iridescent sheen (shifting metallic gold, cyan, and purple hues). The monkey has large expressive dark eyes and a gentle facial expression, crouched on a glossy reflective surface.  Background: Moody neon-lit scene with swirling blue and purple bokeh, blurred glowing abstract decorative elements, and soft ambient neon lighting.  Style: Photorealistic, highly detailed texture, sharp focus on the monkey’s face."
+        "defaultValue": "A cute baby monkey with hyper-realistic soft fur, its body covered in intricate tribal-inspired geometric patterns that have a holographic iridescent sheen (shifting metallic gold, cyan, and purple hues). The monkey has large expressive dark eyes and a gentle facial expression, crouched on a glossy reflective surface.  Background: Moody neon-lit scene with swirling blue and purple bokeh, blurred glowing abstract decorative elements, and soft ambient neon lighting.  Style: Photorealistic, highly detailed texture, sharp focus on the monkey’s face.",
+        "maxLength": 20000
       },
       {
         "fieldKey": "aspectRatio",
@@ -161,53 +174,64 @@
         "required": true,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "3:4",
         "options": [
           {
             "value": "auto",
-            "description": "auto"
+            "description": "auto",
+            "descriptionEn": "auto"
           },
           {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           },
           {
             "value": "16:9",
-            "description": "16:9"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           },
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           },
           {
             "value": "4:3",
-            "description": "4:3"
+            "description": "4:3",
+            "descriptionEn": "4:3"
           },
           {
             "value": "3:4",
-            "description": "3:4"
+            "description": "3:4",
+            "descriptionEn": "3:4"
           },
           {
             "value": "3:2",
-            "description": "3:2"
+            "description": "3:2",
+            "descriptionEn": "3:2"
           },
           {
             "value": "2:3",
-            "description": "2:3"
+            "description": "2:3",
+            "descriptionEn": "2:3"
           },
           {
             "value": "5:4",
-            "description": "5:4"
+            "description": "5:4",
+            "descriptionEn": "5:4"
           },
           {
             "value": "4:5",
-            "description": "4:5"
+            "description": "4:5",
+            "descriptionEn": "4:5"
           },
           {
             "value": "21:9",
-            "description": "21:9"
+            "description": "21:9",
+            "descriptionEn": "21:9"
           }
-        ],
-        "defaultValue": "3:4"
+        ]
       }
     ]
   },
@@ -249,11 +273,6 @@
         "description": "不传 aspectRatio 参数时为自适应图片尺寸",
         "defaultValue": "3:4",
         "options": [
-          {
-            "value": "empty",
-            "description": "empty（不传该参数，由服务端/图片自适应决定）",
-            "descriptionEn": "empty (omit this field; let server/image decide)"
-          },
           {
             "value": "1:1",
             "description": "1:1",
@@ -328,21 +347,6 @@
             "value": "4k",
             "description": "4k",
             "descriptionEn": "4k"
-          },
-          {
-            "value": "1K",
-            "description": "1K",
-            "descriptionEn": "1K"
-          },
-          {
-            "value": "2K",
-            "description": "2K",
-            "descriptionEn": "2K"
-          },
-          {
-            "value": "4K",
-            "description": "4K",
-            "descriptionEn": "4K"
           }
         ]
       }
@@ -364,7 +368,8 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "一群猴子在茂密、阳光斑驳的热带森林中激烈争抢一根非常小的香蕉。香蕉小得近乎滑稽，与猴子们的体型形成鲜明对比。猴子们跳跃、伸手、抓挠，表情夸张，充满急切与渴望。画面充满动感，绿意盎然的枝叶环绕，氛围既混乱又俏皮有趣，自然光线透过树冠洒下，色彩鲜艳生动。"
+        "defaultValue": "一群猴子在茂密、阳光斑驳的热带森林中激烈争抢一根非常小的香蕉。香蕉小得近乎滑稽，与猴子们的体型形成鲜明对比。猴子们跳跃、伸手、抓挠，表情夸张，充满急切与渴望。画面充满动感，绿意盎然的枝叶环绕，氛围既混乱又俏皮有趣，自然光线透过树冠洒下，色彩鲜艳生动。",
+        "maxLength": 20000
       },
       {
         "fieldKey": "aspectRatio",
@@ -372,54 +377,59 @@
         "required": false,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "9:16",
         "options": [
           {
-            "value": "empty",
-            "description": "empty（不传该参数，由服务端/图片自适应决定）",
-            "descriptionEn": "empty (omit this field; let server/image decide)"
-          },
-          {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           },
           {
             "value": "16:9",
-            "description": "16:9"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           },
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           },
           {
             "value": "4:3",
-            "description": "4:3"
+            "description": "4:3",
+            "descriptionEn": "4:3"
           },
           {
             "value": "3:4",
-            "description": "3:4"
+            "description": "3:4",
+            "descriptionEn": "3:4"
           },
           {
             "value": "3:2",
-            "description": "3:2"
+            "description": "3:2",
+            "descriptionEn": "3:2"
           },
           {
             "value": "2:3",
-            "description": "2:3"
+            "description": "2:3",
+            "descriptionEn": "2:3"
           },
           {
             "value": "5:4",
-            "description": "5:4"
+            "description": "5:4",
+            "descriptionEn": "5:4"
           },
           {
             "value": "4:5",
-            "description": "4:5"
+            "description": "4:5",
+            "descriptionEn": "4:5"
           },
           {
             "value": "21:9",
-            "description": "21:9"
+            "description": "21:9",
+            "descriptionEn": "21:9"
           }
-        ],
-        "defaultValue": "9:16"
+        ]
       },
       {
         "fieldKey": "resolution",
@@ -427,33 +437,24 @@
         "required": true,
         "label": "resolution",
         "description": "resolution",
+        "defaultValue": "1k",
         "options": [
           {
             "value": "1k",
-            "description": "1k"
+            "description": "1k",
+            "descriptionEn": "1k"
           },
           {
             "value": "2k",
-            "description": "2k"
+            "description": "2k",
+            "descriptionEn": "2k"
           },
           {
             "value": "4k",
-            "description": "4k"
-          },
-          {
-            "value": "1K",
-            "description": "1K"
-          },
-          {
-            "value": "2K",
-            "description": "2K"
-          },
-          {
-            "value": "4K",
-            "description": "4K"
+            "description": "4k",
+            "descriptionEn": "4k"
           }
-        ],
-        "defaultValue": "1k"
+        ]
       }
     ]
   },
@@ -484,7 +485,8 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "海边沙滩变成夏日祭典现场：猴子戴着纸折小帽，小香蕉插着蜡烛当作“生日蛋糕”，周围有彩旗、西瓜、贝壳风铃。其他小猴子在远处玩耍，烟花在晴空中绽放。风格欢乐卡通，色彩缤纷。"
+        "defaultValue": "海边沙滩变成夏日祭典现场：猴子戴着纸折小帽，小香蕉插着蜡烛当作“生日蛋糕”，周围有彩旗、西瓜、贝壳风铃。其他小猴子在远处玩耍，烟花在晴空中绽放。风格欢乐卡通，色彩缤纷。",
+        "maxLength": 20000
       },
       {
         "fieldKey": "resolution",
@@ -492,76 +494,84 @@
         "required": true,
         "label": "resolution",
         "description": "resolution",
+        "defaultValue": "1k",
         "options": [
           {
             "value": "1k",
-            "description": "1k"
+            "description": "1k",
+            "descriptionEn": "1k"
           },
           {
             "value": "2k",
-            "description": "2k"
+            "description": "2k",
+            "descriptionEn": "2k"
           },
           {
             "value": "4k",
-            "description": "4k"
+            "description": "4k",
+            "descriptionEn": "4k"
           }
-        ],
-        "defaultValue": "1k"
+        ]
       },
       {
         "fieldKey": "aspectRatio",
         "type": "LIST",
         "required": false,
         "label": "aspectRatio",
-        "description": "When the aspectRatio parameter is not provided, the image size adapts automatically.",
+        "description": "不传 aspectRatio 参数时为自适应图片尺寸",
+        "defaultValue": "3:4",
         "options": [
           {
-            "value": "empty",
-            "description": "empty（不传该参数，由服务端/图片自适应决定）",
-            "descriptionEn": "empty (omit this field; let server/image decide)"
-          },
-          {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           },
           {
             "value": "3:2",
-            "description": "3:2"
+            "description": "3:2",
+            "descriptionEn": "3:2"
           },
           {
             "value": "2:3",
-            "description": "2:3"
+            "description": "2:3",
+            "descriptionEn": "2:3"
           },
           {
             "value": "3:4",
-            "description": "3:4"
+            "description": "3:4",
+            "descriptionEn": "3:4"
           },
           {
             "value": "4:3",
-            "description": "4:3"
+            "description": "4:3",
+            "descriptionEn": "4:3"
           },
           {
             "value": "4:5",
-            "description": "4:5"
+            "description": "4:5",
+            "descriptionEn": "4:5"
           },
           {
             "value": "5:4",
-            "description": "5:4"
+            "description": "5:4",
+            "descriptionEn": "5:4"
           },
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           },
           {
             "value": "16:9",
-            "description": "16:9"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           },
           {
             "value": "21:9",
-            "description": "21:9"
+            "description": "21:9",
+            "descriptionEn": "21:9"
           }
-        ],
-        "defaultValue": "3:4"
+        ]
       }
     ]
   },
@@ -607,7 +617,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "在一片广阔无垠的大海边，一只快乐的猴子坐在沙滩上，享受着温暖的阳光。它的旁边有一个小小的香蕉，象征着自然的馈赠。天空湛蓝，阳光明媚，海浪轻拍沙滩，营造出轻松愉快的氛围。整体风格为手绘插画，色彩明亮鲜艳，突出积极向上的情绪，让观看者感受到幸福和安宁。",
-        "maxLength": 4000
+        "maxLength": 20000
       },
       {
         "fieldKey": "aspectRatio",
@@ -617,11 +627,6 @@
         "description": "aspectRatio",
         "defaultValue": "3:4",
         "options": [
-          {
-            "value": "empty",
-            "description": "empty（不传该参数，由服务端/图片自适应决定）",
-            "descriptionEn": "empty (omit this field; let server/image decide)"
-          },
           {
             "value": "1:1",
             "description": "1:1",
@@ -5287,7 +5292,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "一只身穿精致丝绸长袍、气质高贵的金丝猴正坐在传统的茶馆里，手里端着一个精巧的陶瓷茶杯。木桌上放着一根小巧、熟透的香蕉，上面贴着一个发光的全息标签。采用 50mm f/1.2 镜头拍摄，营造出柔美的虚化效果和浅景深。专业光影，极致写实纹理。",
-        "maxLength": 4000
+        "maxLength": 20000
       },
       {
         "fieldKey": "resolution",
@@ -5295,17 +5300,19 @@
         "required": true,
         "label": "resolution",
         "description": "resolution",
+        "defaultValue": "8k",
         "options": [
           {
             "value": "4k",
-            "description": "4k"
+            "description": "4k",
+            "descriptionEn": "4k"
           },
           {
             "value": "8k",
-            "description": "8k"
+            "description": "8k",
+            "descriptionEn": "8k"
           }
-        ],
-        "defaultValue": "8k"
+        ]
       },
       {
         "fieldKey": "aspectRatio",
@@ -5313,54 +5320,59 @@
         "required": false,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "3:4",
         "options": [
           {
-            "value": "empty",
-            "description": "empty（不传该参数，由服务端/图片自适应决定）",
-            "descriptionEn": "empty (omit this field; let server/image decide)"
-          },
-          {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           },
           {
             "value": "3:2",
-            "description": "3:2"
+            "description": "3:2",
+            "descriptionEn": "3:2"
           },
           {
             "value": "2:3",
-            "description": "2:3"
+            "description": "2:3",
+            "descriptionEn": "2:3"
           },
           {
             "value": "3:4",
-            "description": "3:4"
+            "description": "3:4",
+            "descriptionEn": "3:4"
           },
           {
             "value": "4:3",
-            "description": "4:3"
+            "description": "4:3",
+            "descriptionEn": "4:3"
           },
           {
             "value": "4:5",
-            "description": "4:5"
+            "description": "4:5",
+            "descriptionEn": "4:5"
           },
           {
             "value": "5:4",
-            "description": "5:4"
+            "description": "5:4",
+            "descriptionEn": "5:4"
           },
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           },
           {
             "value": "16:9",
-            "description": "16:9"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           },
           {
             "value": "21:9",
-            "description": "21:9"
+            "description": "21:9",
+            "descriptionEn": "21:9"
           }
-        ],
-        "defaultValue": "3:4"
+        ]
       }
     ]
   },
@@ -5392,7 +5404,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "将人类主体替换为一只穿着白色实验服、戴着圆框眼镜的高智商黑猩猩。修改平板电脑屏幕，使其显示一幅精细的香蕉树植物插图，并配以简洁的无衬线字体文字“Organic Growth”及其中文翻译“有机生长”。将当前的冷色调室内光线改为温暖、充满阳光的早晨氛围。调整相机参数为 35mm 透视，保持焦点锐利地对准黑猩猩好奇的眼睛，并维持实验室风格的一致性。",
-        "maxLength": 4000
+        "maxLength": 20000
       },
       {
         "fieldKey": "resolution",
@@ -5400,17 +5412,19 @@
         "required": true,
         "label": "resolution",
         "description": "resolution",
+        "defaultValue": "8k",
         "options": [
           {
             "value": "4k",
-            "description": "4k"
+            "description": "4k",
+            "descriptionEn": "4k"
           },
           {
             "value": "8k",
-            "description": "8k"
+            "description": "8k",
+            "descriptionEn": "8k"
           }
-        ],
-        "defaultValue": "8k"
+        ]
       },
       {
         "fieldKey": "aspectRatio",
@@ -5418,54 +5432,59 @@
         "required": false,
         "label": "aspectRatio",
         "description": "aspectRatio",
+        "defaultValue": "3:4",
         "options": [
           {
-            "value": "empty",
-            "description": "empty（不传该参数，由服务端/图片自适应决定）",
-            "descriptionEn": "empty (omit this field; let server/image decide)"
-          },
-          {
             "value": "1:1",
-            "description": "1:1"
+            "description": "1:1",
+            "descriptionEn": "1:1"
           },
           {
             "value": "3:2",
-            "description": "3:2"
+            "description": "3:2",
+            "descriptionEn": "3:2"
           },
           {
             "value": "2:3",
-            "description": "2:3"
+            "description": "2:3",
+            "descriptionEn": "2:3"
           },
           {
             "value": "3:4",
-            "description": "3:4"
+            "description": "3:4",
+            "descriptionEn": "3:4"
           },
           {
             "value": "4:3",
-            "description": "4:3"
+            "description": "4:3",
+            "descriptionEn": "4:3"
           },
           {
             "value": "4:5",
-            "description": "4:5"
+            "description": "4:5",
+            "descriptionEn": "4:5"
           },
           {
             "value": "5:4",
-            "description": "5:4"
+            "description": "5:4",
+            "descriptionEn": "5:4"
           },
           {
             "value": "9:16",
-            "description": "9:16"
+            "description": "9:16",
+            "descriptionEn": "9:16"
           },
           {
             "value": "16:9",
-            "description": "16:9"
+            "description": "16:9",
+            "descriptionEn": "16:9"
           },
           {
             "value": "21:9",
-            "description": "21:9"
+            "description": "21:9",
+            "descriptionEn": "21:9"
           }
-        ],
-        "defaultValue": "3:4"
+        ]
       }
     ]
   },
@@ -5590,7 +5609,7 @@
       {
         "fieldKey": "imageUrls",
         "type": "IMAGE",
-        "required": true,
+        "required": false,
         "label": "imageUrls",
         "description": "imageUrls",
         "multipleInputs": true,
@@ -5672,7 +5691,7 @@
       {
         "fieldKey": "duration",
         "type": "LIST",
-        "required": true,
+        "required": false,
         "label": "duration",
         "description": "duration",
         "defaultValue": "5",
@@ -8385,7 +8404,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "视觉： 一名身着战损机甲的女性探险家行走在风沙弥漫的废弃城市。她停下脚步，低头拨弄闪烁蓝光的通讯器。 动作： 风卷起尘埃掠过镜头，通讯器跳动着微弱的火花。 对话（配音 1）： “总部，能听到吗？这里的能量波动太强了。” 音效（同步生成）： 沉重的脚步声撞击金属地面，呼啸的风声，以及通讯器尖锐的电流滋滋声。",
-        "maxLength": 5000
+        "maxLength": 2500
       },
       {
         "fieldKey": "negativePrompt",
@@ -8562,7 +8581,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "动作描述： 探险家缓缓抬头，眼神中充满惊讶。随着他慢慢起身，手中的碎片光芒逐渐加强，并在石门上产生流动的阴影效果。 对话（配音 1）： “它真的被唤醒了……这不可能。” 音效（同步生成）： 柴火噼啪声，探险家沉重的呼吸声，以及石门深处传来的低沉轰鸣声。",
-        "maxLength": 5000
+        "maxLength": 2500
       },
       {
         "fieldKey": "negativePrompt",
@@ -8731,7 +8750,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "视觉： 赛博朋克风的雨夜街道，霓虹灯招牌在积水的地面形成流动的倒影。特写镜头对准一名身披半透明雨衣的男子。 动作： 雨滴撞击雨衣并滑落，男子缓缓抬头，瞳孔中清晰倒映出街对面的霓虹灯光。他张口说话，面部肌肉牵动，呼吸产生淡淡的白雾。 对话（配音 1）： “这座城市从不睡觉，那些阴影里的秘密也一样。” 音效（同步生成）： 淅沥的雨声，远处的车辆鸣笛声，雨滴击打塑料雨衣的清脆声，以及低沉的人声对白。 ",
-        "maxLength": 5000
+        "maxLength": 2500
       },
       {
         "fieldKey": "negativePrompt",
@@ -8908,7 +8927,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "欧洲别墅户外露台场景，铺着蓝白格纹桌布的餐桌旁，年轻白人女性穿蓝白条纹短袖衬衫、卡其色短裤，系棕色腰带，赤脚坐着，对面是穿白色 T 恤的年轻白人男性，镜头推进，女性晃着玻璃杯里的果汁，目光望向远处的树林，说“These trees will turn yellow in a month, won't they?”，镜头特写男性低着头说，“but they'll be green again next summer.”，然后女性转头，笑着看向对面的男性，说，“Are you always this optimistic? Or just about summer?”，然后男性抬起头，看着女生说，“Only about summers with you。”",
-        "maxLength": 5000
+        "maxLength": 2500
       },
       {
         "fieldKey": "negativePrompt",
@@ -9464,7 +9483,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "视觉： 一只色彩斑斓的机械蝴蝶静止在一朵正在缓慢盛开的金属花卉上。 动作： 蝴蝶突然扇动半透明的翅膀飞起，在空中盘旋，翅膀上的光纤纹理随着飞舞变幻颜色。周围空气中漂浮着发光的数字孢子，光影随蝴蝶的游走产生实时偏移。 音效（同步生成）： 机械翅膀快速振动的轻微嗡嗡声，金属花瓣展开时清脆的摩擦声，以及低沉的空间环境背景音。",
-        "maxLength": 5000
+        "maxLength": 2500
       },
       {
         "fieldKey": "aspectRatio",
@@ -9557,7 +9576,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "视觉： 一名身着繁复刺绣丝绸长袍的炼金术师。 动作： 炼金术师正缓慢地将一种发光的金色液体从透明琉璃瓶倒入古老的石碗中。液体落入碗中时产生细腻的涟漪和溅射，符合真实的流体动力学。丝绸袖口随手臂动作自然垂落并产生物理褶皱。背景是昏暗的实验室，阳光透过彩色玻璃窗形成流动的光斑。",
-        "maxLength": 5000
+        "maxLength": 2500
       },
       {
         "fieldKey": "aspectRatio",
@@ -9650,7 +9669,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "动作描述：探险家缓缓向城市深处走去，风吹过斗篷产生自然的布料物理摆动。随着脚步前进，周围的废墟阴影随光线位置产生实时偏移。探险家发现晶体并驻足，蓝色光芒在头盔面罩上产生清晰的反射。 音效（同步生成）： 沉重的机甲脚步声，呼啸的风沙声，探测器规律的哔哔声，以及最后晶体发出的低频嗡鸣声。",
-        "maxLength": 5000
+        "maxLength": 2500
       },
       {
         "fieldKey": "firstImageUrl",
@@ -9736,7 +9755,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "少女从街道深处款款走，裙摆随步伐自然摆动。镜头伴随她前进，街道两旁的红灯笼随风轻摇。在 10 秒处，她驻足转身，回眸一笑，背景的天空中绽放出绚丽的烟花，光影交错映射在她的脸上。 音效：包含繁华街道的喧闹声、少女轻盈的脚步声以及远处烟花炸裂的轰鸣声。",
-        "maxLength": 5000
+        "maxLength": 2500
       },
       {
         "fieldKey": "firstImageUrl",
@@ -11860,11 +11879,6 @@
         "defaultValue": "9:16",
         "options": [
           {
-            "value": "empty",
-            "description": "empty（不传该参数，由服务端/图片自适应决定）",
-            "descriptionEn": "empty (omit this field; let server/image decide)"
-          },
-          {
             "value": "1:1",
             "description": "1:1",
             "descriptionEn": "1:1"
@@ -12002,11 +12016,6 @@
         "defaultValue": "9:16",
         "options": [
           {
-            "value": "empty",
-            "description": "empty（不传该参数，由服务端/图片自适应决定）",
-            "descriptionEn": "empty (omit this field; let server/image decide)"
-          },
-          {
             "value": "1:1",
             "description": "1:1",
             "descriptionEn": "1:1"
@@ -12121,7 +12130,8 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "一张 21:9 的电影级特写镜头。画面中心是一个复古的霓虹灯牌，上面用清晰的英文字体写着 \"全能图片 V2\"。灯牌背景是雨后的赛博朋克街道，地面有极度真实的积水倒影。五个不同风格的角色（如：戴墨镜的侦探、机械少女等）正围在灯牌旁讨论，光影呈现出细腻的变形镜头（Anamorphic）晕光效果，画质要求 4K 极精细。"
+        "defaultValue": "一张 21:9 的电影级特写镜头。画面中心是一个复古的霓虹灯牌，上面用清晰的英文字体写着 \"全能图片 V2\"。灯牌背景是雨后的赛博朋克街道，地面有极度真实的积水倒影。五个不同风格的角色（如：戴墨镜的侦探、机械少女等）正围在灯牌旁讨论，光影呈现出细腻的变形镜头（Anamorphic）晕光效果，画质要求 4K 极精细。",
+        "maxLength": 20000
       },
       {
         "fieldKey": "aspectRatio",
@@ -12131,11 +12141,6 @@
         "description": "aspectRatio",
         "defaultValue": "21:9",
         "options": [
-          {
-            "value": "empty",
-            "description": "empty（不传该参数，由服务端/图片自适应决定）",
-            "descriptionEn": "empty (omit this field; let server/image decide)"
-          },
           {
             "value": "1:1",
             "description": "1:1",
@@ -12251,7 +12256,6 @@
         "required": true,
         "label": "imageUrls",
         "description": "imageUrls",
-        "defaultValue": "https://www.runninghub.cn/view?filename=035b95c2ce2cf2cf02ba1f26b9eca593096c23d8bf49003fd0584fe87d404d2f.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzI4NzQyNTUzMTAsInRzIjoxNzcyMjY5NDU1MzEwLCJzaWduIjoiZWJkODVlYmY2ZTRlMjRiNzJlNGQ4MzA5YjgxMTA3OGEifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.946825154000992",
         "multipleInputs": true,
         "maxInputNum": 14,
         "accept": "[\"JPG\",\"PNG\"]",
@@ -12263,7 +12267,8 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "操作指令： 参考我上传的这张人物线稿图。必须百分之百忠实于原线稿的线条结构，不得有任何线条的增加或减少。 上色要求： 将其处理成一种复古的日式赛博朋克漫画风格。给头发上色为淡紫色，皮肤为自然的暖色调，衣服赋予银色金属涂层质感。 背景与光影： 背景是一个霓虹闪烁的雨后街道。让蓝绿色的霓虹灯光作为主光源，映射在人物身体的左侧，形成细腻的拉丝晕光。"
+        "defaultValue": "操作指令： 参考我上传的这张人物线稿图。必须百分之百忠实于原线稿的线条结构，不得有任何线条的增加或减少。 上色要求： 将其处理成一种复古的日式赛博朋克漫画风格。给头发上色为淡紫色，皮肤为自然的暖色调，衣服赋予银色金属涂层质感。 背景与光影： 背景是一个霓虹闪烁的雨后街道。让蓝绿色的霓虹灯光作为主光源，映射在人物身体的左侧，形成细腻的拉丝晕光。",
+        "maxLength": 20000
       },
       {
         "fieldKey": "aspectRatio",
@@ -12273,11 +12278,6 @@
         "description": "aspectRatio",
         "defaultValue": "9:16",
         "options": [
-          {
-            "value": "empty",
-            "description": "empty（不传该参数，由服务端/图片自适应决定）",
-            "descriptionEn": "empty (omit this field; let server/image decide)"
-          },
           {
             "value": "1:1",
             "description": "1:1",
@@ -12399,12 +12399,9 @@
       {
         "fieldKey": "imageUrl",
         "type": "IMAGE",
-        "required": false,
+        "required": true,
         "label": "imageUrl",
         "description": "imageUrl",
-        "defaultValue": "https://www.runninghub.cn/view?filename=6b05df1302072b51fabe7aee9ab3fe39508a7ca51629768ab521a05eaf93bbf9.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzMwMjg5MTYzNzEsInRzIjoxNzcyNDI0MTE2MzcxLCJzaWduIjoiZGZkZDhjMTdhNDA4ZmYzYTI5NWNjYzA1YjhlNDhhZTYifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.9413883407292518",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       },
@@ -13866,7 +13863,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "Change the time to the night.",
-        "maxLength": 5000
+        "maxLength": 2500
       },
       {
         "fieldKey": "videoUrl",
@@ -13874,9 +13871,6 @@
         "required": true,
         "label": "videoUrl",
         "description": "The video URL. Video duration can not be longer than 10s.",
-        "defaultValue": "https://www.runninghub.cn/view?filename=b7e0383a81823b42527dd226d3969676a21173c76257a3e7745e68c95aaf79c4.mp4&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzE1ODU3ODkwODAsInRzIjoxNzcwOTgwOTg5MDgwLCJzaWduIjoiNTkzYzQwYWE0ODE1NGVmYTViZWExNTQ1ODM0ZThiMjgifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.9906318620735289",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"MP4\"]",
         "maxSize": 50
       },
@@ -13918,7 +13912,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "将视频中男子的衣服替换为图 1 的衣服",
-        "maxLength": 5000
+        "maxLength": 2500
       },
       {
         "fieldKey": "videoUrl",
@@ -13926,9 +13920,6 @@
         "required": true,
         "label": "videoUrl",
         "description": "The video URL. Video duration can not be longer than 10s.",
-        "defaultValue": "https://www.runninghub.cn/view?filename=7fae6a6a5dfe4b7e3ddcb71a507d6ea51e9ef73edd38fc37e723c76407e1e460.mp4&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzE1ODQxNjE4MjUsInRzIjoxNzcwOTc5MzYxODI1LCJzaWduIjoiMzkxYmRiYjA3YmUzYTBiZGM5NjZkMzEwYjBkYTNhZjYifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.5620407332010252",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"MP4\"]",
         "maxSize": 50
       },
@@ -13938,7 +13929,6 @@
         "required": false,
         "label": "imageUrls",
         "description": "imageUrls",
-        "defaultValue": "https://www.runninghub.cn/view?filename=9439fda69964e106c40c3b5977acf88570ac36214f2a4033d01fe5f5c4d7f235.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NzE1ODQxNjE4MjUsInRzIjoxNzcwOTc5MzYxODI1LCJzaWduIjoiMzkxYmRiYjA3YmUzYTBiZGM5NjZkMzEwYjBkYTNhZjYifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.23302545629278448",
         "multipleInputs": true,
         "maxInputNum": 4,
         "accept": "[\"JPG\",\"PNG\"]",
@@ -13971,7 +13961,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "把图中的人物融入到视频里",
-        "maxLength": 5000
+        "maxLength": 2500
       },
       {
         "fieldKey": "videoUrl",
@@ -14091,7 +14081,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "在暴雨中的赛博朋克小巷，[参考图] 中的流浪武士根据 [参考视频] 的动作轨迹，迅速拔出背后的长刀并完成一个华丽的转身。雨水击打在他那带有独特刻痕的机械左臂上，产生细腻的溅射效果。光影随着他的旋转在机械表面产生真实的反射偏移。全程保持武士的面部特征与机械臂的复杂结构高度一致。",
-        "maxLength": 5000
+        "maxLength": 2500
       },
       {
         "fieldKey": "videoUrl",
@@ -15580,7 +15570,8 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "写实风格照片，一位未来的手工艺人正在一间质朴、布满灰尘的赛博朋克工作室里，细致地制作一朵发光的霓虹玻璃玫瑰。温暖、自然的金色时刻阳光透过污浊的窗户射入，与玻璃发出的清冷柔和的蓝色环境光完美平衡。电影级的构图，聚焦于她的双手，画面高度清晰，富有表现力的氛围。"
+        "defaultValue": "写实风格照片，一位未来的手工艺人正在一间质朴、布满灰尘的赛博朋克工作室里，细致地制作一朵发光的霓虹玻璃玫瑰。温暖、自然的金色时刻阳光透过污浊的窗户射入，与玻璃发出的清冷柔和的蓝色环境光完美平衡。电影级的构图，聚焦于她的双手，画面高度清晰，富有表现力的氛围。",
+        "maxLength": 20000
       },
       {
         "fieldKey": "aspectRatio",
@@ -15665,7 +15656,8 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "将人物手中的普通折扇替换为一把精致的白玉骨丝绸团扇，并在背景的木质回廊上悬挂两盏点亮的红灯笼。请保持原图明代官服的丝绸质感与阴影走势完全不变。"
+        "defaultValue": "将人物手中的普通折扇替换为一把精致的白玉骨丝绸团扇，并在背景的木质回廊上悬挂两盏点亮的红灯笼。请保持原图明代官服的丝绸质感与阴影走势完全不变。",
+        "maxLength": 20000
       },
       {
         "fieldKey": "aspectRatio",
@@ -15903,7 +15895,7 @@
         "type": "IMAGE",
         "required": true,
         "label": "imageUrl",
-        "description": "角色参考图片",
+        "description": "角色参考图片。宽/高尺寸介于 300px ~ 65536px；宽高比介于 1:2.5 ~ 2.5:1。",
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       },
@@ -15912,9 +15904,9 @@
         "type": "VIDEO",
         "required": true,
         "label": "videoUrl",
-        "description": "动作参考视频，时长3-30秒",
+        "description": "动作参考视频，时长3-30秒。宽/高尺寸均需介于 340px ~ 3850px 之间。",
         "accept": "[\"MP4\"]",
-        "maxSize": 10
+        "maxSize": 100
       },
       {
         "fieldKey": "characterOrientation",
@@ -15977,7 +15969,7 @@
         "type": "IMAGE",
         "required": true,
         "label": "imageUrl",
-        "description": "角色参考图片",
+        "description": "角色参考图片。宽/高尺寸介于 300px ~ 65536px；宽高比介于 1:2.5 ~ 2.5:1。",
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       },
@@ -15986,9 +15978,9 @@
         "type": "VIDEO",
         "required": true,
         "label": "videoUrl",
-        "description": "动作参考视频，时长3-30秒",
+        "description": "动作参考视频，时长3-30秒。宽/高尺寸均需介于 340px ~ 3850px 之间。",
         "accept": "[\"MP4\"]",
-        "maxSize": 10
+        "maxSize": 100
       },
       {
         "fieldKey": "characterOrientation",
@@ -22464,10 +22456,10 @@
         "type": "INT",
         "required": false,
         "label": "width",
-        "description": "输出宽度，范围512-4096，默认1024，为空不传递尺寸",
+        "description": "输出宽度。默认1024，为空不传递尺寸。【注意】请求需同时满足3项限制：①宽与高均须在 512-8192 之间；②总像素(宽×高)须介于 589824(即768×768) 至 16777216(即4096×4096) 之间；③宽高比须在 1:8 至 8:1 之间。",
         "defaultValue": 1024,
         "min": 512,
-        "max": 4096,
+        "max": 8192,
         "step": 1
       },
       {
@@ -22475,10 +22467,10 @@
         "type": "INT",
         "required": false,
         "label": "height",
-        "description": "输出高度，范围512-4096，默认1024，为空不传递尺寸",
+        "description": "输出高度。默认1024，为空不传递尺寸。【注意】请求需同时满足3项限制：①宽与高均须在 512-8192 之间；②总像素(宽×高)须介于 589824(即768×768) 至 16777216(即4096×4096) 之间；③宽高比须在 1:8 至 8:1 之间。",
         "defaultValue": 1024,
         "min": 512,
-        "max": 4096,
+        "max": 8192,
         "step": 1
       },
       {
@@ -22943,7 +22935,7 @@
         "required": true,
         "label": "duration",
         "description": "输出视频时长控制。0 = 保留原视频完整时长；2-10 = 从视频开头截取对应秒数；设置值不得超过输入视频原始时长",
-        "defaultValue": "5",
+        "defaultValue": "0",
         "options": [
           {
             "value": "0",
@@ -23742,7 +23734,8 @@
         "type": "STRING",
         "required": true,
         "label": "prompt",
-        "description": "音色描述"
+        "description": "音色描述",
+        "defaultValue": "充满激情和活力的体育赛事解说员，语速快，音量高，能够点燃现场气氛"
       },
       {
         "fieldKey": "previewText",
@@ -23750,6 +23743,7 @@
         "required": true,
         "label": "previewText",
         "description": "试听音频文本，最长500字符",
+        "defaultValue": "漂亮！一个精彩的过人！他带球突破，射门——球进了！不可思议的进球，他再次拯救了队伍！",
         "maxLength": 500
       },
       {
@@ -26261,7 +26255,7 @@
         "label": "prompt",
         "description": "文本提示词，描述场景、运动、镜头风格和氛围",
         "defaultValue": "一位风霜满面的老渔夫在黎明时分坐在被雾气笼罩的码头边，用长满老茧的双手修补破损的渔网。他的脸上带着数十年的沉默。镜头缓缓环绕他。色调去饱和，下面是轻轻拍打的波浪声，远处传来雾笛声。",
-        "maxLength": 2048
+        "maxLength": 20000
       },
       {
         "fieldKey": "negativePrompt",
@@ -26269,7 +26263,7 @@
         "required": false,
         "label": "negativePrompt",
         "description": "反向提示词，指定不希望出现的元素",
-        "maxLength": 2048
+        "maxLength": 20000
       },
       {
         "fieldKey": "aspectRatio",
@@ -26365,7 +26359,7 @@
         "label": "prompt",
         "description": "文本提示词，描述期望的动画效果和场景氛围",
         "defaultValue": "四个朋友开着一辆旧面包车穿越沙漠，窗户开着，头发迎风飞舞。温暖的尘土色调，公路旅行音乐氛围，镜头耀斑，自由的感觉。",
-        "maxLength": 2048
+        "maxLength": 20000
       },
       {
         "fieldKey": "negativePrompt",
@@ -26373,7 +26367,7 @@
         "required": false,
         "label": "negativePrompt",
         "description": "反向提示词，指定不希望出现的元素",
-        "maxLength": 2048
+        "maxLength": 20000
       },
       {
         "fieldKey": "imageUrl",
@@ -26478,7 +26472,7 @@
         "label": "prompt",
         "description": "文本提示词，描述期望的过渡效果和场景变化",
         "defaultValue": "山野的一年四季变迁，自然过渡",
-        "maxLength": 2048
+        "maxLength": 20000
       },
       {
         "fieldKey": "firstImageUrl",
@@ -26544,7 +26538,7 @@
         "required": false,
         "label": "negativePrompt",
         "description": "反向提示词，指定不希望出现的元素",
-        "maxLength": 2048
+        "maxLength": 20000
       },
       {
         "fieldKey": "seed",
@@ -26575,7 +26569,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "春日午后，樱花纷飞的乡间小路，一位少女骑着老旧自行车经过稻田，微风拂过她的发梢，远处传来风铃声，画面温暖柔和，充满宁静与希望。",
-        "maxLength": 8000
+        "maxLength": 20000
       },
       {
         "fieldKey": "aspectRatio",
@@ -26656,7 +26650,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "左右扭扭，蹦蹦跳跳真可爱，双手上下摇晃",
-        "maxLength": 8000
+        "maxLength": 20000
       },
       {
         "fieldKey": "aspectRatio",
@@ -27310,6 +27304,26 @@
             "_default": "aspect ratio {value}, "
           }
         }
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k"
+          },
+          {
+            "value": "2k"
+          },
+          {
+            "value": "4k"
+          }
+        ],
+        "tail_insert": true
       }
     ]
   },
@@ -27408,6 +27422,26 @@
             "_default": "aspect ratio {value}, "
           }
         }
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k"
+          },
+          {
+            "value": "2k"
+          },
+          {
+            "value": "4k"
+          }
+        ],
+        "tail_insert": true
       }
     ]
   },
@@ -27551,11 +27585,6 @@
         "defaultValue": "16:9",
         "options": [
           {
-            "value": "empty",
-            "description": "empty（不传该参数，由服务端/图片自适应决定）",
-            "descriptionEn": "empty (omit this field; let server/image decide)"
-          },
-          {
             "value": "1:1",
             "description": "1:1",
             "descriptionEn": "1:1"
@@ -27683,9 +27712,9 @@
         "type": "IMAGE",
         "required": true,
         "label": "imageUrls",
-        "description": "参考图片（1-4张）",
+        "description": "参考图片（1-10张）",
         "multipleInputs": true,
-        "maxInputNum": 4,
+        "maxInputNum": 10,
         "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
         "maxSize": 10
       },
@@ -27697,11 +27726,6 @@
         "description": "输出图像宽高比",
         "defaultValue": "16:9",
         "options": [
-          {
-            "value": "empty",
-            "description": "empty（不传该参数，由服务端/图片自适应决定）",
-            "descriptionEn": "empty (omit this field; let server/image decide)"
-          },
           {
             "value": "1:1",
             "description": "1:1",
@@ -27822,6 +27846,7 @@
         "required": true,
         "label": "prompt",
         "description": "文本提示词，描述画面、情绪与镜头",
+        "defaultValue": "宽镜头。一名穿着尘土飞扬的橙色压力服、深蓝灰色背带和黑色靴子的孤独宇航员，在广阔的月球平原上滑雪，留下两条长长的平行轨迹在灰色的风化层中。宇航员正跨步前行，滑雪杆插入地面，在六分之一重力下推进，每一次推动都会让身体微微漂浮升起，然后再落下。细微的尘埃在滑雪轨迹旁形成低悬的薄雾。身后和上方，一轮新月形的地球恰好悬在月球地平线的柔和曲线之上，蓝白色的大气辉光映衬在漆黑的天空中。原始阳光，高对比阴影，无填充光。",
         "maxLength": 2500
       },
       {
@@ -27991,6 +28016,7 @@
         "required": false,
         "label": "prompt",
         "description": "文本提示词，可选，用于引导画面动态",
+        "defaultValue": "大远景开篇，镜头从接近地面的低机位开始向前移动，镜头沿草原方向推进，同时向上移动，将视角从贴地逐渐抬升至略高位置，使猎豹从左侧进入画面并与前方逃窜的羚羊共同处于同一追逐路径中，建立清晰的前后空间关系。",
         "maxLength": 2500
       },
       {
@@ -29069,6 +29095,269 @@
             "descriptionEn": "intelligence"
           }
         ]
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaHappyhorse10ReferenceToVideo",
+    "internal_name": "RH_AlibabaHappyhorse10ReferenceToVideo",
+    "display_name": "RH happyhorse-1.0/reference-to-video",
+    "name_cn": "happyhorse-1.0/reference-to-video",
+    "name_en": "happyhorse-1.0/reference-to-video",
+    "endpoint": "alibaba/happyhorse-1.0/reference-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Alibaba",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词；可用「图1/图2」等指代多张参考图的语义关系",
+        "defaultValue": "融合两张图片的内容：以第一张图的简约光影家居为背景，让第二张图的古装女性在场景中做出轻微的自然动作，生成一段过渡自然、风格统一的短视频。整体保持柔和自然光，画面质感统一，人物与背景融合自然，无穿帮、无违和感。",
+        "maxLength": 2500
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "至少一张参考图 URL；建议短边≥400px、比例一致且接近目标视频比例",
+        "multipleInputs": true,
+        "maxInputNum": 9,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"BMP\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "视频宽高比",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒）",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子，不填则随机",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaHappyhorse10VideoEdit",
+    "internal_name": "RH_AlibabaHappyhorse10VideoEdit",
+    "display_name": "RH happyhorse-1.0/video-edit",
+    "name_cn": "happyhorse-1.0/video-edit",
+    "name_en": "happyhorse-1.0/video-edit",
+    "endpoint": "alibaba/happyhorse-1.0/video-edit",
+    "output_type": "video",
+    "category": "RunningHub/Alibaba",
+    "params": [
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "输入视频 URL（3–60s，>15s 将被截断为前 15s；建议 H.264）",
+        "accept": "[\"MP4\",\"MOV\"]",
+        "maxSize": 100
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrls",
+        "description": "可选参考图（可多张，映射为 reference_image）",
+        "multipleInputs": true,
+        "maxInputNum": 5,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"BMP\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "编辑或生成指令",
+        "defaultValue": "将图片中的元素添加到视频中",
+        "maxLength": 2500
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "audioSetting",
+        "type": "LIST",
+        "required": false,
+        "label": "audioSetting",
+        "description": "声音策略：自动或保留原声",
+        "defaultValue": "origin",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "origin",
+            "description": "origin",
+            "descriptionEn": "origin"
+          }
+        ]
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
       }
     ]
   }
