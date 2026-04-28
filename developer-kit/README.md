@@ -1,5 +1,7 @@
 # RunningHub API AI Integration Kit
 
+[中文](README_ZH.md) | English
+
 This kit helps developers integrate RunningHub APIs into their own products with
 AI coding tools such as Cursor, Claude Code, Copilot, or ChatGPT.
 
