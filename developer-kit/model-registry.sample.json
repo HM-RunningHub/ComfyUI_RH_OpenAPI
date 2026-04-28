@@ -1,0 +1,173 @@
+{
+  "version": "sample-2026-04-29",
+  "source": "ComfyUI_RH_OpenAPI models_registry.json",
+  "note": "This is a small authoritative sample for AI coding agents. Do not treat it as the complete RunningHub model catalog.",
+  "models": [
+    {
+      "id": "rhart-image-v1-text-to-image",
+      "name_cn": "全能图片V1-文生图-低价渠道版",
+      "name_en": "nano-banana/text-to-image-channel-low-price",
+      "endpoint": "rhart-image-v1/text-to-image",
+      "output_type": "image",
+      "category": "image",
+      "params": [
+        {
+          "fieldKey": "prompt",
+          "type": "STRING",
+          "required": true,
+          "description": "Text prompt",
+          "maxLength": 20000
+        },
+        {
+          "fieldKey": "aspectRatio",
+          "type": "LIST",
+          "required": true,
+          "defaultValue": "3:4",
+          "options": [
+            "auto",
+            "1:1",
+            "16:9",
+            "9:16",
+            "4:3",
+            "3:4",
+            "3:2",
+            "2:3",
+            "5:4",
+            "4:5",
+            "21:9"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rhart-image-v1-edit",
+      "name_cn": "全能图片V1-图生图-低价渠道版",
+      "name_en": "nano-banana/edit-channel-low-price",
+      "endpoint": "rhart-image-v1/edit",
+      "output_type": "image",
+      "category": "image",
+      "params": [
+        {
+          "fieldKey": "prompt",
+          "type": "STRING",
+          "required": true,
+          "description": "Edit prompt",
+          "maxLength": 20000
+        },
+        {
+          "fieldKey": "aspectRatio",
+          "type": "LIST",
+          "required": true,
+          "defaultValue": "auto",
+          "options": [
+            "auto",
+            "1:1",
+            "16:9",
+            "9:16",
+            "4:3",
+            "3:4",
+            "3:2",
+            "2:3",
+            "5:4",
+            "4:5",
+            "21:9"
+          ]
+        },
+        {
+          "fieldKey": "imageUrls",
+          "type": "IMAGE",
+          "required": true,
+          "multipleInputs": true,
+          "maxInputNum": 5,
+          "accept": ["JPG", "PNG"],
+          "maxSizeMB": 10
+        }
+      ]
+    },
+    {
+      "id": "rhart-video-v31-fast-text-to-video",
+      "name_cn": "全能视频V3.1-fast-文生视频-低价渠道版",
+      "name_en": "google/veo3.1-fast/text-to-video-channel-low-price",
+      "endpoint": "rhart-video-v3.1-fast/text-to-video",
+      "output_type": "video",
+      "category": "video",
+      "params": [
+        {
+          "fieldKey": "prompt",
+          "type": "STRING",
+          "required": true,
+          "description": "Text prompt",
+          "maxLength": 8000
+        },
+        {
+          "fieldKey": "aspectRatio",
+          "type": "LIST",
+          "required": true,
+          "defaultValue": "9:16",
+          "options": ["16:9", "9:16"]
+        },
+        {
+          "fieldKey": "duration",
+          "type": "LIST",
+          "required": false,
+          "defaultValue": "8",
+          "options": ["8"]
+        },
+        {
+          "fieldKey": "resolution",
+          "type": "LIST",
+          "required": true,
+          "defaultValue": "720p",
+          "options": ["720p", "1080p", "4k"]
+        }
+      ]
+    },
+    {
+      "id": "rhart-video-v31-fast-image-to-video",
+      "name_cn": "全能视频V3.1-fast-图生视频-低价渠道版",
+      "name_en": "google/veo3.1-fast/image-to-video-channel-low-price",
+      "endpoint": "rhart-video-v3.1-fast/image-to-video",
+      "output_type": "video",
+      "category": "video",
+      "params": [
+        {
+          "fieldKey": "prompt",
+          "type": "STRING",
+          "required": true,
+          "description": "Text prompt",
+          "maxLength": 8000
+        },
+        {
+          "fieldKey": "aspectRatio",
+          "type": "LIST",
+          "required": true,
+          "defaultValue": "16:9",
+          "options": ["16:9", "9:16"]
+        },
+        {
+          "fieldKey": "imageUrls",
+          "type": "IMAGE",
+          "required": true,
+          "multipleInputs": true,
+          "maxInputNum": 3,
+          "accept": ["JPG", "PNG"],
+          "maxSizeMB": 10
+        },
+        {
+          "fieldKey": "duration",
+          "type": "LIST",
+          "required": false,
+          "defaultValue": "8",
+          "options": ["8"]
+        },
+        {
+          "fieldKey": "resolution",
+          "type": "LIST",
+          "required": true,
+          "defaultValue": "720p",
+          "options": ["720p", "1080p", "4k"]
+        }
+      ]
+    }
+  ]
+}

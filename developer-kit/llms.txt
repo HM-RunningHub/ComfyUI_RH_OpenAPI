@@ -1,0 +1,102 @@
+# RunningHub API Integration Rules for AI Agents
+
+This file is the first document an AI coding agent must read before implementing
+RunningHub API integration in any product.
+
+## Mission
+
+Help developers integrate RunningHub Standard Model APIs accurately. Do not guess
+API behavior from generic AI API patterns. Follow the contract in this kit.
+
+## Hard Rules
+
+1. Always authenticate with `Authorization: Bearer <RH_API_KEY>`.
+2. Never hardcode API keys, account tokens, cookies, or secrets.
+3. Read API keys from environment variables, secret managers, or the host
+   product's secure configuration system.
+4. Use `https://www.runninghub.cn/openapi/v2` as the default base URL unless the
+   developer explicitly provides another base URL.
+5. For local image, video, or audio files, upload the file first with
+   `POST /media/upload/binary`.
+6. Do not put local file paths into model payload fields such as `imageUrl`,
+   `imageUrls`, `videoUrl`, or `audioUrl`.
+7. Model submit endpoints return a `taskId`. They do not directly return final
+   generated media.
+8. After submit, poll `POST /query` with `{"taskId": "<taskId>"}`.
+9. Treat `SUCCESS` as terminal success.
+10. Treat `FAILED` and `CANCEL` as terminal failure.
+11. Treat `CREATE`, `QUEUED`, and `RUNNING` as non-terminal states.
+12. Do not invent endpoint paths, parameter names, enum values, limits, or
+    output types.
+13. Use only schema data from `model-registry.public.json`,
+    `model-registry.sample.json`, OpenAPI schema, or explicit
+    developer-provided documentation.
+14. Preserve `taskId`, result URLs, and the raw final response for debugging.
+15. Implement timeouts. Never poll forever.
+16. Retry only transient failures such as network errors, HTTP 429, and HTTP 5xx.
+17. Do not retry deterministic business errors such as invalid parameters,
+    unauthorized requests, insufficient balance, quota errors, content policy
+    violations, or moderation failures.
+18. Keep boolean values as real booleans, not strings.
+19. Keep numeric values as numbers unless the model schema explicitly declares a
+    string enum.
+20. Validate required parameters before submit.
+21. Use `pricing.public.json` only for cost-aware guidance, model comparison,
+    budget hints, or internal product estimates.
+22. Do not present prices from this kit as final billing truth. Ask the
+    developer to verify official RunningHub pricing before showing costs to end
+    users.
+
+## Required API Lifecycle
+
+```text
+Resolve config
+  -> Upload local media files when needed
+  -> Build model payload from schema
+  -> POST {base_url}/{endpoint}
+  -> Extract taskId
+  -> POST {base_url}/query until terminal status
+  -> Extract results[].url / outputUrl / text / content / output
+  -> Return taskId, outputs, and raw response
+```
+
+## Required Questions When Information Is Missing
+
+Ask the developer for clarification instead of guessing when:
+
+- The requested model endpoint is not available in `model-registry.public.json`
+  or developer-provided docs.
+- A parameter enum is missing.
+- A media field could accept one file or multiple files and the schema is not
+  available.
+- The product needs sync behavior but the selected RH API is asynchronous.
+- The developer asks to use a local file path directly as a model URL.
+
+## Recommended Implementation Shape
+
+Create a small client/service layer in the host product:
+
+- `upload_file(path_or_bytes) -> url`
+- `submit(endpoint, payload) -> task_id`
+- `poll(task_id) -> final_response`
+- `run(endpoint, payload, files=None) -> RHResult`
+
+Business code should call the client/service layer instead of duplicating raw
+HTTP calls across the product.
+
+## Model Selection Workflow
+
+When the developer asks for a capability instead of an exact endpoint:
+
+1. Read `capabilities.md` to find candidate endpoints.
+2. Read the exact entry in `model-registry.public.json`.
+3. Optionally read `pricing.public.json` for cost-aware recommendations.
+4. Validate required fields and enum values from that entry.
+5. If multiple endpoints match, ask the developer to choose.
+6. Never infer parameters from endpoint names alone.
+
+## Verification
+
+After implementing integration, run the conformance checks in `tests/`. If real
+credentials are not available, run mock or dry-run tests. If `RH_API_KEY` is
+available, run only a minimal smoke test selected by the developer.
