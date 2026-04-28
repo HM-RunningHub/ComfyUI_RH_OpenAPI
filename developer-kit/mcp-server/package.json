@@ -1,0 +1,28 @@
+{
+  "name": "@runninghub/mcp-server",
+  "version": "0.1.0",
+  "description": "Local MCP server for AI-assisted RunningHub API integration.",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "runninghub-mcp-server": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test tests/*.test.mjs",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.21.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
