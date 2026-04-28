@@ -28,7 +28,7 @@ FORBIDDEN_MODEL_KEYS = {
     "billing",
     "billing_spec",
 }
-PUBLIC_MODEL_KEYS = {
+PUBLIC_MODEL_KEYS = (
     "class_name",
     "display_name",
     "name_cn",
@@ -40,7 +40,7 @@ PUBLIC_MODEL_KEYS = {
     "asset_ids_mode",
     "real_person_asset_slots",
     "real_person_mode_default",
-}
+)
 
 
 def read_json(path: Path) -> Any:
@@ -55,7 +55,7 @@ def write_json(path: Path, data: Any) -> None:
 
 
 def sanitize_param(param: Mapping[str, Any]) -> Dict[str, Any]:
-    allowed_keys = {
+    allowed_keys = (
         "fieldKey",
         "type",
         "required",
@@ -74,7 +74,7 @@ def sanitize_param(param: Mapping[str, Any]) -> Dict[str, Any]:
         "step",
         "maxLength",
         "tail_insert",
-    }
+    )
     result = {key: param[key] for key in allowed_keys if key in param}
     if "options" in result and isinstance(result["options"], list):
         result["options"] = [sanitize_option(option) for option in result["options"]]
@@ -84,7 +84,7 @@ def sanitize_param(param: Mapping[str, Any]) -> Dict[str, Any]:
 def sanitize_option(option: Any) -> Any:
     if not isinstance(option, Mapping):
         return option
-    allowed = {"value", "description", "descriptionEn"}
+    allowed = ("value", "description", "descriptionEn")
     return {key: option[key] for key in allowed if key in option}
 
 
