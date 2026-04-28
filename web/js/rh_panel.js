@@ -157,7 +157,7 @@ app.registerExtension({
       zh: {
         "RHArt Image": "🖼️ RH 全能图像", "RHArt Video": "🎬 RH 全能视频",
         "RHArt Video G": "🎥 RH 全能视频G", "RHArt Text": "📝 RH 多模态文本",
-        "Kling": "🎞️ 可灵 Kling", "Vidu": "📹 生数 Vidu",
+        "Kling": "🎞️ 可灵 Kling", "Image Enhance": "✨ 图像增强", "Vidu": "📹 生数 Vidu",
         "Wan": "🌀 通义万相 Wan", "Qwe": "🎨 Qwe", "MiniMax": "🐚 MiniMax 海螺",
         "Seedream": "🌱 Seedream 图像", "Seedance": "💃 Seedance 视频",
         "Youchuan": "🚢 有船 Midjourney", "Audio": "🎵 音频生成",
@@ -167,13 +167,14 @@ app.registerExtension({
         "PixVerse": "🎬 PixVerse 可灵替代",
         "SkyReels": "🎥 昆仑 SkyReels",
         "Higgsfield": "🎭 Higgsfield",
+        "Marble": "🌐 Marble",
         "Seedance2.0 Assets": "📦 Seedance2.0素材",
         "SparkVideo Assets": "📦 Seedance2.0素材",
       },
       en: {
         "RHArt Image": "🖼️ RHArt Image", "RHArt Video": "🎬 RHArt Video",
         "RHArt Video G": "🎥 RHArt Video G", "RHArt Text": "📝 RHArt Text",
-        "Kling": "🎞️ Kling", "Vidu": "📹 Vidu",
+        "Kling": "🎞️ Kling", "Image Enhance": "✨ Image Enhance", "Vidu": "📹 Vidu",
         "Wan": "🌀 Wan", "Qwe": "🎨 Qwe", "MiniMax": "🐚 MiniMax",
         "Seedream": "🌱 Seedream", "Seedance": "💃 Seedance",
         "Youchuan": "🚢 Midjourney", "Audio": "🎵 Audio",
@@ -183,6 +184,7 @@ app.registerExtension({
         "PixVerse": "🎬 PixVerse",
         "SkyReels": "🎥 SkyReels",
         "Higgsfield": "🎭 Higgsfield",
+        "Marble": "🌐 Marble",
         "Seedance2.0 Assets": "📦 Seedance2.0 Assets",
         "SparkVideo Assets": "📦 Seedance2.0 Assets",
       },
@@ -235,10 +237,10 @@ app.registerExtension({
 
     const categoryOrder = [
       "RHArt Image", "RHArt Video", "RHArt Video G", "RHArt Text",
-      "Kling", "Vidu", "Wan", "Qwe", "MiniMax",
+      "Kling", "Image Enhance", "Vidu", "Wan", "Qwe", "MiniMax",
       "Seedream", "Seedance", "Youchuan", "Audio",
       "Hunyuan3D", "HiTem3D", "TopazLabs", "HappyHorse",
-      "PixVerse", "SkyReels", "Higgsfield", "Seedance2.0 Assets",
+      "PixVerse", "SkyReels", "Higgsfield", "Marble", "Seedance2.0 Assets",
     ];
 
     let allowedNodes = null;

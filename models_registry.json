@@ -29360,5 +29360,1637 @@
         "step": 1
       }
     ]
+  },
+  {
+    "class_name": "ImageEnhanceHypirUltra",
+    "internal_name": "RH_ImageEnhanceHypirUltra",
+    "display_name": "RH HYPIR-ULTRA",
+    "name_cn": "HYPIR-ULTRA",
+    "name_en": "hypir-ultra",
+    "endpoint": "image-enhance/hypir-ultra",
+    "output_type": "image",
+    "category": "RunningHub/Image Enhance",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "文本提示词，英文描述图像内容。",
+        "maxLength": 8192
+      },
+      {
+        "fieldKey": "shortEdgeSize",
+        "type": "INT",
+        "required": false,
+        "label": "shortEdgeSize",
+        "description": "短边像素目标，-1 表示不限制",
+        "defaultValue": -1,
+        "min": -1,
+        "max": 16384,
+        "step": 1
+      },
+      {
+        "fieldKey": "longEdgeSize",
+        "type": "INT",
+        "required": false,
+        "label": "longEdgeSize",
+        "description": "长边像素目标，-1 表示不限制",
+        "defaultValue": -1,
+        "min": -1,
+        "max": 16384,
+        "step": 1
+      },
+      {
+        "fieldKey": "textureLevel",
+        "type": "LIST",
+        "required": false,
+        "label": "textureLevel",
+        "description": "纹理丰富度 1-7",
+        "defaultValue": "3",
+        "options": [
+          {
+            "value": "1",
+            "description": "1",
+            "descriptionEn": "1"
+          },
+          {
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          }
+        ]
+      },
+      {
+        "fieldKey": "creativityLevel",
+        "type": "LIST",
+        "required": false,
+        "label": "creativityLevel",
+        "description": "创造性等级，范围 0~4，0 为最保守、4 为最具创新性。",
+        "options": [
+          {
+            "value": "0",
+            "description": "0",
+            "descriptionEn": "0"
+          },
+          {
+            "value": "1",
+            "description": "1",
+            "descriptionEn": "1"
+          },
+          {
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          }
+        ]
+      },
+      {
+        "fieldKey": "upscale",
+        "type": "INT",
+        "required": false,
+        "label": "upscale",
+        "description": "放大倍数",
+        "min": 1,
+        "step": 1
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "seed",
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "Hitem3dV21ImageTo3d",
+    "internal_name": "RH_Hitem3dV21ImageTo3d",
+    "display_name": "RH hitem3d-v21/image-to-3d",
+    "name_cn": "hitem3d-v21/image-to-3d",
+    "name_en": "hitem3d-v21/image-to-3d",
+    "endpoint": "hitem3d-v21/image-to-3d",
+    "output_type": "3d",
+    "category": "RunningHub/HiTem3D",
+    "params": [
+      {
+        "fieldKey": "requestType",
+        "type": "LIST",
+        "required": true,
+        "label": "requestType",
+        "description": "请求类型，mesh：仅生成纯几何；both：一次性生成几何+纹理模型；默认为几何",
+        "defaultValue": "mesh",
+        "options": [
+          {
+            "value": "mesh",
+            "description": "mesh（仅生成纯几何）",
+            "descriptionEn": "mesh (geometry only)"
+          },
+          {
+            "value": "both",
+            "description": "both（一次性生成几何+纹理模型）",
+            "descriptionEn": "both (geometry + texture)"
+          }
+        ]
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "上传图像，模型将以此参数中传入的图片来生成3D模型",
+        "accept": "[\"PNG\",\"JPEG\",\"JPG\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1536pro",
+        "options": [
+          {
+            "value": "1536pro",
+            "description": "1536pro",
+            "descriptionEn": "1536pro"
+          },
+          {
+            "value": "1536fast",
+            "description": "1536fast",
+            "descriptionEn": "1536fast"
+          }
+        ]
+      },
+      {
+        "fieldKey": "face",
+        "type": "INT",
+        "required": false,
+        "label": "face",
+        "description": "模型面数，取值范围100000~2000000，推荐：1536Pro：2000000",
+        "defaultValue": 2000000,
+        "min": 100000,
+        "max": 2000000,
+        "step": 10000
+      }
+    ]
+  },
+  {
+    "class_name": "Hitem3dV21MultiImageTo3d",
+    "internal_name": "RH_Hitem3dV21MultiImageTo3d",
+    "display_name": "RH hitem3d-v21/multi-image-to-3d",
+    "name_cn": "hitem3d-v21/multi-image-to-3d",
+    "name_en": "hitem3d-v21/multi-image-to-3d",
+    "endpoint": "hitem3d-v21/multi-image-to-3d",
+    "output_type": "3d",
+    "category": "RunningHub/HiTem3D",
+    "params": [
+      {
+        "fieldKey": "requestType",
+        "type": "LIST",
+        "required": true,
+        "label": "requestType",
+        "description": "请求类型，mesh：仅生成纯几何；both：一次性生成几何+纹理模型；默认为几何",
+        "defaultValue": "mesh",
+        "options": [
+          {
+            "value": "mesh",
+            "description": "mesh（仅生成纯几何）",
+            "descriptionEn": "mesh (geometry only)"
+          },
+          {
+            "value": "both",
+            "description": "both（一次性生成几何+纹理模型）",
+            "descriptionEn": "both (geometry + texture)"
+          }
+        ]
+      },
+      {
+        "fieldKey": "frontImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "frontImageUrl",
+        "description": "frontImageUrl",
+        "accept": "[\"PNG\",\"JPEG\",\"JPG\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "backImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "backImageUrl",
+        "description": "backImageUrl",
+        "accept": "[\"JPG\",\"PNG\",\"JPEG\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "leftImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "leftImageUrl",
+        "description": "leftImageUrl",
+        "accept": "[\"JPG\",\"PNG\",\"JPEG\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "rightImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "rightImageUrl",
+        "description": "rightImageUrl",
+        "accept": "[\"JPG\",\"PNG\",\"JPEG\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1536pro",
+        "options": [
+          {
+            "value": "1536pro",
+            "description": "1536pro",
+            "descriptionEn": "1536pro"
+          },
+          {
+            "value": "1536fast",
+            "description": "1536fast",
+            "descriptionEn": "1536fast"
+          }
+        ]
+      },
+      {
+        "fieldKey": "face",
+        "type": "INT",
+        "required": false,
+        "label": "face",
+        "description": "模型面数，取值范围100000~2000000，推荐：1536Pro：2000000",
+        "defaultValue": 2000000,
+        "min": 100000,
+        "max": 2000000,
+        "step": 10000
+      }
+    ]
+  },
+  {
+    "class_name": "KlingV2AiAvatarStandardImageAudioToVideo",
+    "internal_name": "RH_KlingV2AiAvatarStandardImageAudioToVideo",
+    "display_name": "RH Kling V2 Std 数字人口播视频",
+    "name_cn": "Kling V2 Std 数字人口播视频",
+    "name_en": "kling-v2-ai-avatar-standard/image-audio-to-video",
+    "endpoint": "kling-v2-ai-avatar-standard/image-audio-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "输入人物图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "audioUrl",
+        "type": "AUDIO",
+        "required": true,
+        "label": "audioUrl",
+        "description": "输入音频",
+        "accept": "[\"MP3\",\"WAV\",\"M4A\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "风格与行为提示词（可选）",
+        "maxLength": 2048
+      }
+    ]
+  },
+  {
+    "class_name": "KlingV2AiAvatarProImageAudioToVideo",
+    "internal_name": "RH_KlingV2AiAvatarProImageAudioToVideo",
+    "display_name": "RH Kling V2 Pro 数字人口播视频",
+    "name_cn": "Kling V2 Pro 数字人口播视频",
+    "name_en": "kling-v2-ai-avatar-pro/image-audio-to-video",
+    "endpoint": "kling-v2-ai-avatar-pro/image-audio-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "输入人物图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "audioUrl",
+        "type": "AUDIO",
+        "required": true,
+        "label": "audioUrl",
+        "description": "输入音频",
+        "accept": "[\"MP3\",\"WAV\",\"M4A\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "风格、表情或镜头提示词（可选）",
+        "maxLength": 2048
+      }
+    ]
+  },
+  {
+    "class_name": "ImageEnhanceHypirBalance",
+    "internal_name": "RH_ImageEnhanceHypirBalance",
+    "display_name": "RH HYPIR-BALANCE",
+    "name_cn": "HYPIR-BALANCE",
+    "name_en": "hypir-balance",
+    "endpoint": "image-enhance/hypir-balance",
+    "output_type": "image",
+    "category": "RunningHub/Image Enhance",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "upscale",
+        "type": "INT",
+        "required": true,
+        "label": "upscale",
+        "description": "放大倍数",
+        "min": 1,
+        "step": 1
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "文本提示词，英文描述图像内容。",
+        "maxLength": 8192
+      },
+      {
+        "fieldKey": "shortEdgeSize",
+        "type": "INT",
+        "required": false,
+        "label": "shortEdgeSize",
+        "description": "短边像素目标，-1 表示不限制",
+        "defaultValue": -1,
+        "min": -1,
+        "max": 16384,
+        "step": 1
+      },
+      {
+        "fieldKey": "longEdgeSize",
+        "type": "INT",
+        "required": false,
+        "label": "longEdgeSize",
+        "description": "长边像素目标，-1 表示不限制",
+        "defaultValue": -1,
+        "min": -1,
+        "max": 16384,
+        "step": 1
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "seed",
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "Marble10TextToWorld",
+    "internal_name": "RH_Marble10TextToWorld",
+    "display_name": "RH marble-1.0 文生3D世界",
+    "name_cn": "marble-1.0 文生3D世界",
+    "name_en": "marble-1.0/text-to-world",
+    "endpoint": "marble-1.0/text-to-world",
+    "output_type": "string",
+    "category": "RunningHub/Marble",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "用于生成的文本描述",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "disableRecaption",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "disableRecaption",
+        "description": "为 true 时按 prompt 原样使用，不做自动重述",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "displayName",
+        "type": "STRING",
+        "required": false,
+        "label": "displayName",
+        "description": "世界显示名（可选，最长 64 字符）",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子（可选，0–4294967295；不填则服务器随机）",
+        "step": 1
+      },
+      {
+        "fieldKey": "permissionPublic",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionPublic",
+        "description": "世界是否对外公开（permission.public）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "permissionAllowIdAccess",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionAllowIdAccess",
+        "description": "是否允许凭 ID 访问（permission.allow_id_access）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "tags",
+        "type": "STRING",
+        "required": false,
+        "label": "tags",
+        "description": "标签列表 CSV（逗号分隔；World Labs 上限 10 个，单个 ≤64 字符；如：scifi, outdoor, demo）",
+        "maxLength": 700
+      },
+      {
+        "fieldKey": "permissionAllowedReaders",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedReaders",
+        "description": "可读用户列表 CSV（permission.allowed_readers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "permissionAllowedWriters",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedWriters",
+        "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      }
+    ]
+  },
+  {
+    "class_name": "MarbleUploadMediaAsset",
+    "internal_name": "RH_MarbleUploadMediaAsset",
+    "display_name": "RH Marble 上传媒体资源",
+    "name_cn": "Marble 上传媒体资源",
+    "name_en": "marble/upload-media-asset",
+    "endpoint": "marble/upload-media-asset",
+    "output_type": "string",
+    "category": "RunningHub/Marble",
+    "params": [
+      {
+        "fieldKey": "fileName",
+        "type": "STRING",
+        "required": true,
+        "label": "fileName",
+        "description": "对应官方 file_name；含扩展名，如 photo.jpg 或 clip.mp4。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "kind",
+        "type": "LIST",
+        "required": true,
+        "label": "kind",
+        "description": "对应官方 kind（image|video），须与文件类型一致。",
+        "defaultValue": "image",
+        "options": [
+          {
+            "value": "image",
+            "description": "image",
+            "descriptionEn": "image"
+          },
+          {
+            "value": "video",
+            "description": "video",
+            "descriptionEn": "video"
+          }
+        ]
+      },
+      {
+        "fieldKey": "extension",
+        "type": "STRING",
+        "required": false,
+        "label": "extension",
+        "description": "对应官方 extension（无点，可选），宜与 kind 一致：image 用 jpg/png/webp 等，video 用 mp4/webm/mov 等。",
+        "maxLength": 16
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrl",
+        "description": "上传图片文件",
+        "accept": "[\"JPG\",\"PNG\",\"JPEG\"]",
+        "maxSize": 100
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": false,
+        "label": "videoUrl",
+        "description": "上传视频文件",
+        "accept": "[\"MP4\"]",
+        "maxSize": 100
+      }
+    ]
+  },
+  {
+    "class_name": "Marble10ImageToWorld",
+    "internal_name": "RH_Marble10ImageToWorld",
+    "display_name": "RH marble-1.0 单图生3D世界",
+    "name_cn": "marble-1.0 单图生3D世界",
+    "name_en": "marble-1.0/image-to-world",
+    "endpoint": "marble-1.0/image-to-world",
+    "output_type": "image",
+    "category": "RunningHub/Marble",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "STRING",
+        "required": false,
+        "label": "imageUrl",
+        "description": "图片 URL或 World Labs media_asset_id",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "textPrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "textPrompt",
+        "description": "可选的文本引导（不填则自动重述）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "isPano",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "isPano",
+        "description": "输入图是否已是全景图",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "disableRecaption",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "disableRecaption",
+        "description": "为 true 时按 textPrompt 原样使用，不做自动重述",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "displayName",
+        "type": "STRING",
+        "required": false,
+        "label": "displayName",
+        "description": "世界显示名（可选，最长 64 字符）",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子（可选，0–4294967295；不填则服务器随机）",
+        "step": 1
+      },
+      {
+        "fieldKey": "permissionPublic",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionPublic",
+        "description": "世界是否对外公开（permission.public）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "permissionAllowIdAccess",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionAllowIdAccess",
+        "description": "是否允许凭 ID 访问（permission.allow_id_access）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "tags",
+        "type": "STRING",
+        "required": false,
+        "label": "tags",
+        "description": "标签列表 CSV（逗号分隔；World Labs 上限 10 个，单个 ≤64 字符；如：scifi, outdoor, demo）",
+        "maxLength": 700
+      },
+      {
+        "fieldKey": "permissionAllowedReaders",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedReaders",
+        "description": "可读用户列表 CSV（permission.allowed_readers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "permissionAllowedWriters",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedWriters",
+        "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      }
+    ]
+  },
+  {
+    "class_name": "Marble10MultiImageToWorld",
+    "internal_name": "RH_Marble10MultiImageToWorld",
+    "display_name": "RH marble-1.0 多图生3D世界",
+    "name_cn": "marble-1.0 多图生3D世界",
+    "name_en": "marble-1.0/multi-image-to-world",
+    "endpoint": "marble-1.0/multi-image-to-world",
+    "output_type": "image",
+    "category": "RunningHub/Marble",
+    "params": [
+      {
+        "fieldKey": "textPrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "textPrompt",
+        "description": "可选的文本引导（不填则自动重述）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "reconstructImages",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "reconstructImages",
+        "description": "是否启用重建模式（开启时官方支持最多 8 张图，需配合更高规格 model；超过 4 张参考图必须打开）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "disableRecaption",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "disableRecaption",
+        "description": "为 true 时按 textPrompt 原样使用，不做自动重述",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "displayName",
+        "type": "STRING",
+        "required": false,
+        "label": "displayName",
+        "description": "世界显示名（可选，最长 64 字符）",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子（可选，0–4294967295；不填则服务器随机）",
+        "step": 1
+      },
+      {
+        "fieldKey": "permissionPublic",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionPublic",
+        "description": "世界是否对外公开（permission.public）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "permissionAllowIdAccess",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionAllowIdAccess",
+        "description": "是否允许凭 ID 访问（permission.allow_id_access）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "tags",
+        "type": "STRING",
+        "required": false,
+        "label": "tags",
+        "description": "标签列表 CSV（逗号分隔；World Labs 上限 10 个，单个 ≤64 字符；如：scifi, outdoor, demo）",
+        "maxLength": 700
+      },
+      {
+        "fieldKey": "permissionAllowedReaders",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedReaders",
+        "description": "可读用户列表 CSV（permission.allowed_readers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "permissionAllowedWriters",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedWriters",
+        "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      }
+    ]
+  },
+  {
+    "class_name": "Marble10VideoToWorld",
+    "internal_name": "RH_Marble10VideoToWorld",
+    "display_name": "RH marble-1.0 视频生3D世界",
+    "name_cn": "marble-1.0 视频生3D世界",
+    "name_en": "marble-1.0/video-to-world",
+    "endpoint": "marble-1.0/video-to-world",
+    "output_type": "video",
+    "category": "RunningHub/Marble",
+    "params": [
+      {
+        "fieldKey": "videoUrl",
+        "type": "STRING",
+        "required": false,
+        "label": "videoUrl",
+        "description": "视频公开 URL（http/https 开头视为 UriReference）或 World Labs media_asset_id（其他视为 MediaAssetReference）",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "textPrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "textPrompt",
+        "description": "可选的文本引导（不填则自动重述）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "disableRecaption",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "disableRecaption",
+        "description": "为 true 时按 textPrompt 原样使用，不做自动重述",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "displayName",
+        "type": "STRING",
+        "required": false,
+        "label": "displayName",
+        "description": "世界显示名（可选，最长 64 字符）",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子（可选，0–4294967295；不填则服务器随机）",
+        "step": 1
+      },
+      {
+        "fieldKey": "permissionPublic",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionPublic",
+        "description": "世界是否对外公开（permission.public）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "permissionAllowIdAccess",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionAllowIdAccess",
+        "description": "是否允许凭 ID 访问（permission.allow_id_access）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "tags",
+        "type": "STRING",
+        "required": false,
+        "label": "tags",
+        "description": "标签列表 CSV（逗号分隔；World Labs 上限 10 个，单个 ≤64 字符；如：scifi, outdoor, demo）",
+        "maxLength": 700
+      },
+      {
+        "fieldKey": "permissionAllowedReaders",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedReaders",
+        "description": "可读用户列表 CSV（permission.allowed_readers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "permissionAllowedWriters",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedWriters",
+        "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      }
+    ]
+  },
+  {
+    "class_name": "Marble11VideoToWorld",
+    "internal_name": "RH_Marble11VideoToWorld",
+    "display_name": "RH marble-1.1 视频生3D世界",
+    "name_cn": "marble-1.1 视频生3D世界",
+    "name_en": "marble-1.1/video-to-world",
+    "endpoint": "marble-1.1/video-to-world",
+    "output_type": "video",
+    "category": "RunningHub/Marble",
+    "params": [
+      {
+        "fieldKey": "videoUrl",
+        "type": "STRING",
+        "required": false,
+        "label": "videoUrl",
+        "description": "视频公开 URL（http/https 开头视为 UriReference）或 World Labs media_asset_id（其他视为 MediaAssetReference）",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "textPrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "textPrompt",
+        "description": "可选的文本引导（不填则自动重述）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "disableRecaption",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "disableRecaption",
+        "description": "为 true 时按 textPrompt 原样使用，不做自动重述",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "displayName",
+        "type": "STRING",
+        "required": false,
+        "label": "displayName",
+        "description": "世界显示名（可选，最长 64 字符）",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子（可选，0–4294967295；不填则服务器随机）",
+        "step": 1
+      },
+      {
+        "fieldKey": "permissionPublic",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionPublic",
+        "description": "世界是否对外公开（permission.public）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "permissionAllowIdAccess",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionAllowIdAccess",
+        "description": "是否允许凭 ID 访问（permission.allow_id_access）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "tags",
+        "type": "STRING",
+        "required": false,
+        "label": "tags",
+        "description": "标签列表 CSV（逗号分隔；World Labs 上限 10 个，单个 ≤64 字符；如：scifi, outdoor, demo）",
+        "maxLength": 700
+      },
+      {
+        "fieldKey": "permissionAllowedReaders",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedReaders",
+        "description": "可读用户列表 CSV（permission.allowed_readers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "permissionAllowedWriters",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedWriters",
+        "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      }
+    ]
+  },
+  {
+    "class_name": "Marble11PlusVideoToWorld",
+    "internal_name": "RH_Marble11PlusVideoToWorld",
+    "display_name": "RH marble-1.1-plus 视频生3D世界",
+    "name_cn": "marble-1.1-plus 视频生3D世界",
+    "name_en": "marble-1.1-plus/video-to-world",
+    "endpoint": "marble-1.1-plus/video-to-world",
+    "output_type": "video",
+    "category": "RunningHub/Marble",
+    "params": [
+      {
+        "fieldKey": "videoUrl",
+        "type": "STRING",
+        "required": false,
+        "label": "videoUrl",
+        "description": "视频公开 URL（http/https 开头视为 UriReference）或 World Labs media_asset_id（其他视为 MediaAssetReference）",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "textPrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "textPrompt",
+        "description": "可选的文本引导（不填则自动重述）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "disableRecaption",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "disableRecaption",
+        "description": "为 true 时按 textPrompt 原样使用，不做自动重述",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "displayName",
+        "type": "STRING",
+        "required": false,
+        "label": "displayName",
+        "description": "世界显示名（可选，最长 64 字符）",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子（可选，0–4294967295；不填则服务器随机）",
+        "step": 1
+      },
+      {
+        "fieldKey": "permissionPublic",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionPublic",
+        "description": "世界是否对外公开（permission.public）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "permissionAllowIdAccess",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionAllowIdAccess",
+        "description": "是否允许凭 ID 访问（permission.allow_id_access）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "tags",
+        "type": "STRING",
+        "required": false,
+        "label": "tags",
+        "description": "标签列表 CSV（逗号分隔；World Labs 上限 10 个，单个 ≤64 字符；如：scifi, outdoor, demo）",
+        "maxLength": 700
+      },
+      {
+        "fieldKey": "permissionAllowedReaders",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedReaders",
+        "description": "可读用户列表 CSV（permission.allowed_readers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "permissionAllowedWriters",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedWriters",
+        "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      }
+    ]
+  },
+  {
+    "class_name": "Marble11MultiImageToWorld",
+    "internal_name": "RH_Marble11MultiImageToWorld",
+    "display_name": "RH marble-1.1 多图生3D世界",
+    "name_cn": "marble-1.1 多图生3D世界",
+    "name_en": "marble-1.1/multi-image-to-world",
+    "endpoint": "marble-1.1/multi-image-to-world",
+    "output_type": "image",
+    "category": "RunningHub/Marble",
+    "params": [
+      {
+        "fieldKey": "textPrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "textPrompt",
+        "description": "可选的文本引导（不填则自动重述）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "reconstructImages",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "reconstructImages",
+        "description": "是否启用重建模式（开启时官方支持最多 8 张图，需配合更高规格 model；超过 4 张参考图必须打开）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "disableRecaption",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "disableRecaption",
+        "description": "为 true 时按 textPrompt 原样使用，不做自动重述",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "displayName",
+        "type": "STRING",
+        "required": false,
+        "label": "displayName",
+        "description": "世界显示名（可选，最长 64 字符）",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子（可选，0–4294967295；不填则服务器随机）",
+        "step": 1
+      },
+      {
+        "fieldKey": "permissionPublic",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionPublic",
+        "description": "世界是否对外公开（permission.public）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "permissionAllowIdAccess",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionAllowIdAccess",
+        "description": "是否允许凭 ID 访问（permission.allow_id_access）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "tags",
+        "type": "STRING",
+        "required": false,
+        "label": "tags",
+        "description": "标签列表 CSV（逗号分隔；World Labs 上限 10 个，单个 ≤64 字符；如：scifi, outdoor, demo）",
+        "maxLength": 700
+      },
+      {
+        "fieldKey": "permissionAllowedReaders",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedReaders",
+        "description": "可读用户列表 CSV（permission.allowed_readers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "permissionAllowedWriters",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedWriters",
+        "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      }
+    ]
+  },
+  {
+    "class_name": "Marble11PlusMultiImageToWorld",
+    "internal_name": "RH_Marble11PlusMultiImageToWorld",
+    "display_name": "RH marble-1.1-plus 多图生3D世界",
+    "name_cn": "marble-1.1-plus 多图生3D世界",
+    "name_en": "marble-1.1-plus/multi-image-to-world",
+    "endpoint": "marble-1.1-plus/multi-image-to-world",
+    "output_type": "image",
+    "category": "RunningHub/Marble",
+    "params": [
+      {
+        "fieldKey": "textPrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "textPrompt",
+        "description": "可选的文本引导（不填则自动重述）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "reconstructImages",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "reconstructImages",
+        "description": "是否启用重建模式（开启时官方支持最多 8 张图，需配合更高规格 model；超过 4 张参考图必须打开）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "disableRecaption",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "disableRecaption",
+        "description": "为 true 时按 textPrompt 原样使用，不做自动重述",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "displayName",
+        "type": "STRING",
+        "required": false,
+        "label": "displayName",
+        "description": "世界显示名（可选，最长 64 字符）",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子（可选，0–4294967295；不填则服务器随机）",
+        "step": 1
+      },
+      {
+        "fieldKey": "permissionPublic",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionPublic",
+        "description": "世界是否对外公开（permission.public）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "permissionAllowIdAccess",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionAllowIdAccess",
+        "description": "是否允许凭 ID 访问（permission.allow_id_access）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "tags",
+        "type": "STRING",
+        "required": false,
+        "label": "tags",
+        "description": "标签列表 CSV（逗号分隔；World Labs 上限 10 个，单个 ≤64 字符；如：scifi, outdoor, demo）",
+        "maxLength": 700
+      },
+      {
+        "fieldKey": "permissionAllowedReaders",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedReaders",
+        "description": "可读用户列表 CSV（permission.allowed_readers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "permissionAllowedWriters",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedWriters",
+        "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      }
+    ]
+  },
+  {
+    "class_name": "Marble11ImageToWorld",
+    "internal_name": "RH_Marble11ImageToWorld",
+    "display_name": "RH marble-1.1 单图生3D世界",
+    "name_cn": "marble-1.1 单图生3D世界",
+    "name_en": "marble-1.1/image-to-world",
+    "endpoint": "marble-1.1/image-to-world",
+    "output_type": "image",
+    "category": "RunningHub/Marble",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "STRING",
+        "required": false,
+        "label": "imageUrl",
+        "description": "图片 URL或 World Labs media_asset_id",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "textPrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "textPrompt",
+        "description": "可选的文本引导（不填则自动重述）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "isPano",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "isPano",
+        "description": "输入图是否已是全景图",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "disableRecaption",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "disableRecaption",
+        "description": "为 true 时按 textPrompt 原样使用，不做自动重述",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "displayName",
+        "type": "STRING",
+        "required": false,
+        "label": "displayName",
+        "description": "世界显示名（可选，最长 64 字符）",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子（可选，0–4294967295；不填则服务器随机）",
+        "step": 1
+      },
+      {
+        "fieldKey": "permissionPublic",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionPublic",
+        "description": "世界是否对外公开（permission.public）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "permissionAllowIdAccess",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionAllowIdAccess",
+        "description": "是否允许凭 ID 访问（permission.allow_id_access）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "tags",
+        "type": "STRING",
+        "required": false,
+        "label": "tags",
+        "description": "标签列表 CSV（逗号分隔；World Labs 上限 10 个，单个 ≤64 字符；如：scifi, outdoor, demo）",
+        "maxLength": 700
+      },
+      {
+        "fieldKey": "permissionAllowedReaders",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedReaders",
+        "description": "可读用户列表 CSV（permission.allowed_readers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "permissionAllowedWriters",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedWriters",
+        "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      }
+    ]
+  },
+  {
+    "class_name": "Marble11PlusImageToWorld",
+    "internal_name": "RH_Marble11PlusImageToWorld",
+    "display_name": "RH marble-1.1-plus 单图生3D世界",
+    "name_cn": "marble-1.1-plus 单图生3D世界",
+    "name_en": "marble-1.1-plus/image-to-world",
+    "endpoint": "marble-1.1-plus/image-to-world",
+    "output_type": "image",
+    "category": "RunningHub/Marble",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "STRING",
+        "required": false,
+        "label": "imageUrl",
+        "description": "图片 URL或 World Labs media_asset_id",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "textPrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "textPrompt",
+        "description": "可选的文本引导（不填则自动重述）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "isPano",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "isPano",
+        "description": "输入图是否已是全景图",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "disableRecaption",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "disableRecaption",
+        "description": "为 true 时按 textPrompt 原样使用，不做自动重述",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "displayName",
+        "type": "STRING",
+        "required": false,
+        "label": "displayName",
+        "description": "世界显示名（可选，最长 64 字符）",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子（可选，0–4294967295；不填则服务器随机）",
+        "step": 1
+      },
+      {
+        "fieldKey": "permissionPublic",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionPublic",
+        "description": "世界是否对外公开（permission.public）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "permissionAllowIdAccess",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionAllowIdAccess",
+        "description": "是否允许凭 ID 访问（permission.allow_id_access）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "tags",
+        "type": "STRING",
+        "required": false,
+        "label": "tags",
+        "description": "标签列表 CSV（逗号分隔；World Labs 上限 10 个，单个 ≤64 字符；如：scifi, outdoor, demo）",
+        "maxLength": 700
+      },
+      {
+        "fieldKey": "permissionAllowedReaders",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedReaders",
+        "description": "可读用户列表 CSV（permission.allowed_readers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "permissionAllowedWriters",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedWriters",
+        "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      }
+    ]
+  },
+  {
+    "class_name": "Marble11TextToWorld",
+    "internal_name": "RH_Marble11TextToWorld",
+    "display_name": "RH marble-1.1 文生3D世界",
+    "name_cn": "marble-1.1 文生3D世界",
+    "name_en": "marble-1.1/text-to-world",
+    "endpoint": "marble-1.1/text-to-world",
+    "output_type": "string",
+    "category": "RunningHub/Marble",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "用于生成的文本描述",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "disableRecaption",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "disableRecaption",
+        "description": "为 true 时按 prompt 原样使用，不做自动重述",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "displayName",
+        "type": "STRING",
+        "required": false,
+        "label": "displayName",
+        "description": "世界显示名（可选，最长 64 字符）",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子（可选，0–4294967295；不填则服务器随机）",
+        "step": 1
+      },
+      {
+        "fieldKey": "permissionPublic",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionPublic",
+        "description": "世界是否对外公开（permission.public）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "permissionAllowIdAccess",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionAllowIdAccess",
+        "description": "是否允许凭 ID 访问（permission.allow_id_access）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "tags",
+        "type": "STRING",
+        "required": false,
+        "label": "tags",
+        "description": "标签列表 CSV（逗号分隔；World Labs 上限 10 个，单个 ≤64 字符；如：scifi, outdoor, demo）",
+        "maxLength": 700
+      },
+      {
+        "fieldKey": "permissionAllowedReaders",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedReaders",
+        "description": "可读用户列表 CSV（permission.allowed_readers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "permissionAllowedWriters",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedWriters",
+        "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      }
+    ]
+  },
+  {
+    "class_name": "Marble11PlusTextToWorld",
+    "internal_name": "RH_Marble11PlusTextToWorld",
+    "display_name": "RH marble-1.1-plus 文生3D世界",
+    "name_cn": "marble-1.1-plus 文生3D世界",
+    "name_en": "marble-1.1-plus/text-to-world",
+    "endpoint": "marble-1.1-plus/text-to-world",
+    "output_type": "string",
+    "category": "RunningHub/Marble",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "用于生成的文本描述",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "disableRecaption",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "disableRecaption",
+        "description": "为 true 时按 prompt 原样使用，不做自动重述",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "displayName",
+        "type": "STRING",
+        "required": false,
+        "label": "displayName",
+        "description": "世界显示名（可选，最长 64 字符）",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子（可选，0–4294967295；不填则服务器随机）",
+        "step": 1
+      },
+      {
+        "fieldKey": "permissionPublic",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionPublic",
+        "description": "世界是否对外公开（permission.public）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "permissionAllowIdAccess",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "permissionAllowIdAccess",
+        "description": "是否允许凭 ID 访问（permission.allow_id_access）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "tags",
+        "type": "STRING",
+        "required": false,
+        "label": "tags",
+        "description": "标签列表 CSV（逗号分隔；World Labs 上限 10 个，单个 ≤64 字符；如：scifi, outdoor, demo）",
+        "maxLength": 700
+      },
+      {
+        "fieldKey": "permissionAllowedReaders",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedReaders",
+        "description": "可读用户列表 CSV（permission.allowed_readers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "permissionAllowedWriters",
+        "type": "STRING",
+        "required": false,
+        "label": "permissionAllowedWriters",
+        "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
+        "maxLength": 4000
+      }
+    ]
   }
 ]

@@ -50,6 +50,7 @@ _CATEGORY_NAME_EN = {
     "RHArt Video G": "🎥 RHArt Video G",
     "RHArt Text": "📝 RHArt Text",
     "Kling": "🎞️ Kling",
+    "Image Enhance": "✨ Image Enhance",
     "Vidu": "📹 Vidu",
     "Wan": "🌀 Wan",
     "Qwe": "🎨 Qwe",
@@ -66,6 +67,7 @@ _CATEGORY_NAME_EN = {
     "PixVerse": "🎬 PixVerse",
     "SkyReels": "🎥 SkyReels",
     "Higgsfield": "🎭 Higgsfield",
+    "Marble": "🌐 Marble",
     "Seedance2.0 Assets": "📦 Seedance2.0 Assets",
     "SparkVideo Assets": "📦 Seedance2.0 Assets",
 }
@@ -76,6 +78,7 @@ _CATEGORY_NAME_ZH = {
     "RHArt Video G": "🎥 RH 全能视频G",
     "RHArt Text": "📝 RH 多模态文本",
     "Kling": "🎞️ 可灵 Kling",
+    "Image Enhance": "✨ 图像增强",
     "Vidu": "📹 生数 Vidu",
     "Wan": "🌀 通义万相 Wan",
     "Qwe": "🎨 Qwe",
@@ -92,6 +95,7 @@ _CATEGORY_NAME_ZH = {
     "PixVerse": "🎬 PixVerse 可灵替代",
     "SkyReels": "🎥 昆仑 SkyReels",
     "Higgsfield": "🎭 Higgsfield",
+    "Marble": "🌐 Marble",
     "Seedance2.0 Assets": "📦 Seedance2.0素材",
     "SparkVideo Assets": "📦 Seedance2.0素材",
 }
