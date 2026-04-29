@@ -4,8 +4,8 @@
   "note": "Public-safe pricing summary for AI-assisted integration. Prices may change; check official RunningHub pricing before showing final costs to end users.",
   "pricing_count": 292,
   "counts_by_pricing_type": {
-    "fixed": 122,
-    "parameter_based": 169,
+    "fixed": 119,
+    "parameter_based": 172,
     "unparsed": 1
   },
   "pricing": [
@@ -2017,7 +2017,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.8
+      "price": 0.72
     },
     {
       "endpoint": "kling-v2-ai-avatar-standard/image-audio-to-video",
@@ -2028,7 +2028,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.4
+      "price": 0.36
     },
     {
       "endpoint": "kling-v2.5-turbo-pro/image-to-video",
@@ -2798,11 +2798,27 @@
       "name_cn": "marble-1.0 单图生3D世界",
       "name_en": "marble-1.0/image-to-world",
       "currency": "CNY",
-      "unit": "/次起",
+      "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 0.0
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "isPano"
+      ],
+      "rules": [
+        {
+          "when": {
+            "isPano": "false"
+          },
+          "price": 9.1
+        },
+        {
+          "when": {
+            "isPano": "true"
+          },
+          "price": 8.64
+        }
+      ]
     },
     {
       "endpoint": "marble-1.0/multi-image-to-world",
@@ -2842,11 +2858,27 @@
       "name_cn": "marble-1.1-plus 单图生3D世界",
       "name_en": "marble-1.1-plus/image-to-world",
       "currency": "CNY",
-      "unit": "/次起",
+      "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 0.0
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "isPano"
+      ],
+      "rules": [
+        {
+          "when": {
+            "isPano": "false"
+          },
+          "price": 17.74
+        },
+        {
+          "when": {
+            "isPano": "true"
+          },
+          "price": 17.28
+        }
+      ]
     },
     {
       "endpoint": "marble-1.1-plus/multi-image-to-world",
@@ -2886,11 +2918,27 @@
       "name_cn": "marble-1.1 单图生3D世界",
       "name_en": "marble-1.1/image-to-world",
       "currency": "CNY",
-      "unit": "/次起",
+      "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 0.0
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "isPano"
+      ],
+      "rules": [
+        {
+          "when": {
+            "isPano": "false"
+          },
+          "price": 9.1
+        },
+        {
+          "when": {
+            "isPano": "true"
+          },
+          "price": 8.64
+        }
+      ]
     },
     {
       "endpoint": "marble-1.1/multi-image-to-world",
@@ -2934,7 +2982,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.0
+      "price": 9999.0
     },
     {
       "endpoint": "minimax/hailuo-02/fast",
