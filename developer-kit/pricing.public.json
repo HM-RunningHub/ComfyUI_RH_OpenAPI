@@ -2,9 +2,9 @@
   "version": "public-2026-04-29",
   "source": "models_registry.json public-safe pricing summaries",
   "note": "Public-safe pricing summary for AI-assisted integration. Prices may change; check official RunningHub pricing before showing final costs to end users.",
-  "pricing_count": 292,
+  "pricing_count": 290,
   "counts_by_pricing_type": {
-    "fixed": 119,
+    "fixed": 117,
     "parameter_based": 172,
     "unparsed": 1
   },
@@ -8300,31 +8300,9 @@
       "price": 0.01
     },
     {
-      "endpoint": "skyreels-v4/image-to-video",
-      "name_cn": "SkyReels V4 图生视频",
-      "name_en": "skyreels-v4/image-to-video",
-      "currency": "CNY",
-      "unit": "/次",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 0.01
-    },
-    {
       "endpoint": "skyreels-v4/omni-reference",
       "name_cn": "SkyReels V4 Omni Reference",
       "name_en": "skyreels-v4/omni-reference",
-      "currency": "CNY",
-      "unit": "/次",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 0.01
-    },
-    {
-      "endpoint": "skyreels-v4/text-to-video",
-      "name_cn": "SkyReels V4 文生视频",
-      "name_en": "skyreels-v4/text-to-video",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",

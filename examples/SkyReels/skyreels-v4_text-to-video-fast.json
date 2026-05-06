@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "type": "RH_SkyreelsV4TextToVideo",
+      "type": "RH_SkyreelsV4TextToVideoFast",
       "pos": [
         500,
         100
@@ -79,10 +79,10 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "RH_SkyreelsV4TextToVideo"
+        "Node name for S&R": "RH_SkyreelsV4TextToVideoFast"
       },
       "widgets_values": [],
-      "title": "RH SkyReels V4 文生视频"
+      "title": "RH SkyReels V4 文生视频-fast"
     },
     {
       "id": 3,
@@ -101,10 +101,10 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "Example: RH SkyReels V4 文生视频\nEndpoint: /skyreels-v4/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
+        "text": "Example: RH SkyReels V4 文生视频-fast\nEndpoint: /skyreels-v4/text-to-video-fast\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
       },
       "widgets_values": [
-        "Example: RH SkyReels V4 文生视频\nEndpoint: /skyreels-v4/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
+        "Example: RH SkyReels V4 文生视频-fast\nEndpoint: /skyreels-v4/text-to-video-fast\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
       ],
       "color": "#432",
       "bgcolor": "#653"

@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "type": "RH_SkyreelsV4ImageToVideo",
+      "type": "RH_KlingV25TurboStdTextToVideo",
       "pos": [
         500,
         100
@@ -50,11 +50,6 @@
       "order": 1,
       "mode": 0,
       "inputs": [
-        {
-          "name": "first_frame_image",
-          "type": "IMAGE",
-          "link": null
-        },
         {
           "name": "api_config",
           "type": "RH_OPENAPI_CONFIG",
@@ -84,10 +79,10 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "RH_SkyreelsV4ImageToVideo"
+        "Node name for S&R": "RH_KlingV25TurboStdTextToVideo"
       },
       "widgets_values": [],
-      "title": "RH SkyReels V4 图生视频"
+      "title": "RH 可灵文生视频2.5-turbo-std"
     },
     {
       "id": 3,
@@ -106,10 +101,10 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "Example: RH SkyReels V4 图生视频\nEndpoint: /skyreels-v4/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - first_frame_image (IMAGE)"
+        "text": "Example: RH 可灵文生视频2.5-turbo-std\nEndpoint: /kling-v2.5-turbo-std/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
       },
       "widgets_values": [
-        "Example: RH SkyReels V4 图生视频\nEndpoint: /skyreels-v4/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - first_frame_image (IMAGE)"
+        "Example: RH 可灵文生视频2.5-turbo-std\nEndpoint: /kling-v2.5-turbo-std/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -150,7 +145,7 @@
       1,
       0,
       2,
-      1,
+      0,
       "RH_OPENAPI_CONFIG"
     ],
     [

@@ -68,6 +68,7 @@ _CATEGORY_NAME_EN = {
     "SkyReels": "🎥 SkyReels",
     "Higgsfield": "🎭 Higgsfield",
     "Marble": "🌐 Marble",
+    "Meshy": "🧩 Meshy",
     "Seedance2.0 Assets": "📦 Seedance2.0 Assets",
     "SparkVideo Assets": "📦 Seedance2.0 Assets",
 }
@@ -96,6 +97,7 @@ _CATEGORY_NAME_ZH = {
     "SkyReels": "🎥 昆仑 SkyReels",
     "Higgsfield": "🎭 Higgsfield",
     "Marble": "🌐 Marble",
+    "Meshy": "🧩 Meshy 3D",
     "Seedance2.0 Assets": "📦 Seedance2.0素材",
     "SparkVideo Assets": "📦 Seedance2.0素材",
 }

@@ -168,6 +168,7 @@ app.registerExtension({
         "SkyReels": "🎥 昆仑 SkyReels",
         "Higgsfield": "🎭 Higgsfield",
         "Marble": "🌐 Marble",
+        "Meshy": "🧩 Meshy 3D",
         "Seedance2.0 Assets": "📦 Seedance2.0素材",
         "SparkVideo Assets": "📦 Seedance2.0素材",
       },
@@ -185,6 +186,7 @@ app.registerExtension({
         "SkyReels": "🎥 SkyReels",
         "Higgsfield": "🎭 Higgsfield",
         "Marble": "🌐 Marble",
+        "Meshy": "🧩 Meshy",
         "Seedance2.0 Assets": "📦 Seedance2.0 Assets",
         "SparkVideo Assets": "📦 Seedance2.0 Assets",
       },
@@ -240,7 +242,7 @@ app.registerExtension({
       "Kling", "Image Enhance", "Vidu", "Wan", "Qwe", "MiniMax",
       "Seedream", "Seedance", "Youchuan", "Audio",
       "Hunyuan3D", "HiTem3D", "TopazLabs", "HappyHorse",
-      "PixVerse", "SkyReels", "Higgsfield", "Marble", "Seedance2.0 Assets",
+      "PixVerse", "SkyReels", "Higgsfield", "Marble", "Meshy", "Seedance2.0 Assets",
     ];
 
     let allowedNodes = null;

@@ -1234,17 +1234,19 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": "5",
         "options": [
           {
             "value": "5",
-            "description": "5"
+            "description": "5",
+            "descriptionEn": "5"
           },
           {
             "value": "10",
-            "description": "10"
+            "description": "10",
+            "descriptionEn": "10"
           }
-        ],
-        "defaultValue": "5"
+        ]
       },
       {
         "fieldKey": "guidanceScale",
@@ -1252,10 +1254,10 @@
         "required": false,
         "label": "guidanceScale",
         "description": "guidanceScale",
+        "defaultValue": 0.5,
         "min": 0,
         "max": 1,
-        "step": 0.1,
-        "defaultValue": 0.5
+        "step": 0.1
       },
       {
         "fieldKey": "firstImageUrl",
@@ -1263,10 +1265,8 @@
         "required": true,
         "label": "firstImageUrl",
         "description": "firstImageUrl",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
-        "maxSize": 20
+        "maxSize": 50
       },
       {
         "fieldKey": "lastImageUrl",
@@ -1274,10 +1274,8 @@
         "required": false,
         "label": "lastImageUrl",
         "description": "lastImageUrl",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
-        "maxSize": 20
+        "maxSize": 50
       }
     ]
   },
@@ -1313,17 +1311,19 @@
         "required": true,
         "label": "duration",
         "description": "duration",
+        "defaultValue": "5",
         "options": [
           {
             "value": "5",
-            "description": "5"
+            "description": "5",
+            "descriptionEn": "5"
           },
           {
             "value": "10",
-            "description": "10"
+            "description": "10",
+            "descriptionEn": "10"
           }
-        ],
-        "defaultValue": "5"
+        ]
       },
       {
         "fieldKey": "guidanceScale",
@@ -1331,10 +1331,10 @@
         "required": false,
         "label": "guidanceScale",
         "description": "guidanceScale",
+        "defaultValue": 0.5,
         "min": 0,
         "max": 1,
-        "step": 0.1,
-        "defaultValue": 0.5
+        "step": 0.1
       },
       {
         "fieldKey": "firstImageUrl",
@@ -1342,10 +1342,8 @@
         "required": true,
         "label": "firstImageUrl",
         "description": "firstImageUrl",
-        "multipleInputs": false,
-        "maxInputNum": 1,
         "accept": "[\"JPG\",\"PNG\"]",
-        "maxSize": 20
+        "maxSize": 50
       }
     ]
   },
@@ -17731,95 +17729,6 @@
     ]
   },
   {
-    "class_name": "SkyreelsV4TextToVideo",
-    "display_name": "RH SkyReels V4 文生视频",
-    "name_cn": "SkyReels V4 文生视频",
-    "name_en": "skyreels-v4/text-to-video",
-    "endpoint": "skyreels-v4/text-to-video",
-    "output_type": "video",
-    "category": "RunningHub/SkyReels",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "描述视频内容的文本提示词",
-        "defaultValue": "真人实拍电影感追逐场景。两名骑手骑马疾驰穿过沙漠峡谷的超远景镜头。切换到领队骑手坚毅面庞的特写，皮肤上有尘土。",
-        "maxLength": 2048
-      },
-      {
-        "fieldKey": "sound",
-        "type": "BOOLEAN",
-        "required": true,
-        "label": "sound",
-        "description": "是否生成视频音效",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "duration",
-        "type": "INT",
-        "required": false,
-        "label": "duration",
-        "description": "视频时长（秒）",
-        "defaultValue": 5,
-        "min": 3,
-        "max": 15,
-        "step": 1
-      },
-      {
-        "fieldKey": "aspectRatio",
-        "type": "LIST",
-        "required": false,
-        "label": "aspectRatio",
-        "description": "视频画面比例",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          }
-        ]
-      },
-      {
-        "fieldKey": "mode",
-        "type": "LIST",
-        "required": false,
-        "label": "mode",
-        "description": "mode",
-        "defaultValue": "std",
-        "options": [
-          {
-            "value": "std",
-            "description": "std",
-            "descriptionEn": "std"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "class_name": "RhartVideoLtx2TextToVideoLora",
     "display_name": "RH ltx-2-19b/text-to-video-lora",
     "name_cn": "ltx-2-19b/text-to-video-lora",
@@ -17848,69 +17757,6 @@
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
     "params": []
-  },
-  {
-    "class_name": "SkyreelsV4ImageToVideo",
-    "display_name": "RH SkyReels V4 图生视频",
-    "name_cn": "SkyReels V4 图生视频",
-    "name_en": "skyreels-v4/image-to-video",
-    "endpoint": "skyreels-v4/image-to-video",
-    "output_type": "video",
-    "category": "RunningHub/SkyReels",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "描述视频内容的文本提示词",
-        "defaultValue": "一个青少年男孩坐在窗边，夏雨中戴着耳机，闭着眼睛，手指随着音乐轻敲，外面的雨滴顺着玻璃快速滑下。",
-        "maxLength": 2048
-      },
-      {
-        "fieldKey": "firstFrameImageUrl",
-        "type": "IMAGE",
-        "required": true,
-        "label": "firstFrameImageUrl",
-        "description": "视频首帧图片",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"GIF\",\"BMP\"]",
-        "maxSize": 10
-      },
-      {
-        "fieldKey": "sound",
-        "type": "BOOLEAN",
-        "required": true,
-        "label": "sound",
-        "description": "是否生成视频音效",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "duration",
-        "type": "INT",
-        "required": false,
-        "label": "duration",
-        "description": "视频时长（秒）",
-        "defaultValue": 5,
-        "min": 3,
-        "max": 15,
-        "step": 1
-      },
-      {
-        "fieldKey": "mode",
-        "type": "LIST",
-        "required": false,
-        "label": "mode",
-        "description": "mode",
-        "defaultValue": "std",
-        "options": [
-          {
-            "value": "std",
-            "description": "std",
-            "descriptionEn": "std"
-          }
-        ]
-      }
-    ]
   },
   {
     "class_name": "SkyreelsV3ReferenceToVideo",
@@ -18174,8 +18020,8 @@
   },
   {
     "class_name": "SkyreelsV4OmniReference",
-    "display_name": "RH SkyReels V4 Omni Reference",
-    "name_cn": "SkyReels V4 Omni Reference",
+    "display_name": "RH SkyReels V4 Omni 参考视频",
+    "name_cn": "SkyReels V4 Omni 参考视频",
     "name_en": "skyreels-v4/omni-reference",
     "endpoint": "skyreels-v4/omni-reference",
     "output_type": "video",
@@ -18194,7 +18040,7 @@
         "type": "LIST",
         "required": false,
         "label": "aspectRatio",
-        "description": "视频画面比例",
+        "description": "视频画面比例。如果提供了参考视频（ref_videos），此参数将被忽略，输出尺寸会自动与参考视频保持一致。",
         "defaultValue": "16:9",
         "options": [
           {
@@ -18240,7 +18086,7 @@
         "type": "BOOLEAN",
         "required": true,
         "label": "sound",
-        "description": "是否生成视频音效",
+        "description": "是否生成视频音效。注意：mode=fast 不支持音效。",
         "defaultValue": false
       },
       {
@@ -18252,19 +18098,30 @@
         "defaultValue": true
       },
       {
-        "fieldKey": "mode",
+        "fieldKey": "resolution",
         "type": "LIST",
         "required": false,
-        "label": "mode",
-        "description": "mode",
-        "defaultValue": "std",
+        "label": "resolution",
+        "description": "输出视频分辨率。支持480p、720p和1080p。",
+        "defaultValue": "1080p",
         "options": [
           {
-            "value": "std",
-            "description": "std",
-            "descriptionEn": "std"
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
           }
-        ]
+        ],
+        "tail_insert": true
       }
     ]
   },
@@ -26495,7 +26352,7 @@
       {
         "fieldKey": "resolution",
         "type": "LIST",
-        "required": false,
+        "required": true,
         "label": "resolution",
         "description": "视频分辨率",
         "defaultValue": "540p",
@@ -26524,23 +26381,11 @@
       },
       {
         "fieldKey": "generateAudioSwitch",
-        "type": "LIST",
+        "type": "BOOLEAN",
         "required": true,
         "label": "generateAudioSwitch",
-        "description": "是否生成视频音频",
-        "defaultValue": "false",
-        "options": [
-          {
-            "value": "true",
-            "description": "true",
-            "descriptionEn": "true"
-          },
-          {
-            "value": "false",
-            "description": "false",
-            "descriptionEn": "false"
-          }
-        ]
+        "description": "是否生成视频音频。",
+        "defaultValue": true
       },
       {
         "fieldKey": "duration",
@@ -26766,7 +26611,7 @@
         "required": true,
         "label": "generateAudioSwitch",
         "description": "是否生成同步音频",
-        "defaultValue": false
+        "defaultValue": true
       },
       {
         "fieldKey": "aspectRatio",
@@ -26934,7 +26779,7 @@
         "required": true,
         "label": "generateAudioSwitch",
         "description": "是否生成同步音频",
-        "defaultValue": false
+        "defaultValue": true
       },
       {
         "fieldKey": "seed",
@@ -28377,11 +28222,20 @@
             "descriptionEn": "customize"
           },
           {
-            "value": "intelligent",
-            "description": "intelligent",
-            "descriptionEn": "intelligent"
+            "value": "intelligence",
+            "description": "intelligence",
+            "descriptionEn": "intelligence"
           }
         ]
+      },
+      {
+        "fieldKey": "multiShot",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "multiShot",
+        "description": "是否生成多镜头视频（为true时，prompt参数无效，为false时，shotType参数及multiPrompt参数无效）",
+        "defaultValue": false,
+        "tail_insert": true
       }
     ]
   },
@@ -28540,15 +28394,24 @@
         "options": [
           {
             "value": "customize",
-            "description": "自定义分镜",
-            "descriptionEn": "Customize"
+            "description": "customize",
+            "descriptionEn": "customize"
           },
           {
             "value": "intelligence",
-            "description": "智能分镜",
-            "descriptionEn": "Intelligence"
+            "description": "intelligence",
+            "descriptionEn": "intelligence"
           }
         ]
+      },
+      {
+        "fieldKey": "multiShot",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "multiShot",
+        "description": "是否生成多镜头视频（为true时，prompt参数无效，为false时，shotType参数及multiPrompt参数无效）",
+        "defaultValue": false,
+        "tail_insert": true
       }
     ]
   },
@@ -28619,7 +28482,7 @@
         "type": "LIST",
         "required": false,
         "label": "shotType",
-        "description": "分镜方式",
+        "description": "分镜方式，当 multiShot 参数为true时，当前参数必填",
         "defaultValue": "customize",
         "options": [
           {
@@ -28633,6 +28496,15 @@
             "descriptionEn": "intelligence"
           }
         ]
+      },
+      {
+        "fieldKey": "multiShot",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "multiShot",
+        "description": "是否生成多镜头视频（为true时，prompt参数无效，为false时，shotType参数及multiPrompt参数无效）",
+        "defaultValue": false,
+        "tail_insert": true
       }
     ]
   },
@@ -28701,15 +28573,24 @@
         "options": [
           {
             "value": "customize",
-            "description": "自定义分镜",
-            "descriptionEn": "Customize"
+            "description": "customize",
+            "descriptionEn": "customize"
           },
           {
             "value": "intelligence",
-            "description": "智能分镜",
-            "descriptionEn": "Intelligence"
+            "description": "intelligence",
+            "descriptionEn": "intelligence"
           }
         ]
+      },
+      {
+        "fieldKey": "multiShot",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "multiShot",
+        "description": "是否生成多镜头视频（为true时，prompt参数无效，为false时，shotType参数及multiPrompt参数无效）",
+        "defaultValue": false,
+        "tail_insert": true
       }
     ]
   },
@@ -28730,15 +28611,6 @@
         "description": "视频画面、人物、动作的文字描述",
         "defaultValue": "暖色厨房，一位老人用手将面团轻轻揉圆，指尖沾着面粉。阳光从窗户斜射，面粉微粒在光束中浮动。面团落在案板上一声轻响。",
         "maxLength": 2500
-      },
-      {
-        "fieldKey": "videoUrl",
-        "type": "VIDEO",
-        "required": false,
-        "label": "videoUrl",
-        "description": "参考视频（用于运动引导，可选）",
-        "accept": "[\"MP4\",\"MOV\"]",
-        "maxSize": 100
       },
       {
         "fieldKey": "imageUrls",
@@ -28808,7 +28680,7 @@
         "type": "LIST",
         "required": false,
         "label": "shotType",
-        "description": "分镜方式",
+        "description": "分镜方式,当multi_shot参数为true时，当前参数必填",
         "defaultValue": "customize",
         "options": [
           {
@@ -28822,6 +28694,15 @@
             "descriptionEn": "intelligence"
           }
         ]
+      },
+      {
+        "fieldKey": "multiShot",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "multiShot",
+        "description": "是否生成多镜头视频（为true时，prompt参数无效，为false时，shotType参数及multiPrompt参数无效）",
+        "defaultValue": false,
+        "tail_insert": true
       }
     ]
   },
@@ -29558,6 +29439,7 @@
         "required": false,
         "label": "prompt",
         "description": "用于生成的文本描述",
+        "defaultValue": "这一幕宛如电影画面般绝美震撼：一座广袤的火山口，已然化作隐秘的雨林秘境。满目苍翠叠着朦胧幽蓝，金色阳光穿透云层洒落其间，浑然透出原始秘境的神秘气息与遗世独立的静谧安然。 火山口底部错落分布着一片片翡翠般的水潭，曲折蜿蜒的细流穿梭其间，淌过覆满厚苔与蕨类植物的大地。参天古木拔地而起，树干虬曲苍劲、树皮泛着银白，树冠枝叶交错交织，织成错落的天然林冠，将阳光筛成缕缕金绿相间的光束洒落林间。 火山口中央坐落着一面镜面般宽阔的火山湖，湖面静谧无波，完美倒映着周遭崖壁与悠悠飘过的缕缕薄雾。湖畔几处地热喷口缓缓升腾起氤氲水汽，与低空缭绕的晨雾相融，慵懒地漫过湖面。 火山口陡峭嶙峋的崖沿多处飞瀑直下，白色水帘倾泻数百英尺，坠落至下方覆满青苔的巨石之上，水声潺潺不绝，空气中弥漫着清冽细碎的水雾。 火山口岩壁陡峭笔直，崖壁上垂挂着滴水的蕨类、幽兰与攀援藤蔓，石缝间星星点点绽放着明黄与紫艳的野花。巨大的枯木横卧溪流之上，天然形成一座座木桥，桥面覆满发光真菌，在幽暗处泛着淡淡的绿光。 水边大片蕨类新叶缓缓舒展，翅翼泛着虹彩的蜻蜓在小水潭上方轻盈盘旋。脚下大地铺满腐叶、丛生菌菇与裸露树根，如柔软绒毯般铺展，尽显自然原始的野性肌理。 远处一条石板小径隐入迷雾深处，似是通往雨林腹地的幽径。长尾飞鸟不时在枝叶间倏然掠过，啼鸣在火山岩壁间悠悠回荡。薄云缓缓飘过天际，光影随之流转变幻，斑驳光影在湖面与林间摇曳舞动。 整体氛围温润潮湿、古老悠远，又透着极致的安宁，仿佛时光在这座火山秘境里都悄然放缓了脚步。",
         "maxLength": 4000
       },
       {
@@ -29706,6 +29588,7 @@
         "required": false,
         "label": "imageUrl",
         "description": "图片 URL或 World Labs media_asset_id",
+        "defaultValue": "https://www.runninghub.cn/view?filename=31937a548a8186593ad5083594fc6eecc0e75618125db3cb03ccdda93299be2e.png&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiI5N2U2NzFjNWNmZDU0NjBhMWZlOWZmYzYyNzg4OTU1ZiIsInNpZ25FeHBpcmUiOjE3Nzg2NDM1NDQ0MzQsInRzIjoxNzc4MDM4NzQ0NDM0LCJzaWduIjoiNTE5OGY0N2E2NTVmNjFhYTI4YmMzMjkyMDBjN2E4MTQifQ==&Rh-Identify=97e671c5cfd5460a1fe9ffc62788955f&rand=0.18661859874717734",
         "maxLength": 2048
       },
       {
@@ -29714,6 +29597,7 @@
         "required": false,
         "label": "textPrompt",
         "description": "可选的文本引导（不填则自动重述）",
+        "defaultValue": "整幅画面以极具细节的电影镜头感，呈现一座古老巍峨的图书馆内景。整体色调融合暖琥珀色、深木棕，穹顶彩绘玻璃透入幽蓝与鎏金微光，氤氲出典籍尘封、肃穆静谧、亘古神秘的氛围。 主大厅为圆形布局，直径约 30 米；墙体垂直拔高 12 米后，向上弧形收拢，汇成巨大的半球形穹顶。地面铺设深色橡木人字拼木地板，中央区域因经年人来人往已被磨得光滑，少有人至的边角则积着薄薄一层灰尘。 大厅正中央摆放一张厚重修长的橡木阅览长桌，长 8 米、宽 2 米，桌面打磨出温润哑光质感。桌上散落几本合上的皮质封皮书、一方墨汁早已干涸的墨水池，还有一盏水晶孤灯，散着柔和暖光，仿佛从未被岁月侵蚀。长桌周边地面铺着一块巨大的圆形旧地毯，纹样早已褪色，原本的几何图案几乎难以辨认。 墙壁从地面到穹顶尽数排满书架，均为深色烤漆实木打造，边缘雕有雕花线脚。书架由凹槽壁柱竖向分隔，每一格都分为五层书阁。约七成书架摆满皮质古籍，书脊深浅棕、酒红、暗绿交错，烫金书名大多已磨损模糊。余下书架空空如也，蒙着薄灰、结着蛛网，看得出馆藏典籍早已遗失或被移走。 大厅左侧弧形墙体旁，一座锻铁旋转楼梯蜿蜒向上，栏杆立柱雕成缠绕藤蔓造型，连通一楼与8 米高处环绕整厅的环形回廊。回廊外侧是雕花繁复的铁艺拱纹栏杆，地面同样采用深色橡木铺设。回廊内侧栏杆后方也排布着书架，可沿狭窄走道翻阅。大厅另一侧另有一座更小的旋转楼梯，供楼层间通行，入口被一面雕有抽象几何纹样的立式木屏风半掩。 顶部是巨型彩绘玻璃穹顶，底部直径约 20 米，由蓝、琥珀、深紫多块玻璃分格拼接，以中央金色花饰为圆心呈放射星芒纹样。玻璃年代久远，部分面板开裂，以细铅条修补；外层蒙着薄尘，滤弱了部分天光。透过穹顶可见夜空，隐约的北极光流转着淡绿与浅紫光晕，与阅览桌上水晶灯的人造柔光交融相映。 穹顶下方弧形墙体与玻璃衔接处，一排尖顶高侧小窗与穹顶支撑结构相间排布，窗上彩绘玻璃与穹顶色调一脉相承。 一楼右侧墙体的书架之间，内嵌三座高大拱形壁龛，每座壁龛中都立着一尊真人大小的大理石老者半身像，基座带凹槽纹路，人像面容已被岁月风化斑驳。左侧书架间有两处拱形门洞，通向幽暗侧廊，厚重橡木大门配铁艺铰链，其中一扇微微虚掩。 墙边地面散落几座立式木质读经台，每座台上都摊开一本巨型古籍，书页饰有泥金手绘纹样，金箔纹路在微光下隐隐泛亮。长桌远端旁立着一座大型实木地球仪，安置在三脚底座上，球面彩绘地图虽已褪色，仍能看出迥异于现世的大陆版图轮廓。",
         "maxLength": 4000
       },
       {
@@ -29805,6 +29689,7 @@
         "required": false,
         "label": "textPrompt",
         "description": "可选的文本引导（不填则自动重述）",
+        "defaultValue": "整幅画面充满电影质感与怀旧气息，描绘欧洲古镇里一条狭窄的鹅卵石小巷，时值雨后初歇。整体色调以阴天柔和的灰调、墙面抹灰温润的米白与浅黄、石地湿润的深灰为主，再点缀雨后花朵的淡红与嫩粉，氤氲出老城街巷淡淡的幽寂怅惘、雨后青石的清新气息，以及古巷独有的亲切尺度感。 小巷全长约 80 米，中段缓缓向右弯曲，尽头衔接一道拱形小门，通向外面更开阔的街道。巷宽宽窄不一，入口最宽处约 3.5 米，远端收窄至约 2.5 米，形成自然透视，将视线引向深处的拱门。 地面由大块不规则鹅卵石铺砌，材质为深灰花岗岩与玄武岩，单块石块直径约 15 至 25 厘米，嵌在夯实的沙土地基中。历经数百年行人车马碾踏，石面早已被磨得光滑温润，泛着淡淡的哑光。雨后整条路面湿漉漉的，水光如深色镜面，映出朦胧天色与两侧建筑的轮廓剪影。石缝低洼处积着大小不一的浅洼水潭，最大的水潭直径约一米，每一处水洼都清晰倒映着上方楼墙，宛如散落的异世碎镜。粉红、艳红的落英花瓣与零星青绿碎叶，漂浮在大水潭的水面上。 巷两侧建筑多为三四层高，是十七至十九世纪欧洲乡土民居风格。外墙抹灰色调素雅褪旧：米白、浅黄、暖赤褐，还有一栋墙面是温润斑驳的鼠尾草绿。抹灰墙面满是岁月痕迹：细密发丝裂纹、墙根与窗下连片深色潮渍，多处灰泥斑驳脱落，露出底下粗糙的石基。 三四层楼上方便可见屋檐轮廓，铺着赤陶弧形筒瓦；部分瓦片历经多次更换，色泽从橘红到深红深浅不一。朝北的坡屋顶丛生斑驳青苔，檐沟里冒出零星细小杂草。 立面窗户窄而高挑，深色木窗框涂装为墨绿、藏蓝或深棕。窗玻璃年代久远、微微起伏变形，模糊折射出巷对面建筑的倒影。低层窗户配有木质百叶窗，或闭合、或敞开，漆面褪色剥落。好几栋建筑的一楼窗外探出雕花卷草铁艺阳台，铁艺通体黑漆，多处透出锈迹，雨水顺着卷草纹路最低点缓缓滴落。 每个阳台上至少摆放一个赤陶花箱，种着垂藤常春藤、粉色天竺葵与红色秋海棠；花枝被雨水浸得低垂沉重，花瓣零落散落在阳台地面与下方鹅卵石路上。 右侧墙面离地约三米处，弯曲铁艺支架上悬挂一盏暖黄色复古街灯。白日里灯盏并未点亮，玻璃灯罩蒙着薄雾，还留着干涸雨痕点点。左侧墙上同款街灯早已缺失灯罩，空框架锈蚀弯折、微微变形。 沿街建筑底层每隔八到十米便错落设有入户木门，门板厚重敦实，有的漆成深绿，有的保留原木深色，经岁月风化泛出银灰质感。门饰五金为黄铜或铸铁，氧化成深褐或铜锈青绿色。其中一扇门微微虚掩，隐约露出幽深的入户过道。 用英文翻译这段中文 请再润色一下这段中文翻译，使其更优美。 请将这段中文翻译成其他语言，如法语、西班牙语或日语。",
         "maxLength": 4000
       },
       {
@@ -29896,6 +29781,7 @@
         "required": false,
         "label": "videoUrl",
         "description": "视频公开 URL（http/https 开头视为 UriReference）或 World Labs media_asset_id（其他视为 MediaAssetReference）",
+        "defaultValue": "https://www.runninghub.cn/view?filename=96bd90c30440edaa5d3edc7aeb4d7564dbc46b9625c916f06259dc4b3473a7fc.mp4&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiI5N2U2NzFjNWNmZDU0NjBhMWZlOWZmYzYyNzg4OTU1ZiIsInNpZ25FeHBpcmUiOjE3Nzg2NDg3NzgzNDcsInRzIjoxNzc4MDQzOTc4MzQ3LCJzaWduIjoiMTNlYzBlYTBjODNiYzJmZDkwNzQ5YWJmZDBmYWUxNzgifQ==&Rh-Identify=97e671c5cfd5460a1fe9ffc62788955f&rand=0.64585263248278",
         "maxLength": 2048
       },
       {
@@ -29904,6 +29790,7 @@
         "required": false,
         "label": "textPrompt",
         "description": "可选的文本引导（不填则自动重述）",
+        "defaultValue": "整幅画面温馨质朴，描绘一间依山丘凿建而成的霍比特风格厨房内景。暖黄的灯火、圆窗透入的清冷天光交织相融，裸露土墙与深色木质陈设满是醇厚土棕色调，整体氛围居家惬意、安稳恒久，透着藏于大地一隅的静谧与朴素。 厨房整体为圆形格局，直径约 8 米，弧形土墙向上收拢，衔接高度约 2.5 米的低矮拱形穹顶。屋顶由裸露的弧形木梁搭建，经年烟熏已呈深暗色；木梁错落交错，梁间填着夯实的泥土，表面布满细碎裂纹，还隐约露出零星草秆纤维。 厨房正中央摆放一张巨型圆形木桌，直径约 2 米，由整块厚实橡木打造。桌面中心被岁月磨得温润光滑，布满浅浅刀痕与经年用餐留下的圆形浅渍。桌上立着一盏带玻璃灯罩的黄铜油灯，灯火正燃，在桌面洒下一圈暖光；一旁放着木质砧板，上面摆着半块切开的圆面包、一只青釉陶壶，还有两只浅口木碗。木桌四周均匀摆放四张低矮木凳，皆为弯背三脚造型，凳面被常年坐卧磨得光亮温润。 正对入口的厨房远侧弧形墙前，立着一座粗石垒砌的壁炉，采用当地天然毛石，石块大小不一、色调从灰褐到暖棕错落相间，以黏土勾缝粘合。壁炉炉口为低矮拱形，高约 1.2 米、宽 1.5 米，石质过梁早已被烟火熏得发黑。炉口上方横架一根铁条，黑色金属挂钩悬着一口铸铁汤锅；炉底灰烬里泛着橘红色余烬，一缕淡灰轻烟顺着石砌烟囱缓缓升腾。 左侧墙体离地约 1.7 米处嵌有一扇圆窗，窗径约 80 厘米。窗框为深色橡木，老式玻璃微微起伏变形，十字窗棂将窗面分为四格。透过窗户可见青草萋萋，还能瞥见一抹浅蓝天际，足见这间厨房依山而凿，窗沿与户外地面齐平。窗外天光柔和清冽，透着午后将暮的静谧。 厨房左侧、圆窗与入口之间的土墙上，直接凿出三层深置物架，每层进深约 40 厘米、宽 1 米，内里铺着细密的编织灯心草席。架子上摆满日用陶器：青绿、黄釉餐盘层层叠放，还有小食碗、大号摆盘与数只小茶杯。最下层整齐排列一排软木塞玻璃瓶，里面盛放着迷迭香、百里香、月桂叶等风干香草。 右侧土墙错落钉着数枚黑色铁钩，悬挂着大小各异的铜锅 —— 大号汤锅、中号炖锅、小号煎锅一应俱全。锅具表面氧化覆着包浆，泛着温润沉静的古铜色泽。悬锅下方靠墙设有一张矮木长凳，长约 2 米、高 40 厘米，凳面铺着褪色红调的羊毛编织软垫。长凳上放着两只藤编篮，一只装满洋葱，另一只盛放土豆。 右侧弧形墙体上还嵌有一道木质门洞，通向幽暗的走廊。门扇由竖向橡木木板拼接而成，搭配铁条铰链；木色深沉饱经风霜，铁器已锈蚀成深褐色。门扇微微虚掩，内里一片幽深昏暗。",
         "maxLength": 4000
       },
       {
@@ -29987,6 +29874,7 @@
         "required": false,
         "label": "videoUrl",
         "description": "视频公开 URL（http/https 开头视为 UriReference）或 World Labs media_asset_id（其他视为 MediaAssetReference）",
+        "defaultValue": "https://www.runninghub.cn/view?filename=54a0f8233e4acbd12aaf03b741c7274ddd8ad39145f18da453b40a9b5860b1c1.mp4&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiI5N2U2NzFjNWNmZDU0NjBhMWZlOWZmYzYyNzg4OTU1ZiIsInNpZ25FeHBpcmUiOjE3Nzg2NDg3NzgzNDcsInRzIjoxNzc4MDQzOTc4MzQ3LCJzaWduIjoiMTNlYzBlYTBjODNiYzJmZDkwNzQ5YWJmZDBmYWUxNzgifQ==&Rh-Identify=97e671c5cfd5460a1fe9ffc62788955f&rand=0.19644114868797025",
         "maxLength": 2048
       },
       {
@@ -29995,6 +29883,7 @@
         "required": false,
         "label": "textPrompt",
         "description": "可选的文本引导（不填则自动重述）",
+        "defaultValue": "整幅画面极具电影感与氛围感，刻画了一艘长期星际航行飞船内部实用简约的通道走廊。整体以 LED 冷白与冰蓝光线、金属舱板深灰底色为主，辅以管道的红色与安全标线的黄色作为点缀，营造出功能性日常感、静谧疏离感，以及飞船深太空航行时低鸣嗡响的背景氛围。 走廊笔直狭长，略带密闭压抑感，从近口到尽头观景窗全长约 15 米，宽 3 米，高 2.5 米。墙体由模块化灰色涂装金属板拼接而成，每块板材约 1.2 米见方，四角铆钉外露，固定在墙体框架上。同色的横向加固肋条每隔一米横贯墙面，形成规整的条状视觉韵律。部分舱板带有细微凹痕与划痕，还有几处维修检修口盖板微微虚掩。 天花板由浅灰色嵌入式板块构成，两条一体式线性 LED 灯带贯穿整条走廊，间距约一米。灯光呈冷白色调，并略带淡蓝光晕，是典型的船舱照明风格，将空间照亮得均匀柔和，几乎无阴影。 地面铺设深灰菱形防滑花纹金属板，菱形纹路用于防滑；地面两侧边缘各刷有一条约十厘米宽的黄色安全标线，顺着走廊一路延伸至尽头。 左侧墙体上，从入口向前两米开始，每隔约四米设有三道圆形气密舱门。每扇舱门直径约 1.5 米，为厚重灰金属材质，边缘带有凸起边框。舱门正中央是一个直径约 40 厘米的大型金属手动转轮，轮辐漆成深红色。转轮上方配有一扇直径约 15 厘米的圆形加厚玻璃舷窗，窗外唯有一片漆黑。每扇舱门旁都设有一块约 10 厘米 ×15 厘米的小型状态面板，面板上一盏绿色指示灯常亮，下方标注着虚构未来字体的文字标识，字号极小无法辨识，但明显用于显示设备状态。 右侧墙体没有圆形舱门，取而代之的是两处矩形门洞，宽约 1 米、高 2 米，无门扇遮挡，直通两侧小型隔间。 第一道门洞距入口约 3 米，通向一间进深 3 米的储藏室。从门口可以看见室内靠墙用螺栓固定的灰色金属货架，整齐码放着大小规格统一的灰色储物箱；挂钩上悬挂着盘绕的电缆，还摆放着若干备件：灰色金属管道、矩形舱板、小型圆柱形罐体。 第二道门洞距入口约 8 米，通往一间小型设备机房。机房内墙布满开关、刻度旋钮与小型状态指示灯，大部分指示灯处于熄灭或常绿常亮状态；面板上一枚红色拨动开关格外醒目，对应重要回路或应急线路。机房地面放着一卷睡袋与一只咖啡杯，看得出这里偶尔会被船员当作临时休息区。 两侧墙体齐腰高度以上，排布着外露的管线管道。一根银色管道在约 1.8 米高处横向贯穿，下方平行布设一根红色管道。管道每隔约两米与墙面接线盒相连，每个接线盒约 20 厘米见方。",
         "maxLength": 4000
       },
       {
@@ -30078,6 +29967,7 @@
         "required": false,
         "label": "videoUrl",
         "description": "视频公开 URL（http/https 开头视为 UriReference）或 World Labs media_asset_id（其他视为 MediaAssetReference）",
+        "defaultValue": "https://www.runninghub.cn/view?filename=8f1cdfe23ae8ee57255292a151188abdb8e2326f852661b33e377c1ee69653af.mp4&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiI5N2U2NzFjNWNmZDU0NjBhMWZlOWZmYzYyNzg4OTU1ZiIsInNpZ25FeHBpcmUiOjE3Nzg2NDg3NzgzNDcsInRzIjoxNzc4MDQzOTc4MzQ3LCJzaWduIjoiMTNlYzBlYTBjODNiYzJmZDkwNzQ5YWJmZDBmYWUxNzgifQ==&Rh-Identify=97e671c5cfd5460a1fe9ffc62788955f&rand=0.32087728095648993",
         "maxLength": 2048
       },
       {
@@ -30086,6 +29976,7 @@
         "required": false,
         "label": "textPrompt",
         "description": "可选的文本引导（不填则自动重述）",
+        "defaultValue": "整幅画面极具电影氛围感，描绘寒冬深夜里一间中世纪酒馆的内景。暖金色的烛光、壁炉熊熊跳动的橘色火光、老橡木与深色木器深沉的棕调，再配上石墙素雅的灰调，烘托出避寒安身的归属感、谈话声刚落的余静，以及这间历经数百年接待旅人与乡邻的老屋所留存的绵长暖意。 酒馆位于一栋木构架建筑的一楼，整体是一间宽敞的长方形大厅，前后长约 15 米、左右宽约 10 米，层高约 3.5 米。粗壮的木梁纵横交错，间距约 1.5 至 2 米。木梁历经岁月与烟火熏染色泽暗沉，表面粗凿原始，斧凿痕迹清晰可见，还装有零星铁质托架。梁间填着白色抹灰，早已泛黄老化，布满细密发丝裂纹。 正对吧台的前墙设有主入口与两扇小窗。主入口是厚重的实木大门，由竖向橡木木板拼接而成，搭配铁条铰链；木色深沉古朴，铁器已锈蚀成深褐色。大门紧闭，门上装有一枚硕大铁环作拉手。主入口右侧另有一扇偏小的后勤侧门，通向屋外小巷。 前墙高处开设两扇窗户，离地约 2 米，每扇宽约 1 米、高 60 厘米，镶有菱形格纹的铅条玻璃。隔着暗沉玻璃，屋外夜色浓得化不开，看不到任何外界光源，唯有室内烛光淡淡的倒影映在窗面上。两侧墙壁没有开窗，让整座酒馆如同密闭的暖巢，隔绝外界寒风。 右侧墙面立着一条长长的深色橡木吧台，长约 8 米、进深 1.2 米。台面打磨光滑，木纹清晰分明，还留有无数酒杯经年累月留下的圆形水渍印。吧台正面由竖向橡木拼板构成，板间嵌有雕花饰板，纹样为简约交织藤蔓，还有一处小型盾形浮雕，原本绘有纹饰，如今颜料大多已然褪尽剥落。吧台底部沿地面设有一条窄搁板，可供客人搁脚休憩。 吧台后方紧贴右墙，设有三层木质置物架，与吧台同长，全长 8 米，由简约卷草造型的铁架支撑。架上整齐摆放着酒馆各式酒具：一排排棕釉、绿釉陶杯，侧放的白镴大酒杯，带软木塞的绿色与琥珀色玻璃瓶，还有几只木碗。 最下层置物架下方，五只木桶横置于木托架上，依次排开；每只木桶直径约 60 厘米、长 80 厘米，外箍铁圈。最靠近镜头的木桶端头装有小巧黄铜酒阀，下方地面摆着一只白镴酒杯，承接偶尔滴落的酒液。 左侧墙体正中坐落着一座大型石砌壁炉，由当地天然毛石垒筑而成，石块大小不一，小如拳头、大似头颅，以黏土勾缝砌合。炉口宽阔高大，宽约 2.5 米、高 2 米，石质过梁被烟火熏得黝黑。炉膛内铁炉栅上烈火熊熊，橡木与白蜡木柴架成锥形，火苗蹿起约 60 厘米高，摇曳着橘黄暖光。火光映亮四周石面，深色石块被暖意衬得微微发亮。壁炉炉台向外延伸约 50 厘米，铺着大块平整石板。",
         "maxLength": 4000
       },
       {
@@ -30169,6 +30060,7 @@
         "required": false,
         "label": "textPrompt",
         "description": "可选的文本引导（不填则自动重述）",
+        "defaultValue": "整幅画面极具电影感且色彩鲜活，描绘一艘木制沉船静卧在热带珊瑚礁上，半掩于澄澈透亮的青碧海水中。画面以海水明艳的蓝绿色、沉船素白与温润的木色，以及珊瑚浓烈的橙、紫、粉交织相融，营造出残墟安然、劫难化作礁屿、海底生灵繁衍生息的静谧意境。 这是一艘双桅木制帆船残骸，全长约 30 米，斜斜搁浅在浅海珊瑚礁上：船头微微上翘，船尾沉落在沙质海床之上。船头高出水面约两米，船尾则浸没在 8 米深的水下，整艘沉船从海面斜向延伸至海底，呈倾斜姿态。 船身由深色热带硬木板材打造，水线以上经海风海水风化，已然褪成浅银灰色；水线以下则覆满海洋附着生物。船首斜桅虽已折断，却仍与船体相连，以 45 度角向前探出水面。船尾结构局部坍塌，船舵虽未脱落，却扭曲成诡异的角度。 主桅杆在甲板上方约 3 米处断裂，上半截倒向船体左舷，大半伏在海床上，桅顶仍被缠绕的索具牵连相连。前桅已完全损毁，仅余下约一米高的残破残桩。 甲板上散落着各类残骸：盘绕的绳索、木箱碎片、破损的船舵、零散的铁质构件，还有些许陶瓷残片。甲板木板多处开裂、变形翘曲，缝隙宽大，成群鱼群自由穿梭其间。船体左舷有一道宽约两米的巨大裂口，可通入船舱内部；幽暗的船舱如今已成鱼类与其他海洋生物的栖身之所。 水线以下的船身厚厚覆满海洋附着物：枝状与壳状硬珊瑚、扇形软珊瑚、管状与穹顶状海绵，还有一层浓密的绿褐色海藻。珊瑚色彩斑斓明艳，有亮橙色枝状珊瑚、紫色结壳珊瑚、粉色扇形珊瑚，以及黄色管状海绵。 沉船坐落于一片大型珊瑚礁生态区之中。珊瑚礁从约 10 米深的沙质海床隆起，最浅处距海面仅一米。礁体由活珊瑚与死珊瑚岩构成，在沉船周边绵延约 100 米 ×80 米范围。礁群形态错落参差，珊瑚丘、礁脊与小型海底沟壑交织，构筑出复杂立体的海底栖息环境。 珊瑚礁与沉船间栖息着成群热带鱼：小巧的蓝黄相间雀鲷、聚成漩涡鱼群的银色饵鱼、色彩艳丽颇具领地意识的神仙鱼，还有几尾体型稍大的鹦嘴鱼在珊瑚间啃食觅食。一只绿海龟在船尾附近的沙地上静栖休憩。一条海鳗栖身于船舵的缝隙中，时不时探出头来。 澄澈海水之下，是细腻的白沙海床，散落着贝壳、珊瑚碎石，还有几件船上遗留的人工器物：破损的陶壶、半埋沙中的锈蚀船锚，以及零星散落的铁钉。 海水通透至极，能见度超过 30 米，立于海面便可将整艘沉船与周遭大片珊瑚礁尽收眼底。水域深度从礁顶最浅 1 米，到沉船外侧沙床最深 10 米不等。阳光直透水底，把水下世界照得明亮通透；波光经海面折射形成摇曳的光影纹路，在沙地、沉船与珊瑚上灵动晃动。海面被轻柔微风拂起微微涟漪……",
         "maxLength": 4000
       },
       {
@@ -30260,6 +30152,7 @@
         "required": false,
         "label": "textPrompt",
         "description": "可选的文本引导（不填则自动重述）",
+        "defaultValue": "整幅画面极具电影质感与氛围感，描绘了广袤荒漠中一座废弃的古代驿站。画面以暖赭石色、赤陶土色调为主，搭配浅金流沙与深邃碧空，营造出古道尘封、荒寂孤绝、人间繁华被大漠缓缓吞噬的苍茫意境。 这座驿站呈方形堡垒形制，边长约 40 米，墙体由晒干的泥砖筑成，高约 6 米。墙壁厚实厚重，墙基厚度约 1.5 米，向上略微收窄。墙面粗糙风化，砖体布满横向裂痕与竖向缝隙，表层大片斑驳剥落，层层风化。流沙沿外墙堆积，迎风面积沙高达两三米，建筑下半部分已被半掩于黄沙之下。 建筑四角各立一座方形角楼，向外凸出墙体约 2 米，总高 8 米。角楼顶设有城垛，多处垛口已然坍塌；东南角一座角楼更是半倾损毁，上半部分只剩参差残破的砖垛，碎石瓦砾散落基座四周。 南门正中为正门，是一处巨型拱形门洞，宽约 4 米、高约 5 米，由烧制青砖砌成内凹拱框，色泽比周遭泥砖更深沉。大门的木质门扇早已荡然无存，只剩几枚锈蚀的铁铰链残片嵌在石门槛中。穿过门洞，便可望见内部庭院。 庭院为方形露天空地，长宽均约 25 米，四面环绕连绵连拱廊。拱廊由一排排烧制青砖拱券构成，每道拱宽约 2.5 米，由方形砖柱支撑。拱廊为单层结构，每一侧都配有泥砖砌成的筒拱顶。拱廊后方分列多间小屋，原本是商旅寝舍与货物储藏室。如今近半数房屋已然坍塌，或是被流沙半填埋，屋内幽暗闭塞，无法进入。 庭院地面由不规则石板铺就，如今大半区域覆着厚达十厘米的细沙，门口积沙更深。庭院正中央矗立着一口干涸的石井，石砌圆形井台直径约 1.5 米、高 1 米。井口被一根倒伏木梁与数根锈蚀铁条封堵，无法下探，井水早已枯竭，想必已干涸数十年之久。 北侧拱廊旁立着一棵枯树，高约 3 米，枝干惨白枯槁；树根周边流沙被风侵蚀，根系裸露在外。庭院各处散落着破碎陶片、几只虽未完全倾覆却已开裂的大型储陶罐、一具锈蚀的铁质炊煮三足架，还有一副被烈日晒得发白的小型动物骸骨。 拱廊后方的房间格局狭小，普遍约 3 米长、4 米宽，拱顶高约 2.5 米。每间房靠近屋顶的外墙高处都设有小窗，用以采光通风；窗洞宽约 30 厘米、高 50 厘米，还留有锈蚀铁栏残迹。部分房间上墙仍残存彩绘痕迹，褪色的红、蓝、黄几何纹样依稀可辨。好几间屋内靠墙砌有低矮石质或泥砖卧台，如今早已落满尘土。墙面凿有空置壁龛，当年应是用来存放随身物件或油灯。",
         "maxLength": 4000
       },
       {
@@ -30351,6 +30244,7 @@
         "required": false,
         "label": "imageUrl",
         "description": "图片 URL或 World Labs media_asset_id",
+        "defaultValue": "https://www.runninghub.cn/view?filename=474fa017950c5b6a882f2207dc3adc872a16ffb7ede63bc9164d4c5743f1dba7.png&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiI5N2U2NzFjNWNmZDU0NjBhMWZlOWZmYzYyNzg4OTU1ZiIsInNpZ25FeHBpcmUiOjE3Nzg2NDM1NDQ0MzQsInRzIjoxNzc4MDM4NzQ0NDM0LCJzaWduIjoiNTE5OGY0N2E2NTVmNjFhYTI4YmMzMjkyMDBjN2E4MTQifQ==&Rh-Identify=97e671c5cfd5460a1fe9ffc62788955f&rand=0.7663000332381003",
         "maxLength": 2048
       },
       {
@@ -30359,6 +30253,7 @@
         "required": false,
         "label": "textPrompt",
         "description": "可选的文本引导（不填则自动重述）",
+        "defaultValue": "整幅画面极具电影感且氛围感苍凉凄美：一座深藏在冰封群山深处的古老大理石神殿内殿，正被寒冰缓缓吞噬。整体色调以清冷冰蓝、裂白石色为主，辅以深邃靛蓝阴影，营造出时光凝滞、祭祀尘封、寒寂死寂的意境。 主大殿呈长方形，长约 40 米、宽 25 米，穹顶最高处净高 15 米。大殿两侧各立一排带凹槽的科林斯式大理石石柱，数根石柱已然歪斜甚至彻底坍塌，断垣残柱横亘在冰封的地面上。大理石历经岁月侵蚀，布满裂痕与斑驳痕迹，尚存的直立柱身间还隐约可见灰纹与淡金色石筋。 整座地面覆盖着一层厚重的半透蓝冰，殿中央冰面平滑如镜，墙边冰层则因冻胀挤压而开裂隆起。寒冰顺着石柱与墙体底部向上蔓延，凝结成冰封瀑流，边缘弯垂成冰沿，垂下错落的冰锥。 殿壁刻有褪色的浅浮雕，刻画着身着长袍、列队行进的人物形象，只是每一幅浮雕的下半部分都已被寒冰遮蔽。 大殿尽头设有三级石阶高台，台上安放一张深灰色大理石巨型祭台，台面被一层厚实的圆顶坚冰尽数覆盖。祭台后方立着一尊残破的坐像，头颅与双臂早已缺失，肩头覆着连片冰层，垂落如凝固的长袍。 大殿中央顶部局部坍塌，原本穹顶的位置露出一处巨大圆形洞口。山间冰川的淡蓝光芒自洞口倾泻而入，经由地面与墙体的冰层折射，在大殿内投下流转变幻的光影纹路。高墙之上分布着几处小型拱形窗，如今已被坚冰封死，只透出朦胧微弱的天光。 殿内所有拱门、柱顶、断梁之下无不垂挂冰棱，细如银针、粗若巨柱，有的几乎垂至地面。墙边散落着翻倒的青铜祭炉残骸，器身覆满青绿色铜锈，大半嵌冻在地面冰层之中。几张残破的深色木质供桌已然腐朽碎裂，歪斜倚靠在石柱基座旁。 大殿左侧有一条狭长侧廊隐入幽暗深处，拱形入口被厚重冰帘包裹封锁。殿中央的冰层上还留存着几枚古老脚印，被永久冻在冰中，仿佛很久以前曾有人踏足此地。缕缕清冷寒气贴着冰面缓缓飘荡，在蓝光映照下若隐若现。 整座神殿死寂无声，气温远低于冰点，数十年间唯有寒冰在悄无声息地蔓延生长，再无任何生灵踪迹。时间在此失去意义：洞口天光看似如同正午，殿内却永远阴冷昏暗，仿佛日光从未真正抵达这片冰封之地。",
         "maxLength": 4000
       },
       {
@@ -30450,6 +30345,7 @@
         "required": false,
         "label": "imageUrl",
         "description": "图片 URL或 World Labs media_asset_id",
+        "defaultValue": "https://www.runninghub.cn/view?filename=2a6e4ecf85f0f83b5722b1b5da8bf736e8a9c0f20fed3b9267d0908a428f725d.png&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiI5N2U2NzFjNWNmZDU0NjBhMWZlOWZmYzYyNzg4OTU1ZiIsInNpZ25FeHBpcmUiOjE3Nzg2NDMyMTcxODEsInRzIjoxNzc4MDM4NDE3MTgxLCJzaWduIjoiMWRjMGY0ZGE4ZTVkODVhOTMzMzUxNDJjYzI4NmJmNmMifQ==&Rh-Identify=97e671c5cfd5460a1fe9ffc62788955f&rand=0.43865530622590554",
         "maxLength": 2048
       },
       {
@@ -30458,6 +30354,7 @@
         "required": false,
         "label": "textPrompt",
         "description": "可选的文本引导（不填则自动重述）",
+        "defaultValue": "整幅画面静谧而富有氛围感：一座狭窄的木质悬索桥横跨幽深峡谷，色调以柔和的翡翠绿、朦胧浅灰为主，下方河水点缀着一抹青碧，营造出清幽孤寂、晨雾朦胧的神秘意境。 悬索桥从近处的岩石突崖延伸至对岸同款岩崖，全长约 50 米，宽度仅 1.5 米。桥面由饱经风霜的木板铺就，部分木板被无数脚步磨得光滑，还有些微微松动甚至残缺缺失，能直接望见下方的万丈深谷。桥身两侧各设有粗壮的绳索护栏，表面凝着露水，还覆着片片青软苔藓；竖向拉索将护栏与上方主悬索相连。主悬索呈平缓的悬链弧线下垂，两端固定在木桩上，木桩由石桩加固深埋。 桥的近端衔接一条砂石土路，小路蜿蜒伸入茂密的松林。桥头立着一根老旧木柱，上面挂着一盏未点亮的黄铜灯笼，灯罩蒙着雾气，还被蛛网层层缠绕。一旁小巧的木制路标刻有褪色箭头，指向吊桥方向，上面的文字早已模糊难辨。 桥的远端小径顺势上坡隐入林间，山坡上凿有几级粗陋石阶。桥下峡谷岩壁陡峭，植被繁茂，蕨类、苔藓丛生，虬曲的松根紧紧攀附在石壁上。晨雾缓缓流动，缝隙间能望见谷底远处一汪青碧河水，河面因浅滩急流与散落巨石泛起层层涟漪。 峡谷两岸崖边林立高大松树，深绿的松针与灰白薄雾相映成趣。近处林木离视线更近，树干树皮厚实，低处枝桠向吊桥方向舒展；对岸的松林渐次隐入雾气，层次错落，远近朦胧。 清晨的晨光从东侧林间树冠洒落，柔和的金光染亮松梢与上层雾气，而吊桥本身仍笼罩在清冷弥散的阴影之中。缕缕薄雾缓缓飘过桥面，时而将桥的远端完全遮蔽，又慢慢散去。绳索护栏上凝结的细小水珠不时滴落木板，晕开若隐若现的深色湿痕。 整体氛围寂静、湿润而微凉，无风拂面，空气中萦绕着淡淡的松香与湿石气息。耳畔唯有谷底远处河水奔流之声，以及林间偶尔滴落的水声。此刻正值破晓过后，再过一两个时辰，山间雾气便会渐渐消散。",
         "maxLength": 4000
       },
       {
@@ -30701,6 +30598,719 @@
         "label": "permissionAllowedWriters",
         "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
         "maxLength": 4000
+      }
+    ]
+  },
+  {
+    "class_name": "SkyreelsV4TextToVideoStd",
+    "display_name": "RH SkyReels V4 文生视频-std",
+    "name_cn": "SkyReels V4 文生视频-std",
+    "name_en": "skyreels-v4/text-to-video-std",
+    "endpoint": "skyreels-v4/text-to-video-std",
+    "output_type": "video",
+    "category": "RunningHub/SkyReels",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "描述视频内容的文本提示词",
+        "defaultValue": "真人实拍电影感追逐场景。两名骑手骑马疾驰穿过沙漠峡谷的超远景镜头。切换到领队骑手坚毅面庞的特写，皮肤上有尘土。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "sound",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "sound",
+        "description": "是否生成视频音效",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长（秒）",
+        "defaultValue": 5,
+        "min": 3,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "视频画面比例",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          }
+        ]
+      },
+      {
+        "fieldKey": "promptOptimizer",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "promptOptimizer",
+        "description": "启用自动提示词扩展和优化，以实现更高的视觉保真度和对齐效果。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出视频分辨率。支持480p、720p和1080p。",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "SkyreelsV4ImageToVideoStd",
+    "display_name": "RH SkyReels V4 图生视频-std",
+    "name_cn": "SkyReels V4 图生视频-std",
+    "name_en": "skyreels-v4/image-to-video-std",
+    "endpoint": "skyreels-v4/image-to-video-std",
+    "output_type": "video",
+    "category": "RunningHub/SkyReels",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "描述视频内容的文本提示词",
+        "defaultValue": "一个青少年男孩坐在窗边，夏雨中戴着耳机，闭着眼睛，手指随着音乐轻敲，外面的雨滴顺着玻璃快速滑下。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "firstImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstImageUrl",
+        "description": "视频首帧图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"GIF\",\"BMP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "sound",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "sound",
+        "description": "是否生成视频音效",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长（秒）",
+        "defaultValue": 5,
+        "min": 3,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "promptOptimizer",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "promptOptimizer",
+        "description": "启用自动提示词扩展和优化，以实现更高的视觉保真度和对齐效果。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出视频分辨率。支持480p、720p和1080p。",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "KlingV25TurboStdTextToVideo",
+    "display_name": "RH 可灵文生视频2.5-turbo-std",
+    "name_cn": "可灵文生视频2.5-turbo-std",
+    "name_en": "kling-v2.5-turbo-std/text-to-video",
+    "endpoint": "kling-v2.5-turbo-std/text-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "一个女孩在教室里跳舞",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "negativePrompt",
+        "maxLength": 2500
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      },
+      {
+        "fieldKey": "guidanceScale",
+        "type": "FLOAT",
+        "required": false,
+        "label": "guidanceScale",
+        "description": "guidanceScale",
+        "defaultValue": 0.5,
+        "min": 0,
+        "max": 1,
+        "step": 0.1
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "9:16",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "Meshy6TextTo3d",
+    "display_name": "RH Meshy 6 文生 3D",
+    "name_cn": "Meshy 6 文生 3D",
+    "name_en": "meshy6/text-to-3d",
+    "endpoint": "meshy6/text-to-3d",
+    "output_type": "3d",
+    "category": "RunningHub/Meshy",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "描述要生成的 3D 物体（最多 600 字）",
+        "maxLength": 600
+      },
+      {
+        "fieldKey": "artStyle",
+        "type": "LIST",
+        "required": false,
+        "label": "artStyle",
+        "description": "艺术风格",
+        "defaultValue": "realistic",
+        "options": [
+          {
+            "value": "realistic",
+            "description": "realistic",
+            "descriptionEn": "realistic"
+          },
+          {
+            "value": "sculpture",
+            "description": "sculpture",
+            "descriptionEn": "sculpture"
+          }
+        ]
+      },
+      {
+        "fieldKey": "topology",
+        "type": "LIST",
+        "required": false,
+        "label": "topology",
+        "description": "网格拓扑：三角面细节更丰富，四边面更利于平滑曲面",
+        "defaultValue": "triangle",
+        "options": [
+          {
+            "value": "triangle",
+            "description": "triangle",
+            "descriptionEn": "triangle"
+          },
+          {
+            "value": "quad",
+            "description": "quad",
+            "descriptionEn": "quad"
+          }
+        ]
+      },
+      {
+        "fieldKey": "targetPolycount",
+        "type": "INT",
+        "required": false,
+        "label": "targetPolycount",
+        "description": "目标面数",
+        "defaultValue": 30000,
+        "min": 100,
+        "max": 300000,
+        "step": 1
+      },
+      {
+        "fieldKey": "symmetryMode",
+        "type": "LIST",
+        "required": false,
+        "label": "symmetryMode",
+        "description": "对称模式",
+        "defaultValue": "auto",
+        "options": [
+          {
+            "value": "off",
+            "description": "off",
+            "descriptionEn": "off"
+          },
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "on",
+            "description": "on",
+            "descriptionEn": "on"
+          }
+        ]
+      },
+      {
+        "fieldKey": "shouldRemesh",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "shouldRemesh",
+        "description": "是否进行 Remesh 以获得更干净拓扑",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "enablePbr",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "enablePbr",
+        "description": "是否生成 PBR 贴图（金属度/粗糙度/法线）",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "taPose",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "taPose",
+        "description": "是否输出 A/T Pose 便于绑定",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "enablePromptExpansion",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "enablePromptExpansion",
+        "description": "是否用 LLM 扩写提示词",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "texturePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "texturePrompt",
+        "description": "纹理引导补充文案（Full 模式）",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "textureImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "textureImageUrl",
+        "description": "纹理引导图（可选，Full 模式）",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\"]",
+        "maxSize": 10
+      }
+    ]
+  },
+  {
+    "class_name": "Meshy6ImageTo3d",
+    "display_name": "RH Meshy 6 图生 3D",
+    "name_cn": "Meshy 6 图生 3D",
+    "name_en": "meshy6/image-to-3d",
+    "endpoint": "meshy6/image-to-3d",
+    "output_type": "3d",
+    "category": "RunningHub/Meshy",
+    "params": [
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "输入图片 URL（JPG/PNG）",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "topology",
+        "type": "LIST",
+        "required": false,
+        "label": "topology",
+        "description": "网格拓扑",
+        "defaultValue": "triangle",
+        "options": [
+          {
+            "value": "triangle",
+            "description": "triangle",
+            "descriptionEn": "triangle"
+          },
+          {
+            "value": "quad",
+            "description": "quad",
+            "descriptionEn": "quad"
+          }
+        ]
+      },
+      {
+        "fieldKey": "targetPolycount",
+        "type": "INT",
+        "required": false,
+        "label": "targetPolycount",
+        "description": "目标面数",
+        "defaultValue": 30000,
+        "min": 100,
+        "max": 300000,
+        "step": 1
+      },
+      {
+        "fieldKey": "symmetryMode",
+        "type": "LIST",
+        "required": false,
+        "label": "symmetryMode",
+        "description": "对称模式",
+        "defaultValue": "auto",
+        "options": [
+          {
+            "value": "off",
+            "description": "off",
+            "descriptionEn": "off"
+          },
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "on",
+            "description": "on",
+            "descriptionEn": "on"
+          }
+        ]
+      },
+      {
+        "fieldKey": "shouldRemesh",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "shouldRemesh",
+        "description": "是否 Remesh",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "shouldTexture",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "shouldTexture",
+        "description": "是否生成纹理",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "enablePbr",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "enablePbr",
+        "description": "是否生成 PBR 贴图",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "taPose",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "taPose",
+        "description": "A/T Pose 输出",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "texturePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "texturePrompt",
+        "description": "纹理引导文案",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "textureImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "textureImageUrl",
+        "description": "纹理过程引导图（可选）",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\"]",
+        "maxSize": 10
+      }
+    ]
+  },
+  {
+    "class_name": "SkyreelsV4TextToVideoFast",
+    "display_name": "RH SkyReels V4 文生视频-fast",
+    "name_cn": "SkyReels V4 文生视频-fast",
+    "name_en": "skyreels-v4/text-to-video-fast",
+    "endpoint": "skyreels-v4/text-to-video-fast",
+    "output_type": "video",
+    "category": "RunningHub/SkyReels",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "描述视频内容的文本提示词",
+        "defaultValue": "微观量子世界，电子云高速旋转、量子纠缠粒子成对闪烁，叠加态粒子同时存在多个位置，量子隧穿效果可视化，深蓝色与紫色霓虹光效，粒子流穿梭、能量场波纹扩散，缓慢环绕运镜 + 微距推镜，电影级光影，4K 超清，深邃神秘氛围，无文字、无变形、无抖动。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长（秒）",
+        "defaultValue": 5,
+        "min": 3,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "视频画面比例",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          }
+        ]
+      },
+      {
+        "fieldKey": "promptOptimizer",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "promptOptimizer",
+        "description": "启用自动提示词扩展和优化，以实现更高的视觉保真度和对齐效果。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出视频分辨率。支持480p、720p和1080p。",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "SkyreelsV4ImageToVideoFast",
+    "display_name": "RH SkyReels V4 图生视频-fast",
+    "name_cn": "SkyReels V4 图生视频-fast",
+    "name_en": "skyreels-v4/image-to-video-fast",
+    "endpoint": "skyreels-v4/image-to-video-fast",
+    "output_type": "video",
+    "category": "RunningHub/SkyReels",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "描述视频内容的文本提示词",
+        "defaultValue": "春日郊外的野餐场景，五位年轻朋友坐在开满野花的草地上，围着彩色格子野餐垫，欢声笑语互动：举杯、分享食物、指向远方、相视而笑。背景是开满樱花的山谷与蜿蜒河流，阳光明媚，镜头缓慢从全景推近到人物，再轻柔环绕，捕捉食物、野餐篮、吉他等细节，整体氛围轻松治愈、充满春日活力，4K 超清，电影级自然光，色彩明亮清新，丝滑流畅的动态效果。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "firstImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstImageUrl",
+        "description": "视频首帧图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"GIF\",\"BMP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长（秒）",
+        "defaultValue": 5,
+        "min": 3,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "promptOptimizer",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "promptOptimizer",
+        "description": "启用自动提示词扩展和优化，以实现更高的视觉保真度和对齐效果。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出视频分辨率。支持480p、720p和1080p。",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
       }
     ]
   }

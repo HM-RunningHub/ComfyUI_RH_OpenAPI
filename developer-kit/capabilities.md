@@ -6,12 +6,12 @@ It gives developers and AI coding agents a fast index of available model capabil
 
 ## Summary
 
-- Total models: 294
-- `3d` outputs: 14
+- Total models: 299
+- `3d` outputs: 16
 - `audio` outputs: 16
 - `image` outputs: 67
 - `string` outputs: 26
-- `video` outputs: 171
+- `video` outputs: 174
 
 ## How To Use This File With AI
 
@@ -39,6 +39,8 @@ The AI must not infer enum values or required fields from this summary.
 | `hitem3d-v21/multi-image-to-3d` | hitem3d-v21/multi-image-to-3d | requestType:LIST:required, frontImageUrl:IMAGE:required, backImageUrl:IMAGE:optional, leftImageUrl:IMAGE:optional, rightImageUrl:IMAGE:optional, resolution:LIST:required, face:INT:optional | 5.6-21 CNY/次 by requestType,resolution |
 | `hunyuan3d-v3.1/image-to-3d` | hunyuan3d-v3.1/image-to-3d | faceCount:INT:optional, enablePbr:BOOLEAN:required, generateType:LIST:required, imageUrl:IMAGE:required, leftImageUrl:IMAGE:optional, rightImageUrl:IMAGE:optional, backImageUrl:IMAGE:optional, topImageUrl:IMAGE:optional, bottomImageUrl:IMAGE:optional, leftFrontImageUrl:IMAGE:optional, rightFrontImageUrl:IMAGE:optional | 4.2-6.6 CNY/次 by generateType,enablePbr |
 | `hunyuan3d-v3.1/text-to-3d` | hunyuan3d-v3.1/text-to-3d | prompt:STRING:required, faceCount:INT:optional, enablePbr:BOOLEAN:required, generateType:LIST:required | 1.8-4.2 CNY/次 by generateType,enablePbr |
+| `meshy6/image-to-3d` | meshy6/image-to-3d | imageUrl:IMAGE:required, topology:LIST:optional, targetPolycount:INT:optional, symmetryMode:LIST:optional, shouldRemesh:BOOLEAN:optional, shouldTexture:BOOLEAN:optional, enablePbr:BOOLEAN:optional, taPose:BOOLEAN:optional, texturePrompt:STRING:optional, textureImageUrl:IMAGE:optional |  |
+| `meshy6/text-to-3d` | meshy6/text-to-3d | prompt:STRING:required, artStyle:LIST:optional, topology:LIST:optional, targetPolycount:INT:optional, symmetryMode:LIST:optional, shouldRemesh:BOOLEAN:optional, enablePbr:BOOLEAN:optional, taPose:BOOLEAN:optional, enablePromptExpansion:BOOLEAN:optional, texturePrompt:STRING:optional, textureImageUrl:IMAGE:optional |  |
 
 ## Audio Models
 
@@ -199,12 +201,13 @@ The AI must not infer enum values or required fields from this summary.
 | `kling-v2.5-turbo-pro/image-to-video` | kling-v2.5-turbo-pro/image-to-video | prompt:STRING:optional, negativePrompt:STRING:optional, duration:LIST:required, guidanceScale:FLOAT:optional, firstImageUrl:IMAGE:required, lastImageUrl:IMAGE:optional | 1.75-3.5 CNY/次 by duration |
 | `kling-v2.5-turbo-pro/text-to-video` | kling-v2.5-turbo-pro/text-to-video | prompt:STRING:required, negativePrompt:STRING:optional, duration:LIST:required, guidanceScale:FLOAT:optional, aspectRatio:LIST:required | 1.75-3.5 CNY/次 by duration |
 | `kling-v2.5-turbo-std/image-to-video` | kling-v2.5-turbo-std/image-to-video | prompt:STRING:required, negativePrompt:STRING:optional, duration:LIST:required, guidanceScale:FLOAT:optional, firstImageUrl:IMAGE:required | 1.05-2.1 CNY/次 by duration |
+| `kling-v2.5-turbo-std/text-to-video` | kling-v2.5-turbo-std/text-to-video | prompt:STRING:required, negativePrompt:STRING:optional, duration:LIST:required, guidanceScale:FLOAT:optional, aspectRatio:LIST:required |  |
 | `kling-v2.6-pro/image-to-video` | kling-v2.6-pro-image-to-video | prompt:STRING:required, negativePrompt:STRING:optional, imageUrl:IMAGE:required, sound:LIST:required, duration:LIST:required | 1.75-7 CNY/次 by duration,sound |
 | `kling-v2.6-pro/motion-control` | kling-v2.6-pro-motion-control | imageUrl:IMAGE:required, videoUrl:VIDEO:required, characterOrientation:LIST:required, prompt:STRING:optional, keepOriginalSound:LIST:optional | 0.56 CNY/秒 |
 | `kling-v2.6-pro/text-to-video` | kling-v2.6-pro-text-to-video | prompt:STRING:required, negativePrompt:STRING:optional, sound:LIST:required, aspectRatio:LIST:required, duration:LIST:required | 1.75-7 CNY/次 by duration,sound |
 | `kling-v2.6-std/motion-control` | kling-v2.6-std-motion-control | imageUrl:IMAGE:required, videoUrl:VIDEO:required, characterOrientation:LIST:required, prompt:STRING:optional, keepOriginalSound:LIST:optional | 0.35 CNY/秒 |
-| `kling-v3-4k/image-to-video` | kling-v3.0-4k-image-to-video | imageUrl:IMAGE:required, prompt:STRING:optional, negativePrompt:STRING:optional, endImageUrl:IMAGE:optional, duration:INT:required, cfgScale:FLOAT:optional, sound:BOOLEAN:optional, shotType:LIST:optional | 2.7 CNY/秒 |
-| `kling-v3-4k/text-to-video` | kling-v3-4k-text-to-video | prompt:STRING:required, negativePrompt:STRING:optional, duration:LIST:required, aspectRatio:LIST:optional, cfgScale:FLOAT:optional, sound:BOOLEAN:optional, shotType:LIST:optional | 2.7 CNY/秒 |
+| `kling-v3-4k/image-to-video` | kling-v3.0-4k-image-to-video | imageUrl:IMAGE:required, prompt:STRING:optional, negativePrompt:STRING:optional, endImageUrl:IMAGE:optional, duration:INT:required, cfgScale:FLOAT:optional, sound:BOOLEAN:optional, shotType:LIST:optional, multiShot:BOOLEAN:optional | 2.7 CNY/秒 |
+| `kling-v3-4k/text-to-video` | kling-v3-4k-text-to-video | prompt:STRING:required, negativePrompt:STRING:optional, duration:LIST:required, aspectRatio:LIST:optional, cfgScale:FLOAT:optional, sound:BOOLEAN:optional, shotType:LIST:optional, multiShot:BOOLEAN:optional | 2.7 CNY/秒 |
 | `kling-v3.0-4k/motion-control` | kling-v3.0-4k-motion-control |  |  |
 | `kling-v3.0-pro/image-to-video` | kling-v3.0-pro-image-to-video | prompt:STRING:required, negativePrompt:STRING:optional, firstImageUrl:IMAGE:required, lastImageUrl:IMAGE:optional, duration:LIST:required, cfgScale:FLOAT:optional, sound:BOOLEAN:required, multiShot:BOOLEAN:optional, shotType:LIST:optional | 0.69-1.04 CNY/秒 by sound |
 | `kling-v3.0-pro/motion-control` | kling-v3.0-pro-motion-control | imageUrl:IMAGE:required, videoUrl:VIDEO:required, characterOrientation:LIST:required, prompt:STRING:optional, negativePrompt:STRING:optional, keepOriginalSound:BOOLEAN:optional | 1.08 CNY/秒 |
@@ -217,9 +220,9 @@ The AI must not infer enum values or required fields from this summary.
 | `kling-video-o1/image-to-video` | kling-video-o1/image-to-video | prompt:STRING:optional, aspectRatio:LIST:required, duration:LIST:required, firstImageUrl:IMAGE:required, mode:LIST:required | 2.1-5.6 CNY/次 by mode,duration |
 | `kling-video-o1/start-to-end` | kling-video-o1/start-to-end | prompt:STRING:optional, aspectRatio:LIST:required, duration:LIST:required, firstImageUrl:IMAGE:required, lastImageUrl:IMAGE:required, mode:LIST:required | 2.1-5.6 CNY/次 by mode,duration |
 | `kling-video-o1/text-to-video` | kling-video-o1/text-to-video | prompt:STRING:optional, aspectRatio:LIST:required, duration:LIST:required, mode:LIST:required | 2.1-5.6 CNY/次 by mode,duration |
-| `kling-video-o3-4k/image-to-video` | kling-video-o3-4k-image-to-video | prompt:STRING:required, firstImageUrl:IMAGE:required, lastImageUrl:IMAGE:optional, duration:INT:required, sound:BOOLEAN:optional, shotType:LIST:optional | 2.7 CNY/秒 |
-| `kling-video-o3-4k/reference-to-video` | kling-video-o3-4k-reference-to-video | prompt:STRING:required, videoUrl:VIDEO:optional, imageUrls:IMAGE:optional, keepOriginalSound:BOOLEAN:optional, sound:BOOLEAN:optional, aspectRatio:LIST:optional, duration:INT:required, shotType:LIST:optional | 2.7 CNY/秒 |
-| `kling-video-o3-4k/text-to-video` | kling-video-o3-4k-text-to-video | prompt:STRING:required, aspectRatio:LIST:optional, duration:INT:required, sound:BOOLEAN:optional, shotType:LIST:optional | 2.7 CNY/秒 |
+| `kling-video-o3-4k/image-to-video` | kling-video-o3-4k-image-to-video | prompt:STRING:required, firstImageUrl:IMAGE:required, lastImageUrl:IMAGE:optional, duration:INT:required, sound:BOOLEAN:optional, shotType:LIST:optional, multiShot:BOOLEAN:optional | 2.7 CNY/秒 |
+| `kling-video-o3-4k/reference-to-video` | kling-video-o3-4k-reference-to-video | prompt:STRING:required, imageUrls:IMAGE:optional, keepOriginalSound:BOOLEAN:optional, sound:BOOLEAN:optional, aspectRatio:LIST:optional, duration:INT:required, shotType:LIST:optional, multiShot:BOOLEAN:optional | 2.7 CNY/秒 |
+| `kling-video-o3-4k/text-to-video` | kling-video-o3-4k-text-to-video | prompt:STRING:required, aspectRatio:LIST:optional, duration:INT:required, sound:BOOLEAN:optional, shotType:LIST:optional, multiShot:BOOLEAN:optional | 2.7 CNY/秒 |
 | `kling-video-o3-pro/image-to-video` | kling-video-o3-pro-image-to-video | prompt:STRING:required, firstImageUrl:IMAGE:required, lastImageUrl:IMAGE:optional, duration:INT:required, sound:BOOLEAN:required, multiShot:BOOLEAN:optional, shotType:LIST:optional | 0.69-0.87 CNY/秒 by sound |
 | `kling-video-o3-pro/reference-to-video` | kling-video-o3-pro/reference-to-video | prompt:STRING:required, videoUrl:VIDEO:optional, imageUrls:IMAGE:optional, keepOriginalSound:BOOLEAN:required, sound:BOOLEAN:optional, aspectRatio:LIST:optional, duration:INT:required, multiShot:BOOLEAN:optional, shotType:LIST:optional | 0.72-0.9 CNY/秒 by sound |
 | `kling-video-o3-pro/text-to-video` | kling-video-o3-pro-text-to-video | prompt:STRING:required, aspectRatio:LIST:optional, sound:BOOLEAN:required, duration:INT:required, multiShot:BOOLEAN:optional, shotType:LIST:optional | 0.69-0.87 CNY/秒 by sound |
@@ -246,7 +249,7 @@ The AI must not infer enum values or required fields from this summary.
 | `minimax/hailuo-2.3/t2v-standard` | hailuo-2.3-t2v-standard | prompt:STRING:required, enablePromptExpansion:BOOLEAN:required, duration:LIST:required | 1.5-3 CNY/次 by duration |
 | `pixverse-c1/image-to-video` | pixverse-c1/image-to-video | imageUrl:IMAGE:required, prompt:STRING:optional, resolution:LIST:required, duration:INT:required, generateAudioSwitch:BOOLEAN:required | 0.189-0.756 CNY/秒 by resolution,generateAudioSwitch |
 | `pixverse-c1/reference-to-video` | pixverse-c1/reference-to-video | prompt:STRING:required, aspectRatio:LIST:optional, resolution:LIST:required, duration:INT:required, generateAudioSwitch:BOOLEAN:required, seed:INT:optional | 0.63-2.52 CNY/秒起 by resolution |
-| `pixverse-c1/text-to-video` | pixverse-c1/text-to-video | prompt:STRING:required, resolution:LIST:optional, generateAudioSwitch:LIST:required, duration:INT:required, aspectRatio:LIST:optional | 0.189-0.756 CNY/秒 by resolution,generateAudioSwitch |
+| `pixverse-c1/text-to-video` | pixverse-c1/text-to-video | prompt:STRING:required, resolution:LIST:required, generateAudioSwitch:BOOLEAN:required, duration:INT:required, aspectRatio:LIST:optional | 0.189-0.756 CNY/秒 by resolution,generateAudioSwitch |
 | `pixverse-c1/transition` | pixverse-c1/transition | prompt:STRING:required, firstImageUrl:IMAGE:required, endImageUrl:IMAGE:optional, resolution:LIST:required, duration:INT:required, generateAudioSwitch:BOOLEAN:required, aspectRatio:LIST:optional | 0.63-3.15 CNY/秒 by resolution,generateAudioSwitch |
 | `pixverse-v5.5-effects` | pixverse-v5.5-effects | imageUrl:IMAGE:required, effect:LIST:required, resolution:LIST:required, duration:LIST:required, negativePrompt:STRING:optional, thinkingType:LIST:optional | 3.1-16.6 CNY/次 by resolution,duration |
 | `pixverse-v5.5-transition` | pixverse-v5.5-transition | prompt:STRING:required, imageUrl:IMAGE:required, endImageUrl:IMAGE:required, aspectRatio:LIST:optional, duration:LIST:required, resolution:LIST:required, thinkingType:LIST:optional, negativePrompt:STRING:optional | 3.1-16.6 CNY/次 by resolution,duration |
@@ -314,9 +317,11 @@ The AI must not infer enum values or required fields from this summary.
 | `skyreels-v3/shot-switching-video-extension` | skyreels-v3/shot-switching-video-extension | prompt:STRING:required, videoUrl:VIDEO:required, duration:INT:optional, cutType:LIST:optional | 0.01 CNY/次 |
 | `skyreels-v3/single-shot-video-extension` | skyreels-v3/single-shot-video-extension | prompt:STRING:required, videoUrl:VIDEO:required, duration:INT:optional | 0.01 CNY/次 |
 | `skyreels-v3/video-restyling` | skyreels-v3/video-restyling | videoUrl:VIDEO:required, styleName:LIST:required | 0.01 CNY/次 |
-| `skyreels-v4/image-to-video` | skyreels-v4/image-to-video | prompt:STRING:required, firstFrameImageUrl:IMAGE:required, sound:BOOLEAN:required, duration:INT:optional, mode:LIST:optional | 0.01 CNY/次 |
-| `skyreels-v4/omni-reference` | skyreels-v4/omni-reference | prompt:STRING:required, aspectRatio:LIST:optional, duration:INT:optional, sound:BOOLEAN:required, promptOptimizer:BOOLEAN:optional, mode:LIST:optional | 0.01 CNY/次 |
-| `skyreels-v4/text-to-video` | skyreels-v4/text-to-video | prompt:STRING:required, sound:BOOLEAN:required, duration:INT:optional, aspectRatio:LIST:optional, mode:LIST:optional | 0.01 CNY/次 |
+| `skyreels-v4/image-to-video-fast` | skyreels-v4/image-to-video-fast | prompt:STRING:required, firstImageUrl:IMAGE:required, duration:INT:optional, promptOptimizer:BOOLEAN:required, resolution:LIST:required |  |
+| `skyreels-v4/image-to-video-std` | skyreels-v4/image-to-video-std | prompt:STRING:required, firstImageUrl:IMAGE:required, sound:BOOLEAN:required, duration:INT:optional, promptOptimizer:BOOLEAN:required, resolution:LIST:required |  |
+| `skyreels-v4/omni-reference` | skyreels-v4/omni-reference | prompt:STRING:required, aspectRatio:LIST:optional, duration:INT:optional, sound:BOOLEAN:required, promptOptimizer:BOOLEAN:optional, resolution:LIST:optional | 0.01 CNY/次 |
+| `skyreels-v4/text-to-video-fast` | skyreels-v4/text-to-video-fast | prompt:STRING:required, duration:INT:optional, aspectRatio:LIST:optional, promptOptimizer:BOOLEAN:required, resolution:LIST:required |  |
+| `skyreels-v4/text-to-video-std` | skyreels-v4/text-to-video-std | prompt:STRING:required, sound:BOOLEAN:required, duration:INT:optional, aspectRatio:LIST:optional, promptOptimizer:BOOLEAN:required, resolution:LIST:required |  |
 | `topazlabs/video-upscale` | topazlabs-video-upscale | videoUrl:VIDEO:required, targetResolution:LIST:required, targetFps:LIST:required | 0.4-2.5 CNY/秒 by targetResolution,targetFps |
 | `vidu/image-to-video-q2-pro` | Vidu-image-to-video-q2-pro | prompt:STRING:required, imageUrl:IMAGE:required, duration:LIST:required, resolution:LIST:required, movementAmplitude:LIST:required, bgm:BOOLEAN:required | 0.18-4.16 CNY/次 by resolution,duration |
 | `vidu/image-to-video-q2-pro-fast` | Vidu-image-to-video-q2-pro-fast | prompt:STRING:required, imageUrl:IMAGE:required, duration:LIST:required, resolution:LIST:required, movementAmplitude:LIST:required, bgm:BOOLEAN:required | 0.18-1.16 CNY/次 by resolution,duration |

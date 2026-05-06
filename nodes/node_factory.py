@@ -964,7 +964,7 @@ def create_all_nodes():
 
     for model_def in registry:
         try:
-            internal_name = model_def["internal_name"]
+            internal_name = model_def.get("internal_name") or f"RH_{model_def['class_name']}"
             display_name = model_def["display_name"]
 
             node_class = create_node_class(model_def)

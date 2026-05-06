@@ -1,18 +1,18 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-298-blue)
+![Nodes](https://img.shields.io/badge/Nodes-303-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 [English](README_EN.md) | **中文**
 
 **ComfyUI_RH_OpenAPI** 是 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 的 **1:1 ComfyUI 实现**，并额外补充了 Seedance2.0 素材资产管理节点。
 
-本项目当前收录 294 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点与 1 个设置节点，总计提供 298 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
+本项目当前收录 299 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点与 1 个设置节点，总计提供 303 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
 
 ## 📌 项目特点
 
-- **节点总量** — 共 298 个 ComfyUI 节点，其中包含 294 个标准模型节点、3 个 Seedance2.0 素材节点和 1 个设置节点
+- **节点总量** — 共 303 个 ComfyUI 节点，其中包含 299 个标准模型节点、3 个 Seedance2.0 素材节点和 1 个设置节点
 - **即插即用** — 无需下载模型、无需 GPU，只需 API Key 即可调用全部能力
 - **动态注册** — 基于 JSON 注册表自动生成节点，新模型上线后仅需更新注册表
 - **多媒体支持** — 图片、视频、音频自动上传 / 下载 / 格式转换，与 ComfyUI 原生类型无缝衔接
@@ -45,7 +45,7 @@
 | FLUX Dev（Black Forest Labs） | — | 文生图、文生图 LoRA | 2 |
 | Midjourney | 悠船 | 文生图 v6/v6.1/niji6/niji7/v7 | 5 |
 
-### 视频生成（180 个节点）
+### 视频生成（183 个节点）
 
 | 模型 | RH 平台名称 | 能力 | 节点数 |
 |------|-----------|------|--------|
@@ -87,7 +87,7 @@
 | Suno v4.5 / v5 / v5.5（RHArt） | Single / Custom 文生音乐 | 6 |
 | Suno Lyrics（RHArt） | 歌词生成 | 1 |
 
-### 3D 建模（14 个节点）
+### 3D 建模（16 个节点）
 
 | 模型系列 | 能力 | 节点数 |
 |---------|------|--------|
@@ -160,14 +160,14 @@ cp config/.env.example config/.env
 
 ### 示例工作流
 
-项目在 `examples/` 目录下提供了 252 个示例工作流 JSON 文件，其中包含 3 个 Seedance2.0 素材相关工作流。下载后直接导入 ComfyUI 即可使用。
+项目在 `examples/` 目录下提供了 277 个示例工作流 JSON 文件，其中包含 3 个 Seedance2.0 素材相关工作流。下载后直接导入 ComfyUI 即可使用。
 
 ## 📁 项目结构
 
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # 入口文件，注册所有节点
-├── models_registry.json     # 模型注册表（294 个模型定义）
+├── models_registry.json     # 模型注册表（299 个模型定义）
 ├── config/
 │   └── .env.example         # 配置文件示例
 ├── core/                    # 核心基础设施
@@ -183,7 +183,7 @@ ComfyUI_RH_OpenAPI/
 │   ├── settings_node.py     # RH OpenAPI Settings 配置节点
 │   ├── node_factory.py      # 动态节点工厂
 │   └── assets/              # Seedance2.0 素材资产节点
-└── examples/                # 252 个示例工作流
+└── examples/                # 277 个示例工作流
 ```
 
 ## 🔧 架构说明
