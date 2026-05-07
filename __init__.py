@@ -124,6 +124,15 @@ def _name_en_to_display(name_en: str) -> str:
     return " ".join(result)
 
 
+def _node_i18n_key(model_def):
+    internal_name = model_def.get("internal_name")
+    if internal_name:
+        return internal_name
+
+    class_name = model_def.get("class_name")
+    return f"RH_{class_name}" if class_name else ""
+
+
 def _generate_i18n_files():
     """Generate ComfyUI locales/ and panel_i18n.json from models_registry.json."""
     base_dir = os.path.dirname(__file__)
@@ -144,7 +153,10 @@ def _generate_i18n_files():
     panel_nodes_zh = {}
 
     for m in all_node_defs:
-        iname = m.get("internal_name", "")
+        iname = _node_i18n_key(m)
+        if not iname:
+            continue
+
         name_cn = m.get("name_cn", "")
         name_en = m.get("name_en", "")
         display_cn = m.get("display_name", "")
