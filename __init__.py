@@ -144,7 +144,7 @@ def _generate_i18n_files():
     panel_nodes_zh = {}
 
     for m in all_node_defs:
-        iname = m.get("internal_name", "")
+        iname = m.get("internal_name") or (f"RH_{m['class_name']}" if m.get("class_name") else "")
         name_cn = m.get("name_cn", "")
         name_en = m.get("name_en", "")
         display_cn = m.get("display_name", "")
