@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
 ![Nodes](https://img.shields.io/badge/Nodes-320-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
-[RunningHub](https://www.runninghub.cn)
+![RunningHub](https://www.runninghub.cn)
 
 [English](README_EN.md) | **中文**
 
