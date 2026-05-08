@@ -113,11 +113,16 @@ class LLMChatNodeTests(unittest.TestCase):
         self.assertFalse(hasattr(llm_chat.RHLLMChatNode, "VALIDATE_INPUTS"))
 
     def test_api_config_is_last_optional_input(self):
-        with patch.object(llm_chat, "fetch_llm_models", return_value=["qwen/qwen-plus"]):
+        with patch.object(
+            llm_chat,
+            "fetch_llm_models",
+            return_value=["qwen/qwen-plus", llm_chat.DEFAULT_MODEL],
+        ):
             inputs = llm_chat.RHLLMChatNode.INPUT_TYPES()
             required_keys = list(inputs["required"].keys())
             optional_keys = list(inputs["optional"].keys())
 
+        self.assertEqual(inputs["required"]["model"][1]["default"], llm_chat.DEFAULT_MODEL)
         self.assertEqual(
             required_keys,
             [

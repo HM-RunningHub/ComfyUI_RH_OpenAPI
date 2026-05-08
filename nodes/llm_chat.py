@@ -28,10 +28,12 @@ MAX_VIDEO_DURATION = 15
 MODEL_CACHE_TTL_SECONDS = 3600
 CHAT_MAX_RETRIES = 3
 DEFAULT_MAX_TOKENS = 4096
+DEFAULT_MODEL = "google/gemini-3.1-flash-lite-preview"
 
 _MODEL_CACHE: Dict[str, Any] = {"expires_at": 0.0, "models": None}
 
 FALLBACK_MODELS = [
+    DEFAULT_MODEL,
     "qwen/qwen3-vl-235b-a22b-instruct",
     "qwen/qwen-plus",
     "qwen/qwen-max",
@@ -43,6 +45,10 @@ FALLBACK_MODELS = [
     "rh-llm-g/rh-g-flash-preview-3",
     "rh-llm-g/rh-g-pro-preview-31",
 ]
+
+
+def _default_model(models: List[str]) -> str:
+    return DEFAULT_MODEL if DEFAULT_MODEL in models else models[0]
 
 
 def remove_think_tags(text: Any) -> Any:
@@ -389,7 +395,7 @@ class RHLLMChatNode:
         models = fetch_llm_models()
         return {
             "required": {
-                "model": (models, {"default": models[0]}),
+                "model": (models, {"default": _default_model(models)}),
                 "role": ("STRING", {"multiline": True, "default": "You are a helpful assistant"}),
                 "prompt": ("STRING", {"multiline": True, "default": "Hello"}),
                 "temperature": ("FLOAT", {"default": 0.6, "min": 0.0, "max": 2.0, "step": 0.1}),
