@@ -1,22 +1,23 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-319-blue)
+![Nodes](https://img.shields.io/badge/Nodes-320-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 [English](README_EN.md) | **中文**
 
 **ComfyUI_RH_OpenAPI** 是 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 的 **1:1 ComfyUI 实现**，并额外补充了 Seedance2.0 素材资产管理节点。
 
-本项目当前收录 315 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点与 1 个设置节点，总计提供 319 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
+本项目当前收录 315 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点、1 个 RunningHub LLM 对话节点与 1 个设置节点，总计提供 320 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型与 LLM 能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
 
 ## 📌 项目特点
 
-- **节点总量** — 共 319 个 ComfyUI 节点，其中包含 315 个标准模型节点、3 个 Seedance2.0 素材节点和 1 个设置节点
+- **节点总量** — 共 320 个 ComfyUI 节点，其中包含 315 个标准模型节点、3 个 Seedance2.0 素材节点、1 个 RunningHub LLM 对话节点和 1 个设置节点
 - **即插即用** — 无需下载模型、无需 GPU，只需 API Key 即可调用全部能力
 - **动态注册** — 基于 JSON 注册表自动生成节点，新模型上线后仅需更新注册表
 - **多媒体支持** — 图片、视频、音频自动上传 / 下载 / 格式转换，与 ComfyUI 原生类型无缝衔接
 - **素材资产管理** — 提供 3 个 Seedance2.0 素材辅助节点，并支持通过统一的 `asset_ids` 输入或 `real_person_mode` 把本地图片/视频映射到 Seedance2.0 / Seedance2.0-Fast 节点
+- **LLM 对话补全** — 提供 `RH LLM Chat Completions` 节点，支持动态模型列表、文本对话、图片理解和视频理解
 - **灵活配置** — 支持节点配置、环境变量、`.env` 文件三种配置方式
 - **进度显示** — 任务提交后实时显示轮询进度
 - **容错机制** — 提交/上传/轮询均有重试与指数退避，自动区分可重试与不可重试错误
@@ -113,6 +114,17 @@
 - 某个槽位转素材失败时会自动回退到原始上传，不影响其它槽位
 - 这两个输入都补充了 hover 提示，鼠标悬停即可查看说明和可用槽位格式
 
+### RunningHub LLM 对话（1 个节点）
+
+- 节点名称：`RH LLM Chat Completions`
+- 模型列表动态读取 `https://llm.runninghub.ai/v1/models`，并在网络失败时使用内置 fallback 模型列表
+- 调用 OpenAI 兼容接口 `https://llm.runninghub.cn/v1/chat/completions`
+- 支持文本对话、图片理解和视频理解；同时连接图片和视频时优先处理图片
+- 图片输入会先通过 RunningHub OpenAPI 上传为 URL，再以 `image_url` 传给 LLM 网关
+- 视频输入会在超过 10MB 时尝试压缩到 15 秒以内、10MB 以内，再以 `video_url` 传给 LLM 网关
+- 节点保留 `seed` 输入以兼容 ComfyUI 工作流，但不会转发给 LLM 网关，避免部分模型上游报错
+- `api_config` 输入位于最后一个槽位；不连接时会复用系统 shared API key、环境变量或 `.env` 配置
+
 ## 🛠️ 安装
 
 ### 方式一：通过 ComfyUI Manager 安装（推荐）
@@ -186,6 +198,7 @@ ComfyUI_RH_OpenAPI/
 │   └── audio.py             # 音频下载/转换工具
 ├── nodes/                   # 节点实现
 │   ├── settings_node.py     # RH OpenAPI Settings 配置节点
+│   ├── llm_chat.py          # RunningHub LLM 对话补全节点
 │   ├── node_factory.py      # 动态节点工厂
 │   └── assets/              # Seedance2.0 素材资产节点
 └── examples/                # 280 个示例工作流

@@ -1,22 +1,23 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-319-blue)
+![Nodes](https://img.shields.io/badge/Nodes-320-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 **English** | [中文](README.md)
 
 **ComfyUI_RH_OpenAPI** is a **1:1 ComfyUI implementation** of the [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api), with additional Seedance2.0 asset management nodes.
 
-The project currently includes 315 standard model API nodes covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. Together with 3 Seedance2.0 asset helper nodes and 1 settings node, it provides 319 ComfyUI nodes in total. You can access RunningHub standard model capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the `real_person_mode` toggle — no local GPU required, zero cold-start latency.
+The project currently includes 315 standard model API nodes covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. Together with 3 Seedance2.0 asset helper nodes, 1 RunningHub LLM chat node, and 1 settings node, it provides 320 ComfyUI nodes in total. You can access RunningHub standard model and LLM capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the `real_person_mode` toggle — no local GPU required, zero cold-start latency.
 
 ## 📌 Features
 
-- **Node Count** — 319 ComfyUI nodes in total: 315 standard model nodes, 3 Seedance2.0 asset nodes, and 1 settings node
+- **Node Count** — 320 ComfyUI nodes in total: 315 standard model nodes, 3 Seedance2.0 asset nodes, 1 RunningHub LLM chat node, and 1 settings node
 - **Plug & Play** — No model downloads, no GPU needed — just an API Key
 - **Dynamic Registration** — Nodes are auto-generated from a JSON registry; adding new models requires only a registry update
 - **Media Support** — Automatic upload/download/conversion for images, videos, and audio, seamlessly integrated with ComfyUI native types
 - **Asset Management** — 3 Seedance2.0 asset helper nodes, plus a unified `asset_ids` input or `real_person_mode` workflow for Seedance2.0 / Seedance2.0-Fast image/video inputs
+- **LLM Chat Completions** — Adds the `RH LLM Chat Completions` node with dynamic model discovery, text chat, image understanding, and video understanding
 - **Flexible Configuration** — Three configuration methods: node settings, environment variables, or `.env` file
 - **Progress Tracking** — Real-time polling progress display after task submission
 - **Robust Error Handling** — Submit/upload/poll all have retry with exponential backoff, auto-distinguishing retryable vs non-retryable errors
@@ -113,6 +114,17 @@ The project currently includes 315 standard model API nodes covering image gener
 - If asset creation fails for one slot, that slot automatically falls back to the original upload path
 - Both inputs now include hover tooltips so users can quickly see usage and supported slot names
 
+### RunningHub LLM Chat (1 Node)
+
+- Node name: `RH LLM Chat Completions`
+- Dynamically loads model IDs from `https://llm.runninghub.ai/v1/models`, with a built-in fallback list when the network is unavailable
+- Calls the OpenAI-compatible endpoint `https://llm.runninghub.cn/v1/chat/completions`
+- Supports text chat, image understanding, and video understanding; when both images and video are connected, images take priority
+- Image inputs are uploaded through RunningHub OpenAPI first and then passed to the LLM gateway as `image_url`
+- Video inputs are compressed to at most 15 seconds and 10MB when needed, then passed to the LLM gateway as `video_url`
+- The `seed` input is kept for ComfyUI workflow compatibility but is not forwarded to the LLM gateway because some upstream models reject it
+- The `api_config` input is placed at the last slot; when left unconnected, the node uses the system shared API key, environment variables, or `.env` configuration
+
 ## 🛠️ Installation
 
 ### Method 1: Via ComfyUI Manager (Recommended)
@@ -186,6 +198,7 @@ ComfyUI_RH_OpenAPI/
 │   └── audio.py             # Audio download/convert utilities
 ├── nodes/                   # Node implementations
 │   ├── settings_node.py     # RH OpenAPI Settings node
+│   ├── llm_chat.py          # RunningHub LLM Chat Completions node
 │   ├── node_factory.py      # Dynamic node factory
 │   └── assets/              # Seedance2.0 asset management nodes
 └── examples/                # 280 example workflows

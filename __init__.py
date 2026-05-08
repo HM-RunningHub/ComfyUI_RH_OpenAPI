@@ -14,19 +14,30 @@ from .nodes.assets import (
     NODE_DISPLAY_NAME_MAPPINGS as _asset_display_mappings,
     NODE_I18N_DEFINITIONS as _asset_i18n_definitions,
 )
+from .nodes.llm_chat import RHLLMChatNode
 from .nodes.settings_node import RHSettingsNode
 from .nodes.node_factory import create_all_nodes
 
 _class_mappings, _display_mappings = create_all_nodes()
+_standalone_i18n_definitions = [
+    {
+        "internal_name": "RHLLMChatNode",
+        "display_name": "RH LLM 对话补全",
+        "display_name_en": "RH LLM Chat Completions",
+        "category": "RunningHub/LLM",
+    }
+]
 
 NODE_CLASS_MAPPINGS = {
     "RHSettingsNode": RHSettingsNode,
+    "RHLLMChatNode": RHLLMChatNode,
     **_asset_class_mappings,
     **_class_mappings,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     "RHSettingsNode": "RH OpenAPI Settings",
+    "RHLLMChatNode": "RH LLM Chat Completions",
     **_asset_display_mappings,
     **_display_mappings,
 }
@@ -73,6 +84,7 @@ _CATEGORY_NAME_EN = {
     "Seedance2.0 Assets": "📦 Seedance2.0 Assets",
     "SparkVideo Assets": "📦 Seedance2.0 Assets",
     "Mureka": "🎵 Mureka",
+    "LLM": "🤖 LLM",
 }
 
 _CATEGORY_NAME_ZH = {
@@ -104,6 +116,7 @@ _CATEGORY_NAME_ZH = {
     "Seedance2.0 Assets": "📦 Seedance2.0素材",
     "SparkVideo Assets": "📦 Seedance2.0素材",
     "Mureka": "🎵 Mureka 音乐",
+    "LLM": "🤖 LLM 对话",
 }
 
 
@@ -146,7 +159,7 @@ def _generate_i18n_files():
     except Exception:
         return
 
-    all_node_defs = list(registry) + list(_asset_i18n_definitions)
+    all_node_defs = list(registry) + list(_asset_i18n_definitions) + list(_standalone_i18n_definitions)
 
     # Build nodeDefs for en and zh
     node_defs_en = {}
@@ -182,6 +195,12 @@ def _generate_i18n_files():
     node_defs_zh["RHSettingsNode"] = {"display_name": "RH OpenAPI 设置"}
     panel_nodes_en["RHSettingsNode"] = "RH OpenAPI Settings"
     panel_nodes_zh["RHSettingsNode"] = "RH OpenAPI 设置"
+
+    # Standalone LLM node
+    node_defs_en["RHLLMChatNode"] = {"display_name": "RH LLM Chat Completions"}
+    node_defs_zh["RHLLMChatNode"] = {"display_name": "RH LLM 对话补全"}
+    panel_nodes_en["RHLLMChatNode"] = "RH LLM Chat Completions"
+    panel_nodes_zh["RHLLMChatNode"] = "RH LLM 对话补全"
 
     # Write locales/en/ and locales/zh/
     for lang, nd in [("en", node_defs_en), ("zh", node_defs_zh)]:
