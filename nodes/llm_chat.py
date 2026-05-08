@@ -277,17 +277,29 @@ def build_messages(
     ]
 
 
-def build_chat_payload(model: str, messages: List[Dict[str, Any]], temperature: float, seed: int) -> Dict[str, Any]:
+def build_chat_payload(
+    model: str,
+    messages: List[Dict[str, Any]],
+    temperature: float,
+    max_tokens: int,
+    top_p: float,
+    presence_penalty: float,
+    frequency_penalty: float,
+    reasoning_effort: str,
+    seed: int,
+) -> Dict[str, Any]:
     # The RunningHub LLM gateway currently rejects seed for some providers
     # (for example Claude vision) with an internal_error, so keep the ComfyUI
     # widget for workflow compatibility but do not forward it to the API.
     payload: Dict[str, Any] = {
         "model": model,
         "messages": messages,
-        "max_tokens": DEFAULT_MAX_TOKENS,
+        "max_tokens": int(max_tokens),
         "temperature": float(temperature),
-        "top_p": 1,
-        "reasoning_effort": "none",
+        "top_p": float(top_p),
+        "presence_penalty": float(presence_penalty),
+        "frequency_penalty": float(frequency_penalty),
+        "reasoning_effort": reasoning_effort or "none",
     }
     return payload
 
@@ -381,6 +393,11 @@ class RHLLMChatNode:
                 "role": ("STRING", {"multiline": True, "default": "You are a helpful assistant"}),
                 "prompt": ("STRING", {"multiline": True, "default": "Hello"}),
                 "temperature": ("FLOAT", {"default": 0.6, "min": 0.0, "max": 2.0, "step": 0.1}),
+                "max_tokens": ("INT", {"default": DEFAULT_MAX_TOKENS, "min": 1, "max": 32768, "step": 1}),
+                "top_p": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.01}),
+                "presence_penalty": ("FLOAT", {"default": 0.0, "min": -2.0, "max": 2.0, "step": 0.1}),
+                "frequency_penalty": ("FLOAT", {"default": 0.0, "min": -2.0, "max": 2.0, "step": 0.1}),
+                "reasoning_effort": (["none", "low", "medium", "high"], {"default": "none"}),
                 "seed": ("INT", {"default": -1, "min": -1, "max": 2147483647, "step": 1}),
             },
             "optional": {
@@ -409,6 +426,11 @@ class RHLLMChatNode:
         role,
         prompt,
         temperature,
+        max_tokens,
+        top_p,
+        presence_penalty,
+        frequency_penalty,
+        reasoning_effort,
         seed,
         api_config=None,
         skip_error=False,
@@ -428,6 +450,11 @@ class RHLLMChatNode:
                 role=role,
                 prompt=prompt,
                 temperature=temperature,
+                max_tokens=max_tokens,
+                top_p=top_p,
+                presence_penalty=presence_penalty,
+                frequency_penalty=frequency_penalty,
+                reasoning_effort=reasoning_effort,
                 seed=seed,
                 api_config=api_config,
                 images=[img for img in (image1, image2, image3, image4, image5, image6, image7, image8) if img is not None],
@@ -439,7 +466,22 @@ class RHLLMChatNode:
                 return self._make_error_result(exc)
             raise
 
-    def _chat_inner(self, model, role, prompt, temperature, seed, api_config, images, video):
+    def _chat_inner(
+        self,
+        model,
+        role,
+        prompt,
+        temperature,
+        max_tokens,
+        top_p,
+        presence_penalty,
+        frequency_penalty,
+        reasoning_effort,
+        seed,
+        api_config,
+        images,
+        video,
+    ):
         config = get_config(api_config)
         api_key = config["api_key"]
         timeout = _calculate_timeout(role, prompt, len(images), video is not None and not images)
@@ -449,7 +491,17 @@ class RHLLMChatNode:
 
         image_urls = upload_images(images, config) if images else []
         messages = build_messages(role, prompt, image_urls, video if not image_urls else None)
-        payload = build_chat_payload(model, messages, temperature, seed)
+        payload = build_chat_payload(
+            model,
+            messages,
+            temperature,
+            max_tokens,
+            top_p,
+            presence_penalty,
+            frequency_penalty,
+            reasoning_effort,
+            seed,
+        )
         headers = {
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",

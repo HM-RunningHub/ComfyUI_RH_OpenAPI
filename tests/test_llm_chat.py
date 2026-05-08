@@ -51,6 +51,11 @@ class LLMChatNodeTests(unittest.TestCase):
             "qwen/qwen-plus",
             [{"role": "user", "content": "hello"}],
             0.6,
+            llm_chat.DEFAULT_MAX_TOKENS,
+            1.0,
+            0.0,
+            0.0,
+            "none",
             -1,
         )
 
@@ -61,13 +66,20 @@ class LLMChatNodeTests(unittest.TestCase):
             "qwen/qwen-plus",
             [{"role": "user", "content": "hello"}],
             0.6,
+            2048,
+            0.8,
+            0.2,
+            0.1,
+            "low",
             123,
         )
 
         self.assertNotIn("seed", payload)
-        self.assertEqual(payload["max_tokens"], llm_chat.DEFAULT_MAX_TOKENS)
-        self.assertEqual(payload["top_p"], 1)
-        self.assertEqual(payload["reasoning_effort"], "none")
+        self.assertEqual(payload["max_tokens"], 2048)
+        self.assertEqual(payload["top_p"], 0.8)
+        self.assertEqual(payload["presence_penalty"], 0.2)
+        self.assertEqual(payload["frequency_penalty"], 0.1)
+        self.assertEqual(payload["reasoning_effort"], "low")
         self.assertNotIn("extra_body", payload)
 
     def test_build_messages_prefers_images_over_video(self):
@@ -102,8 +114,25 @@ class LLMChatNodeTests(unittest.TestCase):
 
     def test_api_config_is_last_optional_input(self):
         with patch.object(llm_chat, "fetch_llm_models", return_value=["qwen/qwen-plus"]):
-            optional_keys = list(llm_chat.RHLLMChatNode.INPUT_TYPES()["optional"].keys())
+            inputs = llm_chat.RHLLMChatNode.INPUT_TYPES()
+            required_keys = list(inputs["required"].keys())
+            optional_keys = list(inputs["optional"].keys())
 
+        self.assertEqual(
+            required_keys,
+            [
+                "model",
+                "role",
+                "prompt",
+                "temperature",
+                "max_tokens",
+                "top_p",
+                "presence_penalty",
+                "frequency_penalty",
+                "reasoning_effort",
+                "seed",
+            ],
+        )
         self.assertEqual(optional_keys[-1], "api_config")
 
     def test_chat_uses_cn_endpoint_and_retries_upstream_error(self):
