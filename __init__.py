@@ -72,6 +72,7 @@ _CATEGORY_NAME_EN = {
     "Meshy": "🧩 Meshy",
     "Seedance2.0 Assets": "📦 Seedance2.0 Assets",
     "SparkVideo Assets": "📦 Seedance2.0 Assets",
+    "Mureka": "🎵 Mureka",
 }
 
 _CATEGORY_NAME_ZH = {
@@ -102,6 +103,7 @@ _CATEGORY_NAME_ZH = {
     "Meshy": "🧩 Meshy 3D",
     "Seedance2.0 Assets": "📦 Seedance2.0素材",
     "SparkVideo Assets": "📦 Seedance2.0素材",
+    "Mureka": "🎵 Mureka 音乐",
 }
 
 

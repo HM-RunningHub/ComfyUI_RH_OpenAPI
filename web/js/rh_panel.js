@@ -171,6 +171,7 @@ app.registerExtension({
         "Meshy": "🧩 Meshy 3D",
         "Seedance2.0 Assets": "📦 Seedance2.0素材",
         "SparkVideo Assets": "📦 Seedance2.0素材",
+        "Mureka": "🎵 Mureka 音乐",
       },
       en: {
         "RHArt Image": "🖼️ RHArt Image", "RHArt Video": "🎬 RHArt Video",
@@ -189,6 +190,7 @@ app.registerExtension({
         "Meshy": "🧩 Meshy",
         "Seedance2.0 Assets": "📦 Seedance2.0 Assets",
         "SparkVideo Assets": "📦 Seedance2.0 Assets",
+        "Mureka": "🎵 Mureka",
       },
     };
 
@@ -243,6 +245,7 @@ app.registerExtension({
       "Seedream", "Seedance", "Youchuan", "Audio",
       "Hunyuan3D", "HiTem3D", "TopazLabs", "HappyHorse",
       "PixVerse", "SkyReels", "Higgsfield", "Marble", "Meshy", "Seedance2.0 Assets",
+      "Mureka",
     ];
 
     let allowedNodes = null;

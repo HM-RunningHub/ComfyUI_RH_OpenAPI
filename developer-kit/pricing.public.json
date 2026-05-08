@@ -2,10 +2,10 @@
   "version": "public-2026-04-29",
   "source": "models_registry.json public-safe pricing summaries",
   "note": "Public-safe pricing summary for AI-assisted integration. Prices may change; check official RunningHub pricing before showing final costs to end users.",
-  "pricing_count": 290,
+  "pricing_count": 312,
   "counts_by_pricing_type": {
-    "fixed": 117,
-    "parameter_based": 172,
+    "fixed": 126,
+    "parameter_based": 185,
     "unparsed": 1
   },
   "pricing": [
@@ -199,19 +199,19 @@
           "when": {
             "resolution": "1080p"
           },
-          "price": 0.652
+          "price": 0.65
         },
         {
           "when": {
             "resolution": "480p"
           },
-          "price": 0.196
+          "price": 0.2
         },
         {
           "when": {
             "resolution": "720p"
           },
-          "price": 0.391
+          "price": 0.39
         }
       ]
     },
@@ -253,79 +253,79 @@
           "when": {
             "size": "1080*1920"
           },
-          "price": 0.652
+          "price": 0.65
         },
         {
           "when": {
             "size": "1088*832"
           },
-          "price": 0.391
+          "price": 0.39
         },
         {
           "when": {
             "size": "1248*1632"
           },
-          "price": 0.652
+          "price": 0.65
         },
         {
           "when": {
             "size": "1280*720"
           },
-          "price": 0.391
+          "price": 0.39
         },
         {
           "when": {
             "size": "1440*1440"
           },
-          "price": 0.652
+          "price": 0.65
         },
         {
           "when": {
             "size": "1632*1248"
           },
-          "price": 0.652
+          "price": 0.65
         },
         {
           "when": {
             "size": "1920*1080"
           },
-          "price": 0.652
+          "price": 0.65
         },
         {
           "when": {
             "size": "480*832"
           },
-          "price": 0.196
+          "price": 0.2
         },
         {
           "when": {
             "size": "624*624"
           },
-          "price": 0.196
+          "price": 0.2
         },
         {
           "when": {
             "size": "720*1280"
           },
-          "price": 0.391
+          "price": 0.39
         },
         {
           "when": {
             "size": "832*1088"
           },
-          "price": 0.391
+          "price": 0.39
         },
         {
           "when": {
             "size": "832*480"
           },
-          "price": 0.196
+          "price": 0.2
         },
         {
           "when": {
             "size": "960*960"
           },
-          "price": 0.391
+          "price": 0.39
         }
       ]
     },
@@ -771,7 +771,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.189
+      "price": 0.19
     },
     {
       "endpoint": "alibaba/wan-2.7/image-edit-pro",
@@ -782,7 +782,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.473
+      "price": 0.47
     },
     {
       "endpoint": "alibaba/wan-2.7/image-to-video",
@@ -831,7 +831,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.189
+      "price": 0.19
     },
     {
       "endpoint": "alibaba/wan-2.7/text-to-image-pro",
@@ -842,7 +842,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.473
+      "price": 0.47
     },
     {
       "endpoint": "alibaba/wan-2.7/text-to-video",
@@ -1976,6 +1976,17 @@
       "price": 0.06
     },
     {
+      "endpoint": "kling-elements-advanced",
+      "name_cn": "可灵 o3 创建主体",
+      "name_en": "kling-o3/element",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.0
+    },
+    {
       "endpoint": "kling-lip-sync/identify-face",
       "name_cn": "可灵对口型-人脸识别",
       "name_en": "kling-lip-sync/identify-face",
@@ -1984,7 +1995,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.035
+      "price": 0.04
     },
     {
       "endpoint": "kling-lip-sync/lip-sync-video",
@@ -2006,7 +2017,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.035
+      "price": 0.04
     },
     {
       "endpoint": "kling-v2-ai-avatar-pro/image-audio-to-video",
@@ -2088,6 +2099,33 @@
       "endpoint": "kling-v2.5-turbo-std/image-to-video",
       "name_cn": "可灵图生视频2.5-turbo-std",
       "name_en": "kling-v2.5-turbo-std/image-to-video",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "duration"
+      ],
+      "rules": [
+        {
+          "when": {
+            "duration": "10"
+          },
+          "price": 2.1
+        },
+        {
+          "when": {
+            "duration": "5"
+          },
+          "price": 1.05
+        }
+      ]
+    },
+    {
+      "endpoint": "kling-v2.5-turbo-std/text-to-video",
+      "name_cn": "可灵文生视频2.5-turbo-std",
+      "name_en": "kling-v2.5-turbo-std/text-to-video",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
@@ -2810,13 +2848,13 @@
           "when": {
             "isPano": "false"
           },
-          "price": 9.1
+          "price": 10.62
         },
         {
           "when": {
             "isPano": "true"
           },
-          "price": 8.64
+          "price": 10.08
         }
       ]
     },
@@ -2829,7 +2867,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 9.22
+      "price": 10.75
     },
     {
       "endpoint": "marble-1.0/text-to-world",
@@ -2840,7 +2878,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 9.1
+      "price": 10.62
     },
     {
       "endpoint": "marble-1.0/video-to-world",
@@ -2851,7 +2889,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 9.22
+      "price": 10.75
     },
     {
       "endpoint": "marble-1.1-plus/image-to-world",
@@ -2870,13 +2908,13 @@
           "when": {
             "isPano": "false"
           },
-          "price": 17.74
+          "price": 20.7
         },
         {
           "when": {
             "isPano": "true"
           },
-          "price": 17.28
+          "price": 20.16
         }
       ]
     },
@@ -2889,7 +2927,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 17.86
+      "price": 20.83
     },
     {
       "endpoint": "marble-1.1-plus/text-to-world",
@@ -2900,7 +2938,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 17.74
+      "price": 20.7
     },
     {
       "endpoint": "marble-1.1-plus/video-to-world",
@@ -2911,7 +2949,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 17.86
+      "price": 20.83
     },
     {
       "endpoint": "marble-1.1/image-to-world",
@@ -2930,13 +2968,13 @@
           "when": {
             "isPano": "false"
           },
-          "price": 9.1
+          "price": 10.62
         },
         {
           "when": {
             "isPano": "true"
           },
-          "price": 8.64
+          "price": 10.08
         }
       ]
     },
@@ -2949,7 +2987,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 9.22
+      "price": 10.75
     },
     {
       "endpoint": "marble-1.1/text-to-world",
@@ -2960,7 +2998,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 9.1
+      "price": 10.62
     },
     {
       "endpoint": "marble-1.1/video-to-world",
@@ -2971,7 +3009,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 9.22
+      "price": 10.75
     },
     {
       "endpoint": "marble/upload-media-asset",
@@ -2983,6 +3021,28 @@
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
       "price": 9999.0
+    },
+    {
+      "endpoint": "meshy6/image-to-3d",
+      "name_cn": "Meshy 6 图生 3D",
+      "name_en": "meshy6/image-to-3d",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 5.04
+    },
+    {
+      "endpoint": "meshy6/text-to-3d",
+      "name_cn": "Meshy 6 文生 3D",
+      "name_en": "meshy6/text-to-3d",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 5.04
     },
     {
       "endpoint": "minimax/hailuo-02/fast",
@@ -3251,6 +3311,208 @@
       "price": 13.65
     },
     {
+      "endpoint": "mureka-7.6/instrumental-generate",
+      "name_cn": "Mureka mureka-7.6 伴奏生成",
+      "name_en": "mureka-7.6/instrumental-generate",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "n"
+      ],
+      "rules": [
+        {
+          "when": {
+            "n": ""
+          },
+          "price": 0.204
+        }
+      ]
+    },
+    {
+      "endpoint": "mureka-7.6/song-extend",
+      "name_cn": "Mureka mureka-7.6 短歌延长",
+      "name_en": "mureka-7.6/song-extend",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.245
+    },
+    {
+      "endpoint": "mureka-7.6/song-generate",
+      "name_cn": "Mureka mureka-7.6 歌曲生成",
+      "name_en": "mureka-7.6/song-generate",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "n"
+      ],
+      "rules": [
+        {
+          "when": {
+            "n": ""
+          },
+          "price": 0.204
+        }
+      ]
+    },
+    {
+      "endpoint": "mureka-8/instrumental-generate",
+      "name_cn": "Mureka mureka-8 伴奏生成",
+      "name_en": "mureka-8/instrumental-generate",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "n"
+      ],
+      "rules": [
+        {
+          "when": {
+            "n": ""
+          },
+          "price": 0.306
+        }
+      ]
+    },
+    {
+      "endpoint": "mureka-8/song-extend",
+      "name_cn": "Mureka mureka-8 短歌延长",
+      "name_en": "mureka-8/song-extend",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.68
+    },
+    {
+      "endpoint": "mureka-8/song-generate",
+      "name_cn": "Mureka mureka-8 歌曲生成",
+      "name_en": "mureka-8/song-generate",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "n"
+      ],
+      "rules": [
+        {
+          "when": {
+            "n": ""
+          },
+          "price": 0.306
+        }
+      ]
+    },
+    {
+      "endpoint": "mureka-9/instrumental-generate",
+      "name_cn": "Mureka mureka-9 伴奏生成",
+      "name_en": "mureka-9/instrumental-generate",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "n"
+      ],
+      "rules": [
+        {
+          "when": {
+            "n": ""
+          },
+          "price": 0.306
+        }
+      ]
+    },
+    {
+      "endpoint": "mureka-9/song-generate",
+      "name_cn": "Mureka mureka-9 歌曲生成",
+      "name_en": "mureka-9/song-generate",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "n"
+      ],
+      "rules": [
+        {
+          "when": {
+            "n": ""
+          },
+          "price": 0.306
+        }
+      ]
+    },
+    {
+      "endpoint": "mureka-o2/song-generate",
+      "name_cn": "Mureka mureka-o2 歌曲生成",
+      "name_en": "mureka-o2/song-generate",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "n"
+      ],
+      "rules": [
+        {
+          "when": {
+            "n": ""
+          },
+          "price": 0.306
+        }
+      ]
+    },
+    {
+      "endpoint": "mureka/files-upload",
+      "name_cn": "Mureka 文件上传",
+      "name_en": "mureka/files-upload",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.0
+    },
+    {
+      "endpoint": "mureka/lyrics-generate",
+      "name_cn": "Mureka 歌词生成",
+      "name_en": "mureka/lyrics-generate",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.061
+    },
+    {
+      "endpoint": "mureka/vocal-clone",
+      "name_cn": "Mureka 人声克隆",
+      "name_en": "mureka/vocal-clone",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 34.0
+    },
+    {
       "endpoint": "pixverse-c1/image-to-video",
       "name_cn": "PixVerse C1 图生视频",
       "name_en": "pixverse-c1/image-to-video",
@@ -3269,49 +3531,49 @@
             "resolution": "1080p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.599
+          "price": 0.6
         },
         {
           "when": {
             "resolution": "1080p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.756
+          "price": 0.76
         },
         {
           "when": {
             "resolution": "360p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.189
+          "price": 0.19
         },
         {
           "when": {
             "resolution": "360p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.252
+          "price": 0.25
         },
         {
           "when": {
             "resolution": "540p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.252
+          "price": 0.25
         },
         {
           "when": {
             "resolution": "540p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.315
+          "price": 0.32
         },
         {
           "when": {
             "resolution": "720p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.315
+          "price": 0.32
         },
         {
           "when": {
@@ -3326,6 +3588,150 @@
       "endpoint": "pixverse-c1/reference-to-video",
       "name_cn": "PixVerse C1 参考生视频",
       "name_en": "pixverse-c1/reference-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution",
+        "generateAudioSwitch"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p",
+            "generateAudioSwitch": "false"
+          },
+          "price": 0.6
+        },
+        {
+          "when": {
+            "resolution": "1080p",
+            "generateAudioSwitch": "true"
+          },
+          "price": 0.76
+        },
+        {
+          "when": {
+            "resolution": "360p",
+            "generateAudioSwitch": "false"
+          },
+          "price": 0.19
+        },
+        {
+          "when": {
+            "resolution": "360p",
+            "generateAudioSwitch": "true"
+          },
+          "price": 0.25
+        },
+        {
+          "when": {
+            "resolution": "540p",
+            "generateAudioSwitch": "false"
+          },
+          "price": 0.25
+        },
+        {
+          "when": {
+            "resolution": "540p",
+            "generateAudioSwitch": "true"
+          },
+          "price": 0.32
+        },
+        {
+          "when": {
+            "resolution": "720p",
+            "generateAudioSwitch": "false"
+          },
+          "price": 0.32
+        },
+        {
+          "when": {
+            "resolution": "720p",
+            "generateAudioSwitch": "true"
+          },
+          "price": 0.41
+        }
+      ]
+    },
+    {
+      "endpoint": "pixverse-c1/text-to-video",
+      "name_cn": "PixVerse C1 文生视频",
+      "name_en": "pixverse-c1/text-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution",
+        "generateAudioSwitch"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p",
+            "generateAudioSwitch": "false"
+          },
+          "price": 0.6
+        },
+        {
+          "when": {
+            "resolution": "1080p",
+            "generateAudioSwitch": "true"
+          },
+          "price": 0.76
+        },
+        {
+          "when": {
+            "resolution": "360p",
+            "generateAudioSwitch": "false"
+          },
+          "price": 0.19
+        },
+        {
+          "when": {
+            "resolution": "360p",
+            "generateAudioSwitch": "true"
+          },
+          "price": 0.25
+        },
+        {
+          "when": {
+            "resolution": "540p",
+            "generateAudioSwitch": "false"
+          },
+          "price": 0.25
+        },
+        {
+          "when": {
+            "resolution": "540p",
+            "generateAudioSwitch": "true"
+          },
+          "price": 0.32
+        },
+        {
+          "when": {
+            "resolution": "720p",
+            "generateAudioSwitch": "false"
+          },
+          "price": 0.32
+        },
+        {
+          "when": {
+            "resolution": "720p",
+            "generateAudioSwitch": "true"
+          },
+          "price": 0.41
+        }
+      ]
+    },
+    {
+      "endpoint": "pixverse-c1/transition",
+      "name_cn": "PixVerse C1 转场",
+      "name_en": "pixverse-c1/transition",
       "currency": "CNY",
       "unit": "/秒起",
       "source": "derived_from_public_safe_pricing_summary",
@@ -3358,150 +3764,6 @@
             "resolution": "720p"
           },
           "price": 1.26
-        }
-      ]
-    },
-    {
-      "endpoint": "pixverse-c1/text-to-video",
-      "name_cn": "PixVerse C1 文生视频",
-      "name_en": "pixverse-c1/text-to-video",
-      "currency": "CNY",
-      "unit": "/秒",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "parameter_based",
-      "depends_on": [
-        "resolution",
-        "generateAudioSwitch"
-      ],
-      "rules": [
-        {
-          "when": {
-            "resolution": "1080p",
-            "generateAudioSwitch": "false"
-          },
-          "price": 0.599
-        },
-        {
-          "when": {
-            "resolution": "1080p",
-            "generateAudioSwitch": "true"
-          },
-          "price": 0.756
-        },
-        {
-          "when": {
-            "resolution": "360p",
-            "generateAudioSwitch": "false"
-          },
-          "price": 0.189
-        },
-        {
-          "when": {
-            "resolution": "360p",
-            "generateAudioSwitch": "true"
-          },
-          "price": 0.252
-        },
-        {
-          "when": {
-            "resolution": "540p",
-            "generateAudioSwitch": "false"
-          },
-          "price": 0.252
-        },
-        {
-          "when": {
-            "resolution": "540p",
-            "generateAudioSwitch": "true"
-          },
-          "price": 0.315
-        },
-        {
-          "when": {
-            "resolution": "720p",
-            "generateAudioSwitch": "false"
-          },
-          "price": 0.315
-        },
-        {
-          "when": {
-            "resolution": "720p",
-            "generateAudioSwitch": "true"
-          },
-          "price": 0.41
-        }
-      ]
-    },
-    {
-      "endpoint": "pixverse-c1/transition",
-      "name_cn": "PixVerse C1 转场",
-      "name_en": "pixverse-c1/transition",
-      "currency": "CNY",
-      "unit": "/秒",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "parameter_based",
-      "depends_on": [
-        "resolution",
-        "generateAudioSwitch"
-      ],
-      "rules": [
-        {
-          "when": {
-            "resolution": "1080p",
-            "generateAudioSwitch": "false"
-          },
-          "price": 2.52
-        },
-        {
-          "when": {
-            "resolution": "1080p",
-            "generateAudioSwitch": "true"
-          },
-          "price": 3.15
-        },
-        {
-          "when": {
-            "resolution": "360p",
-            "generateAudioSwitch": "false"
-          },
-          "price": 0.63
-        },
-        {
-          "when": {
-            "resolution": "360p",
-            "generateAudioSwitch": "true"
-          },
-          "price": 1.26
-        },
-        {
-          "when": {
-            "resolution": "540p",
-            "generateAudioSwitch": "false"
-          },
-          "price": 0.63
-        },
-        {
-          "when": {
-            "resolution": "540p",
-            "generateAudioSwitch": "true"
-          },
-          "price": 1.26
-        },
-        {
-          "when": {
-            "resolution": "720p",
-            "generateAudioSwitch": "false"
-          },
-          "price": 1.26
-        },
-        {
-          "when": {
-            "resolution": "720p",
-            "generateAudioSwitch": "true"
-          },
-          "price": 1.89
         }
       ]
     },
@@ -4924,56 +5186,56 @@
             "resolution": "1080p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.567
+          "price": 0.57
         },
         {
           "when": {
             "resolution": "1080p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.725
+          "price": 0.73
         },
         {
           "when": {
             "resolution": "360p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.158
+          "price": 0.16
         },
         {
           "when": {
             "resolution": "360p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.221
+          "price": 0.22
         },
         {
           "when": {
             "resolution": "540p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.221
+          "price": 0.22
         },
         {
           "when": {
             "resolution": "540p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.284
+          "price": 0.28
         },
         {
           "when": {
             "resolution": "720p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.284
+          "price": 0.28
         },
         {
           "when": {
             "resolution": "720p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.378
+          "price": 0.38
         }
       ]
     },
@@ -4996,56 +5258,56 @@
             "resolution": "1080p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.567
+          "price": 0.57
         },
         {
           "when": {
             "resolution": "1080p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.725
+          "price": 0.73
         },
         {
           "when": {
             "resolution": "360p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.158
+          "price": 0.16
         },
         {
           "when": {
             "resolution": "360p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.221
+          "price": 0.22
         },
         {
           "when": {
             "resolution": "540p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.221
+          "price": 0.22
         },
         {
           "when": {
             "resolution": "540p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.284
+          "price": 0.28
         },
         {
           "when": {
             "resolution": "720p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.284
+          "price": 0.28
         },
         {
           "when": {
             "resolution": "720p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.378
+          "price": 0.38
         }
       ]
     },
@@ -5068,56 +5330,56 @@
             "resolution": "1080p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.567
+          "price": 0.57
         },
         {
           "when": {
             "resolution": "1080p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.725
+          "price": 0.73
         },
         {
           "when": {
             "resolution": "360p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.158
+          "price": 0.16
         },
         {
           "when": {
             "resolution": "360p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.221
+          "price": 0.22
         },
         {
           "when": {
             "resolution": "540p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.221
+          "price": 0.22
         },
         {
           "when": {
             "resolution": "540p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.284
+          "price": 0.28
         },
         {
           "when": {
             "resolution": "720p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.284
+          "price": 0.28
         },
         {
           "when": {
             "resolution": "720p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.378
+          "price": 0.38
         }
       ]
     },
@@ -5140,56 +5402,56 @@
             "resolution": "1080p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.567
+          "price": 0.57
         },
         {
           "when": {
             "resolution": "1080p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.725
+          "price": 0.73
         },
         {
           "when": {
             "resolution": "360p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.158
+          "price": 0.16
         },
         {
           "when": {
             "resolution": "360p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.221
+          "price": 0.22
         },
         {
           "when": {
             "resolution": "540p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.221
+          "price": 0.22
         },
         {
           "when": {
             "resolution": "540p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.284
+          "price": 0.28
         },
         {
           "when": {
             "resolution": "720p",
             "generateAudioSwitch": "false"
           },
-          "price": 0.284
+          "price": 0.28
         },
         {
           "when": {
             "resolution": "720p",
             "generateAudioSwitch": "true"
           },
-          "price": 0.378
+          "price": 0.38
         }
       ]
     },
@@ -5578,21 +5840,21 @@
             "quality": "high",
             "resolution": "1k"
           },
-          "price": 1.581
+          "price": 1.58
         },
         {
           "when": {
             "quality": "high",
             "resolution": "2k"
           },
-          "price": 2.948
+          "price": 2.95
         },
         {
           "when": {
             "quality": "high",
             "resolution": "4k"
           },
-          "price": 4.738
+          "price": 4.74
         },
         {
           "when": {
@@ -5606,35 +5868,35 @@
             "quality": "low",
             "resolution": "2k"
           },
-          "price": 0.328
+          "price": 0.33
         },
         {
           "when": {
             "quality": "low",
             "resolution": "4k"
           },
-          "price": 0.378
+          "price": 0.38
         },
         {
           "when": {
             "quality": "medium",
             "resolution": "1k"
           },
-          "price": 0.586
+          "price": 0.59
         },
         {
           "when": {
             "quality": "medium",
             "resolution": "2k"
           },
-          "price": 0.926
+          "price": 0.93
         },
         {
           "when": {
             "quality": "medium",
             "resolution": "4k"
           },
-          "price": 1.373
+          "price": 1.37
         }
       ]
     },
@@ -5657,21 +5919,21 @@
             "quality": "high",
             "resolution": "1k"
           },
-          "price": 1.581
+          "price": 1.58
         },
         {
           "when": {
             "quality": "high",
             "resolution": "2k"
           },
-          "price": 2.948
+          "price": 2.95
         },
         {
           "when": {
             "quality": "high",
             "resolution": "4k"
           },
-          "price": 4.738
+          "price": 4.74
         },
         {
           "when": {
@@ -5685,35 +5947,35 @@
             "quality": "low",
             "resolution": "2k"
           },
-          "price": 0.328
+          "price": 0.33
         },
         {
           "when": {
             "quality": "low",
             "resolution": "4k"
           },
-          "price": 0.378
+          "price": 0.38
         },
         {
           "when": {
             "quality": "medium",
             "resolution": "1k"
           },
-          "price": 0.586
+          "price": 0.59
         },
         {
           "when": {
             "quality": "medium",
             "resolution": "2k"
           },
-          "price": 0.926
+          "price": 0.93
         },
         {
           "when": {
             "quality": "medium",
             "resolution": "4k"
           },
-          "price": 1.373
+          "price": 1.37
         }
       ]
     },
@@ -7199,13 +7461,13 @@
           "when": {
             "resolution": "1080p"
           },
-          "price": 0.504
+          "price": 0.5
         },
         {
           "when": {
             "resolution": "720p"
           },
-          "price": 0.315
+          "price": 0.32
         }
       ]
     },
@@ -7226,7 +7488,7 @@
           "when": {
             "resolution": "1080p"
           },
-          "price": 4.032
+          "price": 4.03
         },
         {
           "when": {
@@ -7253,13 +7515,13 @@
           "when": {
             "resolution": "1080p"
           },
-          "price": 0.504
+          "price": 0.5
         },
         {
           "when": {
             "resolution": "720p"
           },
-          "price": 0.315
+          "price": 0.32
         }
       ]
     },
@@ -8260,55 +8522,198 @@
       "name_cn": "SkyReels V3 参考图生视频",
       "name_en": "skyreels-v3/reference-to-video",
       "currency": "CNY",
-      "unit": "/次",
+      "unit": "/秒",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.01
+      "price": 0.25
     },
     {
       "endpoint": "skyreels-v3/shot-switching-video-extension",
       "name_cn": "SkyReels V3 视频续写（镜头切换）",
       "name_en": "skyreels-v3/shot-switching-video-extension",
       "currency": "CNY",
-      "unit": "/次",
+      "unit": "/秒",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.01
+      "price": 0.21
     },
     {
       "endpoint": "skyreels-v3/single-shot-video-extension",
       "name_cn": "SkyReels V3 视频续写（单镜头）",
       "name_en": "skyreels-v3/single-shot-video-extension",
       "currency": "CNY",
-      "unit": "/次",
+      "unit": "/秒",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.01
+      "price": 0.21
     },
     {
       "endpoint": "skyreels-v3/video-restyling",
       "name_cn": "SkyReels V3 视频风格化",
       "name_en": "skyreels-v3/video-restyling",
       "currency": "CNY",
-      "unit": "/次",
+      "unit": "/秒",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.01
+      "price": 0.28
     },
     {
-      "endpoint": "skyreels-v4/omni-reference",
-      "name_cn": "SkyReels V4 Omni Reference",
-      "name_en": "skyreels-v4/omni-reference",
+      "endpoint": "skyreels-v4/image-to-video-fast",
+      "name_cn": "SkyReels V4 图生视频-fast",
+      "name_en": "skyreels-v4/image-to-video-fast",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 0.96
+        },
+        {
+          "when": {
+            "resolution": "480p"
+          },
+          "price": 0.28
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.39
+        }
+      ]
+    },
+    {
+      "endpoint": "skyreels-v4/image-to-video-std",
+      "name_cn": "SkyReels V4 图生视频-std",
+      "name_en": "skyreels-v4/image-to-video-std",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 1.23
+        },
+        {
+          "when": {
+            "resolution": "480p"
+          },
+          "price": 0.39
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.49
+        }
+      ]
+    },
+    {
+      "endpoint": "skyreels-v4/omni-reference-fast",
+      "name_cn": "SkyReels V4 Omni 参考视频-fast",
+      "name_en": "skyreels-v4/omni-reference-fast",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.01
+      "price": 0.1
+    },
+    {
+      "endpoint": "skyreels-v4/omni-reference-std",
+      "name_cn": "SkyReels V4 Omni 参考视频-std",
+      "name_en": "skyreels-v4/omni-reference-std",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.1
+    },
+    {
+      "endpoint": "skyreels-v4/text-to-video-fast",
+      "name_cn": "SkyReels V4 文生视频-fast",
+      "name_en": "skyreels-v4/text-to-video-fast",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 0.96
+        },
+        {
+          "when": {
+            "resolution": "480p"
+          },
+          "price": 0.28
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.39
+        }
+      ]
+    },
+    {
+      "endpoint": "skyreels-v4/text-to-video-std",
+      "name_cn": "SkyReels V4 文生视频-std",
+      "name_en": "skyreels-v4/text-to-video-std",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 1.23
+        },
+        {
+          "when": {
+            "resolution": "480p"
+          },
+          "price": 0.39
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.49
+        }
+      ]
     },
     {
       "endpoint": "topazlabs/image-upscale-cgi",
@@ -10753,6 +11158,33 @@
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
       "price": 0.54
+    },
+    {
+      "endpoint": "youchuan/text-to-image-v81",
+      "name_cn": "悠船文生图-v8.1",
+      "name_en": "midjourney-text-to-image-v8.1",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "hd"
+      ],
+      "rules": [
+        {
+          "when": {
+            "hd": "false"
+          },
+          "price": 0.54
+        },
+        {
+          "when": {
+            "hd": "true"
+          },
+          "price": 0.81
+        }
+      ]
     }
   ]
 }

@@ -18019,113 +18019,6 @@
     ]
   },
   {
-    "class_name": "SkyreelsV4OmniReference",
-    "display_name": "RH SkyReels V4 Omni 参考视频",
-    "name_cn": "SkyReels V4 Omni 参考视频",
-    "name_en": "skyreels-v4/omni-reference",
-    "endpoint": "skyreels-v4/omni-reference",
-    "output_type": "video",
-    "category": "RunningHub/SkyReels",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "视频描述提示词，支持 @tag 引用参考图片/视频",
-        "maxLength": 2500
-      },
-      {
-        "fieldKey": "aspectRatio",
-        "type": "LIST",
-        "required": false,
-        "label": "aspectRatio",
-        "description": "视频画面比例。如果提供了参考视频（ref_videos），此参数将被忽略，输出尺寸会自动与参考视频保持一致。",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          }
-        ]
-      },
-      {
-        "fieldKey": "duration",
-        "type": "INT",
-        "required": false,
-        "label": "duration",
-        "description": "视频时长（秒）。如果提供了 ref_videos（参考视频），此参数将被覆盖；这种情况下，输出视频的时长将与参考视频一致（最长不超过 10 秒）。",
-        "defaultValue": 5,
-        "min": 3,
-        "max": 15,
-        "step": 1
-      },
-      {
-        "fieldKey": "sound",
-        "type": "BOOLEAN",
-        "required": true,
-        "label": "sound",
-        "description": "是否生成视频音效。注意：mode=fast 不支持音效。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "promptOptimizer",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "promptOptimizer",
-        "description": "是否启用提示词优化",
-        "defaultValue": true
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": false,
-        "label": "resolution",
-        "description": "输出视频分辨率。支持480p、720p和1080p。",
-        "defaultValue": "1080p",
-        "options": [
-          {
-            "value": "480p",
-            "description": "480p",
-            "descriptionEn": "480p"
-          },
-          {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
-          },
-          {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
-          }
-        ],
-        "tail_insert": true
-      }
-    ]
-  },
-  {
     "class_name": "KlingLipSyncIdentifyFace",
     "display_name": "RH 可灵对口型-人脸识别",
     "name_cn": "可灵对口型-人脸识别",
@@ -27169,7 +27062,7 @@
       {
         "fieldKey": "aspectRatio",
         "type": "LIST",
-        "required": true,
+        "required": false,
         "label": "aspectRatio",
         "description": "输出图像宽高比",
         "defaultValue": "16:9",
@@ -30888,6 +30781,7 @@
         "required": true,
         "label": "prompt",
         "description": "描述要生成的 3D 物体（最多 600 字）",
+        "defaultValue": "大理石狮子雕塑，翅膀展开，石质底座，古典希腊风格，对称",
         "maxLength": 600
       },
       {
@@ -31129,6 +31023,7 @@
         "required": false,
         "label": "texturePrompt",
         "description": "纹理引导文案",
+        "defaultValue": "柔软的棕色毛绒，白色棉布围裙面料，哑光塑料杯形蛋糕质感",
         "maxLength": 2000
       },
       {
@@ -31311,6 +31206,1146 @@
             "descriptionEn": "1080p"
           }
         ]
+      }
+    ]
+  },
+  {
+    "class_name": "SkyreelsV4OmniReferenceStd",
+    "display_name": "RH SkyReels V4 Omni 参考视频-std",
+    "name_cn": "SkyReels V4 Omni 参考视频-std",
+    "name_en": "skyreels-v4/omni-reference-std",
+    "endpoint": "skyreels-v4/omni-reference-std",
+    "output_type": "video",
+    "category": "RunningHub/SkyReels",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频描述提示词，支持 @tag 引用参考图片/视频",
+        "defaultValue": "视频延长 @video_1，乐队在唱歌。",
+        "maxLength": 2500
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "视频画面比例。如果提供了参考视频（ref_videos），此参数将被忽略，输出尺寸会自动与参考视频保持一致。",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长（秒）。如果提供了 ref_videos（参考视频），此参数将被覆盖；这种情况下，输出视频的时长将与参考视频一致（最长不超过 10 秒）。",
+        "defaultValue": 5,
+        "min": 3,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "sound",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "sound",
+        "description": "是否生成视频音效。注意：mode=fast 不支持音效。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "promptOptimizer",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptOptimizer",
+        "description": "是否启用提示词优化",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出视频分辨率。支持480p、720p和1080p。",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "SkyreelsV4OmniReferenceFast",
+    "display_name": "RH SkyReels V4 Omni 参考视频-fast",
+    "name_cn": "SkyReels V4 Omni 参考视频-fast",
+    "name_en": "skyreels-v4/omni-reference-fast",
+    "endpoint": "skyreels-v4/omni-reference-fast",
+    "output_type": "video",
+    "category": "RunningHub/SkyReels",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频描述提示词，支持 @tag 引用参考图片/视频",
+        "defaultValue": "视频续写 @video_1, 两个男生向前奔跑，回眸",
+        "maxLength": 2500
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "视频画面比例。如果提供了参考视频（ref_videos），此参数将被忽略，输出尺寸会自动与参考视频保持一致。",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": false,
+        "label": "duration",
+        "description": "视频时长（秒）。如果提供了 ref_videos（参考视频），此参数将被覆盖；这种情况下，输出视频的时长将与参考视频一致（最长不超过 10 秒）。",
+        "defaultValue": 5,
+        "min": 3,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "promptOptimizer",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptOptimizer",
+        "description": "是否启用提示词优化",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出视频分辨率。支持480p、720p和1080p。",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "KlingElementsAdvanced",
+    "display_name": "RH 可灵 o3 创建主体",
+    "name_cn": "可灵 o3 创建主体",
+    "name_en": "kling-o3/element",
+    "endpoint": "kling-elements-advanced",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "elementName",
+        "type": "STRING",
+        "required": true,
+        "label": "elementName",
+        "description": "主体名称。不能超过20个字符",
+        "maxLength": 20
+      },
+      {
+        "fieldKey": "elementDescription",
+        "type": "STRING",
+        "required": true,
+        "label": "elementDescription",
+        "description": "elementDescription",
+        "maxLength": 100
+      },
+      {
+        "fieldKey": "referenceType",
+        "type": "LIST",
+        "required": true,
+        "label": "referenceType",
+        "description": "主体参考方式，video_refer: 视频角色主体，此时将参考element_video_list定义主体外表 ；image_refer: 多图主体，此时将参考element_image_list定义主体外表",
+        "defaultValue": "image_refer",
+        "options": [
+          {
+            "value": "video_refer",
+            "description": "video_refer",
+            "descriptionEn": "video_refer"
+          },
+          {
+            "value": "image_refer",
+            "description": "image_refer",
+            "descriptionEn": "image_refer"
+          }
+        ]
+      },
+      {
+        "fieldKey": "elementVideoList",
+        "type": "VIDEO",
+        "required": false,
+        "label": "elementVideoList",
+        "description": "仅支持时长介于3s～8s之间、宽高比例需为16:9或9:16的1080P视频",
+        "accept": "[\"MP4\",\"MOV\"]",
+        "maxSize": 200
+      },
+      {
+        "fieldKey": "tagList",
+        "type": "LIST",
+        "required": false,
+        "label": "tagList",
+        "description": "tagList",
+        "options": [
+          {
+            "value": "o_101",
+            "description": "热梗",
+            "descriptionEn": "Hot meme"
+          },
+          {
+            "value": "o_102",
+            "description": "人物",
+            "descriptionEn": "Character"
+          },
+          {
+            "value": "o_103",
+            "description": "动物",
+            "descriptionEn": "Animal"
+          },
+          {
+            "value": "o_104",
+            "description": "道具",
+            "descriptionEn": "Props"
+          },
+          {
+            "value": "o_105",
+            "description": "服饰",
+            "descriptionEn": "Clothing"
+          },
+          {
+            "value": "o_106",
+            "description": "场景",
+            "descriptionEn": "Scene"
+          },
+          {
+            "value": "o_107",
+            "description": "特效",
+            "descriptionEn": "Special effects"
+          },
+          {
+            "value": "o_108",
+            "description": "其他",
+            "descriptionEn": "Others"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaFilesUpload",
+    "display_name": "RH Mureka 文件上传",
+    "name_cn": "Mureka 文件上传",
+    "name_en": "mureka/files-upload",
+    "endpoint": "mureka/files-upload",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "fileUrl",
+        "type": "AUDIO",
+        "required": true,
+        "label": "fileUrl",
+        "description": "待上传的音频文件 URL；后缀必须与 purpose 匹配：reference / vocal / instrumental / voice / audio / remix 仅支持 mp3 / m4a；melody 额外支持 mid（推荐 MIDI）。文件大小 ≤ 10 MB。",
+        "accept": "[\"mp3\",\"m4a\",\"mid\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "purpose",
+        "type": "LIST",
+        "required": true,
+        "label": "purpose",
+        "description": "用途。各值对应不同的支持格式与时长裁剪：reference/instrumental(30s 截取)、vocal(15-30s)、melody(5-60s, 支持 mid)、voice(5-15s)、audio/remix(普通音频)。",
+        "defaultValue": "reference",
+        "options": [
+          {
+            "value": "reference",
+            "description": "reference（mp3/m4a，截取 30s 作为参考音频）",
+            "descriptionEn": "reference (mp3/m4a, trimmed to 30s reference audio)"
+          },
+          {
+            "value": "vocal",
+            "description": "vocal（mp3/m4a，提取 15-30s 人声）",
+            "descriptionEn": "vocal (mp3/m4a, extract 15-30s vocal segment)"
+          },
+          {
+            "value": "melody",
+            "description": "melody（mp3/m4a/mid，5-60s 旋律；推荐 MIDI）",
+            "descriptionEn": "melody (mp3/m4a/mid, 5-60s; MIDI recommended)"
+          },
+          {
+            "value": "instrumental",
+            "description": "instrumental（mp3/m4a，截取 30s 伴奏参考）",
+            "descriptionEn": "instrumental (mp3/m4a, 30s instrumental reference)"
+          },
+          {
+            "value": "voice",
+            "description": "voice（mp3/m4a，5-15s 音色样本）",
+            "descriptionEn": "voice (mp3/m4a, 5-15s voice sample)"
+          },
+          {
+            "value": "audio",
+            "description": "audio（mp3/m4a，普通音频，用于歌曲延长等场景）",
+            "descriptionEn": "audio (mp3/m4a, generic audio; used for song extension etc.)"
+          },
+          {
+            "value": "remix",
+            "description": "remix（mp3/m4a，普通音频，用于 remix 场景）",
+            "descriptionEn": "remix (mp3/m4a, generic audio; used for remix scenarios)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "YouchuanTextToImageV81",
+    "display_name": "RH 悠船文生图-v8.1",
+    "name_cn": "悠船文生图-v8.1",
+    "name_en": "midjourney-text-to-image-v8.1",
+    "endpoint": "youchuan/text-to-image-v81",
+    "output_type": "image",
+    "category": "RunningHub/Midjourney",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "迷雾古老森林中的生物发光白鹿，柔和的微光颗粒，电影级光影，超写实纹理",
+        "maxLength": 8192
+      },
+      {
+        "fieldKey": "chaos",
+        "type": "INT",
+        "required": false,
+        "label": "chaos",
+        "description": "混沌参数，为图像结果增添趣味 (0-100)",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "fieldKey": "quality",
+        "type": "LIST",
+        "required": false,
+        "label": "quality",
+        "description": "图像质量",
+        "defaultValue": "1",
+        "options": [
+          {
+            "value": "1",
+            "description": "1",
+            "descriptionEn": "1"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          }
+        ]
+      },
+      {
+        "fieldKey": "stylize",
+        "type": "INT",
+        "required": false,
+        "label": "stylize",
+        "description": "风格化参数，控制图像的艺术风格强度（0-1000）",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 1000,
+        "step": 1
+      },
+      {
+        "fieldKey": "raw",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "raw",
+        "description": "原始模式，获得对图像的更多控制",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrl",
+        "description": "输入图片URL（垫图）",
+        "accept": "[\"JPG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "iw",
+        "type": "INT",
+        "required": false,
+        "label": "iw",
+        "description": "图像权重，控制图像提示的影响",
+        "defaultValue": 1,
+        "min": 0,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "sref",
+        "type": "IMAGE",
+        "required": false,
+        "label": "sref",
+        "description": "风格参考图片URL",
+        "accept": "[\"JPG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "sw",
+        "type": "INT",
+        "required": false,
+        "label": "sw",
+        "description": "风格权重，控制风格参考的影响（0-1000，需搭配sref使用）",
+        "defaultValue": 100,
+        "min": 0,
+        "max": 1000,
+        "step": 1
+      },
+      {
+        "fieldKey": "sv",
+        "type": "INT",
+        "required": false,
+        "label": "sv",
+        "description": "风格版本",
+        "defaultValue": 6,
+        "min": 6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "hd",
+        "type": "BOOLEAN",
+        "required": true,
+        "label": "hd",
+        "description": "是否开启原生 2K",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "Mureka76SongGenerate",
+    "display_name": "RH Mureka mureka-7.6 歌曲生成",
+    "name_cn": "Mureka mureka-7.6 歌曲生成",
+    "name_en": "mureka-7.6/song-generate",
+    "endpoint": "mureka-7.6/song-generate",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": true,
+        "label": "lyrics",
+        "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
+        "maxLength": 3000
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
+        "maxLength": 1024
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "每次生成的歌曲数量（默认 2，最大 3，按生成数量计费）。",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "referenceId",
+        "type": "STRING",
+        "required": false,
+        "label": "referenceId",
+        "description": "参考音乐文件 ID，由 /mureka/files-upload (purpose=reference) 返回；可与 vocalId 组合。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "vocalId",
+        "type": "STRING",
+        "required": false,
+        "label": "vocalId",
+        "description": "音色文件 ID，可由 /mureka/files-upload (purpose=vocal) 或 /mureka/vocal-clone 返回；可与 prompt 或 referenceId 组合。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "melodyId",
+        "type": "STRING",
+        "required": false,
+        "label": "melodyId",
+        "description": "旋律文件 ID（mp3/m4a/mid，推荐 MIDI），由 /mureka/files-upload (purpose=melody) 返回；与其它控制项互斥。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "stream",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "stream",
+        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）；mureka-o1 不支持。",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaO2SongGenerate",
+    "display_name": "RH Mureka mureka-o2 歌曲生成",
+    "name_cn": "Mureka mureka-o2 歌曲生成",
+    "name_en": "mureka-o2/song-generate",
+    "endpoint": "mureka-o2/song-generate",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": true,
+        "label": "lyrics",
+        "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
+        "maxLength": 3000
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
+        "maxLength": 1024
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "每次生成的歌曲数量（默认 2，最大 3，按生成数量计费）。",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "referenceId",
+        "type": "STRING",
+        "required": false,
+        "label": "referenceId",
+        "description": "参考音乐文件 ID，由 /mureka/files-upload (purpose=reference) 返回；可与 vocalId 组合。",
+        "maxLength": 64
+      }
+    ]
+  },
+  {
+    "class_name": "Mureka8SongGenerate",
+    "display_name": "RH Mureka mureka-8 歌曲生成",
+    "name_cn": "Mureka mureka-8 歌曲生成",
+    "name_en": "mureka-8/song-generate",
+    "endpoint": "mureka-8/song-generate",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": true,
+        "label": "lyrics",
+        "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
+        "maxLength": 3000
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
+        "maxLength": 1024
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "每次生成的歌曲数量（默认 2，最大 3，按生成数量计费）。",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "referenceId",
+        "type": "STRING",
+        "required": false,
+        "label": "referenceId",
+        "description": "参考音乐文件 ID，由 /mureka/files-upload (purpose=reference) 返回；可与 vocalId 组合。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "vocalId",
+        "type": "STRING",
+        "required": false,
+        "label": "vocalId",
+        "description": "音色文件 ID，可由 /mureka/files-upload (purpose=vocal) 或 /mureka/vocal-clone 返回；可与 prompt 或 referenceId 组合。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "melodyId",
+        "type": "STRING",
+        "required": false,
+        "label": "melodyId",
+        "description": "旋律文件 ID（mp3/m4a/mid，推荐 MIDI），由 /mureka/files-upload (purpose=melody) 返回；与其它控制项互斥。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "stream",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "stream",
+        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）；mureka-o1 不支持。",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "Mureka9SongGenerate",
+    "display_name": "RH Mureka mureka-9 歌曲生成",
+    "name_cn": "Mureka mureka-9 歌曲生成",
+    "name_en": "mureka-9/song-generate",
+    "endpoint": "mureka-9/song-generate",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": true,
+        "label": "lyrics",
+        "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
+        "maxLength": 3000
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
+        "maxLength": 1024
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "每次生成的歌曲数量（默认 2，最大 3，按生成数量计费）。",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "referenceId",
+        "type": "STRING",
+        "required": false,
+        "label": "referenceId",
+        "description": "参考音乐文件 ID，由 /mureka/files-upload (purpose=reference) 返回；可与 vocalId 组合。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "vocalId",
+        "type": "STRING",
+        "required": false,
+        "label": "vocalId",
+        "description": "音色文件 ID，可由 /mureka/files-upload (purpose=vocal) 或 /mureka/vocal-clone 返回；可与 prompt 或 referenceId 组合。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "melodyId",
+        "type": "STRING",
+        "required": false,
+        "label": "melodyId",
+        "description": "旋律文件 ID（mp3/m4a/mid，推荐 MIDI），由 /mureka/files-upload (purpose=melody) 返回；与其它控制项互斥。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "stream",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "stream",
+        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）；mureka-o1 不支持。",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "Mureka76InstrumentalGenerate",
+    "display_name": "RH Mureka mureka-7.6 伴奏生成",
+    "name_cn": "Mureka mureka-7.6 伴奏生成",
+    "name_en": "mureka-7.6/instrumental-generate",
+    "endpoint": "mureka-7.6/instrumental-generate",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "伴奏风格提示词，最长 1024 字符；与其它控制项互斥。",
+        "maxLength": 1024
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "每次生成的伴奏数量（默认 2，最大 3，按生成数量计费）。",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "instrumentalId",
+        "type": "STRING",
+        "required": false,
+        "label": "instrumentalId",
+        "description": "参考伴奏文件 ID，由 /mureka/files-upload (purpose=instrumental) 返回；与 prompt 互斥。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "stream",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "stream",
+        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）。",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaO2InstrumentalGenerate",
+    "display_name": "RH Mureka mureka-o2 伴奏生成",
+    "name_cn": "Mureka mureka-o2 伴奏生成",
+    "name_en": "mureka-o2/instrumental-generate",
+    "endpoint": "mureka-o2/instrumental-generate",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "伴奏风格提示词，最长 1024 字符；与其它控制项互斥。",
+        "maxLength": 1024
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "每次生成的伴奏数量（默认 2，最大 3，按生成数量计费）。",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "instrumentalId",
+        "type": "STRING",
+        "required": false,
+        "label": "instrumentalId",
+        "description": "参考伴奏文件 ID，由 /mureka/files-upload (purpose=instrumental) 返回；与 prompt 互斥。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "stream",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "stream",
+        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）。",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "Mureka8InstrumentalGenerate",
+    "display_name": "RH Mureka mureka-8 伴奏生成",
+    "name_cn": "Mureka mureka-8 伴奏生成",
+    "name_en": "mureka-8/instrumental-generate",
+    "endpoint": "mureka-8/instrumental-generate",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "伴奏风格提示词，最长 1024 字符；与其它控制项互斥。",
+        "maxLength": 1024
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "每次生成的伴奏数量（默认 2，最大 3，按生成数量计费）。",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "instrumentalId",
+        "type": "STRING",
+        "required": false,
+        "label": "instrumentalId",
+        "description": "参考伴奏文件 ID，由 /mureka/files-upload (purpose=instrumental) 返回；与 prompt 互斥。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "stream",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "stream",
+        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）。",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "Mureka76SongExtend",
+    "display_name": "RH Mureka mureka-7.6 短歌延长",
+    "name_cn": "Mureka mureka-7.6 短歌延长",
+    "name_en": "mureka-7.6/song-extend",
+    "endpoint": "mureka-7.6/song-extend",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "songId",
+        "type": "STRING",
+        "required": false,
+        "label": "songId",
+        "description": "由 /{model}/song-generate 生成的歌曲 ID；与 uploadAudioId 互斥。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "uploadAudioId",
+        "type": "STRING",
+        "required": false,
+        "label": "uploadAudioId",
+        "description": "由 /mureka/files-upload (purpose=audio) 返回的文件 ID；与 songId 互斥；仅支持最近一个月生成的歌曲。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": true,
+        "label": "lyrics",
+        "description": "延长部分的歌词，最长 3000 字符。",
+        "maxLength": 3000
+      },
+      {
+        "fieldKey": "extendAt",
+        "type": "INT",
+        "required": true,
+        "label": "extendAt",
+        "description": "延长起始时间（毫秒），有效区间 [8000, 420000]；超出歌曲时长则使用歌曲末尾。",
+        "defaultValue": 8000,
+        "min": 8000,
+        "max": 420000,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "Mureka8SongExtend",
+    "display_name": "RH Mureka mureka-8 短歌延长",
+    "name_cn": "Mureka mureka-8 短歌延长",
+    "name_en": "mureka-8/song-extend",
+    "endpoint": "mureka-8/song-extend",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "songId",
+        "type": "STRING",
+        "required": false,
+        "label": "songId",
+        "description": "由 /{model}/song-generate 生成的歌曲 ID；与 uploadAudioId 互斥。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "uploadAudioId",
+        "type": "STRING",
+        "required": false,
+        "label": "uploadAudioId",
+        "description": "由 /mureka/files-upload (purpose=audio) 返回的文件 ID；与 songId 互斥；仅支持最近一个月生成的歌曲。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": true,
+        "label": "lyrics",
+        "description": "延长部分的歌词，最长 3000 字符。",
+        "maxLength": 3000
+      },
+      {
+        "fieldKey": "extendAt",
+        "type": "INT",
+        "required": true,
+        "label": "extendAt",
+        "description": "延长起始时间（毫秒），有效区间 [8000, 420000]；超出歌曲时长则使用歌曲末尾。",
+        "defaultValue": 8000,
+        "min": 8000,
+        "max": 420000,
+        "step": 1
+      },
+      {
+        "fieldKey": "extendType",
+        "type": "LIST",
+        "required": false,
+        "label": "extendType",
+        "description": "延长方向：tail 从尾部延长，head 从头部延长（仅 mureka-8 模型支持）。",
+        "defaultValue": "tail",
+        "options": [
+          {
+            "value": "tail",
+            "description": "tail（从尾部延长）",
+            "descriptionEn": "tail (extend from end)"
+          },
+          {
+            "value": "head",
+            "description": "head（从头部延长）",
+            "descriptionEn": "head (extend from beginning)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaVocalClone",
+    "display_name": "RH Mureka 人声克隆",
+    "name_cn": "Mureka 人声克隆",
+    "name_en": "mureka/vocal-clone",
+    "endpoint": "mureka/vocal-clone",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "fileUrl",
+        "type": "AUDIO",
+        "required": true,
+        "label": "fileUrl",
+        "description": "待克隆的人声音频 URL（mp3 / m4a，≤ 10 MB）。同步返回 vocalId，可作为 song/generate 的 vocalId 使用。",
+        "accept": "[\"mp3\",\"m4a\"]",
+        "maxSize": 10
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaLyricsGenerate",
+    "display_name": "RH Mureka 歌词生成",
+    "name_cn": "Mureka 歌词生成",
+    "name_en": "mureka/lyrics-generate",
+    "endpoint": "mureka/lyrics-generate",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "歌词生成的提示词（主题、关键词或描述）。",
+        "maxLength": 1024
+      }
+    ]
+  },
+  {
+    "class_name": "Mureka9InstrumentalGenerate",
+    "display_name": "RH Mureka mureka-9 伴奏生成",
+    "name_cn": "Mureka mureka-9 伴奏生成",
+    "name_en": "mureka-9/instrumental-generate",
+    "endpoint": "mureka-9/instrumental-generate",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "伴奏风格提示词，最长 1024 字符；与其它控制项互斥。",
+        "maxLength": 1024
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "每次生成的伴奏数量（默认 2，最大 3，按生成数量计费）。",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "instrumentalId",
+        "type": "STRING",
+        "required": false,
+        "label": "instrumentalId",
+        "description": "参考伴奏文件 ID，由 /mureka/files-upload (purpose=instrumental) 返回；与 prompt 互斥。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "stream",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "stream",
+        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）。",
+        "defaultValue": false
       }
     ]
   }
