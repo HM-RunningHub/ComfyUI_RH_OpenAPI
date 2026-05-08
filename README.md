@@ -40,10 +40,12 @@
 | Qwen Image 2.0 / 2.0 Pro（阿里巴巴） | 千问 | 文生图、图像编辑 | 4 |
 | Wan 万相 2.5 / 2.7（阿里巴巴） | — | 文生图、图像编辑 | 6 |
 | Higgsfield | — | 图生图（Soul） | 1 |
+| HYPIR 图像增强 | — | HYPIR-ULTRA、HYPIR-BALANCE | 2 |
 | TopazLabs | — | 图像放大 Standard V2 / Low Res V2 / CGI / High Fidelity V2 / Text Refine | 5 |
 | Seedream v4 / v4.5 / v5 Lite（字节跳动） | — | 文生图、图生图 | 6 |
 | FLUX Dev（Black Forest Labs） | — | 文生图、文生图 LoRA | 2 |
-| Midjourney | 悠船 | 文生图 v6/v6.1/niji6/niji7/v7 | 5 |
+| Midjourney | 悠船 | 文生图 v6/v6.1/niji6/niji7/v7/v8.1 | 6 |
+| Marble 1.0 / 1.1 / 1.1 Plus | — | 图像/多图生成 3D 世界 | 6 |
 
 ### 视频生成（198 个节点）
 
@@ -52,20 +54,22 @@
 | Sora 2（OpenAI） | 全能视频 S / S 官方 | 文/图生视频、Pro、角色上传、异步 | 12 |
 | Google Veo 3.1 / 3.1 Lite（Google） | 全能视频 V3.1 / V3.1 Lite（Fast/Pro/Lite 官方 + 低价通道） | Fast/Pro/Lite 文/图/首尾帧生视频、参考生视频、视频扩展 | 18 |
 | Grok Imagine（xAI） | 全能视频 G / G 官方 | 文/图/参考生视频、视频扩展、编辑视频 | 7 |
-| Kling 可灵（快手） | — | v2.5/v2.5-turbo/v2.6/v3.0/v3-4k/v3.0-4k/o1/o3/o3-4k，文/图/首尾帧/参考/动作控制/编辑/元素/口型同步 | 36 |
+| Kling 可灵（快手） | — | v2.5/v2.5-turbo/v2.6/v3.0/v3-4k/v3.0-4k/o1/o3/o3-4k，文/图/首尾帧/参考/动作控制/编辑/元素/高级元素/口型同步/数字人口播 | 40 |
 | Vidu（生数科技） | — | q2/q3，文/图/首尾帧/参考生视频、Pro Fast、Turbo | 20 |
 | Wan 万相 2.5 / 2.6 / 2.7（阿里巴巴） | — | 文/图/参考生视频、Flash、视频编辑、视频续写 | 12 |
-| Happyhorse 1.0（阿里巴巴） | — | 文/图生视频 | 2 |
+| Happyhorse 1.0（阿里巴巴） | — | 文/图/参考生视频、视频编辑 | 4 |
 | MiniMax Hailuo 海螺 | — | 02/2.3/2.3-fast，文/图/首尾帧生视频 | 13 |
 | Seedance v1.5 / 2.0 / 2.0 Global（字节跳动） | — | 文/图/多模态生视频、Fast、Global、参考生视频 | 17 |
 | Runway Gen-4 Turbo / Aleph | 全能视频 R | 图生视频、视频编辑 | 3 |
 | LTX-2 19B（Lightricks） | — | 文生视频 LoRA | 1 |
 | PixVerse v5.5 / v5.6 / v6 / C1 | — | 文/图/参考生视频、转场、特效、视频扩展 | 14 |
 | Higgsfield | — | 图生视频（Dop） | 1 |
-| SkyReels V3/V4（昆仑万维） | — | 文/图生视频、参考生视频、视频风格化、视频扩展 | 7 |
+| SkyReels V3/V4（昆仑万维） | — | 文/图生视频、参考生视频、Omni 参考、视频风格化、视频扩展 | 10 |
 | TopazLabs | — | 视频增强放大 | 1 |
 | Midjourney（悠船） | — | 图生视频 | 1 |
 | RhartVideo 增强 / 参考 | — | 视频 Upscale、FPS 增强、Cinematic、Seedance 参考生视频 | 4 |
+| Marble 1.0 / 1.1 / 1.1 Plus | — | 文本/视频生成 3D 世界、媒体资产上传 | 7 |
+| Mureka | — | 文件上传、歌曲/伴奏生成、歌曲延长、声音克隆、歌词生成 | 13 |
 
 ### 文本理解（17 个节点）
 
@@ -92,8 +96,9 @@
 | 模型系列 | 能力 | 节点数 |
 |---------|------|--------|
 | 混元 3D v3.1 | 文生 3D、图生 3D | 2 |
-| HiTem3D V1.5 / V2 | 图生 3D、多图生 3D | 4 |
+| HiTem3D V1.5 / V2 / V2.1 | 图生 3D、多图生 3D | 6 |
 | HiTem3D Portrait V1.5 / V2.0 / V2.1 | 人像图生 3D、多图生 3D | 6 |
+| Meshy6 | 文生 3D、图生 3D | 2 |
 
 ### Seedance2.0 素材资产（3 个节点）
 

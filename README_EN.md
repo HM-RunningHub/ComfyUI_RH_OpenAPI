@@ -40,10 +40,12 @@ The project currently includes 315 standard model API nodes covering image gener
 | Qwen Image 2.0 / 2.0 Pro (Alibaba) | 千问 | Text-to-Image, Image Editing | 4 |
 | Wan 2.5 / 2.7 (Alibaba) | — | Text-to-Image, Image Edit | 6 |
 | Higgsfield | — | Image-to-Image (Soul) | 1 |
+| HYPIR Image Enhancement | — | HYPIR-ULTRA, HYPIR-BALANCE | 2 |
 | TopazLabs | — | Image Upscale: Standard V2 / Low Res V2 / CGI / High Fidelity V2 / Text Refine | 5 |
 | Seedream v4 / v4.5 / v5 Lite (ByteDance) | — | Text-to-Image, Image-to-Image | 6 |
 | FLUX Dev (Black Forest Labs) | — | Text-to-Image, Text-to-Image LoRA | 2 |
-| Midjourney | 悠船 | Text-to-Image v6/v6.1/niji6/niji7/v7 | 5 |
+| Midjourney | 悠船 | Text-to-Image v6/v6.1/niji6/niji7/v7/v8.1 | 6 |
+| Marble 1.0 / 1.1 / 1.1 Plus | — | Image/Multi-Image-to-3D World | 6 |
 
 ### Video Generation (198 Nodes)
 
@@ -52,20 +54,22 @@ The project currently includes 315 standard model API nodes covering image gener
 | Sora 2 (OpenAI) | 全能视频 S / S Official | Text/Image-to-Video, Pro, Character Upload, Async | 12 |
 | Google Veo 3.1 / 3.1 Lite | 全能视频 V3.1 / V3.1 Lite (Fast/Pro/Lite Official + Low-Price) | Fast/Pro/Lite Text/Image/Start-End-to-Video, Reference, Video Extend | 18 |
 | Grok Imagine (xAI) | 全能视频 G / G Official | Text/Image/Reference-to-Video, Video Extend, Edit Video | 7 |
-| Kling (Kuaishou) | — | v2.5/v2.5-turbo/v2.6/v3.0/v3-4k/v3.0-4k/o1/o3/o3-4k, Text/Image/Start-End/Reference/Motion Control/Edit/Elements/Lip Sync | 36 |
+| Kling (Kuaishou) | — | v2.5/v2.5-turbo/v2.6/v3.0/v3-4k/v3.0-4k/o1/o3/o3-4k, Text/Image/Start-End/Reference/Motion Control/Edit/Elements/Advanced Elements/Lip Sync/AI Avatar | 40 |
 | Vidu (Shengshu) | — | q2/q3, Text/Image/Start-End/Reference-to-Video, Pro Fast, Turbo | 20 |
 | Wan 2.5 / 2.6 / 2.7 (Alibaba) | — | Text/Image/Reference-to-Video, Flash, Video Editing, Video Continuation | 12 |
-| Happyhorse 1.0 (Alibaba) | — | Text/Image-to-Video | 2 |
+| Happyhorse 1.0 (Alibaba) | — | Text/Image/Reference-to-Video, Video Editing | 4 |
 | MiniMax Hailuo | — | 02/2.3/2.3-fast, Text/Image/Start-End-to-Video | 13 |
 | Seedance v1.5 / 2.0 / 2.0 Global (ByteDance) | — | Text/Image/Multimodal-to-Video, Fast, Global, Reference-to-Video | 17 |
 | Runway Gen-4 Turbo / Aleph | 全能视频 R | Image-to-Video, Video Editing | 3 |
 | LTX-2 19B (Lightricks) | — | Text-to-Video LoRA | 1 |
 | PixVerse v5.5 / v5.6 / v6 / C1 | — | Text/Image/Reference-to-Video, Transition, Effects, Extend | 14 |
 | Higgsfield | — | Image-to-Video (Dop) | 1 |
-| SkyReels V3/V4 (Kunlun) | — | Text/Image-to-Video, Reference, Restyling, Video Extension | 7 |
+| SkyReels V3/V4 (Kunlun) | — | Text/Image-to-Video, Reference, Omni Reference, Restyling, Video Extension | 10 |
 | TopazLabs | — | Video Enhancement & Upscaling | 1 |
 | Midjourney (Youchuan) | — | Image-to-Video | 1 |
 | RhartVideo Enhancement / Reference | — | Video Upscale, FPS Increaser, Cinematic, Seedance Reference-to-Video | 4 |
+| Marble 1.0 / 1.1 / 1.1 Plus | — | Text/Video-to-3D World, Media Asset Upload | 7 |
+| Mureka | — | File Upload, Song/Instrumental Generation, Song Extension, Vocal Clone, Lyrics Generation | 13 |
 
 ### Text Understanding (17 Nodes)
 
@@ -92,8 +96,9 @@ The project currently includes 315 standard model API nodes covering image gener
 | Model Series | Capabilities | Nodes |
 |-------------|-------------|-------|
 | Hunyuan 3D v3.1 | Text-to-3D, Image-to-3D | 2 |
-| HiTem3D V1.5 / V2 | Image-to-3D, Multi-Image-to-3D | 4 |
+| HiTem3D V1.5 / V2 / V2.1 | Image-to-3D, Multi-Image-to-3D | 6 |
 | HiTem3D Portrait V1.5 / V2.0 / V2.1 | Portrait Image-to-3D, Multi-Image-to-3D | 6 |
+| Meshy6 | Text-to-3D, Image-to-3D | 2 |
 
 ### Seedance2.0 Assets (3 Nodes)
 
