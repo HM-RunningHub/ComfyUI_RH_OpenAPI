@@ -3,6 +3,7 @@
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
 ![Nodes](https://img.shields.io/badge/Nodes-320-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
+[RunningHub](https://www.runninghub.cn)
 
 [English](README_EN.md) | **中文**
 
@@ -120,10 +121,6 @@
 - 模型列表动态读取 `https://llm.runninghub.ai/v1/models`，并在网络失败时使用内置 fallback 模型列表
 - 调用 OpenAI 兼容接口 `https://llm.runninghub.cn/v1/chat/completions`
 - 支持文本对话、图片理解和视频理解；同时连接图片和视频时优先处理图片
-- 图片输入会先通过 RunningHub OpenAPI 上传为 URL，再以 `image_url` 传给 LLM 网关
-- 视频输入会在超过 10MB 时尝试压缩到 15 秒以内、10MB 以内，再以 `video_url` 传给 LLM 网关
-- 节点保留 `seed` 输入以兼容 ComfyUI 工作流，但不会转发给 LLM 网关，避免部分模型上游报错
-- `api_config` 输入位于最后一个槽位；不连接时会复用系统 shared API key、环境变量或 `.env` 配置
 
 ## 🛠️ 安装
 
@@ -231,5 +228,6 @@ ComfyUI_RH_OpenAPI/
 - [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api)
 - [RunningHub API 控制台（获取 API Key）](https://www.runninghub.cn/enterprise-api/sharedApi)
 - [API 调用记录查询](https://www.runninghub.cn/call-api/call-record) — 查看历史调用状态与详情
+- [LLM 调用记录查询](https://www.runninghub.cn/call-api/llm/logs) — 查看 LLM 对话调用记录
 - [所有模型价格汇总表](https://www.runninghub.cn/third-party-fees) — 各模型计费标准一览
 - [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
