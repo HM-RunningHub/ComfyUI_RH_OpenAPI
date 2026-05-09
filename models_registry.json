@@ -23116,6 +23116,15 @@
         "min": -1,
         "max": 2147483647,
         "step": 1
+      },
+      {
+        "fieldKey": "thinkingType",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "thinkingType",
+        "description": "提示词优化模式",
+        "defaultValue": false,
+        "tail_insert": true
       }
     ]
   },
@@ -24294,6 +24303,18 @@
         "description": "是否返回视频尾帧图片",
         "defaultValue": false,
         "tail_insert": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "种子整数，用于控制生成内容的随机性。",
+        "defaultValue": -1,
+        "min": -1,
+        "max": 2147483647,
+        "step": 1,
+        "tail_insert": true
       }
     ]
   },
@@ -24545,6 +24566,18 @@
         "label": "returnLastFrame",
         "description": "是否返回视频尾帧图片",
         "defaultValue": false,
+        "tail_insert": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "种子整数，用于控制生成内容的随机性。",
+        "defaultValue": -1,
+        "min": -1,
+        "max": 4294967295,
+        "step": 1,
         "tail_insert": true
       }
     ]
@@ -24863,6 +24896,18 @@
         "description": "是否返回视频尾帧图片",
         "defaultValue": false,
         "tail_insert": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "种子整数，用于控制生成内容的随机性。",
+        "defaultValue": -1,
+        "min": -1,
+        "max": 2147483647,
+        "step": 1,
+        "tail_insert": true
       }
     ]
   },
@@ -25064,6 +25109,18 @@
         "label": "returnLastFrame",
         "description": "是否返回视频尾帧图片",
         "defaultValue": false,
+        "tail_insert": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "种子整数，用于控制生成内容的随机性。",
+        "defaultValue": -1,
+        "min": -1,
+        "max": 2147483647,
+        "step": 1,
         "tail_insert": true
       }
     ]
@@ -25311,6 +25368,18 @@
         "label": "returnLastFrame",
         "description": "是否返回视频尾帧图片",
         "defaultValue": false,
+        "tail_insert": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "种子整数，用于控制生成内容的随机性。",
+        "defaultValue": -1,
+        "min": -1,
+        "max": 2147483647,
+        "step": 1,
         "tail_insert": true
       }
     ]
@@ -25623,6 +25692,18 @@
         "label": "returnLastFrame",
         "description": "是否返回视频尾帧图片",
         "defaultValue": false,
+        "tail_insert": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "种子整数，用于控制生成内容的随机性",
+        "defaultValue": -1,
+        "min": -1,
+        "max": 2147483647,
+        "step": 1,
         "tail_insert": true
       }
     ]
@@ -31600,7 +31681,7 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "迷雾古老森林中的生物发光白鹿，柔和的微光颗粒，电影级光影，超写实纹理",
+        "defaultValue": "原木桌面轻奢咖啡器具组合，陶瓷咖啡杯配银质小勺，袅袅热气，窗边柔和漫射自然光，浅景深虚化，实木与陶瓷细腻材质纹理，暖调极简静物摄影，高清微距细节",
         "maxLength": 8192
       },
       {
@@ -31751,7 +31832,7 @@
       {
         "fieldKey": "hd",
         "type": "BOOLEAN",
-        "required": true,
+        "required": false,
         "label": "hd",
         "description": "是否开启原生 2K",
         "defaultValue": false
@@ -31773,6 +31854,7 @@
         "required": true,
         "label": "lyrics",
         "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
+        "defaultValue": "晨光漫过窗台 微风捎来温柔 烟火人间走走 心事慢慢罢休  云卷云舒自流 岁月安静温柔 山河皆有白首 平凡亦是自由",
         "maxLength": 3000
       },
       {
@@ -31781,6 +31863,7 @@
         "required": false,
         "label": "prompt",
         "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
+        "defaultValue": "吉他主旋律，清澈干净曲风",
         "maxLength": 1024
       },
       {
@@ -31843,6 +31926,7 @@
         "required": true,
         "label": "lyrics",
         "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
+        "defaultValue": "晨光漫过窗台 微风捎来温柔 烟火人间走走 心事慢慢罢休  云卷云舒自流 岁月安静温柔 山河皆有白首 平凡亦是自由",
         "maxLength": 3000
       },
       {
@@ -31851,6 +31935,7 @@
         "required": false,
         "label": "prompt",
         "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
+        "defaultValue": "治愈钢琴轻音乐，舒缓温柔旋律，简约编曲，温暖氛围感，无歌词、无人生演唱、无强烈鼓点，纯器乐BGM，清澈干净曲风",
         "maxLength": 1024
       },
       {
@@ -31889,6 +31974,7 @@
         "required": true,
         "label": "lyrics",
         "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
+        "defaultValue": "[前奏] [副歌] 你在我耳边低语 情话甜如蜜 却躲着我眼神 不愿直视我 我的心在跳 每次想起你 这酸涩滋味 真实又甜蜜  [主歌] 夜晚的城市霓虹闪烁 灯光下影子拉长 我在人群中寻找你的脸庞 却只能看见自己的迷茫 想靠近你 却怕惊扰了这份宁静 你是我心里的秘密 羞涩又温暖  [副歌] 你在我耳边低语 情话甜如蜜 却躲着我眼神 不愿直视我 我的心在跳 每次想起你 这酸涩滋味 真实又甜蜜  [主歌] 清晨的阳光洒满窗台 照亮了寂寞的房间 我在日记里写下你的名字 试图忘记却更难 想靠近你 却怕惊扰了这份宁静 你是我心里的秘密 羞涩又温暖  [副歌] 你在我耳边低语 情话甜如蜜 却躲着我眼神 不愿直视我 我的心在跳 每次想起你 这酸涩滋味 真实又甜蜜  [副歌] 你在我耳边低语 情话甜如蜜 却躲着我眼神 不愿直视我 我的心在跳 每次想起你 这酸涩滋味 真实又甜蜜",
         "maxLength": 3000
       },
       {
@@ -31897,6 +31983,7 @@
         "required": false,
         "label": "prompt",
         "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
+        "defaultValue": "吉他主旋律，清澈干净曲风，舒缓温柔旋律，简约编曲",
         "maxLength": 1024
       },
       {
@@ -31959,6 +32046,7 @@
         "required": true,
         "label": "lyrics",
         "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
+        "defaultValue": " [主歌] 你说要离开这熟悉的街 留下一串串欢笑和泪水 我们曾一起走过黄昏和黎明 现在只剩风声和月光  [副歌] 但请不要忧伤 因为离别后是新的希望 就像彩虹在风雨后 我们依然紧紧相拥  [主歌] 你说要去远方追逐梦想 但我不会让你孤单彷徨 我会在每个夜晚点亮灯光 等你回来分享每一个梦想  [副歌] 但请不要忧伤 因为离别后是新的希望 就像夜空中的星星 指引你走向未来的方向  [桥段] 即使世界变得不一样 心中的笑容永远闪亮 让我们勇敢地向前走 直到再次相遇的那一天  [副歌] 但请不要忧伤 因为离别后是新的希望 就像彩虹在风雨后 我们依然紧紧相拥  [副歌] 但请不要忧伤 因为离别后是新的希望 就像夜空中的星星 指引你走向未来的方向",
         "maxLength": 3000
       },
       {
@@ -31967,6 +32055,7 @@
         "required": false,
         "label": "prompt",
         "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
+        "defaultValue": "舒缓温柔旋律，简约编曲，温暖氛围感，清澈干净曲风",
         "maxLength": 1024
       },
       {
@@ -32029,6 +32118,7 @@
         "required": false,
         "label": "prompt",
         "description": "伴奏风格提示词，最长 1024 字符；与其它控制项互斥。",
+        "defaultValue": "纯音乐，现代流行，钢琴分解和弦 + 大提琴 + 弦乐铺底 + 轻微鼓点，氛围感拉满、诉说暗恋的青春情愫，，编曲完整，无人声无哼唱，高音质立体声，干净消音伴奏",
         "maxLength": 1024
       },
       {
@@ -32075,6 +32165,7 @@
         "required": false,
         "label": "prompt",
         "description": "伴奏风格提示词，最长 1024 字符；与其它控制项互斥。",
+        "defaultValue": "纯音乐，现代流行伤感风，BPM 75，Am 小调，钢琴分解和弦 + 大提琴 + 弦乐铺底 + 轻微鼓点，氛围感拉满、孤独深情，编曲完整，无人声无哼唱，高音质立体声，干净消音伴奏",
         "maxLength": 1024
       },
       {
@@ -32121,6 +32212,7 @@
         "required": false,
         "label": "prompt",
         "description": "伴奏风格提示词，最长 1024 字符；与其它控制项互斥。",
+        "defaultValue": "纯音乐，乐队音乐伴奏，激昂轻摇滚，对生命的感叹，鼓点+键盘+贝斯+电吉他，编曲完整，无人声无哼唱，高音质立体声，干净消音伴奏",
         "maxLength": 1024
       },
       {
@@ -32183,6 +32275,7 @@
         "required": true,
         "label": "lyrics",
         "description": "延长部分的歌词，最长 3000 字符。",
+        "defaultValue": "晚风轻拂渡口 月色漫染眉头 往事轻放身后 余生不惊不忧 花开不问缘由 流年静静相守 人间烟火依旧 安然渡尽春秋",
         "maxLength": 3000
       },
       {
@@ -32213,6 +32306,7 @@
         "required": false,
         "label": "songId",
         "description": "由 /{model}/song-generate 生成的歌曲 ID；与 uploadAudioId 互斥。",
+        "defaultValue": "137649551835137",
         "maxLength": 64
       },
       {
@@ -32229,6 +32323,7 @@
         "required": true,
         "label": "lyrics",
         "description": "延长部分的歌词，最长 3000 字符。",
+        "defaultValue": "我的心在跳 每次想起你 这酸涩滋味 真实又甜蜜 啦啦啦啦 想见你",
         "maxLength": 3000
       },
       {
@@ -32299,6 +32394,7 @@
         "required": true,
         "label": "prompt",
         "description": "歌词生成的提示词（主题、关键词或描述）。",
+        "defaultValue": "按以下规则创作原创歌词： 标准结构：主歌 1、预副歌、副歌、主歌 2、预副歌、副歌、桥段、结尾。 押韵自然，有画面感，情感细腻，句式长短适合演唱。 曲风：（填空：现代流行 / 古风 / 说唱） 情绪：（填空：伤感 / 遗憾 / 治愈 / 孤独） 调性 BPM：（填空：Am 小调 BPM75） 主题故事：（填空：关于离别 / 暗恋 / 回忆 / 释怀） 只输出分段歌词，不要多余解释。",
         "maxLength": 1024
       }
     ]
@@ -32318,6 +32414,7 @@
         "required": false,
         "label": "prompt",
         "description": "伴奏风格提示词，最长 1024 字符；与其它控制项互斥。",
+        "defaultValue": "纯音乐，现代流行伤感风，BPM 75，Am 小调，钢琴分解和弦 + 大提琴 + 弦乐铺底 + 轻微鼓点，氛围感拉满、孤独深情，编曲完整，无人声无哼唱，高音质立体声，干净消音伴奏",
         "maxLength": 1024
       },
       {
