@@ -50,17 +50,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 21,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageV1Edit",
@@ -157,17 +147,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 9,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageV1TextToImage",
@@ -253,17 +233,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 7,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageNProEdit",
@@ -380,17 +350,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 17,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageNProTextToImage",
@@ -496,17 +456,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 15,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageNProOfficialEdit",
@@ -623,17 +573,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 13,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageNProOfficialTextToImage",
@@ -739,17 +679,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 11,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31FastTextToVideo",
@@ -824,17 +754,7 @@
         ],
         "defaultValue": "720p"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 31,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31ProTextToVideo",
@@ -909,17 +829,7 @@
         ],
         "defaultValue": "720p"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 33,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31FastImageToVideo",
@@ -1011,17 +921,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 35,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSSoraUploadCharacter",
@@ -1044,17 +944,7 @@
         "accept": "[\"MP4\"]",
         "maxSize": 10
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 43,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan26TextToVideo",
@@ -1148,17 +1038,7 @@
         ],
         "defaultValue": "single"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 45,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan26ImageToVideo",
@@ -1254,17 +1134,7 @@
         ],
         "defaultValue": "single"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 47,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV25TurboProTextToVideo",
@@ -1344,17 +1214,7 @@
         ],
         "defaultValue": "9:16"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 49,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV25TurboProImageToVideo",
@@ -1432,17 +1292,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 50
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 51,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV25TurboStdImageToVideo",
@@ -1511,17 +1361,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 50
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 53,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduTextToVideo",
@@ -1688,17 +1528,7 @@
         ],
         "defaultValue": "5"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 57,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduStartEndToVideoQ2Pro",
@@ -1839,17 +1669,7 @@
         "description": "bgm",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 59,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduStartEndToVideoQ2Turbo",
@@ -1990,17 +1810,7 @@
         "description": "bgm",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 61,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSOfficialTextToVideo",
@@ -2060,17 +1870,7 @@
         ],
         "defaultValue": "4"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 101,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SeedreamV45TextToImage",
@@ -2163,17 +1963,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "unit_total",
-      "price_base_id": 63,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MinimaxHailuo02T2vStandard",
@@ -2220,17 +2010,7 @@
         ],
         "defaultValue": "6"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 88,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MinimaxHailuo23T2vStandard",
@@ -2277,17 +2057,7 @@
         ],
         "defaultValue": "6"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 75,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MinimaxHailuo02I2vStandard",
@@ -2356,17 +2126,7 @@
         ],
         "defaultValue": "6"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 81,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MinimaxHailuo23I2vStandard",
@@ -2424,17 +2184,7 @@
         ],
         "defaultValue": "6"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 71,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MinimaxHailuo23FastImageToVideo",
@@ -2492,17 +2242,7 @@
         ],
         "defaultValue": "6"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 65,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MinimaxHailuo23FastProImageToVideo",
@@ -2556,17 +2296,7 @@
         ],
         "defaultValue": "6"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 69,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SeedreamV45ImageToImage",
@@ -2670,17 +2400,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "unit_total",
-      "price_base_id": 67,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MinimaxHailuo23ImageToVideoPro",
@@ -2720,17 +2440,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 30
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 73,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MinimaxHailuo23T2vPro",
@@ -2759,17 +2469,7 @@
         "description": "enablePromptExpansion",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 77,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO1TextToVideo",
@@ -2848,17 +2548,7 @@
         ],
         "defaultValue": "std"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 79,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MinimaxHailuo02I2vPro",
@@ -2909,17 +2599,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 30
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 86,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO1ImageToVideo",
@@ -3009,17 +2689,7 @@
         ],
         "defaultValue": "std"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 83,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MinimaxHailuo02T2vPro",
@@ -3048,17 +2718,7 @@
         "description": "enablePromptExpansion",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 90,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MinimaxHailuo02Standard",
@@ -3127,17 +2787,7 @@
         ],
         "defaultValue": "6"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 92,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MinimaxHailuo02Pro",
@@ -3202,17 +2852,7 @@
         ],
         "defaultValue": "6"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 94,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MinimaxHailuo02Fast",
@@ -3270,17 +2910,7 @@
         ],
         "defaultValue": "6"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 96,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO1StartToEnd",
@@ -3381,17 +3011,7 @@
         ],
         "defaultValue": "std"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 98,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSOfficialImageToVideo",
@@ -3444,17 +3064,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 103,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSOfficialTextToVideoPro",
@@ -3549,17 +3159,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 105,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSOfficialImageToVideoPro",
@@ -3643,17 +3243,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 107,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO1StdRefrenceToVideo",
@@ -3762,17 +3352,7 @@
         "description": "keepOriginalSound",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 109,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO1StdEditVideo",
@@ -3841,17 +3421,7 @@
         "description": "keepOriginalSound",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 112,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SeedreamV4TextToImage",
@@ -3949,17 +3519,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "unit_total",
-      "price_base_id": 115,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SeedreamV4ImageToImage",
@@ -4068,17 +3628,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "unit_total",
-      "price_base_id": 117,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV26ProTextToVideo",
@@ -4165,17 +3715,7 @@
         ],
         "defaultValue": "5"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 119,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV26ProImageToVideo",
@@ -4251,17 +3791,7 @@
         ],
         "defaultValue": "5"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 121,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan26ImageToVideoFlash",
@@ -4428,17 +3958,7 @@
         "description": "enableAudio",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 123,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduImageToVideoQ2Pro",
@@ -4576,17 +4096,7 @@
         "description": "bgm",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 125,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduImageToVideoQ2Turbo",
@@ -4724,17 +4234,7 @@
         "description": "bgm",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 128,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduReferenceToVideoQ2",
@@ -4894,17 +4394,7 @@
         ],
         "defaultValue": "auto"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 130,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SeedanceV15ProTextToVideo",
@@ -5085,17 +4575,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 132,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SeedanceV15ProTextToVideoFast",
@@ -5250,17 +4730,7 @@
         ],
         "defaultValue": "false"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 134,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SeedanceV15ProImageToVideo",
@@ -5464,17 +4934,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 136,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SeedanceV15ProImageToVideoFast",
@@ -5655,17 +5115,7 @@
         ],
         "defaultValue": "false"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 138,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SeedanceV1LiteReferenceToVideo",
@@ -5821,17 +5271,7 @@
         ],
         "defaultValue": "16:9"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 140,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageNProOfficialTextToImageUltra",
@@ -5932,17 +5372,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 144,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageNProOfficialEditUltra",
@@ -6054,17 +5484,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 146,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31FastStartEndToVideo",
@@ -6163,17 +5583,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 148,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduReferenceToVideoQ2Pro",
@@ -6366,17 +5776,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 150,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "YouchuanImageToVideo",
@@ -6471,17 +5871,7 @@
         "description": "生成首尾帧一样的视频",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2016485417972400129,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "YouchuanTextToImageV6",
@@ -6699,17 +6089,7 @@
         ],
         "defaultValue": "1:1"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2016485417972400131,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "YouchuanTextToImageV61",
@@ -6934,17 +6314,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2016831146666491904,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "YouchuanTextToImageNiji6",
@@ -7162,17 +6532,7 @@
         ],
         "defaultValue": "1:1"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2016832698714161152,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "YouchuanTextToImageNiji7",
@@ -7327,17 +6687,7 @@
         ],
         "defaultValue": "1:1"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2016833484378603520,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "YouchuanTextToImageV7",
@@ -7551,17 +6901,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2016834293631811584,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduTextToVideoQ3Pro",
@@ -7738,17 +7078,7 @@
         "description": "Whether to use the audio and video direct output capability",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2017148354835775488,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduImageToVideoQ3Pro",
@@ -7892,17 +7222,7 @@
         "description": "audio",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2017174622075617280,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31ProStartEndToVideo",
@@ -8001,17 +7321,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018599147363368960,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduImageToVideoQ2ProFast",
@@ -8145,17 +7455,7 @@
         "description": "bgm",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018603399385186304,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduStartEndToVideoQ2ProFast",
@@ -8292,17 +7592,7 @@
         "description": "bgm",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018603743309725696,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartAudioTextToAudioSpeech28Hd",
@@ -8434,17 +7724,7 @@
         "description": "english_normalization",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2018651239914405889,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartAudioTextToAudioSpeech02Hd",
@@ -8576,17 +7856,7 @@
         "description": "english_normalization",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2018994703164243968,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartAudioTextToAudioSpeech02Turbo",
@@ -8718,17 +7988,7 @@
         "description": "english_normalization",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2018996840975826944,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartAudioTextToAudioSpeech26Hd",
@@ -8860,17 +8120,7 @@
         "description": "english_normalization",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2019020262241992704,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartAudioTextToAudioSpeech26Turbo",
@@ -9001,17 +8251,7 @@
         "description": "english_normalization",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2019020691755499520,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartAudioTextToAudioSpeech28Turbo",
@@ -9143,17 +8383,7 @@
         "description": "english_normalization",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2019027887595716608,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV30StdTextToVideo",
@@ -9330,17 +8560,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019027887608299521,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV30StdImageToVideo",
@@ -9509,17 +8729,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019243340943327232,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV30ProTextToVideo",
@@ -9696,17 +8906,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019246066762776576,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV30ProImageToVideo",
@@ -9875,17 +9075,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019246422792077312,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoGImageToVideo",
@@ -9983,17 +9173,7 @@
         "max": 30,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019380112650141696,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoGTextToVideo",
@@ -10080,17 +9260,7 @@
         "max": 30,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019393210836582400,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Hunyuan3dV31TextTo3d",
@@ -10151,17 +9321,7 @@
         ],
         "defaultValue": "Normal"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2019393210844971009,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Hunyuan3dV31ImageTo3d",
@@ -10302,17 +9462,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2019393210844971011,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO3StdTextToVideo",
@@ -10405,17 +9555,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019608800050282496,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO3ProTextToVideo",
@@ -10508,17 +9648,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019620511209750528,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO3StdImageToVideo",
@@ -10604,17 +9734,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019621114661044224,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO3ProImageToVideo",
@@ -10700,17 +9820,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019623243765252096,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduTextToVideoQ3Turbo",
@@ -10883,17 +9993,7 @@
         "description": "Whether to use the audio and video direct output capability",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019675673957761024,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduImageToVideoQ3Turbo",
@@ -11029,17 +10129,7 @@
         "description": "audio",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019676917090746368,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduStartEndToVideoQ3Turbo",
@@ -11212,17 +10302,7 @@
         "description": "audio",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019677753854394368,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduStartEndToVideoQ3Pro",
@@ -11395,17 +10475,7 @@
         "description": "audio",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019687963205566464,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartAudioTextToAudioMusic25",
@@ -11489,17 +10559,7 @@
         ],
         "defaultValue": "44100"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2019687963402698753,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV26StdMotionControl",
@@ -11577,17 +10637,7 @@
         ],
         "defaultValue": "yes"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2021197659221524481,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV26ProMotionControl",
@@ -11665,17 +10715,7 @@
         ],
         "defaultValue": "yes"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2021508655500754944,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartAudioTextToAudioVoiceClone",
@@ -11923,17 +10963,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2021514824638267392,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31ProOfficialTextToVideo",
@@ -12039,17 +11069,7 @@
         "description": "seed",
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2022195635528138752,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31ProOfficialImageToVideo",
@@ -12177,17 +11197,7 @@
         "description": "generateAudio",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2022213697698529280,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31FastOfficialTextToVideo",
@@ -12293,17 +11303,7 @@
         "description": "seed",
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2022220635727462400,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31ProOfficialReferenceToVideo",
@@ -12380,17 +11380,7 @@
         "description": "generateAudio",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2022221492992868352,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31FastOfficialVideoExtend",
@@ -12454,17 +11444,7 @@
         "description": "seed",
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2022222100344864768,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31FastOfficialImageToVideo",
@@ -12592,17 +11572,7 @@
         "description": "generateAudio",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2022225870399209472,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31ProOfficialVideoExtend",
@@ -12666,17 +11636,7 @@
         "description": "seed",
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2022226376832057344,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SeedreamV5LiteTextToImage",
@@ -12784,17 +11744,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "unit_total",
-      "price_base_id": 2026214940703981568,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SeedreamV5LiteImageToImage",
@@ -12898,17 +11848,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "unit_total",
-      "price_base_id": 2026215209256878080,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageNG31FlashTextToImage",
@@ -13033,17 +11973,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2027192837816188928,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageNG31FlashImageToImage",
@@ -13180,17 +12110,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2027196343461609472,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageNG31FlashOfficialTextToImage",
@@ -13316,17 +12236,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2027658953608921088,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageNG31FlashOfficialImageToImage",
@@ -13463,17 +12373,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2027661818519879680,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoGOfficialImageToVideo",
@@ -13543,17 +12443,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2028306154211246080,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoGOfficialTextToVideo",
@@ -13639,17 +12529,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2028308297282486272,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoGOfficialEditVideo",
@@ -13702,17 +12582,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2028310887512670208,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageG15OfficialTextToImage",
@@ -13807,17 +12677,7 @@
         ],
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2028353022597267456,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageG15OfficialImageToImage",
@@ -13943,17 +12803,7 @@
         ],
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2028356572589064192,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSImageToVideoAsyn",
@@ -14026,17 +12876,7 @@
         "defaultValue": "基于原图生成10秒动态视频，角色使用地道男声京腔配音，语气带点胡同大爷的调侃劲儿。 0–2秒：狸花猫翘着二郎腿，爪尖轻敲桌面，斜眼笑：“咱这节目今天炸了啊！” 2–5秒：哈士奇一愣，领结歪了也不管，急问：“真的啊？咱上热搜了？” 5–10秒：哈士奇瞬间石化，瞳孔地震；狸花猫憋不住，“噗”地笑出声，拍桌打滚，耳机滑到耳朵尖，背景霓虹灯“Whisker & Howl”同步闪红——全场爆笑收尾！",
         "maxLength": 4000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018151284749631488,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG3FlashPreviewImageToText",
@@ -14066,17 +12906,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 30
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018256169004433409,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG3FlashPreviewTextToText",
@@ -14095,17 +12925,7 @@
         "label": "prompt",
         "description": "prompt"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018300260547297280,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG3FlashPreviewVideoToText",
@@ -14135,17 +12955,7 @@
         "accept": "[\"MP4\"]",
         "maxSize": 20
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018300489719873536,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG3ProPreviewImageToText",
@@ -14177,17 +12987,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 30
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018516523936645120,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG3ProPreviewTextToText",
@@ -14206,17 +13006,7 @@
         "label": "prompt",
         "description": "prompt"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018517329893130240,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG3ProPreviewVideoToText",
@@ -14246,17 +13036,7 @@
         "accept": "[\"MP4\"]",
         "maxSize": 20
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018517611419009024,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG25FlashImageToText",
@@ -14286,17 +13066,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 30
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018518102307766272,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31ProImageToVideo",
@@ -14361,17 +13131,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018518936017960960,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG25FlashTextToText",
@@ -14390,17 +13150,7 @@
         "label": "prompt",
         "description": "prompt"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018519115408343040,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG25FlashVideoToText",
@@ -14430,17 +13180,7 @@
         "accept": "[\"MP4\"]",
         "maxSize": 20
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018519527939112960,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG25ProImageToText",
@@ -14470,17 +13210,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 30
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018521492811153408,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG25ProTextToText",
@@ -14499,17 +13229,7 @@
         "label": "prompt",
         "description": "prompt"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018521901151813632,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG25ProVideoToText",
@@ -14539,17 +13259,7 @@
         "accept": "[\"MP4\"]",
         "maxSize": 20
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018522199450714112,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "TopazlabsImageUpscaleStandardV2",
@@ -14652,17 +13362,7 @@
         "max": 1,
         "step": 0.1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018603743481692161,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "topazLabsImageUpscaleBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "TopazlabsImageUpscaleLowResolutionV2",
@@ -14765,17 +13465,7 @@
         "max": 1,
         "step": 0.1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018645339753414656,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "topazLabsImageUpscaleBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "TopazlabsImageUpscaleCgi",
@@ -14878,17 +13568,7 @@
         "max": 1,
         "step": 0.1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018645797075156992,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "topazLabsImageUpscaleBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "TopazlabsImageUpscaleHighFidelityV2",
@@ -14991,17 +13671,7 @@
         "max": 1,
         "step": 0.1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018646017351614464,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "topazLabsImageUpscaleBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "TopazlabsImageUpscaleTextRefine",
@@ -15104,17 +13774,7 @@
         "max": 1,
         "step": 0.1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2018646322961186816,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "topazLabsImageUpscaleBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "TopazlabsVideoUpscale",
@@ -15182,17 +13842,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2018651239885045760,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO3StdVideoEdit",
@@ -15241,17 +13891,7 @@
         "description": "keepOriginalSound",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019627228316303360,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO3ProVideoEdit",
@@ -15300,17 +13940,7 @@
         "description": "keepOriginalSound",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019630371297034240,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO3StdReferenceToVideo",
@@ -15430,17 +14060,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019634451851509760,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO3ProReferenceToVideo",
@@ -15560,17 +14180,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2019638480019128320,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageG3ImageToImage",
@@ -15602,17 +14212,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2019687963402698755,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageG4ImageToImage",
@@ -15642,17 +14242,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2021187552731463680,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageG3TextToImage",
@@ -15672,17 +14262,7 @@
         "description": "prompt",
         "defaultValue": "给小狗带上红色墨镜和红色披风"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2021197068835487744,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageG4TextToImage",
@@ -15701,17 +14281,7 @@
         "label": "prompt",
         "description": "prompt"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2021197659187970048,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Hitem3dV15ImageTo3d",
@@ -15793,17 +14363,7 @@
       }
     ],
     "name_cn": "hitem3d-v15/image-to-3d",
-    "name_en": "hitem3d-v15/image-to-3d",
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2028356572681338881,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    "name_en": "hitem3d-v15/image-to-3d"
   },
   {
     "class_name": "Hitem3dV2ImageTo3d",
@@ -15875,17 +14435,7 @@
       }
     ],
     "name_cn": "hitem3d-v2/image-to-3d",
-    "name_en": "hitem3d-v2/image-to-3d",
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2028730859607031808,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    "name_en": "hitem3d-v2/image-to-3d"
   },
   {
     "class_name": "Hitem3dV15MultiImageTo3d",
@@ -15994,17 +14544,7 @@
       }
     ],
     "name_cn": "hitem3d-v15/multi-image-to-3d",
-    "name_en": "hitem3d-v15/multi-image-to-3d",
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2028731529135390720,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    "name_en": "hitem3d-v15/multi-image-to-3d"
   },
   {
     "class_name": "Hitem3dV2MultiImageTo3d",
@@ -16103,17 +14643,7 @@
       }
     ],
     "name_cn": "hitem3d-v2/multi-image-to-3d",
-    "name_en": "hitem3d-v2/multi-image-to-3d",
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2028732142774648832,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    "name_en": "hitem3d-v2/multi-image-to-3d"
   },
   {
     "class_name": "Hitem3dPortraitV21ImageTo3d",
@@ -16180,17 +14710,7 @@
       }
     ],
     "name_cn": "hitem3d-portrait-v21/image-to-3d",
-    "name_en": "hitem3d-portrait-v21/image-to-3d",
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2028733021003186176,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    "name_en": "hitem3d-portrait-v21/image-to-3d"
   },
   {
     "class_name": "Hitem3dPortraitV21MultiImageTo3d",
@@ -16284,17 +14804,7 @@
       }
     ],
     "name_cn": "hitem3d-portrait-v21/multi-image-to-3d",
-    "name_en": "hitem3d-portrait-v21/multi-image-to-3d",
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2028733219574120448,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    "name_en": "hitem3d-portrait-v21/multi-image-to-3d"
   },
   {
     "class_name": "Hitem3dPortraitV20ImageTo3d",
@@ -16361,17 +14871,7 @@
       }
     ],
     "name_cn": "hitem3d-portrait-v20/image-to-3d",
-    "name_en": "hitem3d-portrait-v20/image-to-3d",
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2028738983650918400,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    "name_en": "hitem3d-portrait-v20/image-to-3d"
   },
   {
     "class_name": "Hitem3dPortraitV20MultiImageTo3d",
@@ -16465,17 +14965,7 @@
       }
     ],
     "name_cn": "hitem3d-portrait-v20/multi-image-to-3d",
-    "name_en": "hitem3d-portrait-v20/multi-image-to-3d",
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2028739179529109504,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    "name_en": "hitem3d-portrait-v20/multi-image-to-3d"
   },
   {
     "class_name": "Hitem3dPortraitV15ImageTo3d",
@@ -16542,17 +15032,7 @@
       }
     ],
     "name_cn": "hitem3d-portrait-v15/image-to-3d",
-    "name_en": "hitem3d-portrait-v15/image-to-3d",
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2028739462288113664,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    "name_en": "hitem3d-portrait-v15/image-to-3d"
   },
   {
     "class_name": "Hitem3dPortraitV15MultiImageTo3d",
@@ -16646,17 +15126,7 @@
       }
     ],
     "name_cn": "hitem3d-portrait-v15/multi-image-to-3d",
-    "name_en": "hitem3d-portrait-v15/multi-image-to-3d",
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2028739604923809792,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    "name_en": "hitem3d-portrait-v15/multi-image-to-3d"
   },
   {
     "class_name": "AlibabaWan26ReferenceToVideoFlash",
@@ -16848,17 +15318,7 @@
       }
     ],
     "name_cn": "万相2.6-参考生视频Flash",
-    "name_en": "wan-2.6-reference-to-video-flash",
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2028768183556505600,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    "name_en": "wan-2.6-reference-to-video-flash"
   },
   {
     "class_name": "AlibabaWan26ReferenceToVideo",
@@ -17042,17 +15502,7 @@
       }
     ],
     "name_cn": "万相2.6-参考生视频",
-    "name_en": "wan-2.6-reference-to-video",
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2028793089371406336,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    "name_en": "wan-2.6-reference-to-video"
   },
   {
     "class_name": "KlingElements",
@@ -17100,17 +15550,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 20
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2028793089434320909,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageV1OfficialTextToImage",
@@ -17196,17 +15636,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2030980802367455232,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageV1OfficialEdit",
@@ -17303,17 +15733,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2030982909493510144,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageGImageToImage",
@@ -17372,17 +15792,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2031353764052467712,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageGTextToImage",
@@ -17466,17 +15876,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2031354034530549760,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV30StdMotionControl",
@@ -17550,17 +15950,7 @@
         "description": "是否保留原始视频声音",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2031354034547326977,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV30ProMotionControl",
@@ -17634,17 +16024,7 @@
         "description": "是否保留原始视频声音",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2031354034547326979,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaQwenImage20ProImageEdit",
@@ -17813,17 +16193,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2031354034547326981,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaQwenImage20ImageEdit",
@@ -17992,17 +16362,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2031354034547326983,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduReferenceToVideoQ3",
@@ -18130,17 +16490,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2031354034547326985,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SeedanceVideoRefToVideo",
@@ -18170,17 +16520,7 @@
         "accept": "[\"MP4\",\"MOV\",\"WEBM\"]",
         "maxSize": 100
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2031354034547326987,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaQwenImage20ProTextToImage",
@@ -18347,17 +16687,7 @@
         "description": "是否开启提示词智能改写。开启后模型将对提示词进行优化与润色，生成内容更多样化。",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2031354034547326989,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaQwenImage20TextToImage",
@@ -18524,17 +16854,7 @@
         "description": "是否开启提示词智能改写。开启后模型将对提示词进行优化与润色，生成内容更多样化。",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2031354034547326991,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "PixverseV55TextToVideo",
@@ -18718,17 +17038,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2034555537860853843,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "PixverseV55ImageToVideo",
@@ -18886,17 +17196,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2034555537860853841,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "PixverseV55Transition",
@@ -19058,17 +17358,7 @@
         "description": "负向提示词",
         "maxLength": 2048
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2034555537860853839,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "PixverseV55Effects",
@@ -19277,17 +17567,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2031354034547326993,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "CinematicVideoGenerator",
@@ -19374,17 +17654,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2034555537860853865,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoRGen4TurboOfficialImageToVideo",
@@ -19468,17 +17738,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2031354034547326999,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoRGen4AlephOfficialVideoToVideo",
@@ -19552,17 +17812,7 @@
         "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
         "maxSize": 10
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2031354034547327001,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoRGen4TurboImageToVideo",
@@ -19652,17 +17902,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2031354034547327003,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoLtx2TextToVideoLora",
@@ -19684,17 +17924,7 @@
     "endpoint": "rhart-image/f-dev",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
-    "params": [],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2034555537860853867,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    "params": []
   },
   {
     "class_name": "RhartImageFDevLora",
@@ -19705,17 +17935,7 @@
     "endpoint": "rhart-image/f-dev-lora",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
-    "params": [],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2034555537860853783,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    "params": []
   },
   {
     "class_name": "SkyreelsV3ReferenceToVideo",
@@ -19793,17 +18013,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2034555537860853791,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SkyreelsV3VideoRestyling",
@@ -19868,17 +18078,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2034555537860853793,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SkyreelsV3SingleShotVideoExtension",
@@ -19918,17 +18118,7 @@
         "max": 30,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2034555537860853795,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SkyreelsV3ShotSwitchingVideoExtension",
@@ -20009,17 +18199,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2034555537860853797,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingLipSyncIdentifyFace",
@@ -20047,17 +18227,7 @@
         "label": "videoId",
         "description": "通过可灵AI生成的视频ID，与videoUrl二选一填写。仅支持30天内生成的时长不超过60秒的视频"
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2034555537860853827,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingLipSyncTts",
@@ -20349,17 +18519,7 @@
         "max": 2,
         "step": 0.1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2034555537860853829,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingLipSyncLipSyncVideo",
@@ -20447,17 +18607,7 @@
         "min": 0,
         "max": 2
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2034555537860853831,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSOfficialSoraUploadCharacter",
@@ -20486,17 +18636,7 @@
         "description": "角色名称（1-80字符），后续在文生视频中通过此名称引用角色",
         "maxLength": 80
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2034555537860853803,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduTextToVideoQ3ProFast",
@@ -20670,17 +18810,7 @@
         "description": "是否使用音视频直出能力",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2034555537860853837,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduImageToVideoQ3ProFast",
@@ -20828,17 +18958,7 @@
         "description": "是否使用音视频直出能力",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2034555537860853835,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ViduStartEndToVideoQ3ProFast",
@@ -20995,17 +19115,7 @@
         "description": "是否使用音视频直出能力",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2034555537860853833,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "PixverseV56TextToVideo",
@@ -21169,17 +19279,7 @@
         "description": "反向提示词，描述不希望出现的元素",
         "maxLength": 2048
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2034555537860853847,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "PixverseV56ImageToVideo",
@@ -21317,17 +19417,7 @@
         "description": "反向提示词，描述不希望出现的元素",
         "maxLength": 2048
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2034555537860853845,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "HiggsfieldSoulImageToImage",
@@ -22002,17 +20092,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2034555537860853851,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "HiggsfieldDopImageToVideo",
@@ -22075,17 +20155,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2034555537860853849,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSparkvideo20TextToVideo",
@@ -22294,17 +20364,7 @@
         "defaultValue": false,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2034555537860853863,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "seedance20BillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSparkvideo20FastTextToVideo",
@@ -22513,17 +20573,7 @@
         "defaultValue": false,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2034555537860853861,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "seedance20FastBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSparkvideo20ImageToVideo",
@@ -22746,17 +20796,7 @@
         "defaultValue": false,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2034555537860853859,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "seedance20BillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSparkvideo20FastImageToVideo",
@@ -22979,17 +21019,7 @@
         "defaultValue": false,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2034555537860853857,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "seedance20FastBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSparkvideo20MultimodalVideo",
@@ -23237,17 +21267,7 @@
         "defaultValue": false,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "condition_requires_input_duration",
-      "price_base_id": 2034555537860853855,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "seedance20BillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSparkvideo20FastMultimodalVideo",
@@ -23496,17 +21516,7 @@
         "defaultValue": false,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "condition_requires_input_duration",
-      "price_base_id": 2034555537860853853,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "seedance20FastBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "ViduReferenceToVideoQ3Mix",
@@ -23629,17 +21639,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2039255701636775936,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan27TextToVideo",
@@ -23830,17 +21830,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2039544461452640256,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan27ReferenceToVideo",
@@ -24028,17 +22018,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "condition_requires_input_duration",
-      "price_base_id": 2039648613742673920,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "wan27BillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan27ImageEdit",
@@ -24092,17 +22072,7 @@
         "max": 4096,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2039648613834948609,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan27ImageEditPro",
@@ -24156,17 +22126,7 @@
         "max": 4096,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2039648613834948611,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan27TextToImage",
@@ -24217,17 +22177,7 @@
         "description": "启用思考模式以提升图像质量，会增加生成时间",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2039648613834948613,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan27TextToImagePro",
@@ -24278,17 +22228,7 @@
         "description": "启用思考模式以提升图像质量，会增加生成时间",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2039648613834948615,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextQwen27bChat",
@@ -24327,17 +22267,7 @@
         "accept": "[\"MP4\",\"MOV\"]",
         "maxSize": 100
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2039648613834948617,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "tokenBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan27ImageToVideo",
@@ -24511,17 +22441,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2039618329974407168,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan27VideoExtend",
@@ -24687,17 +22607,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2039630309590302720,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan27VideoEdit",
@@ -24879,17 +22789,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2040031546315898880,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "wan27BillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSImageToVideoProDeprecated",
@@ -24967,17 +22867,7 @@
         "description": "storyboard",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 39,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSTextToVideoProDeprecated",
@@ -25046,17 +22936,7 @@
         "description": "storyboard",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 41,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "PixverseV6TextToVideo",
@@ -25176,17 +23056,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2041408069358845957,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "PixverseV6ImageToVideo",
@@ -25265,17 +23135,7 @@
         "description": "是否生成同步音频",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2041408069358845955,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "PixverseV6Transition",
@@ -25482,17 +23342,7 @@
         "defaultValue": false,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2041408069358845959,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "PixverseV6Extend",
@@ -25623,17 +23473,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2041408069358845953,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MinimaxVoiceDesign",
@@ -25677,17 +23517,7 @@
         "description": "是否在合成试听音频的末尾添加音频节奏标识",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2041408069358845963,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG3ProPreviewCvImageToText",
@@ -25716,17 +23546,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 30
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2042183087101575168,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG25FlashCvImageToText",
@@ -25754,17 +23574,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 30
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2042414511691923456,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG3FlashPreviewCvImageToText",
@@ -25792,17 +23602,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 30
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2042415111175405568,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartTextG25ProCvImageToText",
@@ -25830,17 +23630,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 30
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2042415417296683008,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan25PreviewTextToVideo",
@@ -25991,17 +23781,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2042415417317654529,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan25PreviewImageToVideo",
@@ -26111,17 +23891,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2042415417317654531,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan25PreviewTextToImage",
@@ -26214,17 +23984,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "unit_total",
-      "price_base_id": 2042415417317654533,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaWan25PreviewImageToImage",
@@ -26348,17 +24108,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "unit_total",
-      "price_base_id": 2042415417317654535,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSImageToVideo",
@@ -26436,17 +24186,7 @@
         "description": "storyboard",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 5,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSTextToVideo",
@@ -26515,17 +24255,7 @@
         "description": "storyboard",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 19,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoVideoUpscaler",
@@ -26576,17 +24306,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_depends_on_input",
-      "price_base_id": 2034555537860853869,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "rhVideoUpscalerBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "RhartVideoVideoFpsIncreaser",
@@ -26607,17 +24327,7 @@
         "accept": "[\"MP4\"]",
         "maxSize": 500
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2042415417317654558,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "BytedanceSeedance20GlobalTextToVideo",
@@ -26837,17 +24547,7 @@
         "step": 1,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2042415417317654543,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "seedance20GlobalBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "BytedanceSeedance20GlobalImageToVideo",
@@ -27112,17 +24812,7 @@
         "step": 1,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2042415417317654545,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "seedance20GlobalBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "BytedanceSeedance20GlobalMultimodalVideo",
@@ -27452,17 +25142,7 @@
         "step": 1,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2042415417317654547,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "seedance20GlobalBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "BytedanceSeedance20GlobalFastTextToVideo",
@@ -27677,17 +25357,7 @@
         "step": 1,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2042415417317654549,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "seedance20GlobalFastBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "BytedanceSeedance20GlobalFastImageToVideo",
@@ -27947,17 +25617,7 @@
         "step": 1,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2042415417317654551,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "seedance20GlobalFastBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "BytedanceSeedance20GlobalFastMultimodalVideo",
@@ -28282,17 +25942,7 @@
         "step": 1,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_factor_missing",
-      "price_base_id": 2042415417317654553,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "seedance20GlobalFastBillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "RhartVideoGOfficialReferenceToVideo",
@@ -28364,17 +26014,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2042415417317654564,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoGOfficialVideoExtend",
@@ -28424,17 +26064,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2042415417317654562,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31LiteOfficialTextToVideo",
@@ -28538,17 +26168,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2042415417317654537,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31LiteOfficialImageToVideo",
@@ -28661,17 +26281,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2042415417317654541,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31LiteOfficialStartEndToVideo",
@@ -28768,17 +26378,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2042415417317654539,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31LiteTextToVideo",
@@ -28859,17 +26459,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2045025608156577792,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoV31LiteImageToVideo",
@@ -28956,17 +26546,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2045025746157568000,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "PixverseC1TextToVideo",
@@ -29086,17 +26666,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2045025746191122433,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "PixverseC1ImageToVideo",
@@ -29175,17 +26745,7 @@
         "description": "是否生成同步音频",
         "defaultValue": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2045025746191122435,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "PixverseC1Transition",
@@ -29323,17 +26883,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unsupported_condition_rule",
-      "price_base_id": 2045025746191122437,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "PixverseC1ReferenceToVideo",
@@ -29462,17 +27012,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2045025746191122441,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageG2ImageToImage",
@@ -29601,17 +27141,7 @@
         ],
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046503667288244224,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageG2TextToImage",
@@ -29729,17 +27259,7 @@
         ],
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150682656768,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageG15TextToImage[deprecated]",
@@ -29789,17 +27309,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 29,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageG15Edit[deprecated]",
@@ -29861,17 +27371,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 27,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageG2OfficialTextToImage",
@@ -30002,17 +27502,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211201,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageG2OfficialImageToImage",
@@ -30154,17 +27644,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211203,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaHappyhorse10TextToVideo",
@@ -30325,17 +27805,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2046514150716211207,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaHappyhorse10ImageToVideo",
@@ -30470,17 +27940,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2046514150716211205,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartAudioSunoV55Single",
@@ -30529,17 +27989,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211223,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartAudioSunoV55Custom",
@@ -30578,17 +28028,7 @@
         "defaultValue": "流行,民谣,旋律,电影感,女声",
         "maxLength": 1000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211225,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartAudioSunoLyrics",
@@ -30609,17 +28049,7 @@
         "defaultValue": "描述个人面对成长后的平静，励志，娓娓道来的感觉",
         "maxLength": 500
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211227,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartAudioSunoV5Single",
@@ -30668,17 +28098,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211229,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartAudioSunoV5Custom",
@@ -30717,17 +28137,7 @@
         "defaultValue": "中国风，电影感，管弦乐",
         "maxLength": 1000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211231,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartAudioSunoV45Single",
@@ -30776,17 +28186,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211233,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartAudioSunoV45Custom",
@@ -30825,17 +28225,7 @@
         "defaultValue": "流行, 娓娓道来,中文",
         "maxLength": 1000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211235,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageXOfficialEdit",
@@ -30865,17 +28255,7 @@
         "accept": "[\"JPG\",\"PNG\",\"JPEG\",\"WEBP\"]",
         "maxSize": 10
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211237,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartImageXOfficialTextToImage",
@@ -30981,17 +28361,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211239,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV304kMotionControl",
@@ -31107,17 +28477,7 @@
         "defaultValue": false,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2046514150716211241,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV34kTextToVideo",
@@ -31294,17 +28654,7 @@
         "defaultValue": false,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2046514150716211243,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO34kTextToVideo",
@@ -31398,17 +28748,7 @@
         "defaultValue": false,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2046514150716211249,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO34kImageToVideo",
@@ -31495,17 +28835,7 @@
         "defaultValue": false,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2046514150716211247,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingVideoO34kReferenceToVideo",
@@ -31618,17 +28948,7 @@
         "defaultValue": false,
         "tail_insert": true
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2046514150716211245,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaHappyhorse10ReferenceToVideo",
@@ -31800,17 +29120,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2046514150716211255,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "AlibabaHappyhorse10VideoEdit",
@@ -31901,17 +29211,7 @@
         "max": 2147483647,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2046514150716211253,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ImageEnhanceHypirUltra",
@@ -32058,17 +29358,7 @@
         "description": "seed",
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211265,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Hitem3dV21ImageTo3d",
@@ -32140,17 +29430,7 @@
         "max": 2000000,
         "step": 10000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211257,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Hitem3dV21MultiImageTo3d",
@@ -32249,17 +29529,7 @@
         "max": 2000000,
         "step": 10000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211259,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV2AiAvatarStandardImageAudioToVideo",
@@ -32297,17 +29567,7 @@
         "description": "风格与行为提示词（可选）",
         "maxLength": 2048
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2046514150716211261,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV2AiAvatarProImageAudioToVideo",
@@ -32345,17 +29605,7 @@
         "description": "风格、表情或镜头提示词（可选）",
         "maxLength": 2048
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2046514150716211263,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "ImageEnhanceHypirBalance",
@@ -32424,17 +29674,7 @@
         "description": "seed",
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211267,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Marble10TextToWorld",
@@ -32519,17 +29759,7 @@
         "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
         "maxLength": 4000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211277,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MarbleUploadMediaAsset",
@@ -32595,17 +29825,7 @@
         "accept": "[\"MP4\"]",
         "maxSize": 100
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211275,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Marble10ImageToWorld",
@@ -32707,17 +29927,7 @@
         "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
         "maxLength": 4000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211273,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Marble10MultiImageToWorld",
@@ -32810,17 +30020,7 @@
         "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
         "maxLength": 4000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211271,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Marble10VideoToWorld",
@@ -32914,17 +30114,7 @@
         "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
         "maxLength": 4000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2046514150716211269,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Marble11VideoToWorld",
@@ -33018,17 +30208,7 @@
         "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
         "maxLength": 4000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2049124266066051072,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Marble11PlusVideoToWorld",
@@ -33122,17 +30302,7 @@
         "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
         "maxLength": 4000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2049124491405033472,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Marble11MultiImageToWorld",
@@ -33225,17 +30395,7 @@
         "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
         "maxLength": 4000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2049125028682792960,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Marble11PlusMultiImageToWorld",
@@ -33328,17 +30488,7 @@
         "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
         "maxLength": 4000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2049125216361119744,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Marble11ImageToWorld",
@@ -33440,17 +30590,7 @@
         "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
         "maxLength": 4000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2049125781837185024,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Marble11PlusImageToWorld",
@@ -33552,17 +30692,7 @@
         "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
         "maxLength": 4000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2049125960497758208,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Marble11TextToWorld",
@@ -33648,17 +30778,7 @@
         "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
         "maxLength": 4000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2049127309297844224,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Marble11PlusTextToWorld",
@@ -33744,17 +30864,7 @@
         "description": "可写用户列表 CSV（permission.allowed_writers，逗号分隔用户 ID/邮箱；留空则不发该字段）",
         "maxLength": 4000
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2049127537405067264,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SkyreelsV4TextToVideoStd",
@@ -33862,17 +30972,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2031354034547327005,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SkyreelsV4ImageToVideoStd",
@@ -33954,17 +31054,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2034555537860853787,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "KlingV25TurboStdTextToVideo",
@@ -34049,17 +31139,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2049745693693706240,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Meshy6TextTo3d",
@@ -34205,17 +31285,7 @@
         "accept": "[\"JPG\",\"JPEG\",\"PNG\"]",
         "maxSize": 10
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2049745693748232195,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Meshy6ImageTo3d",
@@ -34342,17 +31412,7 @@
         "accept": "[\"JPG\",\"JPEG\",\"PNG\"]",
         "maxSize": 10
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2049745693748232193,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SkyreelsV4TextToVideoFast",
@@ -34452,17 +31512,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2051992463710617600,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SkyreelsV4ImageToVideoFast",
@@ -34536,17 +31586,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "rate",
-      "reason": "unit_rate_seconds",
-      "price_base_id": 2051994196591509504,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "SkyreelsV4OmniReferenceStd",
@@ -34654,17 +31694,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2034555537860853789,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "skyReelsV4BillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "SkyreelsV4OmniReferenceFast",
@@ -34764,17 +31794,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052238943860031488,
-      "price_type": "BILLING_ADAPTER",
-      "billing_adapter_class_name": "skyReelsV4BillingAdapter"
-    }
+    ]
   },
   {
     "class_name": "KlingElementsAdvanced",
@@ -34880,17 +31900,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052238943889391617,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MurekaFilesUpload",
@@ -34956,17 +31966,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052238943889391621,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "YouchuanTextToImageV81",
@@ -35140,17 +32140,7 @@
         "description": "是否开启原生 2K",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052634167031627776,
-      "price_type": "MULTI_DIMENSION",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Mureka76SongGenerate",
@@ -35223,17 +32213,7 @@
         "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）；mureka-o1 不支持。",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "unit_total",
-      "price_base_id": 2052634167060987905,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MurekaO2SongGenerate",
@@ -35282,17 +32262,7 @@
         "description": "参考音乐文件 ID，由 /mureka/files-upload (purpose=reference) 返回；可与 vocalId 组合。",
         "maxLength": 64
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "unit_total",
-      "price_base_id": 2052634167060987907,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Mureka8SongGenerate",
@@ -35365,17 +32335,7 @@
         "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）；mureka-o1 不支持。",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "unit_total",
-      "price_base_id": 2052634167060987909,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Mureka9SongGenerate",
@@ -35448,17 +32408,7 @@
         "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）；mureka-o1 不支持。",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "unit_total",
-      "price_base_id": 2052634167060987911,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Mureka76InstrumentalGenerate",
@@ -35506,17 +32456,7 @@
         "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）。",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "unit_total",
-      "price_base_id": 2052634167060987921,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MurekaO2InstrumentalGenerate",
@@ -35612,17 +32552,7 @@
         "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）。",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "unit_total",
-      "price_base_id": 2052634167060987923,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Mureka76SongExtend",
@@ -35670,17 +32600,7 @@
         "max": 420000,
         "step": 1
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052634167060987919,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Mureka8SongExtend",
@@ -35749,17 +32669,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052634167060987917,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MurekaVocalClone",
@@ -35780,17 +32690,7 @@
         "accept": "[\"mp3\",\"m4a\"]",
         "maxSize": 10
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052634167060987915,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "MurekaLyricsGenerate",
@@ -35811,17 +32711,7 @@
         "defaultValue": "按以下规则创作原创歌词： 标准结构：主歌 1、预副歌、副歌、主歌 2、预副歌、副歌、桥段、结尾。 押韵自然，有画面感，情感细腻，句式长短适合演唱。 曲风：（填空：现代流行 / 古风 / 说唱） 情绪：（填空：伤感 / 遗憾 / 治愈 / 孤独） 调性 BPM：（填空：Am 小调 BPM75） 主题故事：（填空：关于离别 / 暗恋 / 回忆 / 释怀） 只输出分段歌词，不要多余解释。",
         "maxLength": 1024
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052634167060987913,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "Mureka9InstrumentalGenerate",
@@ -35869,17 +32759,7 @@
         "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）。",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "unit_total",
-      "price_base_id": 2052742537247981568,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "RhartVideoSparkvideo20UploadAsset",
@@ -35920,17 +32800,7 @@
         "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"GIF\",\"WEBP\",\"BMP\",\"HEIC\",\"HEIF\",\"TIFF\",\"MP3\",\"WAV\",\"MP4\",\"MOV\"]",
         "maxSize": 50
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052742537268953091,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "BytedanceSeedance20GlobalUploadAsset",
@@ -35971,17 +32841,7 @@
         "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"GIF\",\"WEBP\",\"BMP\",\"HEIC\",\"HEIF\",\"TIFF\",\"MP3\",\"WAV\",\"MP4\",\"MOV\"]",
         "maxSize": 50
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052742537268953089,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "PixverseV6Effects",
@@ -36135,17 +32995,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052742537268953093,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "LumaUni1TextToImage",
@@ -36266,17 +33116,7 @@
         "description": "联网检索：当提示词涉及真实地标、产品时建议开启，可显著提升真实性",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052742537268953101,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "LumaUni1ImageToImage",
@@ -36417,17 +33257,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 50
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052742537268953103,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "LumaUni1ImageEdit",
@@ -36549,17 +33379,7 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052742537268953105,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "LumaUni1MaxTextToImage",
@@ -36680,17 +33500,7 @@
         "description": "联网检索：当提示词涉及真实地标、产品时建议开启，可显著提升真实性",
         "defaultValue": false
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052742537268953107,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "LumaUni1MaxImageToImage",
@@ -36831,17 +33641,7 @@
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 50
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052742537268953109,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   },
   {
     "class_name": "LumaUni1MaxImageEdit",
@@ -36963,16 +33763,6 @@
           }
         ]
       }
-    ],
-    "price_badge_meta": {
-      "source": "db",
-      "language": "zh_CN",
-      "currency": "CNY",
-      "status": "exact",
-      "reason": "fixed",
-      "price_base_id": 2052742537268953111,
-      "price_type": "SIMPLE",
-      "billing_adapter_class_name": null
-    }
+    ]
   }
 ]
