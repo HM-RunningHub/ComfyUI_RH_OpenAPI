@@ -944,6 +944,33 @@
   "RH_Mureka9InstrumentalGenerate": {
     "display_name": "RH Mureka 9 Instrumental Generate"
   },
+  "RH_RhartVideoSparkvideo20UploadAsset": {
+    "display_name": "RH Seedance 2.0 Upload Asset"
+  },
+  "RH_BytedanceSeedance20GlobalUploadAsset": {
+    "display_name": "RH Seedance 2.0 Global Upload Asset"
+  },
+  "RH_PixverseV6Effects": {
+    "display_name": "RH Pixverse V6 Effects"
+  },
+  "RH_LumaUni1TextToImage": {
+    "display_name": "RH Luma Uni 1 Text to Image"
+  },
+  "RH_LumaUni1ImageToImage": {
+    "display_name": "RH Luma Uni 1 Image to Image"
+  },
+  "RH_LumaUni1ImageEdit": {
+    "display_name": "RH Luma Uni 1 Image Edit"
+  },
+  "RH_LumaUni1MaxTextToImage": {
+    "display_name": "RH Luma Uni 1 Max Text to Image"
+  },
+  "RH_LumaUni1MaxImageToImage": {
+    "display_name": "RH Luma Uni 1 Max Image to Image"
+  },
+  "RH_LumaUni1MaxImageEdit": {
+    "display_name": "RH Luma Uni 1 Max Image Edit"
+  },
   "RH_SparkVideoAssetCreate": {
     "display_name": "RH Seedance2.0 Asset/Create"
   },

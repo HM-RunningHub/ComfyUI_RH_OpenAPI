@@ -6,12 +6,12 @@ It gives developers and AI coding agents a fast index of available model capabil
 
 ## Summary
 
-- Total models: 315
+- Total models: 324
 - `3d` outputs: 16
 - `audio` outputs: 16
-- `image` outputs: 68
-- `string` outputs: 39
-- `video` outputs: 176
+- `image` outputs: 74
+- `string` outputs: 40
+- `video` outputs: 178
 
 ## How To Use This File With AI
 
@@ -80,6 +80,12 @@ The AI must not infer enum values or required fields from this summary.
 | `higgsfield/soul/image-to-image` | higgsfield/soul/image-to-image | prompt:STRING:required, imageUrl:IMAGE:required, size:LIST:required, style:LIST:optional, strength:FLOAT:optional, quality:LIST:required | 0.7-1.4 CNY/次 by quality |
 | `image-enhance/hypir-balance` | hypir-balance | imageUrl:IMAGE:required, upscale:INT:required, prompt:STRING:optional, shortEdgeSize:INT:optional, longEdgeSize:INT:optional, seed:INT:optional | 1.0 CNY/次 |
 | `image-enhance/hypir-ultra` | hypir-ultra | imageUrl:IMAGE:required, prompt:STRING:optional, shortEdgeSize:INT:optional, longEdgeSize:INT:optional, textureLevel:LIST:optional, creativityLevel:LIST:optional, upscale:INT:optional, seed:INT:optional | 0.1 CNY/次 |
+| `luma/uni-1-max/image-edit` | Luma uni-1-max Image Edit | imageUrl:IMAGE:required, prompt:STRING:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional | 0.868 CNY/次 |
+| `luma/uni-1-max/image-to-image` | Luma uni-1-max Image to Image | prompt:STRING:required, imageUrl:IMAGE:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional, webSearch:BOOLEAN:optional, imageRef:IMAGE:optional | 1.064 CNY/次 |
+| `luma/uni-1-max/text-to-image` | Luma uni-1-max Text to Image | prompt:STRING:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional, webSearch:BOOLEAN:optional | 0.84 CNY/次 |
+| `luma/uni-1/image-edit` | Luma uni-1 Image Edit | imageUrl:IMAGE:required, prompt:STRING:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional | 0.364 CNY/次 |
+| `luma/uni-1/image-to-image` | Luma uni-1 Image to Image | prompt:STRING:required, imageUrl:IMAGE:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional, webSearch:BOOLEAN:optional, imageRef:IMAGE:optional | 0.567 CNY/次 |
+| `luma/uni-1/text-to-image` | Luma uni-1 Text to Image | prompt:STRING:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional, webSearch:BOOLEAN:optional | 0.336 CNY/次 |
 | `marble-1.0/image-to-world` | marble-1.0/image-to-world | imageUrl:STRING:optional, textPrompt:STRING:optional, isPano:BOOLEAN:optional, disableRecaption:BOOLEAN:optional, displayName:STRING:optional, seed:INT:optional, permissionPublic:BOOLEAN:optional, permissionAllowIdAccess:BOOLEAN:optional, tags:STRING:optional, permissionAllowedReaders:STRING:optional, permissionAllowedWriters:STRING:optional | 10.08-10.62 CNY/次 by isPano |
 | `marble-1.0/multi-image-to-world` | marble-1.0/multi-image-to-world | textPrompt:STRING:optional, reconstructImages:BOOLEAN:optional, disableRecaption:BOOLEAN:optional, displayName:STRING:optional, seed:INT:optional, permissionPublic:BOOLEAN:optional, permissionAllowIdAccess:BOOLEAN:optional, tags:STRING:optional, permissionAllowedReaders:STRING:optional, permissionAllowedWriters:STRING:optional | 10.75 CNY/次 |
 | `marble-1.1-plus/image-to-world` | marble-1.1-plus/image-to-world | imageUrl:STRING:optional, textPrompt:STRING:optional, isPano:BOOLEAN:optional, disableRecaption:BOOLEAN:optional, displayName:STRING:optional, seed:INT:optional, permissionPublic:BOOLEAN:optional, permissionAllowIdAccess:BOOLEAN:optional, tags:STRING:optional, permissionAllowedReaders:STRING:optional, permissionAllowedWriters:STRING:optional | 20.16-20.7 CNY/次 by isPano |
@@ -140,6 +146,7 @@ The AI must not infer enum values or required fields from this summary.
 
 | Endpoint | Name | Inputs | Pricing |
 | --- | --- | --- | --- |
+| `bytedance/seedance-2.0-global/upload-asset` | seedance-2.0-global/upload-asset | assetType:LIST:required, url:CommonMedia:required | 0.0 CNY/次 |
 | `kling-elements` | kling-elements | name:STRING:required, description:STRING:required, imageUrl:IMAGE:required, elementReferList:IMAGE:required | 0.06 CNY/次 |
 | `kling-lip-sync/identify-face` | kling-lip-sync/identify-face | videoUrl:VIDEO:optional, videoId:STRING:optional | 0.04 CNY/次 |
 | `kling-lip-sync/tts` | kling-lip-sync/tts | text:STRING:required, voiceId:LIST:required, voiceLanguage:LIST:required, voiceSpeed:FLOAT:optional | 0.04 CNY/次 |
@@ -184,10 +191,10 @@ The AI must not infer enum values or required fields from this summary.
 
 | Endpoint | Name | Inputs | Pricing |
 | --- | --- | --- | --- |
-| `alibaba/happyhorse-1.0/image-to-video` | happyhorse-1.0/image-to-video | imageUrl:IMAGE:required, prompt:STRING:optional, resolution:LIST:required, duration:LIST:required, seed:INT:optional | 0.9-1.6 CNY/秒 by resolution |
-| `alibaba/happyhorse-1.0/reference-to-video` | happyhorse-1.0/reference-to-video | prompt:STRING:required, imageUrls:IMAGE:required, resolution:LIST:required, aspectRatio:LIST:optional, duration:LIST:required, seed:INT:optional | 0.9-1.6 CNY/秒 by resolution |
-| `alibaba/happyhorse-1.0/text-to-video` | happyhorse-1.0/text-to-video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, aspectRatio:LIST:optional, seed:INT:optional | 0.9-1.6 CNY/秒 by resolution |
-| `alibaba/happyhorse-1.0/video-edit` | happyhorse-1.0/video-edit | videoUrl:VIDEO:required, imageUrls:IMAGE:optional, prompt:STRING:required, resolution:LIST:required, audioSetting:LIST:optional, seed:INT:optional | 0.9-1.6 CNY/秒 by resolution |
+| `alibaba/happyhorse-1.0/image-to-video` | happyhorse-1.0/image-to-video | imageUrl:IMAGE:required, prompt:STRING:optional, resolution:LIST:required, duration:LIST:required, seed:INT:optional | 0.67-1.19 CNY/秒 by resolution |
+| `alibaba/happyhorse-1.0/reference-to-video` | happyhorse-1.0/reference-to-video | prompt:STRING:required, imageUrls:IMAGE:required, resolution:LIST:required, aspectRatio:LIST:optional, duration:LIST:required, seed:INT:optional | 0.67-1.19 CNY/秒 by resolution |
+| `alibaba/happyhorse-1.0/text-to-video` | happyhorse-1.0/text-to-video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, aspectRatio:LIST:optional, seed:INT:optional | 0.67-1.19 CNY/秒 by resolution |
+| `alibaba/happyhorse-1.0/video-edit` | happyhorse-1.0/video-edit | videoUrl:VIDEO:required, imageUrls:IMAGE:optional, prompt:STRING:required, resolution:LIST:required, audioSetting:LIST:optional, seed:INT:optional | 0.67-1.19 CNY/秒 by resolution |
 | `alibaba/wan-2.5-preview/image-to-video` | wan-2.5-preview/image-to-video | prompt:STRING:optional, imageUrl:IMAGE:required, audioUrl:AUDIO:optional, negativePrompt:STRING:optional, duration:LIST:required, resolution:LIST:required, promptExtend:BOOLEAN:optional, seed:INT:optional | 0.2-0.65 CNY/秒 by resolution |
 | `alibaba/wan-2.5-preview/text-to-video` | wan-2.5-preview/text-to-video | prompt:STRING:required, negativePrompt:STRING:optional, audioUrl:AUDIO:optional, duration:LIST:required, size:LIST:required, promptExtend:BOOLEAN:optional, seed:INT:optional | 0.2-0.65 CNY/秒 by size |
 | `alibaba/wan-2.6/image-to-video` | alibaba/wan-2.6/image-to-video | imageUrl:IMAGE:required, prompt:STRING:optional, negativePrompt:STRING:optional, resolution:LIST:required, duration:LIST:required, shotType:LIST:required | 2.25-11.25 CNY/次 by resolution,duration |
@@ -272,9 +279,10 @@ The AI must not infer enum values or required fields from this summary.
 | `pixverse-v5.5/text-to-video` | pixverse-v5.5/text-to-video | prompt:STRING:required, negativePrompt:STRING:optional, resolution:LIST:required, duration:LIST:required, aspectRatio:LIST:optional, thinkingType:LIST:optional, generateAudioSwitch:LIST:required, generateMultiClipSwitch:LIST:required | 3.1-19.4 CNY/次 by resolution,duration,generateAudioSwitch,generateMultiClipSwitch |
 | `pixverse-v5.6/image-to-video` | pixverse-v5.6/image-to-video | prompt:STRING:required, imageUrl:IMAGE:required, resolution:LIST:optional, duration:LIST:optional, generateAudioSwitch:LIST:required, thinkingType:LIST:optional, negativePrompt:STRING:optional | 2.3-12.67 CNY/次 by resolution,duration,generateAudioSwitch |
 | `pixverse-v5.6/text-to-video` | pixverse-v5.6/text-to-video | prompt:STRING:required, resolution:LIST:optional, duration:LIST:optional, aspectRatio:LIST:optional, generateAudioSwitch:LIST:required, thinkingType:LIST:optional, negativePrompt:STRING:optional | 2.3-12.67 CNY/次 by resolution,duration,generateAudioSwitch |
+| `pixverse-v6/effects` | pixverse-v6/effects | imageUrls:IMAGE:required, templateId:STRING:required, prompt:STRING:optional, quality:LIST:required, duration:INT:required, motionMode:LIST:optional, seed:INT:optional, negativePrompt:STRING:optional, generateAudioSwitch:BOOLEAN:optional, thinkingType:LIST:optional | 0.001 CNY/次 |
 | `pixverse-v6/image-to-video` | pixverse-v6/image-to-video | imageUrl:IMAGE:required, prompt:STRING:required, resolution:LIST:required, duration:INT:required, generateAudioSwitch:BOOLEAN:required | 0.16-0.73 CNY/秒 by resolution,generateAudioSwitch |
 | `pixverse-v6/text-to-video` | pixverse-v6/text-to-video | prompt:STRING:required, resolution:LIST:required, duration:INT:required, generateAudioSwitch:BOOLEAN:required, aspectRatio:LIST:optional | 0.16-0.73 CNY/秒 by resolution,generateAudioSwitch |
-| `pixverse-v6/transition` | pixverse-v6/transition | prompt:STRING:required, firstImageUrl:IMAGE:required, endImageUrl:IMAGE:optional, resolution:LIST:required, duration:INT:required, generateAudioSwitch:BOOLEAN:required, generateMultiClipSwitch:BOOLEAN:required, aspectRatio:LIST:optional, style:LIST:optional, negativePrompt:STRING:optional, seed:INT:optional, thinkingType:BOOLEAN:optional | 0.16-0.73 CNY/秒 by resolution,generateAudioSwitch |
+| `pixverse-v6/transition` | pixverse-v6/transition | prompt:STRING:required, firstImageUrl:IMAGE:required, endImageUrl:IMAGE:required, resolution:LIST:required, duration:INT:required, generateAudioSwitch:BOOLEAN:required, generateMultiClipSwitch:BOOLEAN:required, aspectRatio:LIST:optional, style:LIST:optional, negativePrompt:STRING:optional, seed:INT:optional, thinkingType:BOOLEAN:optional | 0.16-0.73 CNY/秒 by resolution,generateAudioSwitch |
 | `rhart-video-g-official/edit-video` | xai/grok-imagine/edit-video-official-stable | prompt:STRING:required, videoUrl:VIDEO:required, resolution:LIST:required | 0.41 CNY/秒 |
 | `rhart-video-g-official/image-to-video` | xai/grok-imagine/image-to-video-official-stable | prompt:STRING:required, imageUrl:IMAGE:required, resolution:LIST:required, duration:LIST:required | 1.89-3.15 CNY/次 by duration |
 | `rhart-video-g-official/reference-to-video` | xai/grok-imagine-video/reference-to-video-official-stable | imageUrls:IMAGE:required, prompt:STRING:required, duration:LIST:required, resolution:LIST:required | 1.89-3.15 CNY/次 by duration |
@@ -321,6 +329,7 @@ The AI must not infer enum values or required fields from this summary.
 | `rhart-video/sparkvideo-2.0/image-to-video` | Seedance2.0 Image to Video | prompt:STRING:optional, resolution:LIST:required, duration:LIST:required, firstFrameUrl:IMAGE:required, lastFrameUrl:IMAGE:optional, generateAudio:BOOLEAN:optional, ratio:LIST:optional, returnLastFrame:BOOLEAN:optional | 0.6-3 CNY/秒 by resolution |
 | `rhart-video/sparkvideo-2.0/multimodal-video` | Seedance2.0 Multimodal Video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, imageUrls:IMAGE:optional, videoUrls:VIDEO:optional, audioUrls:AUDIO:optional, generateAudio:BOOLEAN:optional, ratio:LIST:optional, returnLastFrame:BOOLEAN:optional | 0.6-3 CNY/秒起 by resolution |
 | `rhart-video/sparkvideo-2.0/text-to-video` | Seedance2.0 Text to Video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, generateAudio:BOOLEAN:optional, ratio:LIST:optional, webSearch:BOOLEAN:optional, returnLastFrame:BOOLEAN:optional | 0.6-3 CNY/秒 by resolution |
+| `rhart-video/sparkvideo-2.0/upload-asset` | seedance-2.0/upload-asset | assetType:LIST:required, url:CommonMedia:required | 0.0 CNY/次 |
 | `rhart-video/video-fps-increaser` | rh-video-fps-increaser | videoUrl:VIDEO:required | 0.07 CNY/秒 |
 | `rhart-video/video-upscaler` | rh-video-upscaler | videoUrl:VIDEO:required, targetResolution:LIST:required | 0.14-0.56 CNY/second by targetResolution |
 | `seedance-v1-lite/reference-to-video` | seedance-v1-lite-reference-to-video | prompt:STRING:required, imageUrls:IMAGE:required, duration:LIST:required, cameraFixed:LIST:required, resolution:LIST:required, aspectRatio:LIST:required | 0.07-0.15 CNY/秒 by resolution |

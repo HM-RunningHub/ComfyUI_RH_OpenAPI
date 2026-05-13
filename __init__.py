@@ -84,6 +84,7 @@ _CATEGORY_NAME_EN = {
     "Seedance2.0 Assets": "📦 Seedance2.0 Assets",
     "SparkVideo Assets": "📦 Seedance2.0 Assets",
     "Mureka": "🎵 Mureka",
+    "Luma": "🌙 Luma",
     "LLM": "🤖 LLM",
 }
 
@@ -116,6 +117,7 @@ _CATEGORY_NAME_ZH = {
     "Seedance2.0 Assets": "📦 Seedance2.0素材",
     "SparkVideo Assets": "📦 Seedance2.0素材",
     "Mureka": "🎵 Mureka 音乐",
+    "Luma": "🌙 Luma",
     "LLM": "🤖 LLM 对话",
 }
 
