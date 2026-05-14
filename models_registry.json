@@ -33764,5 +33764,330 @@
         ]
       }
     ]
+  },
+  {
+    "class_name": "MinimaxMusic26TextToMusic",
+    "internal_name": "RH_MinimaxMusic26TextToMusic",
+    "display_name": "RH MiniMax Music 2.6 文生音乐",
+    "name_cn": "MiniMax Music 2.6 文生音乐",
+    "name_en": "minimax/music-2.6/text-to-music",
+    "endpoint": "minimax/music-2.6/text-to-music",
+    "output_type": "audio",
+    "category": "RunningHub/MiniMax",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "音乐描述，用于指定风格、情绪和场景。例如：流行音乐, 难过, 适合在下雨的晚上",
+        "defaultValue": "描述个人面对成长后的平静，励志，娓娓道来的感觉",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": true,
+        "label": "lyrics",
+        "description": "歌曲歌词，使用换行分隔每行。支持结构标签：[Intro], [Verse], [Chorus], [Bridge], [Outro]等",
+        "defaultValue": "[Verse] 心早有预感 光速地飙燃 浑然不知山前的悬崖 生而无惧是少年 不知光阴有限  [Pre-Chorus] 想哭想笑时 都痛痛快快 全然不理会谁给的评价 只怕一瞬不如愿 失去重要片段  [Chorus] 原来人面对成长 大多以为失去才得到宁静 看似谦逊 实则麻木而已 直到它突然而至 猝不及防 我才明白 哦 原来是它的光 才能引领  [Verse 2] 热爱无旁骛 不屈不挠 死缠烂打的又怎会害怕 向着目标直行 直到对的人先到  [Chorus] 原来人面对成长 大多以为失去才得到宁静 看似谦逊 实则麻木而已 直到它突然而至 猝不及防 我才明白 哦 原来是它的光 才能引领  [Bridge] 说过的话都没兑现 不必沮丧 也不是说不该留恋 只不过人该往前 原来人面对成长 大多以为失去才得到宁静 看似谦逊 实则麻木而已 直到它突然而至 猝不及防 我才明白 哦 原来是它的光 才能引领",
+        "maxLength": 3500
+      },
+      {
+        "fieldKey": "sampleRate",
+        "type": "LIST",
+        "required": false,
+        "label": "sampleRate",
+        "description": "采样率",
+        "defaultValue": "44100",
+        "options": [
+          {
+            "value": "16000",
+            "description": "16000",
+            "descriptionEn": "16000"
+          },
+          {
+            "value": "24000",
+            "description": "24000",
+            "descriptionEn": "24000"
+          },
+          {
+            "value": "32000",
+            "description": "32000",
+            "descriptionEn": "32000"
+          },
+          {
+            "value": "44100",
+            "description": "44100",
+            "descriptionEn": "44100"
+          }
+        ]
+      },
+      {
+        "fieldKey": "bitrate",
+        "type": "LIST",
+        "required": false,
+        "label": "bitrate",
+        "description": "比特率",
+        "defaultValue": "256000",
+        "options": [
+          {
+            "value": "32000",
+            "description": "32000",
+            "descriptionEn": "32000"
+          },
+          {
+            "value": "64000",
+            "description": "64000",
+            "descriptionEn": "64000"
+          },
+          {
+            "value": "128000",
+            "description": "128000",
+            "descriptionEn": "128000"
+          },
+          {
+            "value": "256000",
+            "description": "256000",
+            "descriptionEn": "256000"
+          }
+        ]
+      },
+      {
+        "fieldKey": "format",
+        "type": "LIST",
+        "required": false,
+        "label": "format",
+        "description": "音频格式",
+        "defaultValue": "mp3",
+        "options": [
+          {
+            "value": "mp3",
+            "description": "mp3",
+            "descriptionEn": "mp3"
+          },
+          {
+            "value": "wav",
+            "description": "wav",
+            "descriptionEn": "wav"
+          },
+          {
+            "value": "pcm",
+            "description": "pcm",
+            "descriptionEn": "pcm"
+          }
+        ]
+      },
+      {
+        "fieldKey": "lyricsOptimizer",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "lyricsOptimizer",
+        "description": "是否根据描述自动优化歌词",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "MinimaxMusic26TextToInstrumental",
+    "internal_name": "RH_MinimaxMusic26TextToInstrumental",
+    "display_name": "RH MiniMax Music 2.6 纯音乐生成",
+    "name_cn": "MiniMax Music 2.6 纯音乐生成",
+    "name_en": "minimax/music-2.6/text-to-instrumental",
+    "endpoint": "minimax/music-2.6/text-to-instrumental",
+    "output_type": "audio",
+    "category": "RunningHub/MiniMax",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "纯音乐描述，用于指定风格、情绪和场景（必填）",
+        "defaultValue": "以键盘、吉他、萨克斯、鼓为主奏配器，整体营造日落时分慵懒松弛、温柔隽永的氛围，旋律线条悠扬绵长，多乐器层次交织，氛围感安静治愈又有留白余韵。",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "sampleRate",
+        "type": "LIST",
+        "required": false,
+        "label": "sampleRate",
+        "description": "采样率",
+        "defaultValue": "44100",
+        "options": [
+          {
+            "value": "16000",
+            "description": "16000",
+            "descriptionEn": "16000"
+          },
+          {
+            "value": "24000",
+            "description": "24000",
+            "descriptionEn": "24000"
+          },
+          {
+            "value": "32000",
+            "description": "32000",
+            "descriptionEn": "32000"
+          },
+          {
+            "value": "44100",
+            "description": "44100",
+            "descriptionEn": "44100"
+          }
+        ]
+      },
+      {
+        "fieldKey": "bitrate",
+        "type": "LIST",
+        "required": false,
+        "label": "bitrate",
+        "description": "比特率",
+        "defaultValue": "256000",
+        "options": [
+          {
+            "value": "32000",
+            "description": "32000",
+            "descriptionEn": "32000"
+          },
+          {
+            "value": "64000",
+            "description": "64000",
+            "descriptionEn": "64000"
+          },
+          {
+            "value": "128000",
+            "description": "128000",
+            "descriptionEn": "128000"
+          },
+          {
+            "value": "256000",
+            "description": "256000",
+            "descriptionEn": "256000"
+          }
+        ]
+      },
+      {
+        "fieldKey": "format",
+        "type": "LIST",
+        "required": false,
+        "label": "format",
+        "description": "音频格式",
+        "defaultValue": "mp3",
+        "options": [
+          {
+            "value": "mp3",
+            "description": "mp3",
+            "descriptionEn": "mp3"
+          },
+          {
+            "value": "wav",
+            "description": "wav",
+            "descriptionEn": "wav"
+          },
+          {
+            "value": "pcm",
+            "description": "pcm",
+            "descriptionEn": "pcm"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaWan27SpicyImageToVideo",
+    "internal_name": "RH_AlibabaWan27SpicyImageToVideo",
+    "display_name": "RH 万相2.7-spicy-图生视频",
+    "name_cn": "万相2.7-spicy-图生视频",
+    "name_en": "wan-2.7-spicy/image-to-video",
+    "endpoint": "alibaba/wan-2.7-spicy/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Wan",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "生成这款高尔夫球杆的广告运镜片段",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "接受URL或base64编码的字符串。支持的格式JPEG， JPG， PNG（不透明），BMP， WEBP。宽度和高度必须在240-8000像素之间，宽高比为1:8到8:1。最大文件大小20MB。",
+        "accept": "[\"JPG\",\"PNG\",\"JPEG\",\"BMP\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "audioUrl",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrl",
+        "description": "audioUrl",
+        "accept": "[\"MP3\",\"WAV\"]",
+        "maxSize": 15
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "negativePrompt",
+        "maxLength": 500
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1080P",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": 5,
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启prompt智能改写。开启后使用大模型对输入prompt进行智能改写。对于较短的prompt生成效果提升明显，但会增加耗时。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机数种种子，取值范围为 [0, 2147483647] ，未指定时，系统自动生成随机种子。若需提升生成结果的可复现性，建议固定seed值。 请注意，由于模型生成具有概率性，即使使用相同seed，也不能保证每次生成结果完全一致",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
   }
 ]
