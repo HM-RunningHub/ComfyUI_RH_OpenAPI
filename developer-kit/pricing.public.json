@@ -2,10 +2,10 @@
   "version": "public-2026-04-29",
   "source": "models_registry.json public-safe pricing summaries",
   "note": "Public-safe pricing summary for AI-assisted integration. Prices may change; check official RunningHub pricing before showing final costs to end users.",
-  "pricing_count": 321,
+  "pricing_count": 333,
   "counts_by_pricing_type": {
-    "fixed": 135,
-    "parameter_based": 185,
+    "fixed": 142,
+    "parameter_based": 190,
     "unparsed": 1
   },
   "pricing": [
@@ -763,6 +763,33 @@
       ]
     },
     {
+      "endpoint": "alibaba/wan-2.7-spicy/image-to-video",
+      "name_cn": "万相2.7-spicy-图生视频",
+      "name_en": "wan-2.7-spicy/image-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 1.4
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.91
+        }
+      ]
+    },
+    {
       "endpoint": "alibaba/wan-2.7/image-edit",
       "name_cn": "万相2.7-图像编辑",
       "name_en": "wan-2.7/image-edit",
@@ -1259,6 +1286,17 @@
       "endpoint": "bytedance/seedance-2.0-global/upload-asset",
       "name_cn": "seedance2.0-global/上传素材资产",
       "name_en": "seedance-2.0-global/upload-asset",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.0
+    },
+    {
+      "endpoint": "bytedance/seedance-2.0-global/upload-asset-channel-low-price",
+      "name_cn": "seedance2.0-global/上传素材资产低价渠道版",
+      "name_en": "seedance-2.0-global/upload-asset-channel-low-price",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
@@ -3377,6 +3415,28 @@
       ]
     },
     {
+      "endpoint": "minimax/music-2.6/text-to-instrumental",
+      "name_cn": "MiniMax Music 2.6 纯音乐生成",
+      "name_en": "minimax/music-2.6/text-to-instrumental",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.8
+    },
+    {
+      "endpoint": "minimax/music-2.6/text-to-music",
+      "name_cn": "MiniMax Music 2.6 文生音乐",
+      "name_en": "minimax/music-2.6/text-to-music",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.8
+    },
+    {
       "endpoint": "minimax/voice-design",
       "name_cn": "minimax-音色设计",
       "name_en": "minimax/voice-design",
@@ -3388,83 +3448,9 @@
       "price": 13.65
     },
     {
-      "endpoint": "mureka-7.6/instrumental-generate",
-      "name_cn": "Mureka mureka-7.6 伴奏生成",
-      "name_en": "mureka-7.6/instrumental-generate",
-      "currency": "CNY",
-      "unit": "/次",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "parameter_based",
-      "depends_on": [
-        "n"
-      ],
-      "rules": [
-        {
-          "when": {
-            "n": ""
-          },
-          "price": 0.204
-        }
-      ]
-    },
-    {
-      "endpoint": "mureka-7.6/song-extend",
-      "name_cn": "Mureka mureka-7.6 短歌延长",
-      "name_en": "mureka-7.6/song-extend",
-      "currency": "CNY",
-      "unit": "/次",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 0.245
-    },
-    {
-      "endpoint": "mureka-7.6/song-generate",
-      "name_cn": "Mureka mureka-7.6 歌曲生成",
-      "name_en": "mureka-7.6/song-generate",
-      "currency": "CNY",
-      "unit": "/次",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "parameter_based",
-      "depends_on": [
-        "n"
-      ],
-      "rules": [
-        {
-          "when": {
-            "n": ""
-          },
-          "price": 0.204
-        }
-      ]
-    },
-    {
-      "endpoint": "mureka-8/instrumental-generate",
-      "name_cn": "Mureka mureka-8 伴奏生成",
-      "name_en": "mureka-8/instrumental-generate",
-      "currency": "CNY",
-      "unit": "/次",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "parameter_based",
-      "depends_on": [
-        "n"
-      ],
-      "rules": [
-        {
-          "when": {
-            "n": ""
-          },
-          "price": 0.306
-        }
-      ]
-    },
-    {
-      "endpoint": "mureka-8/song-extend",
-      "name_cn": "Mureka mureka-8 短歌延长",
-      "name_en": "mureka-8/song-extend",
+      "endpoint": "mureka-ai/describe-song",
+      "name_cn": "mureka-ai 歌曲理解",
+      "name_en": "mureka-ai/describe-song",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
@@ -3473,93 +3459,20 @@
       "price": 0.68
     },
     {
-      "endpoint": "mureka-8/song-generate",
-      "name_cn": "Mureka mureka-8 歌曲生成",
-      "name_en": "mureka-8/song-generate",
+      "endpoint": "mureka-ai/extend-lyrics",
+      "name_cn": "mureka-ai 歌词延长",
+      "name_en": "mureka-ai/extend-lyrics",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
-      "pricing_type": "parameter_based",
-      "depends_on": [
-        "n"
-      ],
-      "rules": [
-        {
-          "when": {
-            "n": ""
-          },
-          "price": 0.306
-        }
-      ]
+      "pricing_type": "fixed",
+      "price": 0.014
     },
     {
-      "endpoint": "mureka-9/instrumental-generate",
-      "name_cn": "Mureka mureka-9 伴奏生成",
-      "name_en": "mureka-9/instrumental-generate",
-      "currency": "CNY",
-      "unit": "/次",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "parameter_based",
-      "depends_on": [
-        "n"
-      ],
-      "rules": [
-        {
-          "when": {
-            "n": ""
-          },
-          "price": 0.306
-        }
-      ]
-    },
-    {
-      "endpoint": "mureka-9/song-generate",
-      "name_cn": "Mureka mureka-9 歌曲生成",
-      "name_en": "mureka-9/song-generate",
-      "currency": "CNY",
-      "unit": "/次",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "parameter_based",
-      "depends_on": [
-        "n"
-      ],
-      "rules": [
-        {
-          "when": {
-            "n": ""
-          },
-          "price": 0.306
-        }
-      ]
-    },
-    {
-      "endpoint": "mureka-o2/song-generate",
-      "name_cn": "Mureka mureka-o2 歌曲生成",
-      "name_en": "mureka-o2/song-generate",
-      "currency": "CNY",
-      "unit": "/次",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "parameter_based",
-      "depends_on": [
-        "n"
-      ],
-      "rules": [
-        {
-          "when": {
-            "n": ""
-          },
-          "price": 0.306
-        }
-      ]
-    },
-    {
-      "endpoint": "mureka/files-upload",
+      "endpoint": "mureka-ai/files-upload",
       "name_cn": "Mureka 文件上传",
-      "name_en": "mureka/files-upload",
+      "name_en": "mureka-ai/files-upload",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
@@ -3568,26 +3481,233 @@
       "price": 0.0
     },
     {
-      "endpoint": "mureka/lyrics-generate",
+      "endpoint": "mureka-ai/generate-lyrics",
       "name_cn": "Mureka 歌词生成",
-      "name_en": "mureka/lyrics-generate",
+      "name_en": "mureka-ai/generate-lyrics",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.061
+      "price": 0.06
     },
     {
-      "endpoint": "mureka/vocal-clone",
-      "name_cn": "Mureka 人声克隆",
-      "name_en": "mureka/vocal-clone",
+      "endpoint": "mureka-ai/mureka-o2/generate-song",
+      "name_cn": "Mureka-o2 歌曲生成",
+      "name_en": "mureka-o2/generate-song",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "n"
+      ],
+      "rules": [
+        {
+          "when": {
+            "n": ""
+          },
+          "price": 0.28
+        }
+      ]
+    },
+    {
+      "endpoint": "mureka-ai/mureka-v7.6/extend-song",
+      "name_cn": "mureka-v7.6 短歌延长",
+      "name_en": "mureka-v7.6/extend-song",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 34.0
+      "price": 0.245
+    },
+    {
+      "endpoint": "mureka-ai/mureka-v7.6/generate-bgm",
+      "name_cn": "Mureka-v7.6 伴奏生成",
+      "name_en": "mureka-v7.6/generate-bgm",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "n"
+      ],
+      "rules": [
+        {
+          "when": {
+            "n": ""
+          },
+          "price": 0.19
+        }
+      ]
+    },
+    {
+      "endpoint": "mureka-ai/mureka-v7.6/generate-song",
+      "name_cn": "Mureka-v7.6 歌曲生成",
+      "name_en": "mureka-v7.6/generate-song",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "n"
+      ],
+      "rules": [
+        {
+          "when": {
+            "n": ""
+          },
+          "price": 0.19
+        }
+      ]
+    },
+    {
+      "endpoint": "mureka-ai/mureka-v8/extend-song",
+      "name_cn": "Mureka-v8 短歌延长",
+      "name_en": "mureka-v8/extend-song",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.63
+    },
+    {
+      "endpoint": "mureka-ai/mureka-v8/generate-bgm",
+      "name_cn": "Mureka-v8 伴奏生成",
+      "name_en": "mureka-v8/generate-bgm",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "n"
+      ],
+      "rules": [
+        {
+          "when": {
+            "n": ""
+          },
+          "price": 0.28
+        }
+      ]
+    },
+    {
+      "endpoint": "mureka-ai/mureka-v8/generate-song",
+      "name_cn": "Mureka-v8 歌曲生成",
+      "name_en": "mureka-v8/generate-song",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "n"
+      ],
+      "rules": [
+        {
+          "when": {
+            "n": ""
+          },
+          "price": 0.28
+        }
+      ]
+    },
+    {
+      "endpoint": "mureka-ai/mureka-v9/generate-bgm",
+      "name_cn": "Mureka-v9 伴奏生成",
+      "name_en": "mureka-v9/generate-bgm",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "n"
+      ],
+      "rules": [
+        {
+          "when": {
+            "n": ""
+          },
+          "price": 0.28
+        }
+      ]
+    },
+    {
+      "endpoint": "mureka-ai/mureka-v9/generate-song",
+      "name_cn": "Mureka-v9 歌曲生成",
+      "name_en": "mureka-v9/generate-song",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "n"
+      ],
+      "rules": [
+        {
+          "when": {
+            "n": ""
+          },
+          "price": 0.28
+        }
+      ]
+    },
+    {
+      "endpoint": "mureka-ai/recognize-song",
+      "name_cn": "mureka-ai 歌曲识别",
+      "name_en": "mureka-ai/recognize-song",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.068
+    },
+    {
+      "endpoint": "mureka-ai/stem-song",
+      "name_cn": "mureka-ai 音轨分离",
+      "name_en": "mureka-ai/stem-song",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "model"
+      ],
+      "rules": [
+        {
+          "when": {
+            "model": "audio-separation-1"
+          },
+          "price": 0.408
+        },
+        {
+          "when": {
+            "model": "audio-separation-2"
+          },
+          "price": 4.762
+        }
+      ]
+    },
+    {
+      "endpoint": "mureka-ai/vocal-clone",
+      "name_cn": "Mureka 人声克隆",
+      "name_en": "mureka-ai/vocal-clone",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 31.5
     },
     {
       "endpoint": "pixverse-c1/image-to-video",
@@ -5253,7 +5373,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.001
+      "price": 100.0
     },
     {
       "endpoint": "pixverse-v6/extend",
@@ -5629,7 +5749,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.95
+      "price": 0.8
     },
     {
       "endpoint": "rhart-audio/text-to-audio/speech-02-hd",
@@ -5928,63 +6048,63 @@
             "quality": "high",
             "resolution": "1k"
           },
-          "price": 1.58
+          "price": 1.39
         },
         {
           "when": {
             "quality": "high",
             "resolution": "2k"
           },
-          "price": 2.95
+          "price": 2.77
         },
         {
           "when": {
             "quality": "high",
             "resolution": "4k"
           },
-          "price": 4.74
+          "price": 4.16
         },
         {
           "when": {
             "quality": "low",
             "resolution": "1k"
           },
-          "price": 0.29
+          "price": 0.19
         },
         {
           "when": {
             "quality": "low",
             "resolution": "2k"
           },
-          "price": 0.45
+          "price": 0.38
         },
         {
           "when": {
             "quality": "low",
             "resolution": "4k"
           },
-          "price": 0.68
+          "price": 0.57
         },
         {
           "when": {
             "quality": "medium",
             "resolution": "1k"
           },
-          "price": 0.59
+          "price": 0.38
         },
         {
           "when": {
             "quality": "medium",
             "resolution": "2k"
           },
-          "price": 0.93
+          "price": 0.76
         },
         {
           "when": {
             "quality": "medium",
             "resolution": "4k"
           },
-          "price": 1.37
+          "price": 1.13
         }
       ]
     },
@@ -6007,63 +6127,63 @@
             "quality": "high",
             "resolution": "1k"
           },
-          "price": 1.58
+          "price": 1.39
         },
         {
           "when": {
             "quality": "high",
             "resolution": "2k"
           },
-          "price": 2.95
+          "price": 2.77
         },
         {
           "when": {
             "quality": "high",
             "resolution": "4k"
           },
-          "price": 4.74
+          "price": 4.16
         },
         {
           "when": {
             "quality": "low",
             "resolution": "1k"
           },
-          "price": 0.29
+          "price": 0.06
         },
         {
           "when": {
             "quality": "low",
             "resolution": "2k"
           },
-          "price": 0.45
+          "price": 0.13
         },
         {
           "when": {
             "quality": "low",
             "resolution": "4k"
           },
-          "price": 0.68
+          "price": 0.19
         },
         {
           "when": {
             "quality": "medium",
             "resolution": "1k"
           },
-          "price": 0.59
+          "price": 0.38
         },
         {
           "when": {
             "quality": "medium",
             "resolution": "2k"
           },
-          "price": 0.93
+          "price": 0.76
         },
         {
           "when": {
             "quality": "medium",
             "resolution": "4k"
           },
-          "price": 1.37
+          "price": 1.13
         }
       ]
     },
@@ -6560,6 +6680,62 @@
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
       "price": 0.03
+    },
+    {
+      "endpoint": "rhart-imagine-image-quality/edit",
+      "name_cn": "全能图片X-高质量图片编辑-官方稳定版",
+      "name_en": "xai/rhart-imagine-image-quality/edit-official-stable",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution",
+        "numImages"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1k"
+          },
+          "price": 0.44
+        },
+        {
+          "when": {
+            "resolution": "2k"
+          },
+          "price": 0.57
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-imagine-image-quality/text-to-image",
+      "name_cn": "全能图片X-高质量文生图-官方稳定版",
+      "name_en": "xai/rhart-imagine-image-quality/text-to-image-official-stable",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution",
+        "numImages"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1k"
+          },
+          "price": 0.38
+        },
+        {
+          "when": {
+            "resolution": "2k"
+          },
+          "price": 0.5
+        }
+      ]
     },
     {
       "endpoint": "rhart-text-g-25-flash-cv/image-to-text",
@@ -7361,6 +7537,50 @@
             "generateAudio": "true"
           },
           "price": 7.04
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-video-v3.1-fast-official/reference-to-video",
+      "name_cn": "全能视频V3.1-fast-参考生视频-官方稳定版",
+      "name_en": "google/veo3.1-fast/reference-to-video-official-stable",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution",
+        "generateAudio"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p",
+            "generateAudio": "false"
+          },
+          "price": 5.04
+        },
+        {
+          "when": {
+            "resolution": "1080p",
+            "generateAudio": "true"
+          },
+          "price": 6.05
+        },
+        {
+          "when": {
+            "resolution": "720p",
+            "generateAudio": "false"
+          },
+          "price": 4.03
+        },
+        {
+          "when": {
+            "resolution": "720p",
+            "generateAudio": "true"
+          },
+          "price": 5.04
         }
       ]
     },
@@ -8202,6 +8422,17 @@
       "endpoint": "rhart-video/sparkvideo-2.0/upload-asset",
       "name_cn": "seedance2.0/上传素材资产",
       "name_en": "seedance-2.0/upload-asset",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.0
+    },
+    {
+      "endpoint": "rhart-video/sparkvideo-2.0/upload-asset-channel-low-price",
+      "name_cn": "seedance2.0/上传素材资产低价渠道版",
+      "name_en": "seedance-2.0/upload-asset-channel-low-price",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",

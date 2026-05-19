@@ -1,18 +1,18 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-331-blue)
+![Nodes](https://img.shields.io/badge/Nodes-340-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 **English** | [中文](README.md)
 
 **ComfyUI_RH_OpenAPI** is a **1:1 ComfyUI implementation** of the [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api), with additional Seedance2.0 asset management nodes.
 
-The project currently includes 327 standard model API nodes covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. Together with 3 Seedance2.0 asset helper nodes, 1 RunningHub LLM chat node, and 1 settings node, it provides 331 ComfyUI nodes in total. You can access RunningHub standard model and LLM capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the `real_person_mode` toggle — no local GPU required, zero cold-start latency.
+The project currently includes 336 standard model API nodes covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. Together with 3 Seedance2.0 asset helper nodes, 1 RunningHub LLM chat node, and 1 settings node, it provides 340 ComfyUI nodes in total. You can access RunningHub standard model and LLM capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the `real_person_mode` toggle — no local GPU required, zero cold-start latency.
 
 ## 📌 Features
 
-- **Node Count** — 331 ComfyUI nodes in total: 327 standard model nodes, 3 Seedance2.0 asset nodes, 1 RunningHub LLM chat node, and 1 settings node
+- **Node Count** — 340 ComfyUI nodes in total: 336 standard model nodes, 3 Seedance2.0 asset nodes, 1 RunningHub LLM chat node, and 1 settings node
 - **Plug & Play** — No model downloads, no GPU needed — just an API Key
 - **Dynamic Registration** — Nodes are auto-generated from a JSON registry; adding new models requires only a registry update
 - **Media Support** — Automatic upload/download/conversion for images, videos, and audio, seamlessly integrated with ComfyUI native types
@@ -26,7 +26,7 @@ The project currently includes 327 standard model API nodes covering image gener
 
 ## 🎨 Supported Models
 
-### Image Generation (74 Nodes)
+### Image Generation (76 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
@@ -48,7 +48,7 @@ The project currently includes 327 standard model API nodes covering image gener
 | Midjourney | 悠船 | Text-to-Image v6/v6.1/niji6/niji7/v7/v8.1 | 6 |
 | Marble 1.0 / 1.1 / 1.1 Plus | — | Image/Multi-Image-to-3D World | 6 |
 
-### Video Generation (202 Nodes)
+### Video Generation (209 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
@@ -120,7 +120,7 @@ The project currently includes 327 standard model API nodes covering image gener
 - Dynamically loads model IDs from `https://llm.runninghub.ai/v1/models`, with a built-in fallback list when the network is unavailable
 - Calls the OpenAI-compatible endpoint `https://llm.runninghub.cn/v1/chat/completions`
 - Supports text chat, image understanding, and video understanding; when both images and video are connected, images take priority
-- Image inputs are uploaded through RunningHub OpenAPI first and then passed to the LLM gateway as `image_url`
+- Image inputs are converted to JPEG and passed inline as Base64 `image_url` payloads, without uploading to RunningHub OpenAPI first
 - Video inputs are compressed to at most 15 seconds and 10MB when needed, then passed to the LLM gateway as `video_url`
 - The `seed` input is kept for ComfyUI workflow compatibility but is not forwarded to the LLM gateway because some upstream models reject it
 - The `api_config` input is placed at the last slot; when left unconnected, the node uses the system shared API key, environment variables, or `.env` configuration
@@ -177,14 +177,14 @@ cp config/.env.example config/.env
 
 ### Example Workflows
 
-The project includes 301 example workflow JSON files in the `examples/` directory, including 3 Seedance2.0 asset-related workflows. Download and import directly into ComfyUI.
+The project includes 306 example workflow JSON files in the `examples/` directory, including 3 Seedance2.0 asset-related workflows. Download and import directly into ComfyUI.
 
 ## 📁 Project Structure
 
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # Entry point, registers all nodes
-├── models_registry.json     # Model registry (327 model definitions)
+├── models_registry.json     # Model registry (336 model definitions)
 ├── config/
 │   └── .env.example         # Configuration template
 ├── core/                    # Core infrastructure
@@ -201,7 +201,7 @@ ComfyUI_RH_OpenAPI/
 │   ├── llm_chat.py          # RunningHub LLM Chat Completions node
 │   ├── node_factory.py      # Dynamic node factory
 │   └── assets/              # Seedance2.0 asset management nodes
-└── examples/                # 301 example workflows
+└── examples/                # 306 example workflows
 ```
 
 ## 🔧 Architecture

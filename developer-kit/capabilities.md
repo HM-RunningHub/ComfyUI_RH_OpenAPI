@@ -6,12 +6,12 @@ It gives developers and AI coding agents a fast index of available model capabil
 
 ## Summary
 
-- Total models: 324
+- Total models: 336
 - `3d` outputs: 16
-- `audio` outputs: 16
-- `image` outputs: 74
-- `string` outputs: 40
-- `video` outputs: 178
+- `audio` outputs: 18
+- `image` outputs: 76
+- `string` outputs: 45
+- `video` outputs: 181
 
 ## How To Use This File With AI
 
@@ -46,6 +46,8 @@ The AI must not infer enum values or required fields from this summary.
 
 | Endpoint | Name | Inputs | Pricing |
 | --- | --- | --- | --- |
+| `minimax/music-2.6/text-to-instrumental` | minimax/music-2.6/text-to-instrumental | prompt:STRING:required, sampleRate:LIST:optional, bitrate:LIST:optional, format:LIST:optional | 0.8 CNY/次 |
+| `minimax/music-2.6/text-to-music` | minimax/music-2.6/text-to-music | prompt:STRING:optional, lyrics:STRING:required, sampleRate:LIST:optional, bitrate:LIST:optional, format:LIST:optional, lyricsOptimizer:BOOLEAN:optional | 0.8 CNY/次 |
 | `minimax/voice-design` | minimax/voice-design | prompt:STRING:required, previewText:STRING:required, voiceId:STRING:optional, aigcWatermark:BOOLEAN:optional | 13.65 CNY/次 |
 | `rhart-audio/suno-v4.5/custom` | suno-custom-v4.5 | title:STRING:required, prompt:STRING:required, tags:STRING:required | 0.72 CNY/次 |
 | `rhart-audio/suno-v4.5/single` | suno-single-v4.5 | title:STRING:optional, description:STRING:required, make_instrumental:LIST:optional | 0.72 CNY/次 |
@@ -54,7 +56,7 @@ The AI must not infer enum values or required fields from this summary.
 | `rhart-audio/suno-v5/custom` | suno-custom-v5 | title:STRING:required, prompt:STRING:required, tags:STRING:required | 0.72 CNY/次 |
 | `rhart-audio/suno-v5/single` | suno-single-v5 | title:STRING:optional, description:STRING:required, make_instrumental:LIST:optional | 0.72 CNY/次 |
 | `rhart-audio/suno/lyrics` | suno-lyrics | prompt:STRING:required | 0.014 CNY/次 |
-| `rhart-audio/text-to-audio/music-2.5` | minimax/music-2.5 | prompt:STRING:required, lyrics:STRING:required, bitrate:LIST:optional, sampleRate:LIST:optional | 0.95 CNY/次 |
+| `rhart-audio/text-to-audio/music-2.5` | minimax/music-2.5 | prompt:STRING:required, lyrics:STRING:required, bitrate:LIST:optional, sampleRate:LIST:optional | 0.8 CNY/次 |
 | `rhart-audio/text-to-audio/speech-02-hd` | minimax/speech-02-hd | text:STRING:required, pronunciation_dict:STRING:optional, voice_id:STRING:required, speed:FLOAT:optional, volume:FLOAT:optional, pitch:INT:optional, emotion:LIST:optional, enable_base64_output:BOOLEAN:required, english_normalization:BOOLEAN:required | 0.31 CNY/1000字符 |
 | `rhart-audio/text-to-audio/speech-02-turbo` | minimax/speech-02-turbo | text:STRING:required, pronunciation_dict:STRING:optional, voice_id:STRING:required, speed:FLOAT:optional, volume:FLOAT:optional, pitch:INT:optional, emotion:LIST:optional, enable_base64_output:BOOLEAN:required, english_normalization:BOOLEAN:required | 0.19 CNY/1000字符 |
 | `rhart-audio/text-to-audio/speech-2.6-hd` | minimax/speech-2.6-hd | text:STRING:required, pronunciation_dict:STRING:optional, voice_id:STRING:required, speed:FLOAT:optional, volume:FLOAT:optional, pitch:INT:optional, emotion:LIST:optional, enable_base64_output:BOOLEAN:required, english_normalization:BOOLEAN:required | 0.62 CNY/1000字符 |
@@ -96,8 +98,8 @@ The AI must not infer enum values or required fields from this summary.
 | `rhart-image-g-1.5-official/text-to-image` | gpt-image-1.5/text-to-image-official-stable | prompt:STRING:required, size:LIST:required, quality:LIST:required, background:LIST:optional | 0.06-1.26 CNY/次 by quality,size |
 | `rhart-image-g-1.5/edit-[Deprecated]` | gpt-image-1.5/edit-channel-low-price-[Deprecated] Please use gpt-image-2 instead | prompt:STRING:required, imageUrls:IMAGE:required, aspectRatio:LIST:required | 0.03 CNY/次 |
 | `rhart-image-g-1.5/text-to-image-[Deprecated]` | gpt-image-1.5/text-to-image-channel-low-price-[Deprecated] Please use gpt-image-2 instead | prompt:STRING:required, aspectRatio:LIST:required | 0.03 CNY/次 |
-| `rhart-image-g-2-official/image-to-image` | gpt-image-2/image-to-image-official-stable | prompt:STRING:required, imageUrls:IMAGE:required, aspectRatio:LIST:optional, resolution:LIST:required, quality:LIST:required | 0.29-4.74 CNY/次 by quality,resolution |
-| `rhart-image-g-2-official/text-to-image` | gpt-image-2/text-to-image-official-stable | prompt:STRING:required, aspectRatio:LIST:optional, resolution:LIST:required, quality:LIST:required | 0.29-4.74 CNY/次 by quality,resolution |
+| `rhart-image-g-2-official/image-to-image` | gpt-image-2/image-to-image-official-stable | prompt:STRING:required, imageUrls:IMAGE:required, aspectRatio:LIST:optional, resolution:LIST:required, quality:LIST:required | 0.19-4.16 CNY/次 by quality,resolution |
+| `rhart-image-g-2-official/text-to-image` | gpt-image-2/text-to-image-official-stable | prompt:STRING:required, aspectRatio:LIST:optional, resolution:LIST:required, quality:LIST:required | 0.06-4.16 CNY/次 by quality,resolution |
 | `rhart-image-g-2/image-to-image` | gpt-image-2.0/edit-channel-low-price | prompt:STRING:required, imageUrls:IMAGE:required, aspectRatio:LIST:optional, resolution:LIST:optional | 0.1 CNY/次 |
 | `rhart-image-g-2/text-to-image` | gpt-image-2.0/text-to-image-channel-low-price | prompt:STRING:required, aspectRatio:LIST:optional, resolution:LIST:optional | 0.1 CNY/次 |
 | `rhart-image-g-3/image-to-image` | grok-3-image-to-image | prompt:STRING:required, imageUrls:IMAGE:required | 1.0 CNY/次 |
@@ -124,6 +126,8 @@ The AI must not infer enum values or required fields from this summary.
 | `rhart-image-x-official/text-to-image` | xai/grok-imagine-image/text-to-image-official-stable | prompt:STRING:required, aspectRatio:LIST:optional, outputFormat:LIST:required | 0.14 CNY/次 |
 | `rhart-image/f-dev` | f-dev |  | 0.04 CNY/次 |
 | `rhart-image/f-dev-lora` | f-dev-lora |  | 0.03 CNY/次 |
+| `rhart-imagine-image-quality/edit` | xai/rhart-imagine-image-quality/edit-official-stable | prompt:STRING:required, imageUrl:IMAGE:required, aspectRatio:LIST:optional, resolution:LIST:required, numImages:LIST:required, outputFormat:LIST:optional | 0.44-0.57 CNY/次 by resolution,numImages |
+| `rhart-imagine-image-quality/text-to-image` | xai/rhart-imagine-image-quality/text-to-image-official-stable | prompt:STRING:required, aspectRatio:LIST:optional, resolution:LIST:required, numImages:LIST:required, outputFormat:LIST:optional | 0.38-0.5 CNY/次 by resolution,numImages |
 | `seedream-v4.5/image-to-image` | seedream-v4.5/image-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, imageUrls:IMAGE:required, sequentialImageGeneration:LIST:optional, maxImages:INT:optional, resolution:LIST:optional | 0.2 CNY/次 by maxImages |
 | `seedream-v4.5/text-to-image` | seedream-v4.5/text-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, sequentialImageGeneration:LIST:optional, maxImages:INT:optional, resolution:LIST:optional | 0.2 CNY/次 by maxImages |
 | `seedream-v4/image-to-image` | seedream-v4/image-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, imageUrls:IMAGE:required, sequentialImageGeneration:LIST:optional, maxImages:INT:optional, resolution:LIST:optional | 0.14 CNY/次 by maxImages |
@@ -147,6 +151,7 @@ The AI must not infer enum values or required fields from this summary.
 | Endpoint | Name | Inputs | Pricing |
 | --- | --- | --- | --- |
 | `bytedance/seedance-2.0-global/upload-asset` | seedance-2.0-global/upload-asset | assetType:LIST:required, url:CommonMedia:required | 0.0 CNY/次 |
+| `bytedance/seedance-2.0-global/upload-asset-channel-low-price` | seedance-2.0-global/upload-asset-channel-low-price | assetType:LIST:required, url:CommonMedia:required | 0.0 CNY/次 |
 | `kling-elements` | kling-elements | name:STRING:required, description:STRING:required, imageUrl:IMAGE:required, elementReferList:IMAGE:required | 0.06 CNY/次 |
 | `kling-lip-sync/identify-face` | kling-lip-sync/identify-face | videoUrl:VIDEO:optional, videoId:STRING:optional | 0.04 CNY/次 |
 | `kling-lip-sync/tts` | kling-lip-sync/tts | text:STRING:required, voiceId:LIST:required, voiceLanguage:LIST:required, voiceSpeed:FLOAT:optional | 0.04 CNY/次 |
@@ -154,19 +159,23 @@ The AI must not infer enum values or required fields from this summary.
 | `marble-1.1-plus/text-to-world` | marble-1.1-plus/text-to-world | prompt:STRING:optional, disableRecaption:BOOLEAN:optional, displayName:STRING:optional, seed:INT:optional, permissionPublic:BOOLEAN:optional, permissionAllowIdAccess:BOOLEAN:optional, tags:STRING:optional, permissionAllowedReaders:STRING:optional, permissionAllowedWriters:STRING:optional | 20.7 CNY/次 |
 | `marble-1.1/text-to-world` | marble-1.1/text-to-world | prompt:STRING:optional, disableRecaption:BOOLEAN:optional, displayName:STRING:optional, seed:INT:optional, permissionPublic:BOOLEAN:optional, permissionAllowIdAccess:BOOLEAN:optional, tags:STRING:optional, permissionAllowedReaders:STRING:optional, permissionAllowedWriters:STRING:optional | 10.62 CNY/次 |
 | `marble/upload-media-asset` | marble/upload-media-asset | fileName:STRING:required, kind:LIST:required, extension:STRING:optional, imageUrl:IMAGE:optional, videoUrl:VIDEO:optional | 9999.0 CNY/次 |
-| `mureka-7.6/instrumental-generate` | mureka-7.6/instrumental-generate | prompt:STRING:optional, n:INT:required, instrumentalId:STRING:optional, stream:BOOLEAN:optional | 0.204 CNY/次 by n |
-| `mureka-7.6/song-extend` | mureka-7.6/song-extend | songId:STRING:optional, uploadAudioId:STRING:optional, lyrics:STRING:required, extendAt:INT:required | 0.245 CNY/次 |
-| `mureka-7.6/song-generate` | mureka-7.6/song-generate | lyrics:STRING:required, prompt:STRING:optional, n:INT:required, referenceId:STRING:optional, vocalId:STRING:optional, melodyId:STRING:optional, stream:BOOLEAN:optional | 0.204 CNY/次 by n |
-| `mureka-8/instrumental-generate` | mureka-8/instrumental-generate | prompt:STRING:optional, n:INT:required, instrumentalId:STRING:optional, stream:BOOLEAN:optional | 0.306 CNY/次 by n |
-| `mureka-8/song-extend` | mureka-8/song-extend | songId:STRING:optional, uploadAudioId:STRING:optional, lyrics:STRING:required, extendAt:INT:required, extendType:LIST:optional | 0.68 CNY/次 |
-| `mureka-8/song-generate` | mureka-8/song-generate | lyrics:STRING:required, prompt:STRING:optional, n:INT:required, referenceId:STRING:optional, vocalId:STRING:optional, melodyId:STRING:optional, stream:BOOLEAN:optional | 0.306 CNY/次 by n |
-| `mureka-9/instrumental-generate` | mureka-9/instrumental-generate | prompt:STRING:optional, n:INT:required, instrumentalId:STRING:optional, stream:BOOLEAN:optional | 0.306 CNY/次 by n |
-| `mureka-9/song-generate` | mureka-9/song-generate | lyrics:STRING:required, prompt:STRING:optional, n:INT:required, referenceId:STRING:optional, vocalId:STRING:optional, melodyId:STRING:optional, stream:BOOLEAN:optional | 0.306 CNY/次 by n |
+| `mureka-ai/describe-song` | mureka-ai/describe-song | url:AUDIO:required | 0.68 CNY/次 |
+| `mureka-ai/extend-lyrics` | mureka-ai/extend-lyrics | lyrics:STRING:required | 0.014 CNY/次 |
+| `mureka-ai/files-upload` | mureka-ai/files-upload | fileUrl:AUDIO:required, purpose:LIST:required | 0.0 CNY/次 |
+| `mureka-ai/generate-lyrics` | mureka-ai/generate-lyrics | prompt:STRING:required | 0.06 CNY/次 |
+| `mureka-ai/mureka-o2/generate-song` | mureka-o2/generate-song | lyrics:STRING:required, prompt:STRING:optional, n:INT:required, referenceId:STRING:optional | 0.28 CNY/次 by n |
+| `mureka-ai/mureka-v7.6/extend-song` | mureka-v7.6/extend-song | lyrics:STRING:required, extendAt:INT:required, fileUrl:AUDIO:required | 0.245 CNY/次 |
+| `mureka-ai/mureka-v7.6/generate-bgm` | mureka-v7.6/generate-bgm | prompt:STRING:optional, instrumentalId:STRING:optional, n:INT:required, stream:BOOLEAN:optional | 0.19 CNY/次 by n |
+| `mureka-ai/mureka-v7.6/generate-song` | mureka-v7.6/generate-song | lyrics:STRING:required, prompt:STRING:optional, n:INT:required, referenceId:STRING:optional, vocalId:STRING:optional, melodyId:STRING:optional, stream:BOOLEAN:optional | 0.19 CNY/次 by n |
+| `mureka-ai/mureka-v8/extend-song` | mureka-v8/extend-song | lyrics:STRING:required, extendAt:INT:required, extendType:LIST:optional, fileUrl:AUDIO:required | 0.63 CNY/次 |
+| `mureka-ai/mureka-v8/generate-bgm` | mureka-v8/generate-bgm | prompt:STRING:optional, n:INT:required, instrumentalId:STRING:optional, stream:BOOLEAN:optional | 0.28 CNY/次 by n |
+| `mureka-ai/mureka-v8/generate-song` | mureka-v8/generate-song | lyrics:STRING:required, prompt:STRING:optional, n:INT:required, referenceId:STRING:optional, vocalId:STRING:optional, melodyId:STRING:optional, stream:BOOLEAN:optional | 0.28 CNY/次 by n |
+| `mureka-ai/mureka-v9/generate-bgm` | mureka-v9/generate-bgm | prompt:STRING:optional, n:INT:required, instrumentalId:STRING:optional, stream:BOOLEAN:optional | 0.28 CNY/次 by n |
+| `mureka-ai/mureka-v9/generate-song` | mureka-v9/generate-song | lyrics:STRING:required, prompt:STRING:optional, n:INT:required, referenceId:STRING:optional, vocalId:STRING:optional, melodyId:STRING:optional, stream:BOOLEAN:optional | 0.28 CNY/次 by n |
+| `mureka-ai/recognize-song` | mureka-ai/recognize-song | uploadAudioId:STRING:required | 0.068 CNY/次 |
+| `mureka-ai/stem-song` | mureka-ai/stem-song | url:AUDIO:required, model:LIST:required | 0.408-4.762 CNY/次 by model |
+| `mureka-ai/vocal-clone` | mureka-ai/vocal-clone | fileUrl:AUDIO:required | 31.5 CNY/次 |
 | `mureka-o2/instrumental-generate` | mureka-o2/instrumental-generate | prompt:STRING:optional, n:INT:required, instrumentalId:STRING:optional, stream:BOOLEAN:optional |  |
-| `mureka-o2/song-generate` | mureka-o2/song-generate | lyrics:STRING:required, prompt:STRING:optional, n:INT:required, referenceId:STRING:optional | 0.306 CNY/次 by n |
-| `mureka/files-upload` | mureka/files-upload | fileUrl:AUDIO:required, purpose:LIST:required | 0.0 CNY/次 |
-| `mureka/lyrics-generate` | mureka/lyrics-generate | prompt:STRING:required | 0.061 CNY/次 |
-| `mureka/vocal-clone` | mureka/vocal-clone | fileUrl:AUDIO:required | 34.0 CNY/次 |
 | `pixverse-v6/extend` | pixverse-v6/extend | prompt:STRING:required, videoUrl:VIDEO:required, resolution:LIST:required, duration:INT:required, generateAudioSwitch:BOOLEAN:required, negativePrompt:STRING:optional, style:LIST:optional, seed:INT:optional | 0.16-0.73 CNY/秒 by resolution,generateAudioSwitch |
 | `rhart-text-g-25-flash-cv/image-to-text` | rhart-text-g-25-flash-cv/image-to-text  | prompt:STRING:required, imageUrl:IMAGE:required | 0.02 CNY/次 |
 | `rhart-text-g-25-flash/image-to-text` | rhart-text-g-25-flash/image-to-text | prompt:STRING:required, imageUrl:IMAGE:required | 0.02 CNY/次 |
@@ -202,6 +211,7 @@ The AI must not infer enum values or required fields from this summary.
 | `alibaba/wan-2.6/reference-to-video` | wan-2.6-reference-to-video | prompt:STRING:required, negativePrompt:STRING:optional, videoUrls:VIDEO:optional, imageUrls:IMAGE:optional, size:LIST:required, duration:LIST:required, shotType:LIST:optional | 0.45-0.75 CNY/秒 by size |
 | `alibaba/wan-2.6/reference-to-video-flash` | wan-2.6-reference-to-video-flash | prompt:STRING:required, negativePrompt:STRING:optional, videoUrls:VIDEO:optional, imageUrls:IMAGE:optional, size:LIST:required, duration:LIST:required, shotType:LIST:optional, audio:BOOLEAN:required | 0.11-0.38 CNY/秒 by audio,size |
 | `alibaba/wan-2.6/text-to-video` | alibaba/wan-2.6/text-to-video | prompt:STRING:required, negativePrompt:STRING:optional, duration:LIST:required, resolution:LIST:required, shotType:LIST:required | 2.25-11.25 CNY/次 by resolution,duration |
+| `alibaba/wan-2.7-spicy/image-to-video` | wan-2.7-spicy/image-to-video | prompt:STRING:optional, imageUrl:IMAGE:required, audioUrl:AUDIO:optional, negativePrompt:STRING:optional, resolution:LIST:required, duration:INT:required, promptExtend:BOOLEAN:optional, seed:INT:optional | 0.91-1.4 CNY/秒 by resolution |
 | `alibaba/wan-2.7/image-to-video` | wan-2.7/image-to-video | prompt:STRING:optional, firstImageUrl:IMAGE:required, lastImageUrl:IMAGE:optional, audioUrl:AUDIO:optional, negativePrompt:STRING:optional, resolution:LIST:required, duration:LIST:required, promptExtend:BOOLEAN:optional, seed:INT:optional | 0.51-0.85 CNY/秒 by resolution |
 | `alibaba/wan-2.7/reference-to-video` | wan-2.7-reference-to-video | prompt:STRING:required, videoUrls:VIDEO:optional, imageUrls:IMAGE:optional, audioUrl:AUDIO:optional, negativePrompt:STRING:optional, resolution:LIST:required, duration:LIST:required, aspectRatio:LIST:required, promptExtend:BOOLEAN:optional, seed:INT:optional | pricing available; see pricing.public.json |
 | `alibaba/wan-2.7/text-to-video` | wan-2.7/text-to-video | prompt:STRING:required, negativePrompt:STRING:optional, audioUrl:AUDIO:optional, duration:LIST:required, resolution:LIST:required, aspectRatio:LIST:required, promptExtend:BOOLEAN:optional, seed:INT:optional | 0.51-0.85 CNY/秒 by resolution |
@@ -279,7 +289,7 @@ The AI must not infer enum values or required fields from this summary.
 | `pixverse-v5.5/text-to-video` | pixverse-v5.5/text-to-video | prompt:STRING:required, negativePrompt:STRING:optional, resolution:LIST:required, duration:LIST:required, aspectRatio:LIST:optional, thinkingType:LIST:optional, generateAudioSwitch:LIST:required, generateMultiClipSwitch:LIST:required | 3.1-19.4 CNY/次 by resolution,duration,generateAudioSwitch,generateMultiClipSwitch |
 | `pixverse-v5.6/image-to-video` | pixverse-v5.6/image-to-video | prompt:STRING:required, imageUrl:IMAGE:required, resolution:LIST:optional, duration:LIST:optional, generateAudioSwitch:LIST:required, thinkingType:LIST:optional, negativePrompt:STRING:optional | 2.3-12.67 CNY/次 by resolution,duration,generateAudioSwitch |
 | `pixverse-v5.6/text-to-video` | pixverse-v5.6/text-to-video | prompt:STRING:required, resolution:LIST:optional, duration:LIST:optional, aspectRatio:LIST:optional, generateAudioSwitch:LIST:required, thinkingType:LIST:optional, negativePrompt:STRING:optional | 2.3-12.67 CNY/次 by resolution,duration,generateAudioSwitch |
-| `pixverse-v6/effects` | pixverse-v6/effects | imageUrls:IMAGE:required, templateId:STRING:required, prompt:STRING:optional, quality:LIST:required, duration:INT:required, motionMode:LIST:optional, seed:INT:optional, negativePrompt:STRING:optional, generateAudioSwitch:BOOLEAN:optional, thinkingType:LIST:optional | 0.001 CNY/次 |
+| `pixverse-v6/effects` | pixverse-v6/effects | imageUrls:IMAGE:required, templateId:STRING:required, prompt:STRING:optional, quality:LIST:required, duration:INT:required, motionMode:LIST:optional, seed:INT:optional, negativePrompt:STRING:optional, generateAudioSwitch:BOOLEAN:optional, thinkingType:LIST:optional | 100.0 CNY/次 |
 | `pixverse-v6/image-to-video` | pixverse-v6/image-to-video | imageUrl:IMAGE:required, prompt:STRING:required, resolution:LIST:required, duration:INT:required, generateAudioSwitch:BOOLEAN:required | 0.16-0.73 CNY/秒 by resolution,generateAudioSwitch |
 | `pixverse-v6/text-to-video` | pixverse-v6/text-to-video | prompt:STRING:required, resolution:LIST:required, duration:INT:required, generateAudioSwitch:BOOLEAN:required, aspectRatio:LIST:optional | 0.16-0.73 CNY/秒 by resolution,generateAudioSwitch |
 | `pixverse-v6/transition` | pixverse-v6/transition | prompt:STRING:required, firstImageUrl:IMAGE:required, endImageUrl:IMAGE:required, resolution:LIST:required, duration:INT:required, generateAudioSwitch:BOOLEAN:required, generateMultiClipSwitch:BOOLEAN:required, aspectRatio:LIST:optional, style:LIST:optional, negativePrompt:STRING:optional, seed:INT:optional, thinkingType:BOOLEAN:optional | 0.16-0.73 CNY/秒 by resolution,generateAudioSwitch |
@@ -305,6 +315,7 @@ The AI must not infer enum values or required fields from this summary.
 | `rhart-video-s/text-to-video` | sora-2/text-to-video-channel-low-price | duration:LIST:required, prompt:STRING:required, aspectRatio:LIST:required, storyboard:BOOLEAN:optional | 1 CNY/次 by duration |
 | `rhart-video-s/text-to-video-pro-deprecated` | sora-2/text-to-video-pro-channel-low-price | prompt:STRING:required, duration:LIST:required, aspectRatio:LIST:required, storyboard:BOOLEAN:optional | 1 CNY/次 by duration,aspectRatio |
 | `rhart-video-v3.1-fast-official/image-to-video` | google/veo3.1-fast/image-to-video-official-stable | prompt:STRING:required, imageUrl:IMAGE:required, lastImageUrl:IMAGE:optional, negativePrompt:STRING:optional, seed:INT:optional, aspectRatio:LIST:optional, resolution:LIST:required, duration:LIST:required, generateAudio:BOOLEAN:required | 2.35-7.04 CNY/次 by duration,generateAudio |
+| `rhart-video-v3.1-fast-official/reference-to-video` | google/veo3.1-fast/reference-to-video-official-stable | prompt:STRING:required, imageUrls:IMAGE:required, aspectRatio:LIST:optional, resolution:LIST:required, generateAudio:BOOLEAN:optional, negativePrompt:STRING:optional, seed:INT:optional | 4.03-6.05 CNY/次 by resolution,generateAudio |
 | `rhart-video-v3.1-fast-official/text-to-video` | google/veo3.1-fast/text-to-video-official-stable | prompt:STRING:required, aspectRatio:LIST:optional, duration:LIST:required, resolution:LIST:required, generateAudio:BOOLEAN:required, negativePrompt:STRING:optional, seed:INT:optional | 2.35-7.04 CNY/次 by duration,generateAudio |
 | `rhart-video-v3.1-fast-official/video-extend` | google/veo3.1-fast/video-extend-official-stable | video:VIDEO:required, prompt:STRING:optional, resolution:LIST:required, negativePrompt:STRING:optional, seed:INT:optional | 6.56 CNY/次 |
 | `rhart-video-v3.1-fast/image-to-video` | google/veo3.1-fast/image-to-video-channel-low-price | prompt:STRING:required, aspectRatio:LIST:required, imageUrls:IMAGE:required, duration:LIST:optional, resolution:LIST:required | 0.2-0.5 CNY/次 by resolution |
@@ -330,6 +341,7 @@ The AI must not infer enum values or required fields from this summary.
 | `rhart-video/sparkvideo-2.0/multimodal-video` | Seedance2.0 Multimodal Video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, imageUrls:IMAGE:optional, videoUrls:VIDEO:optional, audioUrls:AUDIO:optional, generateAudio:BOOLEAN:optional, ratio:LIST:optional, returnLastFrame:BOOLEAN:optional | 0.6-3 CNY/秒起 by resolution |
 | `rhart-video/sparkvideo-2.0/text-to-video` | Seedance2.0 Text to Video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, generateAudio:BOOLEAN:optional, ratio:LIST:optional, webSearch:BOOLEAN:optional, returnLastFrame:BOOLEAN:optional | 0.6-3 CNY/秒 by resolution |
 | `rhart-video/sparkvideo-2.0/upload-asset` | seedance-2.0/upload-asset | assetType:LIST:required, url:CommonMedia:required | 0.0 CNY/次 |
+| `rhart-video/sparkvideo-2.0/upload-asset-channel-low-price` | seedance-2.0/upload-asset-channel-low-price | assetType:LIST:required, url:CommonMedia:required | 0.0 CNY/次 |
 | `rhart-video/video-fps-increaser` | rh-video-fps-increaser | videoUrl:VIDEO:required | 0.07 CNY/秒 |
 | `rhart-video/video-upscaler` | rh-video-upscaler | videoUrl:VIDEO:required, targetResolution:LIST:required | 0.14-0.56 CNY/second by targetResolution |
 | `seedance-v1-lite/reference-to-video` | seedance-v1-lite-reference-to-video | prompt:STRING:required, imageUrls:IMAGE:required, duration:LIST:required, cameraFixed:LIST:required, resolution:LIST:required, aspectRatio:LIST:required | 0.07-0.15 CNY/秒 by resolution |

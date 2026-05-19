@@ -12989,6 +12989,8 @@
         "required": true,
         "label": "imageUrl",
         "description": "imageUrl",
+        "multipleInputs": true,
+        "maxInputNum": 3,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       },
@@ -31602,71 +31604,6 @@
     ]
   },
   {
-    "class_name": "MurekaFilesUpload",
-    "display_name": "RH Mureka 文件上传",
-    "name_cn": "Mureka 文件上传",
-    "name_en": "mureka/files-upload",
-    "endpoint": "mureka/files-upload",
-    "output_type": "string",
-    "category": "RunningHub/Mureka",
-    "params": [
-      {
-        "fieldKey": "fileUrl",
-        "type": "AUDIO",
-        "required": true,
-        "label": "fileUrl",
-        "description": "待上传的音频文件 URL；后缀必须与 purpose 匹配：reference / vocal / instrumental / voice / audio / remix 仅支持 mp3 / m4a；melody 额外支持 mid（推荐 MIDI）。文件大小 ≤ 10 MB。",
-        "accept": "[\"mp3\",\"m4a\",\"mid\"]",
-        "maxSize": 10
-      },
-      {
-        "fieldKey": "purpose",
-        "type": "LIST",
-        "required": true,
-        "label": "purpose",
-        "description": "用途。各值对应不同的支持格式与时长裁剪：reference/instrumental(30s 截取)、vocal(15-30s)、melody(5-60s, 支持 mid)、voice(5-15s)、audio/remix(普通音频)。",
-        "defaultValue": "reference",
-        "options": [
-          {
-            "value": "reference",
-            "description": "reference（mp3/m4a，截取 30s 作为参考音频）",
-            "descriptionEn": "reference (mp3/m4a, trimmed to 30s reference audio)"
-          },
-          {
-            "value": "vocal",
-            "description": "vocal（mp3/m4a，提取 15-30s 人声）",
-            "descriptionEn": "vocal (mp3/m4a, extract 15-30s vocal segment)"
-          },
-          {
-            "value": "melody",
-            "description": "melody（mp3/m4a/mid，5-60s 旋律；推荐 MIDI）",
-            "descriptionEn": "melody (mp3/m4a/mid, 5-60s; MIDI recommended)"
-          },
-          {
-            "value": "instrumental",
-            "description": "instrumental（mp3/m4a，截取 30s 伴奏参考）",
-            "descriptionEn": "instrumental (mp3/m4a, 30s instrumental reference)"
-          },
-          {
-            "value": "voice",
-            "description": "voice（mp3/m4a，5-15s 音色样本）",
-            "descriptionEn": "voice (mp3/m4a, 5-15s voice sample)"
-          },
-          {
-            "value": "audio",
-            "description": "audio（mp3/m4a，普通音频，用于歌曲延长等场景）",
-            "descriptionEn": "audio (mp3/m4a, generic audio; used for song extension etc.)"
-          },
-          {
-            "value": "remix",
-            "description": "remix（mp3/m4a，普通音频，用于 remix 场景）",
-            "descriptionEn": "remix (mp3/m4a, generic audio; used for remix scenarios)"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "class_name": "YouchuanTextToImageV81",
     "display_name": "RH 悠船文生图-v8.1",
     "name_cn": "悠船文生图-v8.1",
@@ -31840,320 +31777,9 @@
     ]
   },
   {
-    "class_name": "Mureka76SongGenerate",
-    "display_name": "RH Mureka mureka-7.6 歌曲生成",
-    "name_cn": "Mureka mureka-7.6 歌曲生成",
-    "name_en": "mureka-7.6/song-generate",
-    "endpoint": "mureka-7.6/song-generate",
-    "output_type": "string",
-    "category": "RunningHub/Mureka",
-    "params": [
-      {
-        "fieldKey": "lyrics",
-        "type": "STRING",
-        "required": true,
-        "label": "lyrics",
-        "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
-        "defaultValue": "晨光漫过窗台 微风捎来温柔 烟火人间走走 心事慢慢罢休  云卷云舒自流 岁月安静温柔 山河皆有白首 平凡亦是自由",
-        "maxLength": 3000
-      },
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
-        "defaultValue": "吉他主旋律，清澈干净曲风",
-        "maxLength": 1024
-      },
-      {
-        "fieldKey": "n",
-        "type": "INT",
-        "required": true,
-        "label": "n",
-        "description": "每次生成的歌曲数量（默认 2，最大 3，按生成数量计费）。",
-        "defaultValue": 2,
-        "min": 1,
-        "max": 3,
-        "step": 1
-      },
-      {
-        "fieldKey": "referenceId",
-        "type": "STRING",
-        "required": false,
-        "label": "referenceId",
-        "description": "参考音乐文件 ID，由 /mureka/files-upload (purpose=reference) 返回；可与 vocalId 组合。",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "vocalId",
-        "type": "STRING",
-        "required": false,
-        "label": "vocalId",
-        "description": "音色文件 ID，可由 /mureka/files-upload (purpose=vocal) 或 /mureka/vocal-clone 返回；可与 prompt 或 referenceId 组合。",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "melodyId",
-        "type": "STRING",
-        "required": false,
-        "label": "melodyId",
-        "description": "旋律文件 ID（mp3/m4a/mid，推荐 MIDI），由 /mureka/files-upload (purpose=melody) 返回；与其它控制项互斥。",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "stream",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "stream",
-        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）；mureka-o1 不支持。",
-        "defaultValue": false
-      }
-    ]
-  },
-  {
-    "class_name": "MurekaO2SongGenerate",
-    "display_name": "RH Mureka mureka-o2 歌曲生成",
-    "name_cn": "Mureka mureka-o2 歌曲生成",
-    "name_en": "mureka-o2/song-generate",
-    "endpoint": "mureka-o2/song-generate",
-    "output_type": "string",
-    "category": "RunningHub/Mureka",
-    "params": [
-      {
-        "fieldKey": "lyrics",
-        "type": "STRING",
-        "required": true,
-        "label": "lyrics",
-        "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
-        "defaultValue": "【Verse 1】 站台的钟声敲响了告别 行李箱拖着昨夜未说的感谢 梧桐叶飘落在空荡的街 我看着车窗里倒映的自己 学着重叠  【Pre-Chorus】 不是所有答案都写在那页 有些路注定要独自去穿越  【Chorus】 下一站的光 会把影子拉长 那些慌慌张张 都变成了翅膀 下一站的光 刺眼却也明亮 我会逆着风闯 哪怕跌跌撞撞 也要活得滚烫",
-        "maxLength": 3000
-      },
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
-        "defaultValue": "舒缓温柔旋律，温暖氛围感，清澈干净曲风",
-        "maxLength": 1024
-      },
-      {
-        "fieldKey": "n",
-        "type": "INT",
-        "required": true,
-        "label": "n",
-        "description": "每次生成的歌曲数量（默认 2，最大 3，按生成数量计费）。",
-        "defaultValue": 2,
-        "min": 1,
-        "max": 3,
-        "step": 1
-      },
-      {
-        "fieldKey": "referenceId",
-        "type": "STRING",
-        "required": false,
-        "label": "referenceId",
-        "description": "参考音乐文件 ID，由 /mureka/files-upload (purpose=reference) 返回；可与 vocalId 组合。",
-        "maxLength": 64
-      }
-    ]
-  },
-  {
-    "class_name": "Mureka8SongGenerate",
-    "display_name": "RH Mureka mureka-8 歌曲生成",
-    "name_cn": "Mureka mureka-8 歌曲生成",
-    "name_en": "mureka-8/song-generate",
-    "endpoint": "mureka-8/song-generate",
-    "output_type": "string",
-    "category": "RunningHub/Mureka",
-    "params": [
-      {
-        "fieldKey": "lyrics",
-        "type": "STRING",
-        "required": true,
-        "label": "lyrics",
-        "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
-        "defaultValue": "[前奏] [副歌] 你在我耳边低语 情话甜如蜜 却躲着我眼神 不愿直视我 我的心在跳 每次想起你 这酸涩滋味 真实又甜蜜  [主歌] 夜晚的城市霓虹闪烁 灯光下影子拉长 我在人群中寻找你的脸庞 却只能看见自己的迷茫 想靠近你 却怕惊扰了这份宁静 你是我心里的秘密 羞涩又温暖  [副歌] 你在我耳边低语 情话甜如蜜 却躲着我眼神 不愿直视我 我的心在跳 每次想起你 这酸涩滋味 真实又甜蜜  [主歌] 清晨的阳光洒满窗台 照亮了寂寞的房间 我在日记里写下你的名字 试图忘记却更难 想靠近你 却怕惊扰了这份宁静 你是我心里的秘密 羞涩又温暖  [副歌] 你在我耳边低语 情话甜如蜜 却躲着我眼神 不愿直视我 我的心在跳 每次想起你 这酸涩滋味 真实又甜蜜  [副歌] 你在我耳边低语 情话甜如蜜 却躲着我眼神 不愿直视我 我的心在跳 每次想起你 这酸涩滋味 真实又甜蜜",
-        "maxLength": 3000
-      },
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
-        "defaultValue": "吉他主旋律，清澈干净曲风，舒缓温柔旋律，简约编曲",
-        "maxLength": 1024
-      },
-      {
-        "fieldKey": "n",
-        "type": "INT",
-        "required": true,
-        "label": "n",
-        "description": "每次生成的歌曲数量（默认 2，最大 3，按生成数量计费）。",
-        "defaultValue": 2,
-        "min": 1,
-        "max": 3,
-        "step": 1
-      },
-      {
-        "fieldKey": "referenceId",
-        "type": "STRING",
-        "required": false,
-        "label": "referenceId",
-        "description": "参考音乐文件 ID，由 /mureka/files-upload (purpose=reference) 返回；可与 vocalId 组合。",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "vocalId",
-        "type": "STRING",
-        "required": false,
-        "label": "vocalId",
-        "description": "音色文件 ID，可由 /mureka/files-upload (purpose=vocal) 或 /mureka/vocal-clone 返回；可与 prompt 或 referenceId 组合。",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "melodyId",
-        "type": "STRING",
-        "required": false,
-        "label": "melodyId",
-        "description": "旋律文件 ID（mp3/m4a/mid，推荐 MIDI），由 /mureka/files-upload (purpose=melody) 返回；与其它控制项互斥。",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "stream",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "stream",
-        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）；mureka-o1 不支持。",
-        "defaultValue": false
-      }
-    ]
-  },
-  {
-    "class_name": "Mureka9SongGenerate",
-    "display_name": "RH Mureka mureka-9 歌曲生成",
-    "name_cn": "Mureka mureka-9 歌曲生成",
-    "name_en": "mureka-9/song-generate",
-    "endpoint": "mureka-9/song-generate",
-    "output_type": "string",
-    "category": "RunningHub/Mureka",
-    "params": [
-      {
-        "fieldKey": "lyrics",
-        "type": "STRING",
-        "required": true,
-        "label": "lyrics",
-        "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
-        "defaultValue": " [主歌] 你说要离开这熟悉的街 留下一串串欢笑和泪水 我们曾一起走过黄昏和黎明 现在只剩风声和月光  [副歌] 但请不要忧伤 因为离别后是新的希望 就像彩虹在风雨后 我们依然紧紧相拥  [主歌] 你说要去远方追逐梦想 但我不会让你孤单彷徨 我会在每个夜晚点亮灯光 等你回来分享每一个梦想  [副歌] 但请不要忧伤 因为离别后是新的希望 就像夜空中的星星 指引你走向未来的方向  [桥段] 即使世界变得不一样 心中的笑容永远闪亮 让我们勇敢地向前走 直到再次相遇的那一天  [副歌] 但请不要忧伤 因为离别后是新的希望 就像彩虹在风雨后 我们依然紧紧相拥  [副歌] 但请不要忧伤 因为离别后是新的希望 就像夜空中的星星 指引你走向未来的方向",
-        "maxLength": 3000
-      },
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
-        "defaultValue": "舒缓温柔旋律，简约编曲，温暖氛围感，清澈干净曲风",
-        "maxLength": 1024
-      },
-      {
-        "fieldKey": "n",
-        "type": "INT",
-        "required": true,
-        "label": "n",
-        "description": "每次生成的歌曲数量（默认 2，最大 3，按生成数量计费）。",
-        "defaultValue": 2,
-        "min": 1,
-        "max": 3,
-        "step": 1
-      },
-      {
-        "fieldKey": "referenceId",
-        "type": "STRING",
-        "required": false,
-        "label": "referenceId",
-        "description": "参考音乐文件 ID，由 /mureka/files-upload (purpose=reference) 返回；可与 vocalId 组合。",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "vocalId",
-        "type": "STRING",
-        "required": false,
-        "label": "vocalId",
-        "description": "音色文件 ID，可由 /mureka/files-upload (purpose=vocal) 或 /mureka/vocal-clone 返回；可与 prompt 或 referenceId 组合。",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "melodyId",
-        "type": "STRING",
-        "required": false,
-        "label": "melodyId",
-        "description": "旋律文件 ID（mp3/m4a/mid，推荐 MIDI），由 /mureka/files-upload (purpose=melody) 返回；与其它控制项互斥。",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "stream",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "stream",
-        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）；mureka-o1 不支持。",
-        "defaultValue": false
-      }
-    ]
-  },
-  {
-    "class_name": "Mureka76InstrumentalGenerate",
-    "display_name": "RH Mureka mureka-7.6 伴奏生成",
-    "name_cn": "Mureka mureka-7.6 伴奏生成",
-    "name_en": "mureka-7.6/instrumental-generate",
-    "endpoint": "mureka-7.6/instrumental-generate",
-    "output_type": "string",
-    "category": "RunningHub/Mureka",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "伴奏风格提示词，最长 1024 字符；与其它控制项互斥。",
-        "defaultValue": "纯音乐，现代流行，钢琴分解和弦 + 大提琴 + 弦乐铺底 + 轻微鼓点，氛围感拉满、诉说暗恋的青春情愫，，编曲完整，无人声无哼唱，高音质立体声，干净消音伴奏",
-        "maxLength": 1024
-      },
-      {
-        "fieldKey": "n",
-        "type": "INT",
-        "required": true,
-        "label": "n",
-        "description": "每次生成的伴奏数量（默认 2，最大 3，按生成数量计费）。",
-        "defaultValue": 2,
-        "min": 1,
-        "max": 3,
-        "step": 1
-      },
-      {
-        "fieldKey": "instrumentalId",
-        "type": "STRING",
-        "required": false,
-        "label": "instrumentalId",
-        "description": "参考伴奏文件 ID，由 /mureka/files-upload (purpose=instrumental) 返回；与 prompt 互斥。",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "stream",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "stream",
-        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）。",
-        "defaultValue": false
-      }
-    ]
-  },
-  {
     "class_name": "MurekaO2InstrumentalGenerate",
-    "display_name": "RH Mureka mureka-o2 伴奏生成",
-    "name_cn": "Mureka mureka-o2 伴奏生成",
+    "display_name": "RH Mureka mureka-o2 伴奏生成-暂不可用",
+    "name_cn": "Mureka mureka-o2 伴奏生成-暂不可用",
     "name_en": "mureka-o2/instrumental-generate",
     "endpoint": "mureka-o2/instrumental-generate",
     "output_type": "string",
@@ -32166,255 +31792,6 @@
         "label": "prompt",
         "description": "伴奏风格提示词，最长 1024 字符；与其它控制项互斥。",
         "defaultValue": "纯音乐，流行摇滚/热血燃向风，BPM 140，E 大调，电吉他失真节奏 + 强力五和弦 + 合成器弦乐铺底 + 激烈鼓组（军鼓击边+底鼓双踩），氛围昂扬向上、充满力量感，编曲完整，无人声无哼唱，高音质立体声，干净伴奏。",
-        "maxLength": 1024
-      },
-      {
-        "fieldKey": "n",
-        "type": "INT",
-        "required": true,
-        "label": "n",
-        "description": "每次生成的伴奏数量（默认 2，最大 3，按生成数量计费）。",
-        "defaultValue": 2,
-        "min": 1,
-        "max": 3,
-        "step": 1
-      },
-      {
-        "fieldKey": "instrumentalId",
-        "type": "STRING",
-        "required": false,
-        "label": "instrumentalId",
-        "description": "参考伴奏文件 ID，由 /mureka/files-upload (purpose=instrumental) 返回；与 prompt 互斥。",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "stream",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "stream",
-        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）。",
-        "defaultValue": false
-      }
-    ]
-  },
-  {
-    "class_name": "Mureka8InstrumentalGenerate",
-    "display_name": "RH Mureka mureka-8 伴奏生成",
-    "name_cn": "Mureka mureka-8 伴奏生成",
-    "name_en": "mureka-8/instrumental-generate",
-    "endpoint": "mureka-8/instrumental-generate",
-    "output_type": "string",
-    "category": "RunningHub/Mureka",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "伴奏风格提示词，最长 1024 字符；与其它控制项互斥。",
-        "defaultValue": "纯音乐，乐队音乐伴奏，激昂轻摇滚，对生命的感叹，鼓点+键盘+贝斯+电吉他，编曲完整，无人声无哼唱，高音质立体声，干净消音伴奏",
-        "maxLength": 1024
-      },
-      {
-        "fieldKey": "n",
-        "type": "INT",
-        "required": true,
-        "label": "n",
-        "description": "每次生成的伴奏数量（默认 2，最大 3，按生成数量计费）。",
-        "defaultValue": 2,
-        "min": 1,
-        "max": 3,
-        "step": 1
-      },
-      {
-        "fieldKey": "instrumentalId",
-        "type": "STRING",
-        "required": false,
-        "label": "instrumentalId",
-        "description": "参考伴奏文件 ID，由 /mureka/files-upload (purpose=instrumental) 返回；与 prompt 互斥。",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "stream",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "stream",
-        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）。",
-        "defaultValue": false
-      }
-    ]
-  },
-  {
-    "class_name": "Mureka76SongExtend",
-    "display_name": "RH Mureka mureka-7.6 短歌延长",
-    "name_cn": "Mureka mureka-7.6 短歌延长",
-    "name_en": "mureka-7.6/song-extend",
-    "endpoint": "mureka-7.6/song-extend",
-    "output_type": "string",
-    "category": "RunningHub/Mureka",
-    "params": [
-      {
-        "fieldKey": "songId",
-        "type": "STRING",
-        "required": false,
-        "label": "songId",
-        "description": "由 /{model}/song-generate 生成的歌曲 ID；与 uploadAudioId 互斥。",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "uploadAudioId",
-        "type": "STRING",
-        "required": false,
-        "label": "uploadAudioId",
-        "description": "由 /mureka/files-upload (purpose=audio) 返回的文件 ID；与 songId 互斥；仅支持最近一个月生成的歌曲。",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "lyrics",
-        "type": "STRING",
-        "required": true,
-        "label": "lyrics",
-        "description": "延长部分的歌词，最长 3000 字符。",
-        "defaultValue": "晚风轻拂渡口 月色漫染眉头 往事轻放身后 余生不惊不忧 花开不问缘由 流年静静相守 人间烟火依旧 安然渡尽春秋",
-        "maxLength": 3000
-      },
-      {
-        "fieldKey": "extendAt",
-        "type": "INT",
-        "required": true,
-        "label": "extendAt",
-        "description": "延长起始时间（毫秒），有效区间 [8000, 420000]；超出歌曲时长则使用歌曲末尾。",
-        "defaultValue": 8000,
-        "min": 8000,
-        "max": 420000,
-        "step": 1
-      }
-    ]
-  },
-  {
-    "class_name": "Mureka8SongExtend",
-    "display_name": "RH Mureka mureka-8 短歌延长",
-    "name_cn": "Mureka mureka-8 短歌延长",
-    "name_en": "mureka-8/song-extend",
-    "endpoint": "mureka-8/song-extend",
-    "output_type": "string",
-    "category": "RunningHub/Mureka",
-    "params": [
-      {
-        "fieldKey": "songId",
-        "type": "STRING",
-        "required": false,
-        "label": "songId",
-        "description": "由 /{model}/song-generate 生成的歌曲 ID；与 uploadAudioId 互斥。",
-        "defaultValue": "137649551835137",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "uploadAudioId",
-        "type": "STRING",
-        "required": false,
-        "label": "uploadAudioId",
-        "description": "由 /mureka/files-upload (purpose=audio) 返回的文件 ID；与 songId 互斥；仅支持最近一个月生成的歌曲。",
-        "maxLength": 64
-      },
-      {
-        "fieldKey": "lyrics",
-        "type": "STRING",
-        "required": true,
-        "label": "lyrics",
-        "description": "延长部分的歌词，最长 3000 字符。",
-        "defaultValue": "我的心在跳 每次想起你 这酸涩滋味 真实又甜蜜 啦啦啦啦 想见你",
-        "maxLength": 3000
-      },
-      {
-        "fieldKey": "extendAt",
-        "type": "INT",
-        "required": true,
-        "label": "extendAt",
-        "description": "延长起始时间（毫秒），有效区间 [8000, 420000]；超出歌曲时长则使用歌曲末尾。",
-        "defaultValue": 8000,
-        "min": 8000,
-        "max": 420000,
-        "step": 1
-      },
-      {
-        "fieldKey": "extendType",
-        "type": "LIST",
-        "required": false,
-        "label": "extendType",
-        "description": "延长方向：tail 从尾部延长，head 从头部延长（仅 mureka-8 模型支持）。",
-        "defaultValue": "tail",
-        "options": [
-          {
-            "value": "tail",
-            "description": "tail（从尾部延长）",
-            "descriptionEn": "tail (extend from end)"
-          },
-          {
-            "value": "head",
-            "description": "head（从头部延长）",
-            "descriptionEn": "head (extend from beginning)"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "class_name": "MurekaVocalClone",
-    "display_name": "RH Mureka 人声克隆",
-    "name_cn": "Mureka 人声克隆",
-    "name_en": "mureka/vocal-clone",
-    "endpoint": "mureka/vocal-clone",
-    "output_type": "string",
-    "category": "RunningHub/Mureka",
-    "params": [
-      {
-        "fieldKey": "fileUrl",
-        "type": "AUDIO",
-        "required": true,
-        "label": "fileUrl",
-        "description": "待克隆的人声音频 URL（mp3 / m4a，≤ 10 MB）。同步返回 vocalId，可作为 song/generate 的 vocalId 使用。",
-        "accept": "[\"mp3\",\"m4a\"]",
-        "maxSize": 10
-      }
-    ]
-  },
-  {
-    "class_name": "MurekaLyricsGenerate",
-    "display_name": "RH Mureka 歌词生成",
-    "name_cn": "Mureka 歌词生成",
-    "name_en": "mureka/lyrics-generate",
-    "endpoint": "mureka/lyrics-generate",
-    "output_type": "string",
-    "category": "RunningHub/Mureka",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "歌词生成的提示词（主题、关键词或描述）。",
-        "defaultValue": "按以下规则创作原创歌词： 标准结构：主歌 1、预副歌、副歌、主歌 2、预副歌、副歌、桥段、结尾。 押韵自然，有画面感，情感细腻，句式长短适合演唱。 曲风：（填空：现代流行 / 古风 / 说唱） 情绪：（填空：伤感 / 遗憾 / 治愈 / 孤独） 调性 BPM：（填空：Am 小调 BPM75） 主题故事：（填空：关于离别 / 暗恋 / 回忆 / 释怀） 只输出分段歌词，不要多余解释。",
-        "maxLength": 1024
-      }
-    ]
-  },
-  {
-    "class_name": "Mureka9InstrumentalGenerate",
-    "display_name": "RH Mureka mureka-9 伴奏生成",
-    "name_cn": "Mureka mureka-9 伴奏生成",
-    "name_en": "mureka-9/instrumental-generate",
-    "endpoint": "mureka-9/instrumental-generate",
-    "output_type": "string",
-    "category": "RunningHub/Mureka",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "伴奏风格提示词，最长 1024 字符；与其它控制项互斥。",
-        "defaultValue": "纯音乐，现代流行伤感风，BPM 75，Am 小调，钢琴分解和弦 + 大提琴 + 弦乐铺底 + 轻微鼓点，氛围感拉满、孤独深情，编曲完整，无人声无哼唱，高音质立体声，干净消音伴奏",
         "maxLength": 1024
       },
       {
@@ -32694,6 +32071,7 @@
         "required": true,
         "label": "prompt",
         "description": "正向提示词，描述要生成或编辑的图像内容",
+        "defaultValue": "在草原上起舞的异域年轻女子，写实",
         "maxLength": 6000
       },
       {
@@ -32814,6 +32192,7 @@
         "required": true,
         "label": "prompt",
         "description": "正向提示词，描述要生成或编辑的图像内容",
+        "defaultValue": "将这个图片的文字去掉，然后换成美式校园风格的海报",
         "maxLength": 6000
       },
       {
@@ -32963,6 +32342,7 @@
         "required": true,
         "label": "prompt",
         "description": "正向提示词，描述要生成或编辑的图像内容",
+        "defaultValue": "将风格换为真人真实摄像风格",
         "maxLength": 6000
       },
       {
@@ -33195,6 +32575,7 @@
         "required": true,
         "label": "prompt",
         "description": "正向提示词，描述要生成或编辑的图像内容",
+        "defaultValue": "将这个图片的背景换成更加绿色的草原，地上开满野花，远方是高高的覆盖雪的雪山，女生的裙子换成其他颜色，增加服饰和头饰的民族性",
         "maxLength": 6000
       },
       {
@@ -33718,7 +33099,7 @@
         "required": true,
         "label": "resolution",
         "description": "resolution",
-        "defaultValue": "1080P",
+        "defaultValue": "720p",
         "options": [
           {
             "value": "720p",
@@ -33760,6 +33141,1185 @@
         "min": 0,
         "max": 2147483647,
         "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiFilesUpload",
+    "display_name": "RH Mureka 文件上传",
+    "name_cn": "Mureka 文件上传",
+    "name_en": "mureka-ai/files-upload",
+    "endpoint": "mureka-ai/files-upload",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "fileUrl",
+        "type": "AUDIO",
+        "required": true,
+        "label": "fileUrl",
+        "description": "待上传的音频文件 URL；后缀必须与 purpose 匹配：reference / vocal / instrumental / voice / audio / remix 仅支持 mp3 / m4a；melody 额外支持 mid（推荐 MIDI）。文件大小 ≤ 10 MB。",
+        "accept": "[\"mp3\",\"m4a\",\"mid\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "purpose",
+        "type": "LIST",
+        "required": true,
+        "label": "purpose",
+        "description": "用途。各值对应不同的支持格式与时长裁剪：reference/instrumental(30s 截取)、vocal(15-30s)、melody(5-60s, 支持 mid)、voice(5-15s)、audio/remix(普通音频)。",
+        "defaultValue": "reference",
+        "options": [
+          {
+            "value": "reference",
+            "description": "reference（mp3/m4a，截取 30s 作为参考音频）",
+            "descriptionEn": "reference (mp3/m4a, trimmed to 30s reference audio)"
+          },
+          {
+            "value": "vocal",
+            "description": "vocal（mp3/m4a，提取 15-30s 人声）",
+            "descriptionEn": "vocal (mp3/m4a, extract 15-30s vocal segment)"
+          },
+          {
+            "value": "melody",
+            "description": "melody（mp3/m4a/mid，5-60s 旋律；推荐 MIDI）",
+            "descriptionEn": "melody (mp3/m4a/mid, 5-60s; MIDI recommended)"
+          },
+          {
+            "value": "instrumental",
+            "description": "instrumental（mp3/m4a，截取 30s 伴奏参考）",
+            "descriptionEn": "instrumental (mp3/m4a, 30s instrumental reference)"
+          },
+          {
+            "value": "voice",
+            "description": "voice（mp3/m4a，5-15s 音色样本）",
+            "descriptionEn": "voice (mp3/m4a, 5-15s voice sample)"
+          },
+          {
+            "value": "audio",
+            "description": "audio（mp3/m4a，普通音频，用于歌曲延长等场景）",
+            "descriptionEn": "audio (mp3/m4a, generic audio; used for song extension etc.)"
+          },
+          {
+            "value": "remix",
+            "description": "remix（mp3/m4a，普通音频，用于 remix 场景）",
+            "descriptionEn": "remix (mp3/m4a, generic audio; used for remix scenarios)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiMurekaV76GenerateSong",
+    "display_name": "RH Mureka-v7.6 歌曲生成",
+    "name_cn": "Mureka-v7.6 歌曲生成",
+    "name_en": "mureka-v7.6/generate-song",
+    "endpoint": "mureka-ai/mureka-v7.6/generate-song",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": true,
+        "label": "lyrics",
+        "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
+        "defaultValue": "晨光漫过窗台 微风捎来温柔 烟火人间走走 心事慢慢罢休  云卷云舒自流 岁月安静温柔 山河皆有白首 平凡亦是自由",
+        "maxLength": 3000
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
+        "defaultValue": "吉他主旋律，清澈干净曲风",
+        "maxLength": 1024
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "每次生成的歌曲数量（默认 2，最大 3，按生成数量计费）。",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "referenceId",
+        "type": "STRING",
+        "required": false,
+        "label": "referenceId",
+        "description": "参考音乐文件 ID，由 /mureka/files-upload (purpose=reference) 返回；可与 vocalId 组合。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "vocalId",
+        "type": "STRING",
+        "required": false,
+        "label": "vocalId",
+        "description": "音色文件 ID，可由 /mureka/files-upload (purpose=vocal) 或 /mureka/vocal-clone 返回；可与 prompt 或 referenceId 组合。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "melodyId",
+        "type": "STRING",
+        "required": false,
+        "label": "melodyId",
+        "description": "旋律文件 ID（mp3/m4a/mid，推荐 MIDI），由 /mureka/files-upload (purpose=melody) 返回；与其它控制项互斥。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "stream",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "stream",
+        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）；mureka-o1 不支持。",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiMurekaO2GenerateSong",
+    "display_name": "RH Mureka-o2 歌曲生成",
+    "name_cn": "Mureka-o2 歌曲生成",
+    "name_en": "mureka-o2/generate-song",
+    "endpoint": "mureka-ai/mureka-o2/generate-song",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": true,
+        "label": "lyrics",
+        "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
+        "defaultValue": "【Verse 1】 站台的钟声敲响了告别 行李箱拖着昨夜未说的感谢 梧桐叶飘落在空荡的街 我看着车窗里倒映的自己 学着重叠  【Pre-Chorus】 不是所有答案都写在那页 有些路注定要独自去穿越  【Chorus】 下一站的光 会把影子拉长 那些慌慌张张 都变成了翅膀 下一站的光 刺眼却也明亮 我会逆着风闯 哪怕跌跌撞撞 也要活得滚烫",
+        "maxLength": 3000
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
+        "defaultValue": "舒缓温柔旋律，温暖氛围感，清澈干净曲风",
+        "maxLength": 1024
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "每次生成的歌曲数量（默认 2，最大 3，按生成数量计费）。",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "referenceId",
+        "type": "STRING",
+        "required": false,
+        "label": "referenceId",
+        "description": "参考音乐文件 ID，由 /mureka/files-upload (purpose=reference) 返回；可与 vocalId 组合。",
+        "maxLength": 64
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiMurekaV8GenerateSong",
+    "display_name": "RH Mureka-v8 歌曲生成",
+    "name_cn": "Mureka-v8 歌曲生成",
+    "name_en": "mureka-v8/generate-song",
+    "endpoint": "mureka-ai/mureka-v8/generate-song",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": true,
+        "label": "lyrics",
+        "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
+        "defaultValue": "[前奏] [副歌] 你在我耳边低语 情话甜如蜜 却躲着我眼神 不愿直视我 我的心在跳 每次想起你 这酸涩滋味 真实又甜蜜  [主歌] 夜晚的城市霓虹闪烁 灯光下影子拉长 我在人群中寻找你的脸庞 却只能看见自己的迷茫 想靠近你 却怕惊扰了这份宁静 你是我心里的秘密 羞涩又温暖  [副歌] 你在我耳边低语 情话甜如蜜 却躲着我眼神 不愿直视我 我的心在跳 每次想起你 这酸涩滋味 真实又甜蜜  [主歌] 清晨的阳光洒满窗台 照亮了寂寞的房间 我在日记里写下你的名字 试图忘记却更难 想靠近你 却怕惊扰了这份宁静 你是我心里的秘密 羞涩又温暖  [副歌] 你在我耳边低语 情话甜如蜜 却躲着我眼神 不愿直视我 我的心在跳 每次想起你 这酸涩滋味 真实又甜蜜  [副歌] 你在我耳边低语 情话甜如蜜 却躲着我眼神 不愿直视我 我的心在跳 每次想起你 这酸涩滋味 真实又甜蜜",
+        "maxLength": 3000
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
+        "defaultValue": "吉他主旋律，清澈干净曲风，舒缓温柔旋律，简约编曲",
+        "maxLength": 1024
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "每次生成的歌曲数量（默认 2，最大 3，按生成数量计费）。",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "referenceId",
+        "type": "STRING",
+        "required": false,
+        "label": "referenceId",
+        "description": "参考音乐文件 ID，由 /mureka/files-upload (purpose=reference) 返回；可与 vocalId 组合。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "vocalId",
+        "type": "STRING",
+        "required": false,
+        "label": "vocalId",
+        "description": "音色文件 ID，可由 /mureka/files-upload (purpose=vocal) 或 /mureka/vocal-clone 返回；可与 prompt 或 referenceId 组合。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "melodyId",
+        "type": "STRING",
+        "required": false,
+        "label": "melodyId",
+        "description": "旋律文件 ID（mp3/m4a/mid，推荐 MIDI），由 /mureka/files-upload (purpose=melody) 返回；与其它控制项互斥。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "stream",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "stream",
+        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）；mureka-o1 不支持。",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiMurekaV9GenerateSong",
+    "display_name": "RH Mureka-v9 歌曲生成",
+    "name_cn": "Mureka-v9 歌曲生成",
+    "name_en": "mureka-v9/generate-song",
+    "endpoint": "mureka-ai/mureka-v9/generate-song",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": true,
+        "label": "lyrics",
+        "description": "歌曲歌词，最长 3000 字符。可使用 [Verse]/[Chorus] 等结构标记。",
+        "defaultValue": " [主歌] 你说要离开这熟悉的街 留下一串串欢笑和泪水 我们曾一起走过黄昏和黎明 现在只剩风声和月光  [副歌] 但请不要忧伤 因为离别后是新的希望 就像彩虹在风雨后 我们依然紧紧相拥  [主歌] 你说要去远方追逐梦想 但我不会让你孤单彷徨 我会在每个夜晚点亮灯光 等你回来分享每一个梦想  [副歌] 但请不要忧伤 因为离别后是新的希望 就像夜空中的星星 指引你走向未来的方向  [桥段] 即使世界变得不一样 心中的笑容永远闪亮 让我们勇敢地向前走 直到再次相遇的那一天  [副歌] 但请不要忧伤 因为离别后是新的希望 就像彩虹在风雨后 我们依然紧紧相拥  [副歌] 但请不要忧伤 因为离别后是新的希望 就像夜空中的星星 指引你走向未来的方向",
+        "maxLength": 3000
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "音乐风格提示词，最长 1024 字符；可与 vocalId 组合使用。",
+        "defaultValue": "舒缓温柔旋律，简约编曲，温暖氛围感，清澈干净曲风",
+        "maxLength": 1024
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "每次生成的歌曲数量（默认 2，最大 3，按生成数量计费）。",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "referenceId",
+        "type": "STRING",
+        "required": false,
+        "label": "referenceId",
+        "description": "参考音乐文件 ID，由 /mureka/files-upload (purpose=reference) 返回；可与 vocalId 组合。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "vocalId",
+        "type": "STRING",
+        "required": false,
+        "label": "vocalId",
+        "description": "音色文件 ID，可由 /mureka/files-upload (purpose=vocal) 或 /mureka/vocal-clone 返回；可与 prompt 或 referenceId 组合。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "melodyId",
+        "type": "STRING",
+        "required": false,
+        "label": "melodyId",
+        "description": "旋律文件 ID（mp3/m4a/mid，推荐 MIDI），由 /mureka/files-upload (purpose=melody) 返回；与其它控制项互斥。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "stream",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "stream",
+        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）；mureka-o1 不支持。",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiMurekaV76GenerateBgm",
+    "display_name": "RH Mureka-v7.6 伴奏生成",
+    "name_cn": "Mureka-v7.6 伴奏生成",
+    "name_en": "mureka-v7.6/generate-bgm",
+    "endpoint": "mureka-ai/mureka-v7.6/generate-bgm",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "伴奏风格提示词，最长 1024 字符；与其它控制项互斥。",
+        "defaultValue": "纯音乐，现代流行，钢琴分解和弦 + 大提琴 + 弦乐铺底 + 轻微鼓点，氛围感拉满、诉说暗恋的青春情愫，，编曲完整，无人声无哼唱，高音质立体声，干净消音伴奏",
+        "maxLength": 1024
+      },
+      {
+        "fieldKey": "instrumentalId",
+        "type": "STRING",
+        "required": false,
+        "label": "instrumentalId",
+        "description": "参考伴奏文件 ID，由 /mureka/files-upload (purpose=instrumental) 返回；与 prompt 互斥。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "每次生成的伴奏数量（默认 2，最大 3，按生成数量计费）。",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "stream",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "stream",
+        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）。",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiMurekaV8GenerateBgm",
+    "display_name": "RH Mureka-v8 伴奏生成",
+    "name_cn": "Mureka-v8 伴奏生成",
+    "name_en": "mureka-v8/generate-bgm",
+    "endpoint": "mureka-ai/mureka-v8/generate-bgm",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "伴奏风格提示词，最长 1024 字符；与其它控制项互斥。",
+        "defaultValue": "纯音乐，乐队音乐伴奏，激昂轻摇滚，对生命的感叹，鼓点+键盘+贝斯+电吉他，编曲完整，无人声无哼唱，高音质立体声，干净消音伴奏",
+        "maxLength": 1024
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "每次生成的伴奏数量（默认 2，最大 3，按生成数量计费）。",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "instrumentalId",
+        "type": "STRING",
+        "required": false,
+        "label": "instrumentalId",
+        "description": "参考伴奏文件 ID，由 /mureka/files-upload (purpose=instrumental) 返回；与 prompt 互斥。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "stream",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "stream",
+        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）。",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiMurekaV8ExtendSong",
+    "display_name": "RH Mureka-v8 短歌延长",
+    "name_cn": "Mureka-v8 短歌延长",
+    "name_en": "mureka-v8/extend-song",
+    "endpoint": "mureka-ai/mureka-v8/extend-song",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": true,
+        "label": "lyrics",
+        "description": "延长部分的歌词，最长 3000 字符。",
+        "defaultValue": "我的心在跳 每次想起你 这酸涩滋味 真实又甜蜜 啦啦啦啦 想见你",
+        "maxLength": 3000
+      },
+      {
+        "fieldKey": "extendAt",
+        "type": "INT",
+        "required": true,
+        "label": "extendAt",
+        "description": "延长起始时间（毫秒），有效区间 [8000, 420000]；超出歌曲时长则使用歌曲末尾。",
+        "defaultValue": 8000,
+        "min": 8000,
+        "max": 420000,
+        "step": 1
+      },
+      {
+        "fieldKey": "extendType",
+        "type": "LIST",
+        "required": false,
+        "label": "extendType",
+        "description": "延长方向：tail 从尾部延长，head 从头部延长（仅 mureka-8 模型支持）。",
+        "defaultValue": "tail",
+        "options": [
+          {
+            "value": "tail",
+            "description": "tail（从尾部延长）",
+            "descriptionEn": "tail (extend from end)"
+          },
+          {
+            "value": "head",
+            "description": "head（从头部延长）",
+            "descriptionEn": "head (extend from beginning)"
+          }
+        ]
+      },
+      {
+        "fieldKey": "fileUrl",
+        "type": "AUDIO",
+        "required": true,
+        "label": "fileUrl",
+        "description": "待上传的音频文件 URL，用于歌曲延长。",
+        "accept": "[\"MP3\",\"M4A\"]",
+        "maxSize": 10,
+        "tail_insert": true
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiVocalClone",
+    "display_name": "RH Mureka 人声克隆",
+    "name_cn": "Mureka 人声克隆",
+    "name_en": "mureka-ai/vocal-clone",
+    "endpoint": "mureka-ai/vocal-clone",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "fileUrl",
+        "type": "AUDIO",
+        "required": true,
+        "label": "fileUrl",
+        "description": "待克隆的人声音频 URL（mp3 / m4a，≤ 10 MB）。同步返回 vocalId，可作为 song/generate 的 vocalId 使用。",
+        "accept": "[\"mp3\",\"m4a\"]",
+        "maxSize": 10
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiGenerateLyrics",
+    "display_name": "RH Mureka 歌词生成",
+    "name_cn": "Mureka 歌词生成",
+    "name_en": "mureka-ai/generate-lyrics",
+    "endpoint": "mureka-ai/generate-lyrics",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "歌词生成的提示词（主题、关键词或描述）。",
+        "defaultValue": "按以下规则创作原创歌词： 标准结构：主歌 1、预副歌、副歌、主歌 2、预副歌、副歌、桥段、结尾。 押韵自然，有画面感，情感细腻，句式长短适合演唱。 曲风：（填空：现代流行 / 古风 / 说唱） 情绪：（填空：伤感 / 遗憾 / 治愈 / 孤独） 调性 BPM：（填空：Am 小调 BPM75） 主题故事：（填空：关于离别 / 暗恋 / 回忆 / 释怀） 只输出分段歌词，不要多余解释。",
+        "maxLength": 1024
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiMurekaV9GenerateBgm",
+    "display_name": "RH Mureka-v9 伴奏生成",
+    "name_cn": "Mureka-v9 伴奏生成",
+    "name_en": "mureka-v9/generate-bgm",
+    "endpoint": "mureka-ai/mureka-v9/generate-bgm",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "伴奏风格提示词，最长 1024 字符；与其它控制项互斥。",
+        "defaultValue": "纯音乐，现代流行伤感风，BPM 75，Am 小调，钢琴分解和弦 + 大提琴 + 弦乐铺底 + 轻微鼓点，氛围感拉满、孤独深情，编曲完整，无人声无哼唱，高音质立体声，干净消音伴奏",
+        "maxLength": 1024
+      },
+      {
+        "fieldKey": "n",
+        "type": "INT",
+        "required": true,
+        "label": "n",
+        "description": "每次生成的伴奏数量（默认 2，最大 3，按生成数量计费）。",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "fieldKey": "instrumentalId",
+        "type": "STRING",
+        "required": false,
+        "label": "instrumentalId",
+        "description": "参考伴奏文件 ID，由 /mureka/files-upload (purpose=instrumental) 返回；与 prompt 互斥。",
+        "maxLength": 64
+      },
+      {
+        "fieldKey": "stream",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "stream",
+        "description": "是否启用流式生成（成功后会先进入 streaming 阶段，可读取 stream_url 边播边出）。",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "RhartVideoV31FastOfficialReferenceToVideo",
+    "display_name": "RH 全能视频V3.1-fast-参考生视频-官方稳定版",
+    "name_cn": "全能视频V3.1-fast-参考生视频-官方稳定版",
+    "name_en": "google/veo3.1-fast/reference-to-video-official-stable",
+    "endpoint": "rhart-video-v3.1-fast-official/reference-to-video",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词，描述视频内容、动作、场景变化和镜头运动",
+        "defaultValue": "顶级国风动漫奇幻CG，电影级东方幻想大片质感，超高饱和度，色彩爆炸，超现实主义视觉体验。地下巨大岩洞场景，瑰丽、妖异、梦幻又危险。16:9，15秒，镜头流畅丝滑，特效宏大，画面高级，主体清晰。  角色： 画仙，绝美空灵，眼波灵动，红唇轻启，气质高贵神秘。手持耀目玉笔，展开七彩流光的空白卷轴，拥有将画意化为真实、将美景化为杀阵的能力。  第一镜： 微距特写画仙绝美面庞与双手动作，眼神灵动含笑，玉笔旋转发光。画仙展开七彩空白卷轴，挥笔泼洒出漫天流体颜料，颜料如星河般在空中飞舞流淌。伴随清脆水滴声、银铃轻笑声，画面极致唯美梦幻。  第二镜： 镜头拉至广角，颜料撞击岩壁与地面后瞬间爆炸式疯长。死寂幽暗的巨大岩洞被强行上色，石绿、藤黄、黛蓝、朱砂等高亮色彩迅速蔓延，化作参天巨树、发光藤蔓、妖艳奇花与灵性植物，整座岩洞数秒内被重塑为绚烂仙境。植物高速拔节生长，根系撕裂岩层，气势如同改天换地。  第三镜： 仙境成型后杀机爆发。彩光凝成的巨型飞鸟与猛虎从藤蔓和花海中扑杀而出，地面奇花张开利刃花嘴疯狂撕咬，藤蔓高速缠绕绞杀。绝美空间瞬间化作致命猎场，目标被多重攻击撕碎，最终崩解为无数发光颜料粒子。伴随百兽嘶吼、植物破空、光束穿透的原生音效，毁灭感极强。  第四镜： 镜头极速拉远，整座岩洞与其中所有绚烂景象开始向中心收缩吸入，最终凝聚成一卷悬浮半空的精美青绿山水画卷。画仙玉手轻招，画卷飞回掌中，伴随清脆合轴声，所有创世与毁灭尽数收拢。最后画仙轻摇团扇，转身离去，只留下绝艳残影与未散尽的流彩光辉，震撼收尾。  要求： 重点突出“挥笔泼彩、改写岩洞、仙境绞杀、收画离场”四段主线。画面要兼具绝美与危险，前半段梦幻创世，后半段致命反杀，结尾高级收束。整体必须有顶级国风动漫奇幻CG大片感。",
+        "maxLength": 8000
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "参考图片（1-3张）",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "视频画幅比例",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "视频分辨率",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "generateAudio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "generateAudio",
+        "description": "是否生成视频音频",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "负向提示词，用于描述需要避免的内容或瑕疵",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子，用于提升结果可复现性",
+        "min": 0,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImagineImageQualityEdit",
+    "display_name": "RH 全能图片X-高质量图片编辑-官方稳定版",
+    "name_cn": "全能图片X-高质量图片编辑-官方稳定版",
+    "name_en": "xai/rhart-imagine-image-quality/edit-official-stable",
+    "endpoint": "rhart-imagine-image-quality/edit",
+    "output_type": "image",
+    "category": "RunningHub/Other",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词，描述希望对图片进行的编辑内容以及需要保留的元素",
+        "defaultValue": "主角为年轻女性。使用参考图中的精确面部，保留身份特征和自然皮肤纹理。构图排列如滚动的记忆时间轴，捕捉于重叠的电影画幅和底片中。每一帧展现不同的情感微瞬间：行走时大笑、望向窗外、对镜整理头发、手持咖啡以及温柔的抓拍微笑。",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "输入图片，仅支持单张图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出图片比例，auto 表示保持源图构图",
+        "defaultValue": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率档位",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "numImages",
+        "type": "LIST",
+        "required": true,
+        "label": "numImages",
+        "description": "生成图片数量",
+        "defaultValue": "1",
+        "options": [
+          {
+            "value": "1",
+            "description": "1",
+            "descriptionEn": "1"
+          },
+          {
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          }
+        ]
+      },
+      {
+        "fieldKey": "outputFormat",
+        "type": "LIST",
+        "required": false,
+        "label": "outputFormat",
+        "description": "输出图片格式",
+        "defaultValue": "jpeg",
+        "options": [
+          {
+            "value": "jpeg",
+            "description": "jpeg",
+            "descriptionEn": "jpeg"
+          },
+          {
+            "value": "png",
+            "description": "png",
+            "descriptionEn": "png"
+          },
+          {
+            "value": "webp",
+            "description": "webp",
+            "descriptionEn": "webp"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImagineImageQualityTextToImage",
+    "display_name": "RH 全能图片X-高质量文生图-官方稳定版",
+    "name_cn": "全能图片X-高质量文生图-官方稳定版",
+    "name_en": "xai/rhart-imagine-image-quality/text-to-image-official-stable",
+    "endpoint": "rhart-imagine-image-quality/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/Other",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词，描述希望生成的主体、风格、构图、光影和氛围",
+        "defaultValue": " 角色： 画仙，绝美空灵，眼波灵动，红唇轻启，气质高贵神秘。手持耀目玉笔，旁边有梦马。顶级国风动漫奇幻CG，电影级东方幻想大片质感，画面整体色彩丰富，超现实主义视觉体验。",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出图片比例",
+        "defaultValue": "1:1",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率档位",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "numImages",
+        "type": "LIST",
+        "required": true,
+        "label": "numImages",
+        "description": "生成图片数量",
+        "defaultValue": "1",
+        "options": [
+          {
+            "value": "1",
+            "description": "1",
+            "descriptionEn": "1"
+          },
+          {
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          }
+        ]
+      },
+      {
+        "fieldKey": "outputFormat",
+        "type": "LIST",
+        "required": false,
+        "label": "outputFormat",
+        "description": "输出图片格式",
+        "defaultValue": "jpeg",
+        "options": [
+          {
+            "value": "jpeg",
+            "description": "jpeg",
+            "descriptionEn": "jpeg"
+          },
+          {
+            "value": "png",
+            "description": "png",
+            "descriptionEn": "png"
+          },
+          {
+            "value": "webp",
+            "description": "webp",
+            "descriptionEn": "webp"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartVideoSparkvideo20UploadAssetChannelLowPrice",
+    "display_name": "RH seedance2.0/上传素材资产低价渠道版",
+    "name_cn": "seedance2.0/上传素材资产低价渠道版",
+    "name_en": "seedance-2.0/upload-asset-channel-low-price",
+    "endpoint": "rhart-video/sparkvideo-2.0/upload-asset-channel-low-price",
+    "output_type": "video",
+    "category": "RunningHub/RHArt Video",
+    "params": [
+      {
+        "fieldKey": "assetType",
+        "type": "LIST",
+        "required": true,
+        "label": "assetType",
+        "description": "素材类型：Image（图片）或 Video（视频）。",
+        "defaultValue": "Image",
+        "options": [
+          {
+            "value": "Image",
+            "description": "图片",
+            "descriptionEn": "Image"
+          },
+          {
+            "value": "Video",
+            "description": "视频",
+            "descriptionEn": "Video"
+          }
+        ]
+      },
+      {
+        "fieldKey": "url",
+        "type": "CommonMedia",
+        "required": true,
+        "label": "url",
+        "description": "素材源（本地资源或公网可访问URL），Image 建议 jpg/jpeg/png/webp，Video 建议 mp4/mov。",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"GIF\",\"WEBP\",\"BMP\",\"HEIC\",\"HEIF\",\"TIFF\",\"MP3\",\"WAV\",\"MP4\",\"MOV\"]",
+        "maxSize": 50
+      }
+    ]
+  },
+  {
+    "class_name": "BytedanceSeedance20GlobalUploadAssetChannelLowPrice",
+    "display_name": "RH seedance2.0-global/上传素材资产低价渠道版",
+    "name_cn": "seedance2.0-global/上传素材资产低价渠道版",
+    "name_en": "seedance-2.0-global/upload-asset-channel-low-price",
+    "endpoint": "bytedance/seedance-2.0-global/upload-asset-channel-low-price",
+    "output_type": "string",
+    "category": "RunningHub/Seedance",
+    "params": [
+      {
+        "fieldKey": "assetType",
+        "type": "LIST",
+        "required": true,
+        "label": "assetType",
+        "description": "素材类型：Image（图片）或 Video（视频）。",
+        "defaultValue": "Image",
+        "options": [
+          {
+            "value": "Image",
+            "description": "图片",
+            "descriptionEn": "Image"
+          },
+          {
+            "value": "Video",
+            "description": "视频",
+            "descriptionEn": "Video"
+          }
+        ]
+      },
+      {
+        "fieldKey": "url",
+        "type": "CommonMedia",
+        "required": true,
+        "label": "url",
+        "description": "素材源（本地资源或公网可访问URL），Image 建议 jpg/jpeg/png/webp，Video 建议 mp4/mov。",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"GIF\",\"WEBP\",\"BMP\",\"HEIC\",\"HEIF\",\"TIFF\",\"MP3\",\"WAV\",\"MP4\",\"MOV\"]",
+        "maxSize": 50
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiMurekaV76ExtendSong",
+    "display_name": "RH mureka-v7.6 短歌延长",
+    "name_cn": "mureka-v7.6 短歌延长",
+    "name_en": "mureka-v7.6/extend-song",
+    "endpoint": "mureka-ai/mureka-v7.6/extend-song",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": true,
+        "label": "lyrics",
+        "description": "延长部分的歌词，最长 3000 字符。",
+        "defaultValue": "晚风轻拂渡口 月色漫染眉头 往事轻放身后 余生不惊不忧 花开不问缘由 流年静静相守 人间烟火依旧 安然渡尽春秋",
+        "maxLength": 3000
+      },
+      {
+        "fieldKey": "extendAt",
+        "type": "INT",
+        "required": true,
+        "label": "extendAt",
+        "description": "延长起始时间（毫秒），有效区间 [8000, 420000]；超出歌曲时长则使用歌曲末尾。",
+        "defaultValue": 8000,
+        "min": 8000,
+        "max": 420000,
+        "step": 1
+      },
+      {
+        "fieldKey": "fileUrl",
+        "type": "AUDIO",
+        "required": true,
+        "label": "fileUrl",
+        "description": "待上传的音频文件 URL，用于歌曲延长。",
+        "accept": "[\"MP3\",\"M4A\"]",
+        "maxSize": 10
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiStemSong",
+    "display_name": "RH mureka-ai 音轨分离",
+    "name_cn": "mureka-ai 音轨分离",
+    "name_en": "mureka-ai/stem-song",
+    "endpoint": "mureka-ai/stem-song",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "url",
+        "type": "AUDIO",
+        "required": true,
+        "label": "url",
+        "description": "待分离的音频 URL（mp3 / m4a，亦支持 base64 data URL；最大 10 MB）。处理完成后通过 zip_url 返回各分轨打包 zip。 该模型仅返回 zip_url，不含 MIDI 输出。",
+        "accept": "[\"mp3\",\"m4a\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "model",
+        "type": "LIST",
+        "required": true,
+        "label": "model",
+        "description": "音轨分离model",
+        "defaultValue": "audio-separation-2",
+        "options": [
+          {
+            "value": "audio-separation-1",
+            "description": "audio-separation-1",
+            "descriptionEn": "audio-separation-1"
+          },
+          {
+            "value": "audio-separation-2",
+            "description": "audio-separation-2",
+            "descriptionEn": "audio-separation-2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiRecognizeSong",
+    "display_name": "RH mureka-ai 歌曲识别",
+    "name_cn": "mureka-ai 歌曲识别",
+    "name_en": "mureka-ai/recognize-song",
+    "endpoint": "mureka-ai/recognize-song",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "uploadAudioId",
+        "type": "STRING",
+        "required": true,
+        "label": "uploadAudioId",
+        "description": "由 /mureka/files-upload (purpose=audio) 返回的文件 ID。",
+        "maxLength": 64
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiDescribeSong",
+    "display_name": "RH mureka-ai 歌曲理解",
+    "name_cn": "mureka-ai 歌曲理解",
+    "name_en": "mureka-ai/describe-song",
+    "endpoint": "mureka-ai/describe-song",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "url",
+        "type": "AUDIO",
+        "required": true,
+        "label": "url",
+        "description": "待描述的音频 URL（mp3 / m4a，亦支持 base64 data URL；最大 10 MB）。",
+        "accept": "[\"mp3\",\"m4a\"]",
+        "maxSize": 10
+      }
+    ]
+  },
+  {
+    "class_name": "MurekaAiExtendLyrics",
+    "display_name": "RH mureka-ai 歌词延长",
+    "name_cn": "mureka-ai 歌词延长",
+    "name_en": "mureka-ai/extend-lyrics",
+    "endpoint": "mureka-ai/extend-lyrics",
+    "output_type": "string",
+    "category": "RunningHub/Mureka",
+    "params": [
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": true,
+        "label": "lyrics",
+        "description": "已有歌词，将基于此续写新歌词，最长 3000 字符；支持 [Verse]/[Chorus] 段位标记。",
+        "maxLength": 3000
       }
     ]
   }
