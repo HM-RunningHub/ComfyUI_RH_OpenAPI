@@ -102,7 +102,7 @@ class ContractTests(unittest.TestCase):
         parameter_based = by_endpoint["rhart-video-v3.1-fast/text-to-video"]
         self.assertEqual(parameter_based["pricing_type"], "parameter_based")
         self.assertEqual(parameter_based["depends_on"], ["resolution"])
-        self.assertIn({"when": {"resolution": "720p"}, "price": 0.2}, parameter_based["rules"])
+        self.assertIn({"when": {"resolution": "720p"}, "price": 1.5}, parameter_based["rules"])
 
     def test_registry_sample_is_valid_and_has_required_model_shapes(self) -> None:
         registry = load_registry(KIT_ROOT / "model-registry.sample.json")

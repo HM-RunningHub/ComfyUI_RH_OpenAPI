@@ -1,5 +1,5 @@
 {
-  "last_node_id": 4,
+  "last_node_id": 3,
   "last_link_id": 2,
   "nodes": [
     {
@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "type": "RH_RhartVideoSImageToVideo",
+      "type": "RH_MinimaxVoiceDesign",
       "pos": [
         500,
         100
@@ -51,11 +51,6 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "image",
-          "type": "IMAGE",
-          "link": null
-        },
-        {
           "name": "api_config",
           "type": "RH_OPENAPI_CONFIG",
           "link": 1
@@ -63,11 +58,9 @@
       ],
       "outputs": [
         {
-          "name": "video",
-          "type": "VIDEO",
-          "links": [
-            2
-          ],
+          "name": "result",
+          "type": "STRING",
+          "links": [],
           "slot_index": 0
         },
         {
@@ -84,10 +77,10 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "RH_RhartVideoSImageToVideo"
+        "Node name for S&R": "RH_MinimaxVoiceDesign"
       },
       "widgets_values": [],
-      "title": "RH 全能视频S-图生视频-低价渠道版"
+      "title": "RH MiniMax-音色设计"
     },
     {
       "id": 3,
@@ -106,42 +99,13 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "Example: RH 全能视频S-图生视频-低价渠道版\nEndpoint: /rhart-video-s/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image (IMAGE)"
+        "text": "Example: RH MiniMax-音色设计\nEndpoint: /minimax/voice-design\nOutput: audio\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
       },
       "widgets_values": [
-        "Example: RH 全能视频S-图生视频-低价渠道版\nEndpoint: /rhart-video-s/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image (IMAGE)"
+        "Example: RH MiniMax-音色设计\nEndpoint: /minimax/voice-design\nOutput: audio\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
       ],
       "color": "#432",
       "bgcolor": "#653"
-    },
-    {
-      "id": 4,
-      "type": "SaveVideo",
-      "pos": [
-        900,
-        100
-      ],
-      "size": [
-        300,
-        200
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "video",
-          "type": "VIDEO",
-          "link": 2
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "SaveVideo"
-      },
-      "widgets_values": [
-        "RH_"
-      ]
     }
   ],
   "links": [
@@ -150,16 +114,8 @@
       1,
       0,
       2,
-      1,
+      0,
       "RH_OPENAPI_CONFIG"
-    ],
-    [
-      2,
-      2,
-      0,
-      4,
-      0,
-      "VIDEO"
     ]
   ],
   "groups": [],

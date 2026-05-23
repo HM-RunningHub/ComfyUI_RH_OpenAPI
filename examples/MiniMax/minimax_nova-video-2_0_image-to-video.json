@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "type": "RH_RhartVideoSImageToVideo",
+      "type": "RH_MinimaxNovaVideo20ImageToVideo",
       "pos": [
         500,
         100
@@ -51,7 +51,12 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "image",
+          "name": "first_frame",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "last_frame",
           "type": "IMAGE",
           "link": null
         },
@@ -84,10 +89,10 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "RH_RhartVideoSImageToVideo"
+        "Node name for S&R": "RH_MinimaxNovaVideo20ImageToVideo"
       },
       "widgets_values": [],
-      "title": "RH 全能视频S-图生视频-低价渠道版"
+      "title": "RH Seedance-2.0 图生视频（低价版）"
     },
     {
       "id": 3,
@@ -106,10 +111,10 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "Example: RH 全能视频S-图生视频-低价渠道版\nEndpoint: /rhart-video-s/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image (IMAGE)"
+        "text": "Example: RH Seedance-2.0 图生视频（低价版）\nEndpoint: /minimax/nova-video-2.0/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - first_frame (IMAGE)\n  - last_frame (IMAGE)"
       },
       "widgets_values": [
-        "Example: RH 全能视频S-图生视频-低价渠道版\nEndpoint: /rhart-video-s/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image (IMAGE)"
+        "Example: RH Seedance-2.0 图生视频（低价版）\nEndpoint: /minimax/nova-video-2.0/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - first_frame (IMAGE)\n  - last_frame (IMAGE)"
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -150,7 +155,7 @@
       1,
       0,
       2,
-      1,
+      2,
       "RH_OPENAPI_CONFIG"
     ],
     [

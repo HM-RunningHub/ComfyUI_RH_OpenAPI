@@ -44,7 +44,7 @@
       ],
       "size": [
         350,
-        246
+        300
       ],
       "flags": {},
       "order": 1,
@@ -81,13 +81,8 @@
       "properties": {
         "Node name for S&R": "RH_RhartVideoSTextToVideo"
       },
-      "widgets_values": [
-        "10",
-        "A cat walking in a garden, cinematic, high quality",
-        "9:16",
-        false
-      ],
-      "title": "RH 全能视频S-文生视频"
+      "widgets_values": [],
+      "title": "RH 全能视频S-文生视频-低价渠道版"
     },
     {
       "id": 3,
@@ -98,7 +93,7 @@
       ],
       "size": [
         420,
-        192
+        240
       ],
       "flags": {},
       "order": 3,
@@ -106,10 +101,10 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "Example: RH 全能视频S-文生视频\nEndpoint: /rhart-video-s/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
+        "text": "Example: RH 全能视频S-文生视频-低价渠道版\nEndpoint: /rhart-video-s/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
       },
       "widgets_values": [
-        "Example: RH 全能视频S-文生视频\nEndpoint: /rhart-video-s/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
+        "Example: RH 全能视频S-文生视频-低价渠道版\nEndpoint: /rhart-video-s/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
       ],
       "color": "#432",
       "bgcolor": "#653"

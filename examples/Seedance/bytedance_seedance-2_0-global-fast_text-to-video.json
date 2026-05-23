@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "type": "RH_RhartVideoSImageToVideo",
+      "type": "RH_BytedanceSeedance20GlobalFastTextToVideo",
       "pos": [
         500,
         100
@@ -50,11 +50,6 @@
       "order": 1,
       "mode": 0,
       "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": null
-        },
         {
           "name": "api_config",
           "type": "RH_OPENAPI_CONFIG",
@@ -84,10 +79,10 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "RH_RhartVideoSImageToVideo"
+        "Node name for S&R": "RH_BytedanceSeedance20GlobalFastTextToVideo"
       },
       "widgets_values": [],
-      "title": "RH 全能视频S-图生视频-低价渠道版"
+      "title": "RH seedance2.0-global-fast/文生视频"
     },
     {
       "id": 3,
@@ -106,10 +101,10 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "Example: RH 全能视频S-图生视频-低价渠道版\nEndpoint: /rhart-video-s/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image (IMAGE)"
+        "text": "Example: RH seedance2.0-global-fast/文生视频\nEndpoint: /bytedance/seedance-2.0-global-fast/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
       },
       "widgets_values": [
-        "Example: RH 全能视频S-图生视频-低价渠道版\nEndpoint: /rhart-video-s/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image (IMAGE)"
+        "Example: RH seedance2.0-global-fast/文生视频\nEndpoint: /bytedance/seedance-2.0-global-fast/text-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt"
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -150,7 +145,7 @@
       1,
       0,
       2,
-      1,
+      0,
       "RH_OPENAPI_CONFIG"
     ],
     [

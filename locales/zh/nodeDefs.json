@@ -902,47 +902,11 @@
   "RH_KlingElementsAdvanced": {
     "display_name": "RH 可灵 o3 创建主体"
   },
-  "RH_MurekaFilesUpload": {
-    "display_name": "RH Mureka 文件上传"
-  },
   "RH_YouchuanTextToImageV81": {
     "display_name": "RH 悠船文生图-v8.1"
   },
-  "RH_Mureka76SongGenerate": {
-    "display_name": "RH Mureka mureka-7.6 歌曲生成"
-  },
-  "RH_MurekaO2SongGenerate": {
-    "display_name": "RH Mureka mureka-o2 歌曲生成"
-  },
-  "RH_Mureka8SongGenerate": {
-    "display_name": "RH Mureka mureka-8 歌曲生成"
-  },
-  "RH_Mureka9SongGenerate": {
-    "display_name": "RH Mureka mureka-9 歌曲生成"
-  },
-  "RH_Mureka76InstrumentalGenerate": {
-    "display_name": "RH Mureka mureka-7.6 伴奏生成"
-  },
   "RH_MurekaO2InstrumentalGenerate": {
-    "display_name": "RH Mureka mureka-o2 伴奏生成"
-  },
-  "RH_Mureka8InstrumentalGenerate": {
-    "display_name": "RH Mureka mureka-8 伴奏生成"
-  },
-  "RH_Mureka76SongExtend": {
-    "display_name": "RH Mureka mureka-7.6 短歌延长"
-  },
-  "RH_Mureka8SongExtend": {
-    "display_name": "RH Mureka mureka-8 短歌延长"
-  },
-  "RH_MurekaVocalClone": {
-    "display_name": "RH Mureka 人声克隆"
-  },
-  "RH_MurekaLyricsGenerate": {
-    "display_name": "RH Mureka 歌词生成"
-  },
-  "RH_Mureka9InstrumentalGenerate": {
-    "display_name": "RH Mureka mureka-9 伴奏生成"
+    "display_name": "RH Mureka mureka-o2 伴奏生成-暂不可用"
   },
   "RH_RhartVideoSparkvideo20UploadAsset": {
     "display_name": "RH seedance2.0/上传素材资产"
@@ -970,6 +934,129 @@
   },
   "RH_LumaUni1MaxImageEdit": {
     "display_name": "RH Luma uni-1-max 图像编辑"
+  },
+  "RH_MinimaxMusic26TextToMusic": {
+    "display_name": "RH MiniMax Music 2.6 文生音乐"
+  },
+  "RH_MinimaxMusic26TextToInstrumental": {
+    "display_name": "RH MiniMax Music 2.6 纯音乐生成"
+  },
+  "RH_AlibabaWan27SpicyImageToVideo": {
+    "display_name": "RH 万相2.7-spicy-图生视频"
+  },
+  "RH_MurekaAiFilesUpload": {
+    "display_name": "RH Mureka 文件上传"
+  },
+  "RH_MurekaAiMurekaV76GenerateSong": {
+    "display_name": "RH Mureka-v7.6 歌曲生成"
+  },
+  "RH_MurekaAiMurekaO2GenerateSong": {
+    "display_name": "RH Mureka-o2 歌曲生成"
+  },
+  "RH_MurekaAiMurekaV8GenerateSong": {
+    "display_name": "RH Mureka-v8 歌曲生成"
+  },
+  "RH_MurekaAiMurekaV9GenerateSong": {
+    "display_name": "RH Mureka-v9 歌曲生成"
+  },
+  "RH_MurekaAiMurekaV76GenerateBgm": {
+    "display_name": "RH Mureka-v7.6 伴奏生成"
+  },
+  "RH_MurekaAiMurekaV8GenerateBgm": {
+    "display_name": "RH Mureka-v8 伴奏生成"
+  },
+  "RH_MurekaAiMurekaV8ExtendSong": {
+    "display_name": "RH Mureka-v8 短歌延长"
+  },
+  "RH_MurekaAiVocalClone": {
+    "display_name": "RH Mureka 人声克隆"
+  },
+  "RH_MurekaAiGenerateLyrics": {
+    "display_name": "RH Mureka 歌词生成"
+  },
+  "RH_MurekaAiMurekaV9GenerateBgm": {
+    "display_name": "RH Mureka-v9 伴奏生成"
+  },
+  "RH_RhartVideoV31FastOfficialReferenceToVideo": {
+    "display_name": "RH 全能视频V3.1-fast-参考生视频-官方稳定版"
+  },
+  "RH_RhartImagineImageQualityEdit": {
+    "display_name": "RH 全能图片X-高质量图片编辑-官方稳定版"
+  },
+  "RH_RhartImagineImageQualityTextToImage": {
+    "display_name": "RH 全能图片X-高质量文生图-官方稳定版"
+  },
+  "RH_RhartVideoSparkvideo20UploadAssetChannelLowPrice": {
+    "display_name": "RH seedance2.0/上传素材资产低价渠道版"
+  },
+  "RH_BytedanceSeedance20GlobalUploadAssetChannelLowPrice": {
+    "display_name": "RH seedance2.0-global/上传素材资产低价渠道版"
+  },
+  "RH_MurekaAiMurekaV76ExtendSong": {
+    "display_name": "RH mureka-v7.6 短歌延长"
+  },
+  "RH_MurekaAiStemSong": {
+    "display_name": "RH mureka-ai 音轨分离"
+  },
+  "RH_MurekaAiRecognizeSong": {
+    "display_name": "RH mureka-ai 歌曲识别"
+  },
+  "RH_MurekaAiDescribeSong": {
+    "display_name": "RH mureka-ai 歌曲理解"
+  },
+  "RH_MurekaAiExtendLyrics": {
+    "display_name": "RH mureka-ai 歌词延长"
+  },
+  "RH_MinimaxNovaVideo20TextToVideo": {
+    "display_name": "RH Seedance-2.0 文生视频（低价版）"
+  },
+  "RH_MinimaxNovaVideo20ImageToVideo": {
+    "display_name": "RH Seedance-2.0 图生视频（低价版）"
+  },
+  "RH_MinimaxNovaVideo20MultimodalToVideo": {
+    "display_name": "RH Seedance-2.0 多模态视频（低价版）"
+  },
+  "RH_MinimaxNovaVideo20FastTextToVideo": {
+    "display_name": "RH Seedance-2.0-fast 文生视频（低价版）"
+  },
+  "RH_MinimaxNovaVideo20FastImageToVideo": {
+    "display_name": "RH Seedance-2.0-fast 图生视频（低价版）"
+  },
+  "RH_MinimaxNovaVideo20FastMultimodalToVideo": {
+    "display_name": "RH Seedance-2.0-fast 多模态视频（低价版）"
+  },
+  "RH_MinimaxEvaVideo20TextToVideo": {
+    "display_name": "RH Seedance-2.0-global 文生视频（低价版）"
+  },
+  "RH_MinimaxEvaVideo20ImageToVideo": {
+    "display_name": "RH Seedance-2.0-global 图生视频（低价版）"
+  },
+  "RH_MinimaxEvaVideo20MultimodalToVideo": {
+    "display_name": "RH Seedance-2.0-global 多模态视频（低价版）"
+  },
+  "RH_MinimaxEvaVideo20FastTextToVideo": {
+    "display_name": "RH Seedance-2.0-global-fast 文生视频（低价版）"
+  },
+  "RH_MinimaxEvaVideo20FastImageToVideo": {
+    "display_name": "RH Seedance-2.0-global-fast 图生视频（低价版）"
+  },
+  "RH_MinimaxEvaVideo20FastMultimodalToVideo": {
+    "display_name": "RH Seedance-2.0-global-fast 多模态视频（低价版）"
+  },
+  "RH_BytedanceJimeng46TextToImage": {
+    "display_name": "RH 即梦图片 4.6 文生图"
+  },
+  "RH_BytedanceJimeng46ImageToImage": {
+    "display_name": "RH 即梦图片 4.6 图生图"
+  },
+  "RH_Seedance20UploadAsset": {
+    "display_name": "RH Seedance 2.0 上传素材资产"
+  },
+  "RH_GeminiOmniFlashTextToVideo": {
+    "display_name": "RH 全能视频 Omni Flash 文生视频"
+  },
+  "RH_GeminiOmniFlashImageToVideo": {
+    "display_name": "RH 全能视频 Omni Flash 图生视频"
   },
   "RH_SparkVideoAssetCreate": {
     "display_name": "RH Seedance2.0素材/创建"

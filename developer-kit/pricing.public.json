@@ -2,10 +2,10 @@
   "version": "public-2026-04-29",
   "source": "models_registry.json public-safe pricing summaries",
   "note": "Public-safe pricing summary for AI-assisted integration. Prices may change; check official RunningHub pricing before showing final costs to end users.",
-  "pricing_count": 333,
+  "pricing_count": 336,
   "counts_by_pricing_type": {
-    "fixed": 142,
-    "parameter_based": 190,
+    "fixed": 149,
+    "parameter_based": 186,
     "unparsed": 1
   },
   "pricing": [
@@ -995,6 +995,28 @@
       "price": 0.32
     },
     {
+      "endpoint": "bytedance/jimeng-4.6/image-to-image",
+      "name_cn": "即梦图片 4.6 图生图",
+      "name_en": "bytedance/jimeng-4.6/image-to-image",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.22
+    },
+    {
+      "endpoint": "bytedance/jimeng-4.6/text-to-image",
+      "name_cn": "即梦图片 4.6 文生图",
+      "name_en": "bytedance/jimeng-4.6/text-to-image",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.22
+    },
+    {
       "endpoint": "bytedance/seedance-2.0-global-fast/image-to-video",
       "name_cn": "seedance2.0-global-fast/图生视频",
       "name_en": "seedance-2.0-global-fast/image-to-video",
@@ -1314,6 +1336,206 @@
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
       "price": 1.0
+    },
+    {
+      "endpoint": "gemini-omni-flash/image-to-video",
+      "name_cn": "全能视频 Omni Flash 图生视频",
+      "name_en": "gemini-omni-flash/image-to-video",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution",
+        "duration"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p",
+            "duration": "10"
+          },
+          "price": 2.1
+        },
+        {
+          "when": {
+            "resolution": "1080p",
+            "duration": "4"
+          },
+          "price": 1.95
+        },
+        {
+          "when": {
+            "resolution": "1080p",
+            "duration": "6"
+          },
+          "price": 1.95
+        },
+        {
+          "when": {
+            "resolution": "1080p",
+            "duration": "8"
+          },
+          "price": 1.95
+        },
+        {
+          "when": {
+            "resolution": "4k",
+            "duration": "10"
+          },
+          "price": 4.2
+        },
+        {
+          "when": {
+            "resolution": "4k",
+            "duration": "4"
+          },
+          "price": 3.15
+        },
+        {
+          "when": {
+            "resolution": "4k",
+            "duration": "6"
+          },
+          "price": 3.57
+        },
+        {
+          "when": {
+            "resolution": "4k",
+            "duration": "8"
+          },
+          "price": 3.78
+        },
+        {
+          "when": {
+            "resolution": "720p",
+            "duration": "10"
+          },
+          "price": 2.1
+        },
+        {
+          "when": {
+            "resolution": "720p",
+            "duration": "4"
+          },
+          "price": 1.95
+        },
+        {
+          "when": {
+            "resolution": "720p",
+            "duration": "6"
+          },
+          "price": 1.95
+        },
+        {
+          "when": {
+            "resolution": "720p",
+            "duration": "8"
+          },
+          "price": 1.95
+        }
+      ]
+    },
+    {
+      "endpoint": "gemini-omni-flash/text-to-video",
+      "name_cn": "全能视频 Omni Flash 文生视频",
+      "name_en": "gemini-omni-flash/text-to-video",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution",
+        "duration"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p",
+            "duration": "10"
+          },
+          "price": 2.1
+        },
+        {
+          "when": {
+            "resolution": "1080p",
+            "duration": "4"
+          },
+          "price": 1.95
+        },
+        {
+          "when": {
+            "resolution": "1080p",
+            "duration": "6"
+          },
+          "price": 1.95
+        },
+        {
+          "when": {
+            "resolution": "1080p",
+            "duration": "8"
+          },
+          "price": 1.95
+        },
+        {
+          "when": {
+            "resolution": "4k",
+            "duration": "10"
+          },
+          "price": 4.2
+        },
+        {
+          "when": {
+            "resolution": "4k",
+            "duration": "4"
+          },
+          "price": 3.15
+        },
+        {
+          "when": {
+            "resolution": "4k",
+            "duration": "6"
+          },
+          "price": 3.57
+        },
+        {
+          "when": {
+            "resolution": "4k",
+            "duration": "8"
+          },
+          "price": 3.78
+        },
+        {
+          "when": {
+            "resolution": "720p",
+            "duration": "10"
+          },
+          "price": 2.1
+        },
+        {
+          "when": {
+            "resolution": "720p",
+            "duration": "4"
+          },
+          "price": 1.95
+        },
+        {
+          "when": {
+            "resolution": "720p",
+            "duration": "6"
+          },
+          "price": 1.95
+        },
+        {
+          "when": {
+            "resolution": "720p",
+            "duration": "8"
+          },
+          "price": 1.95
+        }
+      ]
     },
     {
       "endpoint": "higgsfield/dop/image-to-video",
@@ -5365,17 +5587,6 @@
       ]
     },
     {
-      "endpoint": "pixverse-v6/effects",
-      "name_cn": "PixVerse V6 特效",
-      "name_en": "pixverse-v6/effects",
-      "currency": "CNY",
-      "unit": "/次",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 100.0
-    },
-    {
       "endpoint": "pixverse-v6/extend",
       "name_cn": "PixVerse V6 视频续写",
       "name_en": "pixverse-v6/extend",
@@ -7670,19 +7881,19 @@
           "when": {
             "resolution": "1080p"
           },
-          "price": 0.25
+          "price": 1.5
         },
         {
           "when": {
             "resolution": "4k"
           },
-          "price": 0.5
+          "price": 1.5
         },
         {
           "when": {
             "resolution": "720p"
           },
-          "price": 0.2
+          "price": 1.5
         }
       ]
     },
@@ -7703,19 +7914,19 @@
           "when": {
             "resolution": "1080p"
           },
-          "price": 0.25
+          "price": 1.5
         },
         {
           "when": {
             "resolution": "4k"
           },
-          "price": 0.5
+          "price": 1.5
         },
         {
           "when": {
             "resolution": "720p"
           },
-          "price": 0.2
+          "price": 1.5
         }
       ]
     },
@@ -7736,19 +7947,19 @@
           "when": {
             "resolution": "1080p"
           },
-          "price": 0.25
+          "price": 1.5
         },
         {
           "when": {
             "resolution": "4k"
           },
-          "price": 0.5
+          "price": 1.5
         },
         {
           "when": {
             "resolution": "720p"
           },
-          "price": 0.2
+          "price": 1.5
         }
       ]
     },
@@ -8093,7 +8304,7 @@
           "when": {
             "resolution": "720p"
           },
-          "price": 0.8
+          "price": 0.9
         }
       ]
     },
@@ -8126,7 +8337,7 @@
           "when": {
             "resolution": "720p"
           },
-          "price": 0.8
+          "price": 0.9
         }
       ]
     },
@@ -8726,126 +8937,66 @@
       "name_cn": "seedream-v4.5-图生图",
       "name_en": "seedream-v4.5/image-to-image",
       "currency": "CNY",
-      "unit": "/次",
+      "unit": "/张",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
-      "pricing_type": "parameter_based",
-      "depends_on": [
-        "maxImages"
-      ],
-      "rules": [
-        {
-          "when": {
-            "maxImages": ""
-          },
-          "price": 0.2
-        }
-      ]
+      "pricing_type": "fixed",
+      "price": 0.2
     },
     {
       "endpoint": "seedream-v4.5/text-to-image",
       "name_cn": "seedream-v4.5-文生图",
       "name_en": "seedream-v4.5/text-to-image",
       "currency": "CNY",
-      "unit": "/次",
+      "unit": "/张",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
-      "pricing_type": "parameter_based",
-      "depends_on": [
-        "maxImages"
-      ],
-      "rules": [
-        {
-          "when": {
-            "maxImages": ""
-          },
-          "price": 0.2
-        }
-      ]
+      "pricing_type": "fixed",
+      "price": 0.2
     },
     {
       "endpoint": "seedream-v4/image-to-image",
       "name_cn": "seedream-v4-图生图",
       "name_en": "seedream-v4/image-to-image",
       "currency": "CNY",
-      "unit": "/次",
+      "unit": "/张",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
-      "pricing_type": "parameter_based",
-      "depends_on": [
-        "maxImages"
-      ],
-      "rules": [
-        {
-          "when": {
-            "maxImages": ""
-          },
-          "price": 0.14
-        }
-      ]
+      "pricing_type": "fixed",
+      "price": 0.14
     },
     {
       "endpoint": "seedream-v4/text-to-image",
       "name_cn": "seedream-v4-文生图",
       "name_en": "seedream-v4/text-to-image",
       "currency": "CNY",
-      "unit": "/次",
+      "unit": "/张",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
-      "pricing_type": "parameter_based",
-      "depends_on": [
-        "maxImages"
-      ],
-      "rules": [
-        {
-          "when": {
-            "maxImages": ""
-          },
-          "price": 0.14
-        }
-      ]
+      "pricing_type": "fixed",
+      "price": 0.14
     },
     {
       "endpoint": "seedream-v5-lite/image-to-image",
       "name_cn": "seedream-v5-lite-图生图",
       "name_en": "seedream-v5-lite/image-to-image",
       "currency": "CNY",
-      "unit": "/次",
+      "unit": "/张",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
-      "pricing_type": "parameter_based",
-      "depends_on": [
-        "maxImages"
-      ],
-      "rules": [
-        {
-          "when": {
-            "maxImages": ""
-          },
-          "price": 0.22
-        }
-      ]
+      "pricing_type": "fixed",
+      "price": 0.22
     },
     {
       "endpoint": "seedream-v5-lite/text-to-image",
       "name_cn": "seedream-v5-lite-文生图",
       "name_en": "seedream-v5-lite/text-to-image",
       "currency": "CNY",
-      "unit": "/次",
+      "unit": "/张",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
-      "pricing_type": "parameter_based",
-      "depends_on": [
-        "maxImages"
-      ],
-      "rules": [
-        {
-          "when": {
-            "maxImages": ""
-          },
-          "price": 0.22
-        }
-      ]
+      "pricing_type": "fixed",
+      "price": 0.22
     },
     {
       "endpoint": "skyreels-v3/reference-to-video",

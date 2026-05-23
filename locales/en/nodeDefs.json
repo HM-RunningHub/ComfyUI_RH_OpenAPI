@@ -902,47 +902,11 @@
   "RH_KlingElementsAdvanced": {
     "display_name": "RH Kling O3 Element"
   },
-  "RH_MurekaFilesUpload": {
-    "display_name": "RH Mureka Files Upload"
-  },
   "RH_YouchuanTextToImageV81": {
     "display_name": "RH Midjourney Text to Image V8.1"
   },
-  "RH_Mureka76SongGenerate": {
-    "display_name": "RH Mureka 7.6 Song Generate"
-  },
-  "RH_MurekaO2SongGenerate": {
-    "display_name": "RH Mureka O2 Song Generate"
-  },
-  "RH_Mureka8SongGenerate": {
-    "display_name": "RH Mureka 8 Song Generate"
-  },
-  "RH_Mureka9SongGenerate": {
-    "display_name": "RH Mureka 9 Song Generate"
-  },
-  "RH_Mureka76InstrumentalGenerate": {
-    "display_name": "RH Mureka 7.6 Instrumental Generate"
-  },
   "RH_MurekaO2InstrumentalGenerate": {
     "display_name": "RH Mureka O2 Instrumental Generate"
-  },
-  "RH_Mureka8InstrumentalGenerate": {
-    "display_name": "RH Mureka 8 Instrumental Generate"
-  },
-  "RH_Mureka76SongExtend": {
-    "display_name": "RH Mureka 7.6 Song Extend"
-  },
-  "RH_Mureka8SongExtend": {
-    "display_name": "RH Mureka 8 Song Extend"
-  },
-  "RH_MurekaVocalClone": {
-    "display_name": "RH Mureka Vocal Clone"
-  },
-  "RH_MurekaLyricsGenerate": {
-    "display_name": "RH Mureka Lyrics Generate"
-  },
-  "RH_Mureka9InstrumentalGenerate": {
-    "display_name": "RH Mureka 9 Instrumental Generate"
   },
   "RH_RhartVideoSparkvideo20UploadAsset": {
     "display_name": "RH Seedance 2.0 Upload Asset"
@@ -970,6 +934,129 @@
   },
   "RH_LumaUni1MaxImageEdit": {
     "display_name": "RH Luma Uni 1 Max Image Edit"
+  },
+  "RH_MinimaxMusic26TextToMusic": {
+    "display_name": "RH Minimax Music 2.6 Text to Music"
+  },
+  "RH_MinimaxMusic26TextToInstrumental": {
+    "display_name": "RH Minimax Music 2.6 Text to Instrumental"
+  },
+  "RH_AlibabaWan27SpicyImageToVideo": {
+    "display_name": "RH Wan 2.7 Spicy Image to Video"
+  },
+  "RH_MurekaAiFilesUpload": {
+    "display_name": "RH Mureka AI Files Upload"
+  },
+  "RH_MurekaAiMurekaV76GenerateSong": {
+    "display_name": "RH Mureka V7.6 Generate Song"
+  },
+  "RH_MurekaAiMurekaO2GenerateSong": {
+    "display_name": "RH Mureka O2 Generate Song"
+  },
+  "RH_MurekaAiMurekaV8GenerateSong": {
+    "display_name": "RH Mureka V8 Generate Song"
+  },
+  "RH_MurekaAiMurekaV9GenerateSong": {
+    "display_name": "RH Mureka V9 Generate Song"
+  },
+  "RH_MurekaAiMurekaV76GenerateBgm": {
+    "display_name": "RH Mureka V7.6 Generate Bgm"
+  },
+  "RH_MurekaAiMurekaV8GenerateBgm": {
+    "display_name": "RH Mureka V8 Generate Bgm"
+  },
+  "RH_MurekaAiMurekaV8ExtendSong": {
+    "display_name": "RH Mureka V8 Extend Song"
+  },
+  "RH_MurekaAiVocalClone": {
+    "display_name": "RH Mureka AI Vocal Clone"
+  },
+  "RH_MurekaAiGenerateLyrics": {
+    "display_name": "RH Mureka AI Generate Lyrics"
+  },
+  "RH_MurekaAiMurekaV9GenerateBgm": {
+    "display_name": "RH Mureka V9 Generate Bgm"
+  },
+  "RH_RhartVideoV31FastOfficialReferenceToVideo": {
+    "display_name": "RH Google Veo3.1 Fast Reference to Video Official Stable"
+  },
+  "RH_RhartImagineImageQualityEdit": {
+    "display_name": "RH XAI Rhart Imagine Image Quality Edit Official Stable"
+  },
+  "RH_RhartImagineImageQualityTextToImage": {
+    "display_name": "RH XAI Rhart Imagine Image Quality Text to Image Official Stable"
+  },
+  "RH_RhartVideoSparkvideo20UploadAssetChannelLowPrice": {
+    "display_name": "RH Seedance 2.0 Upload Asset Channel Low Price"
+  },
+  "RH_BytedanceSeedance20GlobalUploadAssetChannelLowPrice": {
+    "display_name": "RH Seedance 2.0 Global Upload Asset Channel Low Price"
+  },
+  "RH_MurekaAiMurekaV76ExtendSong": {
+    "display_name": "RH Mureka V7.6 Extend Song"
+  },
+  "RH_MurekaAiStemSong": {
+    "display_name": "RH Mureka AI Stem Song"
+  },
+  "RH_MurekaAiRecognizeSong": {
+    "display_name": "RH Mureka AI Recognize Song"
+  },
+  "RH_MurekaAiDescribeSong": {
+    "display_name": "RH Mureka AI Describe Song"
+  },
+  "RH_MurekaAiExtendLyrics": {
+    "display_name": "RH Mureka AI Extend Lyrics"
+  },
+  "RH_MinimaxNovaVideo20TextToVideo": {
+    "display_name": "RH Seedance 2.0 Text to Video (low Price)"
+  },
+  "RH_MinimaxNovaVideo20ImageToVideo": {
+    "display_name": "RH Seedance 2.0 Image to Video (low Price)"
+  },
+  "RH_MinimaxNovaVideo20MultimodalToVideo": {
+    "display_name": "RH Seedance 2.0 Multimodal Video (low Price)"
+  },
+  "RH_MinimaxNovaVideo20FastTextToVideo": {
+    "display_name": "RH Seedance 2.0 Fast Text to Video (low Price)"
+  },
+  "RH_MinimaxNovaVideo20FastImageToVideo": {
+    "display_name": "RH Seedance 2.0 Fast Image to Video (low Price)"
+  },
+  "RH_MinimaxNovaVideo20FastMultimodalToVideo": {
+    "display_name": "RH Seedance 2.0 Fast Multimodal Video (low Price)"
+  },
+  "RH_MinimaxEvaVideo20TextToVideo": {
+    "display_name": "RH Seedance 2.0 Global Text to Video (low Price)"
+  },
+  "RH_MinimaxEvaVideo20ImageToVideo": {
+    "display_name": "RH Seedance 2.0 Global Image to Video (low Price)"
+  },
+  "RH_MinimaxEvaVideo20MultimodalToVideo": {
+    "display_name": "RH Seedance 2.0 Global Multimodal Video (low Price)"
+  },
+  "RH_MinimaxEvaVideo20FastTextToVideo": {
+    "display_name": "RH Seedance 2.0 Global Fast Text to Video (low Price)"
+  },
+  "RH_MinimaxEvaVideo20FastImageToVideo": {
+    "display_name": "RH Seedance 2.0 Global Fast Image to Video (low Price)"
+  },
+  "RH_MinimaxEvaVideo20FastMultimodalToVideo": {
+    "display_name": "RH Seedance 2.0 Global Fast Multimodal Video (low Price)"
+  },
+  "RH_BytedanceJimeng46TextToImage": {
+    "display_name": "RH Bytedance Jimeng 4.6 Text to Image"
+  },
+  "RH_BytedanceJimeng46ImageToImage": {
+    "display_name": "RH Bytedance Jimeng 4.6 Image to Image"
+  },
+  "RH_Seedance20UploadAsset": {
+    "display_name": "RH Seedance 2.0 Upload Asset"
+  },
+  "RH_GeminiOmniFlashTextToVideo": {
+    "display_name": "RH Gemini Omni Flash Text to Video"
+  },
+  "RH_GeminiOmniFlashImageToVideo": {
+    "display_name": "RH Gemini Omni Flash Image to Video"
   },
   "RH_SparkVideoAssetCreate": {
     "display_name": "RH Seedance2.0 Asset/Create"

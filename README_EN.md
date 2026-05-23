@@ -1,18 +1,18 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-340-blue)
+![Nodes](https://img.shields.io/badge/Nodes-357-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 **English** | [中文](README.md)
 
 **ComfyUI_RH_OpenAPI** is a **1:1 ComfyUI implementation** of the [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api), with additional Seedance2.0 asset management nodes.
 
-The project currently includes 336 standard model API nodes covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. Together with 3 Seedance2.0 asset helper nodes, 1 RunningHub LLM chat node, and 1 settings node, it provides 340 ComfyUI nodes in total. You can access RunningHub standard model and LLM capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the `real_person_mode` toggle — no local GPU required, zero cold-start latency.
+The project currently includes 353 standard model API nodes covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. Together with 3 Seedance2.0 asset helper nodes, 1 RunningHub LLM chat node, and 1 settings node, it provides 357 ComfyUI nodes in total. You can access RunningHub standard model and LLM capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the `real_person_mode` toggle — no local GPU required, zero cold-start latency.
 
 ## 📌 Features
 
-- **Node Count** — 340 ComfyUI nodes in total: 336 standard model nodes, 3 Seedance2.0 asset nodes, 1 RunningHub LLM chat node, and 1 settings node
+- **Node Count** — 357 ComfyUI nodes in total: 353 standard model nodes, 3 Seedance2.0 asset nodes, 1 RunningHub LLM chat node, and 1 settings node
 - **Plug & Play** — No model downloads, no GPU needed — just an API Key
 - **Dynamic Registration** — Nodes are auto-generated from a JSON registry; adding new models requires only a registry update
 - **Media Support** — Automatic upload/download/conversion for images, videos, and audio, seamlessly integrated with ComfyUI native types
@@ -26,7 +26,7 @@ The project currently includes 336 standard model API nodes covering image gener
 
 ## 🎨 Supported Models
 
-### Image Generation (76 Nodes)
+### Image Generation (78 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
@@ -48,7 +48,7 @@ The project currently includes 336 standard model API nodes covering image gener
 | Midjourney | 悠船 | Text-to-Image v6/v6.1/niji6/niji7/v7/v8.1 | 6 |
 | Marble 1.0 / 1.1 / 1.1 Plus | — | Image/Multi-Image-to-3D World | 6 |
 
-### Video Generation (209 Nodes)
+### Video Generation (224 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
@@ -177,14 +177,14 @@ cp config/.env.example config/.env
 
 ### Example Workflows
 
-The project includes 306 example workflow JSON files in the `examples/` directory, including 3 Seedance2.0 asset-related workflows. Download and import directly into ComfyUI.
+The project includes 323 example workflow JSON files in the `examples/` directory, including 3 Seedance2.0 asset-related workflows. Download and import directly into ComfyUI.
 
 ## 📁 Project Structure
 
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # Entry point, registers all nodes
-├── models_registry.json     # Model registry (336 model definitions)
+├── models_registry.json     # Model registry (353 model definitions)
 ├── config/
 │   └── .env.example         # Configuration template
 ├── core/                    # Core infrastructure
@@ -201,7 +201,7 @@ ComfyUI_RH_OpenAPI/
 │   ├── llm_chat.py          # RunningHub LLM Chat Completions node
 │   ├── node_factory.py      # Dynamic node factory
 │   └── assets/              # Seedance2.0 asset management nodes
-└── examples/                # 306 example workflows
+└── examples/                # 323 example workflows
 ```
 
 ## 🔧 Architecture

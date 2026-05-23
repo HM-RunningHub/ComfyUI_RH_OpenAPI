@@ -37,7 +37,7 @@
     },
     {
       "id": 2,
-      "type": "RH_RhartVideoSImageToVideo",
+      "type": "RH_MinimaxEvaVideo20MultimodalToVideo",
       "pos": [
         500,
         100
@@ -51,8 +51,38 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "image",
+          "name": "first_frame",
           "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "last_frame",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image3",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
           "link": null
         },
         {
@@ -84,10 +114,10 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "RH_RhartVideoSImageToVideo"
+        "Node name for S&R": "RH_MinimaxEvaVideo20MultimodalToVideo"
       },
       "widgets_values": [],
-      "title": "RH 全能视频S-图生视频-低价渠道版"
+      "title": "RH Seedance-2.0-global 多模态视频（低价版）"
     },
     {
       "id": 3,
@@ -106,10 +136,10 @@
       "inputs": [],
       "outputs": [],
       "properties": {
-        "text": "Example: RH 全能视频S-图生视频-低价渠道版\nEndpoint: /rhart-video-s/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image (IMAGE)"
+        "text": "Example: RH Seedance-2.0-global 多模态视频（低价版）\nEndpoint: /minimax/eva-video-2.0/multimodal-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - first_frame (IMAGE)\n  - last_frame (IMAGE)\n  - image1 (IMAGE)\n  - image2 (IMAGE)\n  - image3 (IMAGE)\n  - video (VIDEO)\n  - audio (AUDIO)"
       },
       "widgets_values": [
-        "Example: RH 全能视频S-图生视频-低价渠道版\nEndpoint: /rhart-video-s/image-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - image (IMAGE)"
+        "Example: RH Seedance-2.0-global 多模态视频（低价版）\nEndpoint: /minimax/eva-video-2.0/multimodal-to-video\nOutput: video\n\nSteps:\n1. Set API Key in Settings node\n2. Adjust parameters and Queue Prompt\n\nMedia inputs (connect as needed):\n  - first_frame (IMAGE)\n  - last_frame (IMAGE)\n  - image1 (IMAGE)\n  - image2 (IMAGE)\n  - image3 (IMAGE)\n  - video (VIDEO)\n  - audio (AUDIO)"
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -150,7 +180,7 @@
       1,
       0,
       2,
-      1,
+      7,
       "RH_OPENAPI_CONFIG"
     ],
     [
