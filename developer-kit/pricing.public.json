@@ -2,10 +2,10 @@
   "version": "public-2026-04-29",
   "source": "models_registry.json public-safe pricing summaries",
   "note": "Public-safe pricing summary for AI-assisted integration. Prices may change; check official RunningHub pricing before showing final costs to end users.",
-  "pricing_count": 336,
+  "pricing_count": 339,
   "counts_by_pricing_type": {
-    "fixed": 149,
-    "parameter_based": 186,
+    "fixed": 151,
+    "parameter_based": 187,
     "unparsed": 1
   },
   "pricing": [
@@ -999,11 +999,11 @@
       "name_cn": "即梦图片 4.6 图生图",
       "name_en": "bytedance/jimeng-4.6/image-to-image",
       "currency": "CNY",
-      "unit": "/次",
+      "unit": "/张",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.22
+      "price": 0.17
     },
     {
       "endpoint": "bytedance/jimeng-4.6/text-to-image",
@@ -1014,7 +1014,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.22
+      "price": 0.17
     },
     {
       "endpoint": "bytedance/seedance-2.0-global-fast/image-to-video",
@@ -1327,20 +1327,9 @@
       "price": 0.0
     },
     {
-      "endpoint": "cinematic-video-generator",
-      "name_cn": "SD2.0 视频生成(体验版)",
-      "name_en": "sd2.0/video-generator-trial",
-      "currency": "CNY",
-      "unit": "/秒",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 1.0
-    },
-    {
       "endpoint": "gemini-omni-flash/image-to-video",
-      "name_cn": "全能视频 Omni Flash 图生视频",
-      "name_en": "gemini-omni-flash/image-to-video",
+      "name_cn": "全能视频 Omni Flash 图生视频-低价渠道版",
+      "name_en": "gemini-omni-flash/image-to-video/channel-low-price",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
@@ -1439,8 +1428,8 @@
     },
     {
       "endpoint": "gemini-omni-flash/text-to-video",
-      "name_cn": "全能视频 Omni Flash 文生视频",
-      "name_en": "gemini-omni-flash/text-to-video",
+      "name_cn": "全能视频 Omni Flash 文生视频-低价渠道版",
+      "name_en": "gemini-omni-flash/text-to-video/channel-low-price",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
@@ -1534,6 +1523,39 @@
             "duration": "8"
           },
           "price": 1.95
+        }
+      ]
+    },
+    {
+      "endpoint": "gemini-omni-flash/video-edit",
+      "name_cn": "全能视频 Omni Flash 视频编辑-低价渠道版",
+      "name_en": "gemini-omni-flash/video-edit/channel-low-price",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 0.3
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 0.6
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.3
         }
       ]
     },
@@ -3111,7 +3133,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.868
+      "price": 0.9
     },
     {
       "endpoint": "luma/uni-1-max/image-to-image",
@@ -3122,7 +3144,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 1.064
+      "price": 1.11
     },
     {
       "endpoint": "luma/uni-1-max/text-to-image",
@@ -3133,7 +3155,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.84
+      "price": 0.88
     },
     {
       "endpoint": "luma/uni-1/image-edit",
@@ -3144,7 +3166,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.364
+      "price": 0.38
     },
     {
       "endpoint": "luma/uni-1/image-to-image",
@@ -3155,7 +3177,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.567
+      "price": 0.59
     },
     {
       "endpoint": "luma/uni-1/text-to-image",
@@ -3166,7 +3188,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.336
+      "price": 0.35
     },
     {
       "endpoint": "marble-1.0/image-to-world",
@@ -11557,6 +11579,39 @@
           "price": 0.27
         }
       ]
+    },
+    {
+      "endpoint": "volc-drama/video-translate",
+      "name_cn": "火山短剧-视频翻译",
+      "name_en": "volc-drama/video-translate",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.0
+    },
+    {
+      "endpoint": "volc-subtitle-erase-pro/video",
+      "name_cn": "火山字幕擦除-视频字幕擦除（精细化版）",
+      "name_en": "volc-subtitle-erase/video(Refined version)",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.013
+    },
+    {
+      "endpoint": "volc-subtitle-erase/video",
+      "name_cn": "火山字幕擦除-视频字幕擦除（标准版）",
+      "name_en": "volc-subtitle-erase/video(Standard Version) ",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.005
     },
     {
       "endpoint": "youchuan/image-to-video",

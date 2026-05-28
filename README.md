@@ -1,7 +1,7 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-357-blue)
+![Nodes](https://img.shields.io/badge/Nodes-360-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 [RunningHub](https://www.runninghub.cn)
 
@@ -9,11 +9,11 @@
 
 **ComfyUI_RH_OpenAPI** 是 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 的 **1:1 ComfyUI 实现**，并额外补充了 Seedance2.0 素材资产管理节点。
 
-本项目当前收录 353 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点、1 个 RunningHub LLM 对话节点与 1 个设置节点，总计提供 357 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型与 LLM 能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
+本项目当前收录 356 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点、1 个 RunningHub LLM 对话节点与 1 个设置节点，总计提供 360 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型与 LLM 能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
 
 ## 📌 项目特点
 
-- **节点总量** — 共 357 个 ComfyUI 节点，其中包含 353 个标准模型节点、3 个 Seedance2.0 素材节点、1 个 RunningHub LLM 对话节点和 1 个设置节点
+- **节点总量** — 共 360 个 ComfyUI 节点，其中包含 356 个标准模型节点、3 个 Seedance2.0 素材节点、1 个 RunningHub LLM 对话节点和 1 个设置节点
 - **即插即用** — 无需下载模型、无需 GPU，只需 API Key 即可调用全部能力
 - **动态注册** — 基于 JSON 注册表自动生成节点，新模型上线后仅需更新注册表
 - **多媒体支持** — 图片、视频、音频自动上传 / 下载 / 格式转换，与 ComfyUI 原生类型无缝衔接
@@ -49,7 +49,7 @@
 | Midjourney | 悠船 | 文生图 v6/v6.1/niji6/niji7/v7/v8.1 | 6 |
 | Marble 1.0 / 1.1 / 1.1 Plus | — | 图像/多图生成 3D 世界 | 6 |
 
-### 视频生成（224 个节点）
+### 视频生成（227 个节点）
 
 | 模型 | RH 平台名称 | 能力 | 节点数 |
 |------|-----------|------|--------|
@@ -182,7 +182,7 @@ cp config/.env.example config/.env
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # 入口文件，注册所有节点
-├── models_registry.json     # 模型注册表（353 个模型定义）
+├── models_registry.json     # 模型注册表（356 个模型定义）
 ├── config/
 │   └── .env.example         # 配置文件示例
 ├── core/                    # 核心基础设施

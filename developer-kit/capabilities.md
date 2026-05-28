@@ -6,12 +6,12 @@ It gives developers and AI coding agents a fast index of available model capabil
 
 ## Summary
 
-- Total models: 353
+- Total models: 356
 - `3d` outputs: 16
 - `audio` outputs: 18
 - `image` outputs: 78
 - `string` outputs: 46
-- `video` outputs: 195
+- `video` outputs: 198
 
 ## How To Use This File With AI
 
@@ -79,17 +79,17 @@ The AI must not infer enum values or required fields from this summary.
 | `alibaba/wan-2.7/image-edit-pro` | wan-2.7/image-edit-pro | imageUrls:IMAGE:required, prompt:STRING:required, width:INT:optional, height:INT:optional | 0.47 CNY/次 |
 | `alibaba/wan-2.7/text-to-image` | wan-2.7/text-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, thinkingMode:BOOLEAN:optional | 0.19 CNY/次 |
 | `alibaba/wan-2.7/text-to-image-pro` | wan-2.7/text-to-image-pro | prompt:STRING:required, width:INT:optional, height:INT:optional, thinkingMode:BOOLEAN:optional | 0.47 CNY/次 |
-| `bytedance/jimeng-4.6/image-to-image` | bytedance/jimeng-4.6/image-to-image | prompt:STRING:required, imageUrls:IMAGE:required, width:INT:optional, height:INT:optional, scale:INT:optional, forceSingle:BOOLEAN:optional, minRatio:FLOAT:optional, maxRatio:FLOAT:optional | 0.22 CNY/次 |
-| `bytedance/jimeng-4.6/text-to-image` | bytedance/jimeng-4.6/text-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, scale:INT:optional, forceSingle:BOOLEAN:optional, minRatio:FLOAT:optional, maxRatio:FLOAT:optional | 0.22 CNY/次 |
+| `bytedance/jimeng-4.6/image-to-image` | bytedance/jimeng-4.6/image-to-image | prompt:STRING:required, imageUrls:IMAGE:required, width:INT:optional, height:INT:optional, scale:INT:optional, forceSingle:BOOLEAN:optional, minRatio:FLOAT:optional, maxRatio:FLOAT:optional | 0.17 CNY/张 |
+| `bytedance/jimeng-4.6/text-to-image` | bytedance/jimeng-4.6/text-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, scale:INT:optional, forceSingle:BOOLEAN:optional, minRatio:FLOAT:optional, maxRatio:FLOAT:optional | 0.17 CNY/次 |
 | `higgsfield/soul/image-to-image` | higgsfield/soul/image-to-image | prompt:STRING:required, imageUrl:IMAGE:required, size:LIST:required, style:LIST:optional, strength:FLOAT:optional, quality:LIST:required | 0.7-1.4 CNY/次 by quality |
 | `image-enhance/hypir-balance` | hypir-balance | imageUrl:IMAGE:required, upscale:INT:required, prompt:STRING:optional, shortEdgeSize:INT:optional, longEdgeSize:INT:optional, seed:INT:optional | 1.0 CNY/次 |
 | `image-enhance/hypir-ultra` | hypir-ultra | imageUrl:IMAGE:required, prompt:STRING:optional, shortEdgeSize:INT:optional, longEdgeSize:INT:optional, textureLevel:LIST:optional, creativityLevel:LIST:optional, upscale:INT:optional, seed:INT:optional | 0.1 CNY/次 |
-| `luma/uni-1-max/image-edit` | Luma uni-1-max Image Edit | imageUrl:IMAGE:required, prompt:STRING:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional | 0.868 CNY/次 |
-| `luma/uni-1-max/image-to-image` | Luma uni-1-max Image to Image | prompt:STRING:required, imageUrl:IMAGE:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional, webSearch:BOOLEAN:optional, imageRef:IMAGE:optional | 1.064 CNY/次 |
-| `luma/uni-1-max/text-to-image` | Luma uni-1-max Text to Image | prompt:STRING:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional, webSearch:BOOLEAN:optional | 0.84 CNY/次 |
-| `luma/uni-1/image-edit` | Luma uni-1 Image Edit | imageUrl:IMAGE:required, prompt:STRING:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional | 0.364 CNY/次 |
-| `luma/uni-1/image-to-image` | Luma uni-1 Image to Image | prompt:STRING:required, imageUrl:IMAGE:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional, webSearch:BOOLEAN:optional, imageRef:IMAGE:optional | 0.567 CNY/次 |
-| `luma/uni-1/text-to-image` | Luma uni-1 Text to Image | prompt:STRING:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional, webSearch:BOOLEAN:optional | 0.336 CNY/次 |
+| `luma/uni-1-max/image-edit` | Luma uni-1-max Image Edit | imageUrl:IMAGE:required, prompt:STRING:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional | 0.9 CNY/次 |
+| `luma/uni-1-max/image-to-image` | Luma uni-1-max Image to Image | prompt:STRING:required, imageUrl:IMAGE:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional, webSearch:BOOLEAN:optional, imageRef:IMAGE:optional | 1.11 CNY/次 |
+| `luma/uni-1-max/text-to-image` | Luma uni-1-max Text to Image | prompt:STRING:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional, webSearch:BOOLEAN:optional | 0.88 CNY/次 |
+| `luma/uni-1/image-edit` | Luma uni-1 Image Edit | imageUrl:IMAGE:required, prompt:STRING:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional | 0.38 CNY/次 |
+| `luma/uni-1/image-to-image` | Luma uni-1 Image to Image | prompt:STRING:required, imageUrl:IMAGE:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional, webSearch:BOOLEAN:optional, imageRef:IMAGE:optional | 0.59 CNY/次 |
+| `luma/uni-1/text-to-image` | Luma uni-1 Text to Image | prompt:STRING:required, aspectRatio:LIST:optional, style:LIST:optional, outputFormat:LIST:optional, webSearch:BOOLEAN:optional | 0.35 CNY/次 |
 | `marble-1.0/image-to-world` | marble-1.0/image-to-world | imageUrl:STRING:optional, textPrompt:STRING:optional, isPano:BOOLEAN:optional, disableRecaption:BOOLEAN:optional, displayName:STRING:optional, seed:INT:optional, permissionPublic:BOOLEAN:optional, permissionAllowIdAccess:BOOLEAN:optional, tags:STRING:optional, permissionAllowedReaders:STRING:optional, permissionAllowedWriters:STRING:optional | 10.08-10.62 CNY/次 by isPano |
 | `marble-1.0/multi-image-to-world` | marble-1.0/multi-image-to-world | textPrompt:STRING:optional, reconstructImages:BOOLEAN:optional, disableRecaption:BOOLEAN:optional, displayName:STRING:optional, seed:INT:optional, permissionPublic:BOOLEAN:optional, permissionAllowIdAccess:BOOLEAN:optional, tags:STRING:optional, permissionAllowedReaders:STRING:optional, permissionAllowedWriters:STRING:optional | 10.75 CNY/次 |
 | `marble-1.1-plus/image-to-world` | marble-1.1-plus/image-to-world | imageUrl:STRING:optional, textPrompt:STRING:optional, isPano:BOOLEAN:optional, disableRecaption:BOOLEAN:optional, displayName:STRING:optional, seed:INT:optional, permissionPublic:BOOLEAN:optional, permissionAllowIdAccess:BOOLEAN:optional, tags:STRING:optional, permissionAllowedReaders:STRING:optional, permissionAllowedWriters:STRING:optional | 20.16-20.7 CNY/次 by isPano |
@@ -169,7 +169,7 @@ The AI must not infer enum values or required fields from this summary.
 | `mureka-ai/mureka-v7.6/extend-song` | mureka-v7.6/extend-song | lyrics:STRING:required, extendAt:INT:required, fileUrl:AUDIO:required | 0.245 CNY/次 |
 | `mureka-ai/mureka-v7.6/generate-bgm` | mureka-v7.6/generate-bgm | prompt:STRING:optional, instrumentalId:STRING:optional, n:INT:required, stream:BOOLEAN:optional | 0.19 CNY/次 by n |
 | `mureka-ai/mureka-v7.6/generate-song` | mureka-v7.6/generate-song | lyrics:STRING:required, prompt:STRING:optional, n:INT:required, referenceId:STRING:optional, vocalId:STRING:optional, melodyId:STRING:optional, stream:BOOLEAN:optional | 0.19 CNY/次 by n |
-| `mureka-ai/mureka-v8/extend-song` | mureka-v8/extend-song | lyrics:STRING:required, extendAt:INT:required, extendType:LIST:optional, fileUrl:AUDIO:required | 0.63 CNY/次 |
+| `mureka-ai/mureka-v8/extend-song` | mureka-v8/extend-song | lyrics:STRING:required, fileUrl:AUDIO:required, extendAt:INT:required, extendType:LIST:optional | 0.63 CNY/次 |
 | `mureka-ai/mureka-v8/generate-bgm` | mureka-v8/generate-bgm | prompt:STRING:optional, n:INT:required, instrumentalId:STRING:optional, stream:BOOLEAN:optional | 0.28 CNY/次 by n |
 | `mureka-ai/mureka-v8/generate-song` | mureka-v8/generate-song | lyrics:STRING:required, prompt:STRING:optional, n:INT:required, referenceId:STRING:optional, vocalId:STRING:optional, melodyId:STRING:optional, stream:BOOLEAN:optional | 0.28 CNY/次 by n |
 | `mureka-ai/mureka-v9/generate-bgm` | mureka-v9/generate-bgm | prompt:STRING:optional, n:INT:required, instrumentalId:STRING:optional, stream:BOOLEAN:optional | 0.28 CNY/次 by n |
@@ -227,9 +227,9 @@ The AI must not infer enum values or required fields from this summary.
 | `bytedance/seedance-2.0-global/image-to-video` | seedance-2.0-global/image-to-video | prompt:STRING:optional, resolution:LIST:required, duration:LIST:required, firstFrameUrl:IMAGE:required, lastFrameUrl:IMAGE:optional, generateAudio:BOOLEAN:optional, ratio:LIST:optional, realPersonMode:BOOLEAN:optional, conversionSlots:LIST:optional, returnLastFrame:BOOLEAN:optional, seed:INT:optional | 0.6-3 CNY/second by resolution |
 | `bytedance/seedance-2.0-global/multimodal-video` | seedance-2.0-global/multimodal-video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, imageUrls:IMAGE:optional, videoUrls:VIDEO:optional, audioUrls:AUDIO:optional, generateAudio:BOOLEAN:optional, ratio:LIST:optional, realPersonMode:BOOLEAN:optional, conversionSlots:LIST:optional, returnLastFrame:BOOLEAN:optional, seed:INT:optional | 0.6-3 CNY/second by resolution |
 | `bytedance/seedance-2.0-global/text-to-video` | seedance-2.0-global/text-to-video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, generateAudio:BOOLEAN:optional, ratio:LIST:optional, returnLastFrame:BOOLEAN:optional, seed:INT:optional | 0.6-3 CNY/second by resolution |
-| `cinematic-video-generator` | sd2.0/video-generator-trial | prompt:STRING:required, imageUrls:IMAGE:optional, aspectRatio:LIST:optional, duration:LIST:required | 1.0 CNY/秒 |
-| `gemini-omni-flash/image-to-video` | gemini-omni-flash/image-to-video | prompt:STRING:required, imageUrls:IMAGE:required, duration:LIST:required, resolution:LIST:required, aspectRatio:LIST:optional | 1.95-4.2 CNY/次 by resolution,duration |
-| `gemini-omni-flash/text-to-video` | gemini-omni-flash/text-to-video | prompt:STRING:required, duration:LIST:required, resolution:LIST:required, aspectRatio:LIST:optional | 1.95-4.2 CNY/次 by resolution,duration |
+| `gemini-omni-flash/image-to-video` | gemini-omni-flash/image-to-video/channel-low-price | prompt:STRING:required, imageUrls:IMAGE:required, duration:LIST:required, resolution:LIST:required, aspectRatio:LIST:optional | 1.95-4.2 CNY/次 by resolution,duration |
+| `gemini-omni-flash/text-to-video` | gemini-omni-flash/text-to-video/channel-low-price | prompt:STRING:required, duration:LIST:required, resolution:LIST:required, aspectRatio:LIST:optional | 1.95-4.2 CNY/次 by resolution,duration |
+| `gemini-omni-flash/video-edit` | gemini-omni-flash/video-edit/channel-low-price | prompt:STRING:required, imageUrls:IMAGE:optional, resolution:LIST:required, aspectRatio:LIST:optional, videoUrl:VIDEO:required | 0.3-0.6 CNY/秒 by resolution |
 | `higgsfield/dop/image-to-video` | higgsfield/dop/image-to-video | prompt:STRING:required, imageUrl:IMAGE:required, endImageUrl:IMAGE:optional, options:LIST:required | 0.9-4.2 CNY/次 by options |
 | `kling-elements-advanced` | kling-o3/element | elementName:STRING:required, elementDescription:STRING:required, referenceType:LIST:required, elementVideoList:VIDEO:optional, tagList:LIST:optional | 0.0 CNY/次 |
 | `kling-lip-sync/lip-sync-video` | kling-lip-sync/lip-sync-video | sessionId:STRING:required, faceId:STRING:required, audioId:STRING:optional, audioUrl:AUDIO:optional, soundStartTime:INT:required, soundEndTime:INT:required, soundInsertTime:INT:required, soundVolume:FLOAT:optional, originalAudioVolume:FLOAT:optional | 0.35 CNY/5秒 |
@@ -298,7 +298,7 @@ The AI must not infer enum values or required fields from this summary.
 | `minimax/nova-video-2.0/text-to-video` | Seedance-2.0 Text-to-Video (Low-Price) | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, ratio:LIST:optional, generateAudio:BOOLEAN:optional, watermark:BOOLEAN:optional, seed:INT:optional |  |
 | `pixverse-c1/image-to-video` | pixverse-c1/image-to-video | imageUrl:IMAGE:required, prompt:STRING:optional, resolution:LIST:required, duration:INT:required, generateAudioSwitch:BOOLEAN:required | 0.19-0.76 CNY/秒 by resolution,generateAudioSwitch |
 | `pixverse-c1/reference-to-video` | pixverse-c1/reference-to-video | prompt:STRING:required, aspectRatio:LIST:optional, resolution:LIST:required, duration:INT:required, generateAudioSwitch:BOOLEAN:required, seed:INT:optional | 0.19-0.76 CNY/秒 by resolution,generateAudioSwitch |
-| `pixverse-c1/text-to-video` | pixverse-c1/text-to-video | prompt:STRING:required, resolution:LIST:required, generateAudioSwitch:BOOLEAN:required, duration:INT:required, aspectRatio:LIST:optional | 0.19-0.76 CNY/秒 by resolution,generateAudioSwitch |
+| `pixverse-c1/text-to-video` | pixverse-c1/text-to-video | prompt:STRING:required, resolution:LIST:required, duration:INT:required, aspectRatio:LIST:optional, generateAudioSwitch:BOOLEAN:required | 0.19-0.76 CNY/秒 by resolution,generateAudioSwitch |
 | `pixverse-c1/transition` | pixverse-c1/transition | prompt:STRING:required, firstImageUrl:IMAGE:required, endImageUrl:IMAGE:optional, resolution:LIST:required, duration:INT:required, generateAudioSwitch:BOOLEAN:required, aspectRatio:LIST:optional | 0.63-2.52 CNY/秒起 by resolution |
 | `pixverse-v5.5-effects` | pixverse-v5.5-effects | imageUrl:IMAGE:required, effect:LIST:required, resolution:LIST:required, duration:LIST:required, negativePrompt:STRING:optional, thinkingType:LIST:optional | 3.1-16.6 CNY/次 by resolution,duration |
 | `pixverse-v5.5-transition` | pixverse-v5.5-transition | prompt:STRING:required, imageUrl:IMAGE:required, endImageUrl:IMAGE:required, aspectRatio:LIST:optional, duration:LIST:required, resolution:LIST:required, thinkingType:LIST:optional, negativePrompt:STRING:optional | 3.1-16.6 CNY/次 by resolution,duration |
@@ -397,5 +397,8 @@ The AI must not infer enum values or required fields from this summary.
 | `vidu/text-to-video-q3-pro` | Vidu-text-to-video-q3-pro | prompt:STRING:required, style:LIST:required, aspectRatio:LIST:required, resolution:LIST:required, duration:LIST:required, audio:BOOLEAN:required | 0.31-0.7 CNY/秒 by resolution |
 | `vidu/text-to-video-q3-pro-fast` | Vidu-text-to-video-q3-pro-fast | prompt:STRING:required, aspectRatio:LIST:optional, resolution:LIST:optional, duration:LIST:optional, audio:BOOLEAN:optional | 0.46-0.58 CNY/秒 by resolution |
 | `vidu/text-to-video-q3-turbo` | Vidu-text-to-video-q3-turbo | prompt:STRING:required, style:LIST:required, aspectRatio:LIST:required, resolution:LIST:required, duration:LIST:required, audio:BOOLEAN:required | 0.18-0.35 CNY/秒 by resolution |
+| `volc-drama/video-translate` | volc-drama/video-translate | videoUrl:VIDEO:required, projectName:STRING:required, sourceLang:STRING:required, targetLangs:LIST:required, episode:STRING:optional, isDub:BOOLEAN:optional, aiRemoveType:LIST:optional | 0.0 CNY/次 |
+| `volc-subtitle-erase-pro/video` | volc-subtitle-erase/video(Refined version) | videoUrl:VIDEO:required, eraseType:LIST:optional, encodeMode:LIST:optional, clientToken:STRING:optional | 0.013 CNY/秒 |
+| `volc-subtitle-erase/video` | volc-subtitle-erase/video(Standard Version)  | videoUrl:VIDEO:required, clientToken:STRING:optional | 0.005 CNY/秒 |
 | `youchuan/image-to-video` | midjourney-image-to-video | prompt:STRING:required, firstImageUrl:IMAGE:required, lastImageUrl:IMAGE:optional, resolution:LIST:required, motion:LIST:optional, raw:BOOLEAN:optional, loop:BOOLEAN:optional | 0.54-1.62 CNY/次 by resolution |
 
