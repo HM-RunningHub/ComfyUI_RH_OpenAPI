@@ -25536,7 +25536,7 @@
     "name_en": "bytedance/jimeng-4.6/text-to-image",
     "endpoint": "bytedance/jimeng-4.6/text-to-image",
     "output_type": "image",
-    "category": "RunningHub/Seedance",
+    "category": "RunningHub/Seedream",
     "params": [
       {
         "fieldKey": "prompt",
@@ -25617,7 +25617,7 @@
     "name_en": "bytedance/jimeng-4.6/image-to-image",
     "endpoint": "bytedance/jimeng-4.6/image-to-image",
     "output_type": "image",
-    "category": "RunningHub/Seedance",
+    "category": "RunningHub/Seedream",
     "params": [
       {
         "fieldKey": "prompt",
