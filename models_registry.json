@@ -25910,7 +25910,7 @@
     "name_en": "volc-subtitle-erase/video(Standard Version) ",
     "endpoint": "volc-subtitle-erase/video",
     "output_type": "video",
-    "category": "RunningHub/Other",
+    "category": "RunningHub/Seedance",
     "params": [
       {
         "fieldKey": "videoUrl",
@@ -26022,7 +26022,7 @@
     "name_en": "volc-subtitle-erase/video(Refined version)",
     "endpoint": "volc-subtitle-erase-pro/video",
     "output_type": "video",
-    "category": "RunningHub/Other",
+    "category": "RunningHub/Seedance",
     "params": [
       {
         "fieldKey": "videoUrl",
@@ -37364,7 +37364,7 @@
     "name_en": "volc-drama/video-translate",
     "endpoint": "volc-drama/video-translate",
     "output_type": "video",
-    "category": "RunningHub/Other",
+    "category": "RunningHub/Seedance",
     "params": [
       {
         "fieldKey": "videoUrl",
@@ -37380,15 +37380,62 @@
         "type": "STRING",
         "required": true,
         "label": "projectName",
-        "description": "火山短剧项目名称；不存在时自动创建。建议每个短剧项目使用唯一名称"
+        "description": "火山短剧项目名称；不存在时自动创建。建议每个短剧项目使用唯一名称，不能重复"
       },
       {
         "fieldKey": "sourceLang",
-        "type": "STRING",
+        "type": "LIST",
         "required": true,
         "label": "sourceLang",
         "description": "源语言代码",
-        "defaultValue": "zh"
+        "defaultValue": "zh",
+        "options": [
+          {
+            "value": "zh",
+            "description": "zh",
+            "descriptionEn": "zh"
+          },
+          {
+            "value": "en",
+            "description": "en",
+            "descriptionEn": "en"
+          },
+          {
+            "value": "ja",
+            "description": "ja",
+            "descriptionEn": "ja"
+          },
+          {
+            "value": "ko",
+            "description": "ko",
+            "descriptionEn": "ko"
+          },
+          {
+            "value": "es",
+            "description": "es",
+            "descriptionEn": "es"
+          },
+          {
+            "value": "pt",
+            "description": "pt",
+            "descriptionEn": "pt"
+          },
+          {
+            "value": "id",
+            "description": "id",
+            "descriptionEn": "id"
+          },
+          {
+            "value": "th",
+            "description": "th",
+            "descriptionEn": "th"
+          },
+          {
+            "value": "vi",
+            "description": "vi",
+            "descriptionEn": "vi"
+          }
+        ]
       },
       {
         "fieldKey": "targetLangs",
@@ -37401,65 +37448,68 @@
         "options": [
           {
             "value": "zh",
-            "description": "中文",
-            "descriptionEn": "Chinese"
+            "description": "zh",
+            "descriptionEn": "zh"
           },
           {
             "value": "en",
-            "description": "英语",
-            "descriptionEn": "English"
+            "description": "en",
+            "descriptionEn": "en"
           },
           {
             "value": "ja",
-            "description": "日语",
-            "descriptionEn": "Japanese"
+            "description": "ja",
+            "descriptionEn": "ja"
           },
           {
             "value": "ko",
-            "description": "韩语",
-            "descriptionEn": "Korean"
+            "description": "ko",
+            "descriptionEn": "ko"
           },
           {
             "value": "es",
-            "description": "西班牙语",
-            "descriptionEn": "Spanish"
+            "description": "es",
+            "descriptionEn": "es"
           },
           {
             "value": "pt",
-            "description": "葡萄牙语",
-            "descriptionEn": "Portuguese"
+            "description": "pt",
+            "descriptionEn": "pt"
           },
           {
             "value": "id",
-            "description": "印尼语",
-            "descriptionEn": "Indonesian"
+            "description": "id",
+            "descriptionEn": "id"
           },
           {
             "value": "th",
-            "description": "泰语",
-            "descriptionEn": "Thai"
+            "description": "th",
+            "descriptionEn": "th"
           },
           {
             "value": "vi",
-            "description": "越南语",
-            "descriptionEn": "Vietnamese"
+            "description": "vi",
+            "descriptionEn": "vi"
           }
         ]
       },
       {
         "fieldKey": "episode",
-        "type": "STRING",
+        "type": "INT",
         "required": false,
         "label": "episode",
         "description": "剧集序号，1-200；同一项目下相同集数和目标语种不可重复提交",
-        "defaultValue": "1"
+        "defaultValue": 1,
+        "min": 1,
+        "max": 200,
+        "step": 1
       },
       {
         "fieldKey": "isDub",
         "type": "BOOLEAN",
         "required": false,
         "label": "isDub",
-        "description": "是否生成配音；开启后处理时间更长",
+        "description": "是否生成配音（开启语音翻译）；开启后处理时间更长",
         "defaultValue": false
       },
       {
@@ -37467,23 +37517,23 @@
         "type": "LIST",
         "required": false,
         "label": "aiRemoveType",
-        "description": "原字幕擦除方式",
-        "defaultValue": "2",
+        "description": "原字幕擦除方式 0-不擦除，1-普通擦除，1-精细擦除",
+        "defaultValue": "1",
         "options": [
           {
             "value": "0",
-            "description": "不擦除",
-            "descriptionEn": "none"
+            "description": "0",
+            "descriptionEn": "0"
           },
           {
             "value": "1",
-            "description": "普通擦除",
-            "descriptionEn": "standard removal"
+            "description": "1",
+            "descriptionEn": "1"
           },
           {
             "value": "2",
-            "description": "精细擦除",
-            "descriptionEn": "fine removal"
+            "description": "2",
+            "descriptionEn": "2"
           }
         ]
       }
