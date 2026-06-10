@@ -2,10 +2,10 @@
   "version": "public-2026-04-29",
   "source": "models_registry.json public-safe pricing summaries",
   "note": "Public-safe pricing summary for AI-assisted integration. Prices may change; check official RunningHub pricing before showing final costs to end users.",
-  "pricing_count": 339,
+  "pricing_count": 340,
   "counts_by_pricing_type": {
-    "fixed": 151,
-    "parameter_based": 187,
+    "fixed": 147,
+    "parameter_based": 192,
     "unparsed": 1
   },
   "pricing": [
@@ -1305,28 +1305,6 @@
       ]
     },
     {
-      "endpoint": "bytedance/seedance-2.0-global/upload-asset",
-      "name_cn": "seedance2.0-global/上传素材资产",
-      "name_en": "seedance-2.0-global/upload-asset",
-      "currency": "CNY",
-      "unit": "/次",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 0.0
-    },
-    {
-      "endpoint": "bytedance/seedance-2.0-global/upload-asset-channel-low-price",
-      "name_cn": "seedance2.0-global/上传素材资产低价渠道版",
-      "name_en": "seedance-2.0-global/upload-asset-channel-low-price",
-      "currency": "CNY",
-      "unit": "/次",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 0.0
-    },
-    {
       "endpoint": "gemini-omni-flash/image-to-video",
       "name_cn": "全能视频 Omni Flash 图生视频-低价渠道版",
       "name_en": "gemini-omni-flash/image-to-video/channel-low-price",
@@ -2553,6 +2531,94 @@
       "price": 0.35
     },
     {
+      "endpoint": "kling-v2.6/image-to-video",
+      "name_cn": "可灵图生视频2.6",
+      "name_en": "kling-v2.6-image-to-video",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "sound",
+        "duration"
+      ],
+      "rules": [
+        {
+          "when": {
+            "sound": "false",
+            "duration": "10"
+          },
+          "price": 3.5
+        },
+        {
+          "when": {
+            "sound": "false",
+            "duration": "5"
+          },
+          "price": 1.75
+        },
+        {
+          "when": {
+            "sound": "true",
+            "duration": "10"
+          },
+          "price": 7.0
+        },
+        {
+          "when": {
+            "sound": "true",
+            "duration": "5"
+          },
+          "price": 3.5
+        }
+      ]
+    },
+    {
+      "endpoint": "kling-v2.6/text-to-video",
+      "name_cn": "可灵文生视频2.6",
+      "name_en": "kling-v2.6-text-to-video",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "sound",
+        "duration"
+      ],
+      "rules": [
+        {
+          "when": {
+            "sound": "false",
+            "duration": "10"
+          },
+          "price": 3.5
+        },
+        {
+          "when": {
+            "sound": "false",
+            "duration": "5"
+          },
+          "price": 1.75
+        },
+        {
+          "when": {
+            "sound": "true",
+            "duration": "10"
+          },
+          "price": 7.0
+        },
+        {
+          "when": {
+            "sound": "true",
+            "duration": "5"
+          },
+          "price": 3.5
+        }
+      ]
+    },
+    {
       "endpoint": "kling-v3-4k/image-to-video",
       "name_cn": "可灵图生视频v3-4k",
       "name_en": "kling-v3.0-4k-image-to-video",
@@ -3659,9 +3725,9 @@
       ]
     },
     {
-      "endpoint": "minimax/music-2.6/text-to-instrumental",
-      "name_cn": "MiniMax Music 2.6 纯音乐生成",
-      "name_en": "minimax/music-2.6/text-to-instrumental",
+      "endpoint": "minimax/music-2.6",
+      "name_cn": "MiniMax Music 2.6",
+      "name_en": "minimax/music-2.6",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
@@ -3670,9 +3736,20 @@
       "price": 0.8
     },
     {
-      "endpoint": "minimax/music-2.6/text-to-music",
-      "name_cn": "MiniMax Music 2.6 文生音乐",
-      "name_en": "minimax/music-2.6/text-to-music",
+      "endpoint": "minimax/music-cover",
+      "name_cn": "MiniMax Music 翻唱",
+      "name_en": "minimax/music-cover",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.8
+    },
+    {
+      "endpoint": "minimax/music-cover-preprocess",
+      "name_cn": "MiniMax Music 翻唱前处理",
+      "name_en": "minimax/music-cover-preprocess",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
@@ -7196,6 +7273,111 @@
       ]
     },
     {
+      "endpoint": "rhart-video-g-official/image-to-video-v1.5",
+      "name_cn": "全能视频X-图生视频-官方稳定版-v1.5",
+      "name_en": "xai/grok-imagine-video-v1.5/image-to-video-official-stable",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "duration"
+      ],
+      "rules": [
+        {
+          "when": {
+            "duration": "1"
+          },
+          "price": 0.315
+        },
+        {
+          "when": {
+            "duration": "10"
+          },
+          "price": 3.15
+        },
+        {
+          "when": {
+            "duration": "11"
+          },
+          "price": 3.465
+        },
+        {
+          "when": {
+            "duration": "12"
+          },
+          "price": 3.78
+        },
+        {
+          "when": {
+            "duration": "13"
+          },
+          "price": 4.095
+        },
+        {
+          "when": {
+            "duration": "14"
+          },
+          "price": 4.41
+        },
+        {
+          "when": {
+            "duration": "15"
+          },
+          "price": 4.725
+        },
+        {
+          "when": {
+            "duration": "2"
+          },
+          "price": 0.63
+        },
+        {
+          "when": {
+            "duration": "3"
+          },
+          "price": 0.945
+        },
+        {
+          "when": {
+            "duration": "4"
+          },
+          "price": 1.26
+        },
+        {
+          "when": {
+            "duration": "5"
+          },
+          "price": 1.575
+        },
+        {
+          "when": {
+            "duration": "6"
+          },
+          "price": 1.89
+        },
+        {
+          "when": {
+            "duration": "7"
+          },
+          "price": 2.205
+        },
+        {
+          "when": {
+            "duration": "8"
+          },
+          "price": 2.52
+        },
+        {
+          "when": {
+            "duration": "9"
+          },
+          "price": 2.835
+        }
+      ]
+    },
+    {
       "endpoint": "rhart-video-g-official/reference-to-video",
       "name_cn": "全能视频X-多图参考生视频-官方稳定版",
       "name_en": "xai/grok-imagine-video/reference-to-video-official-stable",
@@ -7278,25 +7460,25 @@
     },
     {
       "endpoint": "rhart-video-g/image-to-video",
-      "name_cn": "全能视频X-图生视频-低价渠道版",
-      "name_en": "xai/grok-imagine/image-to-video-channel-low-price",
+      "name_cn": "全能视频X-图生视频-低价渠道版-v1.5",
+      "name_en": "xai/grok-imagine/image-to-video-channel-low-price-v1.5",
       "currency": "CNY",
       "unit": "/秒",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.03
+      "price": 0.04
     },
     {
       "endpoint": "rhart-video-g/text-to-video",
-      "name_cn": "全能视频X-文生视频-低价渠道版",
-      "name_en": "xai/grok-imagine/text-to-video-channel-low-price",
+      "name_cn": "全能视频X-文生视频-低价渠道版-v1.5",
+      "name_en": "xai/grok-imagine/text-to-video-channel-low-price-v1.5",
       "currency": "CNY",
       "unit": "/秒",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.03
+      "price": 0.04
     },
     {
       "endpoint": "rhart-video-r/gen4-aleph-official/video-to-video",
@@ -8294,8 +8476,30 @@
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 0.5
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 1.0
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 1.4
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.8
+        }
+      ]
     },
     {
       "endpoint": "rhart-video-v3.1-pro/start-end-to-video",
@@ -8650,28 +8854,6 @@
           "price": 3.0
         }
       ]
-    },
-    {
-      "endpoint": "rhart-video/sparkvideo-2.0/upload-asset",
-      "name_cn": "seedance2.0/上传素材资产",
-      "name_en": "seedance-2.0/upload-asset",
-      "currency": "CNY",
-      "unit": "/次",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 0.0
-    },
-    {
-      "endpoint": "rhart-video/sparkvideo-2.0/upload-asset-channel-low-price",
-      "name_cn": "seedance2.0/上传素材资产低价渠道版",
-      "name_en": "seedance-2.0/upload-asset-channel-low-price",
-      "currency": "CNY",
-      "unit": "/次",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 0.0
     },
     {
       "endpoint": "rhart-video/video-fps-increaser",
@@ -10636,6 +10818,33 @@
             "resolution": "720p"
           },
           "price": 0.44
+        }
+      ]
+    },
+    {
+      "endpoint": "vidu/reference-to-video-q3-ad",
+      "name_cn": "Vidu-参考生视频-q3-ad",
+      "name_en": "Vidu-reference-to-video-q3-ad",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 0.65
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.54
         }
       ]
     },

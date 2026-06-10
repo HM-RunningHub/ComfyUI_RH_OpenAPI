@@ -243,10 +243,10 @@
     "display_name": "RH 可灵图生视频3.0-pro"
   },
   "RH_RhartVideoGImageToVideo": {
-    "display_name": "RH 全能视频X-图生视频-低价渠道版"
+    "display_name": "RH 全能视频X-图生视频-低价渠道版-v1.5"
   },
   "RH_RhartVideoGTextToVideo": {
-    "display_name": "RH 全能视频X-文生视频-低价渠道版"
+    "display_name": "RH 全能视频X-文生视频-低价渠道版-v1.5"
   },
   "RH_Hunyuan3dV31TextTo3d": {
     "display_name": "RH 混元文生3D模型v3.1"
@@ -344,66 +344,6 @@
   "RH_RhartImageG15OfficialImageToImage": {
     "display_name": "RH 全能图片G-1.5-图生图-官方稳定版"
   },
-  "RH_RhartVideoSImageToVideoAsyn": {
-    "display_name": "RH 全能视频S-图生视频（异步）-低价渠道版"
-  },
-  "RH_RhartTextG3FlashPreviewImageToText": {
-    "display_name": "RH rhart-text-g-3-flash-preview/image-to-text"
-  },
-  "RH_RhartTextG3FlashPreviewTextToText": {
-    "display_name": "RH rhart-text-g-3-flash-preview/text-to-text"
-  },
-  "RH_RhartTextG3FlashPreviewVideoToText": {
-    "display_name": "RH rhart-text-g-3-flash-preview/video-to-text"
-  },
-  "RH_RhartTextG3ProPreviewImageToText": {
-    "display_name": "RH rhart-text-g-3-pro-preview/image-to-text"
-  },
-  "RH_RhartTextG3ProPreviewTextToText": {
-    "display_name": "RH rhart-text-g-3-pro-preview/text-to-text"
-  },
-  "RH_RhartTextG3ProPreviewVideoToText": {
-    "display_name": "RH rhart-text-g-3-pro-preview/video-to-text"
-  },
-  "RH_RhartTextG25FlashImageToText": {
-    "display_name": "RH rhart-text-g-25-flash/image-to-text"
-  },
-  "RH_RhartVideoV31ProImageToVideo": {
-    "display_name": "RH 全能视频V3.1-pro-图生视频-低价渠道版"
-  },
-  "RH_RhartTextG25FlashTextToText": {
-    "display_name": "RH rhart-text-g-25-flash/text-to-text"
-  },
-  "RH_RhartTextG25FlashVideoToText": {
-    "display_name": "RH rhart-text-g-25-flash/video-to-text"
-  },
-  "RH_RhartTextG25ProImageToText": {
-    "display_name": "RH rhart-text-g-25-pro/image-to-text"
-  },
-  "RH_RhartTextG25ProTextToText": {
-    "display_name": "RH rhart-text-g-25-pro/text-to-text"
-  },
-  "RH_RhartTextG25ProVideoToText": {
-    "display_name": "RH rhart-text-g-25-pro/video-to-text"
-  },
-  "RH_TopazlabsImageUpscaleStandardV2": {
-    "display_name": "RH topazlabs图像放大StandardV2"
-  },
-  "RH_TopazlabsImageUpscaleLowResolutionV2": {
-    "display_name": "RH topazlabs图像放大Low Resolution V2"
-  },
-  "RH_TopazlabsImageUpscaleCgi": {
-    "display_name": "RH topazlabs图像放大CGI"
-  },
-  "RH_TopazlabsImageUpscaleHighFidelityV2": {
-    "display_name": "RH topazlabs图像放大High Fidelity V2"
-  },
-  "RH_TopazlabsImageUpscaleTextRefine": {
-    "display_name": "RH topazlabs图像放大Text Refine"
-  },
-  "RH_TopazlabsVideoUpscale": {
-    "display_name": "RH topazlabs视频放大"
-  },
   "RH_KlingVideoO3StdVideoEdit": {
     "display_name": "RH kling-video-o3-std/video-edit"
   },
@@ -415,18 +355,6 @@
   },
   "RH_KlingVideoO3ProReferenceToVideo": {
     "display_name": "RH kling-video-o3-pro/reference-to-video"
-  },
-  "RH_RhartImageG3ImageToImage": {
-    "display_name": "RH 全能图片X-3-图生图"
-  },
-  "RH_RhartImageG4ImageToImage": {
-    "display_name": "RH 全能图片X-4-图生图"
-  },
-  "RH_RhartImageG3TextToImage": {
-    "display_name": "RH 全能图片X-3-文生图"
-  },
-  "RH_RhartImageG4TextToImage": {
-    "display_name": "RH 全能图片X-4-文生图"
   },
   "RH_Hitem3dV15ImageTo3d": {
     "display_name": "RH hitem3d-v15/image-to-3d"
@@ -503,50 +431,11 @@
   "RH_AlibabaQwenImage20TextToImage": {
     "display_name": "RH 千问2.0-文生图"
   },
-  "RH_PixverseV55TextToVideo": {
-    "display_name": "RH PixVerse V5.5 文生视频"
-  },
-  "RH_PixverseV55ImageToVideo": {
-    "display_name": "RH PixVerse V5.5 图生视频"
-  },
-  "RH_PixverseV55Transition": {
-    "display_name": "RH PixVerse V5.5 转场"
-  },
-  "RH_PixverseV55Effects": {
-    "display_name": "RH PixVerse V5.5 特效"
-  },
-  "RH_CinematicVideoGenerator": {
-    "display_name": "RH SD2.0 视频生成(体验版)"
-  },
-  "RH_RhartVideoRGen4TurboOfficialImageToVideo": {
-    "display_name": "RH 全能视频R/gen4-turbo/图生视频-官方稳定版"
-  },
-  "RH_RhartVideoRGen4AlephOfficialVideoToVideo": {
-    "display_name": "RH 全能视频R-gen4-aleph/视频编辑-官方稳定版"
-  },
-  "RH_RhartVideoRGen4TurboImageToVideo": {
-    "display_name": "RH 全能视频R/gen4-turbo/图生视频-低价渠道版"
-  },
-  "RH_RhartVideoLtx2TextToVideoLora": {
-    "display_name": "RH ltx-2-19b/text-to-video-lora"
-  },
   "RH_RhartImageFDev": {
     "display_name": "RH f-dev"
   },
   "RH_RhartImageFDevLora": {
     "display_name": "RH f-dev-lora"
-  },
-  "RH_SkyreelsV3ReferenceToVideo": {
-    "display_name": "RH SkyReels V3 参考图生视频"
-  },
-  "RH_SkyreelsV3VideoRestyling": {
-    "display_name": "RH SkyReels V3 视频风格化"
-  },
-  "RH_SkyreelsV3SingleShotVideoExtension": {
-    "display_name": "RH SkyReels V3 视频续写（单镜头）"
-  },
-  "RH_SkyreelsV3ShotSwitchingVideoExtension": {
-    "display_name": "RH SkyReels V3 视频续写（镜头切换）"
   },
   "RH_KlingLipSyncIdentifyFace": {
     "display_name": "RH 可灵对口型-人脸识别"
@@ -556,30 +445,6 @@
   },
   "RH_KlingLipSyncLipSyncVideo": {
     "display_name": "RH 可灵对口型-视频生成"
-  },
-  "RH_RhartVideoSOfficialSoraUploadCharacter": {
-    "display_name": "RH 全能视频S-角色上传-官方稳定版"
-  },
-  "RH_ViduTextToVideoQ3ProFast": {
-    "display_name": "RH Vidu-文生视频-q3-pro-fast"
-  },
-  "RH_ViduImageToVideoQ3ProFast": {
-    "display_name": "RH Vidu-图生视频-q3-pro-fast"
-  },
-  "RH_ViduStartEndToVideoQ3ProFast": {
-    "display_name": "RH Vidu-首尾帧生视频-q3-pro-fast"
-  },
-  "RH_PixverseV56TextToVideo": {
-    "display_name": "RH PixVerse V5.6 文生视频"
-  },
-  "RH_PixverseV56ImageToVideo": {
-    "display_name": "RH PixVerse V5.6 图生视频"
-  },
-  "RH_HiggsfieldSoulImageToImage": {
-    "display_name": "RH Higgsfield Soul 图生图"
-  },
-  "RH_HiggsfieldDopImageToVideo": {
-    "display_name": "RH Higgsfield DoP 图生视频"
   },
   "RH_RhartVideoSparkvideo20TextToVideo": {
     "display_name": "RH Seedance2.0/文生视频"
@@ -620,9 +485,6 @@
   "RH_AlibabaWan27TextToImagePro": {
     "display_name": "RH 万相2.7-文生图Pro"
   },
-  "RH_RhartTextQwen27bChat": {
-    "display_name": "RH rhart-text-qwen-27b/chat"
-  },
   "RH_AlibabaWan27ImageToVideo": {
     "display_name": "RH 万相2.7-图生视频"
   },
@@ -649,21 +511,6 @@
   },
   "RH_PixverseV6Extend": {
     "display_name": "RH PixVerse V6 视频续写"
-  },
-  "RH_MinimaxVoiceDesign": {
-    "display_name": "RH minimax-音色设计"
-  },
-  "RH_RhartTextG3ProPreviewCvImageToText": {
-    "display_name": "RH rhart-text-g-3-pro-preview-cv/image-to-text"
-  },
-  "RH_RhartTextG25FlashCvImageToText": {
-    "display_name": "RH rhart-text-g-25-flash-cv/image-to-text"
-  },
-  "RH_RhartTextG3FlashPreviewCvImageToText": {
-    "display_name": "RH rhart-text-g-3-flash-preview-cv/image-to-text"
-  },
-  "RH_RhartTextG25ProCvImageToText": {
-    "display_name": "RH rhart-text-g-25-pro-cv/image-to-text"
   },
   "RH_AlibabaWan25PreviewTextToVideo": {
     "display_name": "RH 万相2.5 Preview 文生视频"
@@ -722,24 +569,6 @@
   "RH_RhartVideoV31LiteOfficialStartEndToVideo": {
     "display_name": "RH 全能视频V3.1-Lite首尾帧生视频-官方稳定版"
   },
-  "RH_RhartVideoV31LiteTextToVideo": {
-    "display_name": "RH 全能视频V3.1-lite-文生视频-低价渠道版"
-  },
-  "RH_RhartVideoV31LiteImageToVideo": {
-    "display_name": "RH 全能视频V3.1-lite-图生视频-低价渠道版"
-  },
-  "RH_PixverseC1TextToVideo": {
-    "display_name": "RH PixVerse C1 文生视频"
-  },
-  "RH_PixverseC1ImageToVideo": {
-    "display_name": "RH PixVerse C1 图生视频"
-  },
-  "RH_PixverseC1Transition": {
-    "display_name": "RH PixVerse C1 转场"
-  },
-  "RH_PixverseC1ReferenceToVideo": {
-    "display_name": "RH PixVerse C1 参考生视频"
-  },
   "RH_RhartImageG2ImageToImage": {
     "display_name": "RH 全能图片G-2.0-图生图-低价渠道版"
   },
@@ -791,9 +620,6 @@
   "RH_RhartImageXOfficialTextToImage": {
     "display_name": "RH 全能图片X-文生图片-官方稳定版"
   },
-  "RH_KlingV304kMotionControl": {
-    "display_name": "RH 可灵动作控制V3.0-4k"
-  },
   "RH_KlingV34kImageToVideo": {
     "display_name": "RH 可灵图生视频v3-4k"
   },
@@ -815,8 +641,236 @@
   "RH_AlibabaHappyhorse10VideoEdit": {
     "display_name": "RH happyhorse-1.0/video-edit"
   },
+  "RH_SkyreelsV4TextToVideoStd": {
+    "display_name": "RH SkyReels V4 文生视频-std"
+  },
+  "RH_SkyreelsV4ImageToVideoStd": {
+    "display_name": "RH SkyReels V4 图生视频-std"
+  },
+  "RH_KlingV25TurboStdTextToVideo": {
+    "display_name": "RH 可灵文生视频2.5-turbo-std"
+  },
+  "RH_SkyreelsV4TextToVideoFast": {
+    "display_name": "RH SkyReels V4 文生视频-fast"
+  },
+  "RH_SkyreelsV4ImageToVideoFast": {
+    "display_name": "RH SkyReels V4 图生视频-fast"
+  },
+  "RH_SkyreelsV4OmniReferenceStd": {
+    "display_name": "RH SkyReels V4 Omni 参考视频-std"
+  },
+  "RH_SkyreelsV4OmniReferenceFast": {
+    "display_name": "RH SkyReels V4 Omni 参考视频-fast"
+  },
+  "RH_KlingElementsAdvanced": {
+    "display_name": "RH 可灵 o3 创建主体"
+  },
+  "RH_YouchuanTextToImageV81": {
+    "display_name": "RH 悠船文生图-v8.1"
+  },
+  "RH_RhartVideoV31FastOfficialReferenceToVideo": {
+    "display_name": "RH 全能视频V3.1-fast-参考生视频-官方稳定版"
+  },
+  "RH_RhartImagineImageQualityEdit": {
+    "display_name": "RH 全能图片X-高质量图片编辑-官方稳定版"
+  },
+  "RH_RhartImagineImageQualityTextToImage": {
+    "display_name": "RH 全能图片X-高质量文生图-官方稳定版"
+  },
+  "RH_BytedanceJimeng46TextToImage": {
+    "display_name": "RH 即梦图片 4.6 文生图"
+  },
+  "RH_BytedanceJimeng46ImageToImage": {
+    "display_name": "RH 即梦图片 4.6 图生图"
+  },
+  "RH_GeminiOmniFlashTextToVideo": {
+    "display_name": "RH 全能视频 Omni Flash 文生视频-低价渠道版"
+  },
+  "RH_GeminiOmniFlashImageToVideo": {
+    "display_name": "RH 全能视频 Omni Flash 图生视频-低价渠道版"
+  },
+  "RH_VolcSubtitleEraseVideo": {
+    "display_name": "RH 火山字幕擦除-视频字幕擦除（标准版）"
+  },
+  "RH_GeminiOmniFlashVideoEdit": {
+    "display_name": "RH 全能视频 Omni Flash 视频编辑-低价渠道版"
+  },
+  "RH_VolcSubtitleEraseProVideo": {
+    "display_name": "RH 火山字幕擦除-视频字幕擦除（精细化版）"
+  },
+  "RH_RhartVideoSImageToVideoAsyn": {
+    "display_name": "RH 全能视频S-图生视频（异步）-低价渠道版"
+  },
+  "RH_RhartTextG3FlashPreviewImageToText": {
+    "display_name": "RH rhart-text-g-3-flash-preview/image-to-text"
+  },
+  "RH_RhartTextG3FlashPreviewTextToText": {
+    "display_name": "RH rhart-text-g-3-flash-preview/text-to-text"
+  },
+  "RH_RhartTextG3FlashPreviewVideoToText": {
+    "display_name": "RH rhart-text-g-3-flash-preview/video-to-text"
+  },
+  "RH_RhartTextG3ProPreviewImageToText": {
+    "display_name": "RH rhart-text-g-3-pro-preview/image-to-text"
+  },
+  "RH_RhartTextG3ProPreviewTextToText": {
+    "display_name": "RH rhart-text-g-3-pro-preview/text-to-text"
+  },
+  "RH_RhartTextG3ProPreviewVideoToText": {
+    "display_name": "RH rhart-text-g-3-pro-preview/video-to-text"
+  },
+  "RH_RhartTextG25FlashImageToText": {
+    "display_name": "RH rhart-text-g-25-flash/image-to-text"
+  },
+  "RH_RhartVideoV31ProImageToVideo": {
+    "display_name": "RH 全能视频V3.1-pro-图生视频-低价渠道版"
+  },
+  "RH_RhartTextG25FlashTextToText": {
+    "display_name": "RH rhart-text-g-25-flash/text-to-text"
+  },
+  "RH_RhartTextG25FlashVideoToText": {
+    "display_name": "RH rhart-text-g-25-flash/video-to-text"
+  },
+  "RH_RhartTextG25ProImageToText": {
+    "display_name": "RH rhart-text-g-25-pro/image-to-text"
+  },
+  "RH_RhartTextG25ProTextToText": {
+    "display_name": "RH rhart-text-g-25-pro/text-to-text"
+  },
+  "RH_RhartTextG25ProVideoToText": {
+    "display_name": "RH rhart-text-g-25-pro/video-to-text"
+  },
+  "RH_TopazlabsImageUpscaleStandardV2": {
+    "display_name": "RH topazlabs图像放大StandardV2"
+  },
+  "RH_TopazlabsImageUpscaleLowResolutionV2": {
+    "display_name": "RH topazlabs图像放大Low Resolution V2"
+  },
+  "RH_TopazlabsImageUpscaleCgi": {
+    "display_name": "RH topazlabs图像放大CGI"
+  },
+  "RH_TopazlabsImageUpscaleHighFidelityV2": {
+    "display_name": "RH topazlabs图像放大High Fidelity V2"
+  },
+  "RH_TopazlabsImageUpscaleTextRefine": {
+    "display_name": "RH topazlabs图像放大Text Refine"
+  },
+  "RH_TopazlabsVideoUpscale": {
+    "display_name": "RH topazlabs视频放大"
+  },
+  "RH_RhartImageG3ImageToImage": {
+    "display_name": "RH 全能图片X-3-图生图"
+  },
+  "RH_RhartImageG4ImageToImage": {
+    "display_name": "RH 全能图片X-4-图生图"
+  },
+  "RH_RhartImageG3TextToImage": {
+    "display_name": "RH 全能图片X-3-文生图"
+  },
+  "RH_RhartImageG4TextToImage": {
+    "display_name": "RH 全能图片X-4-文生图"
+  },
+  "RH_PixverseV55TextToVideo": {
+    "display_name": "RH PixVerse V5.5 文生视频"
+  },
+  "RH_PixverseV55ImageToVideo": {
+    "display_name": "RH PixVerse V5.5 图生视频"
+  },
+  "RH_PixverseV55Transition": {
+    "display_name": "RH PixVerse V5.5 转场"
+  },
+  "RH_PixverseV55Effects": {
+    "display_name": "RH PixVerse V5.5 特效"
+  },
+  "RH_RhartVideoRGen4TurboOfficialImageToVideo": {
+    "display_name": "RH 全能视频R/gen4-turbo/图生视频-官方稳定版"
+  },
+  "RH_RhartVideoRGen4AlephOfficialVideoToVideo": {
+    "display_name": "RH 全能视频R-gen4-aleph/视频编辑-官方稳定版"
+  },
+  "RH_RhartVideoRGen4TurboImageToVideo": {
+    "display_name": "RH 全能视频R/gen4-turbo/图生视频-低价渠道版"
+  },
+  "RH_RhartVideoLtx2TextToVideoLora": {
+    "display_name": "RH ltx-2-19b/text-to-video-lora"
+  },
+  "RH_SkyreelsV3ReferenceToVideo": {
+    "display_name": "RH SkyReels V3 参考图生视频"
+  },
+  "RH_SkyreelsV3VideoRestyling": {
+    "display_name": "RH SkyReels V3 视频风格化"
+  },
+  "RH_SkyreelsV3SingleShotVideoExtension": {
+    "display_name": "RH SkyReels V3 视频续写（单镜头）"
+  },
+  "RH_SkyreelsV3ShotSwitchingVideoExtension": {
+    "display_name": "RH SkyReels V3 视频续写（镜头切换）"
+  },
+  "RH_RhartVideoSOfficialSoraUploadCharacter": {
+    "display_name": "RH 全能视频S-角色上传-官方稳定版"
+  },
+  "RH_ViduTextToVideoQ3ProFast": {
+    "display_name": "RH Vidu-文生视频-q3-pro-fast"
+  },
+  "RH_ViduImageToVideoQ3ProFast": {
+    "display_name": "RH Vidu-图生视频-q3-pro-fast"
+  },
+  "RH_ViduStartEndToVideoQ3ProFast": {
+    "display_name": "RH Vidu-首尾帧生视频-q3-pro-fast"
+  },
+  "RH_PixverseV56TextToVideo": {
+    "display_name": "RH PixVerse V5.6 文生视频"
+  },
+  "RH_PixverseV56ImageToVideo": {
+    "display_name": "RH PixVerse V5.6 图生视频"
+  },
+  "RH_HiggsfieldSoulImageToImage": {
+    "display_name": "RH Higgsfield Soul 图生图"
+  },
+  "RH_HiggsfieldDopImageToVideo": {
+    "display_name": "RH Higgsfield DoP 图生视频"
+  },
+  "RH_RhartTextQwen27bChat": {
+    "display_name": "RH rhart-text-qwen-27b/chat"
+  },
+  "RH_MinimaxVoiceDesign": {
+    "display_name": "RH minimax-音色设计"
+  },
+  "RH_RhartTextG3ProPreviewCvImageToText": {
+    "display_name": "RH rhart-text-g-3-pro-preview-cv/image-to-text"
+  },
+  "RH_RhartTextG25FlashCvImageToText": {
+    "display_name": "RH rhart-text-g-25-flash-cv/image-to-text"
+  },
+  "RH_RhartTextG3FlashPreviewCvImageToText": {
+    "display_name": "RH rhart-text-g-3-flash-preview-cv/image-to-text"
+  },
+  "RH_RhartTextG25ProCvImageToText": {
+    "display_name": "RH rhart-text-g-25-pro-cv/image-to-text"
+  },
+  "RH_RhartVideoV31LiteTextToVideo": {
+    "display_name": "RH 全能视频V3.1-lite-文生视频-低价渠道版"
+  },
+  "RH_RhartVideoV31LiteImageToVideo": {
+    "display_name": "RH 全能视频V3.1-lite-图生视频-低价渠道版"
+  },
+  "RH_PixverseC1TextToVideo": {
+    "display_name": "RH PixVerse C1 文生视频"
+  },
+  "RH_PixverseC1ImageToVideo": {
+    "display_name": "RH PixVerse C1 图生视频"
+  },
+  "RH_PixverseC1Transition": {
+    "display_name": "RH PixVerse C1 转场"
+  },
+  "RH_PixverseC1ReferenceToVideo": {
+    "display_name": "RH PixVerse C1 参考生视频"
+  },
   "RH_ImageEnhanceHypirUltra": {
     "display_name": "RH HYPIR-ULTRA"
+  },
+  "RH_KlingV304kMotionControl": {
+    "display_name": "RH 可灵动作控制V3.0-4k"
   },
   "RH_Hitem3dV21ImageTo3d": {
     "display_name": "RH hitem3d-v21/image-to-3d"
@@ -872,47 +926,50 @@
   "RH_Marble11PlusTextToWorld": {
     "display_name": "RH marble-1.1-plus 文生3D世界"
   },
-  "RH_SkyreelsV4TextToVideoStd": {
-    "display_name": "RH SkyReels V4 文生视频-std"
-  },
-  "RH_SkyreelsV4ImageToVideoStd": {
-    "display_name": "RH SkyReels V4 图生视频-std"
-  },
-  "RH_KlingV25TurboStdTextToVideo": {
-    "display_name": "RH 可灵文生视频2.5-turbo-std"
-  },
   "RH_Meshy6TextTo3d": {
     "display_name": "RH Meshy 6 文生 3D"
   },
   "RH_Meshy6ImageTo3d": {
     "display_name": "RH Meshy 6 图生 3D"
   },
-  "RH_SkyreelsV4TextToVideoFast": {
-    "display_name": "RH SkyReels V4 文生视频-fast"
+  "RH_MurekaAiFilesUpload": {
+    "display_name": "RH Mureka 文件上传"
   },
-  "RH_SkyreelsV4ImageToVideoFast": {
-    "display_name": "RH SkyReels V4 图生视频-fast"
+  "RH_MurekaAiMurekaV76GenerateSong": {
+    "display_name": "RH Mureka-v7.6 歌曲生成"
   },
-  "RH_SkyreelsV4OmniReferenceStd": {
-    "display_name": "RH SkyReels V4 Omni 参考视频-std"
+  "RH_MurekaAiMurekaO2GenerateSong": {
+    "display_name": "RH Mureka-o2 歌曲生成"
   },
-  "RH_SkyreelsV4OmniReferenceFast": {
-    "display_name": "RH SkyReels V4 Omni 参考视频-fast"
+  "RH_MurekaAiMurekaV8GenerateSong": {
+    "display_name": "RH Mureka-v8 歌曲生成"
   },
-  "RH_KlingElementsAdvanced": {
-    "display_name": "RH 可灵 o3 创建主体"
+  "RH_MurekaAiMurekaV9GenerateSong": {
+    "display_name": "RH Mureka-v9 歌曲生成"
   },
-  "RH_YouchuanTextToImageV81": {
-    "display_name": "RH 悠船文生图-v8.1"
+  "RH_MurekaAiMurekaV76GenerateBgm": {
+    "display_name": "RH Mureka-v7.6 伴奏生成"
   },
   "RH_MurekaO2InstrumentalGenerate": {
     "display_name": "RH Mureka mureka-o2 伴奏生成-暂不可用"
   },
-  "RH_RhartVideoSparkvideo20UploadAsset": {
-    "display_name": "RH seedance2.0/上传素材资产"
+  "RH_MurekaAiMurekaV8GenerateBgm": {
+    "display_name": "RH Mureka-v8 伴奏生成"
   },
-  "RH_BytedanceSeedance20GlobalUploadAsset": {
-    "display_name": "RH seedance2.0-global/上传素材资产"
+  "RH_MurekaAiMurekaV76ExtendSong": {
+    "display_name": "RH mureka-v7.6 短歌延长"
+  },
+  "RH_MurekaAiMurekaV8ExtendSong": {
+    "display_name": "RH Mureka-v8 短歌延长"
+  },
+  "RH_MurekaAiVocalClone": {
+    "display_name": "RH Mureka 人声克隆"
+  },
+  "RH_MurekaAiGenerateLyrics": {
+    "display_name": "RH Mureka 歌词生成"
+  },
+  "RH_MurekaAiMurekaV9GenerateBgm": {
+    "display_name": "RH Mureka-v9 伴奏生成"
   },
   "RH_PixverseV6Effects": {
     "display_name": "RH PixVerse V6 特效"
@@ -935,65 +992,8 @@
   "RH_LumaUni1MaxImageEdit": {
     "display_name": "RH Luma uni-1-max 图像编辑"
   },
-  "RH_MinimaxMusic26TextToMusic": {
-    "display_name": "RH MiniMax Music 2.6 文生音乐"
-  },
-  "RH_MinimaxMusic26TextToInstrumental": {
-    "display_name": "RH MiniMax Music 2.6 纯音乐生成"
-  },
   "RH_AlibabaWan27SpicyImageToVideo": {
     "display_name": "RH 万相2.7-spicy-图生视频"
-  },
-  "RH_MurekaAiFilesUpload": {
-    "display_name": "RH Mureka 文件上传"
-  },
-  "RH_MurekaAiMurekaV76GenerateSong": {
-    "display_name": "RH Mureka-v7.6 歌曲生成"
-  },
-  "RH_MurekaAiMurekaO2GenerateSong": {
-    "display_name": "RH Mureka-o2 歌曲生成"
-  },
-  "RH_MurekaAiMurekaV8GenerateSong": {
-    "display_name": "RH Mureka-v8 歌曲生成"
-  },
-  "RH_MurekaAiMurekaV9GenerateSong": {
-    "display_name": "RH Mureka-v9 歌曲生成"
-  },
-  "RH_MurekaAiMurekaV76GenerateBgm": {
-    "display_name": "RH Mureka-v7.6 伴奏生成"
-  },
-  "RH_MurekaAiMurekaV8GenerateBgm": {
-    "display_name": "RH Mureka-v8 伴奏生成"
-  },
-  "RH_MurekaAiMurekaV8ExtendSong": {
-    "display_name": "RH Mureka-v8 短歌延长"
-  },
-  "RH_MurekaAiVocalClone": {
-    "display_name": "RH Mureka 人声克隆"
-  },
-  "RH_MurekaAiGenerateLyrics": {
-    "display_name": "RH Mureka 歌词生成"
-  },
-  "RH_MurekaAiMurekaV9GenerateBgm": {
-    "display_name": "RH Mureka-v9 伴奏生成"
-  },
-  "RH_RhartVideoV31FastOfficialReferenceToVideo": {
-    "display_name": "RH 全能视频V3.1-fast-参考生视频-官方稳定版"
-  },
-  "RH_RhartImagineImageQualityEdit": {
-    "display_name": "RH 全能图片X-高质量图片编辑-官方稳定版"
-  },
-  "RH_RhartImagineImageQualityTextToImage": {
-    "display_name": "RH 全能图片X-高质量文生图-官方稳定版"
-  },
-  "RH_RhartVideoSparkvideo20UploadAssetChannelLowPrice": {
-    "display_name": "RH seedance2.0/上传素材资产低价渠道版"
-  },
-  "RH_BytedanceSeedance20GlobalUploadAssetChannelLowPrice": {
-    "display_name": "RH seedance2.0-global/上传素材资产低价渠道版"
-  },
-  "RH_MurekaAiMurekaV76ExtendSong": {
-    "display_name": "RH mureka-v7.6 短歌延长"
   },
   "RH_MurekaAiStemSong": {
     "display_name": "RH mureka-ai 音轨分离"
@@ -1007,56 +1007,35 @@
   "RH_MurekaAiExtendLyrics": {
     "display_name": "RH mureka-ai 歌词延长"
   },
-  "RH_MinimaxNovaVideo20TextToVideo": {
-    "display_name": "RH Seedance-2.0 文生视频（低价版）"
+  "RH_VolcDramaVideoTranslate": {
+    "display_name": "RH 火山短剧-视频翻译"
   },
-  "RH_MinimaxNovaVideo20ImageToVideo": {
-    "display_name": "RH Seedance-2.0 图生视频（低价版）"
+  "RH_RhartVideoGOfficialImageToVideoV15": {
+    "display_name": "RH 全能视频X-图生视频-官方稳定版-v1.5"
   },
-  "RH_MinimaxNovaVideo20MultimodalToVideo": {
-    "display_name": "RH Seedance-2.0 多模态视频（低价版）"
+  "RH_ViduReferenceToVideoQ3Ad": {
+    "display_name": "RH Vidu-参考生视频-q3-ad"
   },
-  "RH_MinimaxNovaVideo20FastTextToVideo": {
-    "display_name": "RH Seedance-2.0-fast 文生视频（低价版）"
+  "RH_KlingV26ImageToVideo": {
+    "display_name": "RH 可灵图生视频2.6"
   },
-  "RH_MinimaxNovaVideo20FastImageToVideo": {
-    "display_name": "RH Seedance-2.0-fast 图生视频（低价版）"
+  "RH_KlingV26TextToVideo": {
+    "display_name": "RH 可灵文生视频2.6"
   },
-  "RH_MinimaxNovaVideo20FastMultimodalToVideo": {
-    "display_name": "RH Seedance-2.0-fast 多模态视频（低价版）"
+  "RH_VolcDramaSerialVideoTranslate": {
+    "display_name": "RH 火山短剧-多集视频翻译"
   },
-  "RH_MinimaxEvaVideo20TextToVideo": {
-    "display_name": "RH Seedance-2.0-global 文生视频（低价版）"
+  "RH_ViduShortPlayQ3Drama": {
+    "display_name": "RH Vidu Q3 Drama 短剧成片"
   },
-  "RH_MinimaxEvaVideo20ImageToVideo": {
-    "display_name": "RH Seedance-2.0-global 图生视频（低价版）"
+  "RH_MinimaxMusic26": {
+    "display_name": "RH MiniMax Music 2.6"
   },
-  "RH_MinimaxEvaVideo20MultimodalToVideo": {
-    "display_name": "RH Seedance-2.0-global 多模态视频（低价版）"
+  "RH_MinimaxMusicCover": {
+    "display_name": "RH MiniMax Music 翻唱"
   },
-  "RH_MinimaxEvaVideo20FastTextToVideo": {
-    "display_name": "RH Seedance-2.0-global-fast 文生视频（低价版）"
-  },
-  "RH_MinimaxEvaVideo20FastImageToVideo": {
-    "display_name": "RH Seedance-2.0-global-fast 图生视频（低价版）"
-  },
-  "RH_MinimaxEvaVideo20FastMultimodalToVideo": {
-    "display_name": "RH Seedance-2.0-global-fast 多模态视频（低价版）"
-  },
-  "RH_BytedanceJimeng46TextToImage": {
-    "display_name": "RH 即梦图片 4.6 文生图"
-  },
-  "RH_BytedanceJimeng46ImageToImage": {
-    "display_name": "RH 即梦图片 4.6 图生图"
-  },
-  "RH_Seedance20UploadAsset": {
-    "display_name": "RH Seedance 2.0 上传素材资产"
-  },
-  "RH_GeminiOmniFlashTextToVideo": {
-    "display_name": "RH 全能视频 Omni Flash 文生视频"
-  },
-  "RH_GeminiOmniFlashImageToVideo": {
-    "display_name": "RH 全能视频 Omni Flash 图生视频"
+  "RH_MinimaxMusicCoverPreprocess": {
+    "display_name": "RH MiniMax Music 翻唱前处理"
   },
   "RH_SparkVideoAssetCreate": {
     "display_name": "RH Seedance2.0素材/创建"

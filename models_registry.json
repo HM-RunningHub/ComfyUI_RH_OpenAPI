@@ -26388,7 +26388,7 @@
         "required": true,
         "label": "prompt",
         "description": "prompt",
-        "defaultValue": "左右扭扭，蹦蹦跳跳真可爱，双手上下摇晃",
+        "defaultValue": "人物摇晃酒杯的视频",
         "maxLength": 8000
       },
       {
@@ -26417,8 +26417,6 @@
         "required": true,
         "label": "imageUrl",
         "description": "imageUrl",
-        "multipleInputs": true,
-        "maxInputNum": 3,
         "accept": "[\"JPG\",\"PNG\"]",
         "maxSize": 10
       },
@@ -26436,6 +26434,32 @@
             "descriptionEn": "8"
           }
         ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ],
+        "tail_insert": true
       }
     ]
   },
@@ -33368,86 +33392,6 @@
     ]
   },
   {
-    "class_name": "RhartVideoSparkvideo20UploadAsset",
-    "display_name": "RH seedance2.0/上传素材资产",
-    "name_cn": "seedance2.0/上传素材资产",
-    "name_en": "seedance-2.0/upload-asset",
-    "endpoint": "rhart-video/sparkvideo-2.0/upload-asset",
-    "output_type": "video",
-    "category": "RunningHub/RHArt Video",
-    "params": [
-      {
-        "fieldKey": "assetType",
-        "type": "LIST",
-        "required": true,
-        "label": "assetType",
-        "description": "素材类型：Image（图片）或 Video（视频）。",
-        "defaultValue": "Image",
-        "options": [
-          {
-            "value": "Image",
-            "description": "图片",
-            "descriptionEn": "Image"
-          },
-          {
-            "value": "Video",
-            "description": "视频",
-            "descriptionEn": "Video"
-          }
-        ]
-      },
-      {
-        "fieldKey": "url",
-        "type": "CommonMedia",
-        "required": true,
-        "label": "url",
-        "description": "素材源 （本地资源或公网可访问URL），Image 建议 jpg/jpeg/png/webp，Video 建议 mp4/mov 。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"GIF\",\"WEBP\",\"BMP\",\"HEIC\",\"HEIF\",\"TIFF\",\"MP3\",\"WAV\",\"MP4\",\"MOV\"]",
-        "maxSize": 50
-      }
-    ]
-  },
-  {
-    "class_name": "BytedanceSeedance20GlobalUploadAsset",
-    "display_name": "RH seedance2.0-global/上传素材资产",
-    "name_cn": "seedance2.0-global/上传素材资产",
-    "name_en": "seedance-2.0-global/upload-asset",
-    "endpoint": "bytedance/seedance-2.0-global/upload-asset",
-    "output_type": "string",
-    "category": "RunningHub/Seedance",
-    "params": [
-      {
-        "fieldKey": "assetType",
-        "type": "LIST",
-        "required": true,
-        "label": "assetType",
-        "description": "素材类型：Image（图片）或 Video（视频）。",
-        "defaultValue": "Image",
-        "options": [
-          {
-            "value": "Image",
-            "description": "图片",
-            "descriptionEn": "Image"
-          },
-          {
-            "value": "Video",
-            "description": "视频",
-            "descriptionEn": "Video"
-          }
-        ]
-      },
-      {
-        "fieldKey": "url",
-        "type": "CommonMedia",
-        "required": true,
-        "label": "url",
-        "description": "素材源 （本地资源或公网可访问URL），Image 建议 jpg/jpeg/png/webp，Video 建议 mp4/mov 。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"GIF\",\"WEBP\",\"BMP\",\"HEIC\",\"HEIF\",\"TIFF\",\"MP3\",\"WAV\",\"MP4\",\"MOV\"]",
-        "maxSize": 50
-      }
-    ]
-  },
-  {
     "class_name": "PixverseV6Effects",
     "display_name": "RH PixVerse V6 特效",
     "name_cn": "PixVerse V6 特效",
@@ -33597,2719 +33541,6 @@
             "descriptionEn": "disabled"
           }
         ]
-      }
-    ]
-  },
-  {
-    "class_name": "MinimaxMusic26TextToMusic",
-    "display_name": "RH MiniMax Music 2.6 文生音乐",
-    "name_cn": "MiniMax Music 2.6 文生音乐",
-    "name_en": "minimax/music-2.6/text-to-music",
-    "endpoint": "minimax/music-2.6/text-to-music",
-    "output_type": "audio",
-    "category": "RunningHub/MiniMax",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "音乐描述，用于指定风格、情绪和场景。例如：流行音乐, 难过, 适合在下雨的晚上",
-        "defaultValue": "描述个人面对成长后的平静，励志，娓娓道来的感觉",
-        "maxLength": 2000
-      },
-      {
-        "fieldKey": "lyrics",
-        "type": "STRING",
-        "required": true,
-        "label": "lyrics",
-        "description": "歌曲歌词，使用换行分隔每行。支持结构标签：[Intro], [Verse], [Chorus], [Bridge], [Outro]等",
-        "defaultValue": "[Verse] 心早有预感 光速地飙燃 浑然不知山前的悬崖 生而无惧是少年 不知光阴有限  [Pre-Chorus] 想哭想笑时 都痛痛快快 全然不理会谁给的评价 只怕一瞬不如愿 失去重要片段  [Chorus] 原来人面对成长 大多以为失去才得到宁静 看似谦逊 实则麻木而已 直到它突然而至 猝不及防 我才明白 哦 原来是它的光 才能引领  [Verse 2] 热爱无旁骛 不屈不挠 死缠烂打的又怎会害怕 向着目标直行 直到对的人先到  [Chorus] 原来人面对成长 大多以为失去才得到宁静 看似谦逊 实则麻木而已 直到它突然而至 猝不及防 我才明白 哦 原来是它的光 才能引领  [Bridge] 说过的话都没兑现 不必沮丧 也不是说不该留恋 只不过人该往前 原来人面对成长 大多以为失去才得到宁静 看似谦逊 实则麻木而已 直到它突然而至 猝不及防 我才明白 哦 原来是它的光 才能引领",
-        "maxLength": 3500
-      },
-      {
-        "fieldKey": "sampleRate",
-        "type": "LIST",
-        "required": false,
-        "label": "sampleRate",
-        "description": "采样率",
-        "defaultValue": "44100",
-        "options": [
-          {
-            "value": "16000",
-            "description": "16000",
-            "descriptionEn": "16000"
-          },
-          {
-            "value": "24000",
-            "description": "24000",
-            "descriptionEn": "24000"
-          },
-          {
-            "value": "32000",
-            "description": "32000",
-            "descriptionEn": "32000"
-          },
-          {
-            "value": "44100",
-            "description": "44100",
-            "descriptionEn": "44100"
-          }
-        ]
-      },
-      {
-        "fieldKey": "bitrate",
-        "type": "LIST",
-        "required": false,
-        "label": "bitrate",
-        "description": "比特率",
-        "defaultValue": "256000",
-        "options": [
-          {
-            "value": "32000",
-            "description": "32000",
-            "descriptionEn": "32000"
-          },
-          {
-            "value": "64000",
-            "description": "64000",
-            "descriptionEn": "64000"
-          },
-          {
-            "value": "128000",
-            "description": "128000",
-            "descriptionEn": "128000"
-          },
-          {
-            "value": "256000",
-            "description": "256000",
-            "descriptionEn": "256000"
-          }
-        ]
-      },
-      {
-        "fieldKey": "format",
-        "type": "LIST",
-        "required": false,
-        "label": "format",
-        "description": "音频格式",
-        "defaultValue": "mp3",
-        "options": [
-          {
-            "value": "mp3",
-            "description": "mp3",
-            "descriptionEn": "mp3"
-          },
-          {
-            "value": "wav",
-            "description": "wav",
-            "descriptionEn": "wav"
-          },
-          {
-            "value": "pcm",
-            "description": "pcm",
-            "descriptionEn": "pcm"
-          }
-        ]
-      },
-      {
-        "fieldKey": "lyricsOptimizer",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "lyricsOptimizer",
-        "description": "是否根据描述自动优化歌词",
-        "defaultValue": false
-      }
-    ]
-  },
-  {
-    "class_name": "MinimaxMusic26TextToInstrumental",
-    "display_name": "RH MiniMax Music 2.6 纯音乐生成",
-    "name_cn": "MiniMax Music 2.6 纯音乐生成",
-    "name_en": "minimax/music-2.6/text-to-instrumental",
-    "endpoint": "minimax/music-2.6/text-to-instrumental",
-    "output_type": "audio",
-    "category": "RunningHub/MiniMax",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "纯音乐描述，用于指定风格、情绪和场景（必填）",
-        "defaultValue": "以键盘、吉他、萨克斯、鼓为主奏配器，整体营造日落时分慵懒松弛、温柔隽永的氛围，旋律线条悠扬绵长，多乐器层次交织，氛围感安静治愈又有留白余韵。",
-        "maxLength": 2000
-      },
-      {
-        "fieldKey": "sampleRate",
-        "type": "LIST",
-        "required": false,
-        "label": "sampleRate",
-        "description": "采样率",
-        "defaultValue": "44100",
-        "options": [
-          {
-            "value": "16000",
-            "description": "16000",
-            "descriptionEn": "16000"
-          },
-          {
-            "value": "24000",
-            "description": "24000",
-            "descriptionEn": "24000"
-          },
-          {
-            "value": "32000",
-            "description": "32000",
-            "descriptionEn": "32000"
-          },
-          {
-            "value": "44100",
-            "description": "44100",
-            "descriptionEn": "44100"
-          }
-        ]
-      },
-      {
-        "fieldKey": "bitrate",
-        "type": "LIST",
-        "required": false,
-        "label": "bitrate",
-        "description": "比特率",
-        "defaultValue": "256000",
-        "options": [
-          {
-            "value": "32000",
-            "description": "32000",
-            "descriptionEn": "32000"
-          },
-          {
-            "value": "64000",
-            "description": "64000",
-            "descriptionEn": "64000"
-          },
-          {
-            "value": "128000",
-            "description": "128000",
-            "descriptionEn": "128000"
-          },
-          {
-            "value": "256000",
-            "description": "256000",
-            "descriptionEn": "256000"
-          }
-        ]
-      },
-      {
-        "fieldKey": "format",
-        "type": "LIST",
-        "required": false,
-        "label": "format",
-        "description": "音频格式",
-        "defaultValue": "mp3",
-        "options": [
-          {
-            "value": "mp3",
-            "description": "mp3",
-            "descriptionEn": "mp3"
-          },
-          {
-            "value": "wav",
-            "description": "wav",
-            "descriptionEn": "wav"
-          },
-          {
-            "value": "pcm",
-            "description": "pcm",
-            "descriptionEn": "pcm"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "class_name": "MinimaxNovaVideo20TextToVideo",
-    "display_name": "RH Seedance-2.0 文生视频（低价版）",
-    "name_cn": "Seedance-2.0 文生视频（低价版）",
-    "name_en": "Seedance-2.0 Text-to-Video (Low-Price)",
-    "endpoint": "minimax/nova-video-2.0/text-to-video",
-    "output_type": "video",
-    "category": "RunningHub/MiniMax",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "视频生成提示词",
-        "defaultValue": "一个电影级武侠大片，雨夜竹林剑客与刺客高速对战，镜头从全景平滑推近至剑刃相击的特写，火花四溅。",
-        "maxLength": 20480
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "输出分辨率。",
-        "defaultValue": "720p",
-        "options": [
-          {
-            "value": "480p",
-            "description": "480p",
-            "descriptionEn": "480p"
-          },
-          {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
-          },
-          {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），范围 4-15。",
-        "defaultValue": "5",
-        "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
-          {
-            "value": "4",
-            "description": "4",
-            "descriptionEn": "4"
-          },
-          {
-            "value": "5",
-            "description": "5",
-            "descriptionEn": "5"
-          },
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "7",
-            "description": "7",
-            "descriptionEn": "7"
-          },
-          {
-            "value": "8",
-            "description": "8",
-            "descriptionEn": "8"
-          },
-          {
-            "value": "9",
-            "description": "9",
-            "descriptionEn": "9"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          },
-          {
-            "value": "11",
-            "description": "11",
-            "descriptionEn": "11"
-          },
-          {
-            "value": "12",
-            "description": "12",
-            "descriptionEn": "12"
-          },
-          {
-            "value": "13",
-            "description": "13",
-            "descriptionEn": "13"
-          },
-          {
-            "value": "14",
-            "description": "14",
-            "descriptionEn": "14"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
-          }
-        ]
-      },
-      {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比，adaptive 由模型按输入素材自动选取。",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          },
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "adaptive"
-          }
-        ]
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否同步生成视频背景音/音效。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "watermark",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "watermark",
-        "description": "是否在视频右下角添加 AI 生成水印。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "seed",
-        "type": "INT",
-        "required": false,
-        "label": "seed",
-        "description": "随机种子，-1 表示完全随机；同 prompt+同 seed 结果接近（不保证完全一致）。",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
-        "step": 1
-      }
-    ]
-  },
-  {
-    "class_name": "MinimaxNovaVideo20ImageToVideo",
-    "display_name": "RH Seedance-2.0 图生视频（低价版）",
-    "name_cn": "Seedance-2.0 图生视频（低价版）",
-    "name_en": "Seedance-2.0 Image-to-Video (Low-Price)",
-    "endpoint": "minimax/nova-video-2.0/image-to-video",
-    "output_type": "video",
-    "category": "RunningHub/MiniMax",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "视频生成提示词",
-        "defaultValue": "人物自然走动，背景轻微吹动，电影级运镜。",
-        "maxLength": 20480
-      },
-      {
-        "fieldKey": "firstFrameUrl",
-        "type": "IMAGE",
-        "required": true,
-        "label": "firstFrameUrl",
-        "description": "首帧图（必传，建议 <5MB）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "lastFrameUrl",
-        "type": "IMAGE",
-        "required": false,
-        "label": "lastFrameUrl",
-        "description": "尾帧图（可选，传入后自动衔接）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "输出分辨率。",
-        "defaultValue": "720p",
-        "options": [
-          {
-            "value": "480p",
-            "description": "480p",
-            "descriptionEn": "480p"
-          },
-          {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
-          },
-          {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），范围 4-15。",
-        "defaultValue": "5",
-        "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
-          {
-            "value": "4",
-            "description": "4",
-            "descriptionEn": "4"
-          },
-          {
-            "value": "5",
-            "description": "5",
-            "descriptionEn": "5"
-          },
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "7",
-            "description": "7",
-            "descriptionEn": "7"
-          },
-          {
-            "value": "8",
-            "description": "8",
-            "descriptionEn": "8"
-          },
-          {
-            "value": "9",
-            "description": "9",
-            "descriptionEn": "9"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          },
-          {
-            "value": "11",
-            "description": "11",
-            "descriptionEn": "11"
-          },
-          {
-            "value": "12",
-            "description": "12",
-            "descriptionEn": "12"
-          },
-          {
-            "value": "13",
-            "description": "13",
-            "descriptionEn": "13"
-          },
-          {
-            "value": "14",
-            "description": "14",
-            "descriptionEn": "14"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
-          }
-        ]
-      },
-      {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比，adaptive 由模型按输入素材自动选取。",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          },
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "adaptive"
-          }
-        ]
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否同步生成视频背景音/音效。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "watermark",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "watermark",
-        "description": "是否在视频右下角添加 AI 生成水印。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "seed",
-        "type": "INT",
-        "required": false,
-        "label": "seed",
-        "description": "随机种子，-1 表示完全随机；同 prompt+同 seed 结果接近（不保证完全一致）。",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
-        "step": 1
-      }
-    ]
-  },
-  {
-    "class_name": "MinimaxNovaVideo20MultimodalToVideo",
-    "display_name": "RH Seedance-2.0 多模态视频（低价版）",
-    "name_cn": "Seedance-2.0 多模态视频（低价版）",
-    "name_en": "Seedance-2.0 Multimodal Video (Low-Price)",
-    "endpoint": "minimax/nova-video-2.0/multimodal-to-video",
-    "output_type": "video",
-    "category": "RunningHub/MiniMax",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "视频生成提示词",
-        "defaultValue": "参照所附素材生成自然连贯的视频。",
-        "maxLength": 20480
-      },
-      {
-        "fieldKey": "firstFrameUrl",
-        "type": "IMAGE",
-        "required": false,
-        "label": "firstFrameUrl",
-        "description": "首帧图（可选）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "lastFrameUrl",
-        "type": "IMAGE",
-        "required": false,
-        "label": "lastFrameUrl",
-        "description": "尾帧图（可选）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "imageUrls",
-        "type": "IMAGE",
-        "required": false,
-        "label": "imageUrls",
-        "description": "参考图（最多 3 张，<5MB/张）。",
-        "multipleInputs": true,
-        "maxInputNum": 3,
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "videoUrl",
-        "type": "VIDEO",
-        "required": false,
-        "label": "videoUrl",
-        "description": "参考视频（带入即触发 V2V 模式，影响计费）。",
-        "accept": "[\"MP4\",\"MOV\"]",
-        "maxSize": 50
-      },
-      {
-        "fieldKey": "audioUrl",
-        "type": "AUDIO",
-        "required": false,
-        "label": "audioUrl",
-        "description": "参考音频（用于配合视频生成）。",
-        "accept": "[\"MP3\",\"WAV\",\"AAC\",\"M4A\"]",
-        "maxSize": 30
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "输出分辨率。",
-        "defaultValue": "720p",
-        "options": [
-          {
-            "value": "480p",
-            "description": "480p",
-            "descriptionEn": "480p"
-          },
-          {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
-          },
-          {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），范围 4-15。",
-        "defaultValue": "5",
-        "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
-          {
-            "value": "4",
-            "description": "4",
-            "descriptionEn": "4"
-          },
-          {
-            "value": "5",
-            "description": "5",
-            "descriptionEn": "5"
-          },
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "7",
-            "description": "7",
-            "descriptionEn": "7"
-          },
-          {
-            "value": "8",
-            "description": "8",
-            "descriptionEn": "8"
-          },
-          {
-            "value": "9",
-            "description": "9",
-            "descriptionEn": "9"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          },
-          {
-            "value": "11",
-            "description": "11",
-            "descriptionEn": "11"
-          },
-          {
-            "value": "12",
-            "description": "12",
-            "descriptionEn": "12"
-          },
-          {
-            "value": "13",
-            "description": "13",
-            "descriptionEn": "13"
-          },
-          {
-            "value": "14",
-            "description": "14",
-            "descriptionEn": "14"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
-          }
-        ]
-      },
-      {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比，adaptive 由模型按输入素材自动选取。",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          },
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "adaptive"
-          }
-        ]
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否同步生成视频背景音/音效。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "watermark",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "watermark",
-        "description": "是否在视频右下角添加 AI 生成水印。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "seed",
-        "type": "INT",
-        "required": false,
-        "label": "seed",
-        "description": "随机种子，-1 表示完全随机；同 prompt+同 seed 结果接近（不保证完全一致）。",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
-        "step": 1
-      }
-    ]
-  },
-  {
-    "class_name": "MinimaxNovaVideo20FastTextToVideo",
-    "display_name": "RH Seedance-2.0-fast 文生视频（低价版）",
-    "name_cn": "Seedance-2.0-fast 文生视频（低价版）",
-    "name_en": "Seedance-2.0-fast Text-to-Video (Low-Price)",
-    "endpoint": "minimax/nova-video-2.0-fast/text-to-video",
-    "output_type": "video",
-    "category": "RunningHub/MiniMax",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "视频生成提示词",
-        "defaultValue": "一个电影级武侠大片，雨夜竹林剑客与刺客高速对战，镜头从全景平滑推近至剑刃相击的特写，火花四溅。",
-        "maxLength": 20480
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "输出分辨率。fast 系列不支持 1080p。",
-        "defaultValue": "720p",
-        "options": [
-          {
-            "value": "480p",
-            "description": "480p",
-            "descriptionEn": "480p"
-          },
-          {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），范围 4-15。",
-        "defaultValue": "5",
-        "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
-          {
-            "value": "4",
-            "description": "4",
-            "descriptionEn": "4"
-          },
-          {
-            "value": "5",
-            "description": "5",
-            "descriptionEn": "5"
-          },
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "7",
-            "description": "7",
-            "descriptionEn": "7"
-          },
-          {
-            "value": "8",
-            "description": "8",
-            "descriptionEn": "8"
-          },
-          {
-            "value": "9",
-            "description": "9",
-            "descriptionEn": "9"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          },
-          {
-            "value": "11",
-            "description": "11",
-            "descriptionEn": "11"
-          },
-          {
-            "value": "12",
-            "description": "12",
-            "descriptionEn": "12"
-          },
-          {
-            "value": "13",
-            "description": "13",
-            "descriptionEn": "13"
-          },
-          {
-            "value": "14",
-            "description": "14",
-            "descriptionEn": "14"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
-          }
-        ]
-      },
-      {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比，adaptive 由模型按输入素材自动选取。",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          },
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "adaptive"
-          }
-        ]
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否同步生成视频背景音/音效。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "watermark",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "watermark",
-        "description": "是否在视频右下角添加 AI 生成水印。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "seed",
-        "type": "INT",
-        "required": false,
-        "label": "seed",
-        "description": "随机种子，-1 表示完全随机；同 prompt+同 seed 结果接近（不保证完全一致）。",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
-        "step": 1
-      }
-    ]
-  },
-  {
-    "class_name": "MinimaxNovaVideo20FastImageToVideo",
-    "display_name": "RH Seedance-2.0-fast 图生视频（低价版）",
-    "name_cn": "Seedance-2.0-fast 图生视频（低价版）",
-    "name_en": "Seedance-2.0-fast Image-to-Video (Low-Price)",
-    "endpoint": "minimax/nova-video-2.0-fast/image-to-video",
-    "output_type": "video",
-    "category": "RunningHub/MiniMax",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "视频生成提示词",
-        "defaultValue": "人物自然走动，背景轻微吹动，电影级运镜。",
-        "maxLength": 20480
-      },
-      {
-        "fieldKey": "firstFrameUrl",
-        "type": "IMAGE",
-        "required": true,
-        "label": "firstFrameUrl",
-        "description": "首帧图（必传，建议 <5MB）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "lastFrameUrl",
-        "type": "IMAGE",
-        "required": false,
-        "label": "lastFrameUrl",
-        "description": "尾帧图（可选，传入后自动衔接）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "输出分辨率。fast 系列不支持 1080p。",
-        "defaultValue": "720p",
-        "options": [
-          {
-            "value": "480p",
-            "description": "480p",
-            "descriptionEn": "480p"
-          },
-          {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），范围 4-15。",
-        "defaultValue": "5",
-        "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
-          {
-            "value": "4",
-            "description": "4",
-            "descriptionEn": "4"
-          },
-          {
-            "value": "5",
-            "description": "5",
-            "descriptionEn": "5"
-          },
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "7",
-            "description": "7",
-            "descriptionEn": "7"
-          },
-          {
-            "value": "8",
-            "description": "8",
-            "descriptionEn": "8"
-          },
-          {
-            "value": "9",
-            "description": "9",
-            "descriptionEn": "9"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          },
-          {
-            "value": "11",
-            "description": "11",
-            "descriptionEn": "11"
-          },
-          {
-            "value": "12",
-            "description": "12",
-            "descriptionEn": "12"
-          },
-          {
-            "value": "13",
-            "description": "13",
-            "descriptionEn": "13"
-          },
-          {
-            "value": "14",
-            "description": "14",
-            "descriptionEn": "14"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
-          }
-        ]
-      },
-      {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比，adaptive 由模型按输入素材自动选取。",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          },
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "adaptive"
-          }
-        ]
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否同步生成视频背景音/音效。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "watermark",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "watermark",
-        "description": "是否在视频右下角添加 AI 生成水印。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "seed",
-        "type": "INT",
-        "required": false,
-        "label": "seed",
-        "description": "随机种子，-1 表示完全随机；同 prompt+同 seed 结果接近（不保证完全一致）。",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
-        "step": 1
-      }
-    ]
-  },
-  {
-    "class_name": "MinimaxNovaVideo20FastMultimodalToVideo",
-    "display_name": "RH Seedance-2.0-fast 多模态视频（低价版）",
-    "name_cn": "Seedance-2.0-fast 多模态视频（低价版）",
-    "name_en": "Seedance-2.0-fast Multimodal Video (Low-Price)",
-    "endpoint": "minimax/nova-video-2.0-fast/multimodal-to-video",
-    "output_type": "video",
-    "category": "RunningHub/MiniMax",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "视频生成提示词",
-        "defaultValue": "参照所附素材生成自然连贯的视频。",
-        "maxLength": 20480
-      },
-      {
-        "fieldKey": "firstFrameUrl",
-        "type": "IMAGE",
-        "required": false,
-        "label": "firstFrameUrl",
-        "description": "首帧图（可选）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "lastFrameUrl",
-        "type": "IMAGE",
-        "required": false,
-        "label": "lastFrameUrl",
-        "description": "尾帧图（可选）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "imageUrls",
-        "type": "IMAGE",
-        "required": false,
-        "label": "imageUrls",
-        "description": "参考图（最多 3 张，<5MB/张）。",
-        "multipleInputs": true,
-        "maxInputNum": 3,
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "videoUrl",
-        "type": "VIDEO",
-        "required": false,
-        "label": "videoUrl",
-        "description": "参考视频（带入即触发 V2V 模式，影响计费）。",
-        "accept": "[\"MP4\",\"MOV\"]",
-        "maxSize": 50
-      },
-      {
-        "fieldKey": "audioUrl",
-        "type": "AUDIO",
-        "required": false,
-        "label": "audioUrl",
-        "description": "参考音频（用于配合视频生成）。",
-        "accept": "[\"MP3\",\"WAV\",\"AAC\",\"M4A\"]",
-        "maxSize": 30
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "输出分辨率。fast 系列不支持 1080p。",
-        "defaultValue": "720p",
-        "options": [
-          {
-            "value": "480p",
-            "description": "480p",
-            "descriptionEn": "480p"
-          },
-          {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），范围 4-15。",
-        "defaultValue": "5",
-        "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
-          {
-            "value": "4",
-            "description": "4",
-            "descriptionEn": "4"
-          },
-          {
-            "value": "5",
-            "description": "5",
-            "descriptionEn": "5"
-          },
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "7",
-            "description": "7",
-            "descriptionEn": "7"
-          },
-          {
-            "value": "8",
-            "description": "8",
-            "descriptionEn": "8"
-          },
-          {
-            "value": "9",
-            "description": "9",
-            "descriptionEn": "9"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          },
-          {
-            "value": "11",
-            "description": "11",
-            "descriptionEn": "11"
-          },
-          {
-            "value": "12",
-            "description": "12",
-            "descriptionEn": "12"
-          },
-          {
-            "value": "13",
-            "description": "13",
-            "descriptionEn": "13"
-          },
-          {
-            "value": "14",
-            "description": "14",
-            "descriptionEn": "14"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
-          }
-        ]
-      },
-      {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比，adaptive 由模型按输入素材自动选取。",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          },
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "adaptive"
-          }
-        ]
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否同步生成视频背景音/音效。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "watermark",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "watermark",
-        "description": "是否在视频右下角添加 AI 生成水印。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "seed",
-        "type": "INT",
-        "required": false,
-        "label": "seed",
-        "description": "随机种子，-1 表示完全随机；同 prompt+同 seed 结果接近（不保证完全一致）。",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
-        "step": 1
-      }
-    ]
-  },
-  {
-    "class_name": "MinimaxEvaVideo20TextToVideo",
-    "display_name": "RH Seedance-2.0-global 文生视频（低价版）",
-    "name_cn": "Seedance-2.0-global 文生视频（低价版）",
-    "name_en": "Seedance-2.0-global Text-to-Video (Low-Price)",
-    "endpoint": "minimax/eva-video-2.0/text-to-video",
-    "output_type": "video",
-    "category": "RunningHub/MiniMax",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "视频生成提示词",
-        "defaultValue": "一个电影级武侠大片，雨夜竹林剑客与刺客高速对战，镜头从全景平滑推近至剑刃相击的特写，火花四溅。",
-        "maxLength": 20480
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "输出分辨率。",
-        "defaultValue": "720p",
-        "options": [
-          {
-            "value": "480p",
-            "description": "480p",
-            "descriptionEn": "480p"
-          },
-          {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
-          },
-          {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），范围 4-15。",
-        "defaultValue": "5",
-        "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
-          {
-            "value": "4",
-            "description": "4",
-            "descriptionEn": "4"
-          },
-          {
-            "value": "5",
-            "description": "5",
-            "descriptionEn": "5"
-          },
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "7",
-            "description": "7",
-            "descriptionEn": "7"
-          },
-          {
-            "value": "8",
-            "description": "8",
-            "descriptionEn": "8"
-          },
-          {
-            "value": "9",
-            "description": "9",
-            "descriptionEn": "9"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          },
-          {
-            "value": "11",
-            "description": "11",
-            "descriptionEn": "11"
-          },
-          {
-            "value": "12",
-            "description": "12",
-            "descriptionEn": "12"
-          },
-          {
-            "value": "13",
-            "description": "13",
-            "descriptionEn": "13"
-          },
-          {
-            "value": "14",
-            "description": "14",
-            "descriptionEn": "14"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
-          }
-        ]
-      },
-      {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比，adaptive 由模型按输入素材自动选取。",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          },
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "adaptive"
-          }
-        ]
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否同步生成视频背景音/音效。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "seed",
-        "type": "INT",
-        "required": false,
-        "label": "seed",
-        "description": "随机种子，-1 表示完全随机；同 prompt+同 seed 结果接近（不保证完全一致）。",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
-        "step": 1
-      }
-    ]
-  },
-  {
-    "class_name": "MinimaxEvaVideo20ImageToVideo",
-    "display_name": "RH Seedance-2.0-global 图生视频（低价版）",
-    "name_cn": "Seedance-2.0-global 图生视频（低价版）",
-    "name_en": "Seedance-2.0-global Image-to-Video (Low-Price)",
-    "endpoint": "minimax/eva-video-2.0/image-to-video",
-    "output_type": "video",
-    "category": "RunningHub/MiniMax",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "视频生成提示词",
-        "defaultValue": "人物自然走动，背景轻微吹动，电影级运镜。",
-        "maxLength": 20480
-      },
-      {
-        "fieldKey": "firstFrameUrl",
-        "type": "IMAGE",
-        "required": true,
-        "label": "firstFrameUrl",
-        "description": "首帧图（必传，建议 <5MB）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "lastFrameUrl",
-        "type": "IMAGE",
-        "required": false,
-        "label": "lastFrameUrl",
-        "description": "尾帧图（可选，传入后自动衔接）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "输出分辨率。",
-        "defaultValue": "720p",
-        "options": [
-          {
-            "value": "480p",
-            "description": "480p",
-            "descriptionEn": "480p"
-          },
-          {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
-          },
-          {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），范围 4-15。",
-        "defaultValue": "5",
-        "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
-          {
-            "value": "4",
-            "description": "4",
-            "descriptionEn": "4"
-          },
-          {
-            "value": "5",
-            "description": "5",
-            "descriptionEn": "5"
-          },
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "7",
-            "description": "7",
-            "descriptionEn": "7"
-          },
-          {
-            "value": "8",
-            "description": "8",
-            "descriptionEn": "8"
-          },
-          {
-            "value": "9",
-            "description": "9",
-            "descriptionEn": "9"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          },
-          {
-            "value": "11",
-            "description": "11",
-            "descriptionEn": "11"
-          },
-          {
-            "value": "12",
-            "description": "12",
-            "descriptionEn": "12"
-          },
-          {
-            "value": "13",
-            "description": "13",
-            "descriptionEn": "13"
-          },
-          {
-            "value": "14",
-            "description": "14",
-            "descriptionEn": "14"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
-          }
-        ]
-      },
-      {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比，adaptive 由模型按输入素材自动选取。",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          },
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "adaptive"
-          }
-        ]
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否同步生成视频背景音/音效。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "seed",
-        "type": "INT",
-        "required": false,
-        "label": "seed",
-        "description": "随机种子，-1 表示完全随机；同 prompt+同 seed 结果接近（不保证完全一致）。",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
-        "step": 1
-      }
-    ]
-  },
-  {
-    "class_name": "MinimaxEvaVideo20MultimodalToVideo",
-    "display_name": "RH Seedance-2.0-global 多模态视频（低价版）",
-    "name_cn": "Seedance-2.0-global 多模态视频（低价版）",
-    "name_en": "Seedance-2.0-global Multimodal Video (Low-Price)",
-    "endpoint": "minimax/eva-video-2.0/multimodal-to-video",
-    "output_type": "video",
-    "category": "RunningHub/MiniMax",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "视频生成提示词",
-        "defaultValue": "参照所附素材生成自然连贯的视频。",
-        "maxLength": 20480
-      },
-      {
-        "fieldKey": "firstFrameUrl",
-        "type": "IMAGE",
-        "required": false,
-        "label": "firstFrameUrl",
-        "description": "首帧图（可选）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "lastFrameUrl",
-        "type": "IMAGE",
-        "required": false,
-        "label": "lastFrameUrl",
-        "description": "尾帧图（可选）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "imageUrls",
-        "type": "IMAGE",
-        "required": false,
-        "label": "imageUrls",
-        "description": "参考图（最多 3 张，<5MB/张）。",
-        "multipleInputs": true,
-        "maxInputNum": 3,
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "videoUrl",
-        "type": "VIDEO",
-        "required": false,
-        "label": "videoUrl",
-        "description": "参考视频（带入即触发 V2V 模式，影响计费）。",
-        "accept": "[\"MP4\",\"MOV\"]",
-        "maxSize": 50
-      },
-      {
-        "fieldKey": "audioUrl",
-        "type": "AUDIO",
-        "required": false,
-        "label": "audioUrl",
-        "description": "参考音频（用于配合视频生成）。",
-        "accept": "[\"MP3\",\"WAV\",\"AAC\",\"M4A\"]",
-        "maxSize": 30
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "输出分辨率。",
-        "defaultValue": "720p",
-        "options": [
-          {
-            "value": "480p",
-            "description": "480p",
-            "descriptionEn": "480p"
-          },
-          {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
-          },
-          {
-            "value": "1080p",
-            "description": "1080p",
-            "descriptionEn": "1080p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），范围 4-15。",
-        "defaultValue": "5",
-        "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
-          {
-            "value": "4",
-            "description": "4",
-            "descriptionEn": "4"
-          },
-          {
-            "value": "5",
-            "description": "5",
-            "descriptionEn": "5"
-          },
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "7",
-            "description": "7",
-            "descriptionEn": "7"
-          },
-          {
-            "value": "8",
-            "description": "8",
-            "descriptionEn": "8"
-          },
-          {
-            "value": "9",
-            "description": "9",
-            "descriptionEn": "9"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          },
-          {
-            "value": "11",
-            "description": "11",
-            "descriptionEn": "11"
-          },
-          {
-            "value": "12",
-            "description": "12",
-            "descriptionEn": "12"
-          },
-          {
-            "value": "13",
-            "description": "13",
-            "descriptionEn": "13"
-          },
-          {
-            "value": "14",
-            "description": "14",
-            "descriptionEn": "14"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
-          }
-        ]
-      },
-      {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比，adaptive 由模型按输入素材自动选取。",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          },
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "adaptive"
-          }
-        ]
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否同步生成视频背景音/音效。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "seed",
-        "type": "INT",
-        "required": false,
-        "label": "seed",
-        "description": "随机种子，-1 表示完全随机；同 prompt+同 seed 结果接近（不保证完全一致）。",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
-        "step": 1
-      }
-    ]
-  },
-  {
-    "class_name": "MinimaxEvaVideo20FastTextToVideo",
-    "display_name": "RH Seedance-2.0-global-fast 文生视频（低价版）",
-    "name_cn": "Seedance-2.0-global-fast 文生视频（低价版）",
-    "name_en": "Seedance-2.0-global-fast Text-to-Video (Low-Price)",
-    "endpoint": "minimax/eva-video-2.0-fast/text-to-video",
-    "output_type": "video",
-    "category": "RunningHub/MiniMax",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "视频生成提示词",
-        "defaultValue": "一个电影级武侠大片，雨夜竹林剑客与刺客高速对战，镜头从全景平滑推近至剑刃相击的特写，火花四溅。",
-        "maxLength": 20480
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "输出分辨率。fast 系列不支持 1080p。",
-        "defaultValue": "720p",
-        "options": [
-          {
-            "value": "480p",
-            "description": "480p",
-            "descriptionEn": "480p"
-          },
-          {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），范围 4-15。",
-        "defaultValue": "5",
-        "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
-          {
-            "value": "4",
-            "description": "4",
-            "descriptionEn": "4"
-          },
-          {
-            "value": "5",
-            "description": "5",
-            "descriptionEn": "5"
-          },
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "7",
-            "description": "7",
-            "descriptionEn": "7"
-          },
-          {
-            "value": "8",
-            "description": "8",
-            "descriptionEn": "8"
-          },
-          {
-            "value": "9",
-            "description": "9",
-            "descriptionEn": "9"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          },
-          {
-            "value": "11",
-            "description": "11",
-            "descriptionEn": "11"
-          },
-          {
-            "value": "12",
-            "description": "12",
-            "descriptionEn": "12"
-          },
-          {
-            "value": "13",
-            "description": "13",
-            "descriptionEn": "13"
-          },
-          {
-            "value": "14",
-            "description": "14",
-            "descriptionEn": "14"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
-          }
-        ]
-      },
-      {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比，adaptive 由模型按输入素材自动选取。",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          },
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "adaptive"
-          }
-        ]
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否同步生成视频背景音/音效。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "seed",
-        "type": "INT",
-        "required": false,
-        "label": "seed",
-        "description": "随机种子，-1 表示完全随机；同 prompt+同 seed 结果接近（不保证完全一致）。",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
-        "step": 1
-      }
-    ]
-  },
-  {
-    "class_name": "MinimaxEvaVideo20FastImageToVideo",
-    "display_name": "RH Seedance-2.0-global-fast 图生视频（低价版）",
-    "name_cn": "Seedance-2.0-global-fast 图生视频（低价版）",
-    "name_en": "Seedance-2.0-global-fast Image-to-Video (Low-Price)",
-    "endpoint": "minimax/eva-video-2.0-fast/image-to-video",
-    "output_type": "video",
-    "category": "RunningHub/MiniMax",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "视频生成提示词",
-        "defaultValue": "人物自然走动，背景轻微吹动，电影级运镜。",
-        "maxLength": 20480
-      },
-      {
-        "fieldKey": "firstFrameUrl",
-        "type": "IMAGE",
-        "required": true,
-        "label": "firstFrameUrl",
-        "description": "首帧图（必传，建议 <5MB）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "lastFrameUrl",
-        "type": "IMAGE",
-        "required": false,
-        "label": "lastFrameUrl",
-        "description": "尾帧图（可选，传入后自动衔接）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "输出分辨率。fast 系列不支持 1080p。",
-        "defaultValue": "720p",
-        "options": [
-          {
-            "value": "480p",
-            "description": "480p",
-            "descriptionEn": "480p"
-          },
-          {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），范围 4-15。",
-        "defaultValue": "5",
-        "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
-          {
-            "value": "4",
-            "description": "4",
-            "descriptionEn": "4"
-          },
-          {
-            "value": "5",
-            "description": "5",
-            "descriptionEn": "5"
-          },
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "7",
-            "description": "7",
-            "descriptionEn": "7"
-          },
-          {
-            "value": "8",
-            "description": "8",
-            "descriptionEn": "8"
-          },
-          {
-            "value": "9",
-            "description": "9",
-            "descriptionEn": "9"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          },
-          {
-            "value": "11",
-            "description": "11",
-            "descriptionEn": "11"
-          },
-          {
-            "value": "12",
-            "description": "12",
-            "descriptionEn": "12"
-          },
-          {
-            "value": "13",
-            "description": "13",
-            "descriptionEn": "13"
-          },
-          {
-            "value": "14",
-            "description": "14",
-            "descriptionEn": "14"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
-          }
-        ]
-      },
-      {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比，adaptive 由模型按输入素材自动选取。",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          },
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "adaptive"
-          }
-        ]
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否同步生成视频背景音/音效。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "seed",
-        "type": "INT",
-        "required": false,
-        "label": "seed",
-        "description": "随机种子，-1 表示完全随机；同 prompt+同 seed 结果接近（不保证完全一致）。",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
-        "step": 1
-      }
-    ]
-  },
-  {
-    "class_name": "MinimaxEvaVideo20FastMultimodalToVideo",
-    "display_name": "RH Seedance-2.0-global-fast 多模态视频（低价版）",
-    "name_cn": "Seedance-2.0-global-fast 多模态视频（低价版）",
-    "name_en": "Seedance-2.0-global-fast Multimodal Video (Low-Price)",
-    "endpoint": "minimax/eva-video-2.0-fast/multimodal-to-video",
-    "output_type": "video",
-    "category": "RunningHub/MiniMax",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": false,
-        "label": "prompt",
-        "description": "视频生成提示词",
-        "defaultValue": "参照所附素材生成自然连贯的视频。",
-        "maxLength": 20480
-      },
-      {
-        "fieldKey": "firstFrameUrl",
-        "type": "IMAGE",
-        "required": false,
-        "label": "firstFrameUrl",
-        "description": "首帧图（可选）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "lastFrameUrl",
-        "type": "IMAGE",
-        "required": false,
-        "label": "lastFrameUrl",
-        "description": "尾帧图（可选）。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "imageUrls",
-        "type": "IMAGE",
-        "required": false,
-        "label": "imageUrls",
-        "description": "参考图（最多 3 张，<5MB/张）。",
-        "multipleInputs": true,
-        "maxInputNum": 3,
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 5
-      },
-      {
-        "fieldKey": "videoUrl",
-        "type": "VIDEO",
-        "required": false,
-        "label": "videoUrl",
-        "description": "参考视频（带入即触发 V2V 模式，影响计费）。",
-        "accept": "[\"MP4\",\"MOV\"]",
-        "maxSize": 50
-      },
-      {
-        "fieldKey": "audioUrl",
-        "type": "AUDIO",
-        "required": false,
-        "label": "audioUrl",
-        "description": "参考音频（用于配合视频生成）。",
-        "accept": "[\"MP3\",\"WAV\",\"AAC\",\"M4A\"]",
-        "maxSize": 30
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "输出分辨率。fast 系列不支持 1080p。",
-        "defaultValue": "720p",
-        "options": [
-          {
-            "value": "480p",
-            "description": "480p",
-            "descriptionEn": "480p"
-          },
-          {
-            "value": "720p",
-            "description": "720p",
-            "descriptionEn": "720p"
-          }
-        ]
-      },
-      {
-        "fieldKey": "duration",
-        "type": "LIST",
-        "required": true,
-        "label": "duration",
-        "description": "视频时长（秒），范围 4-15。",
-        "defaultValue": "5",
-        "options": [
-          {
-            "value": "-1",
-            "description": "自动",
-            "descriptionEn": "Auto"
-          },
-          {
-            "value": "4",
-            "description": "4",
-            "descriptionEn": "4"
-          },
-          {
-            "value": "5",
-            "description": "5",
-            "descriptionEn": "5"
-          },
-          {
-            "value": "6",
-            "description": "6",
-            "descriptionEn": "6"
-          },
-          {
-            "value": "7",
-            "description": "7",
-            "descriptionEn": "7"
-          },
-          {
-            "value": "8",
-            "description": "8",
-            "descriptionEn": "8"
-          },
-          {
-            "value": "9",
-            "description": "9",
-            "descriptionEn": "9"
-          },
-          {
-            "value": "10",
-            "description": "10",
-            "descriptionEn": "10"
-          },
-          {
-            "value": "11",
-            "description": "11",
-            "descriptionEn": "11"
-          },
-          {
-            "value": "12",
-            "description": "12",
-            "descriptionEn": "12"
-          },
-          {
-            "value": "13",
-            "description": "13",
-            "descriptionEn": "13"
-          },
-          {
-            "value": "14",
-            "description": "14",
-            "descriptionEn": "14"
-          },
-          {
-            "value": "15",
-            "description": "15",
-            "descriptionEn": "15"
-          }
-        ]
-      },
-      {
-        "fieldKey": "ratio",
-        "type": "LIST",
-        "required": false,
-        "label": "ratio",
-        "description": "视频宽高比，adaptive 由模型按输入素材自动选取。",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          },
-          {
-            "value": "adaptive",
-            "description": "自适应",
-            "descriptionEn": "adaptive"
-          }
-        ]
-      },
-      {
-        "fieldKey": "generateAudio",
-        "type": "BOOLEAN",
-        "required": false,
-        "label": "generateAudio",
-        "description": "是否同步生成视频背景音/音效。",
-        "defaultValue": false
-      },
-      {
-        "fieldKey": "seed",
-        "type": "INT",
-        "required": false,
-        "label": "seed",
-        "description": "随机种子，-1 表示完全随机；同 prompt+同 seed 结果接近（不保证完全一致）。",
-        "defaultValue": -1,
-        "min": -1,
-        "max": 2147483647,
-        "step": 1
       }
     ]
   },
@@ -37178,86 +34409,6 @@
     ]
   },
   {
-    "class_name": "RhartVideoSparkvideo20UploadAssetChannelLowPrice",
-    "display_name": "RH seedance2.0/上传素材资产低价渠道版",
-    "name_cn": "seedance2.0/上传素材资产低价渠道版",
-    "name_en": "seedance-2.0/upload-asset-channel-low-price",
-    "endpoint": "rhart-video/sparkvideo-2.0/upload-asset-channel-low-price",
-    "output_type": "video",
-    "category": "RunningHub/RHArt Video",
-    "params": [
-      {
-        "fieldKey": "assetType",
-        "type": "LIST",
-        "required": true,
-        "label": "assetType",
-        "description": "素材类型：Image（图片）或 Video（视频）。",
-        "defaultValue": "Image",
-        "options": [
-          {
-            "value": "Image",
-            "description": "图片",
-            "descriptionEn": "Image"
-          },
-          {
-            "value": "Video",
-            "description": "视频",
-            "descriptionEn": "Video"
-          }
-        ]
-      },
-      {
-        "fieldKey": "url",
-        "type": "CommonMedia",
-        "required": true,
-        "label": "url",
-        "description": "素材源（本地资源或公网可访问URL），Image 建议 jpg/jpeg/png/webp，Video 建议 mp4/mov。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"GIF\",\"WEBP\",\"BMP\",\"HEIC\",\"HEIF\",\"TIFF\",\"MP3\",\"WAV\",\"MP4\",\"MOV\"]",
-        "maxSize": 50
-      }
-    ]
-  },
-  {
-    "class_name": "BytedanceSeedance20GlobalUploadAssetChannelLowPrice",
-    "display_name": "RH seedance2.0-global/上传素材资产低价渠道版",
-    "name_cn": "seedance2.0-global/上传素材资产低价渠道版",
-    "name_en": "seedance-2.0-global/upload-asset-channel-low-price",
-    "endpoint": "bytedance/seedance-2.0-global/upload-asset-channel-low-price",
-    "output_type": "string",
-    "category": "RunningHub/Seedance",
-    "params": [
-      {
-        "fieldKey": "assetType",
-        "type": "LIST",
-        "required": true,
-        "label": "assetType",
-        "description": "素材类型：Image（图片）或 Video（视频）。",
-        "defaultValue": "Image",
-        "options": [
-          {
-            "value": "Image",
-            "description": "图片",
-            "descriptionEn": "Image"
-          },
-          {
-            "value": "Video",
-            "description": "视频",
-            "descriptionEn": "Video"
-          }
-        ]
-      },
-      {
-        "fieldKey": "url",
-        "type": "CommonMedia",
-        "required": true,
-        "label": "url",
-        "description": "素材源（本地资源或公网可访问URL），Image 建议 jpg/jpeg/png/webp，Video 建议 mp4/mov。",
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"GIF\",\"WEBP\",\"BMP\",\"HEIC\",\"HEIF\",\"TIFF\",\"MP3\",\"WAV\",\"MP4\",\"MOV\"]",
-        "maxSize": 50
-      }
-    ]
-  },
-  {
     "class_name": "MurekaAiStemSong",
     "display_name": "RH mureka-ai 音轨分离",
     "name_cn": "mureka-ai 音轨分离",
@@ -37352,58 +34503,6 @@
         "label": "lyrics",
         "description": "已有歌词，将基于此续写新歌词，最长 3000 字符；支持 [Verse]/[Chorus] 段位标记。",
         "maxLength": 3000
-      }
-    ]
-  },
-  {
-    "class_name": "Seedance20UploadAsset",
-    "display_name": "RH Seedance 2.0 上传素材资产",
-    "name_cn": "Seedance 2.0 上传素材资产",
-    "name_en": "Seedance 2.0 Upload Asset",
-    "endpoint": "seedance2.0/upload-asset",
-    "output_type": "string",
-    "category": "RunningHub/Seedance",
-    "params": [
-      {
-        "fieldKey": "url",
-        "type": "STRING",
-        "required": true,
-        "label": "url",
-        "description": "素材源 URL（http/https），图片/视频/音频均可。最终会被 MiniMax 下载并转存为 VolcTOS 签名 URL。",
-        "maxLength": 2048
-      },
-      {
-        "fieldKey": "assetType",
-        "type": "LIST",
-        "required": true,
-        "label": "assetType",
-        "description": "素材类型，决定上游存储桶与审核策略。",
-        "defaultValue": "Image",
-        "options": [
-          {
-            "value": "Image",
-            "description": "Image",
-            "descriptionEn": "Image"
-          },
-          {
-            "value": "Video",
-            "description": "Video",
-            "descriptionEn": "Video"
-          },
-          {
-            "value": "Audio",
-            "description": "Audio",
-            "descriptionEn": "Audio"
-          }
-        ]
-      },
-      {
-        "fieldKey": "name",
-        "type": "STRING",
-        "required": false,
-        "label": "name",
-        "description": "素材展示名（可选，便于在素材库管理后台识别）。",
-        "maxLength": 64
       }
     ]
   },
@@ -38115,327 +35214,6 @@
     ]
   },
   {
-    "class_name": "RhartImageG2OfficialImageToImageTokenBilling",
-    "display_name": "RH 全能图片G-2-图生图-Token计费版",
-    "name_cn": "全能图片G-2-图生图-Token计费版",
-    "name_en": "rhart-image-g-2-official/image-to-image-token-billing",
-    "endpoint": "rhart-image-g-2-official/image-to-image-token-billing",
-    "output_type": "image",
-    "category": "RunningHub/RHArt Image",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "编辑指令描述",
-        "defaultValue": "将这个客厅彻底改造为“植物园温室”风格。把原有的沙发替换成复古的绿色天鹅绒材质，墙面变成做旧的红砖墙。整个房间内挂满茂盛的热带藤蔓植物，阳光透过巨大的玻璃穹顶洒在地毯上。保持房间原本的物理空间大小、门窗位置以及家具的摆放结构完全不变。",
-        "maxLength": 20000
-      },
-      {
-        "fieldKey": "imageUrls",
-        "type": "IMAGE",
-        "required": true,
-        "label": "imageUrls",
-        "description": "参考图片（1-10张）",
-        "multipleInputs": true,
-        "maxInputNum": 10,
-        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
-        "maxSize": 10
-      },
-      {
-        "fieldKey": "aspectRatio",
-        "type": "LIST",
-        "required": false,
-        "label": "aspectRatio",
-        "description": "输出图像宽高比",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "1:2",
-            "description": "1:2",
-            "descriptionEn": "1:2"
-          },
-          {
-            "value": "2:1",
-            "description": "2:1",
-            "descriptionEn": "2:1"
-          },
-          {
-            "value": "1:3",
-            "description": "1:3",
-            "descriptionEn": "1:3"
-          },
-          {
-            "value": "3:1",
-            "description": "3:1",
-            "descriptionEn": "3:1"
-          },
-          {
-            "value": "2:3",
-            "description": "2:3",
-            "descriptionEn": "2:3"
-          },
-          {
-            "value": "3:2",
-            "description": "3:2",
-            "descriptionEn": "3:2"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "4:5",
-            "description": "4:5",
-            "descriptionEn": "4:5"
-          },
-          {
-            "value": "5:4",
-            "description": "5:4",
-            "descriptionEn": "5:4"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          },
-          {
-            "value": "9:21",
-            "description": "9:21",
-            "descriptionEn": "9:21"
-          },
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          }
-        ]
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "输出图像分辨率档位",
-        "defaultValue": "2k",
-        "options": [
-          {
-            "value": "1k",
-            "description": "1k",
-            "descriptionEn": "1k"
-          },
-          {
-            "value": "2k",
-            "description": "2k",
-            "descriptionEn": "2k"
-          },
-          {
-            "value": "4k",
-            "description": "4k",
-            "descriptionEn": "4k"
-          }
-        ]
-      },
-      {
-        "fieldKey": "quality",
-        "type": "LIST",
-        "required": true,
-        "label": "quality",
-        "description": "quality",
-        "defaultValue": "medium",
-        "options": [
-          {
-            "value": "low",
-            "description": "low",
-            "descriptionEn": "low"
-          },
-          {
-            "value": "medium",
-            "description": "medium",
-            "descriptionEn": "medium"
-          },
-          {
-            "value": "high",
-            "description": "high",
-            "descriptionEn": "high"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "class_name": "RhartImageG2OfficialTextToImageTokenBilling",
-    "display_name": "RH 全能图片G-2-文生图-Token计费版",
-    "name_cn": "全能图片G-2-文生图-Token计费版",
-    "name_en": "rhart-image-g-2-official/text-to-image-token-billing",
-    "endpoint": "rhart-image-g-2-official/text-to-image-token-billing",
-    "output_type": "image",
-    "category": "RunningHub/RHArt Image",
-    "params": [
-      {
-        "fieldKey": "prompt",
-        "type": "STRING",
-        "required": true,
-        "label": "prompt",
-        "description": "图像描述提示词",
-        "defaultValue": "一张高端商业摄影海报。画面正中央是一个采用极简设计的白色磨砂质感智能音箱。音箱放置在浅灰色的水磨石台面上。背景是纯净的低饱和度米色墙面，一束柔和的自然光从斜上方 45 度角打下，在台面上留下清晰但边缘柔和的斜长阴影。整体画面干净、通透，具有极简主义的高级感，右侧留有大量负空间（空白）。",
-        "maxLength": 20000
-      },
-      {
-        "fieldKey": "aspectRatio",
-        "type": "LIST",
-        "required": false,
-        "label": "aspectRatio",
-        "description": "输出图像宽高比",
-        "defaultValue": "16:9",
-        "options": [
-          {
-            "value": "1:1",
-            "description": "1:1",
-            "descriptionEn": "1:1"
-          },
-          {
-            "value": "1:2",
-            "description": "1:2",
-            "descriptionEn": "1:2"
-          },
-          {
-            "value": "2:1",
-            "description": "2:1",
-            "descriptionEn": "2:1"
-          },
-          {
-            "value": "1:3",
-            "description": "1:3",
-            "descriptionEn": "1:3"
-          },
-          {
-            "value": "3:1",
-            "description": "3:1",
-            "descriptionEn": "3:1"
-          },
-          {
-            "value": "2:3",
-            "description": "2:3",
-            "descriptionEn": "2:3"
-          },
-          {
-            "value": "3:2",
-            "description": "3:2",
-            "descriptionEn": "3:2"
-          },
-          {
-            "value": "3:4",
-            "description": "3:4",
-            "descriptionEn": "3:4"
-          },
-          {
-            "value": "4:3",
-            "description": "4:3",
-            "descriptionEn": "4:3"
-          },
-          {
-            "value": "4:5",
-            "description": "4:5",
-            "descriptionEn": "4:5"
-          },
-          {
-            "value": "5:4",
-            "description": "5:4",
-            "descriptionEn": "5:4"
-          },
-          {
-            "value": "9:16",
-            "description": "9:16",
-            "descriptionEn": "9:16"
-          },
-          {
-            "value": "21:9",
-            "description": "21:9",
-            "descriptionEn": "21:9"
-          },
-          {
-            "value": "9:21",
-            "description": "9:21",
-            "descriptionEn": "9:21"
-          },
-          {
-            "value": "16:9",
-            "description": "16:9",
-            "descriptionEn": "16:9"
-          }
-        ]
-      },
-      {
-        "fieldKey": "resolution",
-        "type": "LIST",
-        "required": true,
-        "label": "resolution",
-        "description": "输出图像分辨率档位",
-        "defaultValue": "2k",
-        "options": [
-          {
-            "value": "1k",
-            "description": "1k",
-            "descriptionEn": "1k"
-          },
-          {
-            "value": "2k",
-            "description": "2k",
-            "descriptionEn": "2k"
-          },
-          {
-            "value": "4k",
-            "description": "4k",
-            "descriptionEn": "4k"
-          }
-        ]
-      },
-      {
-        "fieldKey": "quality",
-        "type": "LIST",
-        "required": true,
-        "label": "quality",
-        "description": "quality",
-        "defaultValue": "medium",
-        "options": [
-          {
-            "value": "low",
-            "description": "low",
-            "descriptionEn": "low"
-          },
-          {
-            "value": "medium",
-            "description": "medium",
-            "descriptionEn": "medium"
-          },
-          {
-            "value": "high",
-            "description": "high",
-            "descriptionEn": "high"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "class_name": "ViduShortPlayQ3Drama",
     "display_name": "RH Vidu Q3 Drama 短剧成片",
     "name_cn": "Vidu Q3 Drama 短剧成片",
@@ -38557,6 +35335,285 @@
         "description": "视频风格（不超过30字，无标点，默认真人写实）",
         "defaultValue": "真人写实",
         "maxLength": 30
+      }
+    ]
+  },
+  {
+    "class_name": "MinimaxMusic26",
+    "display_name": "RH MiniMax Music 2.6",
+    "name_cn": "MiniMax Music 2.6",
+    "name_en": "minimax/music-2.6",
+    "endpoint": "minimax/music-2.6",
+    "output_type": "audio",
+    "category": "RunningHub/MiniMax",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "音乐描述，用于指定风格、情绪和场景。纯音乐（isInstrumental: true）：必填，长度限制 [1, 2000] 个字符",
+        "defaultValue": "描述个人面对成长后的平静，励志，娓娓道来的感觉",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": true,
+        "label": "lyrics",
+        "description": "歌曲歌词，使用换行分隔每行。支持结构标签：[Intro], [Verse], [Chorus], [Bridge], [Outro]等,非纯音乐（isInstrumental: false）时必填",
+        "defaultValue": "[Verse] 心早有预感 光速地飙燃 浑然不知山前的悬崖 生而无惧是少年 不知光阴有限  [Pre-Chorus] 想哭想笑时 都痛痛快快 全然不理会谁给的评价 只怕一瞬不如愿 失去重要片段  [Chorus] 原来人面对成长 大多以为失去才得到宁静 看似谦逊 实则麻木而已 直到它突然而至 猝不及防 我才明白 哦 原来是它的光 才能引领  [Verse 2] 热爱无旁骛 不屈不挠 死缠烂打的又怎会害怕 向着目标直行 直到对的人先到  [Chorus] 原来人面对成长 大多以为失去才得到宁静 看似谦逊 实则麻木而已 直到它突然而至 猝不及防 我才明白 哦 原来是它的光 才能引领  [Bridge] 说过的话都没兑现 不必沮丧 也不是说不该留恋 只不过人该往前 原来人面对成长 大多以为失去才得到宁静 看似谦逊 实则麻木而已 直到它突然而至 猝不及防 我才明白 哦 原来是它的光 才能引领",
+        "maxLength": 3500
+      },
+      {
+        "fieldKey": "sampleRate",
+        "type": "LIST",
+        "required": false,
+        "label": "sampleRate",
+        "description": "采样率",
+        "defaultValue": "44100",
+        "options": [
+          {
+            "value": "16000",
+            "description": "16000",
+            "descriptionEn": "16000"
+          },
+          {
+            "value": "24000",
+            "description": "24000",
+            "descriptionEn": "24000"
+          },
+          {
+            "value": "32000",
+            "description": "32000",
+            "descriptionEn": "32000"
+          },
+          {
+            "value": "44100",
+            "description": "44100",
+            "descriptionEn": "44100"
+          }
+        ]
+      },
+      {
+        "fieldKey": "bitrate",
+        "type": "LIST",
+        "required": false,
+        "label": "bitrate",
+        "description": "比特率",
+        "defaultValue": "256000",
+        "options": [
+          {
+            "value": "32000",
+            "description": "32000",
+            "descriptionEn": "32000"
+          },
+          {
+            "value": "64000",
+            "description": "64000",
+            "descriptionEn": "64000"
+          },
+          {
+            "value": "128000",
+            "description": "128000",
+            "descriptionEn": "128000"
+          },
+          {
+            "value": "256000",
+            "description": "256000",
+            "descriptionEn": "256000"
+          }
+        ]
+      },
+      {
+        "fieldKey": "format",
+        "type": "LIST",
+        "required": false,
+        "label": "format",
+        "description": "音频格式",
+        "defaultValue": "mp3",
+        "options": [
+          {
+            "value": "mp3",
+            "description": "mp3",
+            "descriptionEn": "mp3"
+          },
+          {
+            "value": "wav",
+            "description": "wav",
+            "descriptionEn": "wav"
+          },
+          {
+            "value": "pcm",
+            "description": "pcm",
+            "descriptionEn": "pcm"
+          }
+        ]
+      },
+      {
+        "fieldKey": "lyricsOptimizer",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "lyricsOptimizer",
+        "description": "是否根据描述自动优化歌词",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "isInstrumental",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "isInstrumental",
+        "description": "是否纯音乐",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "MinimaxMusicCover",
+    "display_name": "RH MiniMax Music 翻唱",
+    "name_cn": "MiniMax Music 翻唱",
+    "name_en": "minimax/music-cover",
+    "endpoint": "minimax/music-cover",
+    "output_type": "audio",
+    "category": "RunningHub/MiniMax",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "纯音乐描述，用于指定风格、情绪和场景（必填）",
+        "defaultValue": "以键盘、吉他、萨克斯、鼓为主奏配器，整体营造日落时分慵懒松弛、温柔隽永的氛围，旋律线条悠扬绵长，多乐器层次交织，氛围感安静治愈又有留白余韵。",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "audioUrl",
+        "type": "AUDIO",
+        "required": true,
+        "label": "audioUrl",
+        "description": "参考音频，6 秒至 6 分钟",
+        "accept": "[\"MP3\",\"WAV\",\"FLAC\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "lyrics",
+        "type": "STRING",
+        "required": false,
+        "label": "lyrics",
+        "description": "歌曲歌词，如不传则通过 ASR 自动从参考音频中提取歌词，长度限制 [10, 1000] 个字符",
+        "maxLength": 1000
+      },
+      {
+        "fieldKey": "coverFeatureId",
+        "type": "STRING",
+        "required": false,
+        "label": "coverFeatureId",
+        "description": "翻唱前处理 接口返回的特征 ID,coverFeatureId 有效期为 24 小时,传入时 lyrics 为必填"
+      },
+      {
+        "fieldKey": "sampleRate",
+        "type": "LIST",
+        "required": false,
+        "label": "sampleRate",
+        "description": "采样率",
+        "defaultValue": "44100",
+        "options": [
+          {
+            "value": "16000",
+            "description": "16000",
+            "descriptionEn": "16000"
+          },
+          {
+            "value": "24000",
+            "description": "24000",
+            "descriptionEn": "24000"
+          },
+          {
+            "value": "32000",
+            "description": "32000",
+            "descriptionEn": "32000"
+          },
+          {
+            "value": "44100",
+            "description": "44100",
+            "descriptionEn": "44100"
+          }
+        ]
+      },
+      {
+        "fieldKey": "format",
+        "type": "LIST",
+        "required": false,
+        "label": "format",
+        "description": "音频格式",
+        "defaultValue": "mp3",
+        "options": [
+          {
+            "value": "mp3",
+            "description": "mp3",
+            "descriptionEn": "mp3"
+          },
+          {
+            "value": "wav",
+            "description": "wav",
+            "descriptionEn": "wav"
+          },
+          {
+            "value": "pcm",
+            "description": "pcm",
+            "descriptionEn": "pcm"
+          }
+        ]
+      },
+      {
+        "fieldKey": "bitrate",
+        "type": "LIST",
+        "required": false,
+        "label": "bitrate",
+        "description": "比特率",
+        "defaultValue": "256000",
+        "options": [
+          {
+            "value": "32000",
+            "description": "32000",
+            "descriptionEn": "32000"
+          },
+          {
+            "value": "64000",
+            "description": "64000",
+            "descriptionEn": "64000"
+          },
+          {
+            "value": "128000",
+            "description": "128000",
+            "descriptionEn": "128000"
+          },
+          {
+            "value": "256000",
+            "description": "256000",
+            "descriptionEn": "256000"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "MinimaxMusicCoverPreprocess",
+    "display_name": "RH MiniMax Music 翻唱前处理",
+    "name_cn": "MiniMax Music 翻唱前处理",
+    "name_en": "minimax/music-cover-preprocess",
+    "endpoint": "minimax/music-cover-preprocess",
+    "output_type": "audio",
+    "category": "RunningHub/MiniMax",
+    "params": [
+      {
+        "fieldKey": "audioUrl",
+        "type": "AUDIO",
+        "required": true,
+        "label": "audioUrl",
+        "description": "参考音频，6 秒至 6 分钟",
+        "accept": "[\"MP3\",\"WAV\",\"FLAC\"]",
+        "maxSize": 50
       }
     ]
   }
