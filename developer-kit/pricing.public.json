@@ -7546,19 +7546,19 @@
           "when": {
             "duration": "12"
           },
-          "price": 5.46
+          "price": 6.83
         },
         {
           "when": {
             "duration": "4"
           },
-          "price": 1.82
+          "price": 2.28
         },
         {
           "when": {
             "duration": "8"
           },
-          "price": 3.64
+          "price": 4.55
         }
       ]
     },
@@ -7650,19 +7650,19 @@
           "when": {
             "duration": "12"
           },
-          "price": 5.46
+          "price": 6.83
         },
         {
           "when": {
             "duration": "4"
           },
-          "price": 1.82
+          "price": 2.28
         },
         {
           "when": {
             "duration": "8"
           },
-          "price": 3.64
+          "price": 4.55
         }
       ]
     },

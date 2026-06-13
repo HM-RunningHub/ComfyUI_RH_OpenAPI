@@ -78,6 +78,11 @@
         "defaultValue": "auto",
         "options": [
           {
+            "value": "empty",
+            "description": "empty",
+            "descriptionEn": "empty"
+          },
+          {
             "value": "auto",
             "description": "auto",
             "descriptionEn": "auto"
@@ -267,8 +272,13 @@
         "required": false,
         "label": "aspectRatio",
         "description": "不传 aspectRatio 参数时为自适应图片尺寸",
-        "defaultValue": "3:4",
+        "defaultValue": "empty",
         "options": [
+          {
+            "value": "empty",
+            "description": "empty",
+            "descriptionEn": "empty"
+          },
           {
             "value": "1:1",
             "description": "1:1",
@@ -513,8 +523,13 @@
         "required": false,
         "label": "aspectRatio",
         "description": "不传 aspectRatio 参数时为自适应图片尺寸",
-        "defaultValue": "3:4",
+        "defaultValue": "empty",
         "options": [
+          {
+            "value": "empty",
+            "description": "empty",
+            "descriptionEn": "empty"
+          },
           {
             "value": "1:1",
             "description": "1:1",
@@ -5372,8 +5387,13 @@
         "required": false,
         "label": "aspectRatio",
         "description": "aspectRatio",
-        "defaultValue": "3:4",
+        "defaultValue": "empty",
         "options": [
+          {
+            "value": "empty",
+            "description": "empty",
+            "descriptionEn": "empty"
+          },
           {
             "value": "1:1",
             "description": "1:1",
@@ -11903,8 +11923,13 @@
         "required": false,
         "label": "aspectRatio",
         "description": "aspectRatio",
-        "defaultValue": "9:16",
+        "defaultValue": "empty",
         "options": [
+          {
+            "value": "empty",
+            "description": "empty",
+            "descriptionEn": "empty"
+          },
           {
             "value": "1:1",
             "description": "1:1",
@@ -12164,8 +12189,13 @@
         "required": false,
         "label": "aspectRatio",
         "description": "aspectRatio",
-        "defaultValue": "9:16",
+        "defaultValue": "empty",
         "options": [
+          {
+            "value": "empty",
+            "description": "empty",
+            "descriptionEn": "empty"
+          },
           {
             "value": "1:1",
             "description": "1:1",
@@ -14391,6 +14421,11 @@
         "description": "aspectRatio",
         "defaultValue": "auto",
         "options": [
+          {
+            "value": "empty",
+            "description": "empty",
+            "descriptionEn": "empty"
+          },
           {
             "value": "auto",
             "description": "auto",
@@ -35210,6 +35245,23 @@
             "descriptionEn": "2"
           }
         ]
+      },
+      {
+        "fieldKey": "needVideoSpeed",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "needVideoSpeed",
+        "description": "视频倍速调整；true=打开，false=关闭",
+        "defaultValue": false,
+        "tail_insert": true
+      },
+      {
+        "fieldKey": "targetStyleMap",
+        "type": "STRING",
+        "required": false,
+        "label": "targetStyleMap",
+        "description": "字幕样式设置；可填写单个 style 对象的 JSON.stringify 字符串，平台会应用到所有目标语种；也支持直接传 {\"zh\":\"style字符串\",\"ja\":\"style字符串\"} 这种按目标语种区分的对象",
+        "tail_insert": true
       }
     ]
   },
