@@ -22627,8 +22627,13 @@
         "required": false,
         "label": "aspectRatio",
         "description": "输出图像宽高比",
-        "defaultValue": "16:9",
+        "defaultValue": "empty",
         "options": [
+          {
+            "value": "empty",
+            "description": "empty",
+            "descriptionEn": "empty"
+          },
           {
             "value": "1:1",
             "description": "1:1",
