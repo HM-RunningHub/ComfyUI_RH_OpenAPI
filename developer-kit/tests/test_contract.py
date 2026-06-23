@@ -97,7 +97,7 @@ class ContractTests(unittest.TestCase):
         fixed = by_endpoint["rhart-image-v1/text-to-image"]
         self.assertEqual(fixed["pricing_type"], "fixed")
         self.assertEqual(fixed["currency"], "CNY")
-        self.assertEqual(fixed["price"], 0.05)
+        self.assertEqual(fixed["price"], 0.07)
 
         parameter_based = by_endpoint["rhart-video-v3.1-fast/text-to-video"]
         self.assertEqual(parameter_based["pricing_type"], "parameter_based")

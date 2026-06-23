@@ -134,13 +134,13 @@
           "when": {
             "resolution": "1080p"
           },
-          "price": 1.19
+          "price": 0.92
         },
         {
           "when": {
             "resolution": "720p"
           },
-          "price": 0.67
+          "price": 0.69
         }
       ]
     },
@@ -161,13 +161,13 @@
           "when": {
             "resolution": "1080p"
           },
-          "price": 1.19
+          "price": 0.92
         },
         {
           "when": {
             "resolution": "720p"
           },
-          "price": 0.67
+          "price": 0.69
         }
       ]
     },
@@ -188,13 +188,13 @@
           "when": {
             "resolution": "1080p"
           },
-          "price": 1.19
+          "price": 0.92
         },
         {
           "when": {
             "resolution": "720p"
           },
-          "price": 0.67
+          "price": 0.69
         }
       ]
     },
@@ -1280,6 +1280,12 @@
             "resolution": "native1080p"
           },
           "price": 3.0
+        },
+        {
+          "when": {
+            "resolution": "native4k"
+          },
+          "price": 6.0
         }
       ]
     },
@@ -1331,6 +1337,12 @@
             "resolution": "native1080p"
           },
           "price": 3.0
+        },
+        {
+          "when": {
+            "resolution": "native4k"
+          },
+          "price": 6.0
         }
       ]
     },
@@ -1382,6 +1394,12 @@
             "resolution": "native1080p"
           },
           "price": 3.0
+        },
+        {
+          "when": {
+            "resolution": "native4k"
+          },
+          "price": 6.0
         }
       ]
     },
@@ -6661,19 +6679,19 @@
           "when": {
             "resolution": "1k"
           },
-          "price": 0.16
+          "price": 0.19
         },
         {
           "when": {
             "resolution": "2k"
           },
-          "price": 0.16
+          "price": 0.19
         },
         {
           "when": {
             "resolution": "4k"
           },
-          "price": 0.2
+          "price": 0.3
         }
       ]
     },
@@ -6694,19 +6712,19 @@
           "when": {
             "resolution": "1k"
           },
-          "price": 0.16
+          "price": 0.19
         },
         {
           "when": {
             "resolution": "2k"
           },
-          "price": 0.16
+          "price": 0.19
         },
         {
           "when": {
             "resolution": "4k"
           },
-          "price": 0.2
+          "price": 0.3
         }
       ]
     },
@@ -6927,7 +6945,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.05
+      "price": 0.07
     },
     {
       "endpoint": "rhart-image-v1/text-to-image",
@@ -6938,7 +6956,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.05
+      "price": 0.07
     },
     {
       "endpoint": "rhart-image-x-official/edit",
@@ -8665,6 +8683,12 @@
             "resolution": "native1080p"
           },
           "price": 3.0
+        },
+        {
+          "when": {
+            "resolution": "native4k"
+          },
+          "price": 6.0
         }
       ]
     },
@@ -8716,6 +8740,12 @@
             "resolution": "native1080p"
           },
           "price": 3.0
+        },
+        {
+          "when": {
+            "resolution": "native4k"
+          },
+          "price": 6.0
         }
       ]
     },
@@ -8767,6 +8797,12 @@
             "resolution": "native1080p"
           },
           "price": 3.0
+        },
+        {
+          "when": {
+            "resolution": "native4k"
+          },
+          "price": 6.0
         }
       ]
     },
