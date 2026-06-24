@@ -36544,7 +36544,7 @@
     "name_en": "seedance-2.0-mini/text-to-video",
     "endpoint": "rhart-video/sparkvideo-2.0-mini/text-to-video",
     "output_type": "video",
-    "category": "RunningHub/RHArt Video",
+    "category": "RunningHub/Seedance",
     "params": [
       {
         "fieldKey": "prompt",
@@ -36754,7 +36754,7 @@
     "name_en": "seedance-2.0-mini/image-to-video",
     "endpoint": "rhart-video/sparkvideo-2.0-mini/image-to-video",
     "output_type": "video",
-    "category": "RunningHub/RHArt Video",
+    "category": "RunningHub/Seedance",
     "params": [
       {
         "fieldKey": "prompt",
@@ -37007,7 +37007,7 @@
     "name_en": "seedance-2.0-mini/multimodal-video",
     "endpoint": "rhart-video/sparkvideo-2.0-mini/multimodal-video",
     "output_type": "video",
-    "category": "RunningHub/RHArt Video",
+    "category": "RunningHub/Seedance",
     "params": [
       {
         "fieldKey": "prompt",

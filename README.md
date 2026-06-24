@@ -1,7 +1,7 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-359-blue)
+![Nodes](https://img.shields.io/badge/Nodes-360-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 [RunningHub](https://www.runninghub.cn)
 
@@ -9,11 +9,11 @@
 
 **ComfyUI_RH_OpenAPI** 是 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 的 **1:1 ComfyUI 实现**，并额外补充了 Seedance2.0 素材资产管理节点。
 
-本项目当前收录 355 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点、1 个 RunningHub LLM 对话节点与 1 个设置节点，总计提供 359 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型与 LLM 能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
+本项目当前收录 355 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点、1 个 RunningHub LLM 对话节点与 1 个设置节点，总计提供 360 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型与 LLM 能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
 
 ## 📌 项目特点
 
-- **节点总量** — 共 359 个 ComfyUI 节点，其中包含 355 个标准模型节点、3 个 Seedance2.0 素材节点、1 个 RunningHub LLM 对话节点和 1 个设置节点
+- **节点总量** — 共 360 个 ComfyUI 节点，其中包含 355 个标准模型节点、3 个 Seedance2.0 素材节点、1 个 RunningHub LLM 对话节点和 1 个设置节点
 - **即插即用** — 无需下载模型、无需 GPU，只需 API Key 即可调用全部能力
 - **动态注册** — 基于 JSON 注册表自动生成节点，新模型上线后仅需更新注册表
 - **多媒体支持** — 图片、视频、音频自动上传 / 下载 / 格式转换，与 ComfyUI 原生类型无缝衔接
@@ -39,39 +39,42 @@
 | Grok 3 / Grok 4 Image（xAI） | 全能图片 X-3 / X-4 | 文生图、图生图 | 4 |
 | Grok Image 低价通道（xAI） | 全能图片 X | 文生图、图生图 | 2 |
 | Grok Image 官方（xAI） | 全能图片 X 官方 | 文生图、图像编辑 | 2 |
+| Grok Imagine Image Quality（xAI） | RHArt Imagine Image Quality | 文生图、图像编辑、高质量多图输出 | 2 |
 | Qwen Image 2.0 / 2.0 Pro（阿里巴巴） | 千问 | 文生图、图像编辑 | 4 |
 | Wan 万相 2.5 / 2.7（阿里巴巴） | — | 文生图、图像编辑 | 6 |
 | Higgsfield | — | 图生图（Soul） | 1 |
 | HYPIR 图像增强 | — | HYPIR-ULTRA、HYPIR-BALANCE | 2 |
 | TopazLabs | — | 图像放大 Standard V2 / Low Res V2 / CGI / High Fidelity V2 / Text Refine | 5 |
-| Seedream v4 / v4.5 / v5 Lite（字节跳动） | — | 文生图、图生图 | 6 |
+| Seedream v4 / v4.5 / v5 Lite / Jimeng 4.6（字节跳动） | — | 文生图、图生图 | 8 |
 | FLUX Dev（Black Forest Labs） | — | 文生图、文生图 LoRA | 2 |
 | Midjourney | 悠船 | 文生图 v6/v6.1/niji6/niji7/v7/v8.1 | 6 |
 | Marble 1.0 / 1.1 / 1.1 Plus | — | 图像/多图生成 3D 世界 | 6 |
+| Luma Uni-1 / Uni-1 Max | — | 文生图、图生图、图像编辑 | 6 |
 
 ### 视频生成（225 个节点）
 
 | 模型 | RH 平台名称 | 能力 | 节点数 |
 |------|-----------|------|--------|
 | Sora 2（OpenAI） | 全能视频 S / S 官方 | 文/图生视频、Pro、角色上传、异步 | 12 |
-| Google Veo 3.1 / 3.1 Lite（Google） | 全能视频 V3.1 / V3.1 Lite（Fast/Pro/Lite 官方 + 低价通道） | Fast/Pro/Lite 文/图/首尾帧生视频、参考生视频、视频扩展 | 18 |
-| Grok Imagine（xAI） | 全能视频 G / G 官方 | 文/图/参考生视频、视频扩展、编辑视频 | 7 |
+| Google Veo 3.1 / 3.1 Lite（Google） | 全能视频 V3.1 / V3.1 Lite（Fast/Pro/Lite 官方 + 低价通道） | Fast/Pro/Lite 文/图/首尾帧生视频、参考生视频、视频扩展 | 19 |
+| Gemini Omni Flash（Google） | Gemini Omni Flash | 文/图生视频、视频编辑 | 3 |
+| Grok Imagine（xAI） | 全能视频 G / G 官方 | 文/图/参考生视频、视频扩展、编辑视频 | 8 |
 | Kling 可灵（快手） | — | v2.5/v2.5-turbo/v2.6/v3.0/v3-4k/v3.0-4k/o1/o3/o3-4k，文/图/首尾帧/参考/动作控制/编辑/元素/高级元素/口型同步/数字人口播 | 40 |
-| Vidu（生数科技） | — | q2/q3，文/图/首尾帧/参考生视频、Pro Fast、Turbo | 20 |
-| Wan 万相 2.5 / 2.6 / 2.7（阿里巴巴） | — | 文/图/参考生视频、Flash、视频编辑、视频续写 | 12 |
-| Happyhorse 1.0（阿里巴巴） | — | 文/图/参考生视频、视频编辑 | 4 |
+| Vidu（生数科技） | — | q2/q3，文/图/首尾帧/参考生视频、Pro Fast、Turbo、短剧成片 | 22 |
+| Wan 万相 2.5 / 2.6 / 2.7（阿里巴巴） | — | 文/图/参考生视频、Flash、Spicy、视频编辑、视频续写 | 13 |
+| HappyHorse 1.0 / 1.1（阿里巴巴） | — | 文/图/参考生视频、视频编辑 | 7 |
 | MiniMax Hailuo 海螺 | — | 02/2.3/2.3-fast，文/图/首尾帧生视频 | 13 |
-| Seedance v1.5 / 2.0 / 2.0 Global（字节跳动） | — | 文/图/多模态生视频、Fast、Global、参考生视频 | 17 |
+| Seedance v1.5 / 2.0 / 2.0 Global / 火山工具（字节跳动） | — | 文/图/多模态生视频、Fast、Global、参考生视频、短剧翻译、字幕擦除 | 27 |
 | Runway Gen-4 Turbo / Aleph | 全能视频 R | 图生视频、视频编辑 | 3 |
 | LTX-2 19B（Lightricks） | — | 文生视频 LoRA | 1 |
-| PixVerse v5.5 / v5.6 / v6 / C1 | — | 文/图/参考生视频、转场、特效、视频扩展 | 14 |
+| PixVerse v5.5 / v5.6 / v6 / C1 | — | 文/图/参考生视频、转场、特效、视频扩展 | 15 |
 | Higgsfield | — | 图生视频（Dop） | 1 |
 | SkyReels V3/V4（昆仑万维） | — | 文/图生视频、参考生视频、Omni 参考、视频风格化、视频扩展 | 10 |
 | TopazLabs | — | 视频增强放大 | 1 |
 | Midjourney（悠船） | — | 图生视频 | 1 |
-| RhartVideo 增强 / 参考 | — | 视频 Upscale、FPS 增强、Cinematic、Seedance 参考生视频 | 4 |
+| RhartVideo 增强 / 参考 / 角色 | — | 视频 Upscale、FPS 增强、Cinematic、DreamActor、Seedance 参考生视频 | 5 |
 | Marble 1.0 / 1.1 / 1.1 Plus | — | 文本/视频生成 3D 世界、媒体资产上传 | 7 |
-| Mureka | — | 文件上传、歌曲/伴奏生成、歌曲延长、声音克隆、歌词生成 | 13 |
+| Mureka v7.6 / v8 / v9 / O2 | — | 文件上传、歌曲/伴奏生成、歌曲延长、声音克隆、歌词生成、识曲、分轨 | 17 |
 
 ### 文本理解（17 个节点）
 
@@ -88,7 +91,7 @@
 | 模型系列 | 能力 | 节点数 |
 |---------|------|--------|
 | Minimax Speech | 02/2.6/2.8 HD & Turbo | 6 |
-| Minimax Music 2.5 | 文生音乐 | 1 |
+| Minimax Music 2.5 / 2.6 / Cover | 文生音乐、音乐翻唱、翻唱预处理 | 4 |
 | Minimax Voice Clone / Voice Design | 声音克隆、音色设计 | 2 |
 | Suno v4.5 / v5 / v5.5（RHArt） | Single / Custom 文生音乐 | 6 |
 | Suno Lyrics（RHArt） | 歌词生成 | 1 |
@@ -119,9 +122,12 @@
 
 - 节点名称：`RH LLM Chat Completions`
 - 模型列表动态读取 `https://llm.runninghub.ai/v1/models`，并在网络失败时使用内置 fallback 模型列表
-- 调用 OpenAI 兼容接口 `https://llm.runninghub.cn/v1/chat/completions`
+- 调用 OpenAI 兼容接口：CN 区域走 `https://llm.runninghub.cn/v1/chat/completions`，HK 区域走 `https://llm.runninghub.ai/v1/chat/completions`
 - 支持文本对话、图片理解和视频理解；同时连接图片和视频时优先处理图片
 - 图片输入会转换为 JPEG 后以内联 Base64 `image_url` 提交，不再先上传到 RunningHub OpenAPI
+- 视频输入会在需要时压缩到最长 15 秒、最大 10MB，再以 `video_url` 提交给 LLM 网关
+- `seed` 输入仅用于 ComfyUI 工作流兼容，不会转发到 LLM 网关，避免部分上游模型拒绝请求
+- `api_config` 输入位于最后一个插槽；不连接时会使用系统共享 API Key、环境变量或 `.env` 配置
 
 ## 🛠️ 安装
 

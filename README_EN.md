@@ -1,18 +1,18 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-359-blue)
+![Nodes](https://img.shields.io/badge/Nodes-360-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 **English** | [中文](README.md)
 
 **ComfyUI_RH_OpenAPI** is a **1:1 ComfyUI implementation** of the [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api), with additional Seedance2.0 asset management nodes.
 
-The project currently includes 355 standard model API nodes covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. Together with 3 Seedance2.0 asset helper nodes, 1 RunningHub LLM chat node, and 1 settings node, it provides 359 ComfyUI nodes in total. You can access RunningHub standard model and LLM capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the `real_person_mode` toggle — no local GPU required, zero cold-start latency.
+The project currently includes 355 standard model API nodes covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. Together with 3 Seedance2.0 asset helper nodes, 1 RunningHub LLM chat node, and 1 settings node, it provides 360 ComfyUI nodes in total. You can access RunningHub standard model and LLM capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the `real_person_mode` toggle — no local GPU required, zero cold-start latency.
 
 ## 📌 Features
 
-- **Node Count** — 359 ComfyUI nodes in total: 355 standard model nodes, 3 Seedance2.0 asset nodes, 1 RunningHub LLM chat node, and 1 settings node
+- **Node Count** — 360 ComfyUI nodes in total: 355 standard model nodes, 3 Seedance2.0 asset nodes, 1 RunningHub LLM chat node, and 1 settings node
 - **Plug & Play** — No model downloads, no GPU needed — just an API Key
 - **Dynamic Registration** — Nodes are auto-generated from a JSON registry; adding new models requires only a registry update
 - **Media Support** — Automatic upload/download/conversion for images, videos, and audio, seamlessly integrated with ComfyUI native types
@@ -38,39 +38,42 @@ The project currently includes 355 standard model API nodes covering image gener
 | Grok 3 / Grok 4 Image (xAI) | 全能图片 X-3 / X-4 | Text-to-Image, Image-to-Image | 4 |
 | Grok Image Low-Price Channel (xAI) | 全能图片 X | Text-to-Image, Image-to-Image | 2 |
 | Grok Image Official (xAI) | 全能图片 X 官方 | Text-to-Image, Image Editing | 2 |
+| Grok Imagine Image Quality (xAI) | RHArt Imagine Image Quality | Text-to-Image, Image Editing, high-quality multi-image output | 2 |
 | Qwen Image 2.0 / 2.0 Pro (Alibaba) | 千问 | Text-to-Image, Image Editing | 4 |
 | Wan 2.5 / 2.7 (Alibaba) | — | Text-to-Image, Image Edit | 6 |
 | Higgsfield | — | Image-to-Image (Soul) | 1 |
 | HYPIR Image Enhancement | — | HYPIR-ULTRA, HYPIR-BALANCE | 2 |
 | TopazLabs | — | Image Upscale: Standard V2 / Low Res V2 / CGI / High Fidelity V2 / Text Refine | 5 |
-| Seedream v4 / v4.5 / v5 Lite (ByteDance) | — | Text-to-Image, Image-to-Image | 6 |
+| Seedream v4 / v4.5 / v5 Lite / Jimeng 4.6 (ByteDance) | — | Text-to-Image, Image-to-Image | 8 |
 | FLUX Dev (Black Forest Labs) | — | Text-to-Image, Text-to-Image LoRA | 2 |
 | Midjourney | 悠船 | Text-to-Image v6/v6.1/niji6/niji7/v7/v8.1 | 6 |
 | Marble 1.0 / 1.1 / 1.1 Plus | — | Image/Multi-Image-to-3D World | 6 |
+| Luma Uni-1 / Uni-1 Max | — | Text-to-Image, Image-to-Image, Image Editing | 6 |
 
 ### Video Generation (225 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
 | Sora 2 (OpenAI) | 全能视频 S / S Official | Text/Image-to-Video, Pro, Character Upload, Async | 12 |
-| Google Veo 3.1 / 3.1 Lite | 全能视频 V3.1 / V3.1 Lite (Fast/Pro/Lite Official + Low-Price) | Fast/Pro/Lite Text/Image/Start-End-to-Video, Reference, Video Extend | 18 |
-| Grok Imagine (xAI) | 全能视频 G / G Official | Text/Image/Reference-to-Video, Video Extend, Edit Video | 7 |
+| Google Veo 3.1 / 3.1 Lite | 全能视频 V3.1 / V3.1 Lite (Fast/Pro/Lite Official + Low-Price) | Fast/Pro/Lite Text/Image/Start-End-to-Video, Reference, Video Extend | 19 |
+| Gemini Omni Flash (Google) | Gemini Omni Flash | Text/Image-to-Video, Video Editing | 3 |
+| Grok Imagine (xAI) | 全能视频 G / G Official | Text/Image/Reference-to-Video, Video Extend, Edit Video | 8 |
 | Kling (Kuaishou) | — | v2.5/v2.5-turbo/v2.6/v3.0/v3-4k/v3.0-4k/o1/o3/o3-4k, Text/Image/Start-End/Reference/Motion Control/Edit/Elements/Advanced Elements/Lip Sync/AI Avatar | 40 |
-| Vidu (Shengshu) | — | q2/q3, Text/Image/Start-End/Reference-to-Video, Pro Fast, Turbo | 20 |
-| Wan 2.5 / 2.6 / 2.7 (Alibaba) | — | Text/Image/Reference-to-Video, Flash, Video Editing, Video Continuation | 12 |
-| Happyhorse 1.0 (Alibaba) | — | Text/Image/Reference-to-Video, Video Editing | 4 |
+| Vidu (Shengshu) | — | q2/q3, Text/Image/Start-End/Reference-to-Video, Pro Fast, Turbo, short-play video | 22 |
+| Wan 2.5 / 2.6 / 2.7 (Alibaba) | — | Text/Image/Reference-to-Video, Flash, Spicy, Video Editing, Video Continuation | 13 |
+| HappyHorse 1.0 / 1.1 (Alibaba) | — | Text/Image/Reference-to-Video, Video Editing | 7 |
 | MiniMax Hailuo | — | 02/2.3/2.3-fast, Text/Image/Start-End-to-Video | 13 |
-| Seedance v1.5 / 2.0 / 2.0 Global (ByteDance) | — | Text/Image/Multimodal-to-Video, Fast, Global, Reference-to-Video | 17 |
+| Seedance v1.5 / 2.0 / 2.0 Global / Volc tools (ByteDance) | — | Text/Image/Multimodal-to-Video, Fast, Global, Reference-to-Video, drama translation, subtitle removal | 27 |
 | Runway Gen-4 Turbo / Aleph | 全能视频 R | Image-to-Video, Video Editing | 3 |
 | LTX-2 19B (Lightricks) | — | Text-to-Video LoRA | 1 |
-| PixVerse v5.5 / v5.6 / v6 / C1 | — | Text/Image/Reference-to-Video, Transition, Effects, Extend | 14 |
+| PixVerse v5.5 / v5.6 / v6 / C1 | — | Text/Image/Reference-to-Video, Transition, Effects, Extend | 15 |
 | Higgsfield | — | Image-to-Video (Dop) | 1 |
 | SkyReels V3/V4 (Kunlun) | — | Text/Image-to-Video, Reference, Omni Reference, Restyling, Video Extension | 10 |
 | TopazLabs | — | Video Enhancement & Upscaling | 1 |
 | Midjourney (Youchuan) | — | Image-to-Video | 1 |
-| RhartVideo Enhancement / Reference | — | Video Upscale, FPS Increaser, Cinematic, Seedance Reference-to-Video | 4 |
+| RhartVideo Enhancement / Reference / Character | — | Video Upscale, FPS Increaser, Cinematic, DreamActor, Seedance Reference-to-Video | 5 |
 | Marble 1.0 / 1.1 / 1.1 Plus | — | Text/Video-to-3D World, Media Asset Upload | 7 |
-| Mureka | — | File Upload, Song/Instrumental Generation, Song Extension, Vocal Clone, Lyrics Generation | 13 |
+| Mureka v7.6 / v8 / v9 / O2 | — | File Upload, Song/Instrumental Generation, Song Extension, Vocal Clone, Lyrics Generation, song recognition, stem separation | 17 |
 
 ### Text Understanding (17 Nodes)
 
@@ -87,7 +90,7 @@ The project currently includes 355 standard model API nodes covering image gener
 | Model Series | Capabilities | Nodes |
 |-------------|-------------|-------|
 | Minimax Speech | 02/2.6/2.8 HD & Turbo | 6 |
-| Minimax Music 2.5 | Text-to-Music | 1 |
+| Minimax Music 2.5 / 2.6 / Cover | Text-to-Music, music cover, cover preprocessing | 4 |
 | Minimax Voice Clone / Voice Design | Voice Cloning, Voice Design | 2 |
 | Suno v4.5 / v5 / v5.5 (RHArt) | Single / Custom text-to-music | 6 |
 | Suno Lyrics (RHArt) | Lyric generation | 1 |
@@ -118,7 +121,7 @@ The project currently includes 355 standard model API nodes covering image gener
 
 - Node name: `RH LLM Chat Completions`
 - Dynamically loads model IDs from `https://llm.runninghub.ai/v1/models`, with a built-in fallback list when the network is unavailable
-- Calls the OpenAI-compatible endpoint `https://llm.runninghub.cn/v1/chat/completions`
+- Calls the OpenAI-compatible endpoint: CN uses `https://llm.runninghub.cn/v1/chat/completions`, HK uses `https://llm.runninghub.ai/v1/chat/completions`
 - Supports text chat, image understanding, and video understanding; when both images and video are connected, images take priority
 - Image inputs are converted to JPEG and passed inline as Base64 `image_url` payloads, without uploading to RunningHub OpenAPI first
 - Video inputs are compressed to at most 15 seconds and 10MB when needed, then passed to the LLM gateway as `video_url`

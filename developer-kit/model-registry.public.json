@@ -28,9 +28,9 @@
     "RunningHub/RHArt Audio": 7,
     "RunningHub/RHArt Image": 34,
     "RunningHub/RHArt Text": 17,
-    "RunningHub/RHArt Video": 48,
+    "RunningHub/RHArt Video": 45,
     "RunningHub/RHArt Video G": 6,
-    "RunningHub/Seedance": 24,
+    "RunningHub/Seedance": 27,
     "RunningHub/Seedream": 8,
     "RunningHub/SkyReels": 10,
     "RunningHub/TopazLabs": 6,
@@ -30725,7 +30725,7 @@
           "defaultValue": -1
         }
       ],
-      "category": "RunningHub/RHArt Video",
+      "category": "RunningHub/Seedance",
       "class_name": "RhartVideoSparkvideo20MiniImageToVideo"
     },
     {
@@ -31043,7 +31043,7 @@
           "defaultValue": -1
         }
       ],
-      "category": "RunningHub/RHArt Video",
+      "category": "RunningHub/Seedance",
       "class_name": "RhartVideoSparkvideo20MiniMultimodalVideo"
     },
     {
@@ -31253,7 +31253,7 @@
           "defaultValue": -1
         }
       ],
-      "category": "RunningHub/RHArt Video",
+      "category": "RunningHub/Seedance",
       "class_name": "RhartVideoSparkvideo20MiniTextToVideo"
     },
     {
