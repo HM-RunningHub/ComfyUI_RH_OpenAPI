@@ -236,7 +236,6 @@ class BaseNode(ABC):
         # Stage 2: Build payload and submit task
         try:
             payload = self.build_payload(**kwargs)
-            payload["appCode"] = "comfyui_rh_openapi"
             task_id = submit(
                 self.ENDPOINT,
                 payload,
