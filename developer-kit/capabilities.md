@@ -6,12 +6,12 @@ It gives developers and AI coding agents a fast index of available model capabil
 
 ## Summary
 
-- Total models: 355
+- Total models: 359
 - `3d` outputs: 16
 - `audio` outputs: 19
 - `image` outputs: 78
 - `string` outputs: 44
-- `video` outputs: 198
+- `video` outputs: 202
 
 ## How To Use This File With AI
 
@@ -46,7 +46,7 @@ The AI must not infer enum values or required fields from this summary.
 
 | Endpoint | Name | Inputs | Pricing |
 | --- | --- | --- | --- |
-| `minimax/music-2.6` | minimax/music-2.6 | prompt:STRING:required, lyrics:STRING:required, sampleRate:LIST:optional, bitrate:LIST:optional, format:LIST:optional, lyricsOptimizer:BOOLEAN:optional, isInstrumental:BOOLEAN:optional | 0.8 CNY/次 |
+| `minimax/music-2.6` | minimax/music-2.6 | prompt:STRING:optional, lyrics:STRING:optional, sampleRate:LIST:optional, bitrate:LIST:optional, format:LIST:optional, lyricsOptimizer:BOOLEAN:optional, isInstrumental:BOOLEAN:optional | 0.8 CNY/次 |
 | `minimax/music-cover` | minimax/music-cover | prompt:STRING:required, audioUrl:AUDIO:required, lyrics:STRING:optional, coverFeatureId:STRING:optional, sampleRate:LIST:optional, format:LIST:optional, bitrate:LIST:optional | 0.8 CNY/次 |
 | `minimax/music-cover-preprocess` | minimax/music-cover-preprocess | audioUrl:AUDIO:required | 0.8 CNY/次 |
 | `minimax/voice-design` | minimax/voice-design | prompt:STRING:required, previewText:STRING:required, voiceId:STRING:optional, aigcWatermark:BOOLEAN:optional | 13.65 CNY/次 |
@@ -147,7 +147,7 @@ The AI must not infer enum values or required fields from this summary.
 | `youchuan/text-to-image-v6` | midjourney-text-to-image-v6 | prompt:STRING:required, chaos:INT:optional, quality:LIST:optional, stylize:INT:optional, weird:INT:optional, raw:BOOLEAN:optional, imageUrl:IMAGE:optional, iw:INT:optional, cref:IMAGE:optional, cw:INT:optional, sref:IMAGE:optional, sw:INT:optional, sv:INT:optional, stop:INT:optional, tile:BOOLEAN:optional, aspectRatio:LIST:optional | 0.54 CNY/次 |
 | `youchuan/text-to-image-v61` | midjourney-text-to-image-v61 | prompt:STRING:required, negativePrompt:STRING:optional, chaos:INT:optional, quality:LIST:optional, stylize:INT:optional, weird:INT:optional, raw:BOOLEAN:optional, imageUrl:IMAGE:optional, iw:INT:optional, cref:IMAGE:optional, cw:INT:optional, sref:IMAGE:optional, sw:INT:optional, sv:INT:optional, stop:INT:optional, tile:BOOLEAN:optional, aspectRatio:LIST:optional | 0.54 CNY/次 |
 | `youchuan/text-to-image-v7` | midjourney-text-to-image-v7 | prompt:STRING:required, negativePrompt:STRING:optional, chaos:INT:optional, quality:LIST:optional, stylize:INT:optional, weird:INT:optional, raw:BOOLEAN:optional, imageUrl:IMAGE:optional, iw:INT:optional, sref:IMAGE:optional, sw:INT:optional, sv:INT:optional, oref:IMAGE:optional, ow:INT:optional, tile:BOOLEAN:optional, aspectRatio:LIST:optional | 0.54 CNY/次 |
-| `youchuan/text-to-image-v81` | midjourney-text-to-image-v8.1 | prompt:STRING:required, chaos:INT:optional, quality:LIST:optional, stylize:INT:optional, raw:BOOLEAN:optional, imageUrl:IMAGE:optional, iw:INT:optional, sref:IMAGE:optional, sw:INT:optional, sv:INT:optional, aspectRatio:LIST:optional, hd:BOOLEAN:optional | 0.54-0.81 CNY/次 by hd |
+| `youchuan/text-to-image-v81` | midjourney-text-to-image-v8.1 | prompt:STRING:required, chaos:INT:optional, quality:LIST:optional, stylize:INT:optional, raw:BOOLEAN:optional, imageUrl:IMAGE:optional, iw:INT:optional, sref:IMAGE:optional, sw:INT:optional, sv:INT:optional, aspectRatio:LIST:optional, hd:BOOLEAN:required | 0.54-0.81 CNY/次 by hd |
 
 ## String Models
 
@@ -196,7 +196,7 @@ The AI must not infer enum values or required fields from this summary.
 | `rhart-text-g-3-pro-preview/video-to-text` | rhart-text-g-3-pro-preview/video-to-text | prompt:STRING:required, videoUrl:VIDEO:required | 0.05 CNY/次 |
 | `rhart-text-qwen-27b/chat` | rhart-text-qwen-27b/chat | prompt:STRING:required, imageUrls:IMAGE:optional, videoUrl:VIDEO:optional | 0.1 CNY/次 |
 | `rhart-video-s/sora-upload-character` | sora-upload-character-channel-low-price | videoUrl:VIDEO:required | 0.05 CNY/次 |
-| `vidu/short-play-q3-drama` | vidu/short-play-q3-drama | scriptName:STRING:required, scriptContent:STRING:required, uploadImageUrl:IMAGE:optional, duration:LIST:optional, resolution:LIST:required, aspectRatio:LIST:optional, style:STRING:optional, placement:LIST:optional |  |
+| `vidu/short-play-q3-drama` | vidu/short-play-q3-drama | scriptName:STRING:required, scriptContent:STRING:required, uploadImageUrl:IMAGE:optional, duration:LIST:required, resolution:LIST:required, aspectRatio:LIST:optional, style:STRING:optional, placement:LIST:optional |  |
 
 ## Video Models
 
@@ -250,6 +250,10 @@ The AI must not infer enum values or required fields from this summary.
 | `kling-v2.6-std/motion-control` | kling-v2.6-std-motion-control | imageUrl:IMAGE:required, videoUrl:VIDEO:required, characterOrientation:LIST:required, prompt:STRING:optional, keepOriginalSound:LIST:optional | 0.35 CNY/秒 |
 | `kling-v3-4k/image-to-video` | kling-v3.0-4k-image-to-video | imageUrl:IMAGE:required, prompt:STRING:optional, negativePrompt:STRING:optional, endImageUrl:IMAGE:optional, duration:INT:required, cfgScale:FLOAT:optional, sound:BOOLEAN:optional, shotType:LIST:optional, multiShot:BOOLEAN:optional | 2.7 CNY/秒 |
 | `kling-v3-4k/text-to-video` | kling-v3-4k-text-to-video | prompt:STRING:required, negativePrompt:STRING:optional, duration:LIST:required, aspectRatio:LIST:optional, cfgScale:FLOAT:optional, sound:BOOLEAN:optional, shotType:LIST:optional, multiShot:BOOLEAN:optional | 2.7 CNY/秒 |
+| `kling-v3-turbo-pro/image-to-video` | kling-v3-turbo-pro-image-to-video | firstImageUrl:IMAGE:required, prompt:STRING:optional, duration:LIST:required |  |
+| `kling-v3-turbo-pro/text-to-video` | kling-v3-turbo-pro-text-to-video | prompt:STRING:required, duration:LIST:required, aspectRatio:LIST:optional |  |
+| `kling-v3-turbo-std/image-to-video` | kling-v3-turbo-std-image-to-video | firstImageUrl:IMAGE:required, prompt:STRING:optional, duration:LIST:required |  |
+| `kling-v3-turbo-std/text-to-video` | kling-v3-turbo-std-text-to-video | prompt:STRING:required, duration:LIST:required, aspectRatio:LIST:optional | 0.78 CNY/秒 |
 | `kling-v3.0-4k/motion-control` | kling-v3.0-4k-motion-control |  |  |
 | `kling-v3.0-pro/image-to-video` | kling-v3.0-pro-image-to-video | prompt:STRING:required, negativePrompt:STRING:optional, firstImageUrl:IMAGE:required, lastImageUrl:IMAGE:optional, duration:LIST:required, cfgScale:FLOAT:optional, sound:BOOLEAN:required, multiShot:BOOLEAN:optional, shotType:LIST:optional | 0.69-1.04 CNY/秒 by sound |
 | `kling-v3.0-pro/motion-control` | kling-v3.0-pro-motion-control | imageUrl:IMAGE:required, videoUrl:VIDEO:required, characterOrientation:LIST:required, prompt:STRING:optional, negativePrompt:STRING:optional, keepOriginalSound:BOOLEAN:optional | 1.08 CNY/秒 |
@@ -258,7 +262,7 @@ The AI must not infer enum values or required fields from this summary.
 | `kling-v3.0-std/motion-control` | kling-v3.0-std-motion-control | imageUrl:IMAGE:required, videoUrl:VIDEO:required, characterOrientation:LIST:required, prompt:STRING:optional, negativePrompt:STRING:optional, keepOriginalSound:BOOLEAN:optional | 0.81 CNY/秒 |
 | `kling-v3.0-std/text-to-video` | kling-v3.0-std-text-to-video | prompt:STRING:required, negativePrompt:STRING:optional, duration:LIST:required, aspectRatio:LIST:optional, cfgScale:FLOAT:optional, sound:BOOLEAN:required, multiShot:BOOLEAN:optional, shotType:LIST:optional | 0.52-0.78 CNY/秒 by sound |
 | `kling-video-o1-std/edit-video` | kling-video-o1-std/edit-video | mode:LIST:required, prompt:STRING:required, imageUrls:IMAGE:optional, videoUrl:VIDEO:required, keepOriginalSound:BOOLEAN:required | 6.3-8.4 CNY/次 by mode |
-| `kling-video-o1-std/refrence-to-video` | kling-video-o1-std/refrence-to-video | mode:LIST:required, prompt:STRING:required, aspectRatio:LIST:required, duration:LIST:required, imageUrls:IMAGE:optional, videoUrl:VIDEO:required, keepOriginalSound:BOOLEAN:required | 3.15-8.4 CNY/次 by mode,duration |
+| `kling-video-o1-std/refrence-to-video` | kling-video-o1-std/refrence-to-video | mode:LIST:required, prompt:STRING:required, aspectRatio:LIST:required, duration:LIST:required, imageUrls:IMAGE:optional, videoUrl:VIDEO:optional, keepOriginalSound:BOOLEAN:required | 3.15-8.4 CNY/次 by mode,duration |
 | `kling-video-o1/image-to-video` | kling-video-o1/image-to-video | prompt:STRING:optional, aspectRatio:LIST:required, duration:LIST:required, firstImageUrl:IMAGE:required, mode:LIST:required | 2.1-5.6 CNY/次 by mode,duration |
 | `kling-video-o1/start-to-end` | kling-video-o1/start-to-end | prompt:STRING:optional, aspectRatio:LIST:required, duration:LIST:required, firstImageUrl:IMAGE:required, lastImageUrl:IMAGE:required, mode:LIST:required | 2.1-5.6 CNY/次 by mode,duration |
 | `kling-video-o1/text-to-video` | kling-video-o1/text-to-video | prompt:STRING:optional, aspectRatio:LIST:required, duration:LIST:required, mode:LIST:required | 2.1-5.6 CNY/次 by mode,duration |
@@ -305,12 +309,12 @@ The AI must not infer enum values or required fields from this summary.
 | `pixverse-v6/transition` | pixverse-v6/transition | prompt:STRING:required, firstImageUrl:IMAGE:required, endImageUrl:IMAGE:required, resolution:LIST:required, duration:INT:required, generateAudioSwitch:BOOLEAN:required, generateMultiClipSwitch:BOOLEAN:required, aspectRatio:LIST:optional, style:LIST:optional, negativePrompt:STRING:optional, seed:INT:optional, thinkingType:BOOLEAN:optional | 0.16-0.73 CNY/秒 by resolution,generateAudioSwitch |
 | `rhart-video-g-official/edit-video` | xai/grok-imagine/edit-video-official-stable | prompt:STRING:required, videoUrl:VIDEO:required, resolution:LIST:required | 0.41 CNY/秒 |
 | `rhart-video-g-official/image-to-video` | xai/grok-imagine/image-to-video-official-stable | prompt:STRING:required, imageUrl:IMAGE:required, resolution:LIST:required, duration:LIST:required | 1.89-3.15 CNY/次 by duration |
-| `rhart-video-g-official/image-to-video-v1.5` | xai/grok-imagine-video-v1.5/image-to-video-official-stable | prompt:STRING:required, imageUrl:IMAGE:required, duration:INT:optional, resolution:LIST:optional | 0.56-0.95 CNY/秒 by resolution |
+| `rhart-video-g-official/image-to-video-v1.5` | xai/grok-imagine-video-v1.5/image-to-video-official-stable | prompt:STRING:required, imageUrl:IMAGE:required, duration:INT:required, resolution:LIST:required | 0.56-0.95 CNY/秒 by resolution |
 | `rhart-video-g-official/reference-to-video` | xai/grok-imagine-video/reference-to-video-official-stable | imageUrls:IMAGE:required, prompt:STRING:required, duration:LIST:required, resolution:LIST:required | 1.89-3.15 CNY/次 by duration |
 | `rhart-video-g-official/text-to-video` | xai/grok-imagine/text-to-video-official-stable | prompt:STRING:required, aspectRatio:LIST:required, resolution:LIST:required, duration:LIST:required | 1.89-3.15 CNY/次 by duration |
 | `rhart-video-g-official/video-extend` | xai/grok-imagine-video/video-extend-official-stable | videoUrl:VIDEO:required, prompt:STRING:required, duration:LIST:required | 1.89-3.15 CNY/次 by duration |
-| `rhart-video-g/image-to-video` | xai/grok-imagine/image-to-video-channel-low-price-v1.5 | prompt:STRING:required, aspectRatio:LIST:required, imageUrls:IMAGE:optional, resolution:LIST:required, duration:INT:optional | 0.04 CNY/秒 |
-| `rhart-video-g/text-to-video` | xai/grok-imagine/text-to-video-channel-low-price-v1.5 | prompt:STRING:required, aspectRatio:LIST:required, resolution:LIST:required, duration:INT:optional | 0.04 CNY/秒 |
+| `rhart-video-g/image-to-video` | xai/grok-imagine/image-to-video-channel-low-price-v1.5 | prompt:STRING:required, aspectRatio:LIST:required, imageUrls:IMAGE:optional, resolution:LIST:required, duration:INT:required | 0.04 CNY/秒 |
+| `rhart-video-g/text-to-video` | xai/grok-imagine/text-to-video-channel-low-price-v1.5 | prompt:STRING:required, aspectRatio:LIST:required, resolution:LIST:required, duration:INT:required | 0.04 CNY/秒 |
 | `rhart-video-r/gen4-aleph-official/video-to-video` | runwayml/gen4-aleph/video-to-video-official-stable | prompt:STRING:required, videoUrl:VIDEO:required, aspectRatio:LIST:optional, referenceImageUrl:IMAGE:optional | 5.25 CNY/次 |
 | `rhart-video-r/gen4-turbo-official/image-to-video` | runwayml/gen4-turbo/image-to-video-official-stable | prompt:STRING:required, imageUrl:IMAGE:required, duration:LIST:required, aspectRatio:LIST:optional | 3.2-6.4 CNY/次 by duration |
 | `rhart-video-r/gen4-turbo/image-to-video` | runwayml/gen4-turbo/image-to-video-channel-low-price | prompt:STRING:optional, imageUrl:IMAGE:required, duration:LIST:required, aspectRatio:LIST:required | 0.21 CNY/秒 |
@@ -383,7 +387,7 @@ The AI must not infer enum values or required fields from this summary.
 | `vidu/reference-to-video-q2` | Vidu-reference-to-video-q2 | prompt:STRING:required, imageUrls:IMAGE:required, aspectRatio:LIST:required, resolution:LIST:required, duration:LIST:required, movementAmplitude:LIST:required | 0.33-3.61 CNY/次 by resolution,duration |
 | `vidu/reference-to-video-q2-pro` | Vidu-reference-to-video-q2-pro | prompt:STRING:required, imageUrls:IMAGE:optional, videos:VIDEO:optional, aspectRatio:LIST:optional, resolution:LIST:optional, duration:LIST:optional, movementAmplitude:LIST:optional | 0.44-3.83 CNY/次 by resolution,duration |
 | `vidu/reference-to-video-q3` | Vidu-reference-to-video-q3 | prompt:STRING:required, imageUrls:IMAGE:required, duration:INT:required, resolution:LIST:required, aspectRatio:LIST:optional, audio:LIST:optional | 0.22-0.55 CNY/秒 by resolution |
-| `vidu/reference-to-video-q3-ad` | Vidu-reference-to-video-q3-ad | prompt:STRING:required, imageUrls:IMAGE:required, duration:INT:required, resolution:LIST:required, aspectRatio:LIST:optional, audio:LIST:optional | 0.54-0.65 CNY/秒 by resolution |
+| `vidu/reference-to-video-q3-ad` | Vidu-reference-to-video-q3-ad | prompt:STRING:required, imageUrls:IMAGE:required, duration:INT:required, resolution:LIST:required, aspectRatio:LIST:optional, audio:LIST:optional | 0.61-0.74 CNY/秒 by resolution |
 | `vidu/reference-to-video-q3-mix` | Vidu-reference-to-video-q3-mix | prompt:STRING:required, imageUrls:IMAGE:required, duration:INT:required, resolution:LIST:required, aspectRatio:LIST:optional, audio:LIST:optional | 0.55-0.66 CNY/秒 by resolution |
 | `vidu/start-end-to-video-q2-pro` | Vidu-start-end-to-video-q2-pro | prompt:STRING:required, firstImageUrl:IMAGE:required, lastImageUrl:IMAGE:required, duration:LIST:required, resolution:LIST:required, movementAmplitude:LIST:required, bgm:BOOLEAN:required | 0.18-3.5 CNY/次 by resolution,duration |
 | `vidu/start-end-to-video-q2-pro-fast` | Vidu-start-end-to-video-q2-pro-fast | prompt:STRING:required, firstImageUrl:IMAGE:required, lastImageUrl:IMAGE:required, duration:LIST:required, resolution:LIST:required, movementAmplitude:LIST:required, bgm:BOOLEAN:required | 0.18-0.98 CNY/次 by resolution,duration |

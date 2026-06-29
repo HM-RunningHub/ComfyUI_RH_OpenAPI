@@ -2,9 +2,9 @@
   "version": "public-2026-04-29",
   "source": "models_registry.json public-safe pricing summaries",
   "note": "Public-safe pricing summary for AI-assisted integration. Prices may change; check official RunningHub pricing before showing final costs to end users.",
-  "pricing_count": 347,
+  "pricing_count": 348,
   "counts_by_pricing_type": {
-    "fixed": 147,
+    "fixed": 148,
     "parameter_based": 199,
     "unparsed": 1
   },
@@ -2785,6 +2785,17 @@
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
       "price": 2.7
+    },
+    {
+      "endpoint": "kling-v3-turbo-std/text-to-video",
+      "name_cn": "可灵文生视频v3-turbo-std",
+      "name_en": "kling-v3-turbo-std-text-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.78
     },
     {
       "endpoint": "kling-v3.0-pro/image-to-video",
@@ -11059,13 +11070,13 @@
           "when": {
             "resolution": "1080p"
           },
-          "price": 0.65
+          "price": 0.74
         },
         {
           "when": {
             "resolution": "720p"
           },
-          "price": 0.54
+          "price": 0.61
         }
       ]
     },
