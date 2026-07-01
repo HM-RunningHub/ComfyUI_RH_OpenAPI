@@ -35190,7 +35190,7 @@
         "required": true,
         "label": "prompt",
         "description": "文本提示词，描述期望生成的视频内容。支持中英文，最长5000个字符。",
-        "defaultValue": "P1：城市街道近景特写。一位穿着棕色夹克和白色T恤的亚洲年轻男子（戴着背包）在繁华的步行街上走，皱眉看着手机屏幕，寻找方向。背景是模糊的行人和店铺招牌（如“咖啡馆”）。  P2：特写。一个人的手拿着手机。手机屏幕上清晰地显示着城市地图导航界面，路线和中文地名可见。  P3：城市街道近景。同一位亚洲男子站在现代高楼大厦之间，仰头看向蓝色路牌（如“金融中心”）和天空。  P4：地铁站入口近景。亚洲男子站在地铁入口（标有“4号线入口”）前，面对一个大型地铁线路图，用手指着地图上的一个点。周围有其他行人和闸机。  P5：城市小巷中景。男子在一条老旧、有涂鸦的城市后巷中走。周围是传统的中国小店铺（如“五金部”），地面潮湿。  P6：街头小吃摊中景。亚洲男子在一个路边摊位（标有“炸油条”）前，与一位老年摊主交谈。老摊主指着某个方向。  P7：夜晚城市街道近景。男子在灯火通明的夜晚街道上走，抬起左手看手表。背景是各种霓虹灯招牌（如“夜市”、“便利店”）。  P8：复古咖啡馆中景（夜晚）。男子站在一家名为“时光咖啡馆”的复古风格咖啡馆前，与另一名男子交谈。咖啡馆内部光线温暖。  P9：咖啡馆内部近景特写（夜晚）。同一位男子坐在咖啡馆内，桌上放着一杯拿铁。他面对着笔记本电脑，微笑地打字。窗外可见模糊的城市夜景。",
+        "defaultValue": "一个漂浮在天空中的小岛世界，巨大的风车缓慢转动，白色云海在脚下流动。一个小女孩骑着飞行自行车穿越云层，身边有许多发光的小生物陪伴。画面采用手绘动画质感，色彩柔和温暖。天空层次丰富，阳光透过云层形成丁达尔效应。镜头缓慢推进，小女孩露出开心的笑容。远处有城堡、森林和瀑布。整体氛围治愈、梦幻、童真，像宫崎骏动画电影中的一段旅行故事。动作流畅自然，背景细节丰富。",
         "maxLength": 5000
       },
       {
@@ -35535,6 +35535,7 @@
         "required": true,
         "label": "scriptName",
         "description": "剧集名称（不超过20字）",
+        "defaultValue": "苏晚的惬意午后",
         "maxLength": 20
       },
       {
@@ -35543,6 +35544,7 @@
         "required": true,
         "label": "scriptContent",
         "description": "剧本文案（最低20字，中文不超过2000字）",
+        "defaultValue": "人物：苏晚\\n【画面风格：治愈真人写实，暖黄色柔光，温馨的室内环境搭配老物件，氛围宁静祥和】\\n\\n分镜1-1：（2秒 中景 平拍固定）\\n@苏晚坐在窗边，带着柔和的微笑，轻轻擦拭着一只碎花陶瓷茶杯。\\n@苏晚：安静的午后，只有我和最爱的茶杯。\\n\\n分镜1-2：（2秒 特写 俯拍固定）\\n她将一只雕花手工银镯轻轻放在木桌上，银光在暖阳下闪烁。\\n@苏晚：这只小镯子，总能给我带来内心的宁静。\\n\\n分镜1-3：（2秒 中景 侧拍固定）\\n@苏晚戴上银镯，抬起手在阳光下欣赏，笑得清甜明媚。\\n@苏晚：真好看，就像被温暖拥抱了一样。\\n\\n分镜1-4：（2秒 中景 平拍固定）\\n她双手捧着温热的茶杯，望向窗外，神情宁静平和。\\n@苏晚：一个人的时候，时间仿佛都慢了下来。\\n\\n分镜1-5：（2秒 特写 平拍固定）\\n@苏晚转过头看向镜头，眼眸里闪烁着温柔的光。\\n@苏晚：愿大家都能拥有美好而宁静的一天！",
         "maxLength": 2000
       },
       {
@@ -39023,6 +39025,619 @@
             "value": "15",
             "description": "15",
             "descriptionEn": "15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "ViduReferenceToVideoQ3Drama",
+    "internal_name": "RH_ViduReferenceToVideoQ3Drama",
+    "display_name": "RH Vidu-参考生视频-q3-drama",
+    "name_cn": "Vidu-参考生视频-q3-drama",
+    "name_en": "Vidu-reference-to-video-q3-drama",
+    "endpoint": "vidu/reference-to-video-q3-drama",
+    "output_type": "video",
+    "category": "RunningHub/Vidu",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词，描述期望生成的视频内容。支持中英文，最长5000个字符。",
+        "defaultValue": "P1：城市街道近景特写。一位穿着棕色夹克和白色T恤的亚洲年轻男子（戴着背包）在繁华的步行街上走，皱眉看着手机屏幕，寻找方向。背景是模糊的行人和店铺招牌（如“咖啡馆”）。  P2：特写。一个人的手拿着手机。手机屏幕上清晰地显示着城市地图导航界面，路线和中文地名可见。  P3：城市街道近景。同一位亚洲男子站在现代高楼大厦之间，仰头看向蓝色路牌（如“金融中心”）和天空。  P4：地铁站入口近景。亚洲男子站在地铁入口（标有“4号线入口”）前，面对一个大型地铁线路图，用手指着地图上的一个点。周围有其他行人和闸机。  P5：城市小巷中景。男子在一条老旧、有涂鸦的城市后巷中走。周围是传统的中国小店铺（如“五金部”），地面潮湿。  P6：街头小吃摊中景。亚洲男子在一个路边摊位（标有“炸油条”）前，与一位老年摊主交谈。老摊主指着某个方向。  P7：夜晚城市街道近景。男子在灯火通明的夜晚街道上走，抬起左手看手表。背景是各种霓虹灯招牌（如“夜市”、“便利店”）。  P8：复古咖啡馆中景（夜晚）。男子站在一家名为“时光咖啡馆”的复古风格咖啡馆前，与另一名男子交谈。咖啡馆内部光线温暖。  P9：咖啡馆内部近景特写（夜晚）。同一位男子坐在咖啡馆内，桌上放着一杯拿铁。他面对着笔记本电脑，微笑地打字。窗外可见模糊的城市夜景。",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "图像参考（1-7张），模型将以图片中的主体为参考生成主体一致的视频。支持png/jpeg/jpg/webp格式，像素不小于128x128，比例不超过4:1，单张不超过50MB。",
+        "multipleInputs": true,
+        "maxInputNum": 7,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "duration",
+        "type": "INT",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒），默认8秒，可选2-15秒。",
+        "defaultValue": 8,
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "分辨率，1080p。",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "视频比例，默认16:9，支持任意比例。auto表示根据输入图或视频自动推荐。",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "auto",
+            "description": "auto（根据输入图自动推荐）",
+            "descriptionEn": "auto (auto-detect from input)"
+          }
+        ]
+      },
+      {
+        "fieldKey": "audio",
+        "type": "LIST",
+        "required": false,
+        "label": "audio",
+        "description": "是否使用音画同步（音视频直出）。true输出含台词和音效的视频，false输出静音视频。",
+        "defaultValue": "true",
+        "options": [
+          {
+            "value": "true",
+            "description": "true（音画同步，输出有声视频）",
+            "descriptionEn": "true (audio-video sync, output with sound)"
+          },
+          {
+            "value": "false",
+            "description": "false（静音视频）",
+            "descriptionEn": "false (silent video)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "ViduShortPlayQ3Ad",
+    "internal_name": "RH_ViduShortPlayQ3Ad",
+    "display_name": "RH Vidu Q3 Ad 短剧成片",
+    "name_cn": "Vidu Q3 Ad 短剧成片",
+    "name_en": "vidu/short-play-q3-ad",
+    "endpoint": "vidu/short-play-q3-ad",
+    "output_type": "string",
+    "category": "RunningHub/Vidu",
+    "params": [
+      {
+        "fieldKey": "scriptName",
+        "type": "STRING",
+        "required": true,
+        "label": "scriptName",
+        "description": "剧集名称（不超过20字）",
+        "defaultValue": "我的短剧",
+        "maxLength": 20
+      },
+      {
+        "fieldKey": "scriptContent",
+        "type": "STRING",
+        "required": true,
+        "label": "scriptContent",
+        "description": "剧本文案（最低20字，中文不超过2000字）",
+        "defaultValue": "第一场 室内-客厅-日  苏文博坐在沙发上看着手机，面带微笑。  苏文博：今天是个好日子。",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "清晰度",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出比例，默认竖屏9:16",
+        "defaultValue": "9:16",
+        "options": [
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageNG31FlashLiteTextToImage",
+    "internal_name": "RH_RhartImageNG31FlashLiteTextToImage",
+    "display_name": "RH 全能图片V2-lite-文生图-低价渠道版",
+    "name_cn": "全能图片V2-lite-文生图-低价渠道版",
+    "name_en": "nano-banana2-gemini31flash-lite/text-to-image-channel-low-price",
+    "endpoint": "rhart-image-n-g31-flash-lite/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "一级方程式赛车正在摩纳哥赛道高速行驶。镜头采用官方赛事转播风格，无人机俯拍、车载镜头、长焦跟拍相结合。赛车高速过弯，轮胎与地面摩擦产生火花。观众席人群欢呼，现场气氛紧张刺激。镜头快速切换，具有真实电视直播效果。阳光照射在赛车车身上产生金属反射。赛道周围是海岸线和豪华游艇。引擎轰鸣声仿佛穿透画面，空气因高速运动产生轻微扭曲。整体节奏极快，强调速度、竞技和极限操控。真实空气动力学细节，轮胎磨损痕迹清晰可见。电影级运动摄影，高动态范围画面，超高清4K，真实F1赛事直播质感。"
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "9:16",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "1:4",
+            "description": "1:4",
+            "descriptionEn": "1:4"
+          },
+          {
+            "value": "4:1",
+            "description": "4:1",
+            "descriptionEn": "4:1"
+          },
+          {
+            "value": "1:8",
+            "description": "1:8",
+            "descriptionEn": "1:8"
+          },
+          {
+            "value": "8:1",
+            "description": "8:1",
+            "descriptionEn": "8:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageNG31FlashLiteImageToImage",
+    "internal_name": "RH_RhartImageNG31FlashLiteImageToImage",
+    "display_name": "RH 全能图片V2-lite-图生图-低价渠道版",
+    "name_cn": "全能图片V2-lite-图生图-低价渠道版",
+    "name_en": "nano-banana2-gemini31flash-lite/image-to-image-channel-low-price",
+    "endpoint": "rhart-image-n-g31-flash-lite/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "multipleInputs": true,
+        "maxInputNum": 10,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "请基于我上传的原始图片进行图生图创作，保留人物的真实身份特征、五官比例、脸型基础、发型轮廓和整体气质，不要改变人物身份。将画面转化为电影感雨夜都市街头风格：人物穿着黑色长风衣和白色衬衫，站在东京雨后的街道中央，湿润地面反射霓虹灯光，远处有模糊车辆和行人经过。保持人物面部清晰自然，皮肤质感真实，表情平静、有故事感，眼神看向远方。背景采用浅景深虚化，增强空间层次。整体色调偏青蓝、紫色和霓虹光，光线柔和但有电影级对比度。画面需要真实摄影质感，35mm镜头，4K超高清，高级电影调色，细节丰富，氛围安静、克制、都市感强。不要动漫化，不要过度美颜，不要改变脸部结构，不要生成多余人物，不要让手部和五官变形。",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "9:16",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "1:4",
+            "description": "1:4",
+            "descriptionEn": "1:4"
+          },
+          {
+            "value": "4:1",
+            "description": "4:1",
+            "descriptionEn": "4:1"
+          },
+          {
+            "value": "1:8",
+            "description": "1:8",
+            "descriptionEn": "1:8"
+          },
+          {
+            "value": "8:1",
+            "description": "8:1",
+            "descriptionEn": "8:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageNG31FlashLiteOfficialTextToImage",
+    "internal_name": "RH_RhartImageNG31FlashLiteOfficialTextToImage",
+    "display_name": "RH 全能图片V2-lite-文生图-官方稳定版",
+    "name_cn": "全能图片V2-lite-文生图-官方稳定版",
+    "name_en": "nano-banana2-gemini31flash-lite/text-to-image-official-stable",
+    "endpoint": "rhart-image-n-g31-flash-lite-official/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "Text prompt describing the image to generate.",
+        "defaultValue": "黄昏时分的山峦风景，柔和金色光线，画面宁静优美。",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "Output aspect ratio (maps to API size).",
+        "defaultValue": "1:1",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "4:1",
+            "description": "4:1",
+            "descriptionEn": "4:1"
+          },
+          {
+            "value": "1:4",
+            "description": "1:4",
+            "descriptionEn": "1:4"
+          },
+          {
+            "value": "8:1",
+            "description": "8:1",
+            "descriptionEn": "8:1"
+          },
+          {
+            "value": "1:8",
+            "description": "1:8",
+            "descriptionEn": "1:8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageNG31FlashLiteOfficialImageToImage",
+    "internal_name": "RH_RhartImageNG31FlashLiteOfficialImageToImage",
+    "display_name": "RH 全能图片V2-lite-图生图-官方稳定版",
+    "name_cn": "全能图片V2-lite-图生图-官方稳定版",
+    "name_en": "nano-banana2-gemini31flash-lite/image-to-image-official-stable",
+    "endpoint": "rhart-image-n-g31-flash-lite-official/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "Input image URLs for editing.",
+        "multipleInputs": true,
+        "maxInputNum": 4,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "Edit instruction describing how to transform the input image.",
+        "defaultValue": "将背景替换为阳光海滩，保持主体不变。",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "Output aspect ratio (maps to API size). Default auto.",
+        "defaultValue": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "4:1",
+            "description": "4:1",
+            "descriptionEn": "4:1"
+          },
+          {
+            "value": "1:4",
+            "description": "1:4",
+            "descriptionEn": "1:4"
+          },
+          {
+            "value": "8:1",
+            "description": "8:1",
+            "descriptionEn": "8:1"
+          },
+          {
+            "value": "1:8",
+            "description": "1:8",
+            "descriptionEn": "1:8"
           }
         ]
       }

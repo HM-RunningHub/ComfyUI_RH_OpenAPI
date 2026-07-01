@@ -6,12 +6,12 @@ It gives developers and AI coding agents a fast index of available model capabil
 
 ## Summary
 
-- Total models: 359
+- Total models: 365
 - `3d` outputs: 16
 - `audio` outputs: 19
-- `image` outputs: 78
-- `string` outputs: 44
-- `video` outputs: 202
+- `image` outputs: 82
+- `string` outputs: 45
+- `video` outputs: 203
 
 ## How To Use This File With AI
 
@@ -111,6 +111,10 @@ The AI must not infer enum values or required fields from this summary.
 | `rhart-image-g-4/text-to-image` | grok-4-image-text-to-image | prompt:STRING:required | 1.0 CNY/次 |
 | `rhart-image-g/image-to-image` | grok-image/image-to-image/channel-low-price | model:LIST:required, prompt:STRING:required, imageUrl:IMAGE:optional | 0.08 CNY/次 |
 | `rhart-image-g/text-to-image` | grok-image/text-to-image/channel-low-price | model:LIST:required, prompt:STRING:required, aspectRatio:LIST:optional | 0.08 CNY/次 |
+| `rhart-image-n-g31-flash-lite-official/image-to-image` | nano-banana2-gemini31flash-lite/image-to-image-official-stable | imageUrls:IMAGE:required, prompt:STRING:required, aspectRatio:LIST:optional | 0.22 CNY/次 |
+| `rhart-image-n-g31-flash-lite-official/text-to-image` | nano-banana2-gemini31flash-lite/text-to-image-official-stable | prompt:STRING:required, aspectRatio:LIST:optional | 0.22 CNY/次 |
+| `rhart-image-n-g31-flash-lite/image-to-image` | nano-banana2-gemini31flash-lite/image-to-image-channel-low-price | imageUrls:IMAGE:required, prompt:STRING:required, aspectRatio:LIST:optional | 0.07 CNY/次 |
+| `rhart-image-n-g31-flash-lite/text-to-image` | nano-banana2-gemini31flash-lite/text-to-image-channel-low-price | prompt:STRING:required, aspectRatio:LIST:optional | 0.07 CNY/次 |
 | `rhart-image-n-g31-flash-official/image-to-image` | nano-banana2-gemini31flash/image-to-image-official-stable | imageUrls:IMAGE:required, prompt:STRING:required, aspectRatio:LIST:optional, resolution:LIST:required | 0.49-0.99 CNY/次 by resolution |
 | `rhart-image-n-g31-flash-official/text-to-image` | nano-banana2-gemini31flash/text-to-image-official-stable | prompt:STRING:required, aspectRatio:LIST:optional, resolution:LIST:required | 0.49-0.99 CNY/次 by resolution |
 | `rhart-image-n-g31-flash/image-to-image` | nano-banana2-gemini31flash/image-to-image-channel-low-price | imageUrls:IMAGE:required, prompt:STRING:required, aspectRatio:LIST:optional, resolution:LIST:required | 0.19-0.3 CNY/次 by resolution |
@@ -196,6 +200,7 @@ The AI must not infer enum values or required fields from this summary.
 | `rhart-text-g-3-pro-preview/video-to-text` | rhart-text-g-3-pro-preview/video-to-text | prompt:STRING:required, videoUrl:VIDEO:required | 0.05 CNY/次 |
 | `rhart-text-qwen-27b/chat` | rhart-text-qwen-27b/chat | prompt:STRING:required, imageUrls:IMAGE:optional, videoUrl:VIDEO:optional | 0.1 CNY/次 |
 | `rhart-video-s/sora-upload-character` | sora-upload-character-channel-low-price | videoUrl:VIDEO:required | 0.05 CNY/次 |
+| `vidu/short-play-q3-ad` | vidu/short-play-q3-ad | scriptName:STRING:required, scriptContent:STRING:required, resolution:LIST:required, aspectRatio:LIST:optional |  |
 | `vidu/short-play-q3-drama` | vidu/short-play-q3-drama | scriptName:STRING:required, scriptContent:STRING:required, uploadImageUrl:IMAGE:optional, duration:LIST:required, resolution:LIST:required, aspectRatio:LIST:optional, style:STRING:optional, placement:LIST:optional |  |
 
 ## Video Models
@@ -388,6 +393,7 @@ The AI must not infer enum values or required fields from this summary.
 | `vidu/reference-to-video-q2-pro` | Vidu-reference-to-video-q2-pro | prompt:STRING:required, imageUrls:IMAGE:optional, videos:VIDEO:optional, aspectRatio:LIST:optional, resolution:LIST:optional, duration:LIST:optional, movementAmplitude:LIST:optional | 0.44-3.83 CNY/次 by resolution,duration |
 | `vidu/reference-to-video-q3` | Vidu-reference-to-video-q3 | prompt:STRING:required, imageUrls:IMAGE:required, duration:INT:required, resolution:LIST:required, aspectRatio:LIST:optional, audio:LIST:optional | 0.22-0.55 CNY/秒 by resolution |
 | `vidu/reference-to-video-q3-ad` | Vidu-reference-to-video-q3-ad | prompt:STRING:required, imageUrls:IMAGE:required, duration:INT:required, resolution:LIST:required, aspectRatio:LIST:optional, audio:LIST:optional | 0.61-0.74 CNY/秒 by resolution |
+| `vidu/reference-to-video-q3-drama` | Vidu-reference-to-video-q3-drama | prompt:STRING:required, imageUrls:IMAGE:required, duration:INT:required, resolution:LIST:required, aspectRatio:LIST:optional, audio:LIST:optional | 0.69 CNY/秒 by resolution |
 | `vidu/reference-to-video-q3-mix` | Vidu-reference-to-video-q3-mix | prompt:STRING:required, imageUrls:IMAGE:required, duration:INT:required, resolution:LIST:required, aspectRatio:LIST:optional, audio:LIST:optional | 0.55-0.66 CNY/秒 by resolution |
 | `vidu/start-end-to-video-q2-pro` | Vidu-start-end-to-video-q2-pro | prompt:STRING:required, firstImageUrl:IMAGE:required, lastImageUrl:IMAGE:required, duration:LIST:required, resolution:LIST:required, movementAmplitude:LIST:required, bgm:BOOLEAN:required | 0.18-3.5 CNY/次 by resolution,duration |
 | `vidu/start-end-to-video-q2-pro-fast` | Vidu-start-end-to-video-q2-pro-fast | prompt:STRING:required, firstImageUrl:IMAGE:required, lastImageUrl:IMAGE:required, duration:LIST:required, resolution:LIST:required, movementAmplitude:LIST:required, bgm:BOOLEAN:required | 0.18-0.98 CNY/次 by resolution,duration |
