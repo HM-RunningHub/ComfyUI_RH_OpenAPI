@@ -1,7 +1,7 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-370-blue)
+![Nodes](https://img.shields.io/badge/Nodes-374-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 [RunningHub](https://www.runninghub.cn)
 
@@ -9,11 +9,11 @@
 
 **ComfyUI_RH_OpenAPI** 是 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 的 **1:1 ComfyUI 实现**，并额外补充了 Seedance2.0 素材资产管理节点。
 
-本项目当前收录 365 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点、1 个 RunningHub LLM 对话节点与 1 个设置节点，总计提供 370 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型与 LLM 能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
+本项目当前收录 369 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点、1 个 RunningHub LLM 对话节点与 1 个设置节点，总计提供 374 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型与 LLM 能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
 
 ## 📌 项目特点
 
-- **节点总量** — 共 370 个 ComfyUI 节点，其中包含 365 个标准模型节点、3 个 Seedance2.0 素材节点、1 个 RunningHub LLM 对话节点和 1 个设置节点
+- **节点总量** — 共 374 个 ComfyUI 节点，其中包含 369 个标准模型节点、3 个 Seedance2.0 素材节点、1 个 RunningHub LLM 对话节点和 1 个设置节点
 - **即插即用** — 无需下载模型、无需 GPU，只需 API Key 即可调用全部能力
 - **动态注册** — 基于 JSON 注册表自动生成节点，新模型上线后仅需更新注册表
 - **多媒体支持** — 图片、视频、音频自动上传 / 下载 / 格式转换，与 ComfyUI 原生类型无缝衔接
@@ -51,7 +51,7 @@
 | Marble 1.0 / 1.1 / 1.1 Plus | — | 图像/多图生成 3D 世界 | 6 |
 | Luma Uni-1 / Uni-1 Max | — | 文生图、图生图、图像编辑 | 6 |
 
-### 视频生成（231 个节点）
+### 视频生成（234 个节点）
 
 | 模型 | RH 平台名称 | 能力 | 节点数 |
 |------|-----------|------|--------|
@@ -59,7 +59,7 @@
 | Google Veo 3.1 / 3.1 Lite（Google） | 全能视频 V3.1 / V3.1 Lite（Fast/Pro/Lite 官方 + 低价通道） | Fast/Pro/Lite 文/图/首尾帧生视频、参考生视频、视频扩展 | 19 |
 | Gemini Omni Flash（Google） | Gemini Omni Flash | 文/图生视频、视频编辑 | 3 |
 | Grok Imagine（xAI） | 全能视频 G / G 官方 | 文/图/参考生视频、视频扩展、编辑视频 | 8 |
-| Kling 可灵（快手） | — | v2.5/v2.5-turbo/v2.6/v3.0/v3-4k/v3.0-4k/o1/o3/o3-4k，文/图/首尾帧/参考/动作控制/编辑/元素/高级元素/口型同步/数字人口播 | 40 |
+| Kling 可灵（快手） | — | v2.5/v2.5-turbo/v2.6/v2.6-std/v3.0/v3-4k/v3.0-4k/o1/o3/o3-4k，文/图/首尾帧/参考/动作控制/编辑/元素/高级元素/口型同步/数字人口播 | 42 |
 | Vidu（生数科技） | — | q2/q3，文/图/首尾帧/参考生视频、Pro Fast、Turbo、短剧成片 | 22 |
 | Wan 万相 2.5 / 2.6 / 2.7（阿里巴巴） | — | 文/图/参考生视频、Flash、Spicy、视频编辑、视频续写 | 13 |
 | HappyHorse 1.0 / 1.1（阿里巴巴） | — | 文/图/参考生视频、视频编辑 | 7 |
@@ -86,7 +86,7 @@
 | Gemini 2.5 Pro（Google） | RHArt Text G-2.5 Pro | 图生文、CV 图生文、文生文、视频理解 | 4 |
 | Qwen 2.7B Chat（阿里巴巴） | RHArt Text Qwen 27B | 多轮对话 | 1 |
 
-### 音频合成（19 个节点）
+### 音频合成（20 个节点）
 
 | 模型系列 | 能力 | 节点数 |
 |---------|------|--------|
@@ -95,6 +95,7 @@
 | Minimax Voice Clone / Voice Design | 声音克隆、音色设计 | 2 |
 | Suno v4.5 / v5 / v5.5（RHArt） | Single / Custom 文生音乐 | 6 |
 | Suno Lyrics（RHArt） | 歌词生成 | 1 |
+| Doubao 豆包语音合成/生成 2.0 / 1.0（字节跳动） | 音频生成、语音合成（TTS） | 2 |
 
 ### 3D 建模（16 个节点）
 
@@ -181,14 +182,14 @@ cp config/.env.example config/.env
 
 ### 示例工作流
 
-项目在 `examples/` 目录下提供了 329 个示例工作流 JSON 文件，其中包含 3 个 Seedance2.0 素材相关工作流。下载后直接导入 ComfyUI 即可使用。
+项目在 `examples/` 目录下提供了 333 个示例工作流 JSON 文件，其中包含 3 个 Seedance2.0 素材相关工作流。下载后直接导入 ComfyUI 即可使用。
 
 ## 📁 项目结构
 
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # 入口文件，注册所有节点
-├── models_registry.json     # 模型注册表（365 个模型定义）
+├── models_registry.json     # 模型注册表（369 个模型定义）
 ├── config/
 │   └── .env.example         # 配置文件示例
 ├── core/                    # 核心基础设施
@@ -205,7 +206,7 @@ ComfyUI_RH_OpenAPI/
 │   ├── llm_chat.py          # RunningHub LLM 对话补全节点
 │   ├── node_factory.py      # 动态节点工厂
 │   └── assets/              # Seedance2.0 素材资产节点
-└── examples/                # 329 个示例工作流
+└── examples/                # 333 个示例工作流
 ```
 
 ## 🔧 架构说明

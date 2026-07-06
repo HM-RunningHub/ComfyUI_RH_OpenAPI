@@ -1016,12 +1016,6 @@
   "RH_ViduReferenceToVideoQ3Ad": {
     "display_name": "RH Vidu-参考生视频-q3-ad"
   },
-  "RH_KlingV26ImageToVideo": {
-    "display_name": "RH 可灵图生视频2.6"
-  },
-  "RH_KlingV26TextToVideo": {
-    "display_name": "RH 可灵文生视频2.6"
-  },
   "RH_VolcDramaSerialVideoTranslate": {
     "display_name": "RH 火山短剧-多集视频翻译"
   },
@@ -1036,6 +1030,81 @@
   },
   "RH_MinimaxMusicCoverPreprocess": {
     "display_name": "RH MiniMax Music 翻唱前处理"
+  },
+  "RH_RhartVideoSparkvideo20MultimodalVideoStar": {
+    "display_name": "RH 周星驰版权IP视频生成 (Seedance 2.0)"
+  },
+  "RH_RhartVideoSparkvideo20MultimodalVideoStarFast": {
+    "display_name": "RH 周星驰版权IP视频生成-极速版 (Seedance 2.0 Fast)"
+  },
+  "RH_AlibabaHappyhorse11TextToVideo": {
+    "display_name": "RH happyhorse-1.1/text-to-video"
+  },
+  "RH_AlibabaHappyhorse11ImageToVideo": {
+    "display_name": "RH happyhorse-1.1/image-to-video"
+  },
+  "RH_AlibabaHappyhorse11ReferenceToVideo": {
+    "display_name": "RH happyhorse-1.1/reference-to-video"
+  },
+  "RH_RhartVideoSparkvideo20MiniTextToVideo": {
+    "display_name": "RH seedance2.0-Mini/文生视频"
+  },
+  "RH_RhartVideoSparkvideo20MiniImageToVideo": {
+    "display_name": "RH seedance2.0-Mini/图生视频"
+  },
+  "RH_RhartVideoSparkvideo20MiniMultimodalVideo": {
+    "display_name": "RH seedance2.0-Mini/多模态视频"
+  },
+  "RH_BytedanceSeedance20GlobalMiniTextToVideo": {
+    "display_name": "RH seedance2.0-global-Mini/文生视频"
+  },
+  "RH_BytedanceSeedance20GlobalMiniImageToVideo": {
+    "display_name": "RH seedance2.0-global-Mini/图生视频"
+  },
+  "RH_BytedanceSeedance20GlobalMiniMultimodalVideo": {
+    "display_name": "RH seedance2.0-global-Mini/多模态视频"
+  },
+  "RH_KlingV3TurboStdTextToVideo": {
+    "display_name": "RH 可灵文生视频v3-turbo-std"
+  },
+  "RH_KlingV3TurboProTextToVideo": {
+    "display_name": "RH 可灵文生视频v3-turbo-pro"
+  },
+  "RH_KlingV3TurboStdImageToVideo": {
+    "display_name": "RH 可灵图生视频v3-turbo-std"
+  },
+  "RH_KlingV3TurboProImageToVideo": {
+    "display_name": "RH 可灵图生视频v3-turbo-pro"
+  },
+  "RH_ViduReferenceToVideoQ3Drama": {
+    "display_name": "RH Vidu-参考生视频-q3-drama"
+  },
+  "RH_ViduShortPlayQ3Ad": {
+    "display_name": "RH Vidu Q3 Ad 短剧成片"
+  },
+  "RH_RhartImageNG31FlashLiteTextToImage": {
+    "display_name": "RH 全能图片V2-lite-文生图-低价渠道版"
+  },
+  "RH_RhartImageNG31FlashLiteImageToImage": {
+    "display_name": "RH 全能图片V2-lite-图生图-低价渠道版"
+  },
+  "RH_RhartImageNG31FlashLiteOfficialTextToImage": {
+    "display_name": "RH 全能图片V2-lite-文生图-官方稳定版"
+  },
+  "RH_RhartImageNG31FlashLiteOfficialImageToImage": {
+    "display_name": "RH 全能图片V2-lite-图生图-官方稳定版"
+  },
+  "RH_KlingV26StdImageToVideo": {
+    "display_name": "RH 可灵图生视频2.6-标准版"
+  },
+  "RH_KlingV26StdTextToVideo": {
+    "display_name": "RH 可灵文生视频2.6-标准版"
+  },
+  "RH_BytedanceDoubaoSeedAudio10": {
+    "display_name": "RH Doubao-音频生成-1.0"
+  },
+  "RH_BytedanceDoubaoSeedTts20": {
+    "display_name": "RH Doubao-语音合成-2.0"
   },
   "RH_SparkVideoAssetCreate": {
     "display_name": "RH Seedance2.0素材/创建"

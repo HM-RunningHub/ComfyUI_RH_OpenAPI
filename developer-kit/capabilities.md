@@ -6,12 +6,12 @@ It gives developers and AI coding agents a fast index of available model capabil
 
 ## Summary
 
-- Total models: 365
+- Total models: 369
 - `3d` outputs: 16
-- `audio` outputs: 19
+- `audio` outputs: 20
 - `image` outputs: 82
-- `string` outputs: 45
-- `video` outputs: 203
+- `string` outputs: 46
+- `video` outputs: 205
 
 ## How To Use This File With AI
 
@@ -46,6 +46,7 @@ The AI must not infer enum values or required fields from this summary.
 
 | Endpoint | Name | Inputs | Pricing |
 | --- | --- | --- | --- |
+| `bytedance/doubao-seed-audio-1.0` | doubao-seed-audio-1.0 | text_prompt:STRING:required, speaker:STRING:optional, audio_url:AUDIO:optional, image_url:IMAGE:optional, format:LIST:optional, sample_rate:LIST:optional, speech_rate:INT:optional, loudness_rate:INT:optional, pitch_rate:INT:optional | 0.004 CNY/second |
 | `minimax/music-2.6` | minimax/music-2.6 | prompt:STRING:optional, lyrics:STRING:optional, sampleRate:LIST:optional, bitrate:LIST:optional, format:LIST:optional, lyricsOptimizer:BOOLEAN:optional, isInstrumental:BOOLEAN:optional | 0.8 CNY/次 |
 | `minimax/music-cover` | minimax/music-cover | prompt:STRING:required, audioUrl:AUDIO:required, lyrics:STRING:optional, coverFeatureId:STRING:optional, sampleRate:LIST:optional, format:LIST:optional, bitrate:LIST:optional | 0.8 CNY/次 |
 | `minimax/music-cover-preprocess` | minimax/music-cover-preprocess | audioUrl:AUDIO:required | 0.8 CNY/次 |
@@ -157,6 +158,7 @@ The AI must not infer enum values or required fields from this summary.
 
 | Endpoint | Name | Inputs | Pricing |
 | --- | --- | --- | --- |
+| `bytedance/doubao-seed-tts-2.0` | doubao-seed-tts-2.0 | text:STRING:required, speaker:STRING:required, format:LIST:optional, sample_rate:LIST:optional, speech_rate:INT:optional, loudness_rate:INT:optional, bit_rate:INT:optional, pitch:INT:optional, enable_subtitle:BOOLEAN:optional, max_length_to_filter_parenthesis:INT:optional, silence_duration:INT:optional, disable_markdown_filter:BOOLEAN:optional, disable_emoji_filter:BOOLEAN:optional, enable_latex_tn:BOOLEAN:optional, explicit_language:LIST:optional, explicit_dialect:STRING:optional | 0.24 CNY/1000char |
 | `kling-elements` | kling-elements | name:STRING:required, description:STRING:required, imageUrl:IMAGE:required, elementReferList:IMAGE:required | 0.06 CNY/次 |
 | `kling-lip-sync/identify-face` | kling-lip-sync/identify-face | videoUrl:VIDEO:optional, videoId:STRING:optional | 0.04 CNY/次 |
 | `kling-lip-sync/tts` | kling-lip-sync/tts | text:STRING:required, voiceId:LIST:required, voiceLanguage:LIST:required, voiceSpeed:FLOAT:optional | 0.04 CNY/次 |
@@ -252,7 +254,9 @@ The AI must not infer enum values or required fields from this summary.
 | `kling-v2.6-pro/image-to-video` | kling-v2.6-pro-image-to-video | prompt:STRING:required, negativePrompt:STRING:optional, imageUrl:IMAGE:required, sound:LIST:required, duration:LIST:required | 1.75-7 CNY/次 by duration,sound |
 | `kling-v2.6-pro/motion-control` | kling-v2.6-pro-motion-control | imageUrl:IMAGE:required, videoUrl:VIDEO:required, characterOrientation:LIST:required, prompt:STRING:optional, keepOriginalSound:LIST:optional | 0.56 CNY/秒 |
 | `kling-v2.6-pro/text-to-video` | kling-v2.6-pro-text-to-video | prompt:STRING:required, negativePrompt:STRING:optional, sound:LIST:required, aspectRatio:LIST:required, duration:LIST:required | 1.75-7 CNY/次 by duration,sound |
+| `kling-v2.6-std/image-to-video` | kling-v2.6-std-image-to-video | prompt:STRING:required, negativePrompt:STRING:optional, imageUrl:IMAGE:required, duration:LIST:required | 1.05-2.1 CNY/次 by duration |
 | `kling-v2.6-std/motion-control` | kling-v2.6-std-motion-control | imageUrl:IMAGE:required, videoUrl:VIDEO:required, characterOrientation:LIST:required, prompt:STRING:optional, keepOriginalSound:LIST:optional | 0.35 CNY/秒 |
+| `kling-v2.6-std/text-to-video` | kling-v2.6-std-text-to-video | prompt:STRING:required, negativePrompt:STRING:optional, aspectRatio:LIST:required, duration:LIST:required | 1.05-2.1 CNY/次 by duration |
 | `kling-v3-4k/image-to-video` | kling-v3.0-4k-image-to-video | imageUrl:IMAGE:required, prompt:STRING:optional, negativePrompt:STRING:optional, endImageUrl:IMAGE:optional, duration:INT:required, cfgScale:FLOAT:optional, sound:BOOLEAN:optional, shotType:LIST:optional, multiShot:BOOLEAN:optional | 2.7 CNY/秒 |
 | `kling-v3-4k/text-to-video` | kling-v3-4k-text-to-video | prompt:STRING:required, negativePrompt:STRING:optional, duration:LIST:required, aspectRatio:LIST:optional, cfgScale:FLOAT:optional, sound:BOOLEAN:optional, shotType:LIST:optional, multiShot:BOOLEAN:optional | 2.7 CNY/秒 |
 | `kling-v3-turbo-pro/image-to-video` | kling-v3-turbo-pro-image-to-video | firstImageUrl:IMAGE:required, prompt:STRING:optional, duration:LIST:required |  |
@@ -362,8 +366,8 @@ The AI must not infer enum values or required fields from this summary.
 | `rhart-video/sparkvideo-2.0-mini/text-to-video` | seedance-2.0-mini/text-to-video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, generateAudio:BOOLEAN:optional, ratio:LIST:optional, webSearch:BOOLEAN:optional, returnLastFrame:BOOLEAN:optional, seed:INT:optional | 0.3-1.23 CNY/second by resolution |
 | `rhart-video/sparkvideo-2.0/image-to-video` | Seedance2.0 Image to Video | prompt:STRING:optional, resolution:LIST:required, duration:LIST:required, firstFrameUrl:IMAGE:required, lastFrameUrl:IMAGE:optional, generateAudio:BOOLEAN:optional, ratio:LIST:optional, returnLastFrame:BOOLEAN:optional | 0.6-6 CNY/秒 by resolution |
 | `rhart-video/sparkvideo-2.0/multimodal-video` | Seedance2.0 Multimodal Video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, imageUrls:IMAGE:optional, videoUrls:VIDEO:optional, audioUrls:AUDIO:optional, generateAudio:BOOLEAN:optional, ratio:LIST:optional, returnLastFrame:BOOLEAN:optional | 0.6-6 CNY/秒起 by resolution |
-| `rhart-video/sparkvideo-2.0/multimodal-video-star` | zhouxingchi | resolution:LIST:required, duration:LIST:required, ratio:LIST:optional, templateId:LIST:required, imageUrl:IMAGE:optional |  |
-| `rhart-video/sparkvideo-2.0/multimodal-video-star-fast` | zhouxingchi fast | resolution:LIST:required, duration:LIST:required, ratio:LIST:optional, templateId:LIST:required, imageUrl:IMAGE:optional |  |
+| `rhart-video/sparkvideo-2.0/multimodal-video-star` | Stephen Chow IP Video Gen(Seedance 2.0) | resolution:LIST:required, duration:LIST:required, ratio:LIST:optional, templateId:LIST:required, imageUrl:IMAGE:optional |  |
+| `rhart-video/sparkvideo-2.0/multimodal-video-star-fast` | Stephen Chow IP Video Gen-Fast (Seedance 2.0 Fast) | resolution:LIST:required, duration:LIST:required, ratio:LIST:optional, templateId:LIST:required, imageUrl:IMAGE:optional |  |
 | `rhart-video/sparkvideo-2.0/text-to-video` | Seedance2.0 Text to Video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, generateAudio:BOOLEAN:optional, ratio:LIST:optional, webSearch:BOOLEAN:optional, returnLastFrame:BOOLEAN:optional | 0.6-6 CNY/秒 by resolution |
 | `rhart-video/video-fps-increaser` | rh-video-fps-increaser | videoUrl:VIDEO:required | 0.07 CNY/秒 |
 | `rhart-video/video-upscaler` | rh-video-upscaler | videoUrl:VIDEO:required, targetResolution:LIST:required | 0.14-0.56 CNY/second by targetResolution |

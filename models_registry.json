@@ -39642,5 +39642,535 @@
         ]
       }
     ]
+  },
+  {
+    "class_name": "KlingV26StdImageToVideo",
+    "internal_name": "RH_KlingV26StdImageToVideo",
+    "display_name": "RH 可灵图生视频2.6-标准版",
+    "name_cn": "可灵图生视频2.6-标准版",
+    "name_en": "kling-v2.6-std-image-to-video",
+    "endpoint": "kling-v2.6-std/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "让画面中的小橘猫赛车瞬间动起来。镜头保持低角度微距跟拍，小橘猫戴着飞行员护目镜和红围巾，驾驶胡萝卜和竹叶拼成的微型赛车，在清晨阳光下的厨房台面上高速冲刺。赛车轮胎快速旋转，卷起细腻的面粉粉尘，阳光穿过玻璃杯形成闪烁的彩虹光斑。  小橘猫灵活漂移绕过前方滚动的蓝莓，车身轻微侧滑，围巾和胡须随风摆动。随后赛车借助打开的食谱像坡道一样飞跃起来，镜头进入短暂慢动作，展示小橘猫惊讶又兴奋的表情、车轮悬空旋转、面粉颗粒在光线中漂浮。落地后赛车冲进一小滩蜂蜜，轮胎短暂打滑并甩出金色蜂蜜液滴，然后迅速恢复控制，最后稳稳停在煎饼前。小橘猫骄傲地摘下护目镜，对镜头眨眼。  保持原图角色、赛车、厨房台面、蓝莓、蜂蜜、食谱和煎饼等元素一致。强调真实物理运动、流畅镜头调度、细腻表情变化、材质质感、动态光影和电影感。画面温暖明亮，浅景深，动作节奏轻快有趣。",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "negativePrompt",
+        "defaultValue": "不要改变主体身份，不要新增多余角色，不要画面闪烁，不要严重变形，不要文字水印，不要低清晰度，不要突然切换场景。",
+        "maxLength": 2500
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrl",
+        "description": "imageUrl",
+        "accept": "[\"JPG\",\"PNG\",\"JPEG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "KlingV26StdTextToVideo",
+    "internal_name": "RH_KlingV26StdTextToVideo",
+    "display_name": "RH 可灵文生视频2.6-标准版",
+    "name_cn": "可灵文生视频2.6-标准版",
+    "name_en": "kling-v2.6-std-text-to-video",
+    "endpoint": "kling-v2.6-std/text-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "一只戴着迷你飞行员护目镜的小橘猫，驾驶一辆由胡萝卜和竹叶拼成的微型赛车，在清晨阳光下的厨房台面上高速穿梭。镜头从低角度跟拍赛车轮胎飞速转动，面粉像雪雾一样被卷起，阳光穿过玻璃杯形成彩虹光斑。小猫熟练地漂移绕过一颗滚动的蓝莓，随后飞跃一本打开的食谱，空中慢动作展示它惊讶又兴奋的表情，胡须和围巾随风飘动。落地后赛车冲进一小滩蜂蜜，轮胎打滑但很快恢复控制，最后停在一块煎饼前，小猫骄傲地摘下护目镜，对镜头眨眼。画面风格温暖、电影感、细节丰富，真实光影，流畅运动，动态镜头，浅景深。",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "negativePrompt",
+        "maxLength": 2500
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "BytedanceDoubaoSeedAudio10",
+    "internal_name": "RH_BytedanceDoubaoSeedAudio10",
+    "display_name": "RH Doubao-音频生成-1.0",
+    "name_cn": "Doubao-音频生成-1.0",
+    "name_en": "doubao-seed-audio-1.0",
+    "endpoint": "bytedance/doubao-seed-audio-1.0",
+    "output_type": "audio",
+    "category": "RunningHub/Seedance",
+    "params": [
+      {
+        "fieldKey": "text_prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "音频生成提示词（必填，≤2048字符）",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "speaker",
+        "type": "STRING",
+        "required": false,
+        "label": "speaker",
+        "description": "音色ID（可选）。可用豆包语音合成2.0音色或声音复刻音色；与 audio_url/image_url 互斥。参考：https://www.volcengine.com/docs/6561/1257544?lang=zh#豆包语音合成模型2-0-音色列表"
+      },
+      {
+        "fieldKey": "audio_url",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrl",
+        "description": "参考音频URL（可选），与 speaker 三选一；不可与 image_url 混用",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"MP3\",\"WAV\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "image_url",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrl",
+        "description": "参考图片URL（可选）；不可与音频参考(speaker/audio_url)混用",
+        "accept": "[\"JPG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "format",
+        "type": "LIST",
+        "required": false,
+        "label": "format",
+        "description": "输出音频格式，默认 wav",
+        "defaultValue": "wav",
+        "options": [
+          {
+            "value": "wav",
+            "description": "wav",
+            "descriptionEn": "wav"
+          },
+          {
+            "value": "mp3",
+            "description": "mp3",
+            "descriptionEn": "mp3"
+          },
+          {
+            "value": "pcm",
+            "description": "pcm",
+            "descriptionEn": "pcm"
+          },
+          {
+            "value": "ogg_opus",
+            "description": "oggOpus",
+            "descriptionEn": "oggOpus"
+          }
+        ]
+      },
+      {
+        "fieldKey": "sample_rate",
+        "type": "LIST",
+        "required": false,
+        "label": "sampleRate",
+        "description": "输出采样率(Hz)，默认 24000",
+        "defaultValue": 24000,
+        "options": [
+          {
+            "value": 8000
+          },
+          {
+            "value": 16000
+          },
+          {
+            "value": 24000
+          },
+          {
+            "value": 32000
+          },
+          {
+            "value": 44100
+          },
+          {
+            "value": 48000
+          }
+        ]
+      },
+      {
+        "fieldKey": "speech_rate",
+        "type": "INT",
+        "required": false,
+        "label": "speechRate",
+        "description": "语速，[-50,100]，100=2.0倍速，-50=0.5倍速，默认 0 不调整",
+        "defaultValue": 0
+      },
+      {
+        "fieldKey": "loudness_rate",
+        "type": "INT",
+        "required": false,
+        "label": "loudnessRate",
+        "description": "音量，[-50,100]，100=2.0倍音量，-50=0.5倍音量，默认 0 不调整",
+        "defaultValue": 0
+      },
+      {
+        "fieldKey": "pitch_rate",
+        "type": "INT",
+        "required": false,
+        "label": "pitchRate",
+        "description": "音调，[-12,12]，默认 0 不调整",
+        "defaultValue": 0
+      }
+    ]
+  },
+  {
+    "class_name": "BytedanceDoubaoSeedTts20",
+    "internal_name": "RH_BytedanceDoubaoSeedTts20",
+    "display_name": "RH Doubao-语音合成-2.0",
+    "name_cn": "Doubao-语音合成-2.0",
+    "name_en": "doubao-seed-tts-2.0",
+    "endpoint": "bytedance/doubao-seed-tts-2.0",
+    "output_type": "string",
+    "category": "RunningHub/Seedance",
+    "params": [
+      {
+        "fieldKey": "text",
+        "type": "STRING",
+        "required": true,
+        "label": "text",
+        "description": "待合成的文本，按字符数计费",
+        "defaultValue": "时代浪潮奔涌向前，发展步伐铿锵有力。回望征程，我们在坚守中砥砺初心，在拼搏中书写担当，每一份耕耘都凝聚着汗水，每一次突破都承载着希望。从城市建设的日新月异，到乡村振兴的蓬勃生机；从科技创新的不断突破，到民生福祉的持续提升，处处都展现着昂扬向上的新气象。 立足当下，我们怀揣初心与使命，以实干笃定前行，以奋斗开创未来。各行各业的工作者坚守岗位、履职尽责，用平凡铸就伟大，用坚守诠释责任，在各自的领域里发光发热，汇聚成推动时代前行的磅礴力量。无论是攻坚克难的科研一线，还是服务群众的基层前沿；无论是追逐梦想的青年学子，还是默默奉献的平凡英雄，都在以昂扬的姿态迎接挑战，以坚定的信念追逐目标。 展望前路，机遇与挑战并存，梦想与荣光同在。我们将始终保持锐意进取的精神风貌，秉持脚踏实地的工作作风，凝心聚力、携手同行，在新时代的征程上勇毅前行，不负时代、不负韶华，用拼搏与汗水铸就新的辉煌，书写更加精彩的时代篇章，让每一份努力都有回响，每一个梦想都能绽放，向着更加美好的未来奋勇迈进！",
+        "maxLength": 10000
+      },
+      {
+        "fieldKey": "speaker",
+        "type": "STRING",
+        "required": true,
+        "label": "speaker",
+        "description": "音色ID，从控制台音色库获取；参考：https://www.volcengine.com/docs/6561/1257544?lang=zh#豆包语音合成模型2-0-音色列表",
+        "defaultValue": "zh_male_shaonianzixin_uranus_bigtts"
+      },
+      {
+        "fieldKey": "format",
+        "type": "LIST",
+        "required": false,
+        "label": "format",
+        "description": "输出音频格式，默认mp3",
+        "defaultValue": "mp3",
+        "options": [
+          {
+            "value": "mp3",
+            "description": "mp3",
+            "descriptionEn": "mp3"
+          },
+          {
+            "value": "pcm",
+            "description": "pcm",
+            "descriptionEn": "pcm"
+          },
+          {
+            "value": "ogg_opus",
+            "description": "oggOpus",
+            "descriptionEn": "oggOpus"
+          },
+          {
+            "value": "wav",
+            "description": "wav",
+            "descriptionEn": "wav"
+          }
+        ]
+      },
+      {
+        "fieldKey": "sample_rate",
+        "type": "LIST",
+        "required": false,
+        "label": "sampleRate",
+        "description": "采样率(Hz)，默认24000",
+        "defaultValue": 24000,
+        "options": [
+          {
+            "value": 8000
+          },
+          {
+            "value": 16000
+          },
+          {
+            "value": 22050
+          },
+          {
+            "value": 24000
+          },
+          {
+            "value": 32000
+          },
+          {
+            "value": 44100
+          },
+          {
+            "value": 48000
+          }
+        ]
+      },
+      {
+        "fieldKey": "speech_rate",
+        "type": "INT",
+        "required": false,
+        "label": "speechRate",
+        "description": "语速，[-50,100]，100=2.0倍速，-50=0.5倍速，默认0",
+        "defaultValue": 0
+      },
+      {
+        "fieldKey": "loudness_rate",
+        "type": "INT",
+        "required": false,
+        "label": "loudnessRate",
+        "description": "音量，[-50,100]，100=2.0倍，-50=0.5倍，默认0",
+        "defaultValue": 0
+      },
+      {
+        "fieldKey": "bit_rate",
+        "type": "INT",
+        "required": false,
+        "label": "bitRate",
+        "description": "比特率(bps)，仅mp3生效，范围[64000,160000]"
+      },
+      {
+        "fieldKey": "pitch",
+        "type": "INT",
+        "required": false,
+        "label": "pitch",
+        "description": "音调，[-12,12]，默认0"
+      },
+      {
+        "fieldKey": "enable_subtitle",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "enableSubtitle",
+        "description": "是否开启字幕服务，开启后，返回字级别的时间戳，默认false",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "max_length_to_filter_parenthesis",
+        "type": "INT",
+        "required": false,
+        "label": "maxLengthToFilterParenthesis",
+        "description": "是否过滤括号内内容：0不过滤，100过滤",
+        "defaultValue": 100
+      },
+      {
+        "fieldKey": "silence_duration",
+        "type": "INT",
+        "required": false,
+        "label": "silenceDuration",
+        "description": "文本末尾增加静音时长(ms)，[0,30000]，默认0"
+      },
+      {
+        "fieldKey": "disable_markdown_filter",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "disableMarkdownFilter",
+        "description": "是否开启Markdown解析过滤，true:开启过滤，会解析并去除 Markdown 语法。例如\" **你好** \"朗读为 \"你好\";false：关闭过滤，保留原始字符。例如 \" **你好** \" 朗读为 \"星星你好星星\"",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "disable_emoji_filter",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "disableEmojiFilter",
+        "description": "是否开启Emoji解析过滤，默认false",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "enable_latex_tn",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "enableLatexTn",
+        "description": "是否启用Latex文本朗读；控制 TTS 是否把输入文本里的 LaTeX 数学公式识别并转成可朗读的自然语言，再合成语音",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "explicit_language",
+        "type": "LIST",
+        "required": false,
+        "label": "explicitLanguage",
+        "description": "显式指定朗读语种，默认自动判断；指定后仅朗读该语种内容",
+        "options": [
+          {
+            "value": "",
+            "description": "自动判断",
+            "descriptionEn": "Auto"
+          },
+          {
+            "value": "zh-cn",
+            "description": "中文(支持中英混读)",
+            "descriptionEn": "Chinese (zh-en mixed)"
+          },
+          {
+            "value": "en",
+            "description": "英语",
+            "descriptionEn": "English"
+          },
+          {
+            "value": "ja",
+            "description": "日语",
+            "descriptionEn": "Japanese"
+          },
+          {
+            "value": "es-mx",
+            "description": "墨西哥语",
+            "descriptionEn": "Spanish (MX)"
+          },
+          {
+            "value": "id",
+            "description": "印度尼西亚语",
+            "descriptionEn": "Indonesian"
+          },
+          {
+            "value": "pt-br",
+            "description": "巴西葡萄牙语",
+            "descriptionEn": "Portuguese (BR)"
+          },
+          {
+            "value": "pt",
+            "description": "葡萄牙语",
+            "descriptionEn": "Portuguese"
+          },
+          {
+            "value": "ko",
+            "description": "韩语",
+            "descriptionEn": "Korean"
+          },
+          {
+            "value": "de",
+            "description": "德语",
+            "descriptionEn": "German"
+          },
+          {
+            "value": "fr",
+            "description": "法语",
+            "descriptionEn": "French"
+          },
+          {
+            "value": "th",
+            "description": "泰语",
+            "descriptionEn": "Thai"
+          },
+          {
+            "value": "vi",
+            "description": "越南语",
+            "descriptionEn": "Vietnamese"
+          },
+          {
+            "value": "ru",
+            "description": "俄语",
+            "descriptionEn": "Russian"
+          },
+          {
+            "value": "fil",
+            "description": "菲律宾语",
+            "descriptionEn": "Filipino"
+          },
+          {
+            "value": "ms",
+            "description": "马来语",
+            "descriptionEn": "Malay"
+          },
+          {
+            "value": "ar",
+            "description": "阿拉伯语",
+            "descriptionEn": "Arabic"
+          }
+        ]
+      },
+      {
+        "fieldKey": "explicit_dialect",
+        "type": "STRING",
+        "required": false,
+        "label": "explicitDialect",
+        "description": "指定方言；（需speaker为支持方言的音色，中文方言只支持拼音）"
+      }
+    ]
   }
 ]

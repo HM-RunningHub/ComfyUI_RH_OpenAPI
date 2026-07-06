@@ -2,10 +2,10 @@
   "version": "public-2026-04-29",
   "source": "models_registry.json public-safe pricing summaries",
   "note": "Public-safe pricing summary for AI-assisted integration. Prices may change; check official RunningHub pricing before showing final costs to end users.",
-  "pricing_count": 353,
+  "pricing_count": 357,
   "counts_by_pricing_type": {
-    "fixed": 152,
-    "parameter_based": 200,
+    "fixed": 154,
+    "parameter_based": 202,
     "unparsed": 1
   },
   "pricing": [
@@ -1063,6 +1063,28 @@
           "price": 0.51
         }
       ]
+    },
+    {
+      "endpoint": "bytedance/doubao-seed-audio-1.0",
+      "name_cn": "Doubao-音频生成-1.0",
+      "name_en": "doubao-seed-audio-1.0",
+      "currency": "CNY",
+      "unit": "/second",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.004
+    },
+    {
+      "endpoint": "bytedance/doubao-seed-tts-2.0",
+      "name_cn": "Doubao-语音合成-2.0",
+      "name_en": "doubao-seed-tts-2.0",
+      "currency": "CNY",
+      "unit": "/1000char",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.24
     },
     {
       "endpoint": "bytedance/dreamactor-v2",
@@ -2754,6 +2776,33 @@
       ]
     },
     {
+      "endpoint": "kling-v2.6-std/image-to-video",
+      "name_cn": "可灵图生视频2.6-标准版",
+      "name_en": "kling-v2.6-std-image-to-video",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "duration"
+      ],
+      "rules": [
+        {
+          "when": {
+            "duration": "10"
+          },
+          "price": 2.1
+        },
+        {
+          "when": {
+            "duration": "5"
+          },
+          "price": 1.05
+        }
+      ]
+    },
+    {
       "endpoint": "kling-v2.6-std/motion-control",
       "name_cn": "kling-v2.6-std-动作控制",
       "name_en": "kling-v2.6-std-motion-control",
@@ -2763,6 +2812,33 @@
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
       "price": 0.35
+    },
+    {
+      "endpoint": "kling-v2.6-std/text-to-video",
+      "name_cn": "可灵文生视频2.6-标准版",
+      "name_en": "kling-v2.6-std-text-to-video",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "duration"
+      ],
+      "rules": [
+        {
+          "when": {
+            "duration": "10"
+          },
+          "price": 2.1
+        },
+        {
+          "when": {
+            "duration": "5"
+          },
+          "price": 1.05
+        }
+      ]
     },
     {
       "endpoint": "kling-v3-4k/image-to-video",

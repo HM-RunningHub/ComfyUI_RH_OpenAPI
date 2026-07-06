@@ -1016,12 +1016,6 @@
   "RH_ViduReferenceToVideoQ3Ad": {
     "display_name": "RH Vidu Reference to Video Q3 Ad"
   },
-  "RH_KlingV26ImageToVideo": {
-    "display_name": "RH Kling V2.6 Image to Video"
-  },
-  "RH_KlingV26TextToVideo": {
-    "display_name": "RH Kling V2.6 Text to Video"
-  },
   "RH_VolcDramaSerialVideoTranslate": {
     "display_name": "RH Volc Drama Serial Video Translate"
   },
@@ -1036,6 +1030,81 @@
   },
   "RH_MinimaxMusicCoverPreprocess": {
     "display_name": "RH Minimax Music Cover Preprocess"
+  },
+  "RH_RhartVideoSparkvideo20MultimodalVideoStar": {
+    "display_name": "RH Stephen Chow Ip Video Gen(seedance 2.0)"
+  },
+  "RH_RhartVideoSparkvideo20MultimodalVideoStarFast": {
+    "display_name": "RH Stephen Chow Ip Video Gen Fast (seedance 2.0 Fast)"
+  },
+  "RH_AlibabaHappyhorse11TextToVideo": {
+    "display_name": "RH Happyhorse 1.1 Text to Video"
+  },
+  "RH_AlibabaHappyhorse11ImageToVideo": {
+    "display_name": "RH Happyhorse 1.1 Image to Video"
+  },
+  "RH_AlibabaHappyhorse11ReferenceToVideo": {
+    "display_name": "RH Happyhorse 1.1 Reference to Video"
+  },
+  "RH_RhartVideoSparkvideo20MiniTextToVideo": {
+    "display_name": "RH Seedance 2.0 Mini Text to Video"
+  },
+  "RH_RhartVideoSparkvideo20MiniImageToVideo": {
+    "display_name": "RH Seedance 2.0 Mini Image to Video"
+  },
+  "RH_RhartVideoSparkvideo20MiniMultimodalVideo": {
+    "display_name": "RH Seedance 2.0 Mini Multimodal Video"
+  },
+  "RH_BytedanceSeedance20GlobalMiniTextToVideo": {
+    "display_name": "RH Seedance 2.0 Global Mini Text to Video"
+  },
+  "RH_BytedanceSeedance20GlobalMiniImageToVideo": {
+    "display_name": "RH Seedance 2.0 Global Mini Image to Video"
+  },
+  "RH_BytedanceSeedance20GlobalMiniMultimodalVideo": {
+    "display_name": "RH Seedance 2.0 Global Mini Multimodal Video"
+  },
+  "RH_KlingV3TurboStdTextToVideo": {
+    "display_name": "RH Kling V3 Turbo STD Text to Video"
+  },
+  "RH_KlingV3TurboProTextToVideo": {
+    "display_name": "RH Kling V3 Turbo PRO Text to Video"
+  },
+  "RH_KlingV3TurboStdImageToVideo": {
+    "display_name": "RH Kling V3 Turbo STD Image to Video"
+  },
+  "RH_KlingV3TurboProImageToVideo": {
+    "display_name": "RH Kling V3 Turbo PRO Image to Video"
+  },
+  "RH_ViduReferenceToVideoQ3Drama": {
+    "display_name": "RH Vidu Reference to Video Q3 Drama"
+  },
+  "RH_ViduShortPlayQ3Ad": {
+    "display_name": "RH Vidu Short Play Q3 Ad"
+  },
+  "RH_RhartImageNG31FlashLiteTextToImage": {
+    "display_name": "RH Nano Banana2 Gemini31flash Lite Text to Image Channel Low Price"
+  },
+  "RH_RhartImageNG31FlashLiteImageToImage": {
+    "display_name": "RH Nano Banana2 Gemini31flash Lite Image to Image Channel Low Price"
+  },
+  "RH_RhartImageNG31FlashLiteOfficialTextToImage": {
+    "display_name": "RH Nano Banana2 Gemini31flash Lite Text to Image Official Stable"
+  },
+  "RH_RhartImageNG31FlashLiteOfficialImageToImage": {
+    "display_name": "RH Nano Banana2 Gemini31flash Lite Image to Image Official Stable"
+  },
+  "RH_KlingV26StdImageToVideo": {
+    "display_name": "RH Kling V2.6 STD Image to Video"
+  },
+  "RH_KlingV26StdTextToVideo": {
+    "display_name": "RH Kling V2.6 STD Text to Video"
+  },
+  "RH_BytedanceDoubaoSeedAudio10": {
+    "display_name": "RH Doubao Seed Audio 1.0"
+  },
+  "RH_BytedanceDoubaoSeedTts20": {
+    "display_name": "RH Doubao Seed Tts 2.0"
   },
   "RH_SparkVideoAssetCreate": {
     "display_name": "RH Seedance2.0 Asset/Create"
