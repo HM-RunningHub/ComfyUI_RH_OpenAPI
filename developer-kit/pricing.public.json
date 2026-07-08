@@ -2,10 +2,10 @@
   "version": "public-2026-04-29",
   "source": "models_registry.json public-safe pricing summaries",
   "note": "Public-safe pricing summary for AI-assisted integration. Prices may change; check official RunningHub pricing before showing final costs to end users.",
-  "pricing_count": 357,
+  "pricing_count": 358,
   "counts_by_pricing_type": {
     "fixed": 154,
-    "parameter_based": 202,
+    "parameter_based": 203,
     "unparsed": 1
   },
   "pricing": [
@@ -12281,6 +12281,33 @@
       "endpoint": "youchuan/text-to-image-v81",
       "name_cn": "悠船文生图-v8.1",
       "name_en": "midjourney-text-to-image-v8.1",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "hd"
+      ],
+      "rules": [
+        {
+          "when": {
+            "hd": "false"
+          },
+          "price": 0.54
+        },
+        {
+          "when": {
+            "hd": "true"
+          },
+          "price": 0.81
+        }
+      ]
+    },
+    {
+      "endpoint": "youchuan/text-to-image-v82",
+      "name_cn": "悠船文生图-v8.2预览版",
+      "name_en": "midjourney-text-to-image-v8.2-preview",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",

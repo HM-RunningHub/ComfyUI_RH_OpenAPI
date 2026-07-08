@@ -1106,6 +1106,15 @@
   "RH_BytedanceDoubaoSeedTts20": {
     "display_name": "RH Doubao-语音合成-2.0"
   },
+  "RH_YouchuanTextToImageV82": {
+    "display_name": "RH 悠船文生图-v8.2预览版"
+  },
+  "RH_SeedreamV5ProTextToImage": {
+    "display_name": "RH seedream-v5-pro-文生图"
+  },
+  "RH_SeedreamV5ProImageToImage": {
+    "display_name": "RH seedream-v5-pro-图生图"
+  },
   "RH_SparkVideoAssetCreate": {
     "display_name": "RH Seedance2.0素材/创建"
   },

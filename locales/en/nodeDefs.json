@@ -1106,6 +1106,15 @@
   "RH_BytedanceDoubaoSeedTts20": {
     "display_name": "RH Doubao Seed Tts 2.0"
   },
+  "RH_YouchuanTextToImageV82": {
+    "display_name": "RH Midjourney Text to Image V8.2 Preview"
+  },
+  "RH_SeedreamV5ProTextToImage": {
+    "display_name": "RH Seedream V5 PRO Text to Image"
+  },
+  "RH_SeedreamV5ProImageToImage": {
+    "display_name": "RH Seedream V5 PRO Image to Image"
+  },
   "RH_SparkVideoAssetCreate": {
     "display_name": "RH Seedance2.0 Asset/Create"
   },

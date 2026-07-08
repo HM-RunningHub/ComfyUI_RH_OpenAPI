@@ -432,6 +432,9 @@
       "RH_KlingV26StdTextToVideo": "RH 可灵文生视频2.6-标准版",
       "RH_BytedanceDoubaoSeedAudio10": "RH Doubao-音频生成-1.0",
       "RH_BytedanceDoubaoSeedTts20": "RH Doubao-语音合成-2.0",
+      "RH_YouchuanTextToImageV82": "RH 悠船文生图-v8.2预览版",
+      "RH_SeedreamV5ProTextToImage": "RH seedream-v5-pro-文生图",
+      "RH_SeedreamV5ProImageToImage": "RH seedream-v5-pro-图生图",
       "RHLLMChatNode": "RH LLM 对话补全",
       "RHSettingsNode": "RH OpenAPI 设置"
     },
@@ -805,6 +808,9 @@
       "RH_KlingV26StdTextToVideo": "RH Kling V2.6 STD Text to Video",
       "RH_BytedanceDoubaoSeedAudio10": "RH Doubao Seed Audio 1.0",
       "RH_BytedanceDoubaoSeedTts20": "RH Doubao Seed Tts 2.0",
+      "RH_YouchuanTextToImageV82": "RH Midjourney Text to Image V8.2 Preview",
+      "RH_SeedreamV5ProTextToImage": "RH Seedream V5 PRO Text to Image",
+      "RH_SeedreamV5ProImageToImage": "RH Seedream V5 PRO Image to Image",
       "RHLLMChatNode": "RH LLM Chat Completions",
       "RHSettingsNode": "RH OpenAPI Settings"
     }

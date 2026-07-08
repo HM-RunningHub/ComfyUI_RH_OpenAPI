@@ -6,10 +6,10 @@ It gives developers and AI coding agents a fast index of available model capabil
 
 ## Summary
 
-- Total models: 369
+- Total models: 372
 - `3d` outputs: 16
 - `audio` outputs: 20
-- `image` outputs: 82
+- `image` outputs: 85
 - `string` outputs: 46
 - `video` outputs: 205
 
@@ -142,6 +142,8 @@ The AI must not infer enum values or required fields from this summary.
 | `seedream-v4/text-to-image` | seedream-v4/text-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, sequentialImageGeneration:LIST:optional, maxImages:INT:optional, resolution:LIST:optional | 0.14 CNY/张 |
 | `seedream-v5-lite/image-to-image` | seedream-v5-lite/image-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, imageUrls:IMAGE:required, sequentialImageGeneration:LIST:optional, maxImages:INT:optional, resolution:LIST:optional | 0.22 CNY/张 |
 | `seedream-v5-lite/text-to-image` | seedream-v5-lite/text-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, sequentialImageGeneration:LIST:optional, maxImages:INT:optional, toolsType:LIST:optional, resolution:LIST:optional | 0.22 CNY/张 |
+| `seedream-v5-pro/image-to-image` | seedream-v5-pro/image-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, imageUrls:IMAGE:required, resolution:LIST:optional, outputFormat:LIST:optional |  |
+| `seedream-v5-pro/text-to-image` | seedream-v5-pro/text-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, resolution:LIST:optional, outputFormat:LIST:optional |  |
 | `topazlabs/image-upscale-cgi` | topazlabs-image-upscale-cgi | imageUrl:IMAGE:required, scale:LIST:required, subjectDetection:LIST:optional, faceEnhancement:BOOLEAN:optional, faceEnhancementCreativity:FLOAT:optional, faceEnhancementStrength:FLOAT:optional | 0.7-2.1 CNY/次 by scale |
 | `topazlabs/image-upscale-high-fidelity-v2` | topazlabs-image-upscale-high fidelity v2 | imageUrl:IMAGE:required, scale:LIST:required, subjectDetection:LIST:optional, faceEnhancement:BOOLEAN:optional, faceEnhancementCreativity:FLOAT:optional, faceEnhancementStrength:FLOAT:optional | 0.7-2.1 CNY/次 by scale |
 | `topazlabs/image-upscale-standard-v2` | topazlabs-image-upscale-standard-v2 | imageUrl:IMAGE:required, scale:LIST:required, subjectDetection:LIST:optional, faceEnhancement:BOOLEAN:optional, faceEnhancementCreativity:FLOAT:optional, faceEnhancementStrength:FLOAT:optional | 0.7-2.1 CNY/次 by scale |
@@ -153,6 +155,7 @@ The AI must not infer enum values or required fields from this summary.
 | `youchuan/text-to-image-v61` | midjourney-text-to-image-v61 | prompt:STRING:required, negativePrompt:STRING:optional, chaos:INT:optional, quality:LIST:optional, stylize:INT:optional, weird:INT:optional, raw:BOOLEAN:optional, imageUrl:IMAGE:optional, iw:INT:optional, cref:IMAGE:optional, cw:INT:optional, sref:IMAGE:optional, sw:INT:optional, sv:INT:optional, stop:INT:optional, tile:BOOLEAN:optional, aspectRatio:LIST:optional | 0.54 CNY/次 |
 | `youchuan/text-to-image-v7` | midjourney-text-to-image-v7 | prompt:STRING:required, negativePrompt:STRING:optional, chaos:INT:optional, quality:LIST:optional, stylize:INT:optional, weird:INT:optional, raw:BOOLEAN:optional, imageUrl:IMAGE:optional, iw:INT:optional, sref:IMAGE:optional, sw:INT:optional, sv:INT:optional, oref:IMAGE:optional, ow:INT:optional, tile:BOOLEAN:optional, aspectRatio:LIST:optional | 0.54 CNY/次 |
 | `youchuan/text-to-image-v81` | midjourney-text-to-image-v8.1 | prompt:STRING:required, chaos:INT:optional, quality:LIST:optional, stylize:INT:optional, raw:BOOLEAN:optional, imageUrl:IMAGE:optional, iw:INT:optional, sref:IMAGE:optional, sw:INT:optional, sv:INT:optional, aspectRatio:LIST:optional, hd:BOOLEAN:required | 0.54-0.81 CNY/次 by hd |
+| `youchuan/text-to-image-v82` | midjourney-text-to-image-v8.2-preview | prompt:STRING:required, chaos:INT:optional, quality:LIST:optional, stylize:INT:optional, raw:BOOLEAN:optional, imageUrl:IMAGE:optional, iw:INT:optional, sref:IMAGE:optional, sw:INT:optional, sv:INT:optional, aspectRatio:LIST:optional, hd:BOOLEAN:required | 0.54-0.81 CNY/次 by hd |
 
 ## String Models
 
