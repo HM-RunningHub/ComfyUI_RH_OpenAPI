@@ -28,7 +28,7 @@ FORBIDDEN_MODEL_KEYS = {
     "billing",
     "billing_spec",
 }
-PUBLIC_MODEL_KEYS = (
+PUBLIC_MODEL_KEYS = {
     "class_name",
     "display_name",
     "name_cn",
@@ -37,10 +37,11 @@ PUBLIC_MODEL_KEYS = (
     "output_type",
     "category",
     "params",
+    "size_constraints",
     "asset_ids_mode",
     "real_person_asset_slots",
     "real_person_mode_default",
-)
+}
 
 
 def read_json(path: Path) -> Any:
@@ -48,14 +49,14 @@ def read_json(path: Path) -> Any:
 
 
 def write_json(path: Path, data: Any) -> None:
-    path.write_text(
-        json.dumps(data, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
+    # newline="\n" keeps generated files LF even on Windows, matching the
+    # committed files and avoiding whole-file line-ending churn in git.
+    with open(path, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
 
 
 def sanitize_param(param: Mapping[str, Any]) -> Dict[str, Any]:
-    allowed_keys = (
+    allowed_keys = {
         "fieldKey",
         "type",
         "required",
@@ -74,8 +75,12 @@ def sanitize_param(param: Mapping[str, Any]) -> Dict[str, Any]:
         "step",
         "maxLength",
         "tail_insert",
-    )
-    result = {key: param[key] for key in allowed_keys if key in param}
+    }
+    # Iterate over the source mapping (not the allowed set) so the output key
+    # order is deterministic and follows models_registry.json. Set iteration
+    # order depends on per-process string hash randomization and would churn
+    # the entire generated file on every run.
+    result = {key: value for key, value in param.items() if key in allowed_keys}
     if "options" in result and isinstance(result["options"], list):
         result["options"] = [sanitize_option(option) for option in result["options"]]
     return result
@@ -84,12 +89,14 @@ def sanitize_param(param: Mapping[str, Any]) -> Dict[str, Any]:
 def sanitize_option(option: Any) -> Any:
     if not isinstance(option, Mapping):
         return option
-    allowed = ("value", "description", "descriptionEn")
-    return {key: option[key] for key in allowed if key in option}
+    allowed = {"value", "description", "descriptionEn"}
+    return {key: value for key, value in option.items() if key in allowed}
 
 
 def sanitize_model(model: Mapping[str, Any]) -> Dict[str, Any]:
-    result = {key: model[key] for key in PUBLIC_MODEL_KEYS if key in model}
+    result = {
+        key: value for key, value in model.items() if key in PUBLIC_MODEL_KEYS
+    }
     result["params"] = [sanitize_param(param) for param in model.get("params", [])]
     for key in FORBIDDEN_MODEL_KEYS:
         result.pop(key, None)
@@ -209,16 +216,7 @@ def public_pricing_for_model(model: Mapping[str, Any]) -> Optional[Dict[str, Any
 
 
 def build_public_pricing(models: Iterable[Mapping[str, Any]]) -> Dict[str, Any]:
-    model_list = list(models)
-    entries = [entry for model in model_list if (entry := public_pricing_for_model(model))]
-    if not entries and PUBLIC_PRICING.exists():
-        endpoint_set = {str(model.get("endpoint")) for model in model_list if model.get("endpoint")}
-        existing = read_json(PUBLIC_PRICING)
-        entries = [
-            entry
-            for entry in existing.get("pricing", [])
-            if isinstance(entry, Mapping) and str(entry.get("endpoint")) in endpoint_set
-        ]
+    entries = [entry for model in models if (entry := public_pricing_for_model(model))]
     entries.sort(key=lambda item: str(item.get("endpoint", "")))
     counts = Counter(str(entry.get("pricing_type") or "unknown") for entry in entries)
     return {
@@ -360,7 +358,8 @@ def main() -> None:
     assert_pricing_public_safe(pricing)
     write_json(PUBLIC_REGISTRY, registry)
     write_json(PUBLIC_PRICING, pricing)
-    CAPABILITIES_DOC.write_text(build_capabilities_doc(registry, pricing) + "\n", encoding="utf-8")
+    with open(CAPABILITIES_DOC, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(build_capabilities_doc(registry, pricing) + "\n")
     print(f"Wrote {PUBLIC_REGISTRY} ({registry['model_count']} models)")
     print(f"Wrote {PUBLIC_PRICING} ({pricing['pricing_count']} pricing entries)")
     print(f"Wrote {CAPABILITIES_DOC}")

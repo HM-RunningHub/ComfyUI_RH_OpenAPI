@@ -227,6 +227,55 @@ def _build_comfy_input_def(param: Dict) -> tuple:
     return ("STRING", {"default": ""})
 
 
+def _validate_size_constraints(cfg: Dict[str, Any], kwargs: Dict[str, Any]) -> None:
+    """Enforce cross-field width/height constraints declared in the registry."""
+    gate_field = cfg.get("gate_field")
+    if gate_field:
+        gate_value = kwargs.get(gate_field)
+        omit_value = str(cfg.get("gate_omit_value", LIST_OMIT_SENTINEL))
+        if gate_value is not None and str(gate_value) != omit_value:
+            return
+
+    width_field = cfg.get("width_field", "width")
+    height_field = cfg.get("height_field", "height")
+    width = kwargs.get(width_field)
+    height = kwargs.get(height_field)
+    if width is None or height is None:
+        return
+
+    try:
+        w = int(width)
+        h = int(height)
+    except (ValueError, TypeError):
+        raise ValueError(f"{width_field}/{height_field} must be integers")
+    if w <= 0 or h <= 0:
+        raise ValueError(f"{width_field}/{height_field} must be positive")
+
+    total = w * h
+    min_px = cfg.get("min_total_pixels")
+    max_px = cfg.get("max_total_pixels")
+    if min_px is not None and total < int(min_px):
+        raise ValueError(
+            f"{width_field}x{height_field} total pixels {total} < minimum {int(min_px)}"
+        )
+    if max_px is not None and total > int(max_px):
+        raise ValueError(
+            f"{width_field}x{height_field} total pixels {total} > maximum {int(max_px)}"
+        )
+
+    ratio = w / h
+    min_ratio = cfg.get("min_aspect_ratio")
+    max_ratio = cfg.get("max_aspect_ratio")
+    if min_ratio is not None and ratio < float(min_ratio):
+        raise ValueError(
+            f"{width_field}/{height_field} aspect ratio {ratio:.4f} < minimum {float(min_ratio)}"
+        )
+    if max_ratio is not None and ratio > float(max_ratio):
+        raise ValueError(
+            f"{width_field}/{height_field} aspect ratio {ratio:.4f} > maximum {float(max_ratio)}"
+        )
+
+
 def _build_asset_id_input_def() -> tuple:
     """Build a connectable STRING input for direct assetId references."""
     return ("STRING", {"default": "", "forceInput": True})
@@ -572,6 +621,9 @@ def create_node_class(model_def: Dict) -> type:
     _media_info = list(media_info_list)
     _non_media = list(non_media_params)
     _asset_ids_mode = asset_ids_mode
+    _size_constraints = model_def.get("size_constraints") if isinstance(
+        model_def.get("size_constraints"), dict
+    ) else None
     _real_person_slots = list(real_person_asset_slots)
 
     class NodeClass(BaseNode):
@@ -915,6 +967,25 @@ def create_node_class(model_def: Dict) -> type:
                     if field_key in payload and payload[field_key]:
                         raise ValueError(f"Both local media and asset_ids attempted to fill {field_key}")
                     payload[field_key] = value
+
+            # When resolution is sent, upstream ignores explicit width/height.
+            # Otherwise enforce registry-declared pixel and aspect constraints.
+            if _size_constraints:
+                gate_field = _size_constraints.get("gate_field")
+                gate_sent = bool(gate_field) and gate_field in payload
+                width_field = _size_constraints.get("width_field", "width")
+                height_field = _size_constraints.get("height_field", "height")
+                if gate_sent:
+                    payload.pop(width_field, None)
+                    payload.pop(height_field, None)
+                else:
+                    _validate_size_constraints(
+                        _size_constraints,
+                        {
+                            width_field: payload.get(width_field),
+                            height_field: payload.get(height_field),
+                        },
+                    )
 
             return payload
 
