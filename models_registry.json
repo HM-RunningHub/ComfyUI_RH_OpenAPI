@@ -40535,7 +40535,7 @@
         "type": "INT",
         "required": false,
         "label": "width",
-        "description": "width",
+        "description": "输出宽度。仅在 resolution=empty 时生效。【注意】总像素(宽×高)须介于 921600(即1280×720) 至 4194304(即2048×2048) 之间；宽高比须在 1:16 至 16:1 之间。",
         "defaultValue": 1024,
         "min": 240,
         "max": 8192,
@@ -40546,7 +40546,7 @@
         "type": "INT",
         "required": false,
         "label": "height",
-        "description": "height",
+        "description": "输出高度。仅在 resolution=empty 时生效。【注意】总像素(宽×高)须介于 921600(即1280×720) 至 4194304(即2048×2048) 之间；宽高比须在 1:16 至 16:1 之间。",
         "defaultValue": 1024,
         "min": 240,
         "max": 8192,
@@ -40557,9 +40557,14 @@
         "type": "LIST",
         "required": false,
         "label": "resolution",
-        "description": "1、优先级高于widthxheight，传递resolution则使用resolution，不再使用widthxheight。",
+        "description": "1、优先级高于widthxheight，传递resolution则使用resolution，不再使用widthxheight。；选择empty则不传该参数，使用widthxheight",
         "defaultValue": "2k",
         "options": [
+          {
+            "value": "empty",
+            "description": "empty（不传该参数，使用widthxheight）",
+            "descriptionEn": "empty (omit this field; use widthxheight)"
+          },
           {
             "value": "1k",
             "description": "1k",
@@ -40592,7 +40597,17 @@
           }
         ]
       }
-    ]
+    ],
+    "size_constraints": {
+      "width_field": "width",
+      "height_field": "height",
+      "min_total_pixels": 921600,
+      "max_total_pixels": 4194304,
+      "min_aspect_ratio": 0.0625,
+      "max_aspect_ratio": 16,
+      "gate_field": "resolution",
+      "gate_omit_value": "empty"
+    }
   },
   {
     "class_name": "DolaSeedream50ProImageToImage",
@@ -40618,7 +40633,7 @@
         "type": "INT",
         "required": false,
         "label": "width",
-        "description": "width",
+        "description": "输出宽度。仅在 resolution=empty 时生效。【注意】总像素(宽×高)须介于 921600(即1280×720) 至 4194304(即2048×2048) 之间；宽高比须在 1:16 至 16:1 之间。",
         "defaultValue": 1024,
         "min": 240,
         "max": 8192,
@@ -40629,7 +40644,7 @@
         "type": "INT",
         "required": false,
         "label": "height",
-        "description": "height",
+        "description": "输出高度。仅在 resolution=empty 时生效。【注意】总像素(宽×高)须介于 921600(即1280×720) 至 4194304(即2048×2048) 之间；宽高比须在 1:16 至 16:1 之间。",
         "defaultValue": 1024,
         "min": 240,
         "max": 8192,
@@ -40651,9 +40666,14 @@
         "type": "LIST",
         "required": false,
         "label": "resolution",
-        "description": "优先级高于widthxheight，传递resolution则使用resolution，不再使用widthxheight",
+        "description": "优先级高于widthxheight，传递resolution则使用resolution，不再使用widthxheight；选择empty则不传该参数，使用widthxheight",
         "defaultValue": "2k",
         "options": [
+          {
+            "value": "empty",
+            "description": "empty（不传该参数，使用widthxheight）",
+            "descriptionEn": "empty (omit this field; use widthxheight)"
+          },
           {
             "value": "1k",
             "description": "1k",
@@ -40686,6 +40706,16 @@
           }
         ]
       }
-    ]
+    ],
+    "size_constraints": {
+      "width_field": "width",
+      "height_field": "height",
+      "min_total_pixels": 921600,
+      "max_total_pixels": 4194304,
+      "min_aspect_ratio": 0.0625,
+      "max_aspect_ratio": 16,
+      "gate_field": "resolution",
+      "gate_omit_value": "empty"
+    }
   }
 ]
