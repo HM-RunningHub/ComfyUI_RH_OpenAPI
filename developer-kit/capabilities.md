@@ -6,10 +6,10 @@ It gives developers and AI coding agents a fast index of available model capabil
 
 ## Summary
 
-- Total models: 372
+- Total models: 374
 - `3d` outputs: 16
 - `audio` outputs: 20
-- `image` outputs: 85
+- `image` outputs: 87
 - `string` outputs: 46
 - `video` outputs: 205
 
@@ -46,7 +46,7 @@ The AI must not infer enum values or required fields from this summary.
 
 | Endpoint | Name | Inputs | Pricing |
 | --- | --- | --- | --- |
-| `bytedance/doubao-seed-audio-1.0` | doubao-seed-audio-1.0 | text_prompt:STRING:required, speaker:STRING:optional, audio_url:AUDIO:optional, image_url:IMAGE:optional, format:LIST:optional, sample_rate:STRING:optional, speech_rate:INT:optional, loudness_rate:INT:optional, pitch_rate:INT:optional | 0.004 CNY/second |
+| `bytedance/doubao-seed-audio-1.0` | doubao-seed-audio-1.0 | text_prompt:STRING:required, speaker:STRING:optional, audio_url:AUDIO:optional, image_url:IMAGE:optional, format:LIST:optional, sample_rate:STRING:optional, speech_rate:INT:required, loudness_rate:INT:optional, pitch_rate:INT:optional | 0.004 CNY/second |
 | `minimax/music-2.6` | minimax/music-2.6 | prompt:STRING:optional, lyrics:STRING:optional, sampleRate:LIST:optional, bitrate:LIST:optional, format:LIST:optional, lyricsOptimizer:BOOLEAN:optional, isInstrumental:BOOLEAN:optional | 0.8 CNY/次 |
 | `minimax/music-cover` | minimax/music-cover | prompt:STRING:required, audioUrl:AUDIO:required, lyrics:STRING:optional, coverFeatureId:STRING:optional, sampleRate:LIST:optional, format:LIST:optional, bitrate:LIST:optional | 0.8 CNY/次 |
 | `minimax/music-cover-preprocess` | minimax/music-cover-preprocess | audioUrl:AUDIO:required | 0.8 CNY/次 |
@@ -83,6 +83,8 @@ The AI must not infer enum values or required fields from this summary.
 | `alibaba/wan-2.7/text-to-image-pro` | wan-2.7/text-to-image-pro | prompt:STRING:required, width:INT:optional, height:INT:optional, thinkingMode:BOOLEAN:optional | 0.47 CNY/次 |
 | `bytedance/jimeng-4.6/image-to-image` | bytedance/jimeng-4.6/image-to-image | prompt:STRING:required, imageUrls:IMAGE:required, width:INT:optional, height:INT:optional, scale:INT:optional, forceSingle:BOOLEAN:optional, minRatio:FLOAT:optional, maxRatio:FLOAT:optional | 0.17 CNY/张 |
 | `bytedance/jimeng-4.6/text-to-image` | bytedance/jimeng-4.6/text-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, scale:INT:optional, forceSingle:BOOLEAN:optional, minRatio:FLOAT:optional, maxRatio:FLOAT:optional | 0.17 CNY/次 |
+| `dola-Seedream-5.0-pro/image-to-image` | Dola-Seedream-5.0-pro/image-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, imageUrls:IMAGE:required, resolution:LIST:optional, outputFormat:LIST:optional | pricing available; see pricing.public.json |
+| `dola-Seedream-5.0-pro/text-to-image` | Dola-Seedream-5.0-pro/text-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, resolution:LIST:optional, outputFormat:LIST:optional | pricing available; see pricing.public.json |
 | `higgsfield/soul/image-to-image` | higgsfield/soul/image-to-image | prompt:STRING:required, imageUrl:IMAGE:required, size:LIST:required, style:LIST:optional, strength:FLOAT:optional, quality:LIST:required | 0.7-1.4 CNY/次 by quality |
 | `image-enhance/hypir-balance` | hypir-balance | imageUrl:IMAGE:required, upscale:INT:required, prompt:STRING:optional, shortEdgeSize:INT:optional, longEdgeSize:INT:optional, seed:INT:optional | 1.0 CNY/次 |
 | `image-enhance/hypir-ultra` | hypir-ultra | imageUrl:IMAGE:required, prompt:STRING:optional, shortEdgeSize:INT:optional, longEdgeSize:INT:optional, textureLevel:LIST:optional, creativityLevel:LIST:optional, upscale:INT:optional, seed:INT:optional | 0.1 CNY/次 |

@@ -39790,9 +39790,9 @@
         "fieldKey": "text_prompt",
         "type": "STRING",
         "required": true,
-        "label": "prompt",
-        "description": "音频生成提示词（必填，≤2048字符）",
-        "maxLength": 2048
+        "label": "text_prompt",
+        "description": "音频生成提示词（必填，≤3000字符）",
+        "maxLength": 3000
       },
       {
         "fieldKey": "speaker",
@@ -39862,7 +39862,7 @@
       {
         "fieldKey": "speech_rate",
         "type": "INT",
-        "required": false,
+        "required": true,
         "label": "speechRate",
         "description": "语速，[-50,100]，100=2.0倍速，-50=0.5倍速，默认 0 不调整",
         "defaultValue": 0
@@ -40321,7 +40321,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "高端护肤品电商主图，纯白柔光展台，玻璃精华瓶，商业写实摄影，柔和侧逆光，干净无杂物。16:9",
-        "maxLength": 2000
+        "maxLength": 5000
       },
       {
         "fieldKey": "width",
@@ -40350,7 +40350,7 @@
         "type": "LIST",
         "required": false,
         "label": "resolution",
-        "description": "优先级高于widthxheight，传递resolution则使用resolution，不再使用widthxheight；选择empty则不传该参数，使用widthxheight",
+        "description": "1、优先级高于widthxheight，传递resolution则使用resolution，不再使用widthxheight。；选择empty则不传该参数，使用widthxheight",
         "defaultValue": "2k",
         "options": [
           {
@@ -40419,7 +40419,7 @@
         "label": "prompt",
         "description": "prompt",
         "defaultValue": "横版复古馆藏风美妆宣传海报，藏青深蓝色哑光底，金色细线条分割拼贴版式，画面中心放置透明滴管 5% 烟酰胺亮肤精华瓶，搭配泛黄复古手稿、香氛线稿、茉莉花卉素描、复古静物老照片做拼贴装饰，烫金字体排版，主标题大字「焕亮透亮・烟酰胺精华」，底部留白标注产品核心功效，复古做旧纸张撕边纹理，轻奢高级美术馆展览质感，柔和暖调光影，8K 商业平面广告，层次丰富精致",
-        "maxLength": 2000
+        "maxLength": 5000
       },
       {
         "fieldKey": "width",
@@ -40510,5 +40510,182 @@
       "gate_field": "resolution",
       "gate_omit_value": "empty"
     }
+  },
+  {
+    "class_name": "DolaSeedream50ProTextToImage",
+    "internal_name": "RH_DolaSeedream50ProTextToImage",
+    "display_name": "RH Dola-Seedream-5.0-pro-文生图",
+    "name_cn": "Dola-Seedream-5.0-pro-文生图",
+    "name_en": "Dola-Seedream-5.0-pro/text-to-image",
+    "endpoint": "dola-Seedream-5.0-pro/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/Seedream",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "高端护肤品电商主图，纯白柔光展台，玻璃精华瓶，商业写实摄影，柔和侧逆光，干净无杂物。16:9",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "width",
+        "type": "INT",
+        "required": false,
+        "label": "width",
+        "description": "width",
+        "defaultValue": 1024,
+        "min": 240,
+        "max": 8192,
+        "step": 1
+      },
+      {
+        "fieldKey": "height",
+        "type": "INT",
+        "required": false,
+        "label": "height",
+        "description": "height",
+        "defaultValue": 1024,
+        "min": 240,
+        "max": 8192,
+        "step": 1
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "1、优先级高于widthxheight，传递resolution则使用resolution，不再使用widthxheight。",
+        "defaultValue": "2k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "outputFormat",
+        "type": "LIST",
+        "required": false,
+        "label": "outputFormat",
+        "description": "输出图片格式，可选 png / jpeg",
+        "defaultValue": "jpeg",
+        "options": [
+          {
+            "value": "jpeg",
+            "description": "jpeg",
+            "descriptionEn": "jpeg"
+          },
+          {
+            "value": "png",
+            "description": "png",
+            "descriptionEn": "png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "DolaSeedream50ProImageToImage",
+    "internal_name": "RH_DolaSeedream50ProImageToImage",
+    "display_name": "RH Dola-Seedream-5.0-pro-图生图",
+    "name_cn": "Dola-Seedream-5.0-pro-图生图",
+    "name_en": "Dola-Seedream-5.0-pro/image-to-image",
+    "endpoint": "dola-Seedream-5.0-pro/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/Seedream",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "横版复古馆藏风美妆宣传海报，藏青深蓝色哑光底，金色细线条分割拼贴版式，画面中心放置透明滴管 5% 烟酰胺亮肤精华瓶，搭配泛黄复古手稿、香氛线稿、茉莉花卉素描、复古静物老照片做拼贴装饰，烫金字体排版，主标题大字「焕亮透亮・烟酰胺精华」，底部留白标注产品核心功效，复古做旧纸张撕边纹理，轻奢高级美术馆展览质感，柔和暖调光影，8K 商业平面广告，层次丰富精致",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "width",
+        "type": "INT",
+        "required": false,
+        "label": "width",
+        "description": "width",
+        "defaultValue": 1024,
+        "min": 240,
+        "max": 8192,
+        "step": 1
+      },
+      {
+        "fieldKey": "height",
+        "type": "INT",
+        "required": false,
+        "label": "height",
+        "description": "height",
+        "defaultValue": 1024,
+        "min": 240,
+        "max": 8192,
+        "step": 1
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "multipleInputs": true,
+        "maxInputNum": 10,
+        "accept": "[\"PNG\",\"JPEG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "优先级高于widthxheight，传递resolution则使用resolution，不再使用widthxheight",
+        "defaultValue": "2k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "outputFormat",
+        "type": "LIST",
+        "required": false,
+        "label": "outputFormat",
+        "description": "输出图片格式，可选 png / jpeg",
+        "defaultValue": "jpeg",
+        "options": [
+          {
+            "value": "jpeg",
+            "description": "jpeg",
+            "descriptionEn": "jpeg"
+          },
+          {
+            "value": "png",
+            "description": "png",
+            "descriptionEn": "png"
+          }
+        ]
+      }
+    ]
   }
 ]
