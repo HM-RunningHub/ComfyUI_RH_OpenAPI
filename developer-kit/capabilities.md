@@ -6,12 +6,12 @@ It gives developers and AI coding agents a fast index of available model capabil
 
 ## Summary
 
-- Total models: 374
+- Total models: 363
 - `3d` outputs: 16
 - `audio` outputs: 20
-- `image` outputs: 87
+- `image` outputs: 85
 - `string` outputs: 46
-- `video` outputs: 205
+- `video` outputs: 196
 
 ## How To Use This File With AI
 
@@ -83,8 +83,6 @@ The AI must not infer enum values or required fields from this summary.
 | `alibaba/wan-2.7/text-to-image-pro` | wan-2.7/text-to-image-pro | prompt:STRING:required, width:INT:optional, height:INT:optional, thinkingMode:BOOLEAN:optional | 0.47 CNY/次 |
 | `bytedance/jimeng-4.6/image-to-image` | bytedance/jimeng-4.6/image-to-image | prompt:STRING:required, imageUrls:IMAGE:required, width:INT:optional, height:INT:optional, scale:INT:optional, forceSingle:BOOLEAN:optional, minRatio:FLOAT:optional, maxRatio:FLOAT:optional | 0.17 CNY/张 |
 | `bytedance/jimeng-4.6/text-to-image` | bytedance/jimeng-4.6/text-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, scale:INT:optional, forceSingle:BOOLEAN:optional, minRatio:FLOAT:optional, maxRatio:FLOAT:optional | 0.17 CNY/次 |
-| `dola-Seedream-5.0-pro/image-to-image` | Dola-Seedream-5.0-pro/image-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, imageUrls:IMAGE:required, resolution:LIST:optional, outputFormat:LIST:optional | pricing available; see pricing.public.json |
-| `dola-Seedream-5.0-pro/text-to-image` | Dola-Seedream-5.0-pro/text-to-image | prompt:STRING:required, width:INT:optional, height:INT:optional, resolution:LIST:optional, outputFormat:LIST:optional | pricing available; see pricing.public.json |
 | `higgsfield/soul/image-to-image` | higgsfield/soul/image-to-image | prompt:STRING:required, imageUrl:IMAGE:required, size:LIST:required, style:LIST:optional, strength:FLOAT:optional, quality:LIST:required | 0.7-1.4 CNY/次 by quality |
 | `image-enhance/hypir-balance` | hypir-balance | imageUrl:IMAGE:required, upscale:INT:required, prompt:STRING:optional, shortEdgeSize:INT:optional, longEdgeSize:INT:optional, seed:INT:optional | 1.0 CNY/次 |
 | `image-enhance/hypir-ultra` | hypir-ultra | imageUrl:IMAGE:required, prompt:STRING:optional, shortEdgeSize:INT:optional, longEdgeSize:INT:optional, textureLevel:LIST:optional, creativityLevel:LIST:optional, upscale:INT:optional, seed:INT:optional | 0.1 CNY/次 |
@@ -235,15 +233,6 @@ The AI must not infer enum values or required fields from this summary.
 | `alibaba/wan-2.7/video-edit` | wan-2.7/video-edit | prompt:STRING:required, videoUrl:VIDEO:optional, imageUrls:IMAGE:required, negativePrompt:STRING:optional, resolution:LIST:required, duration:LIST:required, aspectRatio:LIST:required, promptExtend:BOOLEAN:optional, seed:INT:optional | 0 CNY/次 by duration,resolution |
 | `alibaba/wan-2.7/video-extend` | wan-2.7/video-extend | prompt:STRING:optional, videoUrl:VIDEO:required, audioUrl:AUDIO:optional, negativePrompt:STRING:optional, resolution:LIST:required, duration:LIST:required, promptExtend:BOOLEAN:optional, seed:INT:optional | 0.51-0.85 CNY/秒 by resolution |
 | `bytedance/dreamactor-v2` | sd2.0/video-ref-to-video-trial | imageUrl:IMAGE:required, videoUrl:VIDEO:required | 0.32 CNY/秒 |
-| `bytedance/seedance-2.0-global-fast/image-to-video` | seedance-2.0-global-fast/image-to-video | prompt:STRING:optional, resolution:LIST:required, duration:LIST:required, firstFrameUrl:IMAGE:required, lastFrameUrl:IMAGE:optional, generateAudio:BOOLEAN:optional, ratio:LIST:optional, realPersonMode:BOOLEAN:optional, conversionSlots:LIST:optional, returnLastFrame:BOOLEAN:optional, seed:INT:optional | 0.5-1.63 CNY/second by resolution |
-| `bytedance/seedance-2.0-global-fast/multimodal-video` | seedance-2.0-global-fast/multimodal-video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, imageUrls:IMAGE:optional, videoUrls:VIDEO:optional, audioUrls:AUDIO:optional, generateAudio:BOOLEAN:optional, ratio:LIST:optional, realPersonMode:BOOLEAN:optional, conversionSlots:LIST:optional, returnLastFrame:BOOLEAN:optional, seed:INT:optional | 0.5-1.63 CNY/second by resolution |
-| `bytedance/seedance-2.0-global-fast/text-to-video` | seedance-2.0-global-fast/text-to-video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, generateAudio:BOOLEAN:optional, ratio:LIST:optional, returnLastFrame:BOOLEAN:optional, seed:INT:optional | 0.5-1.63 CNY/second by resolution |
-| `bytedance/seedance-2.0-global-mini/image-to-video` | seedance-2.0-global-mini/image-to-video | prompt:STRING:optional, resolution:LIST:required, duration:LIST:required, firstFrameUrl:IMAGE:required, lastFrameUrl:IMAGE:optional, generateAudio:BOOLEAN:optional, ratio:LIST:optional, realPersonMode:BOOLEAN:optional, conversionSlots:LIST:optional, returnLastFrame:BOOLEAN:optional, seed:INT:optional | 0.3-1.23 CNY/second by resolution |
-| `bytedance/seedance-2.0-global-mini/multimodal-video` | seedance-2.0-global-mini/multimodal-video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, imageUrls:IMAGE:optional, videoUrls:VIDEO:optional, audioUrls:AUDIO:optional, generateAudio:BOOLEAN:optional, ratio:LIST:optional, realPersonMode:BOOLEAN:optional, conversionSlots:LIST:optional, returnLastFrame:BOOLEAN:optional, seed:INT:optional | 0.3-1.23 CNY/second by resolution |
-| `bytedance/seedance-2.0-global-mini/text-to-video` | seedance-2.0-global-mini/text-to-video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, generateAudio:BOOLEAN:optional, ratio:LIST:optional, returnLastFrame:BOOLEAN:optional, seed:INT:optional | 0.3-1.23 CNY/second by resolution |
-| `bytedance/seedance-2.0-global/image-to-video` | seedance-2.0-global/image-to-video | prompt:STRING:optional, resolution:LIST:required, duration:LIST:required, firstFrameUrl:IMAGE:required, lastFrameUrl:IMAGE:optional, generateAudio:BOOLEAN:optional, ratio:LIST:optional, realPersonMode:BOOLEAN:optional, conversionSlots:LIST:optional, returnLastFrame:BOOLEAN:optional, seed:INT:optional | 0.6-6 CNY/second by resolution |
-| `bytedance/seedance-2.0-global/multimodal-video` | seedance-2.0-global/multimodal-video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, imageUrls:IMAGE:optional, videoUrls:VIDEO:optional, audioUrls:AUDIO:optional, generateAudio:BOOLEAN:optional, ratio:LIST:optional, realPersonMode:BOOLEAN:optional, conversionSlots:LIST:optional, returnLastFrame:BOOLEAN:optional, seed:INT:optional | 0.6-6 CNY/second by resolution |
-| `bytedance/seedance-2.0-global/text-to-video` | seedance-2.0-global/text-to-video | prompt:STRING:required, resolution:LIST:required, duration:LIST:required, generateAudio:BOOLEAN:optional, ratio:LIST:optional, returnLastFrame:BOOLEAN:optional, seed:INT:optional | 0.6-6 CNY/second by resolution |
 | `gemini-omni-flash/image-to-video` | gemini-omni-flash/image-to-video/channel-low-price | prompt:STRING:required, imageUrls:IMAGE:required, duration:LIST:required, resolution:LIST:required, aspectRatio:LIST:optional | 1.95-4.2 CNY/次 by resolution,duration |
 | `gemini-omni-flash/text-to-video` | gemini-omni-flash/text-to-video/channel-low-price | prompt:STRING:required, duration:LIST:required, resolution:LIST:required, aspectRatio:LIST:optional | 1.95-4.2 CNY/次 by resolution,duration |
 | `gemini-omni-flash/video-edit` | gemini-omni-flash/video-edit/channel-low-price | prompt:STRING:required, imageUrls:IMAGE:optional, resolution:LIST:required, aspectRatio:LIST:optional, videoUrl:VIDEO:required | 0.3-0.6 CNY/秒 by resolution |

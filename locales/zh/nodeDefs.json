@@ -536,24 +536,6 @@
   "RH_RhartVideoVideoFpsIncreaser": {
     "display_name": "RH RH视频帧率增强"
   },
-  "RH_BytedanceSeedance20GlobalTextToVideo": {
-    "display_name": "RH seedance2.0-global/文生视频"
-  },
-  "RH_BytedanceSeedance20GlobalImageToVideo": {
-    "display_name": "RH seedance2.0-global/图生视频"
-  },
-  "RH_BytedanceSeedance20GlobalMultimodalVideo": {
-    "display_name": "RH seedance2.0-global/多模态视频"
-  },
-  "RH_BytedanceSeedance20GlobalFastTextToVideo": {
-    "display_name": "RH seedance2.0-global-fast/文生视频"
-  },
-  "RH_BytedanceSeedance20GlobalFastImageToVideo": {
-    "display_name": "RH seedance2.0-global-fast/图生视频"
-  },
-  "RH_BytedanceSeedance20GlobalFastMultimodalVideo": {
-    "display_name": "RH seedance2.0-global-fast/多模态视频"
-  },
   "RH_RhartVideoGOfficialReferenceToVideo": {
     "display_name": "RH 全能视频X-多图参考生视频-官方稳定版"
   },
@@ -1054,15 +1036,6 @@
   },
   "RH_RhartVideoSparkvideo20MiniMultimodalVideo": {
     "display_name": "RH seedance2.0-Mini/多模态视频"
-  },
-  "RH_BytedanceSeedance20GlobalMiniTextToVideo": {
-    "display_name": "RH seedance2.0-global-Mini/文生视频"
-  },
-  "RH_BytedanceSeedance20GlobalMiniImageToVideo": {
-    "display_name": "RH seedance2.0-global-Mini/图生视频"
-  },
-  "RH_BytedanceSeedance20GlobalMiniMultimodalVideo": {
-    "display_name": "RH seedance2.0-global-Mini/多模态视频"
   },
   "RH_KlingV3TurboStdTextToVideo": {
     "display_name": "RH 可灵文生视频v3-turbo-std"

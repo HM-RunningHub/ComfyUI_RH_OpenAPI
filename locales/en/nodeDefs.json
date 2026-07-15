@@ -536,24 +536,6 @@
   "RH_RhartVideoVideoFpsIncreaser": {
     "display_name": "RH Rh Video Fps Increaser"
   },
-  "RH_BytedanceSeedance20GlobalTextToVideo": {
-    "display_name": "RH Seedance 2.0 Global Text to Video"
-  },
-  "RH_BytedanceSeedance20GlobalImageToVideo": {
-    "display_name": "RH Seedance 2.0 Global Image to Video"
-  },
-  "RH_BytedanceSeedance20GlobalMultimodalVideo": {
-    "display_name": "RH Seedance 2.0 Global Multimodal Video"
-  },
-  "RH_BytedanceSeedance20GlobalFastTextToVideo": {
-    "display_name": "RH Seedance 2.0 Global Fast Text to Video"
-  },
-  "RH_BytedanceSeedance20GlobalFastImageToVideo": {
-    "display_name": "RH Seedance 2.0 Global Fast Image to Video"
-  },
-  "RH_BytedanceSeedance20GlobalFastMultimodalVideo": {
-    "display_name": "RH Seedance 2.0 Global Fast Multimodal Video"
-  },
   "RH_RhartVideoGOfficialReferenceToVideo": {
     "display_name": "RH XAI Grok Imagine Video Reference to Video Official Stable"
   },
@@ -1054,15 +1036,6 @@
   },
   "RH_RhartVideoSparkvideo20MiniMultimodalVideo": {
     "display_name": "RH Seedance 2.0 Mini Multimodal Video"
-  },
-  "RH_BytedanceSeedance20GlobalMiniTextToVideo": {
-    "display_name": "RH Seedance 2.0 Global Mini Text to Video"
-  },
-  "RH_BytedanceSeedance20GlobalMiniImageToVideo": {
-    "display_name": "RH Seedance 2.0 Global Mini Image to Video"
-  },
-  "RH_BytedanceSeedance20GlobalMiniMultimodalVideo": {
-    "display_name": "RH Seedance 2.0 Global Mini Multimodal Video"
   },
   "RH_KlingV3TurboStdTextToVideo": {
     "display_name": "RH Kling V3 Turbo STD Text to Video"
