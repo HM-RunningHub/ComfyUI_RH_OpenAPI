@@ -38088,5 +38088,449 @@
       "gate_field": "resolution",
       "gate_omit_value": "empty"
     }
+  },
+  {
+    "class_name": "MinimaxHailuoH3MultimodalToVideo",
+    "internal_name": "RH_MinimaxHailuoH3MultimodalToVideo",
+    "display_name": "RH MiniMax-H3 多模态参考生视频",
+    "name_cn": "MiniMax-H3 多模态参考生视频",
+    "name_en": "MiniMax-H3 Multimodal Reference-to-Video",
+    "endpoint": "minimax/hailuo-h3/multimodal-to-video",
+    "output_type": "video",
+    "category": "RunningHub/MiniMax",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频生成提示词",
+        "defaultValue": "参考所附素材生成一段自然连贯的视频。",
+        "maxLength": 20480
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrls",
+        "description": "参考图（最多 9 张，<30MB/张）",
+        "multipleInputs": true,
+        "maxInputNum": 9,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "videoUrls",
+        "type": "VIDEO",
+        "required": false,
+        "label": "videoUrls",
+        "description": "参考视频（MP4/MOV，<50MB，2-15s）",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"MP4\",\"MOV\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "audioUrls",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrls",
+        "description": "参考音频（MP3/WAV，<15MB，2-15s）",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"MP3\",\"WAV\"]",
+        "maxSize": 15
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率。",
+        "defaultValue": "2K",
+        "options": [
+          {
+            "value": "2K",
+            "description": "2K",
+            "descriptionEn": "2K"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒），范围 5-15。",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      },
+      {
+        "fieldKey": "ratio",
+        "type": "LIST",
+        "required": false,
+        "label": "ratio",
+        "description": "宽高比，默认 adaptive。",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "adaptive",
+            "descriptionEn": "adaptive"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "MinimaxHailuoH3TextToVideo",
+    "internal_name": "RH_MinimaxHailuoH3TextToVideo",
+    "display_name": "RH MiniMax-H3 文生视频",
+    "name_cn": "MiniMax-H3 文生视频",
+    "name_en": "MiniMax-H3 Text-to-Video",
+    "endpoint": "minimax/hailuo-h3/text-to-video",
+    "output_type": "video",
+    "category": "RunningHub/MiniMax",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频生成提示词",
+        "defaultValue": "一个男孩在海边打篮球。",
+        "maxLength": 20480
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率。",
+        "defaultValue": "2K",
+        "options": [
+          {
+            "value": "2K",
+            "description": "2K",
+            "descriptionEn": "2K"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒），范围 5-15。",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      },
+      {
+        "fieldKey": "ratio",
+        "type": "LIST",
+        "required": false,
+        "label": "ratio",
+        "description": "宽高比，默认 adaptive。",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "adaptive",
+            "descriptionEn": "adaptive"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "MinimaxHailuoH3ImageToVideo",
+    "internal_name": "RH_MinimaxHailuoH3ImageToVideo",
+    "display_name": "RH MiniMax-H3 图生视频（首尾帧）",
+    "name_cn": "MiniMax-H3 图生视频（首尾帧）",
+    "name_en": "MiniMax-H3 Image-to-Video (first/last frame)",
+    "endpoint": "minimax/hailuo-h3/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/MiniMax",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "视频生成提示词",
+        "defaultValue": "让画面自然运动起来。",
+        "maxLength": 20480
+      },
+      {
+        "fieldKey": "firstFrameUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "firstFrameUrl",
+        "description": "首帧图（可选，与尾帧至少填一个）",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "lastFrameUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "lastFrameUrl",
+        "description": "尾帧图（可选，与首帧至少填一个）",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率。",
+        "defaultValue": "2K",
+        "options": [
+          {
+            "value": "2K",
+            "description": "2K",
+            "descriptionEn": "2K"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒），范围 5-15。",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      }
+    ]
   }
 ]

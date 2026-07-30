@@ -4,8 +4,8 @@
   "note": "Public-safe pricing summary for AI-assisted integration. Prices may change; check official RunningHub pricing before showing final costs to end users.",
   "pricing_count": 351,
   "counts_by_pricing_type": {
-    "fixed": 154,
     "parameter_based": 194,
+    "fixed": 154,
     "unparsed": 3
   },
   "pricing": [
