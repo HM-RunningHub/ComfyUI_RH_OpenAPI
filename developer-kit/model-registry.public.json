@@ -1,13 +1,13 @@
 {
   "version": "public-2026-04-29",
   "source": "models_registry.json",
-  "model_count": 366,
+  "model_count": 381,
   "counts_by_output_type": {
     "3d": 16,
     "audio": 20,
-    "image": 85,
-    "string": 46,
-    "video": 199
+    "image": 93,
+    "string": 48,
+    "video": 204
   },
   "counts_by_category": {
     "RunningHub/HiTem3D": 12,
@@ -17,7 +17,7 @@
     "RunningHub/MiniMax": 20,
     "RunningHub/RHArt Audio": 7,
     "RunningHub/Audio": 8,
-    "RunningHub/Qwe": 4,
+    "RunningHub/Qwe": 6,
     "RunningHub/Wan": 19,
     "RunningHub/Seedream": 10,
     "RunningHub/Higgsfield": 2,
@@ -25,7 +25,7 @@
     "RunningHub/Luma": 6,
     "RunningHub/Marble": 13,
     "RunningHub/RHArt Image": 38,
-    "RunningHub/TopazLabs": 6,
+    "RunningHub/TopazLabs": 19,
     "RunningHub/Youchuan": 6,
     "RunningHub/Midjourney": 2,
     "RunningHub/Kling": 46,
@@ -38068,6 +38068,2330 @@
               "value": "9:16",
               "description": "9:16",
               "descriptionEn": "9:16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class_name": "TopazlabsImageGigapixelArtAndCgi",
+      "display_name": "RH topazlabs图像放大Art and CGI",
+      "name_cn": "topazlabs图像放大Art and CGI",
+      "name_en": "topazlabs-image-gigapixel-art-and-cgi",
+      "endpoint": "topazlabs/image-gigapixel-art-and-cgi",
+      "output_type": "image",
+      "category": "RunningHub/TopazLabs",
+      "params": [
+        {
+          "fieldKey": "imageUrl",
+          "type": "IMAGE",
+          "required": true,
+          "label": "imageUrl",
+          "description": "源图像 URL",
+          "accept": "[\"JPG\",\"PNG\"]",
+          "maxSize": 50
+        },
+        {
+          "fieldKey": "outputWidth",
+          "type": "INT",
+          "required": false,
+          "label": "outputWidth",
+          "description": "目标输出宽度(像素)",
+          "defaultValue": 1920,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputHeight",
+          "type": "INT",
+          "required": false,
+          "label": "outputHeight",
+          "description": "目标输出高度(像素)",
+          "defaultValue": 1080,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputFormat",
+          "type": "LIST",
+          "required": false,
+          "label": "outputFormat",
+          "description": "输出格式",
+          "defaultValue": "jpeg",
+          "options": [
+            {
+              "value": "jpeg",
+              "description": "jpeg",
+              "descriptionEn": "jpeg"
+            },
+            {
+              "value": "jpg",
+              "description": "jpg",
+              "descriptionEn": "jpg"
+            },
+            {
+              "value": "png",
+              "description": "png",
+              "descriptionEn": "png"
+            },
+            {
+              "value": "tiff",
+              "description": "tiff",
+              "descriptionEn": "tiff"
+            },
+            {
+              "value": "tif",
+              "description": "tif",
+              "descriptionEn": "tif"
+            }
+          ]
+        },
+        {
+          "fieldKey": "cropToFill",
+          "type": "BOOLEAN",
+          "required": false,
+          "label": "cropToFill",
+          "description": "裁剪填满目标宽高",
+          "defaultValue": false
+        },
+        {
+          "fieldKey": "deblurStrength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "deblurStrength",
+          "description": "去模糊强度",
+          "defaultValue": 0.5,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "strength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "strength",
+          "description": "整体增强强度",
+          "defaultValue": 0.25,
+          "min": 0.01,
+          "max": 1,
+          "step": 0.01
+        },
+        {
+          "fieldKey": "fixCompression",
+          "type": "FLOAT",
+          "required": false,
+          "label": "fixCompression",
+          "description": "压缩伪影去除强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.01
+        },
+        {
+          "fieldKey": "denoise",
+          "type": "FLOAT",
+          "required": false,
+          "label": "denoise",
+          "description": "降噪强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.01
+        },
+        {
+          "fieldKey": "sharpen",
+          "type": "FLOAT",
+          "required": false,
+          "label": "sharpen",
+          "description": "锐化强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.01
+        },
+        {
+          "fieldKey": "subjectDetection",
+          "type": "LIST",
+          "required": false,
+          "label": "subjectDetection",
+          "description": "主体检测模式",
+          "defaultValue": "All",
+          "options": [
+            {
+              "value": "All",
+              "description": "All",
+              "descriptionEn": "All"
+            },
+            {
+              "value": "Foreground",
+              "description": "Foreground",
+              "descriptionEn": "Foreground"
+            },
+            {
+              "value": "Background",
+              "description": "Background",
+              "descriptionEn": "Background"
+            }
+          ]
+        },
+        {
+          "fieldKey": "faceEnhancement",
+          "type": "BOOLEAN",
+          "required": false,
+          "label": "faceEnhancement",
+          "description": "是否开启人脸增强",
+          "defaultValue": false
+        },
+        {
+          "fieldKey": "faceEnhancementStrength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "faceEnhancementStrength",
+          "description": "人脸增强强度",
+          "defaultValue": 0.8,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "faceEnhancementCreativity",
+          "type": "FLOAT",
+          "required": false,
+          "label": "faceEnhancementCreativity",
+          "description": "人脸增强创意",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.01
+        }
+      ]
+    },
+    {
+      "class_name": "TopazlabsImageGigapixelHighFidelity2",
+      "display_name": "RH topazlabs图像放大High Fidelity v2",
+      "name_cn": "topazlabs图像放大High Fidelity v2",
+      "name_en": "topazlabs-image-gigapixel-high-fidelity-2",
+      "endpoint": "topazlabs/image-gigapixel-high-fidelity-2",
+      "output_type": "image",
+      "category": "RunningHub/TopazLabs",
+      "params": [
+        {
+          "fieldKey": "imageUrl",
+          "type": "IMAGE",
+          "required": true,
+          "label": "imageUrl",
+          "description": "源图像 URL",
+          "accept": "[\"JPG\",\"PNG\"]",
+          "maxSize": 50
+        },
+        {
+          "fieldKey": "outputWidth",
+          "type": "INT",
+          "required": false,
+          "label": "outputWidth",
+          "description": "目标输出宽度(像素)",
+          "defaultValue": 1920,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputHeight",
+          "type": "INT",
+          "required": false,
+          "label": "outputHeight",
+          "description": "目标输出高度(像素)",
+          "defaultValue": 1080,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputFormat",
+          "type": "LIST",
+          "required": false,
+          "label": "outputFormat",
+          "description": "输出格式",
+          "defaultValue": "jpeg",
+          "options": [
+            {
+              "value": "jpeg",
+              "description": "jpeg",
+              "descriptionEn": "jpeg"
+            },
+            {
+              "value": "jpg",
+              "description": "jpg",
+              "descriptionEn": "jpg"
+            },
+            {
+              "value": "png",
+              "description": "png",
+              "descriptionEn": "png"
+            }
+          ]
+        },
+        {
+          "fieldKey": "cropToFill",
+          "type": "BOOLEAN",
+          "required": false,
+          "label": "cropToFill",
+          "description": "裁剪填满目标宽高",
+          "defaultValue": false
+        },
+        {
+          "fieldKey": "strength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "strength",
+          "description": "整体增强强度",
+          "defaultValue": 0.25,
+          "min": 0.01,
+          "max": 1,
+          "step": 0.05
+        },
+        {
+          "fieldKey": "fixCompression",
+          "type": "FLOAT",
+          "required": false,
+          "label": "fixCompression",
+          "description": "压缩伪影去除强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "denoise",
+          "type": "FLOAT",
+          "required": false,
+          "label": "denoise",
+          "description": "降噪强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "sharpen",
+          "type": "FLOAT",
+          "required": false,
+          "label": "sharpen",
+          "description": "锐化强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "subjectDetection",
+          "type": "LIST",
+          "required": false,
+          "label": "subjectDetection",
+          "description": "主体检测模式",
+          "defaultValue": "All",
+          "options": [
+            {
+              "value": "All",
+              "description": "All",
+              "descriptionEn": "All"
+            },
+            {
+              "value": "Foreground",
+              "description": "Foreground",
+              "descriptionEn": "Foreground"
+            },
+            {
+              "value": "Background",
+              "description": "Background",
+              "descriptionEn": "Background"
+            }
+          ]
+        },
+        {
+          "fieldKey": "faceEnhancement",
+          "type": "BOOLEAN",
+          "required": false,
+          "label": "faceEnhancement",
+          "description": "是否开启人脸增强",
+          "defaultValue": false
+        },
+        {
+          "fieldKey": "faceEnhancementStrength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "faceEnhancementStrength",
+          "description": "人脸增强强度",
+          "defaultValue": 0.8,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "faceEnhancementCreativity",
+          "type": "FLOAT",
+          "required": false,
+          "label": "faceEnhancementCreativity",
+          "description": "人脸增强创意",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        }
+      ]
+    },
+    {
+      "class_name": "TopazlabsImageGigapixelLowResolution2",
+      "display_name": "RH topazlabs图像放大Low Resolution v2",
+      "name_cn": "topazlabs图像放大Low Resolution v2",
+      "name_en": "topazlabs-image-gigapixel-low-resolution-2",
+      "endpoint": "topazlabs/image-gigapixel-low-resolution-2",
+      "output_type": "image",
+      "category": "RunningHub/TopazLabs",
+      "params": [
+        {
+          "fieldKey": "imageUrl",
+          "type": "IMAGE",
+          "required": true,
+          "label": "imageUrl",
+          "description": "源图像 URL",
+          "accept": "[\"JPG\",\"PNG\"]",
+          "maxSize": 50
+        },
+        {
+          "fieldKey": "outputWidth",
+          "type": "INT",
+          "required": false,
+          "label": "outputWidth",
+          "description": "目标输出宽度(像素)",
+          "defaultValue": 1920,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputHeight",
+          "type": "INT",
+          "required": false,
+          "label": "outputHeight",
+          "description": "目标输出高度(像素)",
+          "defaultValue": 1080,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputFormat",
+          "type": "LIST",
+          "required": false,
+          "label": "outputFormat",
+          "description": "输出格式",
+          "defaultValue": "jpeg",
+          "options": [
+            {
+              "value": "jpeg",
+              "description": "jpeg",
+              "descriptionEn": "jpeg"
+            },
+            {
+              "value": "jpg",
+              "description": "jpg",
+              "descriptionEn": "jpg"
+            },
+            {
+              "value": "png",
+              "description": "png",
+              "descriptionEn": "png"
+            },
+            {
+              "value": "tiff",
+              "description": "tiff",
+              "descriptionEn": "tiff"
+            },
+            {
+              "value": "tif",
+              "description": "tif",
+              "descriptionEn": "tif"
+            }
+          ]
+        },
+        {
+          "fieldKey": "cropToFill",
+          "type": "BOOLEAN",
+          "required": false,
+          "label": "cropToFill",
+          "description": "裁剪填满目标宽高",
+          "defaultValue": false
+        },
+        {
+          "fieldKey": "strength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "strength",
+          "description": "整体增强强度",
+          "defaultValue": 0.25,
+          "min": 0.01,
+          "max": 1,
+          "step": 0.05
+        },
+        {
+          "fieldKey": "fixCompression",
+          "type": "FLOAT",
+          "required": false,
+          "label": "fixCompression",
+          "description": "压缩伪影去除强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "denoise",
+          "type": "FLOAT",
+          "required": false,
+          "label": "denoise",
+          "description": "降噪强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "sharpen",
+          "type": "FLOAT",
+          "required": false,
+          "label": "sharpen",
+          "description": "锐化强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "subjectDetection",
+          "type": "LIST",
+          "required": false,
+          "label": "subjectDetection",
+          "description": "主体检测模式",
+          "defaultValue": "All",
+          "options": [
+            {
+              "value": "All",
+              "description": "All",
+              "descriptionEn": "All"
+            },
+            {
+              "value": "Foreground",
+              "description": "Foreground",
+              "descriptionEn": "Foreground"
+            },
+            {
+              "value": "Background",
+              "description": "Background",
+              "descriptionEn": "Background"
+            }
+          ]
+        },
+        {
+          "fieldKey": "faceEnhancement",
+          "type": "BOOLEAN",
+          "required": false,
+          "label": "faceEnhancement",
+          "description": "是否开启人脸增强",
+          "defaultValue": false
+        },
+        {
+          "fieldKey": "faceEnhancementStrength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "faceEnhancementStrength",
+          "description": "人脸增强强度",
+          "defaultValue": 0.8,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "faceEnhancementCreativity",
+          "type": "FLOAT",
+          "required": false,
+          "label": "faceEnhancementCreativity",
+          "description": "人脸增强创意",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        }
+      ]
+    },
+    {
+      "class_name": "TopazlabsImageGigapixelStandard2",
+      "display_name": "RH topazlabs图像放大Standard v2",
+      "name_cn": "topazlabs图像放大Standard v2",
+      "name_en": "topazlabs-image-gigapixel-standard-2",
+      "endpoint": "topazlabs/image-gigapixel-standard-2",
+      "output_type": "image",
+      "category": "RunningHub/TopazLabs",
+      "params": [
+        {
+          "fieldKey": "imageUrl",
+          "type": "IMAGE",
+          "required": true,
+          "label": "imageUrl",
+          "description": "源图像 URL",
+          "accept": "[\"JPG\",\"PNG\"]",
+          "maxSize": 50
+        },
+        {
+          "fieldKey": "outputWidth",
+          "type": "INT",
+          "required": false,
+          "label": "outputWidth",
+          "description": "目标输出宽度(像素)",
+          "defaultValue": 1920,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputHeight",
+          "type": "INT",
+          "required": false,
+          "label": "outputHeight",
+          "description": "目标输出高度(像素)",
+          "defaultValue": 1080,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputFormat",
+          "type": "LIST",
+          "required": false,
+          "label": "outputFormat",
+          "description": "输出格式",
+          "defaultValue": "jpeg",
+          "options": [
+            {
+              "value": "jpeg",
+              "description": "jpeg",
+              "descriptionEn": "jpeg"
+            },
+            {
+              "value": "jpg",
+              "description": "jpg",
+              "descriptionEn": "jpg"
+            },
+            {
+              "value": "png",
+              "description": "png",
+              "descriptionEn": "png"
+            },
+            {
+              "value": "tiff",
+              "description": "tiff",
+              "descriptionEn": "tiff"
+            },
+            {
+              "value": "tif",
+              "description": "tif",
+              "descriptionEn": "tif"
+            }
+          ]
+        },
+        {
+          "fieldKey": "cropToFill",
+          "type": "BOOLEAN",
+          "required": false,
+          "label": "cropToFill",
+          "description": "裁剪填满目标宽高",
+          "defaultValue": false
+        },
+        {
+          "fieldKey": "strength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "strength",
+          "description": "整体增强强度",
+          "defaultValue": 0.25,
+          "min": 0.01,
+          "max": 1,
+          "step": 0.05
+        },
+        {
+          "fieldKey": "fixCompression",
+          "type": "FLOAT",
+          "required": false,
+          "label": "fixCompression",
+          "description": "压缩伪影去除强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "denoise",
+          "type": "FLOAT",
+          "required": false,
+          "label": "denoise",
+          "description": "降噪强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "sharpen",
+          "type": "FLOAT",
+          "required": false,
+          "label": "sharpen",
+          "description": "锐化强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "subjectDetection",
+          "type": "LIST",
+          "required": false,
+          "label": "subjectDetection",
+          "description": "主体检测模式",
+          "defaultValue": "All",
+          "options": [
+            {
+              "value": "All",
+              "description": "All",
+              "descriptionEn": "All"
+            },
+            {
+              "value": "Foreground",
+              "description": "Foreground",
+              "descriptionEn": "Foreground"
+            },
+            {
+              "value": "Background",
+              "description": "Background",
+              "descriptionEn": "Background"
+            }
+          ]
+        },
+        {
+          "fieldKey": "faceEnhancement",
+          "type": "BOOLEAN",
+          "required": false,
+          "label": "faceEnhancement",
+          "description": "是否开启人脸增强",
+          "defaultValue": false
+        },
+        {
+          "fieldKey": "faceEnhancementStrength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "faceEnhancementStrength",
+          "description": "人脸增强强度",
+          "defaultValue": 0.8,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "faceEnhancementCreativity",
+          "type": "FLOAT",
+          "required": false,
+          "label": "faceEnhancementCreativity",
+          "description": "人脸增强创意",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        }
+      ]
+    },
+    {
+      "class_name": "TopazlabsImageGigapixelTextAndShapes",
+      "display_name": "RH topazlabs图像放大Text and Shapes",
+      "name_cn": "topazlabs图像放大Text and Shapes",
+      "name_en": "topazlabs-image-gigapixel-text-and-shapes",
+      "endpoint": "topazlabs/image-gigapixel-text-and-shapes",
+      "output_type": "image",
+      "category": "RunningHub/TopazLabs",
+      "params": [
+        {
+          "fieldKey": "imageUrl",
+          "type": "IMAGE",
+          "required": true,
+          "label": "imageUrl",
+          "description": "源图像 URL",
+          "accept": "[\"JPG\",\"PNG\"]",
+          "maxSize": 50
+        },
+        {
+          "fieldKey": "outputWidth",
+          "type": "INT",
+          "required": false,
+          "label": "outputWidth",
+          "description": "目标输出宽度(像素)",
+          "defaultValue": 1920,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputHeight",
+          "type": "INT",
+          "required": false,
+          "label": "outputHeight",
+          "description": "目标输出高度(像素)",
+          "defaultValue": 1080,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputFormat",
+          "type": "LIST",
+          "required": false,
+          "label": "outputFormat",
+          "description": "输出格式",
+          "defaultValue": "jpeg",
+          "options": [
+            {
+              "value": "jpeg",
+              "description": "jpeg",
+              "descriptionEn": "jpeg"
+            },
+            {
+              "value": "jpg",
+              "description": "jpg",
+              "descriptionEn": "jpg"
+            },
+            {
+              "value": "png",
+              "description": "png",
+              "descriptionEn": "png"
+            },
+            {
+              "value": "tiff",
+              "description": "tiff",
+              "descriptionEn": "tiff"
+            },
+            {
+              "value": "tif",
+              "description": "tif",
+              "descriptionEn": "tif"
+            }
+          ]
+        },
+        {
+          "fieldKey": "cropToFill",
+          "type": "BOOLEAN",
+          "required": false,
+          "label": "cropToFill",
+          "description": "裁剪填满目标宽高",
+          "defaultValue": false
+        },
+        {
+          "fieldKey": "strength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "strength",
+          "description": "整体增强强度",
+          "defaultValue": 0.25,
+          "min": 0.01,
+          "max": 1,
+          "step": 0.05
+        },
+        {
+          "fieldKey": "fixCompression",
+          "type": "FLOAT",
+          "required": false,
+          "label": "fixCompression",
+          "description": "压缩伪影去除强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "denoise",
+          "type": "FLOAT",
+          "required": false,
+          "label": "denoise",
+          "description": "降噪强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "sharpen",
+          "type": "FLOAT",
+          "required": false,
+          "label": "sharpen",
+          "description": "锐化强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "subjectDetection",
+          "type": "LIST",
+          "required": false,
+          "label": "subjectDetection",
+          "description": "主体检测模式",
+          "defaultValue": "All",
+          "options": [
+            {
+              "value": "All",
+              "description": "All",
+              "descriptionEn": "All"
+            },
+            {
+              "value": "Foreground",
+              "description": "Foreground",
+              "descriptionEn": "Foreground"
+            },
+            {
+              "value": "Background",
+              "description": "Background",
+              "descriptionEn": "Background"
+            }
+          ]
+        },
+        {
+          "fieldKey": "faceEnhancement",
+          "type": "BOOLEAN",
+          "required": false,
+          "label": "faceEnhancement",
+          "description": "是否开启人脸增强",
+          "defaultValue": false
+        },
+        {
+          "fieldKey": "faceEnhancementStrength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "faceEnhancementStrength",
+          "description": "人脸增强强度",
+          "defaultValue": 0.8,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "faceEnhancementCreativity",
+          "type": "FLOAT",
+          "required": false,
+          "label": "faceEnhancementCreativity",
+          "description": "人脸增强创意",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "deblurStrength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "deblurStrength",
+          "description": "去模糊强度",
+          "defaultValue": 0.5,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "decompressionStrength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "decompressionStrength",
+          "description": "解压强度",
+          "defaultValue": 0.5,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "denoiseStrength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "denoiseStrength",
+          "description": "降噪强度",
+          "defaultValue": 0.5,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "opacity",
+          "type": "FLOAT",
+          "required": false,
+          "label": "opacity",
+          "description": "不透明度",
+          "defaultValue": 1.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        }
+      ]
+    },
+    {
+      "class_name": "TopazlabsImageUpscaleDetailFaces",
+      "display_name": "RH topazlabs图像放大Detail Faces",
+      "name_cn": "topazlabs图像放大Detail Faces",
+      "name_en": "topazlabs-image-upscale-detail-faces",
+      "endpoint": "topazlabs/image-upscale-detail-faces",
+      "output_type": "image",
+      "category": "RunningHub/TopazLabs",
+      "params": [
+        {
+          "fieldKey": "imageUrl",
+          "type": "IMAGE",
+          "required": true,
+          "label": "imageUrl",
+          "description": "imageUrl",
+          "accept": "[\"JPG\",\"PNG\"]",
+          "maxSize": 50
+        },
+        {
+          "fieldKey": "outputWidth",
+          "type": "INT",
+          "required": false,
+          "label": "outputWidth",
+          "description": "输出宽度(像素)",
+          "defaultValue": 1920,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputHeight",
+          "type": "INT",
+          "required": false,
+          "label": "outputHeight",
+          "description": "输出高度(像素)",
+          "defaultValue": 1080,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "cropToFill",
+          "type": "BOOLEAN",
+          "required": false,
+          "label": "cropToFill",
+          "description": "裁切以精确填满目标宽高",
+          "defaultValue": false
+        },
+        {
+          "fieldKey": "outputFormat",
+          "type": "LIST",
+          "required": false,
+          "label": "outputFormat",
+          "description": "输出格式",
+          "defaultValue": "jpeg",
+          "options": [
+            {
+              "value": "jpeg",
+              "description": "jpeg",
+              "descriptionEn": "jpeg"
+            },
+            {
+              "value": "jpg",
+              "description": "jpg",
+              "descriptionEn": "jpg"
+            },
+            {
+              "value": "png",
+              "description": "png",
+              "descriptionEn": "png"
+            }
+          ]
+        },
+        {
+          "fieldKey": "detailStrength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "detailStrength",
+          "description": "面部细节增强强度",
+          "defaultValue": 6.0,
+          "min": 0,
+          "max": 10,
+          "step": 1
+        }
+      ]
+    },
+    {
+      "class_name": "TopazlabsImageUpscaleHighFidelityV3",
+      "display_name": "RH topazlabs图像放大High Fidelity V3",
+      "name_cn": "topazlabs图像放大High Fidelity V3",
+      "name_en": "topazlabs-image-upscale-high-fidelity-v3",
+      "endpoint": "topazlabs/image-upscale-high-fidelity-v3",
+      "output_type": "image",
+      "category": "RunningHub/TopazLabs",
+      "params": [
+        {
+          "fieldKey": "imageUrl",
+          "type": "IMAGE",
+          "required": true,
+          "label": "imageUrl",
+          "description": "imageUrl",
+          "accept": "[\"JPG\",\"PNG\"]",
+          "maxSize": 50
+        },
+        {
+          "fieldKey": "opacity",
+          "type": "FLOAT",
+          "required": false,
+          "label": "opacity",
+          "description": "不透明度",
+          "defaultValue": 1.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "recoveryStrength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "recoveryStrength",
+          "description": "恢复强度",
+          "defaultValue": 1.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "strength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "strength",
+          "description": "整体增强强度；",
+          "defaultValue": 0.25,
+          "min": 0.01,
+          "max": 1,
+          "step": 0.05
+        },
+        {
+          "fieldKey": "fixCompression",
+          "type": "FLOAT",
+          "required": false,
+          "label": "fixCompression",
+          "description": "压缩伪影去除强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "denoise",
+          "type": "FLOAT",
+          "required": false,
+          "label": "denoise",
+          "description": "降噪强度",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "sharpen",
+          "type": "FLOAT",
+          "required": false,
+          "label": "sharpen",
+          "description": "锐化强度；增强图像边缘清晰度，在 ‌Sharpen‌ 模块中调整，需避免过度锐化产生伪影 。",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "subjectDetection",
+          "type": "LIST",
+          "required": false,
+          "label": "subjectDetection",
+          "description": "主体检测模式",
+          "defaultValue": "All",
+          "options": [
+            {
+              "value": "All",
+              "description": "All",
+              "descriptionEn": "All"
+            },
+            {
+              "value": "Foreground",
+              "description": "Foreground",
+              "descriptionEn": "Foreground"
+            },
+            {
+              "value": "Background",
+              "description": "Background",
+              "descriptionEn": "Background"
+            }
+          ]
+        },
+        {
+          "fieldKey": "faceEnhancementCreativity",
+          "type": "FLOAT",
+          "required": false,
+          "label": "faceEnhancementCreativity",
+          "description": "人脸增强创意",
+          "defaultValue": 0.0,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "faceEnhancementStrength",
+          "type": "FLOAT",
+          "required": false,
+          "label": "faceEnhancementStrength",
+          "description": "Face enhancement strength",
+          "defaultValue": 0.8,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "fieldKey": "faceEnhancement",
+          "type": "BOOLEAN",
+          "required": false,
+          "label": "faceEnhancement",
+          "description": "是否开启人脸增强",
+          "defaultValue": false
+        },
+        {
+          "fieldKey": "cropToFill",
+          "type": "BOOLEAN",
+          "required": false,
+          "label": "cropToFill",
+          "description": "Crop output to exactly fill requested width and height",
+          "defaultValue": false
+        },
+        {
+          "fieldKey": "outputWidth",
+          "type": "INT",
+          "required": false,
+          "label": "outputWidth",
+          "description": "Target output width in pixels",
+          "defaultValue": 1920,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputHeight",
+          "type": "INT",
+          "required": false,
+          "label": "outputHeight",
+          "description": "Target output height in pixels",
+          "defaultValue": 1080,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputFormat",
+          "type": "LIST",
+          "required": false,
+          "label": "outputFormat",
+          "description": "Output image format",
+          "defaultValue": "jpeg",
+          "options": [
+            {
+              "value": "jpeg",
+              "description": "jpeg",
+              "descriptionEn": "jpeg"
+            },
+            {
+              "value": "jpg",
+              "description": "jpg",
+              "descriptionEn": "jpg"
+            },
+            {
+              "value": "png",
+              "description": "png",
+              "descriptionEn": "png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class_name": "TopazlabsImageUpscaleTransparent",
+      "display_name": "RH topazlabs图像放大Transparent",
+      "name_cn": "topazlabs图像放大Transparent",
+      "name_en": "topazlabs-image-upscale-transparent",
+      "endpoint": "topazlabs/image-upscale-transparent",
+      "output_type": "image",
+      "category": "RunningHub/TopazLabs",
+      "params": [
+        {
+          "fieldKey": "imageUrl",
+          "type": "IMAGE",
+          "required": true,
+          "label": "imageUrl",
+          "description": "imageUrl",
+          "accept": "[\"PNG\"]",
+          "maxSize": 50
+        },
+        {
+          "fieldKey": "outputWidth",
+          "type": "INT",
+          "required": false,
+          "label": "outputWidth",
+          "description": "输出宽度(像素)",
+          "defaultValue": 1920,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputHeight",
+          "type": "INT",
+          "required": false,
+          "label": "outputHeight",
+          "description": "输出高度(像素)",
+          "defaultValue": 1080,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "cropToFill",
+          "type": "BOOLEAN",
+          "required": false,
+          "label": "cropToFill",
+          "description": "裁切以精确填满目标宽高",
+          "defaultValue": false
+        },
+        {
+          "fieldKey": "outputFormat",
+          "type": "LIST",
+          "required": false,
+          "label": "outputFormat",
+          "description": "输出格式",
+          "defaultValue": "png",
+          "options": [
+            {
+              "value": "png",
+              "description": "png",
+              "descriptionEn": "png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class_name": "AlibabaQwen3TtsFlash",
+      "display_name": "RH 千问3-语音合成-Flash",
+      "name_cn": "千问3-语音合成-Flash",
+      "name_en": "qwen3-tts-flash",
+      "endpoint": "alibaba/qwen3-tts-flash",
+      "output_type": "string",
+      "category": "RunningHub/Qwe",
+      "params": [
+        {
+          "fieldKey": "text",
+          "type": "STRING",
+          "required": true,
+          "label": "text",
+          "description": "要合成的文本，支持多语种混合输入。最大长度 600 字符（汉字按 2 个字符计算，其余字符按 1 个字符计算）",
+          "defaultValue": "Today is a wonderful day to build something people love!",
+          "maxLength": 600
+        },
+        {
+          "fieldKey": "voice",
+          "type": "LIST",
+          "required": true,
+          "label": "voice",
+          "description": "音色（系统音色，Qwen-TTS 非实时音色列表）",
+          "defaultValue": "Cherry",
+          "options": [
+            {
+              "value": "Cherry",
+              "description": "Cherry(芊悦)·阳光积极、亲切自然小姐姐（女性）",
+              "descriptionEn": "Cherry"
+            },
+            {
+              "value": "Serena",
+              "description": "Serena(苏瑶)·温柔小姐姐（女性）",
+              "descriptionEn": "Serena"
+            },
+            {
+              "value": "Ethan",
+              "description": "Ethan(晨煦)·标准普通话，带部分北方口音。阳光、温暖、活力、朝气（男性）",
+              "descriptionEn": "Ethan"
+            },
+            {
+              "value": "Chelsie",
+              "description": "Chelsie(千雪)·二次元虚拟女友（女性）",
+              "descriptionEn": "Chelsie"
+            },
+            {
+              "value": "Momo",
+              "description": "Momo(茉兔)·撒娇搞怪，逗你开心（女性）",
+              "descriptionEn": "Momo"
+            },
+            {
+              "value": "Vivian",
+              "description": "Vivian(十三)·拽拽的、可爱的小暴躁（女性）",
+              "descriptionEn": "Vivian"
+            },
+            {
+              "value": "Moon",
+              "description": "Moon(月白)·率性帅气的月白（男性）",
+              "descriptionEn": "Moon"
+            },
+            {
+              "value": "Maia",
+              "description": "Maia(四月)·知性与温柔的碰撞（女性）",
+              "descriptionEn": "Maia"
+            },
+            {
+              "value": "Kai",
+              "description": "Kai(凯)·耳朵的一场SPA（男性）",
+              "descriptionEn": "Kai"
+            },
+            {
+              "value": "Nofish",
+              "description": "Nofish(不吃鱼)·不会翘舌音的设计师（男性）",
+              "descriptionEn": "Nofish"
+            },
+            {
+              "value": "Bella",
+              "description": "Bella(萌宝)·喝酒不打醉拳的小萝莉（女性）",
+              "descriptionEn": "Bella"
+            },
+            {
+              "value": "Jennifer",
+              "description": "Jennifer(詹妮弗)·品牌级、电影质感般美语女声（女性）",
+              "descriptionEn": "Jennifer"
+            },
+            {
+              "value": "Ryan",
+              "description": "Ryan(甜茶)·节奏拉满，戏感炸裂，真实与张力共舞（男性）",
+              "descriptionEn": "Ryan"
+            },
+            {
+              "value": "Katerina",
+              "description": "Katerina(卡捷琳娜)·御姐音色，韵律回味十足（女性）",
+              "descriptionEn": "Katerina"
+            },
+            {
+              "value": "Aiden",
+              "description": "Aiden(艾登)·精通厨艺的美语大男孩（男性）",
+              "descriptionEn": "Aiden"
+            },
+            {
+              "value": "Eldric Sage",
+              "description": "Eldric Sage(沧明子)·沉稳睿智的老者，沧桑如松却心明如镜（男性）",
+              "descriptionEn": "Eldric Sage"
+            },
+            {
+              "value": "Mia",
+              "description": "Mia(乖小妹)·温顺如春水，乖巧如初雪（女性）",
+              "descriptionEn": "Mia"
+            },
+            {
+              "value": "Mochi",
+              "description": "Mochi(沙小弥)·聪明伶俐的小大人，童真未泯却早慧如禅（男性）",
+              "descriptionEn": "Mochi"
+            },
+            {
+              "value": "Bellona",
+              "description": "Bellona(燕铮莺)·声音洪亮，吐字清晰，人物鲜活，听得人热血沸腾；金戈铁马入梦来，字正腔圆间尽显千面人声的江湖（女性）",
+              "descriptionEn": "Bellona"
+            },
+            {
+              "value": "Vincent",
+              "description": "Vincent(田叔)·一口独特的沙哑烟嗓，一开口便道尽了千军万马与江湖豪情（男性）",
+              "descriptionEn": "Vincent"
+            },
+            {
+              "value": "Bunny",
+              "description": "Bunny(萌小姬)·“萌属性”爆棚的小萝莉（女性）",
+              "descriptionEn": "Bunny"
+            },
+            {
+              "value": "Neil",
+              "description": "Neil(阿闻)·平直的基线语调，字正腔圆的咬字发音，这就是最专业的新闻主持人（男性）",
+              "descriptionEn": "Neil"
+            },
+            {
+              "value": "Elias",
+              "description": "Elias(墨讲师)·既保持学科严谨性，又通过叙事技巧将复杂知识转化为可消化的认知模块（女性）",
+              "descriptionEn": "Elias"
+            },
+            {
+              "value": "Arthur",
+              "description": "Arthur(徐大爷)·被岁月和旱烟浸泡过的质朴嗓音，不疾不徐地摇开了满村的奇闻异事（男性）",
+              "descriptionEn": "Arthur"
+            },
+            {
+              "value": "Nini",
+              "description": "Nini(邻家妹妹)·糯米糍一样又软又黏的嗓音，那一声声拉长了的“哥哥”，甜得能把人的骨头都叫酥了（女性）",
+              "descriptionEn": "Nini"
+            },
+            {
+              "value": "Seren",
+              "description": "Seren(小婉)·温和舒缓的声线，助你更快地进入睡眠，晚安，好梦（女性）",
+              "descriptionEn": "Seren"
+            },
+            {
+              "value": "Pip",
+              "description": "Pip(顽屁小孩)·调皮捣蛋却充满童真的他来了，这是你记忆中的小新吗（男性）",
+              "descriptionEn": "Pip"
+            },
+            {
+              "value": "Stella",
+              "description": "Stella(少女阿月)·平时是甜到发腻的迷糊少女音，但在喊出“代表月亮消灭你”时，瞬间充满不容置疑的爱与正义（女性）",
+              "descriptionEn": "Stella"
+            },
+            {
+              "value": "Bodega",
+              "description": "Bodega(博德加)·热情的西班牙大叔（男性）",
+              "descriptionEn": "Bodega"
+            },
+            {
+              "value": "Sonrisa",
+              "description": "Sonrisa(索尼莎)·热情开朗的拉美大姐（女性）",
+              "descriptionEn": "Sonrisa"
+            },
+            {
+              "value": "Alek",
+              "description": "Alek(阿列克)·一开口，是战斗民族的冷，也是毛呢大衣下的暖（男性）",
+              "descriptionEn": "Alek"
+            },
+            {
+              "value": "Dolce",
+              "description": "Dolce(多尔切)·慵懒的意大利大叔（男性）",
+              "descriptionEn": "Dolce"
+            },
+            {
+              "value": "Sohee",
+              "description": "Sohee(素熙)·温柔开朗，情绪丰富的韩国欧尼（女性）",
+              "descriptionEn": "Sohee"
+            },
+            {
+              "value": "Ono Anna",
+              "description": "Ono Anna(小野杏)·鬼灵精怪的青梅竹马（女性）",
+              "descriptionEn": "Ono Anna"
+            },
+            {
+              "value": "Lenn",
+              "description": "Lenn(莱恩)·理性是底色，叛逆藏在细节里——穿西装也听后朋克的德国青年（男性）",
+              "descriptionEn": "Lenn"
+            },
+            {
+              "value": "Emilien",
+              "description": "Emilien(埃米尔安)·浪漫的法国大哥哥（男性）",
+              "descriptionEn": "Emilien"
+            },
+            {
+              "value": "Andre",
+              "description": "Andre(安德雷)·声音磁性，自然舒服、沉稳男生（男性）",
+              "descriptionEn": "Andre"
+            },
+            {
+              "value": "Radio Gol",
+              "description": "Radio Gol(拉迪奥·戈尔)·足球诗人Rádio Gol！今天我要用名字为你们解说足球（男性）",
+              "descriptionEn": "Radio Gol"
+            },
+            {
+              "value": "Jada",
+              "description": "Jada(上海-阿珍)·风风火火的沪上阿姐（女性）",
+              "descriptionEn": "Jada"
+            },
+            {
+              "value": "Dylan",
+              "description": "Dylan(北京-晓东)·北京胡同里长大的少年（男性）",
+              "descriptionEn": "Dylan"
+            },
+            {
+              "value": "Li",
+              "description": "Li(南京-老李)·耐心的瑜伽老师（男性）",
+              "descriptionEn": "Li"
+            },
+            {
+              "value": "Marcus",
+              "description": "Marcus(陕西-秦川)·面宽话短，心实声沉——老陕的味道（男性）",
+              "descriptionEn": "Marcus"
+            },
+            {
+              "value": "Roy",
+              "description": "Roy(闽南-阿杰)·诙谐直爽、市井活泼的台湾哥仔形象（男性）",
+              "descriptionEn": "Roy"
+            },
+            {
+              "value": "Peter",
+              "description": "Peter(天津-李彼得)·天津相声，专业捧哏（男性）",
+              "descriptionEn": "Peter"
+            },
+            {
+              "value": "Sunny",
+              "description": "Sunny(四川-晴儿)·甜到你心里的川妹子（女性）",
+              "descriptionEn": "Sunny"
+            },
+            {
+              "value": "Eric",
+              "description": "Eric(四川-程川)·一个跳脱市井的四川成都男子（男性）",
+              "descriptionEn": "Eric"
+            },
+            {
+              "value": "Rocky",
+              "description": "Rocky(粤语-阿强)·幽默风趣的阿强，在线陪聊（男性）",
+              "descriptionEn": "Rocky"
+            },
+            {
+              "value": "Kiki",
+              "description": "Kiki(粤语-阿清)·甜美的港妹闺蜜（女性）",
+              "descriptionEn": "Kiki"
+            }
+          ]
+        },
+        {
+          "fieldKey": "languageType",
+          "type": "LIST",
+          "required": false,
+          "label": "languageType",
+          "description": "合成音频的语种，默认 Auto",
+          "defaultValue": "Auto",
+          "options": [
+            {
+              "value": "Auto",
+              "description": "自动",
+              "descriptionEn": "Auto"
+            },
+            {
+              "value": "Chinese",
+              "description": "中文",
+              "descriptionEn": "Chinese"
+            },
+            {
+              "value": "English",
+              "description": "英语",
+              "descriptionEn": "English"
+            },
+            {
+              "value": "German",
+              "description": "德语",
+              "descriptionEn": "German"
+            },
+            {
+              "value": "Italian",
+              "description": "意大利语",
+              "descriptionEn": "Italian"
+            },
+            {
+              "value": "Portuguese",
+              "description": "葡萄牙语",
+              "descriptionEn": "Portuguese"
+            },
+            {
+              "value": "Spanish",
+              "description": "西班牙语",
+              "descriptionEn": "Spanish"
+            },
+            {
+              "value": "Japanese",
+              "description": "日语",
+              "descriptionEn": "Japanese"
+            },
+            {
+              "value": "Korean",
+              "description": "韩语",
+              "descriptionEn": "Korean"
+            },
+            {
+              "value": "French",
+              "description": "法语",
+              "descriptionEn": "French"
+            },
+            {
+              "value": "Russian",
+              "description": "俄语",
+              "descriptionEn": "Russian"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class_name": "AlibabaQwen3TtsInstructFlash",
+      "display_name": "RH 千问3-语音合成-Instruct-Flash",
+      "name_cn": "千问3-语音合成-Instruct-Flash",
+      "name_en": "qwen3-tts-instruct-flash",
+      "endpoint": "alibaba/qwen3-tts-instruct-flash",
+      "output_type": "string",
+      "category": "RunningHub/Qwe",
+      "params": [
+        {
+          "fieldKey": "text",
+          "type": "STRING",
+          "required": true,
+          "label": "text",
+          "description": "要合成的文本，支持多语种混合输入。最大长度 600 字符（汉字按 2 个字符计算，其余字符按 1 个字符计算）",
+          "defaultValue": "Today is a wonderful day to build something people love!",
+          "maxLength": 600
+        },
+        {
+          "fieldKey": "instructions",
+          "type": "STRING",
+          "required": false,
+          "label": "instructions",
+          "description": "指令控制：用自然语言描述音调/语速/情感/音色（仅支持中文和英文）",
+          "maxLength": 2000
+        },
+        {
+          "fieldKey": "optimizeInstructions",
+          "type": "BOOLEAN",
+          "required": false,
+          "label": "optimizeInstructions",
+          "description": "对指令做语义优化以提升自然度（依赖 instructions）",
+          "defaultValue": false
+        },
+        {
+          "fieldKey": "voice",
+          "type": "LIST",
+          "required": true,
+          "label": "voice",
+          "description": "音色（系统音色，Qwen-TTS 非实时音色列表）",
+          "defaultValue": "Cherry",
+          "options": [
+            {
+              "value": "Cherry",
+              "description": "Cherry(芊悦)·阳光积极、亲切自然小姐姐（女性）",
+              "descriptionEn": "Cherry"
+            },
+            {
+              "value": "Serena",
+              "description": "Serena(苏瑶)·温柔小姐姐（女性）",
+              "descriptionEn": "Serena"
+            },
+            {
+              "value": "Ethan",
+              "description": "Ethan(晨煦)·标准普通话，带部分北方口音。阳光、温暖、活力、朝气（男性）",
+              "descriptionEn": "Ethan"
+            },
+            {
+              "value": "Chelsie",
+              "description": "Chelsie(千雪)·二次元虚拟女友（女性）",
+              "descriptionEn": "Chelsie"
+            },
+            {
+              "value": "Momo",
+              "description": "Momo(茉兔)·撒娇搞怪，逗你开心（女性）",
+              "descriptionEn": "Momo"
+            },
+            {
+              "value": "Vivian",
+              "description": "Vivian(十三)·拽拽的、可爱的小暴躁（女性）",
+              "descriptionEn": "Vivian"
+            },
+            {
+              "value": "Moon",
+              "description": "Moon(月白)·率性帅气的月白（男性）",
+              "descriptionEn": "Moon"
+            },
+            {
+              "value": "Maia",
+              "description": "Maia(四月)·知性与温柔的碰撞（女性）",
+              "descriptionEn": "Maia"
+            },
+            {
+              "value": "Kai",
+              "description": "Kai(凯)·耳朵的一场SPA（男性）",
+              "descriptionEn": "Kai"
+            },
+            {
+              "value": "Nofish",
+              "description": "Nofish(不吃鱼)·不会翘舌音的设计师（男性）",
+              "descriptionEn": "Nofish"
+            },
+            {
+              "value": "Bella",
+              "description": "Bella(萌宝)·喝酒不打醉拳的小萝莉（女性）",
+              "descriptionEn": "Bella"
+            },
+            {
+              "value": "Eldric Sage",
+              "description": "Eldric Sage(沧明子)·沉稳睿智的老者，沧桑如松却心明如镜（男性）",
+              "descriptionEn": "Eldric Sage"
+            },
+            {
+              "value": "Mia",
+              "description": "Mia(乖小妹)·温顺如春水，乖巧如初雪（女性）",
+              "descriptionEn": "Mia"
+            },
+            {
+              "value": "Mochi",
+              "description": "Mochi(沙小弥)·聪明伶俐的小大人，童真未泯却早慧如禅（男性）",
+              "descriptionEn": "Mochi"
+            },
+            {
+              "value": "Bellona",
+              "description": "Bellona(燕铮莺)·声音洪亮，吐字清晰，人物鲜活，听得人热血沸腾；金戈铁马入梦来，字正腔圆间尽显千面人声的江湖（女性）",
+              "descriptionEn": "Bellona"
+            },
+            {
+              "value": "Vincent",
+              "description": "Vincent(田叔)·一口独特的沙哑烟嗓，一开口便道尽了千军万马与江湖豪情（男性）",
+              "descriptionEn": "Vincent"
+            },
+            {
+              "value": "Bunny",
+              "description": "Bunny(萌小姬)·“萌属性”爆棚的小萝莉（女性）",
+              "descriptionEn": "Bunny"
+            },
+            {
+              "value": "Neil",
+              "description": "Neil(阿闻)·平直的基线语调，字正腔圆的咬字发音，这就是最专业的新闻主持人（男性）",
+              "descriptionEn": "Neil"
+            },
+            {
+              "value": "Elias",
+              "description": "Elias(墨讲师)·既保持学科严谨性，又通过叙事技巧将复杂知识转化为可消化的认知模块（女性）",
+              "descriptionEn": "Elias"
+            },
+            {
+              "value": "Arthur",
+              "description": "Arthur(徐大爷)·被岁月和旱烟浸泡过的质朴嗓音，不疾不徐地摇开了满村的奇闻异事（男性）",
+              "descriptionEn": "Arthur"
+            },
+            {
+              "value": "Nini",
+              "description": "Nini(邻家妹妹)·糯米糍一样又软又黏的嗓音，那一声声拉长了的“哥哥”，甜得能把人的骨头都叫酥了（女性）",
+              "descriptionEn": "Nini"
+            },
+            {
+              "value": "Seren",
+              "description": "Seren(小婉)·温和舒缓的声线，助你更快地进入睡眠，晚安，好梦（女性）",
+              "descriptionEn": "Seren"
+            },
+            {
+              "value": "Pip",
+              "description": "Pip(顽屁小孩)·调皮捣蛋却充满童真的他来了，这是你记忆中的小新吗（男性）",
+              "descriptionEn": "Pip"
+            },
+            {
+              "value": "Stella",
+              "description": "Stella(少女阿月)·平时是甜到发腻的迷糊少女音，但在喊出“代表月亮消灭你”时，瞬间充满不容置疑的爱与正义（女性）",
+              "descriptionEn": "Stella"
+            }
+          ]
+        },
+        {
+          "fieldKey": "languageType",
+          "type": "LIST",
+          "required": false,
+          "label": "languageType",
+          "description": "合成音频的语种，默认 Auto",
+          "defaultValue": "Auto",
+          "options": [
+            {
+              "value": "Auto",
+              "description": "自动",
+              "descriptionEn": "Auto"
+            },
+            {
+              "value": "Chinese",
+              "description": "中文",
+              "descriptionEn": "Chinese"
+            },
+            {
+              "value": "English",
+              "description": "英语",
+              "descriptionEn": "English"
+            },
+            {
+              "value": "German",
+              "description": "德语",
+              "descriptionEn": "German"
+            },
+            {
+              "value": "Italian",
+              "description": "意大利语",
+              "descriptionEn": "Italian"
+            },
+            {
+              "value": "Portuguese",
+              "description": "葡萄牙语",
+              "descriptionEn": "Portuguese"
+            },
+            {
+              "value": "Spanish",
+              "description": "西班牙语",
+              "descriptionEn": "Spanish"
+            },
+            {
+              "value": "Japanese",
+              "description": "日语",
+              "descriptionEn": "Japanese"
+            },
+            {
+              "value": "Korean",
+              "description": "韩语",
+              "descriptionEn": "Korean"
+            },
+            {
+              "value": "French",
+              "description": "法语",
+              "descriptionEn": "French"
+            },
+            {
+              "value": "Russian",
+              "description": "俄语",
+              "descriptionEn": "Russian"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class_name": "TopazlabsVideoAstra",
+      "display_name": "RH topazlabs视频放大Astra",
+      "name_cn": "topazlabs视频放大Astra",
+      "name_en": "topazlabs-video-astra",
+      "endpoint": "topazlabs/video-astra",
+      "output_type": "video",
+      "category": "RunningHub/TopazLabs",
+      "params": [
+        {
+          "fieldKey": "videoUrl",
+          "type": "VIDEO",
+          "required": true,
+          "label": "videoUrl",
+          "description": "源视频",
+          "accept": "[\"MP4\"]",
+          "maxSize": 200
+        },
+        {
+          "fieldKey": "outputWidth",
+          "type": "INT",
+          "required": true,
+          "label": "outputWidth",
+          "description": "目标输出宽度(像素)",
+          "defaultValue": 1280,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputHeight",
+          "type": "INT",
+          "required": true,
+          "label": "outputHeight",
+          "description": "目标输出高度(像素)",
+          "defaultValue": 720,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "model",
+          "type": "LIST",
+          "required": true,
+          "label": "model",
+          "description": "增强引擎代号",
+          "defaultValue": "ast-2",
+          "options": [
+            {
+              "value": "ast-2",
+              "description": "ast-2",
+              "descriptionEn": "ast-2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class_name": "TopazlabsVideoDenoise",
+      "display_name": "RH topazlabs视频降噪Denoise",
+      "name_cn": "topazlabs视频降噪Denoise",
+      "name_en": "topazlabs-video-denoise",
+      "endpoint": "topazlabs/video-denoise",
+      "output_type": "video",
+      "category": "RunningHub/TopazLabs",
+      "params": [
+        {
+          "fieldKey": "videoUrl",
+          "type": "VIDEO",
+          "required": true,
+          "label": "videoUrl",
+          "description": "源视频",
+          "accept": "[\"MP4\"]",
+          "maxSize": 200
+        },
+        {
+          "fieldKey": "outputWidth",
+          "type": "INT",
+          "required": true,
+          "label": "outputWidth",
+          "description": "目标输出宽度(像素)",
+          "defaultValue": 1280,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputHeight",
+          "type": "INT",
+          "required": true,
+          "label": "outputHeight",
+          "description": "目标输出高度(像素)",
+          "defaultValue": 720,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "model",
+          "type": "LIST",
+          "required": true,
+          "label": "model",
+          "description": "增强引擎代号",
+          "defaultValue": "nyx-3",
+          "options": [
+            {
+              "value": "nyx-3",
+              "description": "nyx-3",
+              "descriptionEn": "nyx-3"
+            },
+            {
+              "value": "nxhf-1",
+              "description": "nxhf-1",
+              "descriptionEn": "nxhf-1"
+            },
+            {
+              "value": "nxl-1",
+              "description": "nxl-1",
+              "descriptionEn": "nxl-1"
+            },
+            {
+              "value": "nxf-1",
+              "description": "nxf-1",
+              "descriptionEn": "nxf-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class_name": "TopazlabsVideoFrameInterpolation",
+      "display_name": "RH topazlabs视频补帧Frame Interpolation",
+      "name_cn": "topazlabs视频补帧Frame Interpolation",
+      "name_en": "topazlabs-video-frame-interpolation",
+      "endpoint": "topazlabs/video-frame-interpolation",
+      "output_type": "video",
+      "category": "RunningHub/TopazLabs",
+      "params": [
+        {
+          "fieldKey": "videoUrl",
+          "type": "VIDEO",
+          "required": true,
+          "label": "videoUrl",
+          "description": "源视频",
+          "accept": "[\"MP4\"]",
+          "maxSize": 200
+        },
+        {
+          "fieldKey": "outputWidth",
+          "type": "INT",
+          "required": true,
+          "label": "outputWidth",
+          "description": "目标输出宽度(像素)",
+          "defaultValue": 1280,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputHeight",
+          "type": "INT",
+          "required": true,
+          "label": "outputHeight",
+          "description": "目标输出高度(像素)",
+          "defaultValue": 720,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "model",
+          "type": "LIST",
+          "required": true,
+          "label": "model",
+          "description": "增强引擎代号",
+          "defaultValue": "apo-8",
+          "options": [
+            {
+              "value": "apo-8",
+              "description": "apo-8",
+              "descriptionEn": "apo-8"
+            },
+            {
+              "value": "apf-2",
+              "description": "apf-2",
+              "descriptionEn": "apf-2"
+            },
+            {
+              "value": "aion-1",
+              "description": "aion-1",
+              "descriptionEn": "aion-1"
+            },
+            {
+              "value": "chr-2",
+              "description": "chr-2",
+              "descriptionEn": "chr-2"
+            },
+            {
+              "value": "chf-3",
+              "description": "chf-3",
+              "descriptionEn": "chf-3"
+            }
+          ]
+        },
+        {
+          "fieldKey": "outputFrameRate",
+          "type": "INT",
+          "required": false,
+          "label": "outputFrameRate",
+          "description": "目标输出帧率(补帧)",
+          "defaultValue": 60,
+          "min": 15,
+          "max": 240,
+          "step": 1
+        }
+      ]
+    },
+    {
+      "class_name": "TopazlabsVideoProteus",
+      "display_name": "RH topazlabs视频增强Proteus",
+      "name_cn": "topazlabs视频增强Proteus",
+      "name_en": "topazlabs-video-proteus",
+      "endpoint": "topazlabs/video-proteus",
+      "output_type": "video",
+      "category": "RunningHub/TopazLabs",
+      "params": [
+        {
+          "fieldKey": "videoUrl",
+          "type": "VIDEO",
+          "required": true,
+          "label": "videoUrl",
+          "description": "源视频",
+          "accept": "[\"MP4\"]",
+          "maxSize": 200
+        },
+        {
+          "fieldKey": "outputWidth",
+          "type": "INT",
+          "required": true,
+          "label": "outputWidth",
+          "description": "目标输出宽度(像素)",
+          "defaultValue": 1280,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputHeight",
+          "type": "INT",
+          "required": true,
+          "label": "outputHeight",
+          "description": "目标输出高度(像素)",
+          "defaultValue": 720,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "model",
+          "type": "LIST",
+          "required": true,
+          "label": "model",
+          "description": "增强引擎代号",
+          "defaultValue": "prob-4",
+          "options": [
+            {
+              "value": "prob-4",
+              "description": "prob-4",
+              "descriptionEn": "prob-4"
+            },
+            {
+              "value": "pnat-1",
+              "description": "pnat-1",
+              "descriptionEn": "pnat-1"
+            },
+            {
+              "value": "rhea-1",
+              "description": "rhea-1",
+              "descriptionEn": "rhea-1"
+            },
+            {
+              "value": "thd-3",
+              "description": "thd-3",
+              "descriptionEn": "thd-3"
+            },
+            {
+              "value": "thf-4",
+              "description": "thf-4",
+              "descriptionEn": "thf-4"
+            },
+            {
+              "value": "ahq-12",
+              "description": "ahq-12",
+              "descriptionEn": "ahq-12"
+            },
+            {
+              "value": "alqs-2",
+              "description": "alqs-2",
+              "descriptionEn": "alqs-2"
+            },
+            {
+              "value": "alq-13",
+              "description": "alq-13",
+              "descriptionEn": "alq-13"
+            },
+            {
+              "value": "amqs-2",
+              "description": "amqs-2",
+              "descriptionEn": "amqs-2"
+            },
+            {
+              "value": "amq-13",
+              "description": "amq-13",
+              "descriptionEn": "amq-13"
+            },
+            {
+              "value": "ddv-3",
+              "description": "ddv-3",
+              "descriptionEn": "ddv-3"
+            },
+            {
+              "value": "dtv-4",
+              "description": "dtv-4",
+              "descriptionEn": "dtv-4"
+            },
+            {
+              "value": "dtd-4",
+              "description": "dtd-4",
+              "descriptionEn": "dtd-4"
+            },
+            {
+              "value": "dtvs-2",
+              "description": "dtvs-2",
+              "descriptionEn": "dtvs-2"
+            },
+            {
+              "value": "dtds-2",
+              "description": "dtds-2",
+              "descriptionEn": "dtds-2"
+            },
+            {
+              "value": "gcg-5",
+              "description": "gcg-5",
+              "descriptionEn": "gcg-5"
+            },
+            {
+              "value": "ghq-5",
+              "description": "ghq-5",
+              "descriptionEn": "ghq-5"
+            },
+            {
+              "value": "ganim-1",
+              "description": "ganim-1",
+              "descriptionEn": "ganim-1"
+            },
+            {
+              "value": "iris-3",
+              "description": "iris-3",
+              "descriptionEn": "iris-3"
+            },
+            {
+              "value": "iris-2",
+              "description": "iris-2",
+              "descriptionEn": "iris-2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class_name": "TopazlabsVideoStarlight",
+      "display_name": "RH topazlabs视频增强Starlight",
+      "name_cn": "topazlabs视频增强Starlight",
+      "name_en": "topazlabs-video-starlight",
+      "endpoint": "topazlabs/video-starlight",
+      "output_type": "video",
+      "category": "RunningHub/TopazLabs",
+      "params": [
+        {
+          "fieldKey": "videoUrl",
+          "type": "VIDEO",
+          "required": true,
+          "label": "videoUrl",
+          "description": "源视频",
+          "accept": "[\"MP4\"]",
+          "maxSize": 200
+        },
+        {
+          "fieldKey": "outputWidth",
+          "type": "INT",
+          "required": true,
+          "label": "outputWidth",
+          "description": "目标输出宽度(像素)",
+          "defaultValue": 1280,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "outputHeight",
+          "type": "INT",
+          "required": true,
+          "label": "outputHeight",
+          "description": "目标输出高度(像素)",
+          "defaultValue": 720,
+          "min": 1,
+          "max": 32000,
+          "step": 1
+        },
+        {
+          "fieldKey": "model",
+          "type": "LIST",
+          "required": true,
+          "label": "model",
+          "description": "增强引擎代号",
+          "defaultValue": "slp-2.5",
+          "options": [
+            {
+              "value": "slp-2.5",
+              "description": "slp-2.5",
+              "descriptionEn": "slp-2.5"
+            },
+            {
+              "value": "slhq-1",
+              "description": "slhq-1",
+              "descriptionEn": "slhq-1"
+            },
+            {
+              "value": "slm-1",
+              "description": "slm-1",
+              "descriptionEn": "slm-1"
+            },
+            {
+              "value": "wonder-1",
+              "description": "wonder-1",
+              "descriptionEn": "wonder-1"
+            },
+            {
+              "value": "slf-2",
+              "description": "slf-2",
+              "descriptionEn": "slf-2"
             }
           ]
         }
