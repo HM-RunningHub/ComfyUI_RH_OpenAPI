@@ -6,7 +6,7 @@ It gives developers and AI coding agents a fast index of available model capabil
 
 ## Summary
 
-- Total models: 363
+- Total models: 365
 - `3d` outputs: 16
 - `audio` outputs: 20
 - `image` outputs: 85
@@ -72,6 +72,8 @@ The AI must not infer enum values or required fields from this summary.
 | Endpoint | Name | Inputs | Pricing |
 | --- | --- | --- | --- |
 | `alibaba/qwen-image-2.0-pro/image-edit` | qwen-image-2.0-pro/image-edit | imageUrls:IMAGE:required, prompt:STRING:optional, negativePrompt:STRING:optional, size:LIST:optional, imageNum:LIST:optional | 0.33 CNY/张 |
+| `alibaba/qwen-image-3.0-pro/image-edit` | qwen-image-3.0-pro/image-edit | imageUrls:IMAGE:required, prompt:STRING:required, negativePrompt:STRING:optional, size:LIST:optional, imageNum:LIST:optional, promptExtend:BOOLEAN:optional, seed:INT:optional, promptExtendMode:LIST:optional | 0.7 CNY/次 by imageNum |
+| `alibaba/qwen-image-3.0-pro/text-to-image` | qwen-image-3.0-pro/text-to-image | prompt:STRING:required, negativePrompt:STRING:optional, size:LIST:optional, imageNum:LIST:optional, promptExtend:BOOLEAN:optional, seed:INT:optional, promptExtendMode:LIST:optional | 0.7 CNY/次 by imageNum |
 | `alibaba/qwen-image-2.0-pro/text-to-image` | qwen-image-2.0-pro/text-to-image | prompt:STRING:required, negativePrompt:STRING:optional, size:LIST:optional, imageNum:LIST:optional, promptExtend:BOOLEAN:optional | 0.33 CNY/张 |
 | `alibaba/qwen-image-2.0/image-edit` | qwen-image-2.0/image-edit | imageUrls:IMAGE:required, prompt:STRING:required, negativePrompt:STRING:optional, size:LIST:optional, imageNum:LIST:optional | 0.13 CNY/张 |
 | `alibaba/qwen-image-2.0/text-to-image` | qwen-image-2.0/text-to-image | prompt:STRING:required, negativePrompt:STRING:optional, size:LIST:optional, imageNum:LIST:optional, promptExtend:BOOLEAN:optional | 0.13 CNY/张 |

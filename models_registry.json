@@ -15098,6 +15098,389 @@
     ]
   },
   {
+    "class_name": "AlibabaQwenImage30ProTextToImage",
+    "internal_name": "RH_AlibabaQwenImage30ProTextToImage",
+    "display_name": "RH 千问3.0Pro-文生图",
+    "name_cn": "千问3.0Pro-文生图",
+    "name_en": "qwen-image-3.0-pro/text-to-image",
+    "endpoint": "alibaba/qwen-image-3.0-pro/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/Qwe",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "正向提示词，描述期望生成的图像内容、风格、构图和文字信息。支持中英文。",
+        "defaultValue": "一张中式茶馆开业海报，竖版构图。画面中央是一只手绘水墨风格的白鹤衔着一片茶叶，背景是远山和云雾。海报上方用毛笔书法字体写着大标题「山间茶事」，下方用细黑体写着两行小字「新店开业 · 全场八折」和「2026年8月8日」。留白大气，配色为墨绿、米白和朱砂红，高级东方美学，印刷级质感。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "反向提示词，描述不希望在画面中出现的内容。",
+        "maxLength": 500
+      },
+      {
+        "fieldKey": "size",
+        "type": "LIST",
+        "required": false,
+        "label": "size",
+        "description": "输出图像分辨率，格式为宽*高。总像素需在 512*512 至 2048*2048 之间；展示档位 1k/2k。不选择时由模型根据提示词自动推荐。",
+        "options": [
+          {
+            "value": "1024*1024",
+            "description": "1024*1024 (1:1 1k)",
+            "descriptionEn": "1024*1024 (1:1 1k)"
+          },
+          {
+            "value": "1600*1600",
+            "description": "1600*1600 (1:1 2k)",
+            "descriptionEn": "1600*1600 (1:1 2k)"
+          },
+          {
+            "value": "768*1152",
+            "description": "768*1152 (2:3 1k)",
+            "descriptionEn": "768*1152 (2:3 1k)"
+          },
+          {
+            "value": "1280*1920",
+            "description": "1280*1920 (2:3 2k)",
+            "descriptionEn": "1280*1920 (2:3 2k)"
+          },
+          {
+            "value": "1152*768",
+            "description": "1152*768 (3:2 1k)",
+            "descriptionEn": "1152*768 (3:2 1k)"
+          },
+          {
+            "value": "1920*1280",
+            "description": "1920*1280 (3:2 2k)",
+            "descriptionEn": "1920*1280 (3:2 2k)"
+          },
+          {
+            "value": "768*1024",
+            "description": "768*1024 (3:4 1k)",
+            "descriptionEn": "768*1024 (3:4 1k)"
+          },
+          {
+            "value": "1536*2048",
+            "description": "1536*2048 (3:4 2k)",
+            "descriptionEn": "1536*2048 (3:4 2k)"
+          },
+          {
+            "value": "1024*768",
+            "description": "1024*768 (4:3 1k)",
+            "descriptionEn": "1024*768 (4:3 1k)"
+          },
+          {
+            "value": "1792*1344",
+            "description": "1792*1344 (4:3 2k)",
+            "descriptionEn": "1792*1344 (4:3 2k)"
+          },
+          {
+            "value": "576*1024",
+            "description": "576*1024 (9:16 1k)",
+            "descriptionEn": "576*1024 (9:16 1k)"
+          },
+          {
+            "value": "1152*2048",
+            "description": "1152*2048 (9:16 2k)",
+            "descriptionEn": "1152*2048 (9:16 2k)"
+          },
+          {
+            "value": "1024*576",
+            "description": "1024*576 (16:9 1k)",
+            "descriptionEn": "1024*576 (16:9 1k)"
+          },
+          {
+            "value": "2048*1152",
+            "description": "2048*1152 (16:9 2k)",
+            "descriptionEn": "2048*1152 (16:9 2k)"
+          }
+        ]
+      },
+      {
+        "fieldKey": "imageNum",
+        "type": "LIST",
+        "required": false,
+        "label": "imageNum",
+        "description": "单次生成的图片数量，默认 1 张。",
+        "defaultValue": 1,
+        "options": [
+          {
+            "value": 1,
+            "description": "1",
+            "descriptionEn": "1"
+          },
+          {
+            "value": 2,
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": 3,
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": 4,
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": 5,
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": 6,
+            "description": "6",
+            "descriptionEn": "6"
+          }
+        ]
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启提示词智能改写，默认开启。开启后可提升短提示词的出图效果。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子，范围 [0, 2147483647]。固定种子可复现生成结果；不传则随机。",
+        "min": 0,
+        "max": 2147483647
+      },
+      {
+        "fieldKey": "promptExtendMode",
+        "type": "LIST",
+        "required": false,
+        "label": "promptExtendMode",
+        "description": "提示词改写方式，仅在 promptExtend 开启时生效。direct 为直接改写，agent 为智能体改写。",
+        "defaultValue": "direct",
+        "options": [
+          {
+            "value": "direct",
+            "description": "direct（直接改写）",
+            "descriptionEn": "direct"
+          },
+          {
+            "value": "agent",
+            "description": "agent（智能体改写）",
+            "descriptionEn": "agent"
+          }
+        ],
+        "tail_insert": true
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaQwenImage30ProImageEdit",
+    "internal_name": "RH_AlibabaQwenImage30ProImageEdit",
+    "display_name": "RH 千问3.0Pro-图像编辑",
+    "name_cn": "千问3.0Pro-图像编辑",
+    "name_en": "qwen-image-3.0-pro/image-edit",
+    "endpoint": "alibaba/qwen-image-3.0-pro/image-edit",
+    "output_type": "image",
+    "category": "RunningHub/Qwe",
+    "params": [
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "输入图像（1-3 张），按数组顺序定义图片顺序。支持公网 URL、OSS 临时 URL 或 Base64，建议尺寸 384~2048 像素，单图不超过 10MB。",
+        "multipleInputs": true,
+        "maxInputNum": 3,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"BMP\",\"TIFF\",\"WEBP\",\"GIF\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "图像编辑指令，描述希望保留、替换、重绘或强化的内容。支持中英文。",
+        "defaultValue": "保持主体，换成柔和傍晚光线",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "反向提示词，描述不希望在画面中出现的内容。",
+        "maxLength": 500
+      },
+      {
+        "fieldKey": "size",
+        "type": "LIST",
+        "required": false,
+        "label": "size",
+        "description": "输出图像分辨率，格式为宽*高。总像素需在 512*512 至 2048*2048 之间；展示档位 1k/2k。不选择时由模型根据提示词和输入图自动推荐。",
+        "options": [
+          {
+            "value": "1024*1024",
+            "description": "1024*1024 (1:1 1k)",
+            "descriptionEn": "1024*1024 (1:1 1k)"
+          },
+          {
+            "value": "1600*1600",
+            "description": "1600*1600 (1:1 2k)",
+            "descriptionEn": "1600*1600 (1:1 2k)"
+          },
+          {
+            "value": "768*1152",
+            "description": "768*1152 (2:3 1k)",
+            "descriptionEn": "768*1152 (2:3 1k)"
+          },
+          {
+            "value": "1280*1920",
+            "description": "1280*1920 (2:3 2k)",
+            "descriptionEn": "1280*1920 (2:3 2k)"
+          },
+          {
+            "value": "1152*768",
+            "description": "1152*768 (3:2 1k)",
+            "descriptionEn": "1152*768 (3:2 1k)"
+          },
+          {
+            "value": "1920*1280",
+            "description": "1920*1280 (3:2 2k)",
+            "descriptionEn": "1920*1280 (3:2 2k)"
+          },
+          {
+            "value": "768*1024",
+            "description": "768*1024 (3:4 1k)",
+            "descriptionEn": "768*1024 (3:4 1k)"
+          },
+          {
+            "value": "1536*2048",
+            "description": "1536*2048 (3:4 2k)",
+            "descriptionEn": "1536*2048 (3:4 2k)"
+          },
+          {
+            "value": "1024*768",
+            "description": "1024*768 (4:3 1k)",
+            "descriptionEn": "1024*768 (4:3 1k)"
+          },
+          {
+            "value": "1792*1344",
+            "description": "1792*1344 (4:3 2k)",
+            "descriptionEn": "1792*1344 (4:3 2k)"
+          },
+          {
+            "value": "576*1024",
+            "description": "576*1024 (9:16 1k)",
+            "descriptionEn": "576*1024 (9:16 1k)"
+          },
+          {
+            "value": "1152*2048",
+            "description": "1152*2048 (9:16 2k)",
+            "descriptionEn": "1152*2048 (9:16 2k)"
+          },
+          {
+            "value": "1024*576",
+            "description": "1024*576 (16:9 1k)",
+            "descriptionEn": "1024*576 (16:9 1k)"
+          },
+          {
+            "value": "2048*1152",
+            "description": "2048*1152 (16:9 2k)",
+            "descriptionEn": "2048*1152 (16:9 2k)"
+          }
+        ]
+      },
+      {
+        "fieldKey": "imageNum",
+        "type": "LIST",
+        "required": false,
+        "label": "imageNum",
+        "description": "单次生成的图片数量，默认 1 张。",
+        "defaultValue": 1,
+        "options": [
+          {
+            "value": 1,
+            "description": "1",
+            "descriptionEn": "1"
+          },
+          {
+            "value": 2,
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": 3,
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": 4,
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": 5,
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": 6,
+            "description": "6",
+            "descriptionEn": "6"
+          }
+        ]
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启提示词智能改写，默认开启。开启后可提升短编辑指令的效果。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子，范围 [0, 2147483647]。固定种子可复现生成结果；不传则随机。",
+        "min": 0,
+        "max": 2147483647
+      },
+      {
+        "fieldKey": "promptExtendMode",
+        "type": "LIST",
+        "required": false,
+        "label": "promptExtendMode",
+        "description": "提示词改写方式，仅在 promptExtend 开启时生效。direct 为直接改写，agent 为智能体改写。",
+        "defaultValue": "direct",
+        "options": [
+          {
+            "value": "direct",
+            "description": "direct（直接改写）",
+            "descriptionEn": "direct"
+          },
+          {
+            "value": "agent",
+            "description": "agent（智能体改写）",
+            "descriptionEn": "agent"
+          }
+        ],
+        "tail_insert": true
+      }
+    ]
+  },
+  {
     "class_name": "AlibabaQwenImage20ImageEdit",
     "internal_name": "RH_AlibabaQwenImage20ImageEdit",
     "display_name": "RH 千问2.0-图像编辑",

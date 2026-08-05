@@ -2,9 +2,9 @@
   "version": "public-2026-04-29",
   "source": "models_registry.json public-safe pricing summaries",
   "note": "Public-safe pricing summary for AI-assisted integration. Prices may change; check official RunningHub pricing before showing final costs to end users.",
-  "pricing_count": 351,
+  "pricing_count": 353,
   "counts_by_pricing_type": {
-    "parameter_based": 194,
+    "parameter_based": 196,
     "fixed": 154,
     "unparsed": 3
   },
@@ -208,6 +208,48 @@
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
       "price": 0.33
+    },
+    {
+      "endpoint": "alibaba/qwen-image-3.0-pro/image-edit",
+      "name_cn": "千问3.0Pro-图像编辑",
+      "name_en": "qwen-image-3.0-pro/image-edit",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "imageNum"
+      ],
+      "rules": [
+        {
+          "when": {
+            "imageNum": ""
+          },
+          "price": 0.7
+        }
+      ]
+    },
+    {
+      "endpoint": "alibaba/qwen-image-3.0-pro/text-to-image",
+      "name_cn": "千问3.0Pro-文生图",
+      "name_en": "qwen-image-3.0-pro/text-to-image",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "imageNum"
+      ],
+      "rules": [
+        {
+          "when": {
+            "imageNum": ""
+          },
+          "price": 0.7
+        }
+      ]
     },
     {
       "endpoint": "alibaba/qwen-image-2.0-pro/text-to-image",
