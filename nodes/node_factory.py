@@ -157,9 +157,15 @@ def _build_comfy_input_def(param: Dict) -> tuple:
     ft = param.get("type", "STRING")
     fk = param.get("fieldKey", "")
 
-    if ft == "LIST":
+    # SIZE is the DB field type for preset WxH lists (may include a "custom"
+    # sentinel). When options exist, render like LIST so the editor keeps a
+    # dropdown; otherwise fall through to a free-form STRING.
+    if ft in ("LIST", "SIZE"):
         options = [str(o["value"]) for o in param.get("options", [])]
         if not options:
+            if ft == "SIZE":
+                dv = param.get("defaultValue")
+                return ("STRING", {"default": "" if dv is None else str(dv)})
             return ("STRING", {"default": ""})
         # Deduplicate options case-insensitively, keep first occurrence
         seen = set()
@@ -914,7 +920,7 @@ def create_node_class(model_def: Dict) -> type:
                     # LIST params may expose an ``empty`` sentinel option
                     # meaning "don't send this field at all, use the
                     # server-side default". Skip the field entirely.
-                    if ft == "LIST" and sval == LIST_OMIT_SENTINEL:
+                    if ft in ("LIST", "SIZE") and sval == LIST_OMIT_SENTINEL:
                         continue
                     payload[fk] = sval
 
