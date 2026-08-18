@@ -44214,5 +44214,141 @@
         ]
       }
     ]
+  },
+  {
+    "class_name": "RhartImagineImage20TextToImage",
+    "internal_name": "RH_RhartImagineImage20TextToImage",
+    "display_name": "RH xai/grok-imagine-2.0/text-to-image/economy",
+    "name_cn": "xai/grok-imagine-2.0/text-to-image/economy",
+    "name_en": "xai/grok-imagine-2.0/text-to-image/economy",
+    "endpoint": "rhart-imagine-image-2.0/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "一张干净的电商主图：哑光陶瓷咖啡杯放在浅色亚麻桌布上，旁边有一小束干花与晨光，柔和棚拍光，真实材质质感，浅景深，留白构图，适合社媒与商品详情页，超清细节，无文字水印",
+        "maxLength": 4000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出图片比例（API size 白名单）",
+        "defaultValue": "1:1",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "numImages",
+        "type": "LIST",
+        "required": true,
+        "label": "numImages",
+        "description": "生成图片数量（1–12），按成功张数计费",
+        "defaultValue": "1",
+        "options": [
+          {
+            "value": "1",
+            "description": "1",
+            "descriptionEn": "1"
+          },
+          {
+            "value": "2",
+            "description": "2",
+            "descriptionEn": "2"
+          },
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          }
+        ]
+      }
+    ]
   }
 ]

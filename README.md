@@ -1,7 +1,7 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-406-blue)
+![Nodes](https://img.shields.io/badge/Nodes-407-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 [RunningHub](https://www.runninghub.cn)
 
@@ -9,11 +9,11 @@
 
 **ComfyUI_RH_OpenAPI** 是 [RunningHub 标准模型 API](https://www.runninghub.cn/call-api/standard-api) 的 **1:1 ComfyUI 实现**，并额外补充了 Seedance2.0 素材资产管理节点。
 
-本项目当前收录 401 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点、1 个 RunningHub LLM 对话节点与 1 个设置节点，总计提供 406 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型与 LLM 能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
+本项目当前收录 402 个标准模型 API 节点（覆盖主流最新的图像生成、视频生成、音频合成、3D 建模、文本理解、图像/视频放大），并新增 3 个 Seedance2.0 素材辅助节点、1 个 RunningHub LLM 对话节点与 1 个设置节点，总计提供 407 个 ComfyUI 节点，让你可以在 ComfyUI 工作流中直接调用 RunningHub 的标准模型与 LLM 能力，并通过统一的 `asset_ids` 输入或 `real_person_mode` 复用 Seedance2.0 素材资产，无需本地 GPU，无冷启动延迟。
 
 ## 📌 项目特点
 
-- **节点总量** — 共 406 个 ComfyUI 节点，其中包含 401 个标准模型节点、3 个 Seedance2.0 素材节点、1 个 RunningHub LLM 对话节点和 1 个设置节点
+- **节点总量** — 共 407 个 ComfyUI 节点，其中包含 402 个标准模型节点、3 个 Seedance2.0 素材节点、1 个 RunningHub LLM 对话节点和 1 个设置节点
 - **即插即用** — 无需下载模型、无需 GPU，只需 API Key 即可调用全部能力
 - **动态注册** — 基于 JSON 注册表自动生成节点，新模型上线后仅需更新注册表
 - **多媒体支持** — 图片、视频、音频自动上传 / 下载 / 格式转换，与 ComfyUI 原生类型无缝衔接
@@ -27,7 +27,7 @@
 
 ## 🎨 支持的模型
 
-### 图像生成（98 个节点）
+### 图像生成（99 个节点）
 
 | 模型 | RH 平台名称 | 能力 | 节点数 |
 |------|-----------|------|--------|
@@ -37,6 +37,7 @@
 | GPT Image 1.5（OpenAI） | 全能图片 G-1.5 / G-1.5 官方（旧版标记 Deprecated） | 文生图、图生图 | 4 |
 | GPT Image 2.0（OpenAI） | 全能图片 G-2 / G-2 官方 | 文生图、图生图 | 4 |
 | Grok 3 / Grok 4 Image（xAI） | 全能图片 X-3 / X-4 | 文生图、图生图 | 4 |
+| Grok Imagine Image 2.0（xAI） | xai/grok-imagine-2.0 | 文生图（economy） | 1 |
 | Grok Image 低价通道（xAI） | 全能图片 X | 文生图、图生图 | 2 |
 | Grok Image 官方（xAI） | 全能图片 X 官方 | 文生图、图像编辑 | 2 |
 | Grok Imagine Image Quality（xAI） | RHArt Imagine Image Quality | 文生图、图像编辑、高质量多图输出 | 2 |
