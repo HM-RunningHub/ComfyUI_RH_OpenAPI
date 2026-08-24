@@ -1,7 +1,6 @@
 [
   {
     "class_name": "RhartVideoSOfficialImageToVideoRealistic",
-    "internal_name": "RH_RhartVideoSOfficialImageToVideoRealistic",
     "display_name": "RH 全能视频S-图生视频-支持真人-官方稳定版",
     "name_cn": "全能视频S-图生视频-支持真人-官方稳定版",
     "name_en": "sora-2/image-to-video-realistic-official-stable",
@@ -54,7 +53,6 @@
   },
   {
     "class_name": "RhartImageV1Edit",
-    "internal_name": "RH_RhartImageV1Edit",
     "display_name": "RH 全能图片V1-图生图-低价渠道版",
     "name_cn": "全能图片V1-图生图-低价渠道版",
     "name_en": "nano-banana/edit-channel-low-price",
@@ -156,7 +154,6 @@
   },
   {
     "class_name": "RhartImageV1TextToImage",
-    "internal_name": "RH_RhartImageV1TextToImage",
     "display_name": "RH 全能图片V1-文生图-低价渠道版",
     "name_cn": "全能图片V1-文生图-低价渠道版",
     "name_en": "nano-banana/text-to-image-channel-low-price",
@@ -242,7 +239,6 @@
   },
   {
     "class_name": "RhartImageNProEdit",
-    "internal_name": "RH_RhartImageNProEdit",
     "display_name": "RH 全能图片PRO-图生图-低价渠道版",
     "name_cn": "全能图片PRO-图生图-低价渠道版",
     "name_en": "nano-banana-pro/edit-channel-low-price",
@@ -364,7 +360,6 @@
   },
   {
     "class_name": "RhartImageNProTextToImage",
-    "internal_name": "RH_RhartImageNProTextToImage",
     "display_name": "RH 全能图片PRO-文生图-低价渠道版",
     "name_cn": "全能图片PRO-文生图-低价渠道版",
     "name_en": "nano-banana-pro/text-to-image-channel-low-price",
@@ -470,7 +465,6 @@
   },
   {
     "class_name": "RhartImageNProOfficialEdit",
-    "internal_name": "RH_RhartImageNProOfficialEdit",
     "display_name": "RH 全能图片PRO-图生图-官方稳定版",
     "name_cn": "全能图片PRO-图生图-官方稳定版",
     "name_en": "nano-banana-pro/edit-official-stable",
@@ -592,7 +586,6 @@
   },
   {
     "class_name": "RhartImageNProOfficialTextToImage",
-    "internal_name": "RH_RhartImageNProOfficialTextToImage",
     "display_name": "RH 全能图片PRO-文生图-官方稳定版",
     "name_cn": "全能图片PRO-文生图-官方稳定版",
     "name_en": "nano-banana-pro/text-to-image-official-stable",
@@ -698,7 +691,6 @@
   },
   {
     "class_name": "RhartVideoV31FastTextToVideo",
-    "internal_name": "RH_RhartVideoV31FastTextToVideo",
     "display_name": "RH 全能视频V3.1-fast-文生视频-低价渠道版",
     "name_cn": "全能视频V3.1-fast-文生视频-低价渠道版",
     "name_en": "google/veo3.1-fast/text-to-video-channel-low-price",
@@ -773,7 +765,6 @@
   },
   {
     "class_name": "RhartVideoV31ProTextToVideo",
-    "internal_name": "RH_RhartVideoV31ProTextToVideo",
     "display_name": "RH 全能视频V3.1-pro-文生视频-低价渠道版",
     "name_cn": "全能视频V3.1-pro-文生视频-低价渠道版",
     "name_en": "google/veo3.1-pro/text-to-video-channel-low-price",
@@ -848,7 +839,6 @@
   },
   {
     "class_name": "RhartVideoV31FastImageToVideo",
-    "internal_name": "RH_RhartVideoV31FastImageToVideo",
     "display_name": "RH 全能视频V3.1-fast-图生视频-低价渠道版",
     "name_cn": "全能视频V3.1-fast-图生视频-低价渠道版",
     "name_en": "google/veo3.1-fast/image-to-video-channel-low-price",
@@ -940,7 +930,6 @@
   },
   {
     "class_name": "RhartVideoSSoraUploadCharacter",
-    "internal_name": "RH_RhartVideoSSoraUploadCharacter",
     "display_name": "RH 全能视频S-角色上传-低价渠道版",
     "name_cn": "全能视频S-角色上传-低价渠道版",
     "name_en": "sora-upload-character-channel-low-price",
@@ -963,7 +952,6 @@
   },
   {
     "class_name": "AlibabaWan26TextToVideo",
-    "internal_name": "RH_AlibabaWan26TextToVideo",
     "display_name": "RH 万相2.6-文生视频",
     "name_cn": "万相2.6-文生视频",
     "name_en": "alibaba/wan-2.6/text-to-video",
@@ -1057,7 +1045,6 @@
   },
   {
     "class_name": "AlibabaWan26ImageToVideo",
-    "internal_name": "RH_AlibabaWan26ImageToVideo",
     "display_name": "RH 万相2.6-图生视频",
     "name_cn": "万相2.6-图生视频",
     "name_en": "alibaba/wan-2.6/image-to-video",
@@ -1153,7 +1140,6 @@
   },
   {
     "class_name": "KlingV25TurboProTextToVideo",
-    "internal_name": "RH_KlingV25TurboProTextToVideo",
     "display_name": "RH 可灵文生视频2.5-turbo-pro",
     "name_cn": "可灵文生视频2.5-turbo-pro",
     "name_en": "kling-v2.5-turbo-pro/text-to-video",
@@ -1233,7 +1219,6 @@
   },
   {
     "class_name": "KlingV25TurboProImageToVideo",
-    "internal_name": "RH_KlingV25TurboProImageToVideo",
     "display_name": "RH 可灵图生视频2.5-turbo-pro",
     "name_cn": "可灵图生视频2.5-turbo-pro",
     "name_en": "kling-v2.5-turbo-pro/image-to-video",
@@ -1311,7 +1296,6 @@
   },
   {
     "class_name": "KlingV25TurboStdImageToVideo",
-    "internal_name": "RH_KlingV25TurboStdImageToVideo",
     "display_name": "RH 可灵图生视频2.5-turbo-std",
     "name_cn": "可灵图生视频2.5-turbo-std",
     "name_en": "kling-v2.5-turbo-std/image-to-video",
@@ -1380,7 +1364,6 @@
   },
   {
     "class_name": "ViduTextToVideo",
-    "internal_name": "RH_ViduTextToVideo",
     "display_name": "RH Vidu-文生视频-q2",
     "name_cn": "Vidu-文生视频-q2",
     "name_en": "Vidu-text-to-video-q2",
@@ -1547,7 +1530,6 @@
   },
   {
     "class_name": "ViduStartEndToVideoQ2Pro",
-    "internal_name": "RH_ViduStartEndToVideoQ2Pro",
     "display_name": "RH Vidu-首尾帧生视频-q2-pro",
     "name_cn": "Vidu-首尾帧生视频-q2-pro",
     "name_en": "Vidu-start-end-to-video-q2-pro",
@@ -1688,7 +1670,6 @@
   },
   {
     "class_name": "ViduStartEndToVideoQ2Turbo",
-    "internal_name": "RH_ViduStartEndToVideoQ2Turbo",
     "display_name": "RH Vidu-首尾帧生视频-q2-turbo",
     "name_cn": "Vidu-首尾帧生视频-q2-turbo",
     "name_en": "Vidu-start-end-to-video-q2-turbo",
@@ -1829,7 +1810,6 @@
   },
   {
     "class_name": "RhartVideoSOfficialTextToVideo",
-    "internal_name": "RH_RhartVideoSOfficialTextToVideo",
     "display_name": "RH 全能视频S-文生视频-官方稳定版",
     "name_cn": "全能视频S-文生视频-官方稳定版",
     "name_en": "sora-2/text-to-video-official-stable",
@@ -1889,7 +1869,6 @@
   },
   {
     "class_name": "SeedreamV45TextToImage",
-    "internal_name": "RH_SeedreamV45TextToImage",
     "display_name": "RH seedream-v4.5-文生图",
     "name_cn": "seedream-v4.5-文生图",
     "name_en": "seedream-v4.5/text-to-image",
@@ -1982,7 +1961,6 @@
   },
   {
     "class_name": "MinimaxHailuo02T2vStandard",
-    "internal_name": "RH_MinimaxHailuo02T2vStandard",
     "display_name": "RH 海螺-02-文生视频-标准",
     "name_cn": "海螺-02-文生视频-标准",
     "name_en": "hailuo-02-t2v-standard",
@@ -2029,7 +2007,6 @@
   },
   {
     "class_name": "MinimaxHailuo23T2vStandard",
-    "internal_name": "RH_MinimaxHailuo23T2vStandard",
     "display_name": "RH 海螺-2.3-文生视频-标准",
     "name_cn": "海螺-2.3-文生视频-标准",
     "name_en": "hailuo-2.3-t2v-standard",
@@ -2076,7 +2053,6 @@
   },
   {
     "class_name": "MinimaxHailuo02I2vStandard",
-    "internal_name": "RH_MinimaxHailuo02I2vStandard",
     "display_name": "RH 海螺-02-图生视频-标准",
     "name_cn": "海螺-02-图生视频-标准",
     "name_en": "hailuo-02-i2v-standard",
@@ -2145,7 +2121,6 @@
   },
   {
     "class_name": "MinimaxHailuo23I2vStandard",
-    "internal_name": "RH_MinimaxHailuo23I2vStandard",
     "display_name": "RH 海螺-2.3-图生视频-标准",
     "name_cn": "海螺-2.3-图生视频-标准",
     "name_en": "hailuo-2.3/i2v-standard",
@@ -2203,7 +2178,6 @@
   },
   {
     "class_name": "MinimaxHailuo23FastImageToVideo",
-    "internal_name": "RH_MinimaxHailuo23FastImageToVideo",
     "display_name": "RH 海螺-2.3-fast-图生视频",
     "name_cn": "海螺-2.3-fast-图生视频",
     "name_en": "hailuo-2.3-fast/image-to-video",
@@ -2261,7 +2235,6 @@
   },
   {
     "class_name": "MinimaxHailuo23FastProImageToVideo",
-    "internal_name": "RH_MinimaxHailuo23FastProImageToVideo",
     "display_name": "RH 海螺-2.3-fast-pro-图生视频",
     "name_cn": "海螺-2.3-fast-pro-图生视频",
     "name_en": "hailuo-2.3-fast-pro/image-to-video",
@@ -2315,7 +2288,6 @@
   },
   {
     "class_name": "SeedreamV45ImageToImage",
-    "internal_name": "RH_SeedreamV45ImageToImage",
     "display_name": "RH seedream-v4.5-图生图",
     "name_cn": "seedream-v4.5-图生图",
     "name_en": "seedream-v4.5/image-to-image",
@@ -2419,7 +2391,6 @@
   },
   {
     "class_name": "MinimaxHailuo23ImageToVideoPro",
-    "internal_name": "RH_MinimaxHailuo23ImageToVideoPro",
     "display_name": "RH 海螺-2.3-图生视频-pro",
     "name_cn": "海螺-2.3-图生视频-pro",
     "name_en": "hailuo-2.3/i2v-pro",
@@ -2459,7 +2430,6 @@
   },
   {
     "class_name": "MinimaxHailuo23T2vPro",
-    "internal_name": "RH_MinimaxHailuo23T2vPro",
     "display_name": "RH 海螺-2.3-文生视频-pro",
     "name_cn": "海螺-2.3-文生视频-pro",
     "name_en": "hailuo-2.3-t2v-pro",
@@ -2488,7 +2458,6 @@
   },
   {
     "class_name": "KlingVideoO1TextToVideo",
-    "internal_name": "RH_KlingVideoO1TextToVideo",
     "display_name": "RH 可灵文生视频o1",
     "name_cn": "可灵文生视频o1",
     "name_en": "kling-video-o1/text-to-video",
@@ -2567,7 +2536,6 @@
   },
   {
     "class_name": "MinimaxHailuo02I2vPro",
-    "internal_name": "RH_MinimaxHailuo02I2vPro",
     "display_name": "RH 海螺-02-图生视频-pro",
     "name_cn": "海螺-02-图生视频-pro",
     "name_en": "hailuo-02-i2v-pro",
@@ -2618,7 +2586,6 @@
   },
   {
     "class_name": "KlingVideoO1ImageToVideo",
-    "internal_name": "RH_KlingVideoO1ImageToVideo",
     "display_name": "RH 可灵图生视频o1",
     "name_cn": "可灵图生视频o1",
     "name_en": "kling-video-o1/image-to-video",
@@ -2708,7 +2675,6 @@
   },
   {
     "class_name": "MinimaxHailuo02T2vPro",
-    "internal_name": "RH_MinimaxHailuo02T2vPro",
     "display_name": "RH 海螺-02-文生视频-pro",
     "name_cn": "海螺-02-文生视频-pro",
     "name_en": "hailuo-02-t2v-pro",
@@ -2737,7 +2703,6 @@
   },
   {
     "class_name": "MinimaxHailuo02Standard",
-    "internal_name": "RH_MinimaxHailuo02Standard",
     "display_name": "RH 海螺-02-标准",
     "name_cn": "海螺-02-标准",
     "name_en": "hailuo-02-standard",
@@ -2806,7 +2771,6 @@
   },
   {
     "class_name": "MinimaxHailuo02Pro",
-    "internal_name": "RH_MinimaxHailuo02Pro",
     "display_name": "RH 海螺-02-pro",
     "name_cn": "海螺-02-pro",
     "name_en": "hailuo-02-pro",
@@ -2871,7 +2835,6 @@
   },
   {
     "class_name": "MinimaxHailuo02Fast",
-    "internal_name": "RH_MinimaxHailuo02Fast",
     "display_name": "RH 海螺-02-fast",
     "name_cn": "海螺-02-fast",
     "name_en": "hailuo-02-fast",
@@ -2929,7 +2892,6 @@
   },
   {
     "class_name": "KlingVideoO1StartToEnd",
-    "internal_name": "RH_KlingVideoO1StartToEnd",
     "display_name": "RH 可灵首尾帧生视频o1",
     "name_cn": "可灵首尾帧生视频o1",
     "name_en": "kling-video-o1/start-to-end",
@@ -3030,7 +2992,6 @@
   },
   {
     "class_name": "RhartVideoSOfficialImageToVideo",
-    "internal_name": "RH_RhartVideoSOfficialImageToVideo",
     "display_name": "RH 全能视频S-图生视频-官方稳定版",
     "name_cn": "全能视频S-图生视频-官方稳定版",
     "name_en": "sora-2/image-to-video-official-stable",
@@ -3083,7 +3044,6 @@
   },
   {
     "class_name": "RhartVideoSOfficialTextToVideoPro",
-    "internal_name": "RH_RhartVideoSOfficialTextToVideoPro",
     "display_name": "RH 全能视频S-文生视频-pro-官方稳定版",
     "name_cn": "全能视频S-文生视频-pro-官方稳定版",
     "name_en": "sora-2/text-to-video-pro-official-stable",
@@ -3178,7 +3138,6 @@
   },
   {
     "class_name": "RhartVideoSOfficialImageToVideoPro",
-    "internal_name": "RH_RhartVideoSOfficialImageToVideoPro",
     "display_name": "RH 全能视频S-图生视频-pro-官方稳定版",
     "name_cn": "全能视频S-图生视频-pro-官方稳定版",
     "name_en": "sora-2/image-to-video-pro-official-stable",
@@ -3262,7 +3221,6 @@
   },
   {
     "class_name": "KlingVideoO1StdRefrenceToVideo",
-    "internal_name": "RH_KlingVideoO1StdRefrenceToVideo",
     "display_name": "RH 可灵参考生视频o1",
     "name_cn": "可灵参考生视频o1",
     "name_en": "kling-video-o1-std/refrence-to-video",
@@ -3376,7 +3334,6 @@
   },
   {
     "class_name": "KlingVideoO1StdEditVideo",
-    "internal_name": "RH_KlingVideoO1StdEditVideo",
     "display_name": "RH 可灵视频编辑o1",
     "name_cn": "可灵视频编辑o1",
     "name_en": "kling-video-o1-std/edit-video",
@@ -3445,7 +3402,6 @@
   },
   {
     "class_name": "SeedreamV4TextToImage",
-    "internal_name": "RH_SeedreamV4TextToImage",
     "display_name": "RH seedream-v4-文生图",
     "name_cn": "seedream-v4-文生图",
     "name_en": "seedream-v4/text-to-image",
@@ -3543,7 +3499,6 @@
   },
   {
     "class_name": "SeedreamV4ImageToImage",
-    "internal_name": "RH_SeedreamV4ImageToImage",
     "display_name": "RH seedream-v4-图生图",
     "name_cn": "seedream-v4-图生图",
     "name_en": "seedream-v4/image-to-image",
@@ -3652,7 +3607,6 @@
   },
   {
     "class_name": "KlingV26ProTextToVideo",
-    "internal_name": "RH_KlingV26ProTextToVideo",
     "display_name": "RH 可灵文生视频2.6-pro",
     "name_cn": "可灵文生视频2.6-pro",
     "name_en": "kling-v2.6-pro-text-to-video",
@@ -3739,7 +3693,6 @@
   },
   {
     "class_name": "KlingV26ProImageToVideo",
-    "internal_name": "RH_KlingV26ProImageToVideo",
     "display_name": "RH 可灵图生视频2.6-pro",
     "name_cn": "可灵图生视频2.6-pro",
     "name_en": "kling-v2.6-pro-image-to-video",
@@ -3817,7 +3770,6 @@
   },
   {
     "class_name": "AlibabaWan26ImageToVideoFlash",
-    "internal_name": "RH_AlibabaWan26ImageToVideoFlash",
     "display_name": "RH 万相2.6-图生视频Flash",
     "name_cn": "万相2.6-图生视频Flash",
     "name_en": "wan-2.6-image-to-video-flash",
@@ -3984,7 +3936,6 @@
   },
   {
     "class_name": "ViduImageToVideoQ2Pro",
-    "internal_name": "RH_ViduImageToVideoQ2Pro",
     "display_name": "RH Vidu-图生视频-q2-pro",
     "name_cn": "Vidu-图生视频-q2-pro",
     "name_en": "Vidu-image-to-video-q2-pro",
@@ -4122,7 +4073,6 @@
   },
   {
     "class_name": "ViduImageToVideoQ2Turbo",
-    "internal_name": "RH_ViduImageToVideoQ2Turbo",
     "display_name": "RH Vidu-图生视频-q2-turbo",
     "name_cn": "Vidu-图生视频-q2-turbo",
     "name_en": "Vidu-image-to-video-q2-turbo",
@@ -4260,7 +4210,6 @@
   },
   {
     "class_name": "ViduReferenceToVideoQ2",
-    "internal_name": "RH_ViduReferenceToVideoQ2",
     "display_name": "RH Vidu-参考生视频-q2",
     "name_cn": "Vidu-参考生视频-q2",
     "name_en": "Vidu-reference-to-video-q2",
@@ -4420,7 +4369,6 @@
   },
   {
     "class_name": "SeedanceV15ProTextToVideo",
-    "internal_name": "RH_SeedanceV15ProTextToVideo",
     "display_name": "RH seedance-v1.5-pro-text-to-video",
     "name_cn": "seedance-v1.5-pro-text-to-video",
     "name_en": "seedance-v1.5-pro-text-to-video",
@@ -4601,7 +4549,6 @@
   },
   {
     "class_name": "SeedanceV15ProTextToVideoFast",
-    "internal_name": "RH_SeedanceV15ProTextToVideoFast",
     "display_name": "RH seedance-v1.5-pro-text-to-video-fast",
     "name_cn": "seedance-v1.5-pro-text-to-video-fast",
     "name_en": "seedance-v1.5-pro-text-to-video-fast",
@@ -4756,7 +4703,6 @@
   },
   {
     "class_name": "SeedanceV15ProImageToVideo",
-    "internal_name": "RH_SeedanceV15ProImageToVideo",
     "display_name": "RH seedance-v1.5-pro-image-to-video",
     "name_cn": "seedance-v1.5-pro-image-to-video",
     "name_en": "seedance-v1.5-pro-image-to-video",
@@ -4960,7 +4906,6 @@
   },
   {
     "class_name": "SeedanceV15ProImageToVideoFast",
-    "internal_name": "RH_SeedanceV15ProImageToVideoFast",
     "display_name": "RH seedance-v1.5-pro-image-to-video-fast",
     "name_cn": "seedance-v1.5-pro-image-to-video-fast",
     "name_en": "seedance-v1.5-pro-image-to-video-fast",
@@ -5141,7 +5086,6 @@
   },
   {
     "class_name": "SeedanceV1LiteReferenceToVideo",
-    "internal_name": "RH_SeedanceV1LiteReferenceToVideo",
     "display_name": "RH seedance-v1-lite-reference-to-video",
     "name_cn": "seedance-v1-lite-reference-to-video",
     "name_en": "seedance-v1-lite-reference-to-video",
@@ -5297,7 +5241,6 @@
   },
   {
     "class_name": "RhartImageNProOfficialTextToImageUltra",
-    "internal_name": "RH_RhartImageNProOfficialTextToImageUltra",
     "display_name": "RH 全能图片PRO-文生图Ultra-官方稳定版",
     "name_cn": "全能图片PRO-文生图Ultra-官方稳定版",
     "name_en": "nano-banana-pro/text-to-image-ultra-official-stable",
@@ -5398,7 +5341,6 @@
   },
   {
     "class_name": "RhartImageNProOfficialEditUltra",
-    "internal_name": "RH_RhartImageNProOfficialEditUltra",
     "display_name": "RH 全能图片PRO-图生图Ultra-官方稳定版",
     "name_cn": "全能图片PRO-图生图Ultra-官方稳定版",
     "name_en": "nano-banana-pro/edit-ultra-official-stable",
@@ -5515,7 +5457,6 @@
   },
   {
     "class_name": "RhartVideoV31FastStartEndToVideo",
-    "internal_name": "RH_RhartVideoV31FastStartEndToVideo",
     "display_name": "RH 全能视频V3.1-fast-首尾帧生视频-低价渠道版",
     "name_cn": "全能视频V3.1-fast-首尾帧生视频-低价渠道版",
     "name_en": "google/veo3.1-fast/start-end-to-video-channel-low-price",
@@ -5614,7 +5555,6 @@
   },
   {
     "class_name": "ViduReferenceToVideoQ2Pro",
-    "internal_name": "RH_ViduReferenceToVideoQ2Pro",
     "display_name": "RH Vidu-参考生视频-q2-pro",
     "name_cn": "Vidu-参考生视频-q2-pro",
     "name_en": "Vidu-reference-to-video-q2-pro",
@@ -5807,7 +5747,6 @@
   },
   {
     "class_name": "YouchuanImageToVideo",
-    "internal_name": "RH_YouchuanImageToVideo",
     "display_name": "RH 悠船图生视频",
     "name_cn": "悠船图生视频",
     "name_en": "midjourney-image-to-video",
@@ -5902,7 +5841,6 @@
   },
   {
     "class_name": "YouchuanTextToImageV6",
-    "internal_name": "RH_YouchuanTextToImageV6",
     "display_name": "RH 悠船文生图-v6",
     "name_cn": "悠船文生图-v6",
     "name_en": "midjourney-text-to-image-v6",
@@ -6120,7 +6058,6 @@
   },
   {
     "class_name": "YouchuanTextToImageV61",
-    "internal_name": "RH_YouchuanTextToImageV61",
     "display_name": "RH 悠船文生图-v61",
     "name_cn": "悠船文生图-v61",
     "name_en": "midjourney-text-to-image-v61",
@@ -6345,7 +6282,6 @@
   },
   {
     "class_name": "YouchuanTextToImageNiji6",
-    "internal_name": "RH_YouchuanTextToImageNiji6",
     "display_name": "RH 悠船文生图-niji6",
     "name_cn": "悠船文生图-niji6",
     "name_en": "midjourney-text-to-image-niji6",
@@ -6563,7 +6499,6 @@
   },
   {
     "class_name": "YouchuanTextToImageNiji7",
-    "internal_name": "RH_YouchuanTextToImageNiji7",
     "display_name": "RH 悠船文生图-niji7",
     "name_cn": "悠船文生图-niji7",
     "name_en": "midjourney-text-to-image-niji7",
@@ -6718,7 +6653,6 @@
   },
   {
     "class_name": "YouchuanTextToImageV7",
-    "internal_name": "RH_YouchuanTextToImageV7",
     "display_name": "RH 悠船文生图-v7",
     "name_cn": "悠船文生图-v7",
     "name_en": "midjourney-text-to-image-v7",
@@ -6932,7 +6866,6 @@
   },
   {
     "class_name": "ViduTextToVideoQ3Pro",
-    "internal_name": "RH_ViduTextToVideoQ3Pro",
     "display_name": "RH Vidu-文生视频-q3-pro",
     "name_cn": "Vidu-文生视频-q3-pro",
     "name_en": "Vidu-text-to-video-q3-pro",
@@ -7109,7 +7042,6 @@
   },
   {
     "class_name": "ViduImageToVideoQ3Pro",
-    "internal_name": "RH_ViduImageToVideoQ3Pro",
     "display_name": "RH Vidu-图生视频-q3-pro",
     "name_cn": "Vidu-图生视频-q3-pro",
     "name_en": "Vidu-image-to-video-q3-pro",
@@ -7253,7 +7185,6 @@
   },
   {
     "class_name": "RhartVideoV31ProStartEndToVideo",
-    "internal_name": "RH_RhartVideoV31ProStartEndToVideo",
     "display_name": "RH 全能视频V3.1-pro-首尾帧生视频-低价渠道版",
     "name_cn": "全能视频V3.1-pro-首尾帧生视频-低价渠道版",
     "name_en": "google/veo3.1-pro/start-end-to-video-channel-low-price",
@@ -7352,7 +7283,6 @@
   },
   {
     "class_name": "ViduImageToVideoQ2ProFast",
-    "internal_name": "RH_ViduImageToVideoQ2ProFast",
     "display_name": "RH Vidu-图生视频-q2-pro-fast",
     "name_cn": "Vidu-图生视频-q2-pro-fast",
     "name_en": "Vidu-image-to-video-q2-pro-fast",
@@ -7486,7 +7416,6 @@
   },
   {
     "class_name": "ViduStartEndToVideoQ2ProFast",
-    "internal_name": "RH_ViduStartEndToVideoQ2ProFast",
     "display_name": "RH Vidu-首尾帧生视频-q2-pro-fast",
     "name_cn": "Vidu-首尾帧生视频-q2-pro-fast",
     "name_en": "Vidu-start-end-to-video-q2-pro-fast",
@@ -7623,7 +7552,6 @@
   },
   {
     "class_name": "RhartAudioTextToAudioSpeech28Hd",
-    "internal_name": "RH_RhartAudioTextToAudioSpeech28Hd",
     "display_name": "RH minimax/speech-2.8-hd",
     "name_cn": "minimax/speech-2.8-hd",
     "name_en": "minimax/speech-2.8-hd",
@@ -7755,7 +7683,6 @@
   },
   {
     "class_name": "RhartAudioTextToAudioSpeech02Hd",
-    "internal_name": "RH_RhartAudioTextToAudioSpeech02Hd",
     "display_name": "RH minimax/speech-02-hd",
     "name_cn": "minimax/speech-02-hd",
     "name_en": "minimax/speech-02-hd",
@@ -7887,7 +7814,6 @@
   },
   {
     "class_name": "RhartAudioTextToAudioSpeech02Turbo",
-    "internal_name": "RH_RhartAudioTextToAudioSpeech02Turbo",
     "display_name": "RH minimax/speech-02-turbo",
     "name_cn": "minimax/speech-02-turbo",
     "name_en": "minimax/speech-02-turbo",
@@ -8019,7 +7945,6 @@
   },
   {
     "class_name": "RhartAudioTextToAudioSpeech26Hd",
-    "internal_name": "RH_RhartAudioTextToAudioSpeech26Hd",
     "display_name": "RH minimax/speech-2.6-hd",
     "name_cn": "minimax/speech-2.6-hd",
     "name_en": "minimax/speech-2.6-hd",
@@ -8151,7 +8076,6 @@
   },
   {
     "class_name": "RhartAudioTextToAudioSpeech26Turbo",
-    "internal_name": "RH_RhartAudioTextToAudioSpeech26Turbo",
     "display_name": "RH minimax/speech-2.6-turbo",
     "name_cn": "minimax/speech-2.6-turbo",
     "name_en": "minimax/speech-2.6-turbo",
@@ -8282,7 +8206,6 @@
   },
   {
     "class_name": "RhartAudioTextToAudioSpeech28Turbo",
-    "internal_name": "RH_RhartAudioTextToAudioSpeech28Turbo",
     "display_name": "RH minimax/speech-2.8-turbo",
     "name_cn": "minimax/speech-2.8-turbo",
     "name_en": "minimax/speech-2.8-turbo",
@@ -8414,7 +8337,6 @@
   },
   {
     "class_name": "KlingV30StdTextToVideo",
-    "internal_name": "RH_KlingV30StdTextToVideo",
     "display_name": "RH 可灵文生视频3.0-std",
     "name_cn": "可灵文生视频3.0-std",
     "name_en": "kling-v3.0-std-text-to-video",
@@ -8591,7 +8513,6 @@
   },
   {
     "class_name": "KlingV30StdImageToVideo",
-    "internal_name": "RH_KlingV30StdImageToVideo",
     "display_name": "RH 可灵图生视频3.0-std",
     "name_cn": "可灵图生视频3.0-std",
     "name_en": "kling-v3.0-std-image-to-video",
@@ -8760,7 +8681,6 @@
   },
   {
     "class_name": "KlingV30ProTextToVideo",
-    "internal_name": "RH_KlingV30ProTextToVideo",
     "display_name": "RH 可灵文生视频3.0-pro",
     "name_cn": "可灵文生视频3.0-pro",
     "name_en": "kling-v3.0-pro-text-to-video",
@@ -8937,7 +8857,6 @@
   },
   {
     "class_name": "KlingV30ProImageToVideo",
-    "internal_name": "RH_KlingV30ProImageToVideo",
     "display_name": "RH 可灵图生视频3.0-pro",
     "name_cn": "可灵图生视频3.0-pro",
     "name_en": "kling-v3.0-pro-image-to-video",
@@ -9106,7 +9025,6 @@
   },
   {
     "class_name": "RhartVideoGImageToVideo",
-    "internal_name": "RH_RhartVideoGImageToVideo",
     "display_name": "RH 全能视频X-图生视频-低价渠道版-v1.5",
     "name_cn": "全能视频X-图生视频-低价渠道版-v1.5",
     "name_en": "xai/grok-imagine/image-to-video-channel-low-price-v1.5",
@@ -9204,7 +9122,6 @@
   },
   {
     "class_name": "RhartVideoGTextToVideo",
-    "internal_name": "RH_RhartVideoGTextToVideo",
     "display_name": "RH 全能视频X-文生视频-低价渠道版-v1.5",
     "name_cn": "全能视频X-文生视频-低价渠道版-v1.5",
     "name_en": "xai/grok-imagine/text-to-video-channel-low-price-v1.5",
@@ -9291,7 +9208,6 @@
   },
   {
     "class_name": "Hunyuan3dV31TextTo3d",
-    "internal_name": "RH_Hunyuan3dV31TextTo3d",
     "display_name": "RH 混元文生3D模型v3.1",
     "name_cn": "混元文生3D模型v3.1",
     "name_en": "hunyuan3d-v3.1/text-to-3d",
@@ -9352,7 +9268,6 @@
   },
   {
     "class_name": "Hunyuan3dV31ImageTo3d",
-    "internal_name": "RH_Hunyuan3dV31ImageTo3d",
     "display_name": "RH 混元图生3D模型v3.1",
     "name_cn": "混元图生3D模型v3.1",
     "name_en": "hunyuan3d-v3.1/image-to-3d",
@@ -9493,7 +9408,6 @@
   },
   {
     "class_name": "KlingVideoO3StdTextToVideo",
-    "internal_name": "RH_KlingVideoO3StdTextToVideo",
     "display_name": "RH 可灵文生视频o3-std",
     "name_cn": "可灵文生视频o3-std",
     "name_en": "kling-video-o3-std-text-to-video",
@@ -9586,7 +9500,6 @@
   },
   {
     "class_name": "KlingVideoO3ProTextToVideo",
-    "internal_name": "RH_KlingVideoO3ProTextToVideo",
     "display_name": "RH 可灵文生视频o3-pro",
     "name_cn": "可灵文生视频o3-pro",
     "name_en": "kling-video-o3-pro-text-to-video",
@@ -9679,7 +9592,6 @@
   },
   {
     "class_name": "KlingVideoO3StdImageToVideo",
-    "internal_name": "RH_KlingVideoO3StdImageToVideo",
     "display_name": "RH 可灵图生视频o3-std",
     "name_cn": "可灵图生视频o3-std",
     "name_en": "kling-video-o3-std-image-to-video",
@@ -9765,7 +9677,6 @@
   },
   {
     "class_name": "KlingVideoO3ProImageToVideo",
-    "internal_name": "RH_KlingVideoO3ProImageToVideo",
     "display_name": "RH 可灵图生视频o3-pro",
     "name_cn": "可灵图生视频o3-pro",
     "name_en": "kling-video-o3-pro-image-to-video",
@@ -9851,7 +9762,6 @@
   },
   {
     "class_name": "ViduTextToVideoQ3Turbo",
-    "internal_name": "RH_ViduTextToVideoQ3Turbo",
     "display_name": "RH Vidu-文生视频-q3-turbo",
     "name_cn": "Vidu-文生视频-q3-turbo",
     "name_en": "Vidu-text-to-video-q3-turbo",
@@ -10024,7 +9934,6 @@
   },
   {
     "class_name": "ViduImageToVideoQ3Turbo",
-    "internal_name": "RH_ViduImageToVideoQ3Turbo",
     "display_name": "RH Vidu-图生视频-q3-turbo",
     "name_cn": "Vidu-图生视频-q3-turbo",
     "name_en": "Vidu-image-to-video-q3-turbo",
@@ -10160,7 +10069,6 @@
   },
   {
     "class_name": "ViduStartEndToVideoQ3Turbo",
-    "internal_name": "RH_ViduStartEndToVideoQ3Turbo",
     "display_name": "RH Vidu-首尾帧生视频-q3-turbo",
     "name_cn": "Vidu-首尾帧生视频-q3-turbo",
     "name_en": "Vidu-start-end-to-video-q3-turbo",
@@ -10333,7 +10241,6 @@
   },
   {
     "class_name": "ViduStartEndToVideoQ3Pro",
-    "internal_name": "RH_ViduStartEndToVideoQ3Pro",
     "display_name": "RH Vidu-首尾帧生视频-q3-pro",
     "name_cn": "Vidu-首尾帧生视频-q3-pro",
     "name_en": "Vidu-start-end-to-video-q3-pro",
@@ -10506,7 +10413,6 @@
   },
   {
     "class_name": "RhartAudioTextToAudioMusic25",
-    "internal_name": "RH_RhartAudioTextToAudioMusic25",
     "display_name": "RH minimax/music-2.5",
     "name_cn": "minimax/music-2.5",
     "name_en": "minimax/music-2.5",
@@ -10590,7 +10496,6 @@
   },
   {
     "class_name": "KlingV26StdMotionControl",
-    "internal_name": "RH_KlingV26StdMotionControl",
     "display_name": "RH kling-v2.6-std-动作控制",
     "name_cn": "kling-v2.6-std-动作控制",
     "name_en": "kling-v2.6-std-motion-control",
@@ -10668,7 +10573,6 @@
   },
   {
     "class_name": "KlingV26ProMotionControl",
-    "internal_name": "RH_KlingV26ProMotionControl",
     "display_name": "RH kling-v2.6-pro-动作控制",
     "name_cn": "kling-v2.6-pro-动作控制",
     "name_en": "kling-v2.6-pro-motion-control",
@@ -10746,7 +10650,6 @@
   },
   {
     "class_name": "RhartAudioTextToAudioVoiceClone",
-    "internal_name": "RH_RhartAudioTextToAudioVoiceClone",
     "display_name": "RH minimax/voice-clone",
     "name_cn": "minimax/voice-clone",
     "name_en": "minimax/voice-clone",
@@ -10994,7 +10897,6 @@
   },
   {
     "class_name": "RhartVideoV31ProOfficialTextToVideo",
-    "internal_name": "RH_RhartVideoV31ProOfficialTextToVideo",
     "display_name": "RH 全能视频V3.1-pro-文生视频-官方稳定版",
     "name_cn": "全能视频V3.1-pro-文生视频-官方稳定版",
     "name_en": "google/veo3.1-pro/text-to-video-official-stable",
@@ -11100,7 +11002,6 @@
   },
   {
     "class_name": "RhartVideoV31ProOfficialImageToVideo",
-    "internal_name": "RH_RhartVideoV31ProOfficialImageToVideo",
     "display_name": "RH 全能视频V3.1-pro-图生视频-官方稳定版",
     "name_cn": "全能视频V3.1-pro-图生视频-官方稳定版",
     "name_en": "google/veo3.1-pro/image-to-video-official-stable",
@@ -11228,7 +11129,6 @@
   },
   {
     "class_name": "RhartVideoV31FastOfficialTextToVideo",
-    "internal_name": "RH_RhartVideoV31FastOfficialTextToVideo",
     "display_name": "RH 全能视频V3.1-fast-文生视频-官方稳定版",
     "name_cn": "全能视频V3.1-fast-文生视频-官方稳定版",
     "name_en": "google/veo3.1-fast/text-to-video-official-stable",
@@ -11334,7 +11234,6 @@
   },
   {
     "class_name": "RhartVideoV31ProOfficialReferenceToVideo",
-    "internal_name": "RH_RhartVideoV31ProOfficialReferenceToVideo",
     "display_name": "RH 全能视频V3.1-pro-参考生视频-官方稳定版",
     "name_cn": "全能视频V3.1-pro-参考生视频-官方稳定版",
     "name_en": "google/veo3.1-pro/reference-to-video-official-stable",
@@ -11411,7 +11310,6 @@
   },
   {
     "class_name": "RhartVideoV31FastOfficialVideoExtend",
-    "internal_name": "RH_RhartVideoV31FastOfficialVideoExtend",
     "display_name": "RH 全能视频V3.1-fast-视频扩展-官方稳定版",
     "name_cn": "全能视频V3.1-fast-视频扩展-官方稳定版",
     "name_en": "google/veo3.1-fast/video-extend-official-stable",
@@ -11475,7 +11373,6 @@
   },
   {
     "class_name": "RhartVideoV31FastOfficialImageToVideo",
-    "internal_name": "RH_RhartVideoV31FastOfficialImageToVideo",
     "display_name": "RH 全能视频V3.1-fast-图生视频-官方稳定版",
     "name_cn": "全能视频V3.1-fast-图生视频-官方稳定版",
     "name_en": "google/veo3.1-fast/image-to-video-official-stable",
@@ -11603,7 +11500,6 @@
   },
   {
     "class_name": "RhartVideoV31ProOfficialVideoExtend",
-    "internal_name": "RH_RhartVideoV31ProOfficialVideoExtend",
     "display_name": "RH 全能视频V3.1-pro-视频扩展-官方稳定版",
     "name_cn": "全能视频V3.1-pro-视频扩展-官方稳定版",
     "name_en": "google/veo3.1-pro/video-extend-official-stable",
@@ -11667,7 +11563,6 @@
   },
   {
     "class_name": "SeedreamV5LiteTextToImage",
-    "internal_name": "RH_SeedreamV5LiteTextToImage",
     "display_name": "RH seedream-v5-lite-文生图",
     "name_cn": "seedream-v5-lite-文生图",
     "name_en": "seedream-v5-lite/text-to-image",
@@ -11775,7 +11670,6 @@
   },
   {
     "class_name": "SeedreamV5LiteImageToImage",
-    "internal_name": "RH_SeedreamV5LiteImageToImage",
     "display_name": "RH seedream-v5-lite-图生图",
     "name_cn": "seedream-v5-lite-图生图",
     "name_en": "seedream-v5-lite/image-to-image",
@@ -11879,7 +11773,6 @@
   },
   {
     "class_name": "RhartImageNG31FlashTextToImage",
-    "internal_name": "RH_RhartImageNG31FlashTextToImage",
     "display_name": "RH 全能图片V2-文生图-低价渠道版",
     "name_cn": "全能图片V2-文生图-低价渠道版",
     "name_en": "nano-banana2-gemini31flash/text-to-image-channel-low-price",
@@ -12004,7 +11897,6 @@
   },
   {
     "class_name": "RhartImageNG31FlashImageToImage",
-    "internal_name": "RH_RhartImageNG31FlashImageToImage",
     "display_name": "RH 全能图片V2-图生图-低价渠道版",
     "name_cn": "全能图片V2-图生图-低价渠道版",
     "name_en": "nano-banana2-gemini31flash/image-to-image-channel-low-price",
@@ -12146,7 +12038,6 @@
   },
   {
     "class_name": "RhartImageNG31FlashOfficialTextToImage",
-    "internal_name": "RH_RhartImageNG31FlashOfficialTextToImage",
     "display_name": "RH 全能图片V2-文生图-官方稳定版",
     "name_cn": "全能图片V2-文生图-官方稳定版",
     "name_en": "nano-banana2-gemini31flash/text-to-image-official-stable",
@@ -12272,7 +12163,6 @@
   },
   {
     "class_name": "RhartImageNG31FlashOfficialImageToImage",
-    "internal_name": "RH_RhartImageNG31FlashOfficialImageToImage",
     "display_name": "RH 全能图片V2-图生图-官方稳定版",
     "name_cn": "全能图片V2-图生图-官方稳定版",
     "name_en": "nano-banana2-gemini31flash/image-to-image-official-stable",
@@ -12414,7 +12304,6 @@
   },
   {
     "class_name": "RhartVideoGOfficialImageToVideo",
-    "internal_name": "RH_RhartVideoGOfficialImageToVideo",
     "display_name": "RH 全能视频X-图生视频-官方稳定版",
     "name_cn": "全能视频X-图生视频-官方稳定版",
     "name_en": "xai/grok-imagine/image-to-video-official-stable",
@@ -12484,7 +12373,6 @@
   },
   {
     "class_name": "RhartVideoGOfficialTextToVideo",
-    "internal_name": "RH_RhartVideoGOfficialTextToVideo",
     "display_name": "RH 全能视频X-文生视频-官方稳定版",
     "name_cn": "全能视频X-文生视频-官方稳定版",
     "name_en": "xai/grok-imagine/text-to-video-official-stable",
@@ -12570,7 +12458,6 @@
   },
   {
     "class_name": "RhartVideoGOfficialEditVideo",
-    "internal_name": "RH_RhartVideoGOfficialEditVideo",
     "display_name": "RH 全能视频X-编辑视频-官方稳定版",
     "name_cn": "全能视频X-编辑视频-官方稳定版",
     "name_en": "xai/grok-imagine/edit-video-official-stable",
@@ -12623,7 +12510,6 @@
   },
   {
     "class_name": "RhartImageG15OfficialTextToImage",
-    "internal_name": "RH_RhartImageG15OfficialTextToImage",
     "display_name": "RH 全能图片G-1.5-文生图-官方稳定版",
     "name_cn": "全能图片G-1.5-文生图-官方稳定版",
     "name_en": "gpt-image-1.5/text-to-image-official-stable",
@@ -12718,7 +12604,6 @@
   },
   {
     "class_name": "RhartImageG15OfficialImageToImage",
-    "internal_name": "RH_RhartImageG15OfficialImageToImage",
     "display_name": "RH 全能图片G-1.5-图生图-官方稳定版",
     "name_cn": "全能图片G-1.5-图生图-官方稳定版",
     "name_en": "gpt-image-1.5/image-to-image-official-stable",
@@ -12844,7 +12729,6 @@
   },
   {
     "class_name": "KlingVideoO3StdVideoEdit",
-    "internal_name": "RH_KlingVideoO3StdVideoEdit",
     "display_name": "RH kling-video-o3-std/video-edit",
     "name_cn": "kling-video-o3-std/video-edit",
     "name_en": "kling-video-o3-std/video-edit",
@@ -12893,7 +12777,6 @@
   },
   {
     "class_name": "KlingVideoO3ProVideoEdit",
-    "internal_name": "RH_KlingVideoO3ProVideoEdit",
     "display_name": "RH kling-video-o3-pro/video-edit",
     "name_cn": "kling-video-o3-pro/video-edit",
     "name_en": "kling-video-o3-pro/video-edit",
@@ -12942,7 +12825,6 @@
   },
   {
     "class_name": "KlingVideoO3StdReferenceToVideo",
-    "internal_name": "RH_KlingVideoO3StdReferenceToVideo",
     "display_name": "RH kling-video-o3-std/reference-to-video",
     "name_cn": "kling-video-o3-std/reference-to-video",
     "name_en": "kling-video-o3-std/reference-to-video",
@@ -13062,7 +12944,6 @@
   },
   {
     "class_name": "KlingVideoO3ProReferenceToVideo",
-    "internal_name": "RH_KlingVideoO3ProReferenceToVideo",
     "display_name": "RH kling-video-o3-pro/reference-to-video",
     "name_cn": "kling-video-o3-pro/reference-to-video",
     "name_en": "kling-video-o3-pro/reference-to-video",
@@ -13182,7 +13063,6 @@
   },
   {
     "class_name": "Hitem3dV15ImageTo3d",
-    "internal_name": "RH_Hitem3dV15ImageTo3d",
     "display_name": "RH hitem3d-v15/image-to-3d",
     "endpoint": "hitem3d-v15/image-to-3d",
     "output_type": "3d",
@@ -13264,7 +13144,6 @@
   },
   {
     "class_name": "Hitem3dV2ImageTo3d",
-    "internal_name": "RH_Hitem3dV2ImageTo3d",
     "display_name": "RH hitem3d-v2/image-to-3d",
     "endpoint": "hitem3d-v2/image-to-3d",
     "output_type": "3d",
@@ -13336,7 +13215,6 @@
   },
   {
     "class_name": "Hitem3dV15MultiImageTo3d",
-    "internal_name": "RH_Hitem3dV15MultiImageTo3d",
     "display_name": "RH hitem3d-v15/multi-image-to-3d",
     "endpoint": "hitem3d-v15/multi-image-to-3d",
     "output_type": "3d",
@@ -13445,7 +13323,6 @@
   },
   {
     "class_name": "Hitem3dV2MultiImageTo3d",
-    "internal_name": "RH_Hitem3dV2MultiImageTo3d",
     "display_name": "RH hitem3d-v2/multi-image-to-3d",
     "endpoint": "hitem3d-v2/multi-image-to-3d",
     "output_type": "3d",
@@ -13544,7 +13421,6 @@
   },
   {
     "class_name": "Hitem3dPortraitV21ImageTo3d",
-    "internal_name": "RH_Hitem3dPortraitV21ImageTo3d",
     "display_name": "RH hitem3d-portrait-v21/image-to-3d",
     "endpoint": "hitem3d-portrait-v21/image-to-3d",
     "output_type": "3d",
@@ -13611,7 +13487,6 @@
   },
   {
     "class_name": "Hitem3dPortraitV21MultiImageTo3d",
-    "internal_name": "RH_Hitem3dPortraitV21MultiImageTo3d",
     "display_name": "RH hitem3d-portrait-v21/multi-image-to-3d",
     "endpoint": "hitem3d-portrait-v21/multi-image-to-3d",
     "output_type": "3d",
@@ -13705,7 +13580,6 @@
   },
   {
     "class_name": "Hitem3dPortraitV20ImageTo3d",
-    "internal_name": "RH_Hitem3dPortraitV20ImageTo3d",
     "display_name": "RH hitem3d-portrait-v20/image-to-3d",
     "endpoint": "hitem3d-portrait-v20/image-to-3d",
     "output_type": "3d",
@@ -13772,7 +13646,6 @@
   },
   {
     "class_name": "Hitem3dPortraitV20MultiImageTo3d",
-    "internal_name": "RH_Hitem3dPortraitV20MultiImageTo3d",
     "display_name": "RH hitem3d-portrait-v20/multi-image-to-3d",
     "endpoint": "hitem3d-portrait-v20/multi-image-to-3d",
     "output_type": "3d",
@@ -13866,7 +13739,6 @@
   },
   {
     "class_name": "Hitem3dPortraitV15ImageTo3d",
-    "internal_name": "RH_Hitem3dPortraitV15ImageTo3d",
     "display_name": "RH hitem3d-portrait-v15/image-to-3d",
     "endpoint": "hitem3d-portrait-v15/image-to-3d",
     "output_type": "3d",
@@ -13933,7 +13805,6 @@
   },
   {
     "class_name": "Hitem3dPortraitV15MultiImageTo3d",
-    "internal_name": "RH_Hitem3dPortraitV15MultiImageTo3d",
     "display_name": "RH hitem3d-portrait-v15/multi-image-to-3d",
     "endpoint": "hitem3d-portrait-v15/multi-image-to-3d",
     "output_type": "3d",
@@ -14027,7 +13898,6 @@
   },
   {
     "class_name": "AlibabaWan26ReferenceToVideoFlash",
-    "internal_name": "RH_AlibabaWan26ReferenceToVideoFlash",
     "display_name": "RH 万相2.6-参考生视频Flash",
     "endpoint": "alibaba/wan-2.6/reference-to-video-flash",
     "output_type": "video",
@@ -14219,7 +14089,6 @@
   },
   {
     "class_name": "AlibabaWan26ReferenceToVideo",
-    "internal_name": "RH_AlibabaWan26ReferenceToVideo",
     "display_name": "RH 万相2.6-参考生视频",
     "endpoint": "alibaba/wan-2.6/reference-to-video",
     "output_type": "video",
@@ -14403,7 +14272,6 @@
   },
   {
     "class_name": "KlingElements",
-    "internal_name": "RH_KlingElements",
     "display_name": "RH kling-elements",
     "name_cn": "kling-elements",
     "name_en": "kling-elements",
@@ -14451,7 +14319,6 @@
   },
   {
     "class_name": "RhartImageV1OfficialTextToImage",
-    "internal_name": "RH_RhartImageV1OfficialTextToImage",
     "display_name": "RH 全能图片V1-文生图-官方稳定版",
     "name_cn": "全能图片V1-文生图-官方稳定版",
     "name_en": "nano-banana/text-to-image-official-stable",
@@ -14537,7 +14404,6 @@
   },
   {
     "class_name": "RhartImageV1OfficialEdit",
-    "internal_name": "RH_RhartImageV1OfficialEdit",
     "display_name": "RH 全能图片V1-图生图-官方稳定版",
     "name_cn": "全能图片V1-图生图-官方稳定版",
     "name_en": "nano-banana/edit-official-stable",
@@ -14639,7 +14505,6 @@
   },
   {
     "class_name": "RhartImageGImageToImage",
-    "internal_name": "RH_RhartImageGImageToImage",
     "display_name": "RH 全能图片X-图生图-低价渠道版",
     "name_cn": "全能图片X-图生图-低价渠道版",
     "name_en": "grok-image/image-to-image/channel-low-price",
@@ -14698,7 +14563,6 @@
   },
   {
     "class_name": "RhartImageGTextToImage",
-    "internal_name": "RH_RhartImageGTextToImage",
     "display_name": "RH 全能图片X-文生图-低价渠道版",
     "name_cn": "全能图片X-文生图-低价渠道版",
     "name_en": "grok-image/text-to-image/channel-low-price",
@@ -14782,7 +14646,6 @@
   },
   {
     "class_name": "KlingV30StdMotionControl",
-    "internal_name": "RH_KlingV30StdMotionControl",
     "display_name": "RH 可灵动作控制V3.0-std",
     "name_cn": "可灵动作控制V3.0-std",
     "name_en": "kling-v3.0-std-motion-control",
@@ -14856,7 +14719,6 @@
   },
   {
     "class_name": "KlingV30ProMotionControl",
-    "internal_name": "RH_KlingV30ProMotionControl",
     "display_name": "RH 可灵动作控制V3.0-pro",
     "name_cn": "可灵动作控制V3.0-pro",
     "name_en": "kling-v3.0-pro-motion-control",
@@ -14930,7 +14792,6 @@
   },
   {
     "class_name": "AlibabaQwenImage20ProImageEdit",
-    "internal_name": "RH_AlibabaQwenImage20ProImageEdit",
     "display_name": "RH 千问2.0Pro-图像编辑",
     "name_cn": "千问2.0Pro-图像编辑",
     "name_en": "qwen-image-2.0-pro/image-edit",
@@ -15099,7 +14960,6 @@
   },
   {
     "class_name": "AlibabaQwenImage30ProTextToImage",
-    "internal_name": "RH_AlibabaQwenImage30ProTextToImage",
     "display_name": "RH 千问3.0Pro-文生图",
     "name_cn": "千问3.0Pro-文生图",
     "name_en": "qwen-image-3.0-pro/text-to-image",
@@ -15114,7 +14974,7 @@
         "label": "prompt",
         "description": "正向提示词，描述期望生成的图像内容、风格、构图和文字信息。支持中英文。",
         "defaultValue": "一张中式茶馆开业海报，竖版构图。画面中央是一只手绘水墨风格的白鹤衔着一片茶叶，背景是远山和云雾。海报上方用毛笔书法字体写着大标题「山间茶事」，下方用细黑体写着两行小字「新店开业 · 全场八折」和「2026年8月8日」。留白大气，配色为墨绿、米白和朱砂红，高级东方美学，印刷级质感。",
-        "maxLength": 2048
+        "maxLength": 3000
       },
       {
         "fieldKey": "negativePrompt",
@@ -15122,15 +14982,21 @@
         "required": false,
         "label": "negativePrompt",
         "description": "反向提示词，描述不希望在画面中出现的内容。",
-        "maxLength": 500
+        "maxLength": 600
       },
       {
         "fieldKey": "size",
-        "type": "LIST",
+        "type": "SIZE",
         "required": false,
         "label": "size",
         "description": "输出图像分辨率，格式为宽*高。总像素需在 512*512 至 2048*2048 之间；展示档位 1k/2k。不选择时由模型根据提示词自动推荐。",
+        "defaultValue": "1024*1024",
         "options": [
+          {
+            "value": "custom",
+            "description": "custom",
+            "descriptionEn": "custom"
+          },
           {
             "value": "1024*1024",
             "description": "1024*1024 (1:1 1k)",
@@ -15201,7 +15067,9 @@
             "description": "2048*1152 (16:9 2k)",
             "descriptionEn": "2048*1152 (16:9 2k)"
           }
-        ]
+        ],
+        "min": 512,
+        "max": 2048
       },
       {
         "fieldKey": "imageNum",
@@ -15280,12 +15148,20 @@
           }
         ],
         "tail_insert": true
+      },
+      {
+        "fieldKey": "enableThinking",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "enableThinking",
+        "description": "是否开启提示词改写的 thinking 模式，默认开启。开启可提升出图质量但更慢；关闭后改写耗时可缩短到约 20s。仅在 promptExtend=true 时生效；Direct / Agent 文生图均支持。",
+        "defaultValue": true,
+        "tail_insert": true
       }
     ]
   },
   {
     "class_name": "AlibabaQwenImage30ProImageEdit",
-    "internal_name": "RH_AlibabaQwenImage30ProImageEdit",
     "display_name": "RH 千问3.0Pro-图像编辑",
     "name_cn": "千问3.0Pro-图像编辑",
     "name_en": "qwen-image-3.0-pro/image-edit",
@@ -15311,7 +15187,7 @@
         "label": "prompt",
         "description": "图像编辑指令，描述希望保留、替换、重绘或强化的内容。支持中英文。",
         "defaultValue": "保持主体，换成柔和傍晚光线",
-        "maxLength": 2048
+        "maxLength": 3000
       },
       {
         "fieldKey": "negativePrompt",
@@ -15319,15 +15195,21 @@
         "required": false,
         "label": "negativePrompt",
         "description": "反向提示词，描述不希望在画面中出现的内容。",
-        "maxLength": 500
+        "maxLength": 600
       },
       {
         "fieldKey": "size",
-        "type": "LIST",
+        "type": "SIZE",
         "required": false,
         "label": "size",
-        "description": "输出图像分辨率，格式为宽*高。总像素需在 512*512 至 2048*2048 之间；展示档位 1k/2k。不选择时由模型根据提示词和输入图自动推荐。",
+        "description": "输出图像分辨率，格式为宽*高。总像素需在 512*512 至 2048*2048 之间；展示档位 1k/2k。不选择时由模型根据提示词自动推荐。",
+        "defaultValue": "1024*1024",
         "options": [
+          {
+            "value": "custom",
+            "description": "custom",
+            "descriptionEn": "custom"
+          },
           {
             "value": "1024*1024",
             "description": "1024*1024 (1:1 1k)",
@@ -15398,7 +15280,9 @@
             "description": "2048*1152 (16:9 2k)",
             "descriptionEn": "2048*1152 (16:9 2k)"
           }
-        ]
+        ],
+        "min": 512,
+        "max": 2048
       },
       {
         "fieldKey": "imageNum",
@@ -15477,12 +15361,20 @@
           }
         ],
         "tail_insert": true
+      },
+      {
+        "fieldKey": "enableThinking",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "enableThinking",
+        "description": "是否开启提示词改写的 thinking 模式，默认开启。开启可提升出图质量但更慢；关闭后改写耗时可缩短到约 20s。仅在 promptExtend=true 时生效。Direct 图生图支持；promptExtendMode=agent 时暂不支持。",
+        "defaultValue": true,
+        "tail_insert": true
       }
     ]
   },
   {
     "class_name": "AlibabaQwenImage20ImageEdit",
-    "internal_name": "RH_AlibabaQwenImage20ImageEdit",
     "display_name": "RH 千问2.0-图像编辑",
     "name_cn": "千问2.0-图像编辑",
     "name_en": "qwen-image-2.0/image-edit",
@@ -15651,7 +15543,6 @@
   },
   {
     "class_name": "ViduReferenceToVideoQ3",
-    "internal_name": "RH_ViduReferenceToVideoQ3",
     "display_name": "RH Vidu-参考生视频-q3",
     "name_cn": "Vidu-参考生视频-q3",
     "name_en": "Vidu-reference-to-video-q3",
@@ -15779,7 +15670,6 @@
   },
   {
     "class_name": "SeedanceVideoRefToVideo",
-    "internal_name": "RH_SeedanceVideoRefToVideo",
     "display_name": "RH SD2.0 视频参考生视频(体验版)",
     "name_cn": "SD2.0 视频参考生视频(体验版)",
     "name_en": "sd2.0/video-ref-to-video-trial",
@@ -15809,7 +15699,6 @@
   },
   {
     "class_name": "AlibabaQwenImage20ProTextToImage",
-    "internal_name": "RH_AlibabaQwenImage20ProTextToImage",
     "display_name": "RH 千问2.0Pro-文生图",
     "name_cn": "千问2.0Pro-文生图",
     "name_en": "qwen-image-2.0-pro/text-to-image",
@@ -15976,7 +15865,6 @@
   },
   {
     "class_name": "AlibabaQwenImage20TextToImage",
-    "internal_name": "RH_AlibabaQwenImage20TextToImage",
     "display_name": "RH 千问2.0-文生图",
     "name_cn": "千问2.0-文生图",
     "name_en": "qwen-image-2.0/text-to-image",
@@ -16143,7 +16031,6 @@
   },
   {
     "class_name": "RhartImageFDev",
-    "internal_name": "RH_RhartImageFDev",
     "display_name": "RH f-dev",
     "name_cn": "f-dev",
     "name_en": "f-dev",
@@ -16154,7 +16041,6 @@
   },
   {
     "class_name": "RhartImageFDevLora",
-    "internal_name": "RH_RhartImageFDevLora",
     "display_name": "RH f-dev-lora",
     "name_cn": "f-dev-lora",
     "name_en": "f-dev-lora",
@@ -16165,7 +16051,6 @@
   },
   {
     "class_name": "KlingLipSyncIdentifyFace",
-    "internal_name": "RH_KlingLipSyncIdentifyFace",
     "display_name": "RH 可灵对口型-人脸识别",
     "name_cn": "可灵对口型-人脸识别",
     "name_en": "kling-lip-sync/identify-face",
@@ -16193,7 +16078,6 @@
   },
   {
     "class_name": "KlingLipSyncTts",
-    "internal_name": "RH_KlingLipSyncTts",
     "display_name": "RH 可灵对口型-语音合成",
     "name_cn": "可灵对口型-语音合成",
     "name_en": "kling-lip-sync/tts",
@@ -16485,7 +16369,6 @@
   },
   {
     "class_name": "KlingLipSyncLipSyncVideo",
-    "internal_name": "RH_KlingLipSyncLipSyncVideo",
     "display_name": "RH 可灵对口型-视频生成",
     "name_cn": "可灵对口型-视频生成",
     "name_en": "kling-lip-sync/lip-sync-video",
@@ -16573,7 +16456,6 @@
   },
   {
     "class_name": "RhartVideoSparkvideo20TextToVideo",
-    "internal_name": "RH_RhartVideoSparkvideo20TextToVideo",
     "display_name": "RH Seedance2.0/文生视频",
     "name_cn": "Seedance2.0/文生视频",
     "name_en": "Seedance2.0 Text to Video",
@@ -16787,7 +16669,6 @@
   },
   {
     "class_name": "RhartVideoSparkvideo20FastTextToVideo",
-    "internal_name": "RH_RhartVideoSparkvideo20FastTextToVideo",
     "display_name": "RH Seedance2.0-Fast/文生视频",
     "name_cn": "Seedance2.0-Fast/文生视频",
     "name_en": "Seedance2.0 Fast Text to Video",
@@ -16996,7 +16877,6 @@
   },
   {
     "class_name": "RhartVideoSparkvideo20ImageToVideo",
-    "internal_name": "RH_RhartVideoSparkvideo20ImageToVideo",
     "display_name": "RH Seedance2.0/图生视频",
     "name_cn": "Seedance2.0/图生视频",
     "name_en": "Seedance2.0 Image to Video",
@@ -17224,7 +17104,6 @@
   },
   {
     "class_name": "RhartVideoSparkvideo20FastImageToVideo",
-    "internal_name": "RH_RhartVideoSparkvideo20FastImageToVideo",
     "display_name": "RH Seedance2.0-Fast/图生视频",
     "name_cn": "Seedance2.0-Fast/图生视频",
     "name_en": "Seedance2.0 Fast Image to Video",
@@ -17447,7 +17326,6 @@
   },
   {
     "class_name": "RhartVideoSparkvideo20MultimodalVideo",
-    "internal_name": "RH_RhartVideoSparkvideo20MultimodalVideo",
     "display_name": "RH Seedance2.0/全能参考视频",
     "name_cn": "Seedance2.0/全能参考视频",
     "name_en": "Seedance2.0 Multimodal Video",
@@ -17700,7 +17578,6 @@
   },
   {
     "class_name": "RhartVideoSparkvideo20FastMultimodalVideo",
-    "internal_name": "RH_RhartVideoSparkvideo20FastMultimodalVideo",
     "display_name": "RH Seedance2.0-Fast/全能参考视频",
     "name_cn": "Seedance2.0-Fast/全能参考视频",
     "name_en": "Seedance2.0 Fast Multimodal Video",
@@ -17949,7 +17826,6 @@
   },
   {
     "class_name": "ViduReferenceToVideoQ3Mix",
-    "internal_name": "RH_ViduReferenceToVideoQ3Mix",
     "display_name": "RH Vidu-参考生视频-q3-mix",
     "name_cn": "Vidu-参考生视频-q3-mix",
     "name_en": "Vidu-reference-to-video-q3-mix",
@@ -18072,7 +17948,6 @@
   },
   {
     "class_name": "AlibabaWan27TextToVideo",
-    "internal_name": "RH_AlibabaWan27TextToVideo",
     "display_name": "RH 万相2.7-文生视频",
     "name_cn": "万相2.7-文生视频",
     "name_en": "wan-2.7/text-to-video",
@@ -18263,7 +18138,6 @@
   },
   {
     "class_name": "AlibabaWan27ReferenceToVideo",
-    "internal_name": "RH_AlibabaWan27ReferenceToVideo",
     "display_name": "RH 万相2.7-参考生视频",
     "name_cn": "万相2.7-参考生视频",
     "name_en": "wan-2.7-reference-to-video",
@@ -18451,7 +18325,6 @@
   },
   {
     "class_name": "AlibabaWan27ImageEdit",
-    "internal_name": "RH_AlibabaWan27ImageEdit",
     "display_name": "RH 万相2.7-图像编辑",
     "name_cn": "万相2.7-图像编辑",
     "name_en": "wan-2.7/image-edit",
@@ -18505,7 +18378,6 @@
   },
   {
     "class_name": "AlibabaWan27ImageEditPro",
-    "internal_name": "RH_AlibabaWan27ImageEditPro",
     "display_name": "RH 万相2.7-图像编辑Pro",
     "name_cn": "万相2.7-图像编辑Pro",
     "name_en": "wan-2.7/image-edit-pro",
@@ -18559,7 +18431,6 @@
   },
   {
     "class_name": "AlibabaWan27TextToImage",
-    "internal_name": "RH_AlibabaWan27TextToImage",
     "display_name": "RH 万相2.7-文生图",
     "name_cn": "万相2.7-文生图",
     "name_en": "wan-2.7/text-to-image",
@@ -18610,7 +18481,6 @@
   },
   {
     "class_name": "AlibabaWan27TextToImagePro",
-    "internal_name": "RH_AlibabaWan27TextToImagePro",
     "display_name": "RH 万相2.7-文生图Pro",
     "name_cn": "万相2.7-文生图Pro",
     "name_en": "wan-2.7/text-to-image-pro",
@@ -18661,7 +18531,6 @@
   },
   {
     "class_name": "AlibabaWan27ImageToVideo",
-    "internal_name": "RH_AlibabaWan27ImageToVideo",
     "display_name": "RH 万相2.7-图生视频",
     "name_cn": "万相2.7-图生视频",
     "name_en": "wan-2.7/image-to-video",
@@ -18835,7 +18704,6 @@
   },
   {
     "class_name": "AlibabaWan27VideoExtend",
-    "internal_name": "RH_AlibabaWan27VideoExtend",
     "display_name": "RH 万相2.7-视频续写",
     "name_cn": "万相2.7-视频续写",
     "name_en": "wan-2.7/video-extend",
@@ -19001,7 +18869,6 @@
   },
   {
     "class_name": "AlibabaWan27VideoEdit",
-    "internal_name": "RH_AlibabaWan27VideoEdit",
     "display_name": "RH 万相2.7-视频编辑",
     "name_cn": "万相2.7-视频编辑",
     "name_en": "wan-2.7/video-edit",
@@ -19183,7 +19050,6 @@
   },
   {
     "class_name": "RhartVideoSImageToVideoProDeprecated",
-    "internal_name": "RH_RhartVideoSImageToVideoProDeprecated",
     "display_name": "RH 全能视频S-图生视频-pro-低价渠道版-已下架",
     "name_cn": "全能视频S-图生视频-pro-低价渠道版-已下架",
     "name_en": "sora-2/image-to-video-pro-channel-low-price",
@@ -19261,7 +19127,6 @@
   },
   {
     "class_name": "RhartVideoSTextToVideoProDeprecated",
-    "internal_name": "RH_RhartVideoSTextToVideoProDeprecated",
     "display_name": "RH 全能视频S-文生视频-pro-低价渠道版-已下架",
     "name_cn": "全能视频S-文生视频-pro-低价渠道版-已下架",
     "name_en": "sora-2/text-to-video-pro-channel-low-price",
@@ -19330,7 +19195,6 @@
   },
   {
     "class_name": "PixverseV6TextToVideo",
-    "internal_name": "RH_PixverseV6TextToVideo",
     "display_name": "RH PixVerse V6 文生视频",
     "name_cn": "PixVerse V6 文生视频",
     "name_en": "pixverse-v6/text-to-video",
@@ -19450,7 +19314,6 @@
   },
   {
     "class_name": "PixverseV6ImageToVideo",
-    "internal_name": "RH_PixverseV6ImageToVideo",
     "display_name": "RH PixVerse V6 图生视频",
     "name_cn": "PixVerse V6 图生视频",
     "name_en": "pixverse-v6/image-to-video",
@@ -19529,7 +19392,6 @@
   },
   {
     "class_name": "PixverseV6Transition",
-    "internal_name": "RH_PixverseV6Transition",
     "display_name": "RH PixVerse V6 转场",
     "name_cn": "PixVerse V6 转场",
     "name_en": "pixverse-v6/transition",
@@ -19736,7 +19598,6 @@
   },
   {
     "class_name": "PixverseV6Extend",
-    "internal_name": "RH_PixverseV6Extend",
     "display_name": "RH PixVerse V6 视频续写",
     "name_cn": "PixVerse V6 视频续写",
     "name_en": "pixverse-v6/extend",
@@ -19867,7 +19728,6 @@
   },
   {
     "class_name": "AlibabaWan25PreviewTextToVideo",
-    "internal_name": "RH_AlibabaWan25PreviewTextToVideo",
     "display_name": "RH 万相2.5 Preview 文生视频",
     "name_cn": "万相2.5 Preview 文生视频",
     "name_en": "wan-2.5-preview/text-to-video",
@@ -20018,7 +19878,6 @@
   },
   {
     "class_name": "AlibabaWan25PreviewImageToVideo",
-    "internal_name": "RH_AlibabaWan25PreviewImageToVideo",
     "display_name": "RH 万相2.5 Preview 图生视频",
     "name_cn": "万相2.5 Preview 图生视频",
     "name_en": "wan-2.5-preview/image-to-video",
@@ -20128,7 +19987,6 @@
   },
   {
     "class_name": "AlibabaWan25PreviewTextToImage",
-    "internal_name": "RH_AlibabaWan25PreviewTextToImage",
     "display_name": "RH 万相2.5 Preview 文生图",
     "name_cn": "万相2.5 Preview 文生图",
     "name_en": "wan-2.5-preview/text-to-image",
@@ -20221,7 +20079,6 @@
   },
   {
     "class_name": "AlibabaWan25PreviewImageToImage",
-    "internal_name": "RH_AlibabaWan25PreviewImageToImage",
     "display_name": "RH 万相2.5 Preview 图生图",
     "name_cn": "万相2.5 Preview 图生图",
     "name_en": "wan-2.5-preview/image-to-image",
@@ -20345,7 +20202,6 @@
   },
   {
     "class_name": "RhartVideoSImageToVideo",
-    "internal_name": "RH_RhartVideoSImageToVideo",
     "display_name": "RH 全能视频S-图生视频-低价渠道版",
     "name_cn": "全能视频S-图生视频-低价渠道版",
     "name_en": "sora-2/image-to-video-channel-low-price",
@@ -20423,7 +20279,6 @@
   },
   {
     "class_name": "RhartVideoSTextToVideo",
-    "internal_name": "RH_RhartVideoSTextToVideo",
     "display_name": "RH 全能视频S-文生视频-低价渠道版",
     "name_cn": "全能视频S-文生视频-低价渠道版",
     "name_en": "sora-2/text-to-video-channel-low-price",
@@ -20492,7 +20347,6 @@
   },
   {
     "class_name": "RhartVideoVideoUpscaler",
-    "internal_name": "RH_RhartVideoVideoUpscaler",
     "display_name": "RH RH视频超分",
     "name_cn": "RH视频超分",
     "name_en": "rh-video-upscaler",
@@ -20543,7 +20397,6 @@
   },
   {
     "class_name": "RhartVideoVideoFpsIncreaser",
-    "internal_name": "RH_RhartVideoVideoFpsIncreaser",
     "display_name": "RH RH视频帧率增强",
     "name_cn": "RH视频帧率增强",
     "name_en": "rh-video-fps-increaser",
@@ -20564,7 +20417,6 @@
   },
   {
     "class_name": "RhartVideoGOfficialReferenceToVideo",
-    "internal_name": "RH_RhartVideoGOfficialReferenceToVideo",
     "display_name": "RH 全能视频X-多图参考生视频-官方稳定版",
     "name_cn": "全能视频X-多图参考生视频-官方稳定版",
     "name_en": "xai/grok-imagine-video/reference-to-video-official-stable",
@@ -20636,7 +20488,6 @@
   },
   {
     "class_name": "RhartVideoGOfficialVideoExtend",
-    "internal_name": "RH_RhartVideoGOfficialVideoExtend",
     "display_name": "RH 全能视频X-视频续写-官方稳定版",
     "name_cn": "全能视频X-视频续写-官方稳定版",
     "name_en": "xai/grok-imagine-video/video-extend-official-stable",
@@ -20686,7 +20537,6 @@
   },
   {
     "class_name": "RhartVideoV31LiteOfficialTextToVideo",
-    "internal_name": "RH_RhartVideoV31LiteOfficialTextToVideo",
     "display_name": "RH 全能视频V3.1-Lite文生视频-官方稳定版",
     "name_cn": "全能视频V3.1-Lite文生视频-官方稳定版",
     "name_en": "google/veo3.1-lite/text-to-video-official-stable",
@@ -20790,7 +20640,6 @@
   },
   {
     "class_name": "RhartVideoV31LiteOfficialImageToVideo",
-    "internal_name": "RH_RhartVideoV31LiteOfficialImageToVideo",
     "display_name": "RH 全能视频V3.1-Lite图生视频-官方稳定版",
     "name_cn": "全能视频V3.1-Lite图生视频-官方稳定版",
     "name_en": "google/veo3.1-lite/image-to-video-official-stable",
@@ -20903,7 +20752,6 @@
   },
   {
     "class_name": "RhartVideoV31LiteOfficialStartEndToVideo",
-    "internal_name": "RH_RhartVideoV31LiteOfficialStartEndToVideo",
     "display_name": "RH 全能视频V3.1-Lite首尾帧生视频-官方稳定版",
     "name_cn": "全能视频V3.1-Lite首尾帧生视频-官方稳定版",
     "name_en": "google/veo3.1-lite/start-end-to-video-official-stable",
@@ -21000,7 +20848,6 @@
   },
   {
     "class_name": "RhartImageG2ImageToImage",
-    "internal_name": "RH_RhartImageG2ImageToImage",
     "display_name": "RH 全能图片G-2.0-图生图-低价渠道版",
     "name_cn": "全能图片G-2.0-图生图-低价渠道版",
     "name_en": "gpt-image-2.0/edit-channel-low-price",
@@ -21154,7 +21001,6 @@
   },
   {
     "class_name": "RhartImageG2TextToImage",
-    "internal_name": "RH_RhartImageG2TextToImage",
     "display_name": "RH 全能图片G-2.0-文生图-低价渠道版",
     "name_cn": "全能图片G-2.0-文生图-低价渠道版",
     "name_en": "gpt-image-2.0/text-to-image-channel-low-price",
@@ -21297,7 +21143,6 @@
   },
   {
     "class_name": "RhartImageG15TextToImage[deprecated]",
-    "internal_name": "RH_RhartImageG15TextToImage[deprecated]",
     "display_name": "RH 全能图片G-1.5-文生图-低价渠道版-(已下架) 可用全能图片G-2 模型代替",
     "name_cn": "全能图片G-1.5-文生图-低价渠道版-(已下架) 可用全能图片G-2 模型代替",
     "name_en": "gpt-image-1.5/text-to-image-channel-low-price-[Deprecated] Please use gpt-image-2 instead",
@@ -21347,7 +21192,6 @@
   },
   {
     "class_name": "RhartImageG15Edit[deprecated]",
-    "internal_name": "RH_RhartImageG15Edit[deprecated]",
     "display_name": "RH 全能图片G-1.5-图生图-低价渠道版-(已下架) 可用全能图片G-2 模型代替",
     "name_cn": "全能图片G-1.5-图生图-低价渠道版-(已下架) 可用全能图片G-2 模型代替",
     "name_en": "gpt-image-1.5/edit-channel-low-price-[Deprecated] Please use gpt-image-2 instead",
@@ -21409,7 +21253,6 @@
   },
   {
     "class_name": "RhartImageG2OfficialTextToImage",
-    "internal_name": "RH_RhartImageG2OfficialTextToImage",
     "display_name": "RH 全能图片G-2-文生图-官方稳定版",
     "name_cn": "全能图片G-2-文生图-官方稳定版",
     "name_en": "gpt-image-2/text-to-image-official-stable",
@@ -21565,7 +21408,6 @@
   },
   {
     "class_name": "RhartImageG2OfficialImageToImage",
-    "internal_name": "RH_RhartImageG2OfficialImageToImage",
     "display_name": "RH 全能图片G-2-图生图-官方稳定版",
     "name_cn": "全能图片G-2-图生图-官方稳定版",
     "name_en": "gpt-image-2/image-to-image-official-stable",
@@ -21737,7 +21579,6 @@
   },
   {
     "class_name": "AlibabaHappyhorse10TextToVideo",
-    "internal_name": "RH_AlibabaHappyhorse10TextToVideo",
     "display_name": "RH happyhorse-1.0/text-to-video",
     "name_cn": "happyhorse-1.0/text-to-video",
     "name_en": "happyhorse-1.0/text-to-video",
@@ -21898,7 +21739,6 @@
   },
   {
     "class_name": "AlibabaHappyhorse10ImageToVideo",
-    "internal_name": "RH_AlibabaHappyhorse10ImageToVideo",
     "display_name": "RH happyhorse-1.0/image-to-video",
     "name_cn": "happyhorse-1.0/image-to-video",
     "name_en": "happyhorse-1.0/image-to-video",
@@ -22033,7 +21873,6 @@
   },
   {
     "class_name": "RhartAudioSunoV55Single",
-    "internal_name": "RH_RhartAudioSunoV55Single",
     "display_name": "RH suno-single-v5.5",
     "name_cn": "suno-single-v5.5",
     "name_en": "suno-single-v5.5",
@@ -22082,7 +21921,6 @@
   },
   {
     "class_name": "RhartAudioSunoV55Custom",
-    "internal_name": "RH_RhartAudioSunoV55Custom",
     "display_name": "RH suno-custom-v5.5",
     "name_cn": "suno-custom-v5.5",
     "name_en": "suno-custom-v5.5",
@@ -22121,7 +21959,6 @@
   },
   {
     "class_name": "RhartAudioSunoLyrics",
-    "internal_name": "RH_RhartAudioSunoLyrics",
     "display_name": "RH suno-歌词生成",
     "name_cn": "suno-歌词生成",
     "name_en": "suno-lyrics",
@@ -22142,7 +21979,6 @@
   },
   {
     "class_name": "RhartAudioSunoV5Single",
-    "internal_name": "RH_RhartAudioSunoV5Single",
     "display_name": "RH suno-single-v5",
     "name_cn": "suno-single-v5",
     "name_en": "suno-single-v5",
@@ -22191,7 +22027,6 @@
   },
   {
     "class_name": "RhartAudioSunoV5Custom",
-    "internal_name": "RH_RhartAudioSunoV5Custom",
     "display_name": "RH suno-custom-v5",
     "name_cn": "suno-custom-v5",
     "name_en": "suno-custom-v5",
@@ -22230,7 +22065,6 @@
   },
   {
     "class_name": "RhartAudioSunoV45Single",
-    "internal_name": "RH_RhartAudioSunoV45Single",
     "display_name": "RH suno-single-v4.5",
     "name_cn": "suno-single-v4.5",
     "name_en": "suno-single-v4.5",
@@ -22279,7 +22113,6 @@
   },
   {
     "class_name": "RhartAudioSunoV45Custom",
-    "internal_name": "RH_RhartAudioSunoV45Custom",
     "display_name": "RH suno-custom-v4.5",
     "name_cn": "suno-custom-v4.5",
     "name_en": "suno-custom-v4.5",
@@ -22318,7 +22151,6 @@
   },
   {
     "class_name": "RhartImageXOfficialEdit",
-    "internal_name": "RH_RhartImageXOfficialEdit",
     "display_name": "RH 全能图片X-图片编辑-官方稳定版",
     "name_cn": "全能图片X-图片编辑-官方稳定版",
     "name_en": "xai/grok-imagine-image/edit-official-stable",
@@ -22348,7 +22180,6 @@
   },
   {
     "class_name": "RhartImageXOfficialTextToImage",
-    "internal_name": "RH_RhartImageXOfficialTextToImage",
     "display_name": "RH 全能图片X-文生图片-官方稳定版",
     "name_cn": "全能图片X-文生图片-官方稳定版",
     "name_en": "xai/grok-imagine-image/text-to-image-official-stable",
@@ -22454,7 +22285,6 @@
   },
   {
     "class_name": "KlingV34kImageToVideo",
-    "internal_name": "RH_KlingV34kImageToVideo",
     "display_name": "RH 可灵图生视频v3-4k",
     "name_cn": "可灵图生视频v3-4k",
     "name_en": "kling-v3.0-4k-image-to-video",
@@ -22559,7 +22389,6 @@
   },
   {
     "class_name": "KlingV34kTextToVideo",
-    "internal_name": "RH_KlingV34kTextToVideo",
     "display_name": "RH 可灵文生视频v3-4k",
     "name_cn": "可灵文生视频v3-4k",
     "name_en": "kling-v3-4k-text-to-video",
@@ -22736,7 +22565,6 @@
   },
   {
     "class_name": "KlingVideoO34kTextToVideo",
-    "internal_name": "RH_KlingVideoO34kTextToVideo",
     "display_name": "RH 可灵文生视频o3-4k",
     "name_cn": "可灵文生视频o3-4k",
     "name_en": "kling-video-o3-4k-text-to-video",
@@ -22830,7 +22658,6 @@
   },
   {
     "class_name": "KlingVideoO34kImageToVideo",
-    "internal_name": "RH_KlingVideoO34kImageToVideo",
     "display_name": "RH 可灵图生视频o3-4k",
     "name_cn": "可灵图生视频o3-4k",
     "name_en": "kling-video-o3-4k-image-to-video",
@@ -22917,7 +22744,6 @@
   },
   {
     "class_name": "KlingVideoO34kReferenceToVideo",
-    "internal_name": "RH_KlingVideoO34kReferenceToVideo",
     "display_name": "RH 可灵参考生视频o3-4k",
     "name_cn": "可灵参考生视频o3-4k",
     "name_en": "kling-video-o3-4k-reference-to-video",
@@ -23030,7 +22856,6 @@
   },
   {
     "class_name": "AlibabaHappyhorse10ReferenceToVideo",
-    "internal_name": "RH_AlibabaHappyhorse10ReferenceToVideo",
     "display_name": "RH happyhorse-1.0/reference-to-video",
     "name_cn": "happyhorse-1.0/reference-to-video",
     "name_en": "happyhorse-1.0/reference-to-video",
@@ -23202,7 +23027,6 @@
   },
   {
     "class_name": "AlibabaHappyhorse10VideoEdit",
-    "internal_name": "RH_AlibabaHappyhorse10VideoEdit",
     "display_name": "RH happyhorse-1.0/video-edit",
     "name_cn": "happyhorse-1.0/video-edit",
     "name_en": "happyhorse-1.0/video-edit",
@@ -23293,7 +23117,6 @@
   },
   {
     "class_name": "SkyreelsV4TextToVideoStd",
-    "internal_name": "RH_SkyreelsV4TextToVideoStd",
     "display_name": "RH SkyReels V4 文生视频-std",
     "name_cn": "SkyReels V4 文生视频-std",
     "name_en": "skyreels-v4/text-to-video-std",
@@ -23401,7 +23224,6 @@
   },
   {
     "class_name": "SkyreelsV4ImageToVideoStd",
-    "internal_name": "RH_SkyreelsV4ImageToVideoStd",
     "display_name": "RH SkyReels V4 图生视频-std",
     "name_cn": "SkyReels V4 图生视频-std",
     "name_en": "skyreels-v4/image-to-video-std",
@@ -23483,7 +23305,6 @@
   },
   {
     "class_name": "KlingV25TurboStdTextToVideo",
-    "internal_name": "RH_KlingV25TurboStdTextToVideo",
     "display_name": "RH 可灵文生视频2.5-turbo-std",
     "name_cn": "可灵文生视频2.5-turbo-std",
     "name_en": "kling-v2.5-turbo-std/text-to-video",
@@ -23568,7 +23389,6 @@
   },
   {
     "class_name": "SkyreelsV4TextToVideoFast",
-    "internal_name": "RH_SkyreelsV4TextToVideoFast",
     "display_name": "RH SkyReels V4 文生视频-fast",
     "name_cn": "SkyReels V4 文生视频-fast",
     "name_en": "skyreels-v4/text-to-video-fast",
@@ -23668,7 +23488,6 @@
   },
   {
     "class_name": "SkyreelsV4ImageToVideoFast",
-    "internal_name": "RH_SkyreelsV4ImageToVideoFast",
     "display_name": "RH SkyReels V4 图生视频-fast",
     "name_cn": "SkyReels V4 图生视频-fast",
     "name_en": "skyreels-v4/image-to-video-fast",
@@ -23742,7 +23561,6 @@
   },
   {
     "class_name": "SkyreelsV4OmniReferenceStd",
-    "internal_name": "RH_SkyreelsV4OmniReferenceStd",
     "display_name": "RH SkyReels V4 Omni 参考视频-std",
     "name_cn": "SkyReels V4 Omni 参考视频-std",
     "name_en": "skyreels-v4/omni-reference-std",
@@ -23850,7 +23668,6 @@
   },
   {
     "class_name": "SkyreelsV4OmniReferenceFast",
-    "internal_name": "RH_SkyreelsV4OmniReferenceFast",
     "display_name": "RH SkyReels V4 Omni 参考视频-fast",
     "name_cn": "SkyReels V4 Omni 参考视频-fast",
     "name_en": "skyreels-v4/omni-reference-fast",
@@ -23950,7 +23767,6 @@
   },
   {
     "class_name": "KlingElementsAdvanced",
-    "internal_name": "RH_KlingElementsAdvanced",
     "display_name": "RH 可灵 o3 创建主体",
     "name_cn": "可灵 o3 创建主体",
     "name_en": "kling-o3/element",
@@ -24056,7 +23872,6 @@
   },
   {
     "class_name": "YouchuanTextToImageV81",
-    "internal_name": "RH_YouchuanTextToImageV81",
     "display_name": "RH 悠船文生图-v8.1",
     "name_cn": "悠船文生图-v8.1",
     "name_en": "midjourney-text-to-image-v8.1",
@@ -24230,7 +24045,6 @@
   },
   {
     "class_name": "RhartVideoV31FastOfficialReferenceToVideo",
-    "internal_name": "RH_RhartVideoV31FastOfficialReferenceToVideo",
     "display_name": "RH 全能视频V3.1-fast-参考生视频-官方稳定版",
     "name_cn": "全能视频V3.1-fast-参考生视频-官方稳定版",
     "name_en": "google/veo3.1-fast/reference-to-video-official-stable",
@@ -24327,7 +24141,6 @@
   },
   {
     "class_name": "RhartImagineImageQualityEdit",
-    "internal_name": "RH_RhartImagineImageQualityEdit",
     "display_name": "RH 全能图片X-高质量图片编辑-官方稳定版",
     "name_cn": "全能图片X-高质量图片编辑-官方稳定版",
     "name_en": "xai/rhart-imagine-image-quality/edit-official-stable",
@@ -24482,7 +24295,6 @@
   },
   {
     "class_name": "RhartImagineImageQualityTextToImage",
-    "internal_name": "RH_RhartImagineImageQualityTextToImage",
     "display_name": "RH 全能图片X-高质量文生图-官方稳定版",
     "name_cn": "全能图片X-高质量文生图-官方稳定版",
     "name_en": "xai/rhart-imagine-image-quality/text-to-image-official-stable",
@@ -24623,7 +24435,6 @@
   },
   {
     "class_name": "BytedanceJimeng46TextToImage",
-    "internal_name": "RH_BytedanceJimeng46TextToImage",
     "display_name": "RH 即梦图片 4.6 文生图",
     "name_cn": "即梦图片 4.6 文生图",
     "name_en": "bytedance/jimeng-4.6/text-to-image",
@@ -24705,7 +24516,6 @@
   },
   {
     "class_name": "BytedanceJimeng46ImageToImage",
-    "internal_name": "RH_BytedanceJimeng46ImageToImage",
     "display_name": "RH 即梦图片 4.6 图生图",
     "name_cn": "即梦图片 4.6 图生图",
     "name_en": "bytedance/jimeng-4.6/image-to-image",
@@ -24798,7 +24608,6 @@
   },
   {
     "class_name": "GeminiOmniFlashTextToVideo",
-    "internal_name": "RH_GeminiOmniFlashTextToVideo",
     "display_name": "RH 全能视频 Omni Flash 文生视频-低价渠道版",
     "name_cn": "全能视频 Omni Flash 文生视频-低价渠道版",
     "name_en": "gemini-omni-flash/text-to-video/channel-low-price",
@@ -24894,7 +24703,6 @@
   },
   {
     "class_name": "GeminiOmniFlashImageToVideo",
-    "internal_name": "RH_GeminiOmniFlashImageToVideo",
     "display_name": "RH 全能视频 Omni Flash 图生视频-低价渠道版",
     "name_cn": "全能视频 Omni Flash 图生视频-低价渠道版",
     "name_en": "gemini-omni-flash/image-to-video/channel-low-price",
@@ -25001,7 +24809,6 @@
   },
   {
     "class_name": "VolcSubtitleEraseVideo",
-    "internal_name": "RH_VolcSubtitleEraseVideo",
     "display_name": "RH 火山字幕擦除-视频字幕擦除（标准版）",
     "name_cn": "火山字幕擦除-视频字幕擦除（标准版）",
     "name_en": "volc-subtitle-erase/video(Standard Version) ",
@@ -25029,7 +24836,6 @@
   },
   {
     "class_name": "GeminiOmniFlashVideoEdit",
-    "internal_name": "RH_GeminiOmniFlashVideoEdit",
     "display_name": "RH 全能视频 Omni Flash 视频编辑-低价渠道版",
     "name_cn": "全能视频 Omni Flash 视频编辑-低价渠道版",
     "name_en": "gemini-omni-flash/video-edit/channel-low-price",
@@ -25115,7 +24921,6 @@
   },
   {
     "class_name": "VolcSubtitleEraseProVideo",
-    "internal_name": "RH_VolcSubtitleEraseProVideo",
     "display_name": "RH 火山字幕擦除-视频字幕擦除（精细化版）",
     "name_cn": "火山字幕擦除-视频字幕擦除（精细化版）",
     "name_en": "volc-subtitle-erase/video(Refined version)",
@@ -25183,7 +24988,6 @@
   },
   {
     "class_name": "RhartVideoSImageToVideoAsyn",
-    "internal_name": "RH_RhartVideoSImageToVideoAsyn",
     "display_name": "RH 全能视频S-图生视频（异步）-低价渠道版",
     "name_cn": "全能视频S-图生视频（异步）-低价渠道版",
     "name_en": "sora-2/image-to-video-asyn-channel-low-price",
@@ -25253,7 +25057,6 @@
   },
   {
     "class_name": "RhartTextG3FlashPreviewImageToText",
-    "internal_name": "RH_RhartTextG3FlashPreviewImageToText",
     "display_name": "RH rhart-text-g-3-flash-preview/image-to-text",
     "name_cn": "rhart-text-g-3-flash-preview/image-to-text",
     "name_en": "rhart-text-g-3-flash-preview/image-to-text",
@@ -25281,7 +25084,6 @@
   },
   {
     "class_name": "RhartTextG3FlashPreviewTextToText",
-    "internal_name": "RH_RhartTextG3FlashPreviewTextToText",
     "display_name": "RH rhart-text-g-3-flash-preview/text-to-text",
     "name_cn": "rhart-text-g-3-flash-preview/text-to-text",
     "name_en": "rhart-text-g-3-flash-preview/text-to-text",
@@ -25300,7 +25102,6 @@
   },
   {
     "class_name": "RhartTextG3FlashPreviewVideoToText",
-    "internal_name": "RH_RhartTextG3FlashPreviewVideoToText",
     "display_name": "RH rhart-text-g-3-flash-preview/video-to-text",
     "name_cn": "rhart-text-g-3-flash-preview/video-to-text",
     "name_en": "rhart-text-g-3-flash-preview/video-to-text",
@@ -25328,7 +25129,6 @@
   },
   {
     "class_name": "RhartTextG3ProPreviewImageToText",
-    "internal_name": "RH_RhartTextG3ProPreviewImageToText",
     "display_name": "RH rhart-text-g-3-pro-preview/image-to-text",
     "name_cn": "rhart-text-g-3-pro-preview/image-to-text",
     "name_en": "rhart-text-g-3-pro-preview/image-to-text",
@@ -25357,7 +25157,6 @@
   },
   {
     "class_name": "RhartTextG3ProPreviewTextToText",
-    "internal_name": "RH_RhartTextG3ProPreviewTextToText",
     "display_name": "RH rhart-text-g-3-pro-preview/text-to-text",
     "name_cn": "rhart-text-g-3-pro-preview/text-to-text",
     "name_en": "rhart-text-g-3-pro-preview/text-to-text",
@@ -25376,7 +25175,6 @@
   },
   {
     "class_name": "RhartTextG3ProPreviewVideoToText",
-    "internal_name": "RH_RhartTextG3ProPreviewVideoToText",
     "display_name": "RH rhart-text-g-3-pro-preview/video-to-text",
     "name_cn": "rhart-text-g-3-pro-preview/video-to-text",
     "name_en": "rhart-text-g-3-pro-preview/video-to-text",
@@ -25404,7 +25202,6 @@
   },
   {
     "class_name": "RhartTextG25FlashImageToText",
-    "internal_name": "RH_RhartTextG25FlashImageToText",
     "display_name": "RH rhart-text-g-25-flash/image-to-text",
     "name_cn": "rhart-text-g-25-flash/image-to-text",
     "name_en": "rhart-text-g-25-flash/image-to-text",
@@ -25432,7 +25229,6 @@
   },
   {
     "class_name": "RhartVideoV31ProImageToVideo",
-    "internal_name": "RH_RhartVideoV31ProImageToVideo",
     "display_name": "RH 全能视频V3.1-pro-图生视频-低价渠道版",
     "name_cn": "全能视频V3.1-pro-图生视频-低价渠道版",
     "name_en": "google/veo3.1-pro/image-to-video-channel-low-price",
@@ -25523,7 +25319,6 @@
   },
   {
     "class_name": "RhartTextG25FlashTextToText",
-    "internal_name": "RH_RhartTextG25FlashTextToText",
     "display_name": "RH rhart-text-g-25-flash/text-to-text",
     "name_cn": "rhart-text-g-25-flash/text-to-text",
     "name_en": "rhart-text-g-25-flash/text-to-text",
@@ -25542,7 +25337,6 @@
   },
   {
     "class_name": "RhartTextG25FlashVideoToText",
-    "internal_name": "RH_RhartTextG25FlashVideoToText",
     "display_name": "RH rhart-text-g-25-flash/video-to-text",
     "name_cn": "rhart-text-g-25-flash/video-to-text",
     "name_en": "rhart-text-g-25-flash/video-to-text",
@@ -25570,7 +25364,6 @@
   },
   {
     "class_name": "RhartTextG25ProImageToText",
-    "internal_name": "RH_RhartTextG25ProImageToText",
     "display_name": "RH rhart-text-g-25-pro/image-to-text",
     "name_cn": "rhart-text-g-25-pro/image-to-text",
     "name_en": "rhart-text-g-25-pro/image-to-text",
@@ -25598,7 +25391,6 @@
   },
   {
     "class_name": "RhartTextG25ProTextToText",
-    "internal_name": "RH_RhartTextG25ProTextToText",
     "display_name": "RH rhart-text-g-25-pro/text-to-text",
     "name_cn": "rhart-text-g-25-pro/text-to-text",
     "name_en": "rhart-text-g-25-pro/text-to-text",
@@ -25617,7 +25409,6 @@
   },
   {
     "class_name": "RhartTextG25ProVideoToText",
-    "internal_name": "RH_RhartTextG25ProVideoToText",
     "display_name": "RH rhart-text-g-25-pro/video-to-text",
     "name_cn": "rhart-text-g-25-pro/video-to-text",
     "name_en": "rhart-text-g-25-pro/video-to-text",
@@ -25645,7 +25436,6 @@
   },
   {
     "class_name": "TopazlabsImageUpscaleStandardV2",
-    "internal_name": "RH_TopazlabsImageUpscaleStandardV2",
     "display_name": "RH topazlabs图像放大StandardV2",
     "name_cn": "topazlabs图像放大StandardV2",
     "name_en": "topazlabs-image-upscale-standard-v2",
@@ -25746,7 +25536,6 @@
   },
   {
     "class_name": "TopazlabsImageUpscaleLowResolutionV2",
-    "internal_name": "RH_TopazlabsImageUpscaleLowResolutionV2",
     "display_name": "RH topazlabs图像放大Low Resolution V2",
     "name_cn": "topazlabs图像放大Low Resolution V2",
     "name_en": "topazlabs-image-upscale low resolution v2",
@@ -25847,7 +25636,6 @@
   },
   {
     "class_name": "TopazlabsImageUpscaleCgi",
-    "internal_name": "RH_TopazlabsImageUpscaleCgi",
     "display_name": "RH topazlabs图像放大CGI",
     "name_cn": "topazlabs图像放大CGI",
     "name_en": "topazlabs-image-upscale-cgi",
@@ -25948,7 +25736,6 @@
   },
   {
     "class_name": "TopazlabsImageUpscaleHighFidelityV2",
-    "internal_name": "RH_TopazlabsImageUpscaleHighFidelityV2",
     "display_name": "RH topazlabs图像放大High Fidelity V2",
     "name_cn": "topazlabs图像放大High Fidelity V2",
     "name_en": "topazlabs-image-upscale-high fidelity v2",
@@ -26049,7 +25836,6 @@
   },
   {
     "class_name": "TopazlabsImageUpscaleTextRefine",
-    "internal_name": "RH_TopazlabsImageUpscaleTextRefine",
     "display_name": "RH topazlabs图像放大Text Refine",
     "name_cn": "topazlabs图像放大Text Refine",
     "name_en": "topazlabs-image-upscale-text refine",
@@ -26150,7 +25936,6 @@
   },
   {
     "class_name": "TopazlabsVideoUpscale",
-    "internal_name": "RH_TopazlabsVideoUpscale",
     "display_name": "RH topazlabs视频放大",
     "name_cn": "topazlabs视频放大",
     "name_en": "topazlabs-video-upscale",
@@ -26216,7 +26001,6 @@
   },
   {
     "class_name": "RhartImageG3ImageToImage",
-    "internal_name": "RH_RhartImageG3ImageToImage",
     "display_name": "RH 全能图片X-3-图生图",
     "name_cn": "全能图片X-3-图生图",
     "name_en": "grok-3-image-to-image",
@@ -26245,7 +26029,6 @@
   },
   {
     "class_name": "RhartImageG4ImageToImage",
-    "internal_name": "RH_RhartImageG4ImageToImage",
     "display_name": "RH 全能图片X-4-图生图",
     "name_cn": "全能图片X-4-图生图",
     "name_en": "grok-4-image-image-to-image",
@@ -26273,7 +26056,6 @@
   },
   {
     "class_name": "RhartImageG3TextToImage",
-    "internal_name": "RH_RhartImageG3TextToImage",
     "display_name": "RH 全能图片X-3-文生图",
     "name_cn": "全能图片X-3-文生图",
     "name_en": "grok-3-image-text-to-image",
@@ -26293,7 +26075,6 @@
   },
   {
     "class_name": "RhartImageG4TextToImage",
-    "internal_name": "RH_RhartImageG4TextToImage",
     "display_name": "RH 全能图片X-4-文生图",
     "name_cn": "全能图片X-4-文生图",
     "name_en": "grok-4-image-text-to-image",
@@ -26312,7 +26093,6 @@
   },
   {
     "class_name": "PixverseV55TextToVideo",
-    "internal_name": "RH_PixverseV55TextToVideo",
     "display_name": "RH PixVerse V5.5 文生视频",
     "name_cn": "PixVerse V5.5 文生视频",
     "name_en": "pixverse-v5.5/text-to-video",
@@ -26496,7 +26276,6 @@
   },
   {
     "class_name": "PixverseV55ImageToVideo",
-    "internal_name": "RH_PixverseV55ImageToVideo",
     "display_name": "RH PixVerse V5.5 图生视频",
     "name_cn": "PixVerse V5.5 图生视频",
     "name_en": "pixverse-v5.5/image-to-video",
@@ -26654,7 +26433,6 @@
   },
   {
     "class_name": "PixverseV55Transition",
-    "internal_name": "RH_PixverseV55Transition",
     "display_name": "RH PixVerse V5.5 转场",
     "name_cn": "PixVerse V5.5 转场",
     "name_en": "pixverse-v5.5-transition",
@@ -26816,7 +26594,6 @@
   },
   {
     "class_name": "PixverseV55Effects",
-    "internal_name": "RH_PixverseV55Effects",
     "display_name": "RH PixVerse V5.5 特效",
     "name_cn": "PixVerse V5.5 特效",
     "name_en": "pixverse-v5.5-effects",
@@ -27025,7 +26802,6 @@
   },
   {
     "class_name": "RhartVideoRGen4TurboOfficialImageToVideo",
-    "internal_name": "RH_RhartVideoRGen4TurboOfficialImageToVideo",
     "display_name": "RH 全能视频R/gen4-turbo/图生视频-官方稳定版",
     "name_cn": "全能视频R/gen4-turbo/图生视频-官方稳定版",
     "name_en": "runwayml/gen4-turbo/image-to-video-official-stable",
@@ -27109,7 +26885,6 @@
   },
   {
     "class_name": "RhartVideoRGen4AlephOfficialVideoToVideo",
-    "internal_name": "RH_RhartVideoRGen4AlephOfficialVideoToVideo",
     "display_name": "RH 全能视频R-gen4-aleph/视频编辑-官方稳定版",
     "name_cn": "全能视频R-gen4-aleph/视频编辑-官方稳定版",
     "name_en": "runwayml/gen4-aleph/video-to-video-official-stable",
@@ -27183,7 +26958,6 @@
   },
   {
     "class_name": "RhartVideoRGen4TurboImageToVideo",
-    "internal_name": "RH_RhartVideoRGen4TurboImageToVideo",
     "display_name": "RH 全能视频R/gen4-turbo/图生视频-低价渠道版",
     "name_cn": "全能视频R/gen4-turbo/图生视频-低价渠道版",
     "name_en": "runwayml/gen4-turbo/image-to-video-channel-low-price",
@@ -27273,7 +27047,6 @@
   },
   {
     "class_name": "RhartVideoLtx2TextToVideoLora",
-    "internal_name": "RH_RhartVideoLtx2TextToVideoLora",
     "display_name": "RH ltx-2-19b/text-to-video-lora",
     "name_cn": "ltx-2-19b/text-to-video-lora",
     "name_en": "ltx-2-19b/text-to-video-lora",
@@ -27284,7 +27057,6 @@
   },
   {
     "class_name": "SkyreelsV3ReferenceToVideo",
-    "internal_name": "RH_SkyreelsV3ReferenceToVideo",
     "display_name": "RH SkyReels V3 参考图生视频",
     "name_cn": "SkyReels V3 参考图生视频",
     "name_en": "skyreels-v3/reference-to-video",
@@ -27362,7 +27134,6 @@
   },
   {
     "class_name": "SkyreelsV3VideoRestyling",
-    "internal_name": "RH_SkyreelsV3VideoRestyling",
     "display_name": "RH SkyReels V3 视频风格化",
     "name_cn": "SkyReels V3 视频风格化",
     "name_en": "skyreels-v3/video-restyling",
@@ -27427,7 +27198,6 @@
   },
   {
     "class_name": "SkyreelsV3SingleShotVideoExtension",
-    "internal_name": "RH_SkyreelsV3SingleShotVideoExtension",
     "display_name": "RH SkyReels V3 视频续写（单镜头）",
     "name_cn": "SkyReels V3 视频续写（单镜头）",
     "name_en": "skyreels-v3/single-shot-video-extension",
@@ -27467,7 +27237,6 @@
   },
   {
     "class_name": "SkyreelsV3ShotSwitchingVideoExtension",
-    "internal_name": "RH_SkyreelsV3ShotSwitchingVideoExtension",
     "display_name": "RH SkyReels V3 视频续写（镜头切换）",
     "name_cn": "SkyReels V3 视频续写（镜头切换）",
     "name_en": "skyreels-v3/shot-switching-video-extension",
@@ -27548,7 +27317,6 @@
   },
   {
     "class_name": "RhartVideoSOfficialSoraUploadCharacter",
-    "internal_name": "RH_RhartVideoSOfficialSoraUploadCharacter",
     "display_name": "RH 全能视频S-角色上传-官方稳定版",
     "name_cn": "全能视频S-角色上传-官方稳定版",
     "name_en": "sora-upload-character-official",
@@ -27577,7 +27345,6 @@
   },
   {
     "class_name": "ViduTextToVideoQ3ProFast",
-    "internal_name": "RH_ViduTextToVideoQ3ProFast",
     "display_name": "RH Vidu-文生视频-q3-pro-fast",
     "name_cn": "Vidu-文生视频-q3-pro-fast",
     "name_en": "Vidu-text-to-video-q3-pro-fast",
@@ -27751,7 +27518,6 @@
   },
   {
     "class_name": "ViduImageToVideoQ3ProFast",
-    "internal_name": "RH_ViduImageToVideoQ3ProFast",
     "display_name": "RH Vidu-图生视频-q3-pro-fast",
     "name_cn": "Vidu-图生视频-q3-pro-fast",
     "name_en": "Vidu-image-to-video-q3-pro-fast",
@@ -27899,7 +27665,6 @@
   },
   {
     "class_name": "ViduStartEndToVideoQ3ProFast",
-    "internal_name": "RH_ViduStartEndToVideoQ3ProFast",
     "display_name": "RH Vidu-首尾帧生视频-q3-pro-fast",
     "name_cn": "Vidu-首尾帧生视频-q3-pro-fast",
     "name_en": "Vidu-start-end-to-video-q3-pro-fast",
@@ -28056,7 +27821,6 @@
   },
   {
     "class_name": "PixverseV56TextToVideo",
-    "internal_name": "RH_PixverseV56TextToVideo",
     "display_name": "RH PixVerse V5.6 文生视频",
     "name_cn": "PixVerse V5.6 文生视频",
     "name_en": "pixverse-v5.6/text-to-video",
@@ -28220,7 +27984,6 @@
   },
   {
     "class_name": "PixverseV56ImageToVideo",
-    "internal_name": "RH_PixverseV56ImageToVideo",
     "display_name": "RH PixVerse V5.6 图生视频",
     "name_cn": "PixVerse V5.6 图生视频",
     "name_en": "pixverse-v5.6/image-to-video",
@@ -28358,7 +28121,6 @@
   },
   {
     "class_name": "HiggsfieldSoulImageToImage",
-    "internal_name": "RH_HiggsfieldSoulImageToImage",
     "display_name": "RH Higgsfield Soul 图生图",
     "name_cn": "Higgsfield Soul 图生图",
     "name_en": "higgsfield/soul/image-to-image",
@@ -29033,7 +28795,6 @@
   },
   {
     "class_name": "HiggsfieldDopImageToVideo",
-    "internal_name": "RH_HiggsfieldDopImageToVideo",
     "display_name": "RH Higgsfield DoP 图生视频",
     "name_cn": "Higgsfield DoP 图生视频",
     "name_en": "higgsfield/dop/image-to-video",
@@ -29096,7 +28857,6 @@
   },
   {
     "class_name": "RhartTextQwen27bChat",
-    "internal_name": "RH_RhartTextQwen27bChat",
     "display_name": "RH rhart-text-qwen-27b/chat",
     "name_cn": "rhart-text-qwen-27b/chat",
     "name_en": "rhart-text-qwen-27b/chat",
@@ -29135,7 +28895,6 @@
   },
   {
     "class_name": "MinimaxVoiceDesign",
-    "internal_name": "RH_MinimaxVoiceDesign",
     "display_name": "RH minimax-音色设计",
     "name_cn": "minimax-音色设计",
     "name_en": "minimax/voice-design",
@@ -29179,7 +28938,6 @@
   },
   {
     "class_name": "RhartTextG3ProPreviewCvImageToText",
-    "internal_name": "RH_RhartTextG3ProPreviewCvImageToText",
     "display_name": "RH rhart-text-g-3-pro-preview-cv/image-to-text",
     "name_cn": "rhart-text-g-3-pro-preview-cv/image-to-text",
     "name_en": "rhart-text-g-3-pro-preview-cv/image-to-text",
@@ -29208,7 +28966,6 @@
   },
   {
     "class_name": "RhartTextG25FlashCvImageToText",
-    "internal_name": "RH_RhartTextG25FlashCvImageToText",
     "display_name": "RH rhart-text-g-25-flash-cv/image-to-text",
     "name_cn": "rhart-text-g-25-flash-cv/image-to-text",
     "name_en": "rhart-text-g-25-flash-cv/image-to-text ",
@@ -29236,7 +28993,6 @@
   },
   {
     "class_name": "RhartTextG3FlashPreviewCvImageToText",
-    "internal_name": "RH_RhartTextG3FlashPreviewCvImageToText",
     "display_name": "RH rhart-text-g-3-flash-preview-cv/image-to-text",
     "name_cn": "rhart-text-g-3-flash-preview-cv/image-to-text",
     "name_en": "rhart-text-g-3-flash-preview-cv/image-to-text",
@@ -29264,7 +29020,6 @@
   },
   {
     "class_name": "RhartTextG25ProCvImageToText",
-    "internal_name": "RH_RhartTextG25ProCvImageToText",
     "display_name": "RH rhart-text-g-25-pro-cv/image-to-text",
     "name_cn": "rhart-text-g-25-pro-cv/image-to-text",
     "name_en": "rhart-text-g-25-pro-cv/image-to-text",
@@ -29292,7 +29047,6 @@
   },
   {
     "class_name": "RhartVideoV31LiteTextToVideo",
-    "internal_name": "RH_RhartVideoV31LiteTextToVideo",
     "display_name": "RH 全能视频V3.1-lite-文生视频-低价渠道版",
     "name_cn": "全能视频V3.1-lite-文生视频-低价渠道版",
     "name_en": "google/veo3.1-lite/text-to-video-channel-low-price",
@@ -29373,7 +29127,6 @@
   },
   {
     "class_name": "RhartVideoV31LiteImageToVideo",
-    "internal_name": "RH_RhartVideoV31LiteImageToVideo",
     "display_name": "RH 全能视频V3.1-lite-图生视频-低价渠道版",
     "name_cn": "全能视频V3.1-lite-图生视频-低价渠道版",
     "name_en": "google/veo3.1-lite/image-to-video-channel-low-price",
@@ -29460,7 +29213,6 @@
   },
   {
     "class_name": "PixverseC1TextToVideo",
-    "internal_name": "RH_PixverseC1TextToVideo",
     "display_name": "RH PixVerse C1 文生视频",
     "name_cn": "PixVerse C1 文生视频",
     "name_en": "pixverse-c1/text-to-video",
@@ -29580,7 +29332,6 @@
   },
   {
     "class_name": "PixverseC1ImageToVideo",
-    "internal_name": "RH_PixverseC1ImageToVideo",
     "display_name": "RH PixVerse C1 图生视频",
     "name_cn": "PixVerse C1 图生视频",
     "name_en": "pixverse-c1/image-to-video",
@@ -29659,7 +29410,6 @@
   },
   {
     "class_name": "PixverseC1Transition",
-    "internal_name": "RH_PixverseC1Transition",
     "display_name": "RH PixVerse C1 转场",
     "name_cn": "PixVerse C1 转场",
     "name_en": "pixverse-c1/transition",
@@ -29797,7 +29547,6 @@
   },
   {
     "class_name": "PixverseC1ReferenceToVideo",
-    "internal_name": "RH_PixverseC1ReferenceToVideo",
     "display_name": "RH PixVerse C1 参考生视频",
     "name_cn": "PixVerse C1 参考生视频",
     "name_en": "pixverse-c1/reference-to-video",
@@ -29926,7 +29675,6 @@
   },
   {
     "class_name": "ImageEnhanceHypirUltra",
-    "internal_name": "RH_ImageEnhanceHypirUltra",
     "display_name": "RH HYPIR-ULTRA",
     "name_cn": "HYPIR-ULTRA",
     "name_en": "hypir-ultra",
@@ -30073,7 +29821,6 @@
   },
   {
     "class_name": "KlingV304kMotionControl",
-    "internal_name": "RH_KlingV304kMotionControl",
     "display_name": "RH 可灵动作控制V3.0-4k",
     "name_cn": "可灵动作控制V3.0-4k",
     "name_en": "kling-v3.0-4k-motion-control",
@@ -30084,7 +29831,6 @@
   },
   {
     "class_name": "Hitem3dV21ImageTo3d",
-    "internal_name": "RH_Hitem3dV21ImageTo3d",
     "display_name": "RH hitem3d-v21/image-to-3d",
     "name_cn": "hitem3d-v21/image-to-3d",
     "name_en": "hitem3d-v21/image-to-3d",
@@ -30156,7 +29902,6 @@
   },
   {
     "class_name": "Hitem3dV21MultiImageTo3d",
-    "internal_name": "RH_Hitem3dV21MultiImageTo3d",
     "display_name": "RH hitem3d-v21/multi-image-to-3d",
     "name_cn": "hitem3d-v21/multi-image-to-3d",
     "name_en": "hitem3d-v21/multi-image-to-3d",
@@ -30255,7 +30000,6 @@
   },
   {
     "class_name": "KlingV2AiAvatarStandardImageAudioToVideo",
-    "internal_name": "RH_KlingV2AiAvatarStandardImageAudioToVideo",
     "display_name": "RH Kling V2 Std 数字人口播视频",
     "name_cn": "Kling V2 Std 数字人口播视频",
     "name_en": "kling-v2-ai-avatar-standard/image-audio-to-video",
@@ -30293,7 +30037,6 @@
   },
   {
     "class_name": "KlingV2AiAvatarProImageAudioToVideo",
-    "internal_name": "RH_KlingV2AiAvatarProImageAudioToVideo",
     "display_name": "RH Kling V2 Pro 数字人口播视频",
     "name_cn": "Kling V2 Pro 数字人口播视频",
     "name_en": "kling-v2-ai-avatar-pro/image-audio-to-video",
@@ -30331,7 +30074,6 @@
   },
   {
     "class_name": "ImageEnhanceHypirBalance",
-    "internal_name": "RH_ImageEnhanceHypirBalance",
     "display_name": "RH HYPIR-BALANCE",
     "name_cn": "HYPIR-BALANCE",
     "name_en": "hypir-balance",
@@ -30400,7 +30142,6 @@
   },
   {
     "class_name": "Marble10TextToWorld",
-    "internal_name": "RH_Marble10TextToWorld",
     "display_name": "RH marble-1.0 文生3D世界",
     "name_cn": "marble-1.0 文生3D世界",
     "name_en": "marble-1.0/text-to-world",
@@ -30485,7 +30226,6 @@
   },
   {
     "class_name": "MarbleUploadMediaAsset",
-    "internal_name": "RH_MarbleUploadMediaAsset",
     "display_name": "RH Marble 上传媒体资源",
     "name_cn": "Marble 上传媒体资源",
     "name_en": "marble/upload-media-asset",
@@ -30551,7 +30291,6 @@
   },
   {
     "class_name": "Marble10ImageToWorld",
-    "internal_name": "RH_Marble10ImageToWorld",
     "display_name": "RH marble-1.0 单图生3D世界",
     "name_cn": "marble-1.0 单图生3D世界",
     "name_en": "marble-1.0/image-to-world",
@@ -30653,7 +30392,6 @@
   },
   {
     "class_name": "Marble10MultiImageToWorld",
-    "internal_name": "RH_Marble10MultiImageToWorld",
     "display_name": "RH marble-1.0 多图生3D世界",
     "name_cn": "marble-1.0 多图生3D世界",
     "name_en": "marble-1.0/multi-image-to-world",
@@ -30746,7 +30484,6 @@
   },
   {
     "class_name": "Marble10VideoToWorld",
-    "internal_name": "RH_Marble10VideoToWorld",
     "display_name": "RH marble-1.0 视频生3D世界",
     "name_cn": "marble-1.0 视频生3D世界",
     "name_en": "marble-1.0/video-to-world",
@@ -30840,7 +30577,6 @@
   },
   {
     "class_name": "Marble11VideoToWorld",
-    "internal_name": "RH_Marble11VideoToWorld",
     "display_name": "RH marble-1.1 视频生3D世界",
     "name_cn": "marble-1.1 视频生3D世界",
     "name_en": "marble-1.1/video-to-world",
@@ -30934,7 +30670,6 @@
   },
   {
     "class_name": "Marble11PlusVideoToWorld",
-    "internal_name": "RH_Marble11PlusVideoToWorld",
     "display_name": "RH marble-1.1-plus 视频生3D世界",
     "name_cn": "marble-1.1-plus 视频生3D世界",
     "name_en": "marble-1.1-plus/video-to-world",
@@ -31028,7 +30763,6 @@
   },
   {
     "class_name": "Marble11MultiImageToWorld",
-    "internal_name": "RH_Marble11MultiImageToWorld",
     "display_name": "RH marble-1.1 多图生3D世界",
     "name_cn": "marble-1.1 多图生3D世界",
     "name_en": "marble-1.1/multi-image-to-world",
@@ -31121,7 +30855,6 @@
   },
   {
     "class_name": "Marble11PlusMultiImageToWorld",
-    "internal_name": "RH_Marble11PlusMultiImageToWorld",
     "display_name": "RH marble-1.1-plus 多图生3D世界",
     "name_cn": "marble-1.1-plus 多图生3D世界",
     "name_en": "marble-1.1-plus/multi-image-to-world",
@@ -31214,7 +30947,6 @@
   },
   {
     "class_name": "Marble11ImageToWorld",
-    "internal_name": "RH_Marble11ImageToWorld",
     "display_name": "RH marble-1.1 单图生3D世界",
     "name_cn": "marble-1.1 单图生3D世界",
     "name_en": "marble-1.1/image-to-world",
@@ -31316,7 +31048,6 @@
   },
   {
     "class_name": "Marble11PlusImageToWorld",
-    "internal_name": "RH_Marble11PlusImageToWorld",
     "display_name": "RH marble-1.1-plus 单图生3D世界",
     "name_cn": "marble-1.1-plus 单图生3D世界",
     "name_en": "marble-1.1-plus/image-to-world",
@@ -31418,7 +31149,6 @@
   },
   {
     "class_name": "Marble11TextToWorld",
-    "internal_name": "RH_Marble11TextToWorld",
     "display_name": "RH marble-1.1 文生3D世界",
     "name_cn": "marble-1.1 文生3D世界",
     "name_en": "marble-1.1/text-to-world",
@@ -31504,7 +31234,6 @@
   },
   {
     "class_name": "Marble11PlusTextToWorld",
-    "internal_name": "RH_Marble11PlusTextToWorld",
     "display_name": "RH marble-1.1-plus 文生3D世界",
     "name_cn": "marble-1.1-plus 文生3D世界",
     "name_en": "marble-1.1-plus/text-to-world",
@@ -31590,7 +31319,6 @@
   },
   {
     "class_name": "Meshy6TextTo3d",
-    "internal_name": "RH_Meshy6TextTo3d",
     "display_name": "RH Meshy 6 文生 3D",
     "name_cn": "Meshy 6 文生 3D",
     "name_en": "meshy6/text-to-3d",
@@ -31736,7 +31464,6 @@
   },
   {
     "class_name": "Meshy6ImageTo3d",
-    "internal_name": "RH_Meshy6ImageTo3d",
     "display_name": "RH Meshy 6 图生 3D",
     "name_cn": "Meshy 6 图生 3D",
     "name_en": "meshy6/image-to-3d",
@@ -31863,7 +31590,6 @@
   },
   {
     "class_name": "MurekaAiFilesUpload",
-    "internal_name": "RH_MurekaAiFilesUpload",
     "display_name": "RH Mureka 文件上传",
     "name_cn": "Mureka 文件上传",
     "name_en": "mureka-ai/files-upload",
@@ -31929,7 +31655,6 @@
   },
   {
     "class_name": "MurekaAiMurekaV76GenerateSong",
-    "internal_name": "RH_MurekaAiMurekaV76GenerateSong",
     "display_name": "RH Mureka-v7.6 歌曲生成",
     "name_cn": "Mureka-v7.6 歌曲生成",
     "name_en": "mureka-v7.6/generate-song",
@@ -32002,7 +31727,6 @@
   },
   {
     "class_name": "MurekaAiMurekaO2GenerateSong",
-    "internal_name": "RH_MurekaAiMurekaO2GenerateSong",
     "display_name": "RH Mureka-o2 歌曲生成",
     "name_cn": "Mureka-o2 歌曲生成",
     "name_en": "mureka-o2/generate-song",
@@ -32051,7 +31775,6 @@
   },
   {
     "class_name": "MurekaAiMurekaV8GenerateSong",
-    "internal_name": "RH_MurekaAiMurekaV8GenerateSong",
     "display_name": "RH Mureka-v8 歌曲生成",
     "name_cn": "Mureka-v8 歌曲生成",
     "name_en": "mureka-v8/generate-song",
@@ -32124,7 +31847,6 @@
   },
   {
     "class_name": "MurekaAiMurekaV9GenerateSong",
-    "internal_name": "RH_MurekaAiMurekaV9GenerateSong",
     "display_name": "RH Mureka-v9 歌曲生成",
     "name_cn": "Mureka-v9 歌曲生成",
     "name_en": "mureka-v9/generate-song",
@@ -32197,7 +31919,6 @@
   },
   {
     "class_name": "MurekaAiMurekaV76GenerateBgm",
-    "internal_name": "RH_MurekaAiMurekaV76GenerateBgm",
     "display_name": "RH Mureka-v7.6 伴奏生成",
     "name_cn": "Mureka-v7.6 伴奏生成",
     "name_en": "mureka-v7.6/generate-bgm",
@@ -32245,7 +31966,6 @@
   },
   {
     "class_name": "MurekaO2InstrumentalGenerate",
-    "internal_name": "RH_MurekaO2InstrumentalGenerate",
     "display_name": "RH Mureka mureka-o2 伴奏生成-暂不可用",
     "name_cn": "Mureka mureka-o2 伴奏生成-暂不可用",
     "name_en": "mureka-o2/instrumental-generate",
@@ -32293,7 +32013,6 @@
   },
   {
     "class_name": "MurekaAiMurekaV8GenerateBgm",
-    "internal_name": "RH_MurekaAiMurekaV8GenerateBgm",
     "display_name": "RH Mureka-v8 伴奏生成",
     "name_cn": "Mureka-v8 伴奏生成",
     "name_en": "mureka-v8/generate-bgm",
@@ -32341,7 +32060,6 @@
   },
   {
     "class_name": "MurekaAiMurekaV76ExtendSong",
-    "internal_name": "RH_MurekaAiMurekaV76ExtendSong",
     "display_name": "RH mureka-v7.6 短歌延长",
     "name_cn": "mureka-v7.6 短歌延长",
     "name_en": "mureka-v7.6/extend-song",
@@ -32382,7 +32100,6 @@
   },
   {
     "class_name": "MurekaAiMurekaV8ExtendSong",
-    "internal_name": "RH_MurekaAiMurekaV8ExtendSong",
     "display_name": "RH Mureka-v8 短歌延长",
     "name_cn": "Mureka-v8 短歌延长",
     "name_en": "mureka-v8/extend-song",
@@ -32443,7 +32160,6 @@
   },
   {
     "class_name": "MurekaAiVocalClone",
-    "internal_name": "RH_MurekaAiVocalClone",
     "display_name": "RH Mureka 人声克隆",
     "name_cn": "Mureka 人声克隆",
     "name_en": "mureka-ai/vocal-clone",
@@ -32464,7 +32180,6 @@
   },
   {
     "class_name": "MurekaAiGenerateLyrics",
-    "internal_name": "RH_MurekaAiGenerateLyrics",
     "display_name": "RH Mureka 歌词生成",
     "name_cn": "Mureka 歌词生成",
     "name_en": "mureka-ai/generate-lyrics",
@@ -32485,7 +32200,6 @@
   },
   {
     "class_name": "MurekaAiMurekaV9GenerateBgm",
-    "internal_name": "RH_MurekaAiMurekaV9GenerateBgm",
     "display_name": "RH Mureka-v9 伴奏生成",
     "name_cn": "Mureka-v9 伴奏生成",
     "name_en": "mureka-v9/generate-bgm",
@@ -32533,7 +32247,6 @@
   },
   {
     "class_name": "PixverseV6Effects",
-    "internal_name": "RH_PixverseV6Effects",
     "display_name": "RH PixVerse V6 特效",
     "name_cn": "PixVerse V6 特效",
     "name_en": "pixverse-v6/effects",
@@ -32687,7 +32400,6 @@
   },
   {
     "class_name": "LumaUni1TextToImage",
-    "internal_name": "RH_LumaUni1TextToImage",
     "display_name": "RH Luma uni-1 文生图",
     "name_cn": "Luma uni-1 文生图",
     "name_en": "Luma uni-1 Text to Image",
@@ -32809,7 +32521,6 @@
   },
   {
     "class_name": "LumaUni1ImageToImage",
-    "internal_name": "RH_LumaUni1ImageToImage",
     "display_name": "RH Luma uni-1 图生图",
     "name_cn": "Luma uni-1 图生图",
     "name_en": "Luma uni-1 Image to Image",
@@ -32951,7 +32662,6 @@
   },
   {
     "class_name": "LumaUni1ImageEdit",
-    "internal_name": "RH_LumaUni1ImageEdit",
     "display_name": "RH Luma uni-1 图像编辑",
     "name_cn": "Luma uni-1 图像编辑",
     "name_en": "Luma uni-1 Image Edit",
@@ -33074,7 +32784,6 @@
   },
   {
     "class_name": "LumaUni1MaxTextToImage",
-    "internal_name": "RH_LumaUni1MaxTextToImage",
     "display_name": "RH Luma uni-1-max 文生图",
     "name_cn": "Luma uni-1-max 文生图",
     "name_en": "Luma uni-1-max Text to Image",
@@ -33197,7 +32906,6 @@
   },
   {
     "class_name": "LumaUni1MaxImageToImage",
-    "internal_name": "RH_LumaUni1MaxImageToImage",
     "display_name": "RH Luma uni-1-max 图生图",
     "name_cn": "Luma uni-1-max 图生图",
     "name_en": "Luma uni-1-max Image to Image",
@@ -33339,7 +33047,6 @@
   },
   {
     "class_name": "LumaUni1MaxImageEdit",
-    "internal_name": "RH_LumaUni1MaxImageEdit",
     "display_name": "RH Luma uni-1-max 图像编辑",
     "name_cn": "Luma uni-1-max 图像编辑",
     "name_en": "Luma uni-1-max Image Edit",
@@ -33462,7 +33169,6 @@
   },
   {
     "class_name": "AlibabaWan27SpicyImageToVideo",
-    "internal_name": "RH_AlibabaWan27SpicyImageToVideo",
     "display_name": "RH 万相2.7-spicy-图生视频",
     "name_cn": "万相2.7-spicy-图生视频",
     "name_en": "wan-2.7-spicy/image-to-video",
@@ -33558,7 +33264,6 @@
   },
   {
     "class_name": "MurekaAiStemSong",
-    "internal_name": "RH_MurekaAiStemSong",
     "display_name": "RH mureka-ai 音轨分离",
     "name_cn": "mureka-ai 音轨分离",
     "name_en": "mureka-ai/stem-song",
@@ -33599,7 +33304,6 @@
   },
   {
     "class_name": "MurekaAiRecognizeSong",
-    "internal_name": "RH_MurekaAiRecognizeSong",
     "display_name": "RH mureka-ai 歌曲识别",
     "name_cn": "mureka-ai 歌曲识别",
     "name_en": "mureka-ai/recognize-song",
@@ -33619,7 +33323,6 @@
   },
   {
     "class_name": "MurekaAiDescribeSong",
-    "internal_name": "RH_MurekaAiDescribeSong",
     "display_name": "RH mureka-ai 歌曲理解",
     "name_cn": "mureka-ai 歌曲理解",
     "name_en": "mureka-ai/describe-song",
@@ -33640,7 +33343,6 @@
   },
   {
     "class_name": "MurekaAiExtendLyrics",
-    "internal_name": "RH_MurekaAiExtendLyrics",
     "display_name": "RH mureka-ai 歌词延长",
     "name_cn": "mureka-ai 歌词延长",
     "name_en": "mureka-ai/extend-lyrics",
@@ -33660,7 +33362,6 @@
   },
   {
     "class_name": "VolcDramaVideoTranslate",
-    "internal_name": "RH_VolcDramaVideoTranslate",
     "display_name": "RH 火山短剧-视频翻译",
     "name_cn": "火山短剧-视频翻译",
     "name_en": "volc-drama/video-translate",
@@ -33854,7 +33555,6 @@
   },
   {
     "class_name": "RhartVideoGOfficialImageToVideoV15",
-    "internal_name": "RH_RhartVideoGOfficialImageToVideoV15",
     "display_name": "RH 全能视频X-图生视频-官方稳定版-v1.5",
     "name_cn": "全能视频X-图生视频-官方稳定版-v1.5",
     "name_en": "xai/grok-imagine-video-v1.5/image-to-video-official-stable",
@@ -33915,7 +33615,6 @@
   },
   {
     "class_name": "ViduReferenceToVideoQ3Ad",
-    "internal_name": "RH_ViduReferenceToVideoQ3Ad",
     "display_name": "RH Vidu-参考生视频-q3-ad",
     "name_cn": "Vidu-参考生视频-q3-ad",
     "name_en": "Vidu-reference-to-video-q3-ad",
@@ -34038,7 +33737,6 @@
   },
   {
     "class_name": "VolcDramaSerialVideoTranslate",
-    "internal_name": "RH_VolcDramaSerialVideoTranslate",
     "display_name": "RH 火山短剧-多集视频翻译",
     "name_cn": "火山短剧-多集视频翻译",
     "name_en": "volc-drama/serial-video-translate",
@@ -34260,7 +33958,6 @@
   },
   {
     "class_name": "ViduShortPlayQ3Drama",
-    "internal_name": "RH_ViduShortPlayQ3Drama",
     "display_name": "RH Vidu Q3 Drama 短剧成片",
     "name_cn": "Vidu Q3 Drama 短剧成片",
     "name_en": "vidu/short-play-q3-drama",
@@ -34529,7 +34226,6 @@
   },
   {
     "class_name": "MinimaxMusic26",
-    "internal_name": "RH_MinimaxMusic26",
     "display_name": "RH MiniMax Music 2.6",
     "name_cn": "MiniMax Music 2.6",
     "name_en": "minimax/music-2.6",
@@ -34660,7 +34356,6 @@
   },
   {
     "class_name": "MinimaxMusicCover",
-    "internal_name": "RH_MinimaxMusicCover",
     "display_name": "RH MiniMax Music 翻唱",
     "name_cn": "MiniMax Music 翻唱",
     "name_en": "minimax/music-cover",
@@ -34790,7 +34485,6 @@
   },
   {
     "class_name": "MinimaxMusicCoverPreprocess",
-    "internal_name": "RH_MinimaxMusicCoverPreprocess",
     "display_name": "RH MiniMax Music 翻唱前处理",
     "name_cn": "MiniMax Music 翻唱前处理",
     "name_en": "minimax/music-cover-preprocess",
@@ -34811,7 +34505,6 @@
   },
   {
     "class_name": "RhartVideoSparkvideo20MultimodalVideoStar",
-    "internal_name": "RH_RhartVideoSparkvideo20MultimodalVideoStar",
     "display_name": "RH 周星驰版权IP视频生成 (Seedance 2.0)",
     "name_cn": "周星驰版权IP视频生成 (Seedance 2.0)",
     "name_en": "Stephen Chow IP Video Gen(Seedance 2.0)",
@@ -35032,7 +34725,6 @@
   },
   {
     "class_name": "RhartVideoSparkvideo20MultimodalVideoStarFast",
-    "internal_name": "RH_RhartVideoSparkvideo20MultimodalVideoStarFast",
     "display_name": "RH 周星驰版权IP视频生成-极速版 (Seedance 2.0 Fast)",
     "name_cn": "周星驰版权IP视频生成-极速版 (Seedance 2.0 Fast)",
     "name_en": "Stephen Chow IP Video Gen-Fast (Seedance 2.0 Fast)",
@@ -35248,7 +34940,6 @@
   },
   {
     "class_name": "AlibabaHappyhorse11TextToVideo",
-    "internal_name": "RH_AlibabaHappyhorse11TextToVideo",
     "display_name": "RH happyhorse-1.1/text-to-video",
     "name_cn": "happyhorse-1.1/text-to-video",
     "name_en": "happyhorse-1.1/text-to-video",
@@ -35429,7 +35120,6 @@
   },
   {
     "class_name": "AlibabaHappyhorse11ImageToVideo",
-    "internal_name": "RH_AlibabaHappyhorse11ImageToVideo",
     "display_name": "RH happyhorse-1.1/image-to-video",
     "name_cn": "happyhorse-1.1/image-to-video",
     "name_en": "happyhorse-1.1/image-to-video",
@@ -35564,7 +35254,6 @@
   },
   {
     "class_name": "AlibabaHappyhorse11ReferenceToVideo",
-    "internal_name": "RH_AlibabaHappyhorse11ReferenceToVideo",
     "display_name": "RH happyhorse-1.1/reference-to-video",
     "name_cn": "happyhorse-1.1/reference-to-video",
     "name_en": "happyhorse-1.1/reference-to-video",
@@ -35756,7 +35445,6 @@
   },
   {
     "class_name": "RhartVideoSparkvideo20MiniTextToVideo",
-    "internal_name": "RH_RhartVideoSparkvideo20MiniTextToVideo",
     "display_name": "RH seedance2.0-Mini/文生视频",
     "name_cn": "seedance2.0-Mini/文生视频",
     "name_en": "seedance-2.0-mini/text-to-video",
@@ -35967,7 +35655,6 @@
   },
   {
     "class_name": "RhartVideoSparkvideo20MiniImageToVideo",
-    "internal_name": "RH_RhartVideoSparkvideo20MiniImageToVideo",
     "display_name": "RH seedance2.0-Mini/图生视频",
     "name_cn": "seedance2.0-Mini/图生视频",
     "name_en": "seedance-2.0-mini/image-to-video",
@@ -36221,7 +35908,6 @@
   },
   {
     "class_name": "RhartVideoSparkvideo20MiniMultimodalVideo",
-    "internal_name": "RH_RhartVideoSparkvideo20MiniMultimodalVideo",
     "display_name": "RH seedance2.0-Mini/多模态视频",
     "name_cn": "seedance2.0-Mini/多模态视频",
     "name_en": "seedance-2.0-mini/multimodal-video",
@@ -36541,7 +36227,6 @@
   },
   {
     "class_name": "KlingV3TurboStdTextToVideo",
-    "internal_name": "RH_KlingV3TurboStdTextToVideo",
     "display_name": "RH 可灵文生视频v3-turbo-std",
     "name_cn": "可灵文生视频v3-turbo-std",
     "name_en": "kling-v3-turbo-std-text-to-video",
@@ -36662,7 +36347,6 @@
   },
   {
     "class_name": "KlingV3TurboProTextToVideo",
-    "internal_name": "RH_KlingV3TurboProTextToVideo",
     "display_name": "RH 可灵文生视频v3-turbo-pro",
     "name_cn": "可灵文生视频v3-turbo-pro",
     "name_en": "kling-v3-turbo-pro-text-to-video",
@@ -36783,7 +36467,6 @@
   },
   {
     "class_name": "KlingV3TurboStdImageToVideo",
-    "internal_name": "RH_KlingV3TurboStdImageToVideo",
     "display_name": "RH 可灵图生视频v3-turbo-std",
     "name_cn": "可灵图生视频v3-turbo-std",
     "name_en": "kling-v3-turbo-std-image-to-video",
@@ -36888,7 +36571,6 @@
   },
   {
     "class_name": "KlingV3TurboProImageToVideo",
-    "internal_name": "RH_KlingV3TurboProImageToVideo",
     "display_name": "RH 可灵图生视频v3-turbo-pro",
     "name_cn": "可灵图生视频v3-turbo-pro",
     "name_en": "kling-v3-turbo-pro-image-to-video",
@@ -36993,7 +36675,6 @@
   },
   {
     "class_name": "ViduReferenceToVideoQ3Drama",
-    "internal_name": "RH_ViduReferenceToVideoQ3Drama",
     "display_name": "RH Vidu-参考生视频-q3-drama",
     "name_cn": "Vidu-参考生视频-q3-drama",
     "name_en": "Vidu-reference-to-video-q3-drama",
@@ -37111,7 +36792,6 @@
   },
   {
     "class_name": "ViduShortPlayQ3Ad",
-    "internal_name": "RH_ViduShortPlayQ3Ad",
     "display_name": "RH Vidu Q3 Ad 短剧成片",
     "name_cn": "Vidu Q3 Ad 短剧成片",
     "name_en": "vidu/short-play-q3-ad",
@@ -37176,7 +36856,6 @@
   },
   {
     "class_name": "RhartImageNG31FlashLiteTextToImage",
-    "internal_name": "RH_RhartImageNG31FlashLiteTextToImage",
     "display_name": "RH 全能图片V2-lite-文生图-低价渠道版",
     "name_cn": "全能图片V2-lite-文生图-低价渠道版",
     "name_en": "nano-banana2-gemini31flash-lite/text-to-image-channel-low-price",
@@ -37276,7 +36955,6 @@
   },
   {
     "class_name": "RhartImageNG31FlashLiteImageToImage",
-    "internal_name": "RH_RhartImageNG31FlashLiteImageToImage",
     "display_name": "RH 全能图片V2-lite-图生图-低价渠道版",
     "name_cn": "全能图片V2-lite-图生图-低价渠道版",
     "name_en": "nano-banana2-gemini31flash-lite/image-to-image-channel-low-price",
@@ -37388,7 +37066,6 @@
   },
   {
     "class_name": "RhartImageNG31FlashLiteOfficialTextToImage",
-    "internal_name": "RH_RhartImageNG31FlashLiteOfficialTextToImage",
     "display_name": "RH 全能图片V2-lite-文生图-官方稳定版",
     "name_cn": "全能图片V2-lite-文生图-官方稳定版",
     "name_en": "nano-banana2-gemini31flash-lite/text-to-image-official-stable",
@@ -37489,7 +37166,6 @@
   },
   {
     "class_name": "RhartImageNG31FlashLiteOfficialImageToImage",
-    "internal_name": "RH_RhartImageNG31FlashLiteOfficialImageToImage",
     "display_name": "RH 全能图片V2-lite-图生图-官方稳定版",
     "name_cn": "全能图片V2-lite-图生图-官方稳定版",
     "name_en": "nano-banana2-gemini31flash-lite/image-to-image-official-stable",
@@ -37606,7 +37282,6 @@
   },
   {
     "class_name": "KlingV26StdImageToVideo",
-    "internal_name": "RH_KlingV26StdImageToVideo",
     "display_name": "RH 可灵图生视频2.6-标准版",
     "name_cn": "可灵图生视频2.6-标准版",
     "name_en": "kling-v2.6-std-image-to-video",
@@ -37665,7 +37340,6 @@
   },
   {
     "class_name": "KlingV26StdTextToVideo",
-    "internal_name": "RH_KlingV26StdTextToVideo",
     "display_name": "RH 可灵文生视频2.6-标准版",
     "name_cn": "可灵文生视频2.6-标准版",
     "name_en": "kling-v2.6-std-text-to-video",
@@ -37739,7 +37413,6 @@
   },
   {
     "class_name": "BytedanceDoubaoSeedAudio10",
-    "internal_name": "RH_BytedanceDoubaoSeedAudio10",
     "display_name": "RH Doubao-音频生成-1.0",
     "name_cn": "Doubao-音频生成-1.0",
     "name_en": "doubao-seed-audio-1.0",
@@ -37848,7 +37521,6 @@
   },
   {
     "class_name": "BytedanceDoubaoSeedTts20",
-    "internal_name": "RH_BytedanceDoubaoSeedTts20",
     "display_name": "RH Doubao-语音合成-2.0",
     "name_cn": "Doubao-语音合成-2.0",
     "name_en": "doubao-seed-tts-2.0",
@@ -38093,7 +37765,6 @@
   },
   {
     "class_name": "YouchuanTextToImageV82",
-    "internal_name": "RH_YouchuanTextToImageV82",
     "display_name": "RH 悠船文生图-v8.2预览版",
     "name_cn": "悠船文生图-v8.2预览版",
     "name_en": "midjourney-text-to-image-v8.2-preview",
@@ -38267,7 +37938,6 @@
   },
   {
     "class_name": "SeedreamV5ProTextToImage",
-    "internal_name": "RH_SeedreamV5ProTextToImage",
     "display_name": "RH seedream-v5-pro-文生图",
     "name_cn": "seedream-v5-pro-文生图",
     "name_en": "seedream-v5-pro/text-to-image",
@@ -38365,7 +38035,6 @@
   },
   {
     "class_name": "SeedreamV5ProImageToImage",
-    "internal_name": "RH_SeedreamV5ProImageToImage",
     "display_name": "RH seedream-v5-pro-图生图",
     "name_cn": "seedream-v5-pro-图生图",
     "name_en": "seedream-v5-pro/image-to-image",
@@ -38474,7 +38143,6 @@
   },
   {
     "class_name": "MinimaxHailuoH3MultimodalToVideo",
-    "internal_name": "RH_MinimaxHailuoH3MultimodalToVideo",
     "display_name": "RH MiniMax-H3 多模态参考生视频",
     "name_cn": "MiniMax-H3 多模态参考生视频",
     "name_en": "MiniMax-H3 Multimodal Reference-to-Video",
@@ -38536,6 +38204,11 @@
             "value": "2K",
             "description": "2K",
             "descriptionEn": "2K"
+          },
+          {
+            "value": "768P",
+            "description": "768P",
+            "descriptionEn": "768P"
           }
         ]
       },
@@ -38648,12 +38321,20 @@
             "descriptionEn": "9:16"
           }
         ]
+      },
+      {
+        "fieldKey": "aigc_watermark",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "aigc_watermark",
+        "description": "是否在生成视频中添加 AIGC 水印。",
+        "defaultValue": false,
+        "tail_insert": true
       }
     ]
   },
   {
     "class_name": "MinimaxHailuoH3TextToVideo",
-    "internal_name": "RH_MinimaxHailuoH3TextToVideo",
     "display_name": "RH MiniMax-H3 文生视频",
     "name_cn": "MiniMax-H3 文生视频",
     "name_en": "MiniMax-H3 Text-to-Video",
@@ -38667,7 +38348,7 @@
         "required": true,
         "label": "prompt",
         "description": "视频生成提示词",
-        "defaultValue": "一个男孩在海边打篮球。",
+        "defaultValue": "冰川上骑着一匹马。",
         "maxLength": 20480
       },
       {
@@ -38682,6 +38363,11 @@
             "value": "2K",
             "description": "2K",
             "descriptionEn": "2K"
+          },
+          {
+            "value": "768P",
+            "description": "768P",
+            "descriptionEn": "768P"
           }
         ]
       },
@@ -38756,13 +38442,8 @@
         "required": false,
         "label": "ratio",
         "description": "宽高比，默认 adaptive。",
-        "defaultValue": "adaptive",
+        "defaultValue": "16:9",
         "options": [
-          {
-            "value": "adaptive",
-            "description": "adaptive",
-            "descriptionEn": "adaptive"
-          },
           {
             "value": "21:9",
             "description": "21:9",
@@ -38794,12 +38475,20 @@
             "descriptionEn": "9:16"
           }
         ]
+      },
+      {
+        "fieldKey": "aigc_watermark",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "aigc_watermark",
+        "description": "是否在生成视频中添加 AIGC 水印。",
+        "defaultValue": false,
+        "tail_insert": true
       }
     ]
   },
   {
     "class_name": "MinimaxHailuoH3ImageToVideo",
-    "internal_name": "RH_MinimaxHailuoH3ImageToVideo",
     "display_name": "RH MiniMax-H3 图生视频（首尾帧）",
     "name_cn": "MiniMax-H3 图生视频（首尾帧）",
     "name_en": "MiniMax-H3 Image-to-Video (first/last frame)",
@@ -38846,6 +38535,11 @@
             "value": "2K",
             "description": "2K",
             "descriptionEn": "2K"
+          },
+          {
+            "value": "768P",
+            "description": "768P",
+            "descriptionEn": "768P"
           }
         ]
       },
@@ -38913,12 +38607,20 @@
             "descriptionEn": "15"
           }
         ]
+      },
+      {
+        "fieldKey": "aigc_watermark",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "aigc_watermark",
+        "description": "是否在生成视频中添加 AIGC 水印。",
+        "defaultValue": false,
+        "tail_insert": true
       }
     ]
   },
   {
     "class_name": "TopazlabsImageUpscaleHighFidelityV3",
-    "internal_name": "RH_TopazlabsImageUpscaleHighFidelityV3",
     "display_name": "RH topazlabs图像放大High Fidelity V3",
     "name_cn": "topazlabs图像放大High Fidelity V3",
     "name_en": "topazlabs-image-upscale-high-fidelity-v3",
@@ -39115,7 +38817,6 @@
   },
   {
     "class_name": "TopazlabsImageUpscaleDetailFaces",
-    "internal_name": "RH_TopazlabsImageUpscaleDetailFaces",
     "display_name": "RH topazlabs图像放大Detail Faces",
     "name_cn": "topazlabs图像放大Detail Faces",
     "name_en": "topazlabs-image-upscale-detail-faces",
@@ -39202,7 +38903,6 @@
   },
   {
     "class_name": "TopazlabsImageUpscaleTransparent",
-    "internal_name": "RH_TopazlabsImageUpscaleTransparent",
     "display_name": "RH topazlabs图像放大Transparent",
     "name_cn": "topazlabs图像放大Transparent",
     "name_en": "topazlabs-image-upscale-transparent",
@@ -39268,7 +38968,6 @@
   },
   {
     "class_name": "TopazlabsVideoProteus",
-    "internal_name": "RH_TopazlabsVideoProteus",
     "display_name": "RH topazlabs视频增强Proteus",
     "name_cn": "topazlabs视频增强Proteus",
     "name_en": "topazlabs-video-proteus",
@@ -39421,7 +39120,6 @@
   },
   {
     "class_name": "TopazlabsVideoStarlight",
-    "internal_name": "RH_TopazlabsVideoStarlight",
     "display_name": "RH topazlabs视频增强Starlight",
     "name_cn": "topazlabs视频增强Starlight",
     "name_en": "topazlabs-video-starlight",
@@ -39499,7 +39197,6 @@
   },
   {
     "class_name": "TopazlabsVideoDenoise",
-    "internal_name": "RH_TopazlabsVideoDenoise",
     "display_name": "RH topazlabs视频降噪Denoise",
     "name_cn": "topazlabs视频降噪Denoise",
     "name_en": "topazlabs-video-denoise",
@@ -39572,7 +39269,6 @@
   },
   {
     "class_name": "TopazlabsVideoAstra",
-    "internal_name": "RH_TopazlabsVideoAstra",
     "display_name": "RH topazlabs视频放大Astra",
     "name_cn": "topazlabs视频放大Astra",
     "name_en": "topazlabs-video-astra",
@@ -39630,7 +39326,6 @@
   },
   {
     "class_name": "TopazlabsVideoFrameInterpolation",
-    "internal_name": "RH_TopazlabsVideoFrameInterpolation",
     "display_name": "RH topazlabs视频补帧Frame Interpolation",
     "name_cn": "topazlabs视频补帧Frame Interpolation",
     "name_en": "topazlabs-video-frame-interpolation",
@@ -39719,7 +39414,6 @@
   },
   {
     "class_name": "TopazlabsImageGigapixelStandard2",
-    "internal_name": "RH_TopazlabsImageGigapixelStandard2",
     "display_name": "RH topazlabs图像放大Standard v2",
     "name_cn": "topazlabs图像放大Standard v2",
     "name_en": "topazlabs-image-gigapixel-standard-2",
@@ -39904,7 +39598,6 @@
   },
   {
     "class_name": "TopazlabsImageGigapixelLowResolution2",
-    "internal_name": "RH_TopazlabsImageGigapixelLowResolution2",
     "display_name": "RH topazlabs图像放大Low Resolution v2",
     "name_cn": "topazlabs图像放大Low Resolution v2",
     "name_en": "topazlabs-image-gigapixel-low-resolution-2",
@@ -40089,7 +39782,6 @@
   },
   {
     "class_name": "TopazlabsImageGigapixelArtAndCgi",
-    "internal_name": "RH_TopazlabsImageGigapixelArtAndCgi",
     "display_name": "RH topazlabs图像放大Art and CGI",
     "name_cn": "topazlabs图像放大Art and CGI",
     "name_en": "topazlabs-image-gigapixel-art-and-cgi",
@@ -40285,7 +39977,6 @@
   },
   {
     "class_name": "TopazlabsImageGigapixelHighFidelity2",
-    "internal_name": "RH_TopazlabsImageGigapixelHighFidelity2",
     "display_name": "RH topazlabs图像放大High Fidelity v2",
     "name_cn": "topazlabs图像放大High Fidelity v2",
     "name_en": "topazlabs-image-gigapixel-high-fidelity-2",
@@ -40460,7 +40151,6 @@
   },
   {
     "class_name": "TopazlabsImageGigapixelTextAndShapes",
-    "internal_name": "RH_TopazlabsImageGigapixelTextAndShapes",
     "display_name": "RH topazlabs图像放大Text and Shapes",
     "name_cn": "topazlabs图像放大Text and Shapes",
     "name_en": "topazlabs-image-gigapixel-text-and-shapes",
@@ -40689,7 +40379,6 @@
   },
   {
     "class_name": "AlibabaQwen3TtsFlash",
-    "internal_name": "RH_AlibabaQwen3TtsFlash",
     "display_name": "RH 千问3-语音合成-Flash",
     "name_cn": "千问3-语音合成-Flash",
     "name_en": "qwen3-tts-flash",
@@ -41025,7 +40714,6 @@
   },
   {
     "class_name": "AlibabaQwen3TtsInstructFlash",
-    "internal_name": "RH_AlibabaQwen3TtsInstructFlash",
     "display_name": "RH 千问3-语音合成-Instruct-Flash",
     "name_cn": "千问3-语音合成-Instruct-Flash",
     "name_en": "qwen3-tts-instruct-flash",
@@ -41257,7 +40945,6 @@
   },
   {
     "class_name": "AlibabaQwenImage30TextToImage",
-    "internal_name": "RH_AlibabaQwenImage30TextToImage",
     "display_name": "RH 千问3.0-文生图",
     "name_cn": "千问3.0-文生图",
     "name_en": "qwen-image-3.0/text-to-image",
@@ -41442,12 +41129,20 @@
         "required": false,
         "label": "seed",
         "description": "随机种子，范围 [0, 2147483647]。固定种子可复现生成结果；不传则随机。"
+      },
+      {
+        "fieldKey": "enableThinking",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "enableThinking",
+        "description": "是否开启提示词改写的 thinking 模式，默认开启。开启可提升出图质量但更慢；关闭后改写耗时可缩短到约 20s。仅在 promptExtend=true 时生效；Direct / Agent 文生图均支持。",
+        "defaultValue": true,
+        "tail_insert": true
       }
     ]
   },
   {
     "class_name": "AlibabaQwenImage30ImageEdit",
-    "internal_name": "RH_AlibabaQwenImage30ImageEdit",
     "display_name": "RH 千问3.0-图像编辑",
     "name_cn": "千问3.0-图像编辑",
     "name_en": "qwen-image-3.0/image-edit",
@@ -41646,12 +41341,20 @@
         "defaultValue": 0,
         "min": 0,
         "max": 2147483647
+      },
+      {
+        "fieldKey": "enableThinking",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "enableThinking",
+        "description": "是否开启提示词改写的 thinking 模式，默认开启。开启可提升出图质量但更慢；关闭后改写耗时可缩短到约 20s。仅在 promptExtend=true 时生效。Direct 图生图支持；promptExtendMode=agent 时暂不支持。",
+        "defaultValue": true,
+        "tail_insert": true
       }
     ]
   },
   {
     "class_name": "RhartVideoFlux3TextToVideo",
-    "internal_name": "RH_RhartVideoFlux3TextToVideo",
     "display_name": "RH FLUX 3 Video 文生视频",
     "name_cn": "FLUX 3 Video 文生视频",
     "name_en": "flux-3-video/text-to-video",
@@ -41780,7 +41483,6 @@
   },
   {
     "class_name": "RhartVideoFlux3ImageToVideo",
-    "internal_name": "RH_RhartVideoFlux3ImageToVideo",
     "display_name": "RH FLUX 3 Video 图生视频",
     "name_cn": "FLUX 3 Video 图生视频",
     "name_en": "flux-3-video/image-to-video",
@@ -41920,7 +41622,6 @@
   },
   {
     "class_name": "RhartVideoFlux3VideoToVideo",
-    "internal_name": "RH_RhartVideoFlux3VideoToVideo",
     "display_name": "RH FLUX 3 Video 视频续生",
     "name_cn": "FLUX 3 Video 视频续生",
     "name_en": "flux-3-video/video-continuation",
@@ -42057,7 +41758,6 @@
   },
   {
     "class_name": "RhartVideoFlux3DraftEnhance",
-    "internal_name": "RH_RhartVideoFlux3DraftEnhance",
     "display_name": "RH FLUX 3 Video 草稿增强",
     "name_cn": "FLUX 3 Video 草稿增强",
     "name_en": "flux-3-video/draft-enhance",
@@ -42109,7 +41809,6 @@
   },
   {
     "class_name": "SeedreamV5ProLayerDecomposition",
-    "internal_name": "RH_SeedreamV5ProLayerDecomposition",
     "display_name": "RH seedream-v5-pro-图层拆分",
     "name_cn": "seedream-v5-pro-图层拆分",
     "name_en": "seedream-v5-pro/layer-decomposition",
@@ -42188,7 +41887,6 @@
   },
   {
     "class_name": "MinimaxHailuoH3RegenerationTextToVideo",
-    "internal_name": "RH_MinimaxHailuoH3RegenerationTextToVideo",
     "display_name": "RH MiniMax-H3 文生视频再生成(768P→2K)",
     "name_cn": "MiniMax-H3 文生视频再生成(768P→2K)",
     "name_en": "MiniMax-H3 Text-to-Video Regeneration (768P->2K)",
@@ -42234,7 +41932,6 @@
   },
   {
     "class_name": "MinimaxHailuoH3RegenerationImageToVideo",
-    "internal_name": "RH_MinimaxHailuoH3RegenerationImageToVideo",
     "display_name": "RH MiniMax-H3 图生视频再生成(768P→2K)",
     "name_cn": "MiniMax-H3 图生视频再生成(768P→2K)",
     "name_en": "MiniMax-H3 Image-to-Video Regeneration (768P->2K)",
@@ -42298,7 +41995,6 @@
   },
   {
     "class_name": "MinimaxHailuoH3RegenerationMultimodalToVideo",
-    "internal_name": "RH_MinimaxHailuoH3RegenerationMultimodalToVideo",
     "display_name": "RH MiniMax-H3 多模态参考生视频再生成(768P→2K)",
     "name_cn": "MiniMax-H3 多模态参考生视频再生成(768P→2K)",
     "name_en": "MiniMax-H3 Multimodal Reference-to-Video Regeneration (768P->2K)",
@@ -42377,7 +42073,6 @@
   },
   {
     "class_name": "MinimaxHailuoH3ContextIrMultimodal",
-    "internal_name": "RH_MinimaxHailuoH3ContextIrMultimodal",
     "display_name": "RH MiniMax-H3-Context-IR 多模态增强提示词",
     "name_cn": "MiniMax-H3-Context-IR 多模态增强提示词",
     "name_en": "MiniMax-H3-Context-IR (r2va)",
@@ -42546,7 +42241,6 @@
   },
   {
     "class_name": "MinimaxHailuoH3ContextIrText",
-    "internal_name": "RH_MinimaxHailuoH3ContextIrText",
     "display_name": "RH MiniMax-H3-Context-IR 文本增强提示词",
     "name_cn": "MiniMax-H3-Context-IR 文本增强提示词",
     "name_en": "MiniMax-H3-Context-IR (t2va)",
@@ -42677,7 +42371,6 @@
   },
   {
     "class_name": "MinimaxHailuoH3ContextIrImage",
-    "internal_name": "RH_MinimaxHailuoH3ContextIrImage",
     "display_name": "RH MiniMax-H3-Context-IR 图像增强提示词",
     "name_cn": "MiniMax-H3-Context-IR 图像增强提示词",
     "name_en": "MiniMax-H3-Context-IR (i2va)",
@@ -42786,7 +42479,6 @@
   },
   {
     "class_name": "BytedanceSeedance25TokenTextToVideo",
-    "internal_name": "RH_BytedanceSeedance25TokenTextToVideo",
     "display_name": "RH seedance2.5/文生视频 Token",
     "name_cn": "seedance2.5/文生视频 Token",
     "name_en": "seedance-2.5/text-to-video Token",
@@ -43112,7 +42804,6 @@
   },
   {
     "class_name": "BytedanceSeedance25TokenImageToVideo",
-    "internal_name": "RH_BytedanceSeedance25TokenImageToVideo",
     "display_name": "RH seedance2.5/图生视频 Token",
     "name_cn": "seedance2.5/图生视频 Token",
     "name_en": "seedance-2.5/image-to-video Token",
@@ -43452,7 +43143,6 @@
   },
   {
     "class_name": "BytedanceSeedance25TokenMultimodalVideo",
-    "internal_name": "RH_BytedanceSeedance25TokenMultimodalVideo",
     "display_name": "RH seedance2.5/多模态视频 Token",
     "name_cn": "seedance2.5/多模态视频 Token",
     "name_en": "seedance-2.5/multimodal-video Token",
@@ -44027,7 +43717,6 @@
   },
   {
     "class_name": "RhartVideoGOfficialReferenceToVideoV15",
-    "internal_name": "RH_RhartVideoGOfficialReferenceToVideoV15",
     "display_name": "RH 全能视频X-参考生视频-官方稳定版-v1.5",
     "name_cn": "全能视频X-参考生视频-官方稳定版-v1.5",
     "name_en": "xai/grok-imagine-video-v1.5/reference-to-video-official-stable",
@@ -44125,7 +43814,6 @@
   },
   {
     "class_name": "RhartVideoGOfficialTextToVideoV15",
-    "internal_name": "RH_RhartVideoGOfficialTextToVideoV15",
     "display_name": "RH 全能视频X-文生视频-官方稳定版-v1.5",
     "name_cn": "全能视频X-文生视频-官方稳定版-v1.5",
     "name_en": "xai / grok-imagine-video-v1.5 / text-to-video-official-stable",
@@ -44217,7 +43905,6 @@
   },
   {
     "class_name": "RhartImagineImage20TextToImage",
-    "internal_name": "RH_RhartImagineImage20TextToImage",
     "display_name": "RH xai/grok-imagine-2.0/text-to-image/economy",
     "name_cn": "xai/grok-imagine-2.0/text-to-image/economy",
     "name_en": "xai/grok-imagine-2.0/text-to-image/economy",
@@ -44348,6 +44035,1192 @@
             "descriptionEn": "12"
           }
         ]
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaWan30ImageToVideo",
+    "display_name": "RH 万相3.0-图生视频",
+    "name_cn": "万相3.0-图生视频",
+    "name_en": "wan-3.0/image-to-video",
+    "endpoint": "alibaba/wan-3.0/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Wan",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "正向提示词（中英文均可），描述首帧之后希望发生的动作、镜头与音频表现。",
+        "defaultValue": "镜头从海龟下方缓缓上移，海龟悠然游动，腹部细节与鳞片纹理清晰可见，阳光透过清澈海水形成丁达尔光柱，电影级水下摄影，超写实，流畅运镜。",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "firstFrameUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstFrameUrl",
+        "description": "首帧图，必填。仅传首帧=首帧生视频；同时传尾帧=首尾帧生视频。",
+        "accept": "[\"JPEG\",\"JPG\",\"PNG\",\"BMP\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "lastFrameUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "lastFrameUrl",
+        "description": "尾帧图，可选。与首帧一起使用时生成首尾帧过渡视频。",
+        "accept": "[\"JPEG\",\"JPG\",\"PNG\",\"BMP\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率，默认 720P。单价按分辨率区分。",
+        "defaultValue": "720P",
+        "options": [
+          {
+            "value": "480P",
+            "description": "480P",
+            "descriptionEn": "480P"
+          },
+          {
+            "value": "720P",
+            "description": "720P",
+            "descriptionEn": "720P"
+          },
+          {
+            "value": "1080P",
+            "description": "1080P",
+            "descriptionEn": "1080P"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "画面比例。adaptive 根据意图与输入媒体自动推荐。",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "自适应",
+            "descriptionEn": "Adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "输出时长（秒），最长 30 秒。auto=智能时长，由模型按内容决定，按实际成片秒数计费。",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "auto",
+            "description": "智能时长",
+            "descriptionEn": "Smart duration"
+          },
+          {
+            "value": "2",
+            "description": "2秒",
+            "descriptionEn": "2s"
+          },
+          {
+            "value": "3",
+            "description": "3秒",
+            "descriptionEn": "3s"
+          },
+          {
+            "value": "4",
+            "description": "4秒",
+            "descriptionEn": "4s"
+          },
+          {
+            "value": "5",
+            "description": "5秒",
+            "descriptionEn": "5s"
+          },
+          {
+            "value": "6",
+            "description": "6秒",
+            "descriptionEn": "6s"
+          },
+          {
+            "value": "7",
+            "description": "7秒",
+            "descriptionEn": "7s"
+          },
+          {
+            "value": "8",
+            "description": "8秒",
+            "descriptionEn": "8s"
+          },
+          {
+            "value": "9",
+            "description": "9秒",
+            "descriptionEn": "9s"
+          },
+          {
+            "value": "10",
+            "description": "10秒",
+            "descriptionEn": "10s"
+          },
+          {
+            "value": "11",
+            "description": "11秒",
+            "descriptionEn": "11s"
+          },
+          {
+            "value": "12",
+            "description": "12秒",
+            "descriptionEn": "12s"
+          },
+          {
+            "value": "13",
+            "description": "13秒",
+            "descriptionEn": "13s"
+          },
+          {
+            "value": "14",
+            "description": "14秒",
+            "descriptionEn": "14s"
+          },
+          {
+            "value": "15",
+            "description": "15秒",
+            "descriptionEn": "15s"
+          },
+          {
+            "value": "16",
+            "description": "16秒",
+            "descriptionEn": "16s"
+          },
+          {
+            "value": "17",
+            "description": "17秒",
+            "descriptionEn": "17s"
+          },
+          {
+            "value": "18",
+            "description": "18秒",
+            "descriptionEn": "18s"
+          },
+          {
+            "value": "19",
+            "description": "19秒",
+            "descriptionEn": "19s"
+          },
+          {
+            "value": "20",
+            "description": "20秒",
+            "descriptionEn": "20s"
+          },
+          {
+            "value": "21",
+            "description": "21秒",
+            "descriptionEn": "21s"
+          },
+          {
+            "value": "22",
+            "description": "22秒",
+            "descriptionEn": "22s"
+          },
+          {
+            "value": "23",
+            "description": "23秒",
+            "descriptionEn": "23s"
+          },
+          {
+            "value": "24",
+            "description": "24秒",
+            "descriptionEn": "24s"
+          },
+          {
+            "value": "25",
+            "description": "25秒",
+            "descriptionEn": "25s"
+          },
+          {
+            "value": "26",
+            "description": "26秒",
+            "descriptionEn": "26s"
+          },
+          {
+            "value": "27",
+            "description": "27秒",
+            "descriptionEn": "27s"
+          },
+          {
+            "value": "28",
+            "description": "28秒",
+            "descriptionEn": "28s"
+          },
+          {
+            "value": "29",
+            "description": "29秒",
+            "descriptionEn": "29s"
+          },
+          {
+            "value": "30",
+            "description": "30秒",
+            "descriptionEn": "30s"
+          }
+        ]
+      },
+      {
+        "fieldKey": "audio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "audio",
+        "description": "输出是否包含音轨。true=有声（默认），false=无声。开关声音价格相同。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子，范围 [0, 2147483647]。",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaWan30ReferenceToVideo",
+    "display_name": "RH 万相3.0-参考生视频",
+    "name_cn": "万相3.0-参考生视频",
+    "name_en": "wan-3.0-reference-to-video",
+    "endpoint": "alibaba/wan-3.0/reference-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Wan",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "正向提示词（中英文均可）。可用「视频1 / 图1 / 音频1」按上传顺序指代参考素材。",
+        "defaultValue": "视频1中的角色抱着图1中的物件，坐下来弹奏一支舒缓的乡村民谣，并说道：\"今天的阳光真好。\"",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "videoUrls",
+        "type": "VIDEO",
+        "required": false,
+        "label": "videoUrls",
+        "description": "全能参考视频，最多 5 段，单段 1-15 秒且总时长 ≤15 秒。输入视频按 min(总时长, 5) 秒计费。",
+        "multipleInputs": true,
+        "maxInputNum": 5,
+        "accept": "[\"MP4\",\"MOV\"]",
+        "maxSize": 100
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrls",
+        "description": "全能参考图，最多 10 张，用于锁定角色、道具或场景。",
+        "multipleInputs": true,
+        "maxInputNum": 10,
+        "accept": "[\"JPEG\",\"JPG\",\"PNG\",\"BMP\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "audioUrls",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrls",
+        "description": "全能参考音频，最多 5 段，单段 1-15 秒且总时长 ≤15 秒。不计入输入计费时长。",
+        "multipleInputs": true,
+        "maxInputNum": 5,
+        "accept": "[\"WAV\",\"MP3\"]",
+        "maxSize": 15
+      },
+      {
+        "fieldKey": "fileUrl",
+        "type": "STRING",
+        "required": false,
+        "label": "fileUrl",
+        "description": "文档 URL（docx/doc/xlsx/xls/pptx/ppt/pdf/txt/key/pages/numbers/md）。传入后自动开启深度思考；与 linkUrl 互斥，最多1个。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "linkUrl",
+        "type": "STRING",
+        "required": false,
+        "label": "linkUrl",
+        "description": "公开网页 URL（无需登录）。传入后自动开启深度思考；与 fileUrl 互斥，最多1个。国内不解析海外 URL。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率，默认 1080P。单价按分辨率区分。",
+        "defaultValue": "1080P",
+        "options": [
+          {
+            "value": "480P",
+            "description": "480P",
+            "descriptionEn": "480P"
+          },
+          {
+            "value": "720P",
+            "description": "720P",
+            "descriptionEn": "720P"
+          },
+          {
+            "value": "1080P",
+            "description": "1080P",
+            "descriptionEn": "1080P"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "画面比例。adaptive 根据意图与输入媒体自动推荐。",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "自适应",
+            "descriptionEn": "Adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "输出时长（秒），最长 30 秒。auto=智能时长，按实际成片秒数计费。有参考视频时，输入视频与输出视频总时长不超过 30 秒。",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "auto",
+            "description": "智能时长",
+            "descriptionEn": "Smart duration"
+          },
+          {
+            "value": "2",
+            "description": "2秒",
+            "descriptionEn": "2s"
+          },
+          {
+            "value": "3",
+            "description": "3秒",
+            "descriptionEn": "3s"
+          },
+          {
+            "value": "4",
+            "description": "4秒",
+            "descriptionEn": "4s"
+          },
+          {
+            "value": "5",
+            "description": "5秒",
+            "descriptionEn": "5s"
+          },
+          {
+            "value": "6",
+            "description": "6秒",
+            "descriptionEn": "6s"
+          },
+          {
+            "value": "7",
+            "description": "7秒",
+            "descriptionEn": "7s"
+          },
+          {
+            "value": "8",
+            "description": "8秒",
+            "descriptionEn": "8s"
+          },
+          {
+            "value": "9",
+            "description": "9秒",
+            "descriptionEn": "9s"
+          },
+          {
+            "value": "10",
+            "description": "10秒",
+            "descriptionEn": "10s"
+          },
+          {
+            "value": "11",
+            "description": "11秒",
+            "descriptionEn": "11s"
+          },
+          {
+            "value": "12",
+            "description": "12秒",
+            "descriptionEn": "12s"
+          },
+          {
+            "value": "13",
+            "description": "13秒",
+            "descriptionEn": "13s"
+          },
+          {
+            "value": "14",
+            "description": "14秒",
+            "descriptionEn": "14s"
+          },
+          {
+            "value": "15",
+            "description": "15秒",
+            "descriptionEn": "15s"
+          },
+          {
+            "value": "16",
+            "description": "16秒",
+            "descriptionEn": "16s"
+          },
+          {
+            "value": "17",
+            "description": "17秒",
+            "descriptionEn": "17s"
+          },
+          {
+            "value": "18",
+            "description": "18秒",
+            "descriptionEn": "18s"
+          },
+          {
+            "value": "19",
+            "description": "19秒",
+            "descriptionEn": "19s"
+          },
+          {
+            "value": "20",
+            "description": "20秒",
+            "descriptionEn": "20s"
+          },
+          {
+            "value": "21",
+            "description": "21秒",
+            "descriptionEn": "21s"
+          },
+          {
+            "value": "22",
+            "description": "22秒",
+            "descriptionEn": "22s"
+          },
+          {
+            "value": "23",
+            "description": "23秒",
+            "descriptionEn": "23s"
+          },
+          {
+            "value": "24",
+            "description": "24秒",
+            "descriptionEn": "24s"
+          },
+          {
+            "value": "25",
+            "description": "25秒",
+            "descriptionEn": "25s"
+          },
+          {
+            "value": "26",
+            "description": "26秒",
+            "descriptionEn": "26s"
+          },
+          {
+            "value": "27",
+            "description": "27秒",
+            "descriptionEn": "27s"
+          },
+          {
+            "value": "28",
+            "description": "28秒",
+            "descriptionEn": "28s"
+          },
+          {
+            "value": "29",
+            "description": "29秒",
+            "descriptionEn": "29s"
+          },
+          {
+            "value": "30",
+            "description": "30秒",
+            "descriptionEn": "30s"
+          }
+        ]
+      },
+      {
+        "fieldKey": "audio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "audio",
+        "description": "输出是否包含音轨。true=有声（默认），false=无声。开关声音价格相同。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子，范围 [0, 2147483647]。",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaWan30PrimeImageToVideo",
+    "display_name": "RH 万相3.0高速版-图生视频",
+    "name_cn": "万相3.0高速版-图生视频",
+    "name_en": "wan-3.0-prime/image-to-video",
+    "endpoint": "alibaba/wan-3.0-prime/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Wan",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": false,
+        "label": "prompt",
+        "description": "正向提示词（中英文均可），描述首帧之后希望发生的动作、镜头与音频表现。",
+        "defaultValue": "镜头从海龟下方缓缓上移，海龟悠然游动，腹部细节与鳞片纹理清晰可见，阳光透过清澈海水形成丁达尔光柱，电影级水下摄影，超写实，流畅运镜。",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "firstFrameUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstFrameUrl",
+        "description": "首帧图，必填。仅传首帧=首帧生视频；同时传尾帧=首尾帧生视频。",
+        "accept": "[\"JPEG\",\"JPG\",\"PNG\",\"BMP\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "lastFrameUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "lastFrameUrl",
+        "description": "尾帧图，可选。与首帧一起使用时生成首尾帧过渡视频。",
+        "accept": "[\"JPEG\",\"JPG\",\"PNG\",\"BMP\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率，默认 720P。单价按分辨率区分。",
+        "defaultValue": "720P",
+        "options": [
+          {
+            "value": "480P",
+            "description": "480P",
+            "descriptionEn": "480P"
+          },
+          {
+            "value": "720P",
+            "description": "720P",
+            "descriptionEn": "720P"
+          },
+          {
+            "value": "1080P",
+            "description": "1080P",
+            "descriptionEn": "1080P"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "画面比例。adaptive 根据意图与输入媒体自动推荐。",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "自适应",
+            "descriptionEn": "Adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "输出时长（秒），最长 30 秒。auto=智能时长，由模型按内容决定，按实际成片秒数计费。",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "auto",
+            "description": "智能时长",
+            "descriptionEn": "Smart duration"
+          },
+          {
+            "value": "2",
+            "description": "2秒",
+            "descriptionEn": "2s"
+          },
+          {
+            "value": "3",
+            "description": "3秒",
+            "descriptionEn": "3s"
+          },
+          {
+            "value": "4",
+            "description": "4秒",
+            "descriptionEn": "4s"
+          },
+          {
+            "value": "5",
+            "description": "5秒",
+            "descriptionEn": "5s"
+          },
+          {
+            "value": "6",
+            "description": "6秒",
+            "descriptionEn": "6s"
+          },
+          {
+            "value": "7",
+            "description": "7秒",
+            "descriptionEn": "7s"
+          },
+          {
+            "value": "8",
+            "description": "8秒",
+            "descriptionEn": "8s"
+          },
+          {
+            "value": "9",
+            "description": "9秒",
+            "descriptionEn": "9s"
+          },
+          {
+            "value": "10",
+            "description": "10秒",
+            "descriptionEn": "10s"
+          },
+          {
+            "value": "11",
+            "description": "11秒",
+            "descriptionEn": "11s"
+          },
+          {
+            "value": "12",
+            "description": "12秒",
+            "descriptionEn": "12s"
+          },
+          {
+            "value": "13",
+            "description": "13秒",
+            "descriptionEn": "13s"
+          },
+          {
+            "value": "14",
+            "description": "14秒",
+            "descriptionEn": "14s"
+          },
+          {
+            "value": "15",
+            "description": "15秒",
+            "descriptionEn": "15s"
+          },
+          {
+            "value": "16",
+            "description": "16秒",
+            "descriptionEn": "16s"
+          },
+          {
+            "value": "17",
+            "description": "17秒",
+            "descriptionEn": "17s"
+          },
+          {
+            "value": "18",
+            "description": "18秒",
+            "descriptionEn": "18s"
+          },
+          {
+            "value": "19",
+            "description": "19秒",
+            "descriptionEn": "19s"
+          },
+          {
+            "value": "20",
+            "description": "20秒",
+            "descriptionEn": "20s"
+          },
+          {
+            "value": "21",
+            "description": "21秒",
+            "descriptionEn": "21s"
+          },
+          {
+            "value": "22",
+            "description": "22秒",
+            "descriptionEn": "22s"
+          },
+          {
+            "value": "23",
+            "description": "23秒",
+            "descriptionEn": "23s"
+          },
+          {
+            "value": "24",
+            "description": "24秒",
+            "descriptionEn": "24s"
+          },
+          {
+            "value": "25",
+            "description": "25秒",
+            "descriptionEn": "25s"
+          },
+          {
+            "value": "26",
+            "description": "26秒",
+            "descriptionEn": "26s"
+          },
+          {
+            "value": "27",
+            "description": "27秒",
+            "descriptionEn": "27s"
+          },
+          {
+            "value": "28",
+            "description": "28秒",
+            "descriptionEn": "28s"
+          },
+          {
+            "value": "29",
+            "description": "29秒",
+            "descriptionEn": "29s"
+          },
+          {
+            "value": "30",
+            "description": "30秒",
+            "descriptionEn": "30s"
+          }
+        ]
+      },
+      {
+        "fieldKey": "audio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "audio",
+        "description": "输出是否包含音轨。true=有声（默认），false=无声。开关声音价格相同。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子，范围 [0, 2147483647]。",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "AlibabaWan30PrimeReferenceToVideo",
+    "display_name": "RH 万相3.0高速版-参考生视频",
+    "name_cn": "万相3.0高速版-参考生视频",
+    "name_en": "wan-3.0-prime/reference-to-video",
+    "endpoint": "alibaba/wan-3.0-prime/reference-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Wan",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "正向提示词（中英文均可）。可用「视频1 / 图1 / 音频1」按上传顺序指代参考素材。",
+        "defaultValue": "视频1中的角色抱着图1中的物件，坐下来弹奏一支舒缓的乡村民谣，并说道：\"今天的阳光真好。\"",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "videoUrls",
+        "type": "VIDEO",
+        "required": false,
+        "label": "videoUrls",
+        "description": "全能参考视频，最多 5 段，单段 1-15 秒且总时长 ≤15 秒。输入视频按 min(总时长, 5) 秒计费。",
+        "multipleInputs": true,
+        "maxInputNum": 5,
+        "accept": "[\"MP4\",\"MOV\"]",
+        "maxSize": 100
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrls",
+        "description": "全能参考图，最多 10 张，用于锁定角色、道具或场景。",
+        "multipleInputs": true,
+        "maxInputNum": 10,
+        "accept": "[\"JPEG\",\"JPG\",\"PNG\",\"BMP\",\"WEBP\"]",
+        "maxSize": 20
+      },
+      {
+        "fieldKey": "audioUrls",
+        "type": "AUDIO",
+        "required": false,
+        "label": "audioUrls",
+        "description": "全能参考音频，最多 5 段，单段 1-15 秒且总时长 ≤15 秒。不计入输入计费时长。",
+        "multipleInputs": true,
+        "maxInputNum": 5,
+        "accept": "[\"WAV\",\"MP3\"]",
+        "maxSize": 15
+      },
+      {
+        "fieldKey": "fileUrl",
+        "type": "STRING",
+        "required": false,
+        "label": "fileUrl",
+        "description": "文档 URL（docx/doc/xlsx/xls/pptx/ppt/pdf/txt/key/pages/numbers/md）。传入后自动开启深度思考；与 linkUrl 互斥，最多1个。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "linkUrl",
+        "type": "STRING",
+        "required": false,
+        "label": "linkUrl",
+        "description": "公开网页 URL（无需登录）。传入后自动开启深度思考；与 fileUrl 互斥，最多1个。国内不解析海外 URL。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率，默认 1080P。单价按分辨率区分。",
+        "defaultValue": "1080P",
+        "options": [
+          {
+            "value": "480P",
+            "description": "480P",
+            "descriptionEn": "480P"
+          },
+          {
+            "value": "720P",
+            "description": "720P",
+            "descriptionEn": "720P"
+          },
+          {
+            "value": "1080P",
+            "description": "1080P",
+            "descriptionEn": "1080P"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "画面比例。adaptive 根据意图与输入媒体自动推荐。",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "adaptive",
+            "description": "自适应",
+            "descriptionEn": "Adaptive"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "输出时长（秒），最长 30 秒。auto=智能时长，按实际成片秒数计费。有参考视频时，输入视频与输出视频总时长不超过 30 秒。",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "auto",
+            "description": "智能时长",
+            "descriptionEn": "Smart duration"
+          },
+          {
+            "value": "2",
+            "description": "2秒",
+            "descriptionEn": "2s"
+          },
+          {
+            "value": "3",
+            "description": "3秒",
+            "descriptionEn": "3s"
+          },
+          {
+            "value": "4",
+            "description": "4秒",
+            "descriptionEn": "4s"
+          },
+          {
+            "value": "5",
+            "description": "5秒",
+            "descriptionEn": "5s"
+          },
+          {
+            "value": "6",
+            "description": "6秒",
+            "descriptionEn": "6s"
+          },
+          {
+            "value": "7",
+            "description": "7秒",
+            "descriptionEn": "7s"
+          },
+          {
+            "value": "8",
+            "description": "8秒",
+            "descriptionEn": "8s"
+          },
+          {
+            "value": "9",
+            "description": "9秒",
+            "descriptionEn": "9s"
+          },
+          {
+            "value": "10",
+            "description": "10秒",
+            "descriptionEn": "10s"
+          },
+          {
+            "value": "11",
+            "description": "11秒",
+            "descriptionEn": "11s"
+          },
+          {
+            "value": "12",
+            "description": "12秒",
+            "descriptionEn": "12s"
+          },
+          {
+            "value": "13",
+            "description": "13秒",
+            "descriptionEn": "13s"
+          },
+          {
+            "value": "14",
+            "description": "14秒",
+            "descriptionEn": "14s"
+          },
+          {
+            "value": "15",
+            "description": "15秒",
+            "descriptionEn": "15s"
+          },
+          {
+            "value": "16",
+            "description": "16秒",
+            "descriptionEn": "16s"
+          },
+          {
+            "value": "17",
+            "description": "17秒",
+            "descriptionEn": "17s"
+          },
+          {
+            "value": "18",
+            "description": "18秒",
+            "descriptionEn": "18s"
+          },
+          {
+            "value": "19",
+            "description": "19秒",
+            "descriptionEn": "19s"
+          },
+          {
+            "value": "20",
+            "description": "20秒",
+            "descriptionEn": "20s"
+          },
+          {
+            "value": "21",
+            "description": "21秒",
+            "descriptionEn": "21s"
+          },
+          {
+            "value": "22",
+            "description": "22秒",
+            "descriptionEn": "22s"
+          },
+          {
+            "value": "23",
+            "description": "23秒",
+            "descriptionEn": "23s"
+          },
+          {
+            "value": "24",
+            "description": "24秒",
+            "descriptionEn": "24s"
+          },
+          {
+            "value": "25",
+            "description": "25秒",
+            "descriptionEn": "25s"
+          },
+          {
+            "value": "26",
+            "description": "26秒",
+            "descriptionEn": "26s"
+          },
+          {
+            "value": "27",
+            "description": "27秒",
+            "descriptionEn": "27s"
+          },
+          {
+            "value": "28",
+            "description": "28秒",
+            "descriptionEn": "28s"
+          },
+          {
+            "value": "29",
+            "description": "29秒",
+            "descriptionEn": "29s"
+          },
+          {
+            "value": "30",
+            "description": "30秒",
+            "descriptionEn": "30s"
+          }
+        ]
+      },
+      {
+        "fieldKey": "audio",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "audio",
+        "description": "输出是否包含音轨。true=有声（默认），false=无声。开关声音价格相同。",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子，范围 [0, 2147483647]。",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
       }
     ]
   }

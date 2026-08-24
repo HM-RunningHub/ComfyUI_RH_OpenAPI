@@ -16,9 +16,8 @@ class RealPersonModeDefaultTests(unittest.TestCase):
         with REGISTRY_PATH.open("r", encoding="utf-8") as handle:
             registry = json.load(handle)
         cls.models_by_name = {
-            model["internal_name"]: model
+            model.get("internal_name") or f"RH_{model['class_name']}": model
             for model in registry
-            if model.get("internal_name")
         }
         package_name = "real_person_mode_defaults_test_pkg"
         if package_name not in sys.modules:
