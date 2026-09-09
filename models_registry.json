@@ -47003,5 +47003,543 @@
         ]
       }
     ]
+  },
+  {
+    "class_name": "RhartImageG25FlareTextToImage",
+    "display_name": "RH gpt-image-2.5/flare/text-to-image/economy",
+    "name_cn": "gpt-image-2.5/flare/text-to-image/economy",
+    "name_en": "gpt-image-2.5/flare/text-to-image/economy",
+    "endpoint": "rhart-image-g-2.5/flare/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "9:21",
+            "description": "9:21",
+            "descriptionEn": "9:21"
+          },
+          {
+            "value": "1:2",
+            "description": "1:2",
+            "descriptionEn": "1:2"
+          },
+          {
+            "value": "2:1",
+            "description": "2:1",
+            "descriptionEn": "2:1"
+          },
+          {
+            "value": "1:3",
+            "description": "1:3",
+            "descriptionEn": "1:3"
+          },
+          {
+            "value": "3:1",
+            "description": "3:1",
+            "descriptionEn": "3:1"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "可选择 1k/2k/4k，低价接口不保证精准输出 2k/4k。",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageG25FlareImageToImage",
+    "display_name": "RH gpt-image-2.5/flare/image-to-image/economy",
+    "name_cn": "gpt-image-2.5/flare/image-to-image/economy",
+    "name_en": "gpt-image-2.5/flare/image-to-image/economy",
+    "endpoint": "rhart-image-g-2.5/flare/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "multipleInputs": true,
+        "maxInputNum": 10,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "9:21",
+            "description": "9:21",
+            "descriptionEn": "9:21"
+          },
+          {
+            "value": "2:1",
+            "description": "2:1",
+            "descriptionEn": "2:1"
+          },
+          {
+            "value": "1:2",
+            "description": "1:2",
+            "descriptionEn": "1:2"
+          },
+          {
+            "value": "3:1",
+            "description": "3:1",
+            "descriptionEn": "3:1"
+          },
+          {
+            "value": "1:3",
+            "description": "1:3",
+            "descriptionEn": "1:3"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "可选择 1k/2k/4k，低价接口不保证精准输出 2k/4k。",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageG25SunburstTextToImage",
+    "display_name": "RH gpt-image-2.5/sunburst/text-to-image/economy",
+    "name_cn": "gpt-image-2.5/sunburst/text-to-image/economy",
+    "name_en": "gpt-image-2.5/sunburst/text-to-image/economy",
+    "endpoint": "rhart-image-g-2.5/sunburst/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "9:21",
+            "description": "9:21",
+            "descriptionEn": "9:21"
+          },
+          {
+            "value": "1:2",
+            "description": "1:2",
+            "descriptionEn": "1:2"
+          },
+          {
+            "value": "2:1",
+            "description": "2:1",
+            "descriptionEn": "2:1"
+          },
+          {
+            "value": "1:3",
+            "description": "1:3",
+            "descriptionEn": "1:3"
+          },
+          {
+            "value": "3:1",
+            "description": "3:1",
+            "descriptionEn": "3:1"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "可选择 1k/2k/4k，低价接口不保证精准输出 2k/4k。",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageG25SunburstImageToImage",
+    "display_name": "RH gpt-image-2.5/sunburst/image-to-image/economy",
+    "name_cn": "gpt-image-2.5/sunburst/image-to-image/economy",
+    "name_en": "gpt-image-2.5/sunburst/image-to-image/economy",
+    "endpoint": "rhart-image-g-2.5/sunburst/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "multipleInputs": true,
+        "maxInputNum": 10,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "9:21",
+            "description": "9:21",
+            "descriptionEn": "9:21"
+          },
+          {
+            "value": "2:1",
+            "description": "2:1",
+            "descriptionEn": "2:1"
+          },
+          {
+            "value": "1:2",
+            "description": "1:2",
+            "descriptionEn": "1:2"
+          },
+          {
+            "value": "3:1",
+            "description": "3:1",
+            "descriptionEn": "3:1"
+          },
+          {
+            "value": "1:3",
+            "description": "1:3",
+            "descriptionEn": "1:3"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": false,
+        "label": "resolution",
+        "description": "可选择 1k/2k/4k，低价接口不保证精准输出 2k/4k。",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      }
+    ]
   }
 ]

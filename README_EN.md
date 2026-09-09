@@ -1,18 +1,18 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-423-blue)
+![Nodes](https://img.shields.io/badge/Nodes-427-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 **English** | [中文](README.md)
 
 **ComfyUI_RH_OpenAPI** is a **1:1 ComfyUI implementation** of the [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api), with additional Seedance2.0 asset management nodes.
 
-The project currently includes 418 standard model API nodes covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. Together with 3 Seedance2.0 asset helper nodes, 1 RunningHub LLM chat node, and 1 settings node, it provides 423 ComfyUI nodes in total. You can access RunningHub standard model and LLM capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the `real_person_mode` toggle — no local GPU required, zero cold-start latency.
+The project currently includes 422 standard model API nodes covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. Together with 3 Seedance2.0 asset helper nodes, 1 RunningHub LLM chat node, and 1 settings node, it provides 427 ComfyUI nodes in total. You can access RunningHub standard model and LLM capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the `real_person_mode` toggle — no local GPU required, zero cold-start latency.
 
 ## 📌 Features
 
-- **Node Count** — 423 ComfyUI nodes in total: 418 standard model nodes, 3 Seedance2.0 asset nodes, 1 RunningHub LLM chat node, and 1 settings node
+- **Node Count** — 427 ComfyUI nodes in total: 422 standard model nodes, 3 Seedance2.0 asset nodes, 1 RunningHub LLM chat node, and 1 settings node
 - **Plug & Play** — No model downloads, no GPU needed — just an API Key
 - **Dynamic Registration** — Nodes are auto-generated from a JSON registry; adding new models requires only a registry update
 - **Media Support** — Automatic upload/download/conversion for images, videos, and audio, seamlessly integrated with ComfyUI native types
@@ -26,7 +26,7 @@ The project currently includes 418 standard model API nodes covering image gener
 
 ## 🎨 Supported Models
 
-### Image Generation (103 Nodes)
+### Image Generation (107 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
@@ -35,7 +35,7 @@ The project currently includes 418 standard model API nodes covering image gener
 | Nano Banana Pro | 全能图片 PRO / PRO Official | Text-to-Image, Image-to-Image, Ultra | 6 |
 | GPT Image 1.5 (OpenAI) | 全能图片 G-1.5 / G-1.5 Official (older flavours marked Deprecated) | Text-to-Image, Image-to-Image | 4 |
 | GPT Image 2.0 (OpenAI) | 全能图片 G-2 / G-2 Official | Text-to-Image, Image-to-Image | 4 |
-| GPT Image 2.5 (OpenAI) | 全能图片 G-2.5 Official Token channels | Text-to-Image, Image Editing (Sunburst / Flare) | 4 |
+| GPT Image 2.5 (OpenAI) | 全能图片 G-2.5 (Economy / Official Token Channels) | Text-to-Image, Image Editing (Sunburst / Flare) | 8 |
 | Grok 3 / Grok 4 Image (xAI) | 全能图片 X-3 / X-4 | Text-to-Image, Image-to-Image | 4 |
 | Grok Imagine Image 2.0 (xAI) | xai/grok-imagine-2.0 | Text-to-Image (economy) | 1 |
 | Grok Image Low-Price Channel (xAI) | 全能图片 X | Text-to-Image, Image-to-Image | 2 |
@@ -190,7 +190,7 @@ The project includes 337 example workflow JSON files in the `examples/` director
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # Entry point, registers all nodes
-├── models_registry.json     # Model registry (418 model definitions)
+├── models_registry.json     # Model registry (422 model definitions)
 ├── config/
 │   └── .env.example         # Configuration template
 ├── core/                    # Core infrastructure
