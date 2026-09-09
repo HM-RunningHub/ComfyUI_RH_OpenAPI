@@ -1,18 +1,18 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-416-blue)
+![Nodes](https://img.shields.io/badge/Nodes-423-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 **English** | [中文](README.md)
 
 **ComfyUI_RH_OpenAPI** is a **1:1 ComfyUI implementation** of the [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api), with additional Seedance2.0 asset management nodes.
 
-The project currently includes 411 standard model API nodes covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. Together with 3 Seedance2.0 asset helper nodes, 1 RunningHub LLM chat node, and 1 settings node, it provides 416 ComfyUI nodes in total. You can access RunningHub standard model and LLM capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the `real_person_mode` toggle — no local GPU required, zero cold-start latency.
+The project currently includes 418 standard model API nodes covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. Together with 3 Seedance2.0 asset helper nodes, 1 RunningHub LLM chat node, and 1 settings node, it provides 423 ComfyUI nodes in total. You can access RunningHub standard model and LLM capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the `real_person_mode` toggle — no local GPU required, zero cold-start latency.
 
 ## 📌 Features
 
-- **Node Count** — 416 ComfyUI nodes in total: 411 standard model nodes, 3 Seedance2.0 asset nodes, 1 RunningHub LLM chat node, and 1 settings node
+- **Node Count** — 423 ComfyUI nodes in total: 418 standard model nodes, 3 Seedance2.0 asset nodes, 1 RunningHub LLM chat node, and 1 settings node
 - **Plug & Play** — No model downloads, no GPU needed — just an API Key
 - **Dynamic Registration** — Nodes are auto-generated from a JSON registry; adding new models requires only a registry update
 - **Media Support** — Automatic upload/download/conversion for images, videos, and audio, seamlessly integrated with ComfyUI native types
@@ -26,7 +26,7 @@ The project currently includes 411 standard model API nodes covering image gener
 
 ## 🎨 Supported Models
 
-### Image Generation (99 Nodes)
+### Image Generation (103 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
@@ -35,6 +35,7 @@ The project currently includes 411 standard model API nodes covering image gener
 | Nano Banana Pro | 全能图片 PRO / PRO Official | Text-to-Image, Image-to-Image, Ultra | 6 |
 | GPT Image 1.5 (OpenAI) | 全能图片 G-1.5 / G-1.5 Official (older flavours marked Deprecated) | Text-to-Image, Image-to-Image | 4 |
 | GPT Image 2.0 (OpenAI) | 全能图片 G-2 / G-2 Official | Text-to-Image, Image-to-Image | 4 |
+| GPT Image 2.5 (OpenAI) | 全能图片 G-2.5 Official Token channels | Text-to-Image, Image Editing (Sunburst / Flare) | 4 |
 | Grok 3 / Grok 4 Image (xAI) | 全能图片 X-3 / X-4 | Text-to-Image, Image-to-Image | 4 |
 | Grok Imagine Image 2.0 (xAI) | xai/grok-imagine-2.0 | Text-to-Image (economy) | 1 |
 | Grok Image Low-Price Channel (xAI) | 全能图片 X | Text-to-Image, Image-to-Image | 2 |
@@ -51,19 +52,19 @@ The project currently includes 411 standard model API nodes covering image gener
 | Marble 1.0 / 1.1 / 1.1 Plus | — | Image/Multi-Image-to-3D World | 6 |
 | Luma Uni-1 / Uni-1 Max | — | Text-to-Image, Image-to-Image, Image Editing | 6 |
 
-### Video Generation (259 Nodes)
+### Video Generation (262 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
 | Sora 2 (OpenAI) | 全能视频 S / S Official | Text/Image-to-Video, Pro, Character Upload, Async | 12 |
 | Google Veo 3.1 / 3.1 Lite | 全能视频 V3.1 / V3.1 Lite (Fast/Pro/Lite Official + Low-Price) | Fast/Pro/Lite Text/Image/Start-End-to-Video, Reference, Video Extend | 19 |
-| Gemini Omni Flash / 1.1 Flash (Google) | Gemini Omni Flash | Text/Image/Reference-to-Video, Video Editing | 6 |
+| Gemini Omni Flash / 1.1 Flash (Google) | Gemini Omni Flash | Text/Image/Reference-to-Video, Video Editing | 7 |
 | Grok Imagine (xAI) | 全能视频 G / G Official | Text/Image/Reference-to-Video, Video Extend, Edit Video | 8 |
 | Kling (Kuaishou) | — | v2.5/v2.5-turbo/v2.6/v2.6-std/v3.0/v3-4k/v3.0-4k/o1/o3/o3-4k, Text/Image/Start-End/Reference/Motion Control/Edit/Elements/Advanced Elements/Lip Sync/AI Avatar | 42 |
 | Vidu (Shengshu) | — | q2/q3, Text/Image/Start-End/Reference-to-Video, Pro Fast, Turbo, short-play video | 22 |
 | Wan 2.5 / 2.6 / 2.7 / 3.0 (Alibaba) | — | Text/Image/Reference-to-Video, Flash, Prime, Spicy, Video Editing, Video Continuation | 17 |
 | HappyHorse 1.0 / 1.1 (Alibaba) | — | Text/Image/Reference-to-Video, Video Editing | 7 |
-| MiniMax Hailuo | — | 02/2.3/2.3-fast/H3/H3-Max, Text/Image/Start-End/Multimodal-to-Video | 18 |
+| MiniMax Hailuo | — | 02/2.3/2.3-fast/H3/H3-Max/H3-Max-Turbo, Text/Image/Start-End/Multimodal-to-Video | 20 |
 | Seedance v1.5 / 2.0 / Volc tools (ByteDance) | — | Text/Image/Multimodal-to-Video, Fast, Reference-to-Video, drama translation, subtitle removal | 18 |
 | Runway Gen-4 Turbo / Aleph | 全能视频 R | Image-to-Video, Video Editing | 3 |
 | LTX-2 19B (Lightricks) | — | Text-to-Video LoRA | 1 |
@@ -189,7 +190,7 @@ The project includes 337 example workflow JSON files in the `examples/` director
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # Entry point, registers all nodes
-├── models_registry.json     # Model registry (411 model definitions)
+├── models_registry.json     # Model registry (418 model definitions)
 ├── config/
 │   └── .env.example         # Configuration template
 ├── core/                    # Core infrastructure

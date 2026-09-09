@@ -45774,5 +45774,1234 @@
         ]
       }
     ]
+  },
+  {
+    "class_name": "MinimaxH3MaxTurboTextToVideo",
+    "display_name": "RH MiniMax-H3-Max-Turbo 文生视频",
+    "name_cn": "MiniMax-H3-Max-Turbo 文生视频",
+    "name_en": "minimax-h3-max-turbo/text-to-video",
+    "endpoint": "minimax/h3-max-turbo/text-to-video",
+    "output_type": "video",
+    "category": "RunningHub/MiniMax",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词，描述要生成的视频内容。",
+        "defaultValue": "一只白猫在阳光花园里追逐蝴蝶，镜头轻缓跟随，午后树叶滤下柔光。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "视频分辨率",
+        "defaultValue": "768p",
+        "options": [
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "768p",
+            "description": "768p",
+            "descriptionEn": "768p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒）",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "画面比例",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "MinimaxH3MaxTurboImageToVideo",
+    "display_name": "RH MiniMax-H3-Max-Turbo 图生视频（首尾帧）",
+    "name_cn": "MiniMax-H3-Max-Turbo 图生视频（首尾帧）",
+    "name_en": "minimax-h3-max-turbo/image-to-video",
+    "endpoint": "minimax/h3-max-turbo/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/MiniMax",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词，描述首帧如何运动。",
+        "defaultValue": "镜头缓缓后拉，云层漂移，光线在地面上移动。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "firstFrameUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstFrameUrl",
+        "description": "首帧图片",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "lastFrameUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "lastFrameUrl",
+        "description": "尾帧图片（可选）",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "视频分辨率",
+        "defaultValue": "768p",
+        "options": [
+          {
+            "value": "480p",
+            "description": "480p",
+            "descriptionEn": "480p"
+          },
+          {
+            "value": "768p",
+            "description": "768p",
+            "descriptionEn": "768p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "视频时长（秒）",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "GoogleGeminiOmni11FlashVideoEdit",
+    "display_name": "RH Gemini Omni 1.1 Flash 视频编辑/稳定版",
+    "name_cn": "Gemini Omni 1.1 Flash 视频编辑/稳定版",
+    "name_en": "gemini-omni-1.1-flash/video-edit",
+    "endpoint": "google/gemini-omni-1.1-flash/video-edit",
+    "output_type": "video",
+    "category": "RunningHub/Other",
+    "params": [
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": true,
+        "label": "videoUrl",
+        "description": "待编辑的源视频（最长10秒）",
+        "accept": "[\"MP4\",\"MOV\"]",
+        "maxSize": 100
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "自然语言编辑指令，描述希望对源视频做的修改；建议同时说明需保持不变的内容（主体、背景、光线、镜头运动等）",
+        "defaultValue": "编辑视频，使窗外天气变为冬季的第一场雪，同时保留女性的身份、衣着与动作。窗外加入轻柔飘落的雪花、更冷的蓝白色户外光线、玻璃上细微的冷凝水雾，以及更怀旧浪漫的氛围。保持咖啡馆室内与镜头运动一致。",
+        "maxLength": 2048
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出视频分辨率，默认 720p",
+        "defaultValue": "720p",
+        "options": [
+          {
+            "value": "360p",
+            "description": "360p",
+            "descriptionEn": "360p"
+          },
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageG25OfficialTokenSunburstTextToImage",
+    "display_name": "RH gpt-image-2.5/sunburst/text-to-image/stable-token",
+    "name_cn": "gpt-image-2.5/sunburst/text-to-image/stable-token",
+    "name_en": "gpt-image-2.5/sunburst/text-to-image/stable-token",
+    "endpoint": "rhart-image-g-2.5-official-token/sunburst/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "图像生成提示词（2-32000字符）",
+        "defaultValue": "商业广告特写静物摄影。深色哑光胡桃木桌面上放置着一瓶高端冷萃咖啡玻璃瓶，瓶身凝结着细腻晶莹的水珠，反射出清晨柔和的天光。瓶身正面贴有极简黑色磨砂标签，上面工整烫印白色无衬线英文字母“ORIGIN 2.5”。浅景深，微距微焦，背景为通透温暖的工业风咖啡馆虚化光斑。",
+        "maxLength": 32000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出图像宽高比",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "1:2",
+            "description": "1:2",
+            "descriptionEn": "1:2"
+          },
+          {
+            "value": "2:1",
+            "description": "2:1",
+            "descriptionEn": "2:1"
+          },
+          {
+            "value": "1:3",
+            "description": "1:3",
+            "descriptionEn": "1:3"
+          },
+          {
+            "value": "3:1",
+            "description": "3:1",
+            "descriptionEn": "3:1"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "9:21",
+            "description": "9:21",
+            "descriptionEn": "9:21"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出图像分辨率档位",
+        "defaultValue": "2k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "background",
+        "type": "LIST",
+        "required": false,
+        "label": "background",
+        "description": "输出背景模式",
+        "defaultValue": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "description": "Auto",
+            "descriptionEn": "Auto"
+          },
+          {
+            "value": "transparent",
+            "description": "透明",
+            "descriptionEn": "Transparent"
+          },
+          {
+            "value": "opaque",
+            "description": "不透明",
+            "descriptionEn": "Opaque"
+          }
+        ]
+      },
+      {
+        "fieldKey": "quality",
+        "type": "LIST",
+        "required": false,
+        "label": "quality",
+        "description": "生成质量；更高档位会增加耗时与 token 用量",
+        "defaultValue": "high",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "low",
+            "description": "low",
+            "descriptionEn": "low"
+          },
+          {
+            "value": "medium",
+            "description": "medium",
+            "descriptionEn": "medium"
+          },
+          {
+            "value": "high",
+            "description": "high",
+            "descriptionEn": "high"
+          },
+          {
+            "value": "xhigh",
+            "description": "xhigh",
+            "descriptionEn": "xhigh"
+          },
+          {
+            "value": "max",
+            "description": "max",
+            "descriptionEn": "max"
+          }
+        ]
+      },
+      {
+        "fieldKey": "outputFormat",
+        "type": "LIST",
+        "required": false,
+        "label": "outputFormat",
+        "description": "输出图片格式",
+        "defaultValue": "png",
+        "options": [
+          {
+            "value": "jpeg",
+            "description": "JPEG",
+            "descriptionEn": "JPEG"
+          },
+          {
+            "value": "png",
+            "description": "PNG",
+            "descriptionEn": "PNG"
+          },
+          {
+            "value": "webp",
+            "description": "WEBP",
+            "descriptionEn": "WEBP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageG25OfficialTokenSunburstEdit",
+    "display_name": "RH gpt-image-2.5/sunburst/image-to-image/stable-token",
+    "name_cn": "gpt-image-2.5/sunburst/image-to-image/stable-token",
+    "name_en": "gpt-image-2.5/sunburst/image-to-image/stable-token",
+    "endpoint": "rhart-image-g-2.5-official-token/sunburst/edit",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "图片编辑指令（2-32000字符）",
+        "defaultValue": "严格保留参考图中人物的面部特征、肤色质感、发丝细节、表情以及周围的环境光影和背景构图。仅对人物配饰做精准修改：为其鼻梁戴上一副精致的无框银色钛合金眼镜，并在其右耳佩戴一枚微小的哑光银色耳钉。镜片需带有极弱的防蓝光微反光，修饰边缘与皮肤自然融合。",
+        "maxLength": 32000
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "参考图片（1-16张）",
+        "multipleInputs": true,
+        "maxInputNum": 16,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出图像宽高比",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "1:2",
+            "description": "1:2",
+            "descriptionEn": "1:2"
+          },
+          {
+            "value": "2:1",
+            "description": "2:1",
+            "descriptionEn": "2:1"
+          },
+          {
+            "value": "1:3",
+            "description": "1:3",
+            "descriptionEn": "1:3"
+          },
+          {
+            "value": "3:1",
+            "description": "3:1",
+            "descriptionEn": "3:1"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "9:21",
+            "description": "9:21",
+            "descriptionEn": "9:21"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出图像分辨率档位",
+        "defaultValue": "2k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "background",
+        "type": "LIST",
+        "required": false,
+        "label": "background",
+        "description": "输出背景模式",
+        "defaultValue": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "description": "Auto",
+            "descriptionEn": "Auto"
+          },
+          {
+            "value": "transparent",
+            "description": "透明",
+            "descriptionEn": "Transparent"
+          },
+          {
+            "value": "opaque",
+            "description": "不透明",
+            "descriptionEn": "Opaque"
+          }
+        ]
+      },
+      {
+        "fieldKey": "quality",
+        "type": "LIST",
+        "required": false,
+        "label": "quality",
+        "description": "编辑质量；更高档位会增加耗时与 token 用量",
+        "defaultValue": "high",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "low",
+            "description": "low",
+            "descriptionEn": "low"
+          },
+          {
+            "value": "medium",
+            "description": "medium",
+            "descriptionEn": "medium"
+          },
+          {
+            "value": "high",
+            "description": "high",
+            "descriptionEn": "high"
+          },
+          {
+            "value": "xhigh",
+            "description": "xhigh",
+            "descriptionEn": "xhigh"
+          },
+          {
+            "value": "max",
+            "description": "max",
+            "descriptionEn": "max"
+          }
+        ]
+      },
+      {
+        "fieldKey": "outputFormat",
+        "type": "LIST",
+        "required": false,
+        "label": "outputFormat",
+        "description": "输出图片格式",
+        "defaultValue": "png",
+        "options": [
+          {
+            "value": "jpeg",
+            "description": "JPEG",
+            "descriptionEn": "JPEG"
+          },
+          {
+            "value": "png",
+            "description": "PNG",
+            "descriptionEn": "PNG"
+          },
+          {
+            "value": "webp",
+            "description": "WEBP",
+            "descriptionEn": "WEBP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageG25OfficialTokenFlareTextToImage",
+    "display_name": "RH gpt-image-2.5/flare/text-to-image/stable-token",
+    "name_cn": "gpt-image-2.5/flare/text-to-image/stable-token",
+    "name_en": "gpt-image-2.5/flare/text-to-image/stable-token",
+    "endpoint": "rhart-image-g-2.5-official-token/flare/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "图像生成提示词（2-32000字符）",
+        "defaultValue": "极简现代扁平插画风格，浅米色干净纯色背景。画面中央是一个站在透明玻璃写字板前思考的产品经理，身穿燕麦色针织衫，板上画着几个简洁的发光线框流程图。低多边形与柔和几何形态，自然柔光，高对比度剪影，画面干净利落，无杂乱元素。",
+        "maxLength": 32000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出图像宽高比",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "1:2",
+            "description": "1:2",
+            "descriptionEn": "1:2"
+          },
+          {
+            "value": "2:1",
+            "description": "2:1",
+            "descriptionEn": "2:1"
+          },
+          {
+            "value": "1:3",
+            "description": "1:3",
+            "descriptionEn": "1:3"
+          },
+          {
+            "value": "3:1",
+            "description": "3:1",
+            "descriptionEn": "3:1"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "9:21",
+            "description": "9:21",
+            "descriptionEn": "9:21"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出图像分辨率档位",
+        "defaultValue": "2k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "background",
+        "type": "LIST",
+        "required": false,
+        "label": "background",
+        "description": "输出背景模式",
+        "defaultValue": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "description": "Auto",
+            "descriptionEn": "Auto"
+          },
+          {
+            "value": "transparent",
+            "description": "透明",
+            "descriptionEn": "Transparent"
+          },
+          {
+            "value": "opaque",
+            "description": "不透明",
+            "descriptionEn": "Opaque"
+          }
+        ]
+      },
+      {
+        "fieldKey": "quality",
+        "type": "LIST",
+        "required": false,
+        "label": "quality",
+        "description": "生成质量；更高档位会增加耗时与 token 用量",
+        "defaultValue": "high",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "low",
+            "description": "low",
+            "descriptionEn": "low"
+          },
+          {
+            "value": "medium",
+            "description": "medium",
+            "descriptionEn": "medium"
+          },
+          {
+            "value": "high",
+            "description": "high",
+            "descriptionEn": "high"
+          },
+          {
+            "value": "xhigh",
+            "description": "xhigh",
+            "descriptionEn": "xhigh"
+          },
+          {
+            "value": "max",
+            "description": "max",
+            "descriptionEn": "max"
+          }
+        ]
+      },
+      {
+        "fieldKey": "outputFormat",
+        "type": "LIST",
+        "required": false,
+        "label": "outputFormat",
+        "description": "输出图片格式",
+        "defaultValue": "png",
+        "options": [
+          {
+            "value": "jpeg",
+            "description": "JPEG",
+            "descriptionEn": "JPEG"
+          },
+          {
+            "value": "png",
+            "description": "PNG",
+            "descriptionEn": "PNG"
+          },
+          {
+            "value": "webp",
+            "description": "WEBP",
+            "descriptionEn": "WEBP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageG25OfficialTokenFlareEdit",
+    "display_name": "RH gpt-image-2.5/flare/image-to-image/stable-token",
+    "name_cn": "gpt-image-2.5/flare/image-to-image/stable-token",
+    "name_en": "gpt-image-2.5/flare/image-to-image/stable-token",
+    "endpoint": "rhart-image-g-2.5-official-token/flare/edit",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "图片编辑指令（2-32000字符）",
+        "defaultValue": "基于参考图中的主体人物，严格保持人物的面部五官、发型与身体站姿不变。将其身上的日常休闲装替换为干练的深灰色亚麻西装外套与白衬衫，并将背景从室内换为日落时分的现代城市高空露台，暖金色夕阳斜射，光影自然过渡。",
+        "maxLength": 32000
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "参考图片（1-16张）",
+        "multipleInputs": true,
+        "maxInputNum": 16,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 50
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出图像宽高比",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "1:2",
+            "description": "1:2",
+            "descriptionEn": "1:2"
+          },
+          {
+            "value": "2:1",
+            "description": "2:1",
+            "descriptionEn": "2:1"
+          },
+          {
+            "value": "1:3",
+            "description": "1:3",
+            "descriptionEn": "1:3"
+          },
+          {
+            "value": "3:1",
+            "description": "3:1",
+            "descriptionEn": "3:1"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "9:21",
+            "description": "9:21",
+            "descriptionEn": "9:21"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出图像分辨率档位",
+        "defaultValue": "2k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "background",
+        "type": "LIST",
+        "required": false,
+        "label": "background",
+        "description": "输出背景模式",
+        "defaultValue": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "description": "Auto",
+            "descriptionEn": "Auto"
+          },
+          {
+            "value": "transparent",
+            "description": "透明",
+            "descriptionEn": "Transparent"
+          },
+          {
+            "value": "opaque",
+            "description": "不透明",
+            "descriptionEn": "Opaque"
+          }
+        ]
+      },
+      {
+        "fieldKey": "quality",
+        "type": "LIST",
+        "required": false,
+        "label": "quality",
+        "description": "编辑质量；更高档位会增加耗时与 token 用量",
+        "defaultValue": "high",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "low",
+            "description": "low",
+            "descriptionEn": "low"
+          },
+          {
+            "value": "medium",
+            "description": "medium",
+            "descriptionEn": "medium"
+          },
+          {
+            "value": "high",
+            "description": "high",
+            "descriptionEn": "high"
+          },
+          {
+            "value": "xhigh",
+            "description": "xhigh",
+            "descriptionEn": "xhigh"
+          },
+          {
+            "value": "max",
+            "description": "max",
+            "descriptionEn": "max"
+          }
+        ]
+      },
+      {
+        "fieldKey": "outputFormat",
+        "type": "LIST",
+        "required": false,
+        "label": "outputFormat",
+        "description": "输出图片格式",
+        "defaultValue": "png",
+        "options": [
+          {
+            "value": "jpeg",
+            "description": "JPEG",
+            "descriptionEn": "JPEG"
+          },
+          {
+            "value": "png",
+            "description": "PNG",
+            "descriptionEn": "PNG"
+          },
+          {
+            "value": "webp",
+            "description": "WEBP",
+            "descriptionEn": "WEBP"
+          }
+        ]
+      }
+    ]
   }
 ]
