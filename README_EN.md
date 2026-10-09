@@ -1,18 +1,18 @@
 # ComfyUI_RH_OpenAPI
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
-![Nodes](https://img.shields.io/badge/Nodes-427-blue)
+![Nodes](https://img.shields.io/badge/Nodes-471-blue)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)
 
 **English** | [中文](README.md)
 
 **ComfyUI_RH_OpenAPI** is a **1:1 ComfyUI implementation** of the [RunningHub Standard Model API](https://www.runninghub.cn/call-api/standard-api), with additional Seedance2.0 asset management nodes.
 
-The project currently includes 422 standard model API nodes covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. Together with 3 Seedance2.0 asset helper nodes, 1 RunningHub LLM chat node, and 1 settings node, it provides 427 ComfyUI nodes in total. You can access RunningHub standard model and LLM capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the `real_person_mode` toggle — no local GPU required, zero cold-start latency.
+The project currently includes 466 standard model API nodes covering image generation, video generation, audio synthesis, 3D modeling, text understanding, and image/video upscaling. Together with 3 Seedance2.0 asset helper nodes, 1 RunningHub LLM chat node, and 1 settings node, it provides 471 ComfyUI nodes in total. You can access RunningHub standard model and LLM capabilities directly inside ComfyUI workflows and reuse Seedance2.0 assets through a unified `asset_ids` input or the `real_person_mode` toggle — no local GPU required, zero cold-start latency.
 
 ## 📌 Features
 
-- **Node Count** — 427 ComfyUI nodes in total: 422 standard model nodes, 3 Seedance2.0 asset nodes, 1 RunningHub LLM chat node, and 1 settings node
+- **Node Count** — 471 ComfyUI nodes in total: 466 standard model nodes, 3 Seedance2.0 asset nodes, 1 RunningHub LLM chat node, and 1 settings node
 - **Plug & Play** — No model downloads, no GPU needed — just an API Key
 - **Dynamic Registration** — Nodes are auto-generated from a JSON registry; adding new models requires only a registry update
 - **Media Support** — Automatic upload/download/conversion for images, videos, and audio, seamlessly integrated with ComfyUI native types
@@ -26,12 +26,13 @@ The project currently includes 422 standard model API nodes covering image gener
 
 ## 🎨 Supported Models
 
-### Image Generation (107 Nodes)
+### Image Generation (116 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
 | Nano Banana V1 | 全能图片 V1 / V1 Official Stable | Text-to-Image, Image-to-Image | 4 |
 | Nano Banana V2 (Gemini 3.1 Flash) | 全能图片 V2 / V2 Official | Text-to-Image, Image-to-Image | 4 |
+| Nano Banana 2.1 Economy | 全能图片 N-NB21 | Text-to-Image, Image-to-Image | 2 |
 | Nano Banana Pro | 全能图片 PRO / PRO Official | Text-to-Image, Image-to-Image, Ultra | 6 |
 | GPT Image 1.5 (OpenAI) | 全能图片 G-1.5 / G-1.5 Official (older flavours marked Deprecated) | Text-to-Image, Image-to-Image | 4 |
 | GPT Image 2.0 (OpenAI) | 全能图片 G-2 / G-2 Official | Text-to-Image, Image-to-Image | 4 |
@@ -47,12 +48,15 @@ The project currently includes 422 standard model API nodes covering image gener
 | HYPIR Image Enhancement | — | HYPIR-ULTRA, HYPIR-BALANCE | 2 |
 | TopazLabs | — | Image Upscale: Standard V2 / Low Res V2 / CGI / High Fidelity V2 / Text Refine | 5 |
 | Seedream v4 / v4.5 / v5 Lite / Jimeng 4.6 (ByteDance) | — | Text-to-Image, Image-to-Image | 8 |
+| Seedream v4.7 | — | Text-to-Image, Image-to-Image | 2 |
+| Seedream v5 Flash / Dola Seedream 5.0 Flash | — | Text-to-Image, Image-to-Image, Layer Decomposition (JSON) | 6 |
+| Jimeng Seed3 TileSR | — | Image Super-Resolution | 1 |
 | FLUX Dev (Black Forest Labs) | — | Text-to-Image, Text-to-Image LoRA | 2 |
 | Midjourney | 悠船 | Text-to-Image v6/v6.1/niji6/niji7/v7/v8.1 | 6 |
 | Marble 1.0 / 1.1 / 1.1 Plus | — | Image/Multi-Image-to-3D World | 6 |
 | Luma Uni-1 / Uni-1 Max | — | Text-to-Image, Image-to-Image, Image Editing | 6 |
 
-### Video Generation (262 Nodes)
+### Video Generation (273 Nodes)
 
 | Model | RH Platform Name | Capabilities | Nodes |
 |-------|-----------------|-------------|-------|
@@ -62,10 +66,14 @@ The project currently includes 422 standard model API nodes covering image gener
 | Grok Imagine (xAI) | 全能视频 G / G Official | Text/Image/Reference-to-Video, Video Extend, Edit Video | 8 |
 | Kling (Kuaishou) | — | v2.5/v2.5-turbo/v2.6/v2.6-std/v3.0/v3-4k/v3.0-4k/o1/o3/o3-4k, Text/Image/Start-End/Reference/Motion Control/Edit/Elements/Advanced Elements/Lip Sync/AI Avatar | 42 |
 | Vidu (Shengshu) | — | q2/q3, Text/Image/Start-End/Reference-to-Video, Pro Fast, Turbo, short-play video | 22 |
-| Wan 2.5 / 2.6 / 2.7 / 3.0 (Alibaba) | — | Text/Image/Reference-to-Video, Flash, Prime, Spicy, Video Editing, Video Continuation | 17 |
+| Vidu Q4 Preview | — | Image-to-Video, Reference-to-Video | 2 |
+| Wan 2.5 / 2.6 / 2.7 / 3.0 (Alibaba) | — | Text/Image/Reference-to-Video, Flash, Prime, Spicy, Video Editing, Video Continuation | 19 |
 | HappyHorse 1.0 / 1.1 (Alibaba) | — | Text/Image/Reference-to-Video, Video Editing | 7 |
 | MiniMax Hailuo | — | 02/2.3/2.3-fast/H3/H3-Max/H3-Max-Turbo, Text/Image/Start-End/Multimodal-to-Video | 20 |
 | Seedance v1.5 / 2.0 / Volc tools (ByteDance) | — | Text/Image/Multimodal-to-Video, Fast, Reference-to-Video, drama translation, subtitle removal | 18 |
+| Seedance 2.5 Token / Global Token | — | Text/Image/Multimodal-to-Video, Draft-to-Video (including Global Token Draft-to-Video) | 5 |
+| Volc MediaKit | — | Storyline Analysis (JSON Text), Generative/Standard-Professional/Fast Enhancement | 4 |
+| FLUX 3 Video | — | Text-to-Video, Image-to-Video, Video Continuation, Draft Enhance | 4 |
 | Runway Gen-4 Turbo / Aleph | 全能视频 R | Image-to-Video, Video Editing | 3 |
 | LTX-2 19B (Lightricks) | — | Text-to-Video LoRA | 1 |
 | PixVerse v5.5 / v5.6 / v6 / C1 | — | Text/Image/Reference-to-Video, Transition, Effects, Extend | 15 |
@@ -87,7 +95,7 @@ The project currently includes 422 standard model API nodes covering image gener
 | Gemini 2.5 Pro (Google) | RHArt Text G-2.5 Pro | Image-to-Text, CV Image-to-Text, Text-to-Text, Video Understanding | 4 |
 | Qwen 27B Chat (Alibaba) | RHArt Text Qwen 27B | Multi-turn Chat | 1 |
 
-### Audio Synthesis (20 Nodes)
+### Audio Synthesis (42 Nodes)
 
 | Model Series | Capabilities | Nodes |
 |-------------|-------------|-------|
@@ -95,15 +103,16 @@ The project currently includes 422 standard model API nodes covering image gener
 | Minimax Music 2.5 / 2.6 / Cover | Text-to-Music, music cover, cover preprocessing | 4 |
 | Minimax Voice Clone / Voice Design | Voice Cloning, Voice Design | 2 |
 | Suno v4.5 / v5 / v5.5 (RHArt) | Single / Custom text-to-music | 6 |
+| Suno v6 / v6 Wild / v6 Mini (RHArt) | Music Generation, Editing, Cover, Extend, Sample, Sound Effects, Upload | 19 |
 | Suno Lyrics (RHArt) | Lyric generation | 1 |
-| Doubao Seed Audio/TTS 2.0 / 1.0 (ByteDance) | Audio generation, Text-to-Speech (TTS) | 2 |
+| Doubao Seed Audio/TTS 2.0 / 1.0 (ByteDance) | Audio Generation, TTS, Voice Clone, ICL Cloned-Voice TTS | 4 |
 
-### 3D Modeling (16 Nodes)
+### 3D Modeling (18 Nodes)
 
 | Model Series | Capabilities | Nodes |
 |-------------|-------------|-------|
 | Hunyuan 3D v3.1 | Text-to-3D, Image-to-3D | 2 |
-| HiTem3D V1.5 / V2 / V2.1 | Image-to-3D, Multi-Image-to-3D | 6 |
+| HiTem3D V1.5 / V2 / V2.1 / V3 | Image-to-3D, Multi-Image-to-3D | 8 |
 | HiTem3D Portrait V1.5 / V2.0 / V2.1 | Portrait Image-to-3D, Multi-Image-to-3D | 6 |
 | Meshy6 | Text-to-3D, Image-to-3D | 2 |
 
@@ -183,14 +192,14 @@ cp config/.env.example config/.env
 
 ### Example Workflows
 
-The project includes 337 example workflow JSON files in the `examples/` directory, including 3 Seedance2.0 asset-related workflows. Download and import directly into ComfyUI.
+The project includes 381 example workflow JSON files in the `examples/` directory, including 3 Seedance2.0 asset-related workflows. Download and import directly into ComfyUI.
 
 ## 📁 Project Structure
 
 ```
 ComfyUI_RH_OpenAPI/
 ├── __init__.py              # Entry point, registers all nodes
-├── models_registry.json     # Model registry (422 model definitions)
+├── models_registry.json     # Model registry (466 model definitions)
 ├── config/
 │   └── .env.example         # Configuration template
 ├── core/                    # Core infrastructure
@@ -207,7 +216,7 @@ ComfyUI_RH_OpenAPI/
 │   ├── llm_chat.py          # RunningHub LLM Chat Completions node
 │   ├── node_factory.py      # Dynamic node factory
 │   └── assets/              # Seedance2.0 asset management nodes
-└── examples/                # 337 example workflows
+└── examples/                # 381 example workflows
 ```
 
 ## 🔧 Architecture

@@ -40,14 +40,21 @@ def tensor_to_pil(image: torch.Tensor) -> List[Image.Image]:
     return images
 
 
+def _has_alpha(image: Image.Image) -> bool:
+    """Include palette/grayscale transparency stored as PNG metadata."""
+    return "A" in image.getbands() or "transparency" in image.info
+
+
 def pil_to_tensor(images: Union[Image.Image, List[Image.Image]]) -> torch.Tensor:
     """PIL or list of PIL → ComfyUI tensor [B,H,W,C], value range [0,1]."""
     if isinstance(images, Image.Image):
         images = [images]
+    # A batch must have a uniform channel count. Promote opaque images only
+    # when another image needs alpha; RGB-only batches keep their old shape.
+    mode = "RGBA" if any(_has_alpha(img) for img in images) else "RGB"
     tensors = []
     for img in images:
-        if img.mode != "RGB":
-            img = img.convert("RGB")
+        img = img.convert(mode)
         arr = np.array(img).astype(np.float32) / 255.0
         tensors.append(torch.from_numpy(arr))
     return torch.stack(tensors)
@@ -81,7 +88,7 @@ def download_image(
             response = requests.get(url, headers=headers, timeout=timeout)
             response.raise_for_status()
             img = Image.open(BytesIO(response.content))
-            return img.convert("RGB")
+            return img.convert("RGBA" if _has_alpha(img) else "RGB")
         except Exception as e:
             last_error = e
             if attempt < max_retries - 1:
