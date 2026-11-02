@@ -2,11 +2,11 @@
   "version": "public-2026-04-29",
   "source": "models_registry.json public-safe pricing summaries",
   "note": "Public-safe pricing summary for AI-assisted integration. Prices may change; check official RunningHub pricing before showing final costs to end users.",
-  "pricing_count": 353,
+  "pricing_count": 449,
   "counts_by_pricing_type": {
-    "parameter_based": 196,
-    "fixed": 154,
-    "unparsed": 3
+    "fixed": 180,
+    "parameter_based": 243,
+    "unparsed": 26
   },
   "pricing": [
     {
@@ -210,6 +210,39 @@
       "price": 0.33
     },
     {
+      "endpoint": "alibaba/qwen-image-2.0-pro/text-to-image",
+      "name_cn": "千问2.0Pro-文生图",
+      "name_en": "qwen-image-2.0-pro/text-to-image",
+      "currency": "CNY",
+      "unit": "/张",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.33
+    },
+    {
+      "endpoint": "alibaba/qwen-image-2.0/image-edit",
+      "name_cn": "千问2.0-图像编辑",
+      "name_en": "qwen-image-2.0/image-edit",
+      "currency": "CNY",
+      "unit": "/张",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.13
+    },
+    {
+      "endpoint": "alibaba/qwen-image-2.0/text-to-image",
+      "name_cn": "千问2.0-文生图",
+      "name_en": "qwen-image-2.0/text-to-image",
+      "currency": "CNY",
+      "unit": "/张",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.13
+    },
+    {
       "endpoint": "alibaba/qwen-image-3.0-pro/image-edit",
       "name_cn": "千问3.0Pro-图像编辑",
       "name_en": "qwen-image-3.0-pro/image-edit",
@@ -252,37 +285,46 @@
       ]
     },
     {
-      "endpoint": "alibaba/qwen-image-2.0-pro/text-to-image",
-      "name_cn": "千问2.0Pro-文生图",
-      "name_en": "qwen-image-2.0-pro/text-to-image",
+      "endpoint": "alibaba/qwen-image-3.0/image-edit",
+      "name_cn": "千问3.0-图像编辑",
+      "name_en": "qwen-image-3.0/image-edit",
       "currency": "CNY",
-      "unit": "/张",
+      "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 0.33
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "imageNum"
+      ],
+      "rules": [
+        {
+          "when": {
+            "imageNum": ""
+          },
+          "price": 0.35
+        }
+      ]
     },
     {
-      "endpoint": "alibaba/qwen-image-2.0/image-edit",
-      "name_cn": "千问2.0-图像编辑",
-      "name_en": "qwen-image-2.0/image-edit",
+      "endpoint": "alibaba/qwen-image-3.0/text-to-image",
+      "name_cn": "千问3.0-文生图",
+      "name_en": "qwen-image-3.0/text-to-image",
       "currency": "CNY",
-      "unit": "/张",
+      "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 0.13
-    },
-    {
-      "endpoint": "alibaba/qwen-image-2.0/text-to-image",
-      "name_cn": "千问2.0-文生图",
-      "name_en": "qwen-image-2.0/text-to-image",
-      "currency": "CNY",
-      "unit": "/张",
-      "source": "derived_from_public_safe_pricing_summary",
-      "updated_at": "2026-04-29",
-      "pricing_type": "fixed",
-      "price": 0.13
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "imageNum"
+      ],
+      "rules": [
+        {
+          "when": {
+            "imageNum": ""
+          },
+          "price": 0.18
+        }
+      ]
     },
     {
       "endpoint": "alibaba/wan-2.5-preview/image-to-image",
@@ -1107,6 +1149,204 @@
       ]
     },
     {
+      "endpoint": "alibaba/wan-3.0-prime/image-to-video",
+      "name_cn": "万相3.0高速版-图生视频",
+      "name_en": "wan-3.0-prime/image-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080P"
+          },
+          "price": 1.71
+        },
+        {
+          "when": {
+            "resolution": "480P"
+          },
+          "price": 0.43
+        },
+        {
+          "when": {
+            "resolution": "720P"
+          },
+          "price": 0.86
+        }
+      ]
+    },
+    {
+      "endpoint": "alibaba/wan-3.0-prime/reference-to-video",
+      "name_cn": "万相3.0高速版-参考生视频",
+      "name_en": "wan-3.0-prime/reference-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080P"
+          },
+          "price": 1.71
+        },
+        {
+          "when": {
+            "resolution": "480P"
+          },
+          "price": 0.43
+        },
+        {
+          "when": {
+            "resolution": "720P"
+          },
+          "price": 0.86
+        }
+      ]
+    },
+    {
+      "endpoint": "alibaba/wan-3.0-prime/text-to-video",
+      "name_cn": "万相3.0高速版-文生视频",
+      "name_en": "wan-3.0-prime/text-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080P"
+          },
+          "price": 1.71
+        },
+        {
+          "when": {
+            "resolution": "480P"
+          },
+          "price": 0.43
+        },
+        {
+          "when": {
+            "resolution": "720P"
+          },
+          "price": 0.86
+        }
+      ]
+    },
+    {
+      "endpoint": "alibaba/wan-3.0/image-to-video",
+      "name_cn": "万相3.0-图生视频",
+      "name_en": "wan-3.0/image-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080P"
+          },
+          "price": 0.84
+        },
+        {
+          "when": {
+            "resolution": "480P"
+          },
+          "price": 0.21
+        },
+        {
+          "when": {
+            "resolution": "720P"
+          },
+          "price": 0.42
+        }
+      ]
+    },
+    {
+      "endpoint": "alibaba/wan-3.0/reference-to-video",
+      "name_cn": "万相3.0-参考生视频",
+      "name_en": "wan-3.0-reference-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080P"
+          },
+          "price": 0.84
+        },
+        {
+          "when": {
+            "resolution": "480P"
+          },
+          "price": 0.21
+        },
+        {
+          "when": {
+            "resolution": "720P"
+          },
+          "price": 0.42
+        }
+      ]
+    },
+    {
+      "endpoint": "alibaba/wan-3.0/text-to-video",
+      "name_cn": "万相3.0-文生视频",
+      "name_en": "wan-3.0/text-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080P"
+          },
+          "price": 0.84
+        },
+        {
+          "when": {
+            "resolution": "480P"
+          },
+          "price": 0.21
+        },
+        {
+          "when": {
+            "resolution": "720P"
+          },
+          "price": 0.42
+        }
+      ]
+    },
+    {
       "endpoint": "bytedance/doubao-seed-audio-1.0",
       "name_cn": "Doubao-音频生成-1.0",
       "name_en": "doubao-seed-audio-1.0",
@@ -1118,6 +1358,17 @@
       "price": 0.004
     },
     {
+      "endpoint": "bytedance/doubao-seed-icl-2.0",
+      "name_cn": "Doubao-声音复刻-2.0",
+      "name_en": "doubao-seed-icl-2.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 60.0
+    },
+    {
       "endpoint": "bytedance/doubao-seed-tts-2.0",
       "name_cn": "Doubao-语音合成-2.0",
       "name_en": "doubao-seed-tts-2.0",
@@ -1127,6 +1378,17 @@
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
       "price": 0.24
+    },
+    {
+      "endpoint": "bytedance/doubao-voice-clone",
+      "name_cn": "Doubao-声音复刻-训练",
+      "name_en": "doubao-voice-clone",
+      "currency": "CNY",
+      "unit": "/1000char",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.28
     },
     {
       "endpoint": "bytedance/dreamactor-v2",
@@ -1160,6 +1422,105 @@
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
       "price": 0.17
+    },
+    {
+      "endpoint": "bytedance/jimeng-seed3-tilesr/image-upscale",
+      "name_cn": "即梦智能超清",
+      "name_en": "bytedance/jimeng-seed3-tilesr/image-upscale",
+      "currency": "CNY",
+      "unit": "/张",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.3
+    },
+    {
+      "endpoint": "bytedance/seedance-2.5-global-token/draft-to-video",
+      "name_cn": "seedance2.5-global/样片成片 Token",
+      "name_en": "seedance-2.5-global/draft-to-video Token",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "bytedance/seedance-2.5-token/draft-to-video",
+      "name_cn": "seedance2.5/样片成片 Token",
+      "name_en": "seedance-2.5/draft-to-video Token",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "bytedance/seedance-2.5-token/image-to-video",
+      "name_cn": "seedance2.5/图生视频 Token",
+      "name_en": "seedance-2.5/image-to-video Token",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "bytedance/seedance-2.5-token/multimodal-video",
+      "name_cn": "seedance2.5/多模态视频 Token",
+      "name_en": "seedance-2.5/multimodal-video Token",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "bytedance/seedance-2.5-token/text-to-video",
+      "name_cn": "seedance2.5/文生视频 Token",
+      "name_en": "seedance-2.5/text-to-video Token",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "dola-Seedream-5.0-flash/image-to-image",
+      "name_cn": "Dola Seedream 5.0 Flash Image To Image",
+      "name_en": "Dola-Seedream-5.0-flash/image-to-image",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "dola-Seedream-5.0-flash/layer-decomposition",
+      "name_cn": "Dola Seedream 5.0 Flash Layer Decomposition",
+      "name_en": "Dola-Seedream-5.0-flash/layer-decomposition",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "dola-Seedream-5.0-flash/text-to-image",
+      "name_cn": "Dola Seedream 5.0 Flash Text To Image",
+      "name_en": "Dola-Seedream-5.0-flash/text-to-image",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
     },
     {
       "endpoint": "gemini-omni-flash/image-to-video",
@@ -1391,6 +1752,162 @@
             "resolution": "720p"
           },
           "price": 0.3
+        }
+      ]
+    },
+    {
+      "endpoint": "google/gemini-omni-1.1-flash/image-to-video",
+      "name_cn": "Gemini Omni 1.1 Flash 图生视频/稳定版",
+      "name_en": "gemini-omni-1.1-flash/image-to-video/stable",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 1.12
+        },
+        {
+          "when": {
+            "resolution": "360p"
+          },
+          "price": 0.22
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 2.24
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.75
+        }
+      ]
+    },
+    {
+      "endpoint": "google/gemini-omni-1.1-flash/reference-to-video",
+      "name_cn": "Gemini Omni 1.1 Flash 参考生视频/稳定版 ",
+      "name_en": "gemini-omni-1.1-flash/reference-to-video/stable",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 1.12
+        },
+        {
+          "when": {
+            "resolution": "360p"
+          },
+          "price": 0.22
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 2.24
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.75
+        }
+      ]
+    },
+    {
+      "endpoint": "google/gemini-omni-1.1-flash/text-to-video",
+      "name_cn": "Gemini Omni 1.1 Flash 文生视频/稳定版 ",
+      "name_en": "gemini-omni-1.1-flash/text-to-video/stable",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 1.12
+        },
+        {
+          "when": {
+            "resolution": "360p"
+          },
+          "price": 0.22
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 2.24
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.75
+        }
+      ]
+    },
+    {
+      "endpoint": "google/gemini-omni-1.1-flash/video-edit",
+      "name_cn": "Gemini Omni 1.1 Flash 视频编辑/稳定版",
+      "name_en": "gemini-omni-1.1-flash/video-edit",
+      "currency": "CNY",
+      "unit": "/源视频秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 1.12
+        },
+        {
+          "when": {
+            "resolution": "360p"
+          },
+          "price": 0.22
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 2.24
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.75
         }
       ]
     },
@@ -1951,6 +2468,94 @@
             "resolution": "1536pro"
           },
           "price": 5.6
+        }
+      ]
+    },
+    {
+      "endpoint": "hitem3d-v3/image-to-3d",
+      "name_cn": "hitem3d-v3/image-to-3d",
+      "name_en": "hitem3d-v3/image-to-3d",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "requestType",
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "requestType": "both",
+            "resolution": "2048master"
+          },
+          "price": 79.63
+        },
+        {
+          "when": {
+            "requestType": "both",
+            "resolution": "2048quality"
+          },
+          "price": 18.38
+        },
+        {
+          "when": {
+            "requestType": "mesh",
+            "resolution": "2048master"
+          },
+          "price": 77.0
+        },
+        {
+          "when": {
+            "requestType": "mesh",
+            "resolution": "2048quality"
+          },
+          "price": 15.75
+        }
+      ]
+    },
+    {
+      "endpoint": "hitem3d-v3/multi-image-to-3d",
+      "name_cn": "hitem3d-v3/multi-image-to-3d",
+      "name_en": "hitem3d-v3/multi-image-to-3d",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "requestType",
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "requestType": "both",
+            "resolution": "2048master"
+          },
+          "price": 79.63
+        },
+        {
+          "when": {
+            "requestType": "both",
+            "resolution": "2048quality"
+          },
+          "price": 18.38
+        },
+        {
+          "when": {
+            "requestType": "mesh",
+            "resolution": "2048master"
+          },
+          "price": 77.0
+        },
+        {
+          "when": {
+            "requestType": "mesh",
+            "resolution": "2048quality"
+          },
+          "price": 15.75
         }
       ]
     },
@@ -2605,6 +3210,93 @@
       ]
     },
     {
+      "endpoint": "kling-v4/custom-element",
+      "name_cn": "可灵 4.0 主体创建",
+      "name_en": "kling-v4/custom-element",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.0
+    },
+    {
+      "endpoint": "kling-v4/custom-voice",
+      "name_cn": "可灵 4.0 音色创建",
+      "name_en": "kling-v4/custom-voice",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.0
+    },
+    {
+      "endpoint": "kling-v4/image-to-video",
+      "name_cn": "可灵图生视频4.0",
+      "name_en": "kling-v4/image-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 1.95
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 1.3
+        }
+      ]
+    },
+    {
+      "endpoint": "kling-v4/omni-video",
+      "name_cn": "可灵全能视频4.0",
+      "name_en": "kling-v4/omni-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.72
+    },
+    {
+      "endpoint": "kling-v4/text-to-video",
+      "name_cn": "可灵文生视频4.0",
+      "name_en": "kling-v4/text-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 1.95
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 1.3
+        }
+      ]
+    },
+    {
       "endpoint": "kling-video-o1-std/edit-video",
       "name_cn": "可灵视频编辑o1",
       "name_en": "kling-video-o1-std/edit-video",
@@ -3025,6 +3717,93 @@
       "price": 0.81
     },
     {
+      "endpoint": "krea-v2-large/text-to-image",
+      "name_cn": "Krea V2 Large Text To Image",
+      "name_en": "krea-v2-large/text-to-image",
+      "currency": "CNY",
+      "unit": "/次起",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.59
+    },
+    {
+      "endpoint": "krea-v2-medium-turbo/text-to-image",
+      "name_cn": "Krea V2 Medium Turbo Text To Image",
+      "name_en": "krea-v2-medium-turbo/text-to-image",
+      "currency": "CNY",
+      "unit": "/次起",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.15
+    },
+    {
+      "endpoint": "krea-v2-medium/text-to-image",
+      "name_cn": "Krea V2 Medium Text To Image",
+      "name_en": "krea-v2-medium/text-to-image",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.3
+    },
+    {
+      "endpoint": "krea-v2/turbo",
+      "name_cn": "Krea V2 Turbo",
+      "name_en": "krea-v2/turbo",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1k"
+          },
+          "price": 0.12
+        },
+        {
+          "when": {
+            "resolution": "2k"
+          },
+          "price": 0.24
+        }
+      ]
+    },
+    {
+      "endpoint": "krea-v2/turbo-lora",
+      "name_cn": "Krea V2 Turbo LoRA",
+      "name_en": "krea-v2/turbo-lora",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1k"
+          },
+          "price": 0.18
+        },
+        {
+          "when": {
+            "resolution": "2k"
+          },
+          "price": 0.3
+        }
+      ]
+    },
+    {
       "endpoint": "luma/uni-1-max/image-edit",
       "name_cn": "Luma uni-1-max 图像编辑",
       "name_en": "Luma uni-1-max Image Edit",
@@ -3304,6 +4083,60 @@
       "price": 5.04
     },
     {
+      "endpoint": "minimax/h3-max-turbo/image-to-video",
+      "name_cn": "MiniMax-H3-Max-Turbo 图生视频（首尾帧）",
+      "name_en": "minimax-h3-max-turbo/image-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "480p"
+          },
+          "price": 0.22
+        },
+        {
+          "when": {
+            "resolution": "768p"
+          },
+          "price": 0.34
+        }
+      ]
+    },
+    {
+      "endpoint": "minimax/h3-max-turbo/text-to-video",
+      "name_cn": "MiniMax-H3-Max-Turbo 文生视频",
+      "name_en": "minimax-h3-max-turbo/text-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "480p"
+          },
+          "price": 0.22
+        },
+        {
+          "when": {
+            "resolution": "768p"
+          },
+          "price": 0.34
+        }
+      ]
+    },
+    {
       "endpoint": "minimax/hailuo-02/fast",
       "name_cn": "海螺-02-fast",
       "name_en": "hailuo-02-fast",
@@ -3559,6 +4392,61 @@
       ]
     },
     {
+      "endpoint": "minimax/hailuo-h3-max/image-to-video",
+      "name_cn": "MiniMax-H3-Max 图生视频（首尾帧）",
+      "name_en": "MiniMax-H3-Max Image-to-Video (first/last frame)",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "minimax/hailuo-h3-max/text-to-video",
+      "name_cn": "MiniMax-H3-Max 文生视频",
+      "name_en": "MiniMax-H3-Max Text-to-Video",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "minimax/hailuo-h3/image-to-video",
+      "name_cn": "MiniMax-H3 图生视频（首尾帧）",
+      "name_en": "MiniMax-H3 Image-to-Video (first/last frame)",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "minimax/hailuo-h3/multimodal-to-video",
+      "name_cn": "MiniMax-H3 多模态参考生视频",
+      "name_en": "MiniMax-H3 Multimodal Reference-to-Video",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "minimax/hailuo-h3/text-to-video",
+      "name_cn": "MiniMax-H3 文生视频",
+      "name_en": "MiniMax-H3 Text-to-Video",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
       "endpoint": "minimax/music-2.6",
       "name_cn": "MiniMax Music 2.6",
       "name_en": "minimax/music-2.6",
@@ -3622,7 +4510,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.014
+      "price": 0.02
     },
     {
       "endpoint": "mureka-ai/files-upload",
@@ -3633,7 +4521,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.0
+      "price": 0.07
     },
     {
       "endpoint": "mureka-ai/generate-lyrics",
@@ -3644,7 +4532,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.06
+      "price": 0.09
     },
     {
       "endpoint": "mureka-ai/mureka-o2/generate-song",
@@ -3663,7 +4551,7 @@
           "when": {
             "n": ""
           },
-          "price": 0.28
+          "price": 0.34
         }
       ]
     },
@@ -3676,7 +4564,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.245
+      "price": 0.26
     },
     {
       "endpoint": "mureka-ai/mureka-v7.6/generate-bgm",
@@ -3695,7 +4583,7 @@
           "when": {
             "n": ""
           },
-          "price": 0.19
+          "price": 0.26
         }
       ]
     },
@@ -3716,7 +4604,7 @@
           "when": {
             "n": ""
           },
-          "price": 0.19
+          "price": 0.26
         }
       ]
     },
@@ -3729,7 +4617,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.63
+      "price": 0.99
     },
     {
       "endpoint": "mureka-ai/mureka-v8/generate-bgm",
@@ -3748,7 +4636,7 @@
           "when": {
             "n": ""
           },
-          "price": 0.28
+          "price": 0.34
         }
       ]
     },
@@ -3769,7 +4657,7 @@
           "when": {
             "n": ""
           },
-          "price": 0.28
+          "price": 0.34
         }
       ]
     },
@@ -3790,7 +4678,7 @@
           "when": {
             "n": ""
           },
-          "price": 0.28
+          "price": 0.34
         }
       ]
     },
@@ -3811,7 +4699,7 @@
           "when": {
             "n": ""
           },
-          "price": 0.28
+          "price": 0.34
         }
       ]
     },
@@ -3824,7 +4712,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.068
+      "price": 0.07
     },
     {
       "endpoint": "mureka-ai/stem-song",
@@ -3843,7 +4731,7 @@
           "when": {
             "model": "audio-separation-1"
           },
-          "price": 0.408
+          "price": 0.41
         },
         {
           "when": {
@@ -3862,7 +4750,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 31.5
+      "price": 30.0
     },
     {
       "endpoint": "pixverse-c1/image-to-video",
@@ -5874,6 +6762,367 @@
       "price": 0.72
     },
     {
+      "endpoint": "rhart-audio/suno-v6-mini/custom",
+      "name_cn": "suno-custom-v6-mini 生成音乐",
+      "name_en": "suno-custom-v6-mini Generate Music",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "maxMode"
+      ],
+      "rules": [
+        {
+          "when": {
+            "maxMode": "true"
+          },
+          "price": 1.08
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6-mini/single",
+      "name_cn": "suno-single-v6-mini 生成音乐",
+      "name_en": "suno-single-v6-mini Generate Music",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.54
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6-wild/custom",
+      "name_cn": "suno-custom-v6-wild 生成音乐",
+      "name_en": "suno-custom-v6-wild Generate Music",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "maxMode"
+      ],
+      "rules": [
+        {
+          "when": {
+            "maxMode": "true"
+          },
+          "price": 1.08
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6-wild/single",
+      "name_cn": "suno-single-v6-wild 生成音乐",
+      "name_en": "suno-single-v6-wild Generate Music",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.54
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6/add-instrumental",
+      "name_cn": "suno-add-instrumental-v6 添加伴奏",
+      "name_en": "suno-add-instrumental-v6 Add Instrumental",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "maxMode"
+      ],
+      "rules": [
+        {
+          "when": {
+            "maxMode": ""
+          },
+          "price": 0.54
+        },
+        {
+          "when": {
+            "maxMode": "true"
+          },
+          "price": 1.08
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6/add-stem",
+      "name_cn": "suno-add-stem-v6 添加音轨",
+      "name_en": "suno-add-stem-v6 Add Stem",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "maxMode"
+      ],
+      "rules": [
+        {
+          "when": {
+            "maxMode": "true"
+          },
+          "price": 1.08
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6/add-vocals",
+      "name_cn": "suno-add-vocals-v6 添加人声",
+      "name_en": "suno-add-vocals-v6 Add Vocals",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "maxMode"
+      ],
+      "rules": [
+        {
+          "when": {
+            "maxMode": "true"
+          },
+          "price": 1.08
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6/cover",
+      "name_cn": "suno-cover-v6 翻唱音乐",
+      "name_en": "suno-cover-v6 Cover",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "maxMode"
+      ],
+      "rules": [
+        {
+          "when": {
+            "maxMode": "true"
+          },
+          "price": 1.08
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6/custom",
+      "name_cn": "suno-custom-v6 生成音乐",
+      "name_en": "suno-custom-v6 Generate Music",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "maxMode"
+      ],
+      "rules": [
+        {
+          "when": {
+            "maxMode": "true"
+          },
+          "price": 1.08
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6/extend",
+      "name_cn": "suno-extend-v6 延长音乐",
+      "name_en": "suno-extend-v6 Extend",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "maxMode"
+      ],
+      "rules": [
+        {
+          "when": {
+            "maxMode": ""
+          },
+          "price": 0.54
+        },
+        {
+          "when": {
+            "maxMode": "true"
+          },
+          "price": 1.08
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6/inspo",
+      "name_cn": "suno-inspo-v6 灵感生成",
+      "name_en": "suno-inspo-v6 Inspiration",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "maxMode"
+      ],
+      "rules": [
+        {
+          "when": {
+            "maxMode": "true"
+          },
+          "price": 1.48
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6/mashup",
+      "name_cn": "suno-mashup-v6 混搭",
+      "name_en": "suno-mashup-v6 Mashup",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "maxMode"
+      ],
+      "rules": [
+        {
+          "when": {
+            "maxMode": "true"
+          },
+          "price": 1.08
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6/replace-section",
+      "name_cn": "suno-replace-section-v6 替换音乐分区",
+      "name_en": "suno-replace-section-v6 Replace Section",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "maxMode"
+      ],
+      "rules": [
+        {
+          "when": {
+            "maxMode": "true"
+          },
+          "price": 1.08
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6/sample",
+      "name_cn": "suno-sample-v6 样本转歌曲",
+      "name_en": "suno-sample-v6 Sample to Song",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "maxMode"
+      ],
+      "rules": [
+        {
+          "when": {
+            "maxMode": "true"
+          },
+          "price": 1.08
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6/single",
+      "name_cn": "suno-single-v6 生成音乐",
+      "name_en": "suno-single-v6 Generate Music",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.54
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6/sounds",
+      "name_cn": "suno-sounds-v6 生成音效",
+      "name_en": "suno-sounds-v6 Sound Effects",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.1
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6/upload",
+      "name_cn": "suno-upload-v6",
+      "name_en": "suno-upload-v6",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.54
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6/upload-cover",
+      "name_cn": "suno-upload-cover-v6 上传翻唱",
+      "name_en": "suno-upload-cover-v6 Upload Cover",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "maxMode"
+      ],
+      "rules": [
+        {
+          "when": {
+            "maxMode": "true"
+          },
+          "price": 1.08
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-audio/suno-v6/upload-extend",
+      "name_cn": "suno-upload-extend-v6 上传并扩展音乐",
+      "name_en": "suno-upload-extend-v6 Upload Extend",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "maxMode"
+      ],
+      "rules": [
+        {
+          "when": {
+            "maxMode": "true"
+          },
+          "price": 1.08
+        }
+      ]
+    },
+    {
       "endpoint": "rhart-audio/suno/lyrics",
       "name_cn": "suno-歌词生成",
       "name_en": "suno-lyrics",
@@ -5882,7 +7131,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.014
+      "price": 0.02
     },
     {
       "endpoint": "rhart-audio/text-to-audio/music-2.5",
@@ -5971,6 +7220,186 @@
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
       "price": 3.12
+    },
+    {
+      "endpoint": "rhart-image-flux3-klein/image-to-image",
+      "name_cn": "FLUX 3 Image Klein 图像编辑",
+      "name_en": "flux-3-image-klein/image-to-image",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1.5k"
+          },
+          "price": 0.07
+        },
+        {
+          "when": {
+            "resolution": "1k"
+          },
+          "price": 0.06
+        },
+        {
+          "when": {
+            "resolution": "2k"
+          },
+          "price": 0.09
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 0.22
+        },
+        {
+          "when": {
+            "resolution": "768sq"
+          },
+          "price": 0.05
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-image-flux3-klein/text-to-image",
+      "name_cn": "FLUX 3 Image Klein 文生图",
+      "name_en": "flux-3-image-klein/text-to-image",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1.5k"
+          },
+          "price": 0.07
+        },
+        {
+          "when": {
+            "resolution": "1k"
+          },
+          "price": 0.06
+        },
+        {
+          "when": {
+            "resolution": "2k"
+          },
+          "price": 0.09
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 0.22
+        },
+        {
+          "when": {
+            "resolution": "768sq"
+          },
+          "price": 0.05
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-image-flux3/image-to-image",
+      "name_cn": "FLUX 3 Image 图像编辑",
+      "name_en": "flux-3-image/image-to-image",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1.5k"
+          },
+          "price": 0.43
+        },
+        {
+          "when": {
+            "resolution": "1k"
+          },
+          "price": 0.29
+        },
+        {
+          "when": {
+            "resolution": "2k"
+          },
+          "price": 0.61
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 3.71
+        },
+        {
+          "when": {
+            "resolution": "768sq"
+          },
+          "price": 0.25
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-image-flux3/text-to-image",
+      "name_cn": "FLUX 3 Image 文生图",
+      "name_en": "flux-3-image/text-to-image",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1.5k"
+          },
+          "price": 0.43
+        },
+        {
+          "when": {
+            "resolution": "1k"
+          },
+          "price": 0.29
+        },
+        {
+          "when": {
+            "resolution": "2k"
+          },
+          "price": 0.61
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 3.71
+        },
+        {
+          "when": {
+            "resolution": "768sq"
+          },
+          "price": 0.25
+        }
+      ]
     },
     {
       "endpoint": "rhart-image-g-1.5-official/image-to-image",
@@ -6332,6 +7761,94 @@
       ]
     },
     {
+      "endpoint": "rhart-image-g-2.5-official-token/flare/edit",
+      "name_cn": "gpt-image-2.5/flare/image-to-image/stable-token",
+      "name_en": "gpt-image-2.5/flare/image-to-image/stable-token",
+      "currency": "CNY",
+      "unit": "/百万图片输出Token",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 210.0
+    },
+    {
+      "endpoint": "rhart-image-g-2.5-official-token/flare/text-to-image",
+      "name_cn": "gpt-image-2.5/flare/text-to-image/stable-token",
+      "name_en": "gpt-image-2.5/flare/text-to-image/stable-token",
+      "currency": "CNY",
+      "unit": "/百万图片输出Token",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 210.0
+    },
+    {
+      "endpoint": "rhart-image-g-2.5-official-token/sunburst/edit",
+      "name_cn": "gpt-image-2.5/sunburst/image-to-image/stable-token",
+      "name_en": "gpt-image-2.5/sunburst/image-to-image/stable-token",
+      "currency": "CNY",
+      "unit": "/百万图片输出Token",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 210.0
+    },
+    {
+      "endpoint": "rhart-image-g-2.5-official-token/sunburst/text-to-image",
+      "name_cn": "gpt-image-2.5/sunburst/text-to-image/stable-token",
+      "name_en": "gpt-image-2.5/sunburst/text-to-image/stable-token",
+      "currency": "CNY",
+      "unit": "/百万图片输出Token",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 210.0
+    },
+    {
+      "endpoint": "rhart-image-g-2.5/flare/image-to-image",
+      "name_cn": "gpt-image-2.5/flare/image-to-image/economy",
+      "name_en": "gpt-image-2.5/flare/image-to-image/economy",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.34
+    },
+    {
+      "endpoint": "rhart-image-g-2.5/flare/text-to-image",
+      "name_cn": "gpt-image-2.5/flare/text-to-image/economy",
+      "name_en": "gpt-image-2.5/flare/text-to-image/economy",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.34
+    },
+    {
+      "endpoint": "rhart-image-g-2.5/sunburst/image-to-image",
+      "name_cn": "gpt-image-2.5/sunburst/image-to-image/economy",
+      "name_en": "gpt-image-2.5/sunburst/image-to-image/economy",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.34
+    },
+    {
+      "endpoint": "rhart-image-g-2.5/sunburst/text-to-image",
+      "name_cn": "gpt-image-2.5/sunburst/text-to-image/economy",
+      "name_en": "gpt-image-2.5/sunburst/text-to-image/economy",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.34
+    },
+    {
       "endpoint": "rhart-image-g-2/image-to-image",
       "name_cn": "全能图片G-2.0-图生图-低价渠道版",
       "name_en": "gpt-image-2.0/edit-channel-low-price",
@@ -6410,8 +7927,8 @@
     },
     {
       "endpoint": "rhart-image-g/text-to-image",
-      "name_cn": "全能图片X-文生图-低价渠道版",
-      "name_en": "grok-image/text-to-image/channel-low-price",
+      "name_cn": "grok-imagine-image/text-to-image/economy",
+      "name_en": "grok-imagine-image/text-to-image/economy",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
@@ -6592,6 +8109,138 @@
             "resolution": "4k"
           },
           "price": 0.3
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-image-n-nb21-official/image-to-image",
+      "name_cn": "nano-banana-2.1/image-to-image-official-stable",
+      "name_en": "nano-banana-2.1/image-to-image-official-stable",
+      "currency": "CNY",
+      "unit": "/张",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1k"
+          },
+          "price": 0.2
+        },
+        {
+          "when": {
+            "resolution": "2k"
+          },
+          "price": 0.29
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 0.66
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-image-n-nb21-official/text-to-image",
+      "name_cn": "nano-banana-2.1/text-to-image-offcial-stable",
+      "name_en": "nano-banana-2.1/text-to-image-official-stable",
+      "currency": "CNY",
+      "unit": "/张",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1k"
+          },
+          "price": 0.2
+        },
+        {
+          "when": {
+            "resolution": "2k"
+          },
+          "price": 0.29
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 0.66
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-image-n-nb21/image-to-image",
+      "name_cn": "nano-banana-2.1/image-to-image/economy",
+      "name_en": "nano-banana-2.1/image-to-image/economy",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1k"
+          },
+          "price": 0.2
+        },
+        {
+          "when": {
+            "resolution": "2k"
+          },
+          "price": 0.2
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 0.33
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-image-n-nb21/text-to-image",
+      "name_cn": "nano-banana-2.1/text-to-image/economy",
+      "name_en": "nano-banana-2.1/text-to-image/economy",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1k"
+          },
+          "price": 0.2
+        },
+        {
+          "when": {
+            "resolution": "2k"
+          },
+          "price": 0.2
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 0.33
         }
       ]
     },
@@ -6870,6 +8519,27 @@
       "price": 0.03
     },
     {
+      "endpoint": "rhart-imagine-image-2.0/text-to-image",
+      "name_cn": "xai/grok-imagine-2.0/text-to-image/economy",
+      "name_en": "xai/grok-imagine-2.0/text-to-image/economy",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "numImages"
+      ],
+      "rules": [
+        {
+          "when": {
+            "numImages": ""
+          },
+          "price": 0.15
+        }
+      ]
+    },
+    {
       "endpoint": "rhart-imagine-image-quality/edit",
       "name_cn": "全能图片X-高质量图片编辑-官方稳定版",
       "name_en": "xai/rhart-imagine-image-quality/edit-official-stable",
@@ -7113,6 +8783,50 @@
       "price": 0.1
     },
     {
+      "endpoint": "rhart-video-flux3/draft-enhance",
+      "name_cn": "FLUX 3 Video 草稿增强",
+      "name_en": "flux-3-video/draft-enhance",
+      "currency": "CNY",
+      "unit": "/输出视频秒（向上取整）",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 2.03
+    },
+    {
+      "endpoint": "rhart-video-flux3/image-to-video",
+      "name_cn": "FLUX 3 Video 图生视频",
+      "name_en": "flux-3-video/image-to-video",
+      "currency": "CNY",
+      "unit": "/输出视频秒（向上取整）",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "rhart-video-flux3/text-to-video",
+      "name_cn": "FLUX 3 Video 文生视频",
+      "name_en": "flux-3-video/text-to-video",
+      "currency": "CNY",
+      "unit": "/输出视频秒（向上取整）",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "rhart-video-flux3/video-to-video",
+      "name_cn": "FLUX 3 Video 视频续生",
+      "name_en": "flux-3-video/video-continuation",
+      "currency": "CNY",
+      "unit": "/输出视频秒（向上取整）",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
       "endpoint": "rhart-video-g-official/edit-video",
       "name_cn": "全能视频X-编辑视频-官方稳定版",
       "name_en": "xai/grok-imagine/edit-video-official-stable",
@@ -7205,6 +8919,33 @@
       ]
     },
     {
+      "endpoint": "rhart-video-g-official/reference-to-video-v1.5",
+      "name_cn": "全能视频X-参考生视频-官方稳定版-v1.5",
+      "name_en": "xai/grok-imagine-video-v1.5/reference-to-video-official-stable",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "480p"
+          },
+          "price": 0.56
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.98
+        }
+      ]
+    },
+    {
       "endpoint": "rhart-video-g-official/text-to-video",
       "name_cn": "全能视频X-文生视频-官方稳定版",
       "name_en": "xai/grok-imagine/text-to-video-official-stable",
@@ -7228,6 +8969,39 @@
             "duration": "6"
           },
           "price": 1.89
+        }
+      ]
+    },
+    {
+      "endpoint": "rhart-video-g-official/text-to-video-v1.5",
+      "name_cn": "全能视频X-文生视频-官方稳定版-v1.5",
+      "name_en": "xai / grok-imagine-video-v1.5 / text-to-video-official-stable",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 1.75
+        },
+        {
+          "when": {
+            "resolution": "480p"
+          },
+          "price": 0.56
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.98
         }
       ]
     },
@@ -7267,7 +9041,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.04
+      "price": 0.21
     },
     {
       "endpoint": "rhart-video-g/text-to-video",
@@ -7278,7 +9052,7 @@
       "source": "derived_from_public_safe_pricing_summary",
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
-      "price": 0.04
+      "price": 0.21
     },
     {
       "endpoint": "rhart-video-r/gen4-aleph-official/video-to-video",
@@ -9112,6 +10886,28 @@
       "price": 0.2
     },
     {
+      "endpoint": "seedream-v4.7/image-to-image",
+      "name_cn": "seedream-v4.7-图生图",
+      "name_en": "seedream-v4.7/image-to-image",
+      "currency": "CNY",
+      "unit": "/张",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.15
+    },
+    {
+      "endpoint": "seedream-v4.7/text-to-image",
+      "name_cn": "seedream-v4.7-文生图",
+      "name_en": "seedream-v4.7/text-to-image",
+      "currency": "CNY",
+      "unit": "/张",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.15
+    },
+    {
       "endpoint": "seedream-v4/image-to-image",
       "name_cn": "seedream-v4-图生图",
       "name_en": "seedream-v4/image-to-image",
@@ -9132,6 +10928,39 @@
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
       "price": 0.14
+    },
+    {
+      "endpoint": "seedream-v5-flash/image-to-image",
+      "name_cn": "seedream-v5-flash-图生图",
+      "name_en": "seedream-v5-flash/image-to-image",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "seedream-v5-flash/layer-decomposition",
+      "name_cn": "seedream-v5-flash-图层拆分",
+      "name_en": "seedream-v5-flash/layer-decomposition",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "seedream-v5-flash/text-to-image",
+      "name_cn": "seedream-v5-flash-文生图",
+      "name_en": "seedream-v5-flash/text-to-image",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
     },
     {
       "endpoint": "seedream-v5-lite/image-to-image",
@@ -9159,6 +10988,17 @@
       "endpoint": "seedream-v5-pro/image-to-image",
       "name_cn": "seedream-v5-pro-图生图",
       "name_en": "seedream-v5-pro/image-to-image",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "seedream-v5-pro/layer-decomposition",
+      "name_cn": "seedream-v5-pro-图层拆分",
+      "name_en": "seedream-v5-pro/layer-decomposition",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
@@ -10308,6 +12148,96 @@
             "resolution": "720p"
           },
           "price": 0.27
+        }
+      ]
+    },
+    {
+      "endpoint": "vidu/q4-preview/image-to-video",
+      "name_cn": "Vidu Q4 Preview 图生视频",
+      "name_en": "vidu/q4-preview/image-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 0.68
+        },
+        {
+          "when": {
+            "resolution": "2k"
+          },
+          "price": 1.07
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 2.2
+        },
+        {
+          "when": {
+            "resolution": "540p"
+          },
+          "price": 0.15
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.54
+        }
+      ]
+    },
+    {
+      "endpoint": "vidu/q4-preview/reference-to-video",
+      "name_cn": "Vidu Q4 Preview 参考生视频",
+      "name_en": "vidu/q4-preview/reference-to-video",
+      "currency": "CNY",
+      "unit": "/秒",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "parameter_based",
+      "depends_on": [
+        "resolution"
+      ],
+      "rules": [
+        {
+          "when": {
+            "resolution": "1080p"
+          },
+          "price": 0.68
+        },
+        {
+          "when": {
+            "resolution": "2k"
+          },
+          "price": 1.07
+        },
+        {
+          "when": {
+            "resolution": "4k"
+          },
+          "price": 2.2
+        },
+        {
+          "when": {
+            "resolution": "540p"
+          },
+          "price": 0.15
+        },
+        {
+          "when": {
+            "resolution": "720p"
+          },
+          "price": 0.54
         }
       ]
     },
@@ -11786,6 +13716,17 @@
       ]
     },
     {
+      "endpoint": "volc-analyze-video-storyline",
+      "name_cn": "火山剧情故事线分析",
+      "name_en": "volc-analyze-video-storyline",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "fixed",
+      "price": 0.01
+    },
+    {
       "endpoint": "volc-drama/video-translate",
       "name_cn": "火山短剧-视频翻译",
       "name_en": "volc-drama/video-translate",
@@ -11795,6 +13736,39 @@
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
       "price": 0.0
+    },
+    {
+      "endpoint": "volc-enhance-fast/video",
+      "name_cn": "火山画质增强-极速版",
+      "name_en": "volc-enhance-fast/video",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "volc-enhance-generative/video",
+      "name_cn": "火山画质增强-大模型版",
+      "name_en": "volc-enhance-generative/video",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "volc-enhance/video",
+      "name_cn": "火山画质增强-标准专业版",
+      "name_en": "volc-enhance/video",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-04-29",
+      "pricing_type": "unparsed",
+      "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
     },
     {
       "endpoint": "volc-subtitle-erase-pro/video",

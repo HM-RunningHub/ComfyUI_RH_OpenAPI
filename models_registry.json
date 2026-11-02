@@ -14563,9 +14563,9 @@
   },
   {
     "class_name": "RhartImageGTextToImage",
-    "display_name": "RH 全能图片X-文生图-低价渠道版",
-    "name_cn": "全能图片X-文生图-低价渠道版",
-    "name_en": "grok-image/text-to-image/channel-low-price",
+    "display_name": "RH grok-imagine-image/text-to-image/economy",
+    "name_cn": "grok-imagine-image/text-to-image/economy",
+    "name_en": "grok-imagine-image/text-to-image/economy",
     "endpoint": "rhart-image-g/text-to-image",
     "output_type": "image",
     "category": "RunningHub/RHArt Image",
@@ -44557,6 +44557,24 @@
         "min": 0,
         "max": 2147483647,
         "step": 1
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启 prompt 智能改写。开启后使用大模型对输入 prompt 进行智能改写。对于较短的 prompt 生成效果提升明显，但会增加耗时。true：默认值，开启智能改写。false：不开启智能改写。传入 fileUrl 或 linkUrl 时必须为 true。",
+        "defaultValue": true,
+        "tail_insert": true
+      },
+      {
+        "fieldKey": "watermark",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "watermark",
+        "description": "是否添加水印标识。false：默认值，不添加水印。true：添加水印。",
+        "defaultValue": false,
+        "tail_insert": true
       }
     ]
   },
@@ -44583,7 +44601,7 @@
         "type": "VIDEO",
         "required": false,
         "label": "videoUrls",
-        "description": "全能参考视频，最多 5 段，单段 1-15 秒且总时长 ≤15 秒。输入视频按 min(总时长, 5) 秒计费。",
+        "description": "全能参考视频，最多 5 段，单段 1-15 秒且总时长 ≤15 秒。输入视频按 min(总时长, 15) 秒计费。",
         "multipleInputs": true,
         "maxInputNum": 5,
         "accept": "[\"MP4\",\"MOV\"]",
@@ -44869,6 +44887,24 @@
         "min": 0,
         "max": 2147483647,
         "step": 1
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启 prompt 智能改写。开启后使用大模型对输入 prompt 进行智能改写。对于较短的 prompt 生成效果提升明显，但会增加耗时。true：默认值，开启智能改写。false：不开启智能改写。传入 fileUrl 或 linkUrl 时必须为 true。",
+        "defaultValue": true,
+        "tail_insert": true
+      },
+      {
+        "fieldKey": "watermark",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "watermark",
+        "description": "是否添加水印标识。false：默认值，不添加水印。true：添加水印。",
+        "defaultValue": false,
+        "tail_insert": true
       }
     ]
   },
@@ -45150,6 +45186,24 @@
         "min": 0,
         "max": 2147483647,
         "step": 1
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启 prompt 智能改写。开启后使用大模型对输入 prompt 进行智能改写。对于较短的 prompt 生成效果提升明显，但会增加耗时。true：默认值，开启智能改写。false：不开启智能改写。传入 fileUrl 或 linkUrl 时必须为 true。",
+        "defaultValue": true,
+        "tail_insert": true
+      },
+      {
+        "fieldKey": "watermark",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "watermark",
+        "description": "是否添加水印标识。false：默认值，不添加水印。true：添加水印。",
+        "defaultValue": false,
+        "tail_insert": true
       }
     ]
   },
@@ -45176,7 +45230,7 @@
         "type": "VIDEO",
         "required": false,
         "label": "videoUrls",
-        "description": "全能参考视频，最多 5 段，单段 1-15 秒且总时长 ≤15 秒。输入视频按 min(总时长, 5) 秒计费。",
+        "description": "全能参考视频，最多 5 段，单段 1-15 秒且总时长 ≤15 秒。输入视频按 min(总时长, 15) 秒计费。",
         "multipleInputs": true,
         "maxInputNum": 5,
         "accept": "[\"MP4\",\"MOV\"]",
@@ -45462,6 +45516,24 @@
         "min": 0,
         "max": 2147483647,
         "step": 1
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启 prompt 智能改写。开启后使用大模型对输入 prompt 进行智能改写。对于较短的 prompt 生成效果提升明显，但会增加耗时。true：默认值，开启智能改写。false：不开启智能改写。传入 fileUrl 或 linkUrl 时必须为 true。",
+        "defaultValue": true,
+        "tail_insert": true
+      },
+      {
+        "fieldKey": "watermark",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "watermark",
+        "description": "是否添加水印标识。false：默认值，不添加水印。true：添加水印。",
+        "defaultValue": false,
+        "tail_insert": true
       }
     ]
   },
@@ -54458,6 +54530,24 @@
         "min": 0,
         "max": 2147483647,
         "step": 1
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启 prompt 智能改写。开启后使用大模型对输入 prompt 进行智能改写。对于较短的 prompt 生成效果提升明显，但会增加耗时。true：默认值，开启智能改写。false：不开启智能改写。传入 fileUrl 或 linkUrl 时必须为 true。",
+        "defaultValue": true,
+        "tail_insert": true
+      },
+      {
+        "fieldKey": "watermark",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "watermark",
+        "description": "是否添加水印标识。false：默认值，不添加水印。true：添加水印。",
+        "defaultValue": false,
+        "tail_insert": true
       }
     ]
   },
@@ -54721,6 +54811,24 @@
         "min": 0,
         "max": 2147483647,
         "step": 1
+      },
+      {
+        "fieldKey": "promptExtend",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "promptExtend",
+        "description": "是否开启 prompt 智能改写。开启后使用大模型对输入 prompt 进行智能改写。对于较短的 prompt 生成效果提升明显，但会增加耗时。true：默认值，开启智能改写。false：不开启智能改写。传入 fileUrl 或 linkUrl 时必须为 true。",
+        "defaultValue": true,
+        "tail_insert": true
+      },
+      {
+        "fieldKey": "watermark",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "watermark",
+        "description": "是否添加水印标识。false：默认值，不添加水印。true：添加水印。",
+        "defaultValue": false,
+        "tail_insert": true
       }
     ]
   },
@@ -54985,6 +55093,2724 @@
             "descriptionEn": "png"
           }
         ]
+      }
+    ]
+  },
+  {
+    "class_name": "KlingV4TextToVideo",
+    "display_name": "RH 可灵文生视频4.0",
+    "name_cn": "可灵文生视频4.0",
+    "name_en": "kling-v4/text-to-video",
+    "endpoint": "kling-v4/text-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词，可包含正向与负向描述。纯英文 ≤ 26000 字符；纯非英文 ≤ 11000 字符；中英混合时需满足 英文字符数 ÷ 26000 + 非英文字符数 ÷ 11000 ≤ 1",
+        "defaultValue": "视觉： 赛博朋克风的雨夜街道，霓虹灯招牌在积水的地面形成流动的倒影。特写镜头对准一名身披半透明雨衣的男子。 动作： 雨滴撞击雨衣并滑落，男子缓缓抬头，瞳孔中清晰倒映出街对面的霓虹灯光。他张口说话，面部肌肉牵动，呼吸产生淡淡的白雾。 对话（配音 1）： “这座城市从不睡觉，那些阴影里的秘密也一样。” 音效（同步生成）： 淅沥的雨声，远处的车辆鸣笛声，雨滴击打塑料雨衣的清脆声，以及低沉的人声对白。 ",
+        "maxLength": 26000
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          },
+          {
+            "value": "16",
+            "description": "16",
+            "descriptionEn": "16"
+          },
+          {
+            "value": "17",
+            "description": "17",
+            "descriptionEn": "17"
+          },
+          {
+            "value": "18",
+            "description": "18",
+            "descriptionEn": "18"
+          },
+          {
+            "value": "19",
+            "description": "19",
+            "descriptionEn": "19"
+          },
+          {
+            "value": "20",
+            "description": "20",
+            "descriptionEn": "20"
+          },
+          {
+            "value": "21",
+            "description": "21",
+            "descriptionEn": "21"
+          },
+          {
+            "value": "22",
+            "description": "22",
+            "descriptionEn": "22"
+          },
+          {
+            "value": "23",
+            "description": "23",
+            "descriptionEn": "23"
+          },
+          {
+            "value": "24",
+            "description": "24",
+            "descriptionEn": "24"
+          },
+          {
+            "value": "25",
+            "description": "25",
+            "descriptionEn": "25"
+          },
+          {
+            "value": "26",
+            "description": "26",
+            "descriptionEn": "26"
+          },
+          {
+            "value": "27",
+            "description": "27",
+            "descriptionEn": "27"
+          },
+          {
+            "value": "28",
+            "description": "28",
+            "descriptionEn": "28"
+          },
+          {
+            "value": "29",
+            "description": "29",
+            "descriptionEn": "29"
+          },
+          {
+            "value": "30",
+            "description": "30",
+            "descriptionEn": "30"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": true,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "16:9",
+        "options": [
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "watermark",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "水印",
+        "description": "是否在成片上添加水印，默认关闭",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "KlingV4ImageToVideo",
+    "display_name": "RH 可灵图生视频4.0",
+    "name_cn": "可灵图生视频4.0",
+    "name_en": "kling-v4/image-to-video",
+    "endpoint": "kling-v4/image-to-video",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词，可包含正向与负向描述。纯英文 ≤ 26000 字符；纯非英文 ≤ 11000 字符；中英混合时需满足 英文字符数 ÷ 26000 + 非英文字符数 ÷ 11000 ≤ 1",
+        "defaultValue": "欧洲别墅户外露台场景，铺着蓝白格纹桌布的餐桌旁，年轻白人女性穿蓝白条纹短袖衬衫、卡其色短裤，系棕色腰带，赤脚坐着，对面是穿白色 T 恤的年轻白人男性，镜头推进，女性晃着玻璃杯里的果汁，目光望向远处的树林，说“These trees will turn yellow in a month, won't they?”，镜头特写男性低着头说，“but they'll be green again next summer.”，然后女性转头，笑着看向对面的男性，说，“Are you always this optimistic? Or just about summer?”，然后男性抬起头，看着女生说，“Only about summers with you。”",
+        "maxLength": 26000
+      },
+      {
+        "fieldKey": "firstImageUrl",
+        "type": "IMAGE",
+        "required": true,
+        "label": "firstImageUrl",
+        "description": "支持「仅首帧」和「首帧 + 尾帧」，不支持仅尾帧；即首帧 1 张，尾帧可选 1 张",
+        "accept": "[\"JPG\",\"PNG\",\"JPEG\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "lastImageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "lastImageUrl",
+        "description": "lastImageUrl",
+        "accept": "[\"JPG\",\"PNG\",\"JPEG\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          },
+          {
+            "value": "16",
+            "description": "16",
+            "descriptionEn": "16"
+          },
+          {
+            "value": "17",
+            "description": "17",
+            "descriptionEn": "17"
+          },
+          {
+            "value": "18",
+            "description": "18",
+            "descriptionEn": "18"
+          },
+          {
+            "value": "19",
+            "description": "19",
+            "descriptionEn": "19"
+          },
+          {
+            "value": "20",
+            "description": "20",
+            "descriptionEn": "20"
+          },
+          {
+            "value": "21",
+            "description": "21",
+            "descriptionEn": "21"
+          },
+          {
+            "value": "22",
+            "description": "22",
+            "descriptionEn": "22"
+          },
+          {
+            "value": "23",
+            "description": "23",
+            "descriptionEn": "23"
+          },
+          {
+            "value": "24",
+            "description": "24",
+            "descriptionEn": "24"
+          },
+          {
+            "value": "25",
+            "description": "25",
+            "descriptionEn": "25"
+          },
+          {
+            "value": "26",
+            "description": "26",
+            "descriptionEn": "26"
+          },
+          {
+            "value": "27",
+            "description": "27",
+            "descriptionEn": "27"
+          },
+          {
+            "value": "28",
+            "description": "28",
+            "descriptionEn": "28"
+          },
+          {
+            "value": "29",
+            "description": "29",
+            "descriptionEn": "29"
+          },
+          {
+            "value": "30",
+            "description": "30",
+            "descriptionEn": "30"
+          }
+        ]
+      },
+      {
+        "fieldKey": "watermark",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "水印",
+        "description": "是否在成片上添加水印，默认关闭",
+        "defaultValue": false
+      }
+    ]
+  },
+  {
+    "class_name": "KlingV4OmniVideo",
+    "display_name": "RH 可灵全能视频4.0",
+    "name_cn": "可灵全能视频4.0",
+    "name_en": "kling-v4/omni-video",
+    "endpoint": "kling-v4/omni-video",
+    "output_type": "video",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "文本提示词，可包含正向与负向描述。纯英文 ≤ 26000 字符；纯非英文 ≤ 11000 字符；中英混合时需满足 英文字符数 ÷ 26000 + 非英文字符数 ÷ 11000 ≤ 1",
+        "defaultValue": "在暴雨中的赛博朋克小巷，[参考图] 中的流浪武士根据 [参考视频] 的动作轨迹，迅速拔出背后的长刀并完成一个华丽的转身。雨水击打在他那带有独特刻痕的机械左臂上，产生细腻的溅射效果。光影随着他的旋转在机械表面产生真实的反射偏移。全程保持武士的面部特征与机械臂的复杂结构高度一致。",
+        "maxLength": 26000
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrls",
+        "description": "图片总数不超过 10 张",
+        "multipleInputs": true,
+        "maxInputNum": 10,
+        "accept": "[\"JPG\",\"PNG\",\"JPEG\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "videoUrl",
+        "type": "VIDEO",
+        "required": false,
+        "label": "videoUrl",
+        "description": "参考视频，最多 5 段。只支持公网 URL。",
+        "multipleInputs": true,
+        "maxInputNum": 5,
+        "accept": "[\"MP4\",\"MOV\"]",
+        "maxSize": 300
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1080p",
+        "options": [
+          {
+            "value": "720p",
+            "description": "720p",
+            "descriptionEn": "720p"
+          },
+          {
+            "value": "1080p",
+            "description": "1080p",
+            "descriptionEn": "1080p"
+          }
+        ]
+      },
+      {
+        "fieldKey": "duration",
+        "type": "LIST",
+        "required": true,
+        "label": "duration",
+        "description": "duration",
+        "defaultValue": "5",
+        "options": [
+          {
+            "value": "3",
+            "description": "3",
+            "descriptionEn": "3"
+          },
+          {
+            "value": "4",
+            "description": "4",
+            "descriptionEn": "4"
+          },
+          {
+            "value": "5",
+            "description": "5",
+            "descriptionEn": "5"
+          },
+          {
+            "value": "6",
+            "description": "6",
+            "descriptionEn": "6"
+          },
+          {
+            "value": "7",
+            "description": "7",
+            "descriptionEn": "7"
+          },
+          {
+            "value": "8",
+            "description": "8",
+            "descriptionEn": "8"
+          },
+          {
+            "value": "9",
+            "description": "9",
+            "descriptionEn": "9"
+          },
+          {
+            "value": "10",
+            "description": "10",
+            "descriptionEn": "10"
+          },
+          {
+            "value": "11",
+            "description": "11",
+            "descriptionEn": "11"
+          },
+          {
+            "value": "12",
+            "description": "12",
+            "descriptionEn": "12"
+          },
+          {
+            "value": "13",
+            "description": "13",
+            "descriptionEn": "13"
+          },
+          {
+            "value": "14",
+            "description": "14",
+            "descriptionEn": "14"
+          },
+          {
+            "value": "15",
+            "description": "15",
+            "descriptionEn": "15"
+          },
+          {
+            "value": "16",
+            "description": "16",
+            "descriptionEn": "16"
+          },
+          {
+            "value": "17",
+            "description": "17",
+            "descriptionEn": "17"
+          },
+          {
+            "value": "18",
+            "description": "18",
+            "descriptionEn": "18"
+          },
+          {
+            "value": "19",
+            "description": "19",
+            "descriptionEn": "19"
+          },
+          {
+            "value": "20",
+            "description": "20",
+            "descriptionEn": "20"
+          },
+          {
+            "value": "21",
+            "description": "21",
+            "descriptionEn": "21"
+          },
+          {
+            "value": "22",
+            "description": "22",
+            "descriptionEn": "22"
+          },
+          {
+            "value": "23",
+            "description": "23",
+            "descriptionEn": "23"
+          },
+          {
+            "value": "24",
+            "description": "24",
+            "descriptionEn": "24"
+          },
+          {
+            "value": "25",
+            "description": "25",
+            "descriptionEn": "25"
+          },
+          {
+            "value": "26",
+            "description": "26",
+            "descriptionEn": "26"
+          },
+          {
+            "value": "27",
+            "description": "27",
+            "descriptionEn": "27"
+          },
+          {
+            "value": "28",
+            "description": "28",
+            "descriptionEn": "28"
+          },
+          {
+            "value": "29",
+            "description": "29",
+            "descriptionEn": "29"
+          },
+          {
+            "value": "30",
+            "description": "30",
+            "descriptionEn": "30"
+          }
+        ],
+        "min": 3,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "adaptive",
+        "options": [
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "adaptive",
+            "description": "自适应",
+            "descriptionEn": "adaptive"
+          }
+        ]
+      },
+      {
+        "fieldKey": "watermark",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "水印",
+        "description": "是否在成片上添加水印，默认关闭",
+        "defaultValue": false
+      },
+      {
+        "fieldKey": "elementIds",
+        "type": "STRING",
+        "required": false,
+        "label": "elementIds",
+        "description": "主体 ID，最多 7 个。按传入顺序在提示词里用 @element_1、@element_2 引用。视频角色主体不超过 3 个；有视频角色主体时，这些主体加参考视频不超过 5 个。",
+        "multipleInputs": true,
+        "maxInputNum": 7
+      },
+      {
+        "fieldKey": "voiceIds",
+        "type": "STRING",
+        "required": false,
+        "label": "voiceIds",
+        "description": "音色 ID，最多 3 个。按传入顺序编号为 1、2、3，在提示词里用 @1、@2、@3 引用。",
+        "multipleInputs": true,
+        "maxInputNum": 3
+      }
+    ]
+  },
+  {
+    "class_name": "KlingV4CustomElement",
+    "display_name": "RH 可灵 4.0 主体创建",
+    "name_cn": "可灵 4.0 主体创建",
+    "name_en": "kling-v4/custom-element",
+    "endpoint": "kling-v4/custom-element",
+    "output_type": "string",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "elementName",
+        "type": "STRING",
+        "required": true,
+        "label": "elementName",
+        "description": "主体名称，不能超过 20 个字符",
+        "maxLength": 20
+      },
+      {
+        "fieldKey": "elementDescription",
+        "type": "STRING",
+        "required": true,
+        "label": "elementDescription",
+        "description": "主体描述，不能超过 100 个字符",
+        "maxLength": 100
+      },
+      {
+        "fieldKey": "referenceType",
+        "type": "LIST",
+        "required": true,
+        "label": "referenceType",
+        "description": "image_refer 用多张参考图；video_refer 用一段参考视频",
+        "defaultValue": "image_refer",
+        "options": [
+          {
+            "value": "image_refer",
+            "description": "多图主体",
+            "descriptionEn": "Image element"
+          },
+          {
+            "value": "video_refer",
+            "description": "视频主体",
+            "descriptionEn": "Video element"
+          }
+        ]
+      },
+      {
+        "fieldKey": "elementVideoList",
+        "type": "VIDEO",
+        "required": false,
+        "label": "elementVideoList",
+        "description": "视频主体必填，只传 1 段。mp4/mov，3 到 8 秒，1080p，16:9 或 9:16，不超过 200MB。",
+        "accept": "[\"MP4\",\"MOV\"]",
+        "maxSize": 200
+      },
+      {
+        "fieldKey": "elementVoiceId",
+        "type": "STRING",
+        "required": false,
+        "label": "elementVoiceId",
+        "description": "绑定已有音色 ID。不填则不绑定音色。"
+      },
+      {
+        "fieldKey": "tagList",
+        "type": "LIST",
+        "required": false,
+        "label": "tagList",
+        "description": "标签，可多选",
+        "options": [
+          {
+            "value": "o_101",
+            "description": "热梗",
+            "descriptionEn": "Meme"
+          },
+          {
+            "value": "o_102",
+            "description": "人物",
+            "descriptionEn": "Person"
+          },
+          {
+            "value": "o_103",
+            "description": "动物",
+            "descriptionEn": "Animal"
+          },
+          {
+            "value": "o_104",
+            "description": "道具",
+            "descriptionEn": "Prop"
+          },
+          {
+            "value": "o_105",
+            "description": "服饰",
+            "descriptionEn": "Costume"
+          },
+          {
+            "value": "o_106",
+            "description": "场景",
+            "descriptionEn": "Scene"
+          },
+          {
+            "value": "o_107",
+            "description": "特效",
+            "descriptionEn": "Effect"
+          },
+          {
+            "value": "o_108",
+            "description": "其他",
+            "descriptionEn": "Other"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "KlingV4CustomVoice",
+    "display_name": "RH 可灵 4.0 音色创建",
+    "name_cn": "可灵 4.0 音色创建",
+    "name_en": "kling-v4/custom-voice",
+    "endpoint": "kling-v4/custom-voice",
+    "output_type": "audio",
+    "category": "RunningHub/Kling",
+    "params": [
+      {
+        "fieldKey": "voiceName",
+        "type": "STRING",
+        "required": true,
+        "label": "voiceName",
+        "description": "音色名称"
+      },
+      {
+        "fieldKey": "voiceUrl",
+        "type": "AUDIO",
+        "required": true,
+        "label": "voiceUrl",
+        "description": "参考音频公网地址。和 videoId 二选一。",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "videoId",
+        "type": "STRING",
+        "required": false,
+        "label": "videoId",
+        "description": "已生成视频的 ID，用其中的声音建音色。和 voiceUrl 二选一。"
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageNNb21OfficialTextToImage",
+    "display_name": "RH nano-banana-2.1/text-to-image-offcial-stable",
+    "name_cn": "nano-banana-2.1/text-to-image-offcial-stable",
+    "name_en": "nano-banana-2.1/text-to-image-official-stable",
+    "endpoint": "rhart-image-n-nb21-official/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "一张 21:9 的电影级特写镜头。画面中心是一个复古的霓虹灯牌，上面用清晰的英文字体写着 \"全能图片 V2.1\"。灯牌背景是雨后的赛博朋克街道，地面有极度真实的积水倒影。五个不同风格的角色（如：戴墨镜的侦探、机械少女等）正围在灯牌旁讨论，光影呈现出细腻的变形镜头（Anamorphic）晕光效果，画质要求 4K 极精细。",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "1:1",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "1:4",
+            "description": "1:4",
+            "descriptionEn": "1:4"
+          },
+          {
+            "value": "4:1",
+            "description": "4:1",
+            "descriptionEn": "4:1"
+          },
+          {
+            "value": "1:8",
+            "description": "1:8",
+            "descriptionEn": "1:8"
+          },
+          {
+            "value": "8:1",
+            "description": "8:1",
+            "descriptionEn": "8:1"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "thinkingLevel",
+        "type": "LIST",
+        "required": false,
+        "label": "thinkingLevel",
+        "description": "thinkingLevel",
+        "defaultValue": "medium",
+        "options": [
+          {
+            "value": "minimal",
+            "description": "minimal",
+            "descriptionEn": "minimal"
+          },
+          {
+            "value": "medium",
+            "description": "medium",
+            "descriptionEn": "medium"
+          },
+          {
+            "value": "high",
+            "description": "high",
+            "descriptionEn": "high"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageNNb21OfficialImageToImage",
+    "display_name": "RH nano-banana-2.1/image-to-image-official-stable",
+    "name_cn": "nano-banana-2.1/image-to-image-official-stable",
+    "name_en": "nano-banana-2.1/image-to-image-official-stable",
+    "endpoint": "rhart-image-n-nb21-official/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "imageUrls",
+        "multipleInputs": true,
+        "maxInputNum": 14,
+        "accept": "[\"JPG\",\"PNG\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "prompt",
+        "defaultValue": "操作指令： 参考我上传的这张人物线稿图。必须百分之百忠实于原线稿的线条结构，不得有任何线条的增加或减少。 上色要求： 将其处理成一种复古的日式赛博朋克漫画风格。给头发上色为淡紫色，皮肤为自然的暖色调，衣服赋予银色金属涂层质感。 背景与光影： 背景是一个霓虹闪烁的雨后街道。让蓝绿色的霓虹灯光作为主光源，映射在人物身体的左侧，形成细腻的拉丝晕光。",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "aspectRatio",
+        "defaultValue": "1:1",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "1:4",
+            "description": "1:4",
+            "descriptionEn": "1:4"
+          },
+          {
+            "value": "4:1",
+            "description": "4:1",
+            "descriptionEn": "4:1"
+          },
+          {
+            "value": "1:8",
+            "description": "1:8",
+            "descriptionEn": "1:8"
+          },
+          {
+            "value": "8:1",
+            "description": "8:1",
+            "descriptionEn": "8:1"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "resolution",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "thinkingLevel",
+        "type": "LIST",
+        "required": false,
+        "label": "thinkingLevel",
+        "description": "thinkingLevel",
+        "defaultValue": "medium",
+        "options": [
+          {
+            "value": "minimal",
+            "description": "minimal",
+            "descriptionEn": "minimal"
+          },
+          {
+            "value": "medium",
+            "description": "medium",
+            "descriptionEn": "medium"
+          },
+          {
+            "value": "high",
+            "description": "high",
+            "descriptionEn": "high"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageFlux3TextToImage",
+    "display_name": "RH FLUX 3 Image 文生图",
+    "name_cn": "FLUX 3 Image 文生图",
+    "name_en": "flux-3-image/text-to-image",
+    "endpoint": "rhart-image-flux3/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "画面描述或编辑指令。不支持负面提示词；可在末尾附 bbox JSON 指定布局或局部编辑区域",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出宽高比。auto：编辑时跟随第一张参考图，文生图由提示词决定",
+        "defaultValue": "1:1",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "2:1",
+            "description": "2:1",
+            "descriptionEn": "2:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "7:5",
+            "description": "7:5",
+            "descriptionEn": "7:5"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "5:7",
+            "description": "5:7",
+            "descriptionEn": "5:7"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:2",
+            "description": "1:2",
+            "descriptionEn": "1:2"
+          },
+          {
+            "value": "9:21",
+            "description": "9:21",
+            "descriptionEn": "9:21"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "分辨率档位，决定价格。768sq 约 768×768，1k 约 1MP，1.5k 约 2MP，2k 约 4MP，4k 约 16MP",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "768sq",
+            "description": "768sq",
+            "descriptionEn": "768sq"
+          },
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "1.5k",
+            "description": "1.5k",
+            "descriptionEn": "1.5k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "grounding",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "grounding",
+        "description": "生成前是否联网检索网页或图片作参考，默认开启",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "safetyTolerance",
+        "type": "INT",
+        "required": false,
+        "label": "safetyTolerance",
+        "description": "内容审核容忍度，0 最严 4 最宽，默认 2",
+        "defaultValue": 2,
+        "min": 0,
+        "max": 4,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageFlux3ImageToImage",
+    "display_name": "RH FLUX 3 Image 图像编辑",
+    "name_cn": "FLUX 3 Image 图像编辑",
+    "name_en": "flux-3-image/image-to-image",
+    "endpoint": "rhart-image-flux3/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "参考图，1-10 张。1 张为单图编辑，多张按顺序为 Image 1 / Image 2 …。官方限制单张不超过 16,777,216 像素（约 4096×4096，按总像素算，不限单边），超出会被拒绝",
+        "multipleInputs": true,
+        "maxInputNum": 10,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "画面描述或编辑指令。不支持负面提示词；可在末尾附 bbox JSON 指定布局或局部编辑区域",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出宽高比。auto：编辑时跟随第一张参考图，文生图由提示词决定",
+        "defaultValue": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "2:1",
+            "description": "2:1",
+            "descriptionEn": "2:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "7:5",
+            "description": "7:5",
+            "descriptionEn": "7:5"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "5:7",
+            "description": "5:7",
+            "descriptionEn": "5:7"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:2",
+            "description": "1:2",
+            "descriptionEn": "1:2"
+          },
+          {
+            "value": "9:21",
+            "description": "9:21",
+            "descriptionEn": "9:21"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "分辨率档位，决定价格。768sq 约 768×768，1k 约 1MP，1.5k 约 2MP，2k 约 4MP，4k 约 16MP",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "768sq",
+            "description": "768sq",
+            "descriptionEn": "768sq"
+          },
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "1.5k",
+            "description": "1.5k",
+            "descriptionEn": "1.5k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "grounding",
+        "type": "BOOLEAN",
+        "required": false,
+        "label": "grounding",
+        "description": "生成前是否联网检索网页或图片作参考，默认开启",
+        "defaultValue": true
+      },
+      {
+        "fieldKey": "safetyTolerance",
+        "type": "INT",
+        "required": false,
+        "label": "safetyTolerance",
+        "description": "内容审核容忍度，0 最严 4 最宽，默认 2",
+        "defaultValue": 2,
+        "min": 0,
+        "max": 4,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageFlux3KleinTextToImage",
+    "display_name": "RH FLUX 3 Image Klein 文生图",
+    "name_cn": "FLUX 3 Image Klein 文生图",
+    "name_en": "flux-3-image-klein/text-to-image",
+    "endpoint": "rhart-image-flux3-klein/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "画面描述或编辑指令。不支持负面提示词；可在末尾附 bbox JSON 指定布局或局部编辑区域",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出宽高比。auto：编辑时跟随第一张参考图，文生图由提示词决定",
+        "defaultValue": "1:1",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "2:1",
+            "description": "2:1",
+            "descriptionEn": "2:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "7:5",
+            "description": "7:5",
+            "descriptionEn": "7:5"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "5:7",
+            "description": "5:7",
+            "descriptionEn": "5:7"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:2",
+            "description": "1:2",
+            "descriptionEn": "1:2"
+          },
+          {
+            "value": "9:21",
+            "description": "9:21",
+            "descriptionEn": "9:21"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "分辨率档位，决定价格。768sq 约 768×768，1k 约 1MP，1.5k 约 2MP，2k 约 4MP，4k 约 16MP",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "768sq",
+            "description": "768sq",
+            "descriptionEn": "768sq"
+          },
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "1.5k",
+            "description": "1.5k",
+            "descriptionEn": "1.5k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子。留空则随机",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
+      },
+      {
+        "fieldKey": "steps",
+        "type": "INT",
+        "required": false,
+        "label": "steps",
+        "description": "生成步数 1-16，默认 16。步数少更快，画质可能下降，不影响价格",
+        "defaultValue": 16,
+        "min": 1,
+        "max": 16,
+        "step": 1
+      },
+      {
+        "fieldKey": "outputFormat",
+        "type": "LIST",
+        "required": false,
+        "label": "outputFormat",
+        "description": "输出图片格式",
+        "defaultValue": "jpeg",
+        "options": [
+          {
+            "value": "jpeg",
+            "description": "jpeg",
+            "descriptionEn": "jpeg"
+          },
+          {
+            "value": "png",
+            "description": "png",
+            "descriptionEn": "png"
+          }
+        ]
+      },
+      {
+        "fieldKey": "safetyTolerance",
+        "type": "INT",
+        "required": false,
+        "label": "safetyTolerance",
+        "description": "内容审核容忍度，0 最严 4 最宽，默认 2",
+        "defaultValue": 2,
+        "min": 0,
+        "max": 4,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "RhartImageFlux3KleinImageToImage",
+    "display_name": "RH FLUX 3 Image Klein 图像编辑",
+    "name_cn": "FLUX 3 Image Klein 图像编辑",
+    "name_en": "flux-3-image-klein/image-to-image",
+    "endpoint": "rhart-image-flux3-klein/image-to-image",
+    "output_type": "image",
+    "category": "RunningHub/RHArt Image",
+    "params": [
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "参考图，1-10 张。1 张为单图编辑，多张按顺序为 Image 1 / Image 2 …。官方限制单张不超过 16,777,216 像素（约 4096×4096，按总像素算，不限单边），超出会被拒绝",
+        "multipleInputs": true,
+        "maxInputNum": 10,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 10
+      },
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "画面描述或编辑指令。不支持负面提示词；可在末尾附 bbox JSON 指定布局或局部编辑区域",
+        "maxLength": 20000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出宽高比。auto：编辑时跟随第一张参考图，文生图由提示词决定",
+        "defaultValue": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "description": "auto",
+            "descriptionEn": "auto"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          },
+          {
+            "value": "2:1",
+            "description": "2:1",
+            "descriptionEn": "2:1"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "7:5",
+            "description": "7:5",
+            "descriptionEn": "7:5"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "5:7",
+            "description": "5:7",
+            "descriptionEn": "5:7"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "1:2",
+            "description": "1:2",
+            "descriptionEn": "1:2"
+          },
+          {
+            "value": "9:21",
+            "description": "9:21",
+            "descriptionEn": "9:21"
+          }
+        ]
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "分辨率档位，决定价格。768sq 约 768×768，1k 约 1MP，1.5k 约 2MP，2k 约 4MP，4k 约 16MP",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "768sq",
+            "description": "768sq",
+            "descriptionEn": "768sq"
+          },
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "1.5k",
+            "description": "1.5k",
+            "descriptionEn": "1.5k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          },
+          {
+            "value": "4k",
+            "description": "4k",
+            "descriptionEn": "4k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子。留空则随机",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
+      },
+      {
+        "fieldKey": "steps",
+        "type": "INT",
+        "required": false,
+        "label": "steps",
+        "description": "生成步数 1-16，默认 16。步数少更快，画质可能下降，不影响价格",
+        "defaultValue": 16,
+        "min": 1,
+        "max": 16,
+        "step": 1
+      },
+      {
+        "fieldKey": "outputFormat",
+        "type": "LIST",
+        "required": false,
+        "label": "outputFormat",
+        "description": "输出图片格式",
+        "defaultValue": "jpeg",
+        "options": [
+          {
+            "value": "jpeg",
+            "description": "jpeg",
+            "descriptionEn": "jpeg"
+          },
+          {
+            "value": "png",
+            "description": "png",
+            "descriptionEn": "png"
+          }
+        ]
+      },
+      {
+        "fieldKey": "safetyTolerance",
+        "type": "INT",
+        "required": false,
+        "label": "safetyTolerance",
+        "description": "内容审核容忍度，0 最严 4 最宽，默认 2",
+        "defaultValue": 2,
+        "min": 0,
+        "max": 4,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "KreaV3Edit",
+    "display_name": "RH Krea V3 Edit",
+    "name_cn": "Krea V3 Edit",
+    "name_en": "krea-v3/edit",
+    "endpoint": "krea-v3/edit",
+    "output_type": "image",
+    "category": "RunningHub/Other",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "编辑说明。按顺序用 <image-1>、<image-2> 指代参考图。",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "imageUrls",
+        "type": "IMAGE",
+        "required": true,
+        "label": "imageUrls",
+        "description": "参考图 1 到 8 张，顺序对应提示词里的 <image-1> 起。上游会把每张参考图计入计费面积。",
+        "multipleInputs": true,
+        "maxInputNum": 8,
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "model",
+        "type": "LIST",
+        "required": false,
+        "label": "model",
+        "description": "生成档位。berry 偏画质，jam 偏速度。上游两档同价。",
+        "defaultValue": "berry",
+        "options": [
+          {
+            "value": "berry",
+            "description": "质量优先",
+            "descriptionEn": "Quality"
+          },
+          {
+            "value": "jam",
+            "description": "速度优先",
+            "descriptionEn": "Speed"
+          }
+        ]
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "不希望出现的内容。只对 berry 生效。",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "size",
+        "type": "STRING",
+        "required": false,
+        "label": "size",
+        "description": "输出尺寸，格式为宽*高，例如 1024*1024。单边 256 到 4096，总像素不超过约 422 万。留空则由模型自动决定。上游按尺寸计费，留空时按 4MP。",
+        "maxLength": 11
+      },
+      {
+        "fieldKey": "reasoningLevel",
+        "type": "LIST",
+        "required": false,
+        "label": "reasoningLevel",
+        "description": "推理力度。medium 可能更好理解提示词，但更慢。",
+        "defaultValue": "low",
+        "options": [
+          {
+            "value": "low",
+            "description": "低",
+            "descriptionEn": "Low"
+          },
+          {
+            "value": "medium",
+            "description": "中",
+            "descriptionEn": "Medium"
+          }
+        ]
+      },
+      {
+        "fieldKey": "outputFormat",
+        "type": "LIST",
+        "required": false,
+        "label": "outputFormat",
+        "description": "输出图片格式。",
+        "defaultValue": "png",
+        "options": [
+          {
+            "value": "png",
+            "description": "PNG",
+            "descriptionEn": "PNG"
+          },
+          {
+            "value": "jpeg",
+            "description": "JPEG",
+            "descriptionEn": "JPEG"
+          }
+        ]
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子。留空则不传，由上游随机。",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "KreaV3TextToImage",
+    "display_name": "RH Krea V3 Text To Image",
+    "name_cn": "Krea V3 Text To Image",
+    "name_en": "krea-v3/text-to-image",
+    "endpoint": "krea-v3/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/Other",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "要生成的画面描述。",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "model",
+        "type": "LIST",
+        "required": false,
+        "label": "model",
+        "description": "生成档位。berry 偏画质，jam 偏速度。上游两档同价。",
+        "defaultValue": "berry",
+        "options": [
+          {
+            "value": "berry",
+            "description": "质量优先",
+            "descriptionEn": "Quality"
+          },
+          {
+            "value": "jam",
+            "description": "速度优先",
+            "descriptionEn": "Speed"
+          }
+        ]
+      },
+      {
+        "fieldKey": "negativePrompt",
+        "type": "STRING",
+        "required": false,
+        "label": "negativePrompt",
+        "description": "不希望出现的内容。只对 berry 生效。",
+        "maxLength": 2000
+      },
+      {
+        "fieldKey": "size",
+        "type": "STRING",
+        "required": false,
+        "label": "size",
+        "description": "输出尺寸，格式为宽*高，例如 1024*1024。单边 256 到 4096，总像素不超过约 422 万。上游按输出百万像素计费。",
+        "defaultValue": "1024*1024",
+        "maxLength": 11
+      },
+      {
+        "fieldKey": "reasoningLevel",
+        "type": "LIST",
+        "required": false,
+        "label": "reasoningLevel",
+        "description": "推理力度。medium 可能更好理解提示词，但更慢。",
+        "defaultValue": "low",
+        "options": [
+          {
+            "value": "low",
+            "description": "低",
+            "descriptionEn": "Low"
+          },
+          {
+            "value": "medium",
+            "description": "中",
+            "descriptionEn": "Medium"
+          }
+        ]
+      },
+      {
+        "fieldKey": "outputFormat",
+        "type": "LIST",
+        "required": false,
+        "label": "outputFormat",
+        "description": "输出图片格式。",
+        "defaultValue": "png",
+        "options": [
+          {
+            "value": "png",
+            "description": "PNG",
+            "descriptionEn": "PNG"
+          },
+          {
+            "value": "jpeg",
+            "description": "JPEG",
+            "descriptionEn": "JPEG"
+          }
+        ]
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子。留空则不传，由上游随机。",
+        "min": 0,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "KreaV2Turbo",
+    "display_name": "RH Krea V2 Turbo",
+    "name_cn": "Krea V2 Turbo",
+    "name_en": "krea-v2/turbo",
+    "endpoint": "krea-v2/turbo",
+    "output_type": "string",
+    "category": "RunningHub/Other",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "要生成的画面描述。",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrl",
+        "description": "可选原图。传入后走图生图，输出保持原图比例。",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率档位。1k 约 100 万像素，2k 约 400 万像素，原生生成。上游按档位计价。",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出画幅比例。",
+        "defaultValue": "1:1",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "1:2",
+            "description": "1:2",
+            "descriptionEn": "1:2"
+          },
+          {
+            "value": "2:1",
+            "description": "2:1",
+            "descriptionEn": "2:1"
+          },
+          {
+            "value": "1:3",
+            "description": "1:3",
+            "descriptionEn": "1:3"
+          },
+          {
+            "value": "3:1",
+            "description": "3:1",
+            "descriptionEn": "3:1"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:21",
+            "description": "9:21",
+            "descriptionEn": "9:21"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "strength",
+        "type": "FLOAT",
+        "required": false,
+        "label": "strength",
+        "description": "图生图重绘强度，仅在传入原图时生效。越大越偏离原图。",
+        "defaultValue": 0.8,
+        "min": 0,
+        "max": 1,
+        "step": 0.1
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子。-1 表示随机。留空则不传，由上游随机。",
+        "min": -1,
+        "max": 2147483647,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "class_name": "KreaV2MediumTurboTextToImage",
+    "display_name": "RH Krea V2 Medium Turbo Text To Image",
+    "name_cn": "Krea V2 Medium Turbo Text To Image",
+    "name_en": "krea-v2-medium-turbo/text-to-image",
+    "endpoint": "krea-v2-medium-turbo/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/Other",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "要生成的画面描述。",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出画幅比例。",
+        "defaultValue": "1:1",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "2.35:1",
+            "description": "2.35:1",
+            "descriptionEn": "2.35:1"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "creativity",
+        "type": "LIST",
+        "required": false,
+        "label": "creativity",
+        "description": "提示词贴合程度。raw 最紧，high 更自由。",
+        "defaultValue": "medium",
+        "options": [
+          {
+            "value": "raw",
+            "description": "严格贴合",
+            "descriptionEn": "Closest to the prompt"
+          },
+          {
+            "value": "low",
+            "description": "较低自由度",
+            "descriptionEn": "Low freedom"
+          },
+          {
+            "value": "medium",
+            "description": "平衡",
+            "descriptionEn": "Balanced"
+          },
+          {
+            "value": "high",
+            "description": "更高自由度",
+            "descriptionEn": "High freedom"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "KreaV2LargeTextToImage",
+    "display_name": "RH Krea V2 Large Text To Image",
+    "name_cn": "Krea V2 Large Text To Image",
+    "name_en": "krea-v2-large/text-to-image",
+    "endpoint": "krea-v2-large/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/Other",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "要生成的画面描述，1 到 5000 字。",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出画幅比例。",
+        "defaultValue": "1:1",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "2.35:1",
+            "description": "2.35:1",
+            "descriptionEn": "2.35:1"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "creativity",
+        "type": "LIST",
+        "required": false,
+        "label": "creativity",
+        "description": "提示词贴合程度。raw 最紧，high 更自由。",
+        "defaultValue": "medium",
+        "options": [
+          {
+            "value": "raw",
+            "description": "严格贴合",
+            "descriptionEn": "Closest to the prompt"
+          },
+          {
+            "value": "low",
+            "description": "较低自由度",
+            "descriptionEn": "Low freedom"
+          },
+          {
+            "value": "medium",
+            "description": "平衡",
+            "descriptionEn": "Balanced"
+          },
+          {
+            "value": "high",
+            "description": "更高自由度",
+            "descriptionEn": "High freedom"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "KreaV2MediumTextToImage",
+    "display_name": "RH Krea V2 Medium Text To Image",
+    "name_cn": "Krea V2 Medium Text To Image",
+    "name_en": "krea-v2-medium/text-to-image",
+    "endpoint": "krea-v2-medium/text-to-image",
+    "output_type": "image",
+    "category": "RunningHub/Other",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "要生成的画面描述。",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出画幅比例。",
+        "defaultValue": "1:1",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          }
+        ]
+      },
+      {
+        "fieldKey": "outputFormat",
+        "type": "LIST",
+        "required": false,
+        "label": "outputFormat",
+        "description": "输出图片格式。",
+        "defaultValue": "png",
+        "options": [
+          {
+            "value": "png",
+            "description": "PNG",
+            "descriptionEn": "PNG"
+          },
+          {
+            "value": "jpeg",
+            "description": "JPEG",
+            "descriptionEn": "JPEG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "class_name": "KreaV2TurboLora",
+    "display_name": "RH Krea V2 Turbo LoRA",
+    "name_cn": "Krea V2 Turbo LoRA",
+    "name_en": "krea-v2/turbo-lora",
+    "endpoint": "krea-v2/turbo-lora",
+    "output_type": "string",
+    "category": "RunningHub/Other",
+    "params": [
+      {
+        "fieldKey": "prompt",
+        "type": "STRING",
+        "required": true,
+        "label": "prompt",
+        "description": "要生成的画面描述。",
+        "maxLength": 5000
+      },
+      {
+        "fieldKey": "imageUrl",
+        "type": "IMAGE",
+        "required": false,
+        "label": "imageUrl",
+        "description": "可选原图。传入后走图生图，输出保持原图比例。",
+        "accept": "[\"JPG\",\"JPEG\",\"PNG\",\"WEBP\"]",
+        "maxSize": 30
+      },
+      {
+        "fieldKey": "resolution",
+        "type": "LIST",
+        "required": true,
+        "label": "resolution",
+        "description": "输出分辨率档位。1k 约 100 万像素，2k 约 400 万像素，原生生成。上游按档位计价。",
+        "defaultValue": "1k",
+        "options": [
+          {
+            "value": "1k",
+            "description": "1k",
+            "descriptionEn": "1k"
+          },
+          {
+            "value": "2k",
+            "description": "2k",
+            "descriptionEn": "2k"
+          }
+        ]
+      },
+      {
+        "fieldKey": "aspectRatio",
+        "type": "LIST",
+        "required": false,
+        "label": "aspectRatio",
+        "description": "输出画幅比例。",
+        "defaultValue": "1:1",
+        "options": [
+          {
+            "value": "1:1",
+            "description": "1:1",
+            "descriptionEn": "1:1"
+          },
+          {
+            "value": "1:2",
+            "description": "1:2",
+            "descriptionEn": "1:2"
+          },
+          {
+            "value": "2:1",
+            "description": "2:1",
+            "descriptionEn": "2:1"
+          },
+          {
+            "value": "1:3",
+            "description": "1:3",
+            "descriptionEn": "1:3"
+          },
+          {
+            "value": "3:1",
+            "description": "3:1",
+            "descriptionEn": "3:1"
+          },
+          {
+            "value": "2:3",
+            "description": "2:3",
+            "descriptionEn": "2:3"
+          },
+          {
+            "value": "3:2",
+            "description": "3:2",
+            "descriptionEn": "3:2"
+          },
+          {
+            "value": "3:4",
+            "description": "3:4",
+            "descriptionEn": "3:4"
+          },
+          {
+            "value": "4:3",
+            "description": "4:3",
+            "descriptionEn": "4:3"
+          },
+          {
+            "value": "4:5",
+            "description": "4:5",
+            "descriptionEn": "4:5"
+          },
+          {
+            "value": "5:4",
+            "description": "5:4",
+            "descriptionEn": "5:4"
+          },
+          {
+            "value": "9:16",
+            "description": "9:16",
+            "descriptionEn": "9:16"
+          },
+          {
+            "value": "16:9",
+            "description": "16:9",
+            "descriptionEn": "16:9"
+          },
+          {
+            "value": "9:21",
+            "description": "9:21",
+            "descriptionEn": "9:21"
+          },
+          {
+            "value": "21:9",
+            "description": "21:9",
+            "descriptionEn": "21:9"
+          }
+        ]
+      },
+      {
+        "fieldKey": "strength",
+        "type": "FLOAT",
+        "required": false,
+        "label": "strength",
+        "description": "图生图重绘强度，仅在传入原图时生效。越大越偏离原图。",
+        "defaultValue": 0.8,
+        "min": 0,
+        "max": 1,
+        "step": 0.1
+      },
+      {
+        "fieldKey": "seed",
+        "type": "INT",
+        "required": false,
+        "label": "seed",
+        "description": "随机种子。-1 表示随机。留空则不传，由上游随机。",
+        "min": -1,
+        "max": 2147483647,
+        "step": 1
       }
     ]
   }
