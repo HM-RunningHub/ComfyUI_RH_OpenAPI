@@ -30,13 +30,26 @@ test("schema lookup returns output type and params", () => {
 test("price estimation supports fixed and parameter-based pricing", () => {
   const fixed = estimatePrice(data.pricingByEndpoint.get("rhart-image-v1/text-to-image"), {});
   assert.equal(fixed.estimable, true);
-  assert.equal(fixed.price, 0.05);
+  assert.equal(fixed.price, 0.07);
 
   const parameterBased = estimatePrice(data.pricingByEndpoint.get("rhart-video-v3.1-fast/text-to-video"), {
     resolution: "720p",
   });
   assert.equal(parameterBased.estimable, true);
-  assert.equal(parameterBased.price, 0.2);
+  assert.equal(parameterBased.price, 1.5);
+});
+
+test("component rates and starting prices do not become task totals", () => {
+  for (const [endpoint, expectedType, label] of [
+    ["tripo-h/text-to-3d-v3.1", "starting_at", /per task/],
+    ["seedream-v5.5/image-to-image", "rate", /per input image/],
+    ["rhart-image-g-2.6-official-token/flare/text-to-image", "rate", /million image output tokens/],
+  ]) {
+    const estimate = estimatePrice(data.pricingByEndpoint.get(endpoint), {});
+    assert.equal(estimate.estimable, false);
+    assert.equal(estimate.pricing_type, expectedType);
+    assert.match(estimate.reason, label);
+  }
 });
 
 test("payload validation catches missing required, invalid enum, and local media path", () => {
@@ -88,7 +101,7 @@ test("all six MCP tool handlers execute successfully", () => {
       payload: { resolution: "720p" },
     }),
   );
-  assert.equal(price.price, 0.2);
+  assert.equal(price.price, 1.5);
 
   const validation = parseToolResult(
     handlers.rh_validate_payload({

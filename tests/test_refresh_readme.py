@@ -6,10 +6,11 @@ from tempfile import TemporaryDirectory
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 REFRESH_README_PATH = PROJECT_ROOT / "scripts" / "refresh_readme.py"
-SPEC = importlib.util.spec_from_file_location("project_refresh_readme", REFRESH_README_PATH)
-refresh_readme = importlib.util.module_from_spec(SPEC)
-assert SPEC is not None and SPEC.loader is not None
-SPEC.loader.exec_module(refresh_readme)
+if REFRESH_README_PATH.is_file():
+    SPEC = importlib.util.spec_from_file_location("project_refresh_readme", REFRESH_README_PATH)
+    assert SPEC is not None and SPEC.loader is not None
+    refresh_readme = importlib.util.module_from_spec(SPEC)
+    SPEC.loader.exec_module(refresh_readme)
 
 
 ZH_TEMPLATE = """# ComfyUI_RH_OpenAPI
@@ -65,6 +66,19 @@ The project includes 6 example workflow JSON files in the `examples/` directory.
 """
 
 
+class PublishedReadmeTests(unittest.TestCase):
+    def test_english_and_chinese_counts_match_the_published_catalog(self):
+        standard = len(json.loads((PROJECT_ROOT / "models_registry.json").read_bytes()))
+        total = standard + 5
+        for name, prose in [("README.md", f"{standard} 个标准模型 API 节点"),
+                            ("README_EN.md", f"{standard} standard model API nodes")]:
+            with self.subTest(readme=name):
+                body = (PROJECT_ROOT / name).read_text(encoding="utf-8")
+                self.assertIn(f"badge/Nodes-{total}-blue", body)
+                self.assertIn(prose, body)
+
+
+@unittest.skipUnless(REFRESH_README_PATH.is_file(), "README maintenance helper is internal")
 class RefreshReadmeTests(unittest.TestCase):
     def _counts(self) -> dict[str, int]:
         return {

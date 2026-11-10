@@ -236,6 +236,8 @@ def pricing_summary(entry: Optional[Mapping[str, Any]]) -> str:
     if not entry:
         return ""
     unit = str(entry.get("unit") or "")
+    if entry.get("pricing_type") in {"starting_at", "rate"}:
+        return str(entry["note"])
     if entry.get("pricing_type") == "fixed":
         return f"{entry.get('price')} CNY{unit}"
     if entry.get("pricing_type") == "parameter_based":
@@ -353,15 +355,20 @@ def assert_pricing_public_safe(pricing: Mapping[str, Any]) -> None:
 def main() -> None:
     source_models = read_json(SOURCE_REGISTRY)
     registry = build_public_registry(source_models)
-    pricing = build_public_pricing(source_models)
+    # Published summaries are the price source for a public checkout.
+    pricing = read_json(PUBLIC_PRICING)
     assert_public_safe(registry)
     assert_pricing_public_safe(pricing)
+    endpoints = {model["endpoint"] for model in source_models}
+    prices = pricing["pricing"]
+    priced_endpoints = {entry["endpoint"] for entry in prices}
+    if not priced_endpoints <= endpoints or len(priced_endpoints) != len(prices):
+        raise ValueError("The published price catalog contains unknown or duplicate endpoints")
     write_json(PUBLIC_REGISTRY, registry)
-    write_json(PUBLIC_PRICING, pricing)
     with open(CAPABILITIES_DOC, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(build_capabilities_doc(registry, pricing) + "\n")
     print(f"Wrote {PUBLIC_REGISTRY} ({registry['model_count']} models)")
-    print(f"Wrote {PUBLIC_PRICING} ({pricing['pricing_count']} pricing entries)")
+    print(f"Loaded {PUBLIC_PRICING} ({len(prices)} pricing entries)")
     print(f"Wrote {CAPABILITIES_DOC}")
 
 

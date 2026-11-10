@@ -2,10 +2,12 @@
   "version": "public-2026-04-29",
   "source": "models_registry.json public-safe pricing summaries",
   "note": "Public-safe pricing summary for AI-assisted integration. Prices may change; check official RunningHub pricing before showing final costs to end users.",
-  "pricing_count": 449,
+  "pricing_count": 511,
   "counts_by_pricing_type": {
-    "fixed": 180,
+    "fixed": 196,
     "parameter_based": 243,
+    "rate": 8,
+    "starting_at": 38,
     "unparsed": 26
   },
   "pricing": [
@@ -1521,6 +1523,39 @@
       "updated_at": "2026-04-29",
       "pricing_type": "unparsed",
       "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
+    },
+    {
+      "endpoint": "dola-Seedream-5.5/image-to-image",
+      "name_cn": "Dola-Seedream-5.5-图生图",
+      "name_en": "Dola-Seedream-5.5/image-to-image",
+      "currency": "CNY",
+      "unit": "/输出张（按实际尺寸）＋¥0.05/输入张",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "rate",
+      "note": "Per output image at the actual size: 1K/1.5K 0.13, 2K 0.23, 3K 0.52 CNY. Add 0.05 CNY per input image."
+    },
+    {
+      "endpoint": "dola-Seedream-5.5/layer-decomposition",
+      "name_cn": "Dola-Seedream-5.5-图层拆分",
+      "name_en": "Dola-Seedream-5.5/layer-decomposition",
+      "currency": "CNY",
+      "unit": "/输出张（按实际尺寸）＋¥0.05/输入张",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "rate",
+      "note": "Per output image at the actual size: 1K/1.5K 0.13, 2K 0.23, 3K 0.52 CNY. Add 0.05 CNY per input image."
+    },
+    {
+      "endpoint": "dola-Seedream-5.5/text-to-image",
+      "name_cn": "Dola-Seedream-5.5-文生图",
+      "name_en": "Dola-Seedream-5.5/text-to-image",
+      "currency": "CNY",
+      "unit": "/输出张（按实际尺寸）",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "rate",
+      "note": "Per output image at the actual size: 1K/1.5K 0.13, 2K 0.23, 3K 0.52 CNY."
     },
     {
       "endpoint": "gemini-omni-flash/image-to-video",
@@ -4081,6 +4116,28 @@
       "updated_at": "2026-04-29",
       "pricing_type": "fixed",
       "price": 5.04
+    },
+    {
+      "endpoint": "meta/muse-image/economy",
+      "name_cn": "muse-image/economy",
+      "name_en": "muse-image/economy",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 0.06
+    },
+    {
+      "endpoint": "meta/muse-video/economy",
+      "name_cn": "muse-video/economy",
+      "name_en": "muse-video/economy",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 0.2
     },
     {
       "endpoint": "minimax/h3-max-turbo/image-to-video",
@@ -7849,6 +7906,50 @@
       "price": 0.34
     },
     {
+      "endpoint": "rhart-image-g-2.6-official-token/flare/edit",
+      "name_cn": "gpt-image-2.6/flare/image-to-image/stable-token",
+      "name_en": "gpt-image-2.6/flare/image-to-image/stable-token",
+      "currency": "CNY",
+      "unit": "/百万图片输出Token",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 204.0
+    },
+    {
+      "endpoint": "rhart-image-g-2.6-official-token/flare/text-to-image",
+      "name_cn": "gpt-image-2.6/flare/text-to-image/stable-token",
+      "name_en": "gpt-image-2.6/flare/text-to-image/stable-token",
+      "currency": "CNY",
+      "unit": "/百万图片输出Token（输入另计，SVG 另收文本编写费）",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "rate",
+      "note": "204 CNY per million image output tokens. Input usage and SVG authoring are billed separately."
+    },
+    {
+      "endpoint": "rhart-image-g-2.6-official-token/sunburst/edit",
+      "name_cn": "gpt-image-2.6/sunburst/image-to-image/stable-token",
+      "name_en": "gpt-image-2.6/sunburst/image-to-image/stable-token",
+      "currency": "CNY",
+      "unit": "/百万图片输出Token",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 204.0
+    },
+    {
+      "endpoint": "rhart-image-g-2.6-official-token/sunburst/text-to-image",
+      "name_cn": "gpt-image-2.6/sunburst/text-to-image/stable-token",
+      "name_en": "gpt-image-2.6/sunburst/text-to-image/stable-token",
+      "currency": "CNY",
+      "unit": "/百万图片输出Token（输入另计，SVG 另收文本编写费）",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "rate",
+      "note": "204 CNY per million image output tokens. Input usage and SVG authoring are billed separately."
+    },
+    {
       "endpoint": "rhart-image-g-2/image-to-image",
       "name_cn": "全能图片G-2.0-图生图-低价渠道版",
       "name_en": "gpt-image-2.0/edit-channel-low-price",
@@ -7916,8 +8017,8 @@
     },
     {
       "endpoint": "rhart-image-g/image-to-image",
-      "name_cn": "全能图片X-图生图-低价渠道版",
-      "name_en": "grok-image/image-to-image/channel-low-price",
+      "name_cn": "grok-imagine-image/image-to-image/economy",
+      "name_en": "grok-imagine-image/image-to-image/economy",
       "currency": "CNY",
       "unit": "/次",
       "source": "derived_from_public_safe_pricing_summary",
@@ -11018,6 +11119,39 @@
       "note": "Pricing exists but could not be converted to public structured rules. Check official pricing before quoting costs."
     },
     {
+      "endpoint": "seedream-v5.5/image-to-image",
+      "name_cn": "seedream-v5.5-图生图",
+      "name_en": "seedream-v5.5/image-to-image",
+      "currency": "CNY",
+      "unit": "/输出张（按实际尺寸）＋¥0.05/输入张",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "rate",
+      "note": "Per output image at the actual size: 1K/1.5K 0.13, 2K 0.23, 3K 0.52 CNY. Add 0.05 CNY per input image."
+    },
+    {
+      "endpoint": "seedream-v5.5/layer-decomposition",
+      "name_cn": "seedream-v5.5-图层拆分",
+      "name_en": "seedream-v5.5/layer-decomposition",
+      "currency": "CNY",
+      "unit": "/输出张（按实际尺寸）＋¥0.05/输入张",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "rate",
+      "note": "Per output image at the actual size: 1K/1.5K 0.13, 2K 0.23, 3K 0.52 CNY. Add 0.05 CNY per input image."
+    },
+    {
+      "endpoint": "seedream-v5.5/text-to-image",
+      "name_cn": "seedream-v5.5-文生图",
+      "name_en": "seedream-v5.5/text-to-image",
+      "currency": "CNY",
+      "unit": "/输出张（按实际尺寸）",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "rate",
+      "note": "Per output image at the actual size: 1K/1.5K 0.13, 2K 0.23, 3K 0.52 CNY."
+    },
+    {
       "endpoint": "skyreels-v3/reference-to-video",
       "name_cn": "SkyReels V3 参考图生视频",
       "name_en": "skyreels-v3/reference-to-video",
@@ -11436,6 +11570,824 @@
           },
           "price": 0.8
         }
+      ]
+    },
+    {
+      "endpoint": "tripo-global/convert",
+      "name_cn": "tripo-global/格式转换",
+      "name_en": "tripo-global/convert",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 0.54 CNY per task, depending on the selected options.",
+      "price": 0.54,
+      "depends_on": [
+        "quad",
+        "faceLimit",
+        "flattenBottom",
+        "flattenBottomThreshold",
+        "scaleFactor",
+        "textureSize",
+        "textureFormat",
+        "pivotToCenterBottom"
+      ]
+    },
+    {
+      "endpoint": "tripo-global/image-to-splat",
+      "name_cn": "tripo-global/图片生成GaussianSplat",
+      "name_en": "tripo-global/image-to-splat",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 3.26
+    },
+    {
+      "endpoint": "tripo-global/mesh-complete",
+      "name_cn": "tripo-global/网格补全",
+      "name_en": "tripo-global/mesh-complete",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 3.26 CNY per task, depending on the selected options.",
+      "price": 3.26,
+      "depends_on": [
+        "completionMode"
+      ]
+    },
+    {
+      "endpoint": "tripo-global/mesh-segment-v1.0",
+      "name_cn": "tripo-global/网格分割-v1.0",
+      "name_en": "tripo-global/mesh-segment-v1.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 4.35
+    },
+    {
+      "endpoint": "tripo-global/mesh-segment-v2.0",
+      "name_cn": "tripo-global/网格分割-v2.0",
+      "name_en": "tripo-global/mesh-segment-v2.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 4.35
+    },
+    {
+      "endpoint": "tripo-global/mesh-smartsegment",
+      "name_cn": "tripo-global/智能分割",
+      "name_en": "tripo-global/mesh-smartsegment",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 5.98 CNY per task, depending on the selected options.",
+      "price": 5.98,
+      "depends_on": [
+        "segType"
+      ]
+    },
+    {
+      "endpoint": "tripo-global/retopology-v1.0",
+      "name_cn": "tripo-global/重拓扑-v1.0",
+      "name_en": "tripo-global/retopology-v1.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 1.09
+    },
+    {
+      "endpoint": "tripo-global/retopology-v2.0",
+      "name_cn": "tripo-global/重拓扑-v2.0",
+      "name_en": "tripo-global/retopology-v2.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 3.26
+    },
+    {
+      "endpoint": "tripo-global/texture-v2.5",
+      "name_cn": "tripo-global/模型贴图-v2.5",
+      "name_en": "tripo-global/texture-v2.5",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 1.09
+    },
+    {
+      "endpoint": "tripo-global/texture-v3.0",
+      "name_cn": "tripo-global/模型贴图-v3.0",
+      "name_en": "tripo-global/texture-v3.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 1.09 CNY per task, depending on the selected options.",
+      "price": 1.09,
+      "depends_on": [
+        "textureQuality"
+      ]
+    },
+    {
+      "endpoint": "tripo-h-global/image-to-3d-v2.5",
+      "name_cn": "tripo-global/图生3D-H-v2.5",
+      "name_en": "tripo-global/image-to-3d-v2.5",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 2.18 CNY per task, depending on the selected options.",
+      "price": 2.18,
+      "depends_on": [
+        "texture",
+        "pbr"
+      ]
+    },
+    {
+      "endpoint": "tripo-h-global/image-to-3d-v3.0",
+      "name_cn": "tripo-global/图生3D-H-v3.0",
+      "name_en": "tripo-global/image-to-3d-v3.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 2.18 CNY per task, depending on the selected options.",
+      "price": 2.18,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality",
+        "geometryQuality",
+        "quad",
+        "smartLowPoly",
+        "generateParts"
+      ]
+    },
+    {
+      "endpoint": "tripo-h-global/image-to-3d-v3.1",
+      "name_cn": "tripo-global/图生3D-H-v3.1",
+      "name_en": "tripo-global/image-to-3d-v3.1",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 2.18 CNY per task, depending on the selected options.",
+      "price": 2.18,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality",
+        "geometryQuality",
+        "quad",
+        "smartLowPoly",
+        "generateParts"
+      ]
+    },
+    {
+      "endpoint": "tripo-h-global/multiview-to-3d-v2.5",
+      "name_cn": "tripo-global/多视图生3D-H-v2.5",
+      "name_en": "tripo-global/multiview-to-3d-v2.5",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 2.18 CNY per task, depending on the selected options.",
+      "price": 2.18,
+      "depends_on": [
+        "texture",
+        "pbr"
+      ]
+    },
+    {
+      "endpoint": "tripo-h-global/multiview-to-3d-v3.0",
+      "name_cn": "tripo-global/多视图生3D-H-v3.0",
+      "name_en": "tripo-global/multiview-to-3d-v3.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 2.18 CNY per task, depending on the selected options.",
+      "price": 2.18,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality",
+        "geometryQuality",
+        "quad",
+        "smartLowPoly",
+        "generateParts"
+      ]
+    },
+    {
+      "endpoint": "tripo-h-global/multiview-to-3d-v3.1",
+      "name_cn": "tripo-global/多视图生3D-H-v3.1",
+      "name_en": "tripo-global/multiview-to-3d-v3.1",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 2.18 CNY per task, depending on the selected options.",
+      "price": 2.18,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality",
+        "geometryQuality",
+        "quad",
+        "smartLowPoly",
+        "generateParts"
+      ]
+    },
+    {
+      "endpoint": "tripo-h-global/text-to-3d-v2.5",
+      "name_cn": "tripo-global/文生3D-H-v2.5",
+      "name_en": "tripo-global/text-to-3d-v2.5",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 1.09 CNY per task, depending on the selected options.",
+      "price": 1.09,
+      "depends_on": [
+        "texture",
+        "pbr"
+      ]
+    },
+    {
+      "endpoint": "tripo-h-global/text-to-3d-v3.0",
+      "name_cn": "tripo-global/文生3D-H-v3.0",
+      "name_en": "tripo-global/text-to-3d-v3.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 1.09 CNY per task, depending on the selected options.",
+      "price": 1.09,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality",
+        "geometryQuality",
+        "quad",
+        "smartLowPoly",
+        "generateParts"
+      ]
+    },
+    {
+      "endpoint": "tripo-h-global/text-to-3d-v3.1",
+      "name_cn": "tripo-global/文生3D-H-v3.1",
+      "name_en": "tripo-global/text-to-3d-v3.1",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 1.09 CNY per task, depending on the selected options.",
+      "price": 1.09,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality",
+        "geometryQuality",
+        "quad",
+        "smartLowPoly",
+        "generateParts"
+      ]
+    },
+    {
+      "endpoint": "tripo-h/image-to-3d-v2.5",
+      "name_cn": "tripo/图生3D-H-v2.5",
+      "name_en": "tripo/image-to-3d-v2.5",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 2.18 CNY per task, depending on the selected options.",
+      "price": 2.18,
+      "depends_on": [
+        "texture",
+        "pbr"
+      ]
+    },
+    {
+      "endpoint": "tripo-h/image-to-3d-v3.0",
+      "name_cn": "tripo/图生3D-H-v3.0",
+      "name_en": "tripo/image-to-3d-v3.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 2.18 CNY per task, depending on the selected options.",
+      "price": 2.18,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality",
+        "geometryQuality",
+        "quad",
+        "smartLowPoly",
+        "generateParts"
+      ]
+    },
+    {
+      "endpoint": "tripo-h/image-to-3d-v3.1",
+      "name_cn": "tripo/图生3D-H-v3.1",
+      "name_en": "tripo/image-to-3d-v3.1",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 2.18 CNY per task, depending on the selected options.",
+      "price": 2.18,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality",
+        "geometryQuality",
+        "quad",
+        "smartLowPoly",
+        "generateParts"
+      ]
+    },
+    {
+      "endpoint": "tripo-h/multiview-to-3d-v2.5",
+      "name_cn": "tripo/多视图生3D-H-v2.5",
+      "name_en": "tripo/multiview-to-3d-v2.5",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 2.18 CNY per task, depending on the selected options.",
+      "price": 2.18,
+      "depends_on": [
+        "texture",
+        "pbr"
+      ]
+    },
+    {
+      "endpoint": "tripo-h/multiview-to-3d-v3.0",
+      "name_cn": "tripo/多视图生3D-H-v3.0",
+      "name_en": "tripo/multiview-to-3d-v3.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 2.18 CNY per task, depending on the selected options.",
+      "price": 2.18,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality",
+        "geometryQuality",
+        "quad",
+        "smartLowPoly",
+        "generateParts"
+      ]
+    },
+    {
+      "endpoint": "tripo-h/multiview-to-3d-v3.1",
+      "name_cn": "tripo/多视图生3D-H-v3.1",
+      "name_en": "tripo/multiview-to-3d-v3.1",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 2.18 CNY per task, depending on the selected options.",
+      "price": 2.18,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality",
+        "geometryQuality",
+        "quad",
+        "smartLowPoly",
+        "generateParts"
+      ]
+    },
+    {
+      "endpoint": "tripo-h/text-to-3d-v2.5",
+      "name_cn": "tripo/文生3D-H-v2.5",
+      "name_en": "tripo/text-to-3d-v2.5",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 1.09 CNY per task, depending on the selected options.",
+      "price": 1.09,
+      "depends_on": [
+        "texture",
+        "pbr"
+      ]
+    },
+    {
+      "endpoint": "tripo-h/text-to-3d-v3.0",
+      "name_cn": "tripo/文生3D-H-v3.0",
+      "name_en": "tripo/text-to-3d-v3.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 1.09 CNY per task, depending on the selected options.",
+      "price": 1.09,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality",
+        "geometryQuality",
+        "quad",
+        "smartLowPoly",
+        "generateParts"
+      ]
+    },
+    {
+      "endpoint": "tripo-h/text-to-3d-v3.1",
+      "name_cn": "tripo/文生3D-H-v3.1",
+      "name_en": "tripo/text-to-3d-v3.1",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 1.09 CNY per task, depending on the selected options.",
+      "price": 1.09,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality",
+        "geometryQuality",
+        "quad",
+        "smartLowPoly",
+        "generateParts"
+      ]
+    },
+    {
+      "endpoint": "tripo-p-global/image-to-3d-P1",
+      "name_cn": "tripo-global/图生3D-P-P1",
+      "name_en": "tripo-global/image-to-3d-P1",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 4.35 CNY per task, depending on the selected options.",
+      "price": 4.35,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality"
+      ]
+    },
+    {
+      "endpoint": "tripo-p-global/image-to-3d-P2",
+      "name_cn": "tripo-global/图生3D-P-P2",
+      "name_en": "tripo-global/image-to-3d-P2",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 10.88 CNY per task, depending on the selected options.",
+      "price": 10.88,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality"
+      ]
+    },
+    {
+      "endpoint": "tripo-p-global/multiview-to-3d-P1",
+      "name_cn": "tripo-global/多视图生3D-P-P1",
+      "name_en": "tripo-global/multiview-to-3d-P1",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 4.35 CNY per task, depending on the selected options.",
+      "price": 4.35,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality"
+      ]
+    },
+    {
+      "endpoint": "tripo-p-global/multiview-to-3d-P2",
+      "name_cn": "tripo-global/多视图生3D-P-P2",
+      "name_en": "tripo-global/multiview-to-3d-P2",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 10.88 CNY per task, depending on the selected options.",
+      "price": 10.88,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality"
+      ]
+    },
+    {
+      "endpoint": "tripo-p-global/text-to-3d-P1",
+      "name_cn": "tripo-global/文生3D-P-P1",
+      "name_en": "tripo-global/text-to-3d-P1",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 3.26 CNY per task, depending on the selected options.",
+      "price": 3.26,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality"
+      ]
+    },
+    {
+      "endpoint": "tripo-p-global/text-to-3d-P2",
+      "name_cn": "tripo-global/文生3D-P-P2",
+      "name_en": "tripo-global/text-to-3d-P2",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 10.88 CNY per task, depending on the selected options.",
+      "price": 10.88,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality"
+      ]
+    },
+    {
+      "endpoint": "tripo-p/image-to-3d-P1",
+      "name_cn": "tripo/图生3D-P-P1",
+      "name_en": "tripo/image-to-3d-P1",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 4.35 CNY per task, depending on the selected options.",
+      "price": 4.35,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality"
+      ]
+    },
+    {
+      "endpoint": "tripo-p/image-to-3d-P2",
+      "name_cn": "tripo/图生3D-P-P2",
+      "name_en": "tripo/image-to-3d-P2",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 10.88 CNY per task, depending on the selected options.",
+      "price": 10.88,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality"
+      ]
+    },
+    {
+      "endpoint": "tripo-p/multiview-to-3d-P1",
+      "name_cn": "tripo/多视图生3D-P-P1",
+      "name_en": "tripo/multiview-to-3d-P1",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 4.35 CNY per task, depending on the selected options.",
+      "price": 4.35,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality"
+      ]
+    },
+    {
+      "endpoint": "tripo-p/multiview-to-3d-P2",
+      "name_cn": "tripo/多视图生3D-P-P2",
+      "name_en": "tripo/multiview-to-3d-P2",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 10.88 CNY per task, depending on the selected options.",
+      "price": 10.88,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality"
+      ]
+    },
+    {
+      "endpoint": "tripo-p/text-to-3d-P1",
+      "name_cn": "tripo/文生3D-P-P1",
+      "name_en": "tripo/text-to-3d-P1",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 3.26 CNY per task, depending on the selected options.",
+      "price": 3.26,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality"
+      ]
+    },
+    {
+      "endpoint": "tripo-p/text-to-3d-P2",
+      "name_cn": "tripo/文生3D-P-P2",
+      "name_en": "tripo/text-to-3d-P2",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 10.88 CNY per task, depending on the selected options.",
+      "price": 10.88,
+      "depends_on": [
+        "texture",
+        "pbr",
+        "textureQuality"
+      ]
+    },
+    {
+      "endpoint": "tripo/convert",
+      "name_cn": "tripo/格式转换",
+      "name_en": "tripo/convert",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 0.54 CNY per task, depending on the selected options.",
+      "price": 0.54,
+      "depends_on": [
+        "quad",
+        "faceLimit",
+        "flattenBottom",
+        "flattenBottomThreshold",
+        "scaleFactor",
+        "textureSize",
+        "textureFormat",
+        "pivotToCenterBottom"
+      ]
+    },
+    {
+      "endpoint": "tripo/image-to-splat",
+      "name_cn": "tripo/图片生成GaussianSplat",
+      "name_en": "tripo/image-to-splat",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 3.26
+    },
+    {
+      "endpoint": "tripo/mesh-complete",
+      "name_cn": "tripo/网格补全",
+      "name_en": "tripo/mesh-complete",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 3.26 CNY per task, depending on the selected options.",
+      "price": 3.26,
+      "depends_on": [
+        "completionMode"
+      ]
+    },
+    {
+      "endpoint": "tripo/mesh-segment-v1.0",
+      "name_cn": "tripo/网格分割-v1.0",
+      "name_en": "tripo/mesh-segment-v1.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 4.35
+    },
+    {
+      "endpoint": "tripo/mesh-segment-v2.0",
+      "name_cn": "tripo/网格分割-v2.0",
+      "name_en": "tripo/mesh-segment-v2.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 4.35
+    },
+    {
+      "endpoint": "tripo/mesh-smartsegment",
+      "name_cn": "tripo/智能分割",
+      "name_en": "tripo/mesh-smartsegment",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 5.98 CNY per task, depending on the selected options.",
+      "price": 5.98,
+      "depends_on": [
+        "segType"
+      ]
+    },
+    {
+      "endpoint": "tripo/retopology-v1.0",
+      "name_cn": "tripo/重拓扑-v1.0",
+      "name_en": "tripo/retopology-v1.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 1.09
+    },
+    {
+      "endpoint": "tripo/retopology-v2.0",
+      "name_cn": "tripo/重拓扑-v2.0",
+      "name_en": "tripo/retopology-v2.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 3.26
+    },
+    {
+      "endpoint": "tripo/texture-v2.5",
+      "name_cn": "tripo/模型贴图-v2.5",
+      "name_en": "tripo/texture-v2.5",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "fixed",
+      "price": 1.09
+    },
+    {
+      "endpoint": "tripo/texture-v3.0",
+      "name_cn": "tripo/模型贴图-v3.0",
+      "name_en": "tripo/texture-v3.0",
+      "currency": "CNY",
+      "unit": "/次",
+      "source": "derived_from_public_safe_pricing_summary",
+      "updated_at": "2026-11-10",
+      "pricing_type": "starting_at",
+      "note": "From 1.09 CNY per task, depending on the selected options.",
+      "price": 1.09,
+      "depends_on": [
+        "textureQuality"
       ]
     },
     {
